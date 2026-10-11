@@ -1,0 +1,2 @@
+ALTER TABLE "layouts" DROP CONSTRAINT "layouts_player_slot_unique";--> statement-breakpoint
+CREATE UNIQUE INDEX "layouts_legacy_player_slot_uq" ON "layouts" USING btree ("player_wallet","slot") WHERE base_id IS NULL;

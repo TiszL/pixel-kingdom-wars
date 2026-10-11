@@ -1,0 +1,35 @@
+/* Finance/refining presentation only; shared game chrome remains untouched. */
+.sk-economy-body { overflow-wrap:break-word; }
+.sk-economy-body > section { min-width:0; }
+.sk-economy-hero { display:flex; align-items:center; gap:16px; padding:18px; background:var(--sk-surface); border:1px solid var(--sk-borderLt); }
+.sk-economy-hero > div { display:grid; gap:4px; min-width:0; }
+.sk-economy-hero strong { color:var(--sk-goldHi); font-size:38px; line-height:1; overflow-wrap:anywhere; }
+.sk-economy-hero span { color:var(--sk-textDim); font-size:18px; }
+.sk-economy-body .sk-equipment-card { border-color:var(--sk-borderLt); }
+.sk-economy-body input { box-sizing:border-box; display:block; width:100%; min-height:48px; margin:8px 0; padding:10px; border:2px solid var(--sk-borderLt); background:var(--sk-surface); color:var(--sk-text); font:22px 'VT323',monospace; }
+.sk-economy-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:14px; }
+.sk-economy-grid > section { min-width:0; }
+.sk-economy-values { display:grid; gap:8px; margin:0; }
+.sk-economy-values > div { display:flex; flex-wrap:wrap; align-items:baseline; justify-content:space-between; gap:4px 16px; border-bottom:1px solid var(--sk-border); padding-bottom:8px; }
+.sk-economy-values dt { color:var(--sk-textDim); }
+.sk-economy-values dd { margin:0; color:var(--sk-goldHi); overflow-wrap:anywhere; }
+.sk-economy-actions { display:flex; flex-wrap:wrap; gap:10px; }
+.sk-economy-actions > button { flex:1 1 180px; }
+.sk-fragment-tabs { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:8px; }
+.sk-fragment-tabs > button { min-width:0; min-height:44px; padding:8px; }
+.sk-economy-body details { min-width:0; }
+.sk-economy-body details p { font-size:18px; color:var(--sk-textDim); }
+.sk-economy-body time { overflow-wrap:anywhere; }
+.sk-economy-body [role=status] { color:var(--sk-text); }
+@media(max-width:520px) { .sk-economy-grid { grid-template-columns:1fr; } .sk-economy-hero { padding:14px; } .sk-economy-hero strong { font-size:32px; } }
+@media(max-width:520px) { .sk-fragment-tabs { grid-template-columns:repeat(2,minmax(0,1fr)); } }
+.sk-ordinary-recipe { margin:16px 0; padding:14px; background:var(--sk-surface); border:1px solid var(--sk-borderLt); }
+.sk-ordinary-recipe > strong { color:var(--sk-goldHi); font-size:26px; }
+.sk-ordinary-ingredients { display:grid; gap:10px; margin:14px 0; }
+.sk-ordinary-ingredients > div { display:grid; gap:6px; padding:10px 0; border-top:1px solid var(--sk-border); }
+.sk-ordinary-ingredients dt { font-size:22px; color:var(--sk-text); }
+.sk-ordinary-ingredients dd { display:flex; flex-wrap:wrap; gap:6px 18px; margin:0; color:var(--sk-textDim); }
+.sk-ordinary-ingredients strong { color:var(--sk-text); }
+.sk-ordinary-ingredient-status { margin-left:auto; color:var(--sk-goldHi); }
+.sk-ordinary-ingredients [data-missing=true] .sk-ordinary-ingredient-status { color:var(--sk-text); font-weight:bold; }
+@media(max-width:380px) { .sk-ordinary-ingredient-status { flex-basis:100%; margin-left:0; } }

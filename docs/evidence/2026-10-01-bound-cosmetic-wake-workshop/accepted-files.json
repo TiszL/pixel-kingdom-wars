@@ -1,0 +1,122 @@
+[
+  {
+    "path": "packages/shared/src/boundCosmeticWakeWorkshopApi.ts",
+    "sha256": "970c854b9d9a1f0b7290a49a10987f284ea5c040794f12f3055a59dcd83410ca"
+  },
+  {
+    "path": "packages/shared/src/boundCosmeticWakeWorkshopApi.test.ts",
+    "sha256": "173831123f0e80ba2204f599762e56bec0195f4b6382605af0edb8ee9cbc37c8"
+  },
+  {
+    "path": "packages/shared/package.json",
+    "sha256": "7c41820644a60f45685241a32f8ccd0a8819cd00d2cec2dba33da248412187e2"
+  },
+  {
+    "path": "apps/api/src/game/boundCosmeticWorkshop.ts",
+    "sha256": "47f3edfe09351d4dd04b921cd061e228604859b174560e378e194e53487741bb"
+  },
+  {
+    "path": "apps/api/src/game/boundCosmeticWakeWorkshopRoutes.ts",
+    "sha256": "f2e1521c04444d511bd12258557e1a2c9532419da1dcbde0178d33676eb8088a"
+  },
+  {
+    "path": "apps/api/test/bound-cosmetic-wake-workshop.test.ts",
+    "sha256": "6234304046d0736508a7599b970219003ffd10a206c9c0b99335d408da513c52"
+  },
+  {
+    "path": "apps/api/src/app.ts",
+    "sha256": "fa92050c505dc1894b62ac1379b540b9d5c97020faba3eee84f66e6965638eaf"
+  },
+  {
+    "path": "apps/api/src/phaseEServices.ts",
+    "sha256": "c8d676af644fb43ced812db173b65bdf960be4db27021dacf7aeb0334d1b9b67"
+  },
+  {
+    "path": "apps/web/src/lib/boundCosmetics/workshopJournal.ts",
+    "sha256": "46872d1c78f5173fb98f4f9f9edc266e54153d498a3e9f0c40de730f36526f1e"
+  },
+  {
+    "path": "apps/web/src/lib/boundCosmetics/workshopJournal.test.ts",
+    "sha256": "c72e93ee01ecd267f9d9fa5b8373efcf761ddc0714b221d2e6251bdc8bb74ed7"
+  },
+  {
+    "path": "apps/web/src/lib/boundCosmetics/workshopController.ts",
+    "sha256": "c6eccc20424d7b2b19a8a103961bd385f01189974dd8f10683fa718ac100c02c"
+  },
+  {
+    "path": "apps/web/src/lib/boundCosmetics/workshopControllerCore.ts",
+    "sha256": "9091685c63502ad082740bfc93f4eddc415c18bac56bbf6a760b1d3285382fb9"
+  },
+  {
+    "path": "apps/web/src/lib/boundCosmetics/workshopBrowser.ts",
+    "sha256": "8de670a387e0cc75ebf936a1d70d286af1993041caaee105582edd38d8cdf3b2"
+  },
+  {
+    "path": "apps/web/src/lib/boundCosmetics/workshopBrowserSession.ts",
+    "sha256": "f697ddcd78100190c23ddb7cc1296782ca759ba5adbf59cc9808ee3ee7a1746f"
+  },
+  {
+    "path": "apps/web/src/lib/boundCosmetics/wakeWorkshopController.ts",
+    "sha256": "9bcf7e3c049b50f3d6bfae968baa5104a35539fe3bee64509c09c1e7b5c1f5d8"
+  },
+  {
+    "path": "apps/web/src/lib/boundCosmetics/wakeWorkshopController.test.ts",
+    "sha256": "ff97129fd082286348ca137d40fc996128ca92ddb4f12ba851d4ed16ed202b46"
+  },
+  {
+    "path": "apps/web/src/lib/boundCosmetics/wakeWorkshopBrowser.ts",
+    "sha256": "b3e74f0fc00677c34452fef94e403d3f0bde184fa68f35b35a1b525073e86519"
+  },
+  {
+    "path": "apps/web/src/lib/boundCosmetics/wakeWorkshopBrowser.test.ts",
+    "sha256": "cf7f237d64b9a9c66dd4fb653570734e6bac166dfcf7b14d3d594bd01107463a"
+  },
+  {
+    "path": "apps/web/src/lib/boundCosmetics/wakeWorkshopFixtures.test-support.ts",
+    "sha256": "2001097bcf2d5cb03cba6627c00e8286e27b936d274d11826adf4fe3e39caecd"
+  },
+  {
+    "path": "apps/web/src/lib/boundCosmetics/wakeWorkshopPair.test.ts",
+    "sha256": "39eb0a93edf1a71df6400241e043cab259e474920b88971b190071b985eb1b8d"
+  },
+  {
+    "path": "apps/web/src/lib/boundCosmetics/wake-workshop-actual.test-fixture.json",
+    "sha256": "75259751b8d535b2af449ee7a0a752d29754dac21c61746a4fa26cb788181766"
+  },
+  {
+    "path": "apps/web/src/ui/phaseE/BoundCosmeticWakeWorkshop.test.tsx",
+    "sha256": "0e2ce874097776358c55bd9301d77234f5377510f5b219fdba496a9c62c587cb"
+  },
+  {
+    "path": "apps/web/src/ui/phaseE/BoundCosmeticWakeWorkshop.tsx",
+    "sha256": "3453eb21b4b068a6b93f04a6960698e77cbc85b301928fd375033aae9a7b72fa"
+  },
+  {
+    "path": "apps/web/src/ui/phaseE/OrdinaryCraftingScreen.tsx",
+    "sha256": "c4bbc802cb70ff0b9bbd1f1b86792a58b01df9b20f5d0d3e066ecbad7bcba6bd"
+  },
+  {
+    "path": "apps/web/src/ui/phaseE/BoundCosmeticWorkshop.tsx",
+    "sha256": "731f187c62eb8487299285892815da34b63ee4ba612c526d96fe793444af933e"
+  },
+  {
+    "path": "docs/evidence/2026-10-01-bound-cosmetic-wake-workshop/bound-cosmetic-wake-workshop-pair.json",
+    "sha256": "75259751b8d535b2af449ee7a0a752d29754dac21c61746a4fa26cb788181766"
+  },
+  {
+    "path": "apps/web/src/lib/api.ts",
+    "sha256": "86787935d23780dc75cdc5f806401b1073d95e5b01f7816df5aa26a189b32518"
+  },
+  {
+    "path": "apps/web/src/lib/api.boundCosmetic.test.ts",
+    "sha256": "79d6fb1e632137920dde3b95559fd41f1dad1dccf96872f1befff3b83705526a"
+  },
+  {
+    "path": "apps/web/src/ui/phaseE/OrdinaryCraftingDoor.tsx",
+    "sha256": "27b5d8ef09d8ebf1f4bcab3fb09b30af0bf0ff7d3ba52424da66eb6ef78fda26"
+  },
+  {
+    "path": "apps/web/src/ui/phaseE/OrdinaryCraftingScreen.test.tsx",
+    "sha256": "9288993701efee26bf1158f2bc22909b0a1b1676e3e5b2b459a57ad630052568"
+  }
+]

@@ -1,0 +1,21 @@
+/* World v2 root (lanes L6 + L8): the two engine layers and the HUD WorldV2 places over the host stage. The host hides
+   its own header, rail, tools and panel while WorldV2 is live, so the HUD (hud/layout.css) starts at the stage's top.
+   Nothing here is wider than the stage. */
+.wv2-root{position:absolute;inset:0;overflow:hidden;background:#07101f}
+.wv2-layer{position:absolute;inset:0}
+.wv2-canvas{position:absolute;inset:0;display:block;width:100%;height:100%;touch-action:none}
+.wv2-realm-ui{position:absolute;inset:0}
+/* The realm map draws under the globe's cloud cover while it loads, then takes the stage: visibility, not display,
+   so its canvas keeps its size while hidden. */
+.wv2-realm-layer{visibility:hidden;opacity:0;transition:opacity .25s ease}
+.wv2-root[data-mode=realm] .wv2-realm-layer,.wv2-root[data-mode=leaving] .wv2-realm-layer{visibility:visible;opacity:1}
+.wv2-root[data-mode=leaving] .wv2-realm-layer{opacity:0}
+.wv2-root[data-mode=realm] .wv2-globe-layer{visibility:hidden}
+.wv2-labels{position:absolute;inset:0;pointer-events:none}
+.wv2-label{position:absolute;z-index:1;pointer-events:auto;white-space:nowrap;min-height:24px;padding:2px 8px;cursor:pointer}
+.wv2-label.is-mine{box-shadow:var(--hud-bevel-keep)}
+.wv2-realm-bar{position:absolute;z-index:3;left:0;right:0;top:0;pointer-events:none}
+.wv2-realm-bar .wv2-realm-chrome{position:relative}
+/* The host's read status (deeds loading, a truncated or failed parcel feed) while its own tools are hidden. */
+.fantasy-world-status.wv2-host-status{position:absolute;z-index:4;left:calc(env(safe-area-inset-left) + 12px);top:calc(env(safe-area-inset-top) + 164px);
+  max-width:calc(100% - 24px);box-sizing:border-box;background:#151820c9;border-radius:4px;padding:4px 8px}

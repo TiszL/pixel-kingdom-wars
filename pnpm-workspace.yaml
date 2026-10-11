@@ -1,0 +1,7 @@
+packages:
+  - apps/*
+  - packages/*
+  - scripts
+
+patchedDependencies:
+  phaser@4.1.0: patches/phaser@4.1.0.patch

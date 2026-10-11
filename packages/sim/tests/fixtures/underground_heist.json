@@ -1,0 +1,225 @@
+{
+  "hash": "edad9213",
+  "outcome": {
+    "stars": 3,
+    "destructionPct": 100,
+    "keepDestroyed": true,
+    "vaultDestroyed": true,
+    "mineDestroyed": false,
+    "victory": true,
+    "buildings": [
+      {
+        "id": "keep",
+        "type": "keep",
+        "hp": 0,
+        "maxHp": 1200,
+        "destroyed": true
+      },
+      {
+        "id": "vault",
+        "type": "vault",
+        "hp": 0,
+        "maxHp": 500,
+        "destroyed": true
+      },
+      {
+        "id": "wall_0",
+        "type": "wall",
+        "hp": 1200,
+        "maxHp": 1200,
+        "destroyed": false
+      },
+      {
+        "id": "wall_1",
+        "type": "wall",
+        "hp": 1200,
+        "maxHp": 1200,
+        "destroyed": false
+      },
+      {
+        "id": "wall_2",
+        "type": "wall",
+        "hp": 1200,
+        "maxHp": 1200,
+        "destroyed": false
+      },
+      {
+        "id": "wall_3",
+        "type": "wall",
+        "hp": 1200,
+        "maxHp": 1200,
+        "destroyed": false
+      },
+      {
+        "id": "wall_4",
+        "type": "wall",
+        "hp": 1200,
+        "maxHp": 1200,
+        "destroyed": false
+      },
+      {
+        "id": "wall_5",
+        "type": "wall",
+        "hp": 1200,
+        "maxHp": 1200,
+        "destroyed": false
+      },
+      {
+        "id": "wall_6",
+        "type": "wall",
+        "hp": 1200,
+        "maxHp": 1200,
+        "destroyed": false
+      },
+      {
+        "id": "wall_7",
+        "type": "wall",
+        "hp": 1200,
+        "maxHp": 1200,
+        "destroyed": false
+      },
+      {
+        "id": "wall_8",
+        "type": "wall",
+        "hp": 1200,
+        "maxHp": 1200,
+        "destroyed": false
+      },
+      {
+        "id": "wall_9",
+        "type": "wall",
+        "hp": 1200,
+        "maxHp": 1200,
+        "destroyed": false
+      },
+      {
+        "id": "wall_10",
+        "type": "wall",
+        "hp": 1200,
+        "maxHp": 1200,
+        "destroyed": false
+      },
+      {
+        "id": "wall_11",
+        "type": "wall",
+        "hp": 1200,
+        "maxHp": 1200,
+        "destroyed": false
+      },
+      {
+        "id": "wall_12",
+        "type": "wall",
+        "hp": 1200,
+        "maxHp": 1200,
+        "destroyed": false
+      },
+      {
+        "id": "wall_13",
+        "type": "wall",
+        "hp": 1200,
+        "maxHp": 1200,
+        "destroyed": false
+      },
+      {
+        "id": "wall_14",
+        "type": "wall",
+        "hp": 300,
+        "maxHp": 300,
+        "destroyed": false
+      },
+      {
+        "id": "wall_15",
+        "type": "wall",
+        "hp": 300,
+        "maxHp": 300,
+        "destroyed": false
+      },
+      {
+        "id": "wall_16",
+        "type": "wall",
+        "hp": 300,
+        "maxHp": 300,
+        "destroyed": false
+      },
+      {
+        "id": "wall_17",
+        "type": "wall",
+        "hp": 300,
+        "maxHp": 300,
+        "destroyed": false
+      },
+      {
+        "id": "wall_18",
+        "type": "wall",
+        "hp": 300,
+        "maxHp": 300,
+        "destroyed": false
+      },
+      {
+        "id": "wall_19",
+        "type": "wall",
+        "hp": 300,
+        "maxHp": 300,
+        "destroyed": false
+      },
+      {
+        "id": "wall_20",
+        "type": "wall",
+        "hp": 300,
+        "maxHp": 300,
+        "destroyed": false
+      },
+      {
+        "id": "wall_21",
+        "type": "wall",
+        "hp": 300,
+        "maxHp": 300,
+        "destroyed": false
+      },
+      {
+        "id": "wall_22",
+        "type": "wall",
+        "hp": 300,
+        "maxHp": 300,
+        "destroyed": false
+      },
+      {
+        "id": "wall_23",
+        "type": "wall",
+        "hp": 300,
+        "maxHp": 300,
+        "destroyed": false
+      },
+      {
+        "id": "wall_24",
+        "type": "wall",
+        "hp": 300,
+        "maxHp": 300,
+        "destroyed": false
+      },
+      {
+        "id": "wall_25",
+        "type": "wall",
+        "hp": 300,
+        "maxHp": 300,
+        "destroyed": false
+      },
+      {
+        "id": "wall_26",
+        "type": "wall",
+        "hp": 300,
+        "maxHp": 300,
+        "destroyed": false
+      },
+      {
+        "id": "wall_27",
+        "type": "wall",
+        "hp": 300,
+        "maxHp": 300,
+        "destroyed": false
+      }
+    ],
+    "ticks": 316,
+    "eventCount": 321
+  }
+}

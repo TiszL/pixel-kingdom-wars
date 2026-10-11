@@ -1,0 +1,1531 @@
+{
+	"textures": [
+		{
+			"image": "v2trp_tunneler_t1_locomotion@1x.png",
+			"format": "RGBA8888",
+			"size": {
+				"w": 918,
+				"h": 816
+			},
+			"scale": 1,
+			"frames": [
+				{
+					"filename": "v2_locomotion_stand_tunneler_t1_d0",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 96,
+						"h": 96
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 96,
+						"h": 96
+					},
+					"frame": {
+						"x": 3,
+						"y": 3,
+						"w": 96,
+						"h": 96
+					}
+				},
+				{
+					"filename": "v2_locomotion_stand_tunneler_t1_d1",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 96,
+						"h": 96
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 96,
+						"h": 96
+					},
+					"frame": {
+						"x": 105,
+						"y": 3,
+						"w": 96,
+						"h": 96
+					}
+				},
+				{
+					"filename": "v2_locomotion_stand_tunneler_t1_d2",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 96,
+						"h": 96
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 96,
+						"h": 96
+					},
+					"frame": {
+						"x": 3,
+						"y": 105,
+						"w": 96,
+						"h": 96
+					}
+				},
+				{
+					"filename": "v2_locomotion_stand_tunneler_t1_d3",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 96,
+						"h": 96
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 96,
+						"h": 96
+					},
+					"frame": {
+						"x": 105,
+						"y": 105,
+						"w": 96,
+						"h": 96
+					}
+				},
+				{
+					"filename": "v2_locomotion_stand_tunneler_t1_d4",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 96,
+						"h": 96
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 96,
+						"h": 96
+					},
+					"frame": {
+						"x": 207,
+						"y": 3,
+						"w": 96,
+						"h": 96
+					}
+				},
+				{
+					"filename": "v2_locomotion_stand_tunneler_t1_d5",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 96,
+						"h": 96
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 96,
+						"h": 96
+					},
+					"frame": {
+						"x": 207,
+						"y": 105,
+						"w": 96,
+						"h": 96
+					}
+				},
+				{
+					"filename": "v2_locomotion_stand_tunneler_t1_d6",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 96,
+						"h": 96
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 96,
+						"h": 96
+					},
+					"frame": {
+						"x": 3,
+						"y": 207,
+						"w": 96,
+						"h": 96
+					}
+				},
+				{
+					"filename": "v2_locomotion_stand_tunneler_t1_d7",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 96,
+						"h": 96
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 96,
+						"h": 96
+					},
+					"frame": {
+						"x": 105,
+						"y": 207,
+						"w": 96,
+						"h": 96
+					}
+				},
+				{
+					"filename": "v2_trp_tunneler_t1_walk_d0_f1",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 96,
+						"h": 96
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 96,
+						"h": 96
+					},
+					"frame": {
+						"x": 207,
+						"y": 207,
+						"w": 96,
+						"h": 96
+					}
+				},
+				{
+					"filename": "v2_trp_tunneler_t1_walk_d0_f2",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 96,
+						"h": 96
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 96,
+						"h": 96
+					},
+					"frame": {
+						"x": 309,
+						"y": 3,
+						"w": 96,
+						"h": 96
+					}
+				},
+				{
+					"filename": "v2_trp_tunneler_t1_walk_d0_f3",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 96,
+						"h": 96
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 96,
+						"h": 96
+					},
+					"frame": {
+						"x": 309,
+						"y": 105,
+						"w": 96,
+						"h": 96
+					}
+				},
+				{
+					"filename": "v2_trp_tunneler_t1_walk_d0_f4",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 96,
+						"h": 96
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 96,
+						"h": 96
+					},
+					"frame": {
+						"x": 309,
+						"y": 207,
+						"w": 96,
+						"h": 96
+					}
+				},
+				{
+					"filename": "v2_trp_tunneler_t1_walk_d0_f5",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 96,
+						"h": 96
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 96,
+						"h": 96
+					},
+					"frame": {
+						"x": 3,
+						"y": 309,
+						"w": 96,
+						"h": 96
+					}
+				},
+				{
+					"filename": "v2_trp_tunneler_t1_walk_d0_f6",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 96,
+						"h": 96
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 96,
+						"h": 96
+					},
+					"frame": {
+						"x": 105,
+						"y": 309,
+						"w": 96,
+						"h": 96
+					}
+				},
+				{
+					"filename": "v2_trp_tunneler_t1_walk_d0_f7",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 96,
+						"h": 96
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 96,
+						"h": 96
+					},
+					"frame": {
+						"x": 207,
+						"y": 309,
+						"w": 96,
+						"h": 96
+					}
+				},
+				{
+					"filename": "v2_trp_tunneler_t1_walk_d0_f8",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 96,
+						"h": 96
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 96,
+						"h": 96
+					},
+					"frame": {
+						"x": 309,
+						"y": 309,
+						"w": 96,
+						"h": 96
+					}
+				},
+				{
+					"filename": "v2_trp_tunneler_t1_walk_d1_f1",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 96,
+						"h": 96
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 96,
+						"h": 96
+					},
+					"frame": {
+						"x": 411,
+						"y": 3,
+						"w": 96,
+						"h": 96
+					}
+				},
+				{
+					"filename": "v2_trp_tunneler_t1_walk_d1_f2",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 96,
+						"h": 96
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 96,
+						"h": 96
+					},
+					"frame": {
+						"x": 411,
+						"y": 105,
+						"w": 96,
+						"h": 96
+					}
+				},
+				{
+					"filename": "v2_trp_tunneler_t1_walk_d1_f3",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 96,
+						"h": 96
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 96,
+						"h": 96
+					},
+					"frame": {
+						"x": 411,
+						"y": 207,
+						"w": 96,
+						"h": 96
+					}
+				},
+				{
+					"filename": "v2_trp_tunneler_t1_walk_d1_f4",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 96,
+						"h": 96
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 96,
+						"h": 96
+					},
+					"frame": {
+						"x": 411,
+						"y": 309,
+						"w": 96,
+						"h": 96
+					}
+				},
+				{
+					"filename": "v2_trp_tunneler_t1_walk_d1_f5",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 96,
+						"h": 96
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 96,
+						"h": 96
+					},
+					"frame": {
+						"x": 3,
+						"y": 411,
+						"w": 96,
+						"h": 96
+					}
+				},
+				{
+					"filename": "v2_trp_tunneler_t1_walk_d1_f6",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 96,
+						"h": 96
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 96,
+						"h": 96
+					},
+					"frame": {
+						"x": 105,
+						"y": 411,
+						"w": 96,
+						"h": 96
+					}
+				},
+				{
+					"filename": "v2_trp_tunneler_t1_walk_d1_f7",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 96,
+						"h": 96
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 96,
+						"h": 96
+					},
+					"frame": {
+						"x": 207,
+						"y": 411,
+						"w": 96,
+						"h": 96
+					}
+				},
+				{
+					"filename": "v2_trp_tunneler_t1_walk_d1_f8",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 96,
+						"h": 96
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 96,
+						"h": 96
+					},
+					"frame": {
+						"x": 309,
+						"y": 411,
+						"w": 96,
+						"h": 96
+					}
+				},
+				{
+					"filename": "v2_trp_tunneler_t1_walk_d2_f1",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 96,
+						"h": 96
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 96,
+						"h": 96
+					},
+					"frame": {
+						"x": 411,
+						"y": 411,
+						"w": 96,
+						"h": 96
+					}
+				},
+				{
+					"filename": "v2_trp_tunneler_t1_walk_d2_f2",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 96,
+						"h": 96
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 96,
+						"h": 96
+					},
+					"frame": {
+						"x": 513,
+						"y": 3,
+						"w": 96,
+						"h": 96
+					}
+				},
+				{
+					"filename": "v2_trp_tunneler_t1_walk_d2_f3",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 96,
+						"h": 96
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 96,
+						"h": 96
+					},
+					"frame": {
+						"x": 513,
+						"y": 105,
+						"w": 96,
+						"h": 96
+					}
+				},
+				{
+					"filename": "v2_trp_tunneler_t1_walk_d2_f4",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 96,
+						"h": 96
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 96,
+						"h": 96
+					},
+					"frame": {
+						"x": 513,
+						"y": 207,
+						"w": 96,
+						"h": 96
+					}
+				},
+				{
+					"filename": "v2_trp_tunneler_t1_walk_d2_f5",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 96,
+						"h": 96
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 96,
+						"h": 96
+					},
+					"frame": {
+						"x": 513,
+						"y": 309,
+						"w": 96,
+						"h": 96
+					}
+				},
+				{
+					"filename": "v2_trp_tunneler_t1_walk_d2_f6",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 96,
+						"h": 96
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 96,
+						"h": 96
+					},
+					"frame": {
+						"x": 513,
+						"y": 411,
+						"w": 96,
+						"h": 96
+					}
+				},
+				{
+					"filename": "v2_trp_tunneler_t1_walk_d2_f7",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 96,
+						"h": 96
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 96,
+						"h": 96
+					},
+					"frame": {
+						"x": 3,
+						"y": 513,
+						"w": 96,
+						"h": 96
+					}
+				},
+				{
+					"filename": "v2_trp_tunneler_t1_walk_d2_f8",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 96,
+						"h": 96
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 96,
+						"h": 96
+					},
+					"frame": {
+						"x": 105,
+						"y": 513,
+						"w": 96,
+						"h": 96
+					}
+				},
+				{
+					"filename": "v2_trp_tunneler_t1_walk_d3_f1",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 96,
+						"h": 96
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 96,
+						"h": 96
+					},
+					"frame": {
+						"x": 207,
+						"y": 513,
+						"w": 96,
+						"h": 96
+					}
+				},
+				{
+					"filename": "v2_trp_tunneler_t1_walk_d3_f2",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 96,
+						"h": 96
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 96,
+						"h": 96
+					},
+					"frame": {
+						"x": 309,
+						"y": 513,
+						"w": 96,
+						"h": 96
+					}
+				},
+				{
+					"filename": "v2_trp_tunneler_t1_walk_d3_f3",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 96,
+						"h": 96
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 96,
+						"h": 96
+					},
+					"frame": {
+						"x": 411,
+						"y": 513,
+						"w": 96,
+						"h": 96
+					}
+				},
+				{
+					"filename": "v2_trp_tunneler_t1_walk_d3_f4",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 96,
+						"h": 96
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 96,
+						"h": 96
+					},
+					"frame": {
+						"x": 513,
+						"y": 513,
+						"w": 96,
+						"h": 96
+					}
+				},
+				{
+					"filename": "v2_trp_tunneler_t1_walk_d3_f5",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 96,
+						"h": 96
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 96,
+						"h": 96
+					},
+					"frame": {
+						"x": 615,
+						"y": 3,
+						"w": 96,
+						"h": 96
+					}
+				},
+				{
+					"filename": "v2_trp_tunneler_t1_walk_d3_f6",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 96,
+						"h": 96
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 96,
+						"h": 96
+					},
+					"frame": {
+						"x": 615,
+						"y": 105,
+						"w": 96,
+						"h": 96
+					}
+				},
+				{
+					"filename": "v2_trp_tunneler_t1_walk_d3_f7",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 96,
+						"h": 96
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 96,
+						"h": 96
+					},
+					"frame": {
+						"x": 615,
+						"y": 207,
+						"w": 96,
+						"h": 96
+					}
+				},
+				{
+					"filename": "v2_trp_tunneler_t1_walk_d3_f8",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 96,
+						"h": 96
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 96,
+						"h": 96
+					},
+					"frame": {
+						"x": 615,
+						"y": 309,
+						"w": 96,
+						"h": 96
+					}
+				},
+				{
+					"filename": "v2_trp_tunneler_t1_walk_d4_f1",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 96,
+						"h": 96
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 96,
+						"h": 96
+					},
+					"frame": {
+						"x": 615,
+						"y": 411,
+						"w": 96,
+						"h": 96
+					}
+				},
+				{
+					"filename": "v2_trp_tunneler_t1_walk_d4_f2",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 96,
+						"h": 96
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 96,
+						"h": 96
+					},
+					"frame": {
+						"x": 615,
+						"y": 513,
+						"w": 96,
+						"h": 96
+					}
+				},
+				{
+					"filename": "v2_trp_tunneler_t1_walk_d4_f3",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 96,
+						"h": 96
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 96,
+						"h": 96
+					},
+					"frame": {
+						"x": 3,
+						"y": 615,
+						"w": 96,
+						"h": 96
+					}
+				},
+				{
+					"filename": "v2_trp_tunneler_t1_walk_d4_f4",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 96,
+						"h": 96
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 96,
+						"h": 96
+					},
+					"frame": {
+						"x": 105,
+						"y": 615,
+						"w": 96,
+						"h": 96
+					}
+				},
+				{
+					"filename": "v2_trp_tunneler_t1_walk_d4_f5",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 96,
+						"h": 96
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 96,
+						"h": 96
+					},
+					"frame": {
+						"x": 207,
+						"y": 615,
+						"w": 96,
+						"h": 96
+					}
+				},
+				{
+					"filename": "v2_trp_tunneler_t1_walk_d4_f6",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 96,
+						"h": 96
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 96,
+						"h": 96
+					},
+					"frame": {
+						"x": 309,
+						"y": 615,
+						"w": 96,
+						"h": 96
+					}
+				},
+				{
+					"filename": "v2_trp_tunneler_t1_walk_d4_f7",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 96,
+						"h": 96
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 96,
+						"h": 96
+					},
+					"frame": {
+						"x": 411,
+						"y": 615,
+						"w": 96,
+						"h": 96
+					}
+				},
+				{
+					"filename": "v2_trp_tunneler_t1_walk_d4_f8",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 96,
+						"h": 96
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 96,
+						"h": 96
+					},
+					"frame": {
+						"x": 513,
+						"y": 615,
+						"w": 96,
+						"h": 96
+					}
+				},
+				{
+					"filename": "v2_trp_tunneler_t1_walk_d5_f1",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 96,
+						"h": 96
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 96,
+						"h": 96
+					},
+					"frame": {
+						"x": 615,
+						"y": 615,
+						"w": 96,
+						"h": 96
+					}
+				},
+				{
+					"filename": "v2_trp_tunneler_t1_walk_d5_f2",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 96,
+						"h": 96
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 96,
+						"h": 96
+					},
+					"frame": {
+						"x": 717,
+						"y": 3,
+						"w": 96,
+						"h": 96
+					}
+				},
+				{
+					"filename": "v2_trp_tunneler_t1_walk_d5_f3",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 96,
+						"h": 96
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 96,
+						"h": 96
+					},
+					"frame": {
+						"x": 717,
+						"y": 105,
+						"w": 96,
+						"h": 96
+					}
+				},
+				{
+					"filename": "v2_trp_tunneler_t1_walk_d5_f4",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 96,
+						"h": 96
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 96,
+						"h": 96
+					},
+					"frame": {
+						"x": 717,
+						"y": 207,
+						"w": 96,
+						"h": 96
+					}
+				},
+				{
+					"filename": "v2_trp_tunneler_t1_walk_d5_f5",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 96,
+						"h": 96
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 96,
+						"h": 96
+					},
+					"frame": {
+						"x": 717,
+						"y": 309,
+						"w": 96,
+						"h": 96
+					}
+				},
+				{
+					"filename": "v2_trp_tunneler_t1_walk_d5_f6",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 96,
+						"h": 96
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 96,
+						"h": 96
+					},
+					"frame": {
+						"x": 717,
+						"y": 411,
+						"w": 96,
+						"h": 96
+					}
+				},
+				{
+					"filename": "v2_trp_tunneler_t1_walk_d5_f7",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 96,
+						"h": 96
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 96,
+						"h": 96
+					},
+					"frame": {
+						"x": 717,
+						"y": 513,
+						"w": 96,
+						"h": 96
+					}
+				},
+				{
+					"filename": "v2_trp_tunneler_t1_walk_d5_f8",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 96,
+						"h": 96
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 96,
+						"h": 96
+					},
+					"frame": {
+						"x": 717,
+						"y": 615,
+						"w": 96,
+						"h": 96
+					}
+				},
+				{
+					"filename": "v2_trp_tunneler_t1_walk_d6_f1",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 96,
+						"h": 96
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 96,
+						"h": 96
+					},
+					"frame": {
+						"x": 3,
+						"y": 717,
+						"w": 96,
+						"h": 96
+					}
+				},
+				{
+					"filename": "v2_trp_tunneler_t1_walk_d6_f2",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 96,
+						"h": 96
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 96,
+						"h": 96
+					},
+					"frame": {
+						"x": 105,
+						"y": 717,
+						"w": 96,
+						"h": 96
+					}
+				},
+				{
+					"filename": "v2_trp_tunneler_t1_walk_d6_f3",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 96,
+						"h": 96
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 96,
+						"h": 96
+					},
+					"frame": {
+						"x": 207,
+						"y": 717,
+						"w": 96,
+						"h": 96
+					}
+				},
+				{
+					"filename": "v2_trp_tunneler_t1_walk_d6_f4",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 96,
+						"h": 96
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 96,
+						"h": 96
+					},
+					"frame": {
+						"x": 309,
+						"y": 717,
+						"w": 96,
+						"h": 96
+					}
+				},
+				{
+					"filename": "v2_trp_tunneler_t1_walk_d6_f5",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 96,
+						"h": 96
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 96,
+						"h": 96
+					},
+					"frame": {
+						"x": 411,
+						"y": 717,
+						"w": 96,
+						"h": 96
+					}
+				},
+				{
+					"filename": "v2_trp_tunneler_t1_walk_d6_f6",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 96,
+						"h": 96
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 96,
+						"h": 96
+					},
+					"frame": {
+						"x": 513,
+						"y": 717,
+						"w": 96,
+						"h": 96
+					}
+				},
+				{
+					"filename": "v2_trp_tunneler_t1_walk_d6_f7",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 96,
+						"h": 96
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 96,
+						"h": 96
+					},
+					"frame": {
+						"x": 615,
+						"y": 717,
+						"w": 96,
+						"h": 96
+					}
+				},
+				{
+					"filename": "v2_trp_tunneler_t1_walk_d6_f8",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 96,
+						"h": 96
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 96,
+						"h": 96
+					},
+					"frame": {
+						"x": 717,
+						"y": 717,
+						"w": 96,
+						"h": 96
+					}
+				},
+				{
+					"filename": "v2_trp_tunneler_t1_walk_d7_f1",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 96,
+						"h": 96
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 96,
+						"h": 96
+					},
+					"frame": {
+						"x": 819,
+						"y": 3,
+						"w": 96,
+						"h": 96
+					}
+				},
+				{
+					"filename": "v2_trp_tunneler_t1_walk_d7_f2",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 96,
+						"h": 96
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 96,
+						"h": 96
+					},
+					"frame": {
+						"x": 819,
+						"y": 105,
+						"w": 96,
+						"h": 96
+					}
+				},
+				{
+					"filename": "v2_trp_tunneler_t1_walk_d7_f3",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 96,
+						"h": 96
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 96,
+						"h": 96
+					},
+					"frame": {
+						"x": 819,
+						"y": 207,
+						"w": 96,
+						"h": 96
+					}
+				},
+				{
+					"filename": "v2_trp_tunneler_t1_walk_d7_f4",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 96,
+						"h": 96
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 96,
+						"h": 96
+					},
+					"frame": {
+						"x": 819,
+						"y": 309,
+						"w": 96,
+						"h": 96
+					}
+				},
+				{
+					"filename": "v2_trp_tunneler_t1_walk_d7_f5",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 96,
+						"h": 96
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 96,
+						"h": 96
+					},
+					"frame": {
+						"x": 819,
+						"y": 411,
+						"w": 96,
+						"h": 96
+					}
+				},
+				{
+					"filename": "v2_trp_tunneler_t1_walk_d7_f6",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 96,
+						"h": 96
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 96,
+						"h": 96
+					},
+					"frame": {
+						"x": 819,
+						"y": 513,
+						"w": 96,
+						"h": 96
+					}
+				},
+				{
+					"filename": "v2_trp_tunneler_t1_walk_d7_f7",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 96,
+						"h": 96
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 96,
+						"h": 96
+					},
+					"frame": {
+						"x": 819,
+						"y": 615,
+						"w": 96,
+						"h": 96
+					}
+				},
+				{
+					"filename": "v2_trp_tunneler_t1_walk_d7_f8",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 96,
+						"h": 96
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 96,
+						"h": 96
+					},
+					"frame": {
+						"x": 819,
+						"y": 717,
+						"w": 96,
+						"h": 96
+					}
+				}
+			]
+		}
+	],
+	"meta": {
+		"app": "shardkeep/scripts/rasterize",
+		"version": "1"
+	}
+}

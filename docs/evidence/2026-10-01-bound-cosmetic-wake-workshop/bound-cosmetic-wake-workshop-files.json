@@ -1,0 +1,34 @@
+[
+  {
+    "path": "packages/shared/src/boundCosmeticWakeWorkshopApi.ts",
+    "sha256": "970c854b9d9a1f0b7290a49a10987f284ea5c040794f12f3055a59dcd83410ca"
+  },
+  {
+    "path": "packages/shared/src/boundCosmeticWakeWorkshopApi.test.ts",
+    "sha256": "173831123f0e80ba2204f599762e56bec0195f4b6382605af0edb8ee9cbc37c8"
+  },
+  {
+    "path": "packages/shared/package.json",
+    "sha256": "7c41820644a60f45685241a32f8ccd0a8819cd00d2cec2dba33da248412187e2"
+  },
+  {
+    "path": "apps/api/src/game/boundCosmeticWorkshop.ts",
+    "sha256": "47f3edfe09351d4dd04b921cd061e228604859b174560e378e194e53487741bb"
+  },
+  {
+    "path": "apps/api/src/game/boundCosmeticWakeWorkshopRoutes.ts",
+    "sha256": "f2e1521c04444d511bd12258557e1a2c9532419da1dcbde0178d33676eb8088a"
+  },
+  {
+    "path": "apps/api/test/bound-cosmetic-wake-workshop.test.ts",
+    "sha256": "6234304046d0736508a7599b970219003ffd10a206c9c0b99335d408da513c52"
+  },
+  {
+    "path": "apps/api/src/app.ts",
+    "sha256": "fa92050c505dc1894b62ac1379b540b9d5c97020faba3eee84f66e6965638eaf"
+  },
+  {
+    "path": "apps/api/src/phaseEServices.ts",
+    "sha256": "c8d676af644fb43ced812db173b65bdf960be4db27021dacf7aeb0334d1b9b67"
+  }
+]

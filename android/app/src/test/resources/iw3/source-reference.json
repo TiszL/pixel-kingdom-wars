@@ -1,0 +1,25 @@
+{
+  "purpose": "Immutable historical IW3 metadata for provider lifetime tests; Cedar stages exact resources in its owned queue. No residency or release proof.",
+  "files": [
+    {
+      "name": "catalogue.json",
+      "sha256": "a844d2ee5322bc687eaaea2874eb87a7df9ef2b1775171397750dce56685a5a2",
+      "source": "<fixture-source>/iw3-construction/fixtures/catalogue.json"
+    },
+    {
+      "name": "render-catalog.json",
+      "sha256": "f9eff00c5a8119e3aed0675d816ba5371d1634332f36a398b570c1c488988133",
+      "source": "<fixture-source>/iw3-construction/fixtures/render-catalog.json"
+    },
+    {
+      "name": "manifest.json",
+      "sha256": "7ce8c43ec191e9b6ba7be4d3b399c46acc3913c3ef1f06ef16209472483c981c",
+      "source": "<fixture-source>/iw3-construction/fixtures/manifest.json"
+    }
+  ],
+  "dependencies": [
+    "MS-A7b1c11bf verified ServiceContentSession API",
+    "Cedar IW3 resolver/types at task-2/iw3-construction/proposed"
+  ],
+  "execution": "UNRUN; missing imported API or fixture is prerequisite failure, not observed behavioral RED"
+}

@@ -1,0 +1,15 @@
+{
+  "schemaVersion":1,
+  "sdk":"ephemeral-vrf-sdk@0.17.2/anchor-compat",
+  "scope":"deterministic ABI compatibility; no provider delivery or unpredictability proof",
+  "craftProgram":"4FnNXB9FFSnDmGnwyML28XBugxgzdHqJfXZ1vxXjye59",
+  "rootIdHex":"11111111111111111111111111111111",
+  "attemptIdHex":"22222222222222222222222222222222",
+  "termsHashHex":"000102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f",
+  "root":"F1kSE5qHK4CW8CJuEx1fs63ndkMtXiWTYooySquRX9r6",
+  "attempt":"AB86A7k7K6YqWSRwZvTTjHHF6NVUiYhUsarHKwsn4a5p",
+  "oracleEscrow":"CgHHJJbUDwSP1vPCxa6mmkM4fntRYsnyyUAKkFgSchcZ",
+  "scopedProviderIdentity":"9BcREKyefAixeFpCJXJBuAdxLbrBrPYxTG8fGwAnVP7F",
+  "request":{"programId":"Vrf1RNUjXmQGjmQrQLvJHs9SNkvDJEsRVFPkfSQUwGz","accounts":[{"address":"CgHHJJbUDwSP1vPCxa6mmkM4fntRYsnyyUAKkFgSchcZ","isSigner":true,"isWritable":true},{"address":"9UCvbh1Wdy97om5YnNEET5fga3hRgP1UU7n96hSkodFK","isSigner":true,"isWritable":false},{"address":"Cuj97ggrhhidhbu39TijNVqE74xvKJ69gDervRUXAxGh","isSigner":false,"isWritable":true},{"address":"11111111111111111111111111111111","isSigner":false,"isWritable":false},{"address":"SysvarS1otHashes111111111111111111111111111","isSigner":false,"isWritable":false}],"dataHex":"0a00000000000000000102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f305c7e4920c427a92ec0a843c5a8b3a799c82f02e47645ebba1308eefeb6498408000000e239a17d6102161402000000d034ba9f55435d8bc3513cff33f1367b12e4e52dcea6ccc5e97399955090296f0000885101821f2dadf3529910fb51e27e187705deb741976a82fb6191c861cbe2c30001200000001111111111111111111111111111111122222222222222222222222222222222","dataLength":192},
+  "callback":{"programId":"4FnNXB9FFSnDmGnwyML28XBugxgzdHqJfXZ1vxXjye59","accounts":[{"address":"9BcREKyefAixeFpCJXJBuAdxLbrBrPYxTG8fGwAnVP7F","isSigner":true,"isWritable":false},{"address":"F1kSE5qHK4CW8CJuEx1fs63ndkMtXiWTYooySquRX9r6","isSigner":false,"isWritable":false},{"address":"AB86A7k7K6YqWSRwZvTTjHHF6NVUiYhUsarHKwsn4a5p","isSigner":false,"isWritable":true}],"discriminatorHex":"e239a17d61021614","randomnessHex":"a0a1a2a3a4a5a6a7a8a9aaabacadaeafb0b1b2b3b4b5b6b7b8b9babbbcbdbebf","argsHex":"1111111111111111111111111111111122222222222222222222222222222222","dataHex":"e239a17d61021614a0a1a2a3a4a5a6a7a8a9aaabacadaeafb0b1b2b3b4b5b6b7b8b9babbbcbdbebf1111111111111111111111111111111122222222222222222222222222222222","dataLength":72}
+}

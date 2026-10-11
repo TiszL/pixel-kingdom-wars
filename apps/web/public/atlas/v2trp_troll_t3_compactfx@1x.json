@@ -1,0 +1,271 @@
+{
+	"textures": [
+		{
+			"image": "v2trp_troll_t3_compactfx@1x.png",
+			"format": "RGBA8888",
+			"size": {
+				"w": 192,
+				"h": 170
+			},
+			"scale": 1,
+			"frames": [
+				{
+					"filename": "v2_compact_fx_troll_t3_sweep_f1",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 48,
+						"h": 52
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 48,
+						"h": 52
+					},
+					"frame": {
+						"x": 3,
+						"y": 3,
+						"w": 48,
+						"h": 52
+					}
+				},
+				{
+					"filename": "v2_compact_fx_troll_t3_sweep_f2",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 48,
+						"h": 52
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 48,
+						"h": 52
+					},
+					"frame": {
+						"x": 57,
+						"y": 3,
+						"w": 48,
+						"h": 52
+					}
+				},
+				{
+					"filename": "v2_compact_fx_troll_t3_sweep_f3",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 48,
+						"h": 52
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 48,
+						"h": 52
+					},
+					"frame": {
+						"x": 3,
+						"y": 61,
+						"w": 48,
+						"h": 52
+					}
+				},
+				{
+					"filename": "v2_compact_fx_troll_t3_sweep_f4",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 48,
+						"h": 52
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 48,
+						"h": 52
+					},
+					"frame": {
+						"x": 57,
+						"y": 61,
+						"w": 48,
+						"h": 52
+					}
+				},
+				{
+					"filename": "v2_compact_fx_troll_t3_impact_slam_f1",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 48,
+						"h": 48
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 48,
+						"h": 48
+					},
+					"frame": {
+						"x": 111,
+						"y": 3,
+						"w": 48,
+						"h": 48
+					}
+				},
+				{
+					"filename": "v2_compact_fx_troll_t3_impact_slam_f2",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 48,
+						"h": 48
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 48,
+						"h": 48
+					},
+					"frame": {
+						"x": 111,
+						"y": 57,
+						"w": 48,
+						"h": 48
+					}
+				},
+				{
+					"filename": "v2_compact_fx_troll_t3_impact_slam_f3",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 48,
+						"h": 48
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 48,
+						"h": 48
+					},
+					"frame": {
+						"x": 111,
+						"y": 111,
+						"w": 48,
+						"h": 48
+					}
+				},
+				{
+					"filename": "v2_compact_fx_troll_t3_impact_slam_f4",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 48,
+						"h": 48
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 48,
+						"h": 48
+					},
+					"frame": {
+						"x": 3,
+						"y": 119,
+						"w": 48,
+						"h": 48
+					}
+				},
+				{
+					"filename": "v2_compact_fx_troll_t3_dust_f1",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 24,
+						"h": 24
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 24,
+						"h": 24
+					},
+					"frame": {
+						"x": 57,
+						"y": 119,
+						"w": 24,
+						"h": 24
+					}
+				},
+				{
+					"filename": "v2_compact_fx_troll_t3_dust_f2",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 24,
+						"h": 24
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 24,
+						"h": 24
+					},
+					"frame": {
+						"x": 165,
+						"y": 3,
+						"w": 24,
+						"h": 24
+					}
+				},
+				{
+					"filename": "v2_compact_fx_troll_t3_dust_f3",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 24,
+						"h": 24
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 24,
+						"h": 24
+					},
+					"frame": {
+						"x": 165,
+						"y": 33,
+						"w": 24,
+						"h": 24
+					}
+				},
+				{
+					"filename": "v2_compact_fx_troll_t3_dust_f4",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 24,
+						"h": 24
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 24,
+						"h": 24
+					},
+					"frame": {
+						"x": 165,
+						"y": 63,
+						"w": 24,
+						"h": 24
+					}
+				}
+			]
+		}
+	],
+	"meta": {
+		"app": "shardkeep/scripts/rasterize",
+		"version": "1"
+	}
+}

@@ -1,0 +1,1010 @@
+{
+  "address": "mYYQFnpyGofG31y5oJkiKVmNwifbSXBMnQ5aUgQkL6b",
+  "metadata": {
+    "name": "shardkeep_core",
+    "version": "0.1.0",
+    "spec": "0.1.0",
+    "description": "SHARDKEEP entry payments + player registry + epoch merkle roots"
+  },
+  "instructions": [
+    {
+      "name": "accept_admin",
+      "discriminator": [
+        112,
+        42,
+        45,
+        90,
+        116,
+        181,
+        13,
+        170
+      ],
+      "accounts": [
+        {
+          "name": "config",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  99,
+                  111,
+                  110,
+                  102,
+                  105,
+                  103
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "new_admin",
+          "signer": true
+        }
+      ],
+      "args": []
+    },
+    {
+      "name": "buy_builder",
+      "docs": [
+        "Sequential on-chain enforcement: `index` must equal builders_purchased."
+      ],
+      "discriminator": [
+        40,
+        195,
+        175,
+        225,
+        120,
+        52,
+        223,
+        49
+      ],
+      "accounts": [
+        {
+          "name": "config",
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  99,
+                  111,
+                  110,
+                  102,
+                  105,
+                  103
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "player_wallet",
+          "writable": true,
+          "signer": true
+        },
+        {
+          "name": "player",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  112,
+                  108,
+                  97,
+                  121,
+                  101,
+                  114
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "player_wallet"
+              }
+            ]
+          }
+        },
+        {
+          "name": "treasury_liquidity",
+          "writable": true
+        },
+        {
+          "name": "treasury_dev",
+          "writable": true
+        },
+        {
+          "name": "treasury_ops",
+          "writable": true
+        },
+        {
+          "name": "reference"
+        },
+        {
+          "name": "system_program",
+          "address": "11111111111111111111111111111111"
+        }
+      ],
+      "args": [
+        {
+          "name": "index",
+          "type": "u8"
+        }
+      ]
+    },
+    {
+      "name": "buy_expansion",
+      "docs": [
+        "Sequential on-chain enforcement: `index` must equal expansions_purchased."
+      ],
+      "discriminator": [
+        240,
+        15,
+        88,
+        142,
+        33,
+        215,
+        48,
+        32
+      ],
+      "accounts": [
+        {
+          "name": "config",
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  99,
+                  111,
+                  110,
+                  102,
+                  105,
+                  103
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "player_wallet",
+          "writable": true,
+          "signer": true
+        },
+        {
+          "name": "player",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  112,
+                  108,
+                  97,
+                  121,
+                  101,
+                  114
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "player_wallet"
+              }
+            ]
+          }
+        },
+        {
+          "name": "treasury_liquidity",
+          "writable": true
+        },
+        {
+          "name": "treasury_dev",
+          "writable": true
+        },
+        {
+          "name": "treasury_ops",
+          "writable": true
+        },
+        {
+          "name": "reference"
+        },
+        {
+          "name": "system_program",
+          "address": "11111111111111111111111111111111"
+        }
+      ],
+      "args": [
+        {
+          "name": "index",
+          "type": "u8"
+        }
+      ]
+    },
+    {
+      "name": "buy_sink",
+      "docs": [
+        "Repeatable SOL sink — raid energy (3), shield extension (4), Mines (5),",
+        "and any future sink (kind ≥ 3).",
+        "",
+        "Deliberately different from buy_builder/buy_expansion: there is NO",
+        "on-chain counter and NO Player PDA, because these sinks are unbounded",
+        "on-chain. The KIND is just a tag echoed in the event; the SERVER maps",
+        "kind → effect and enforces price + eligibility at `finalized` before it",
+        "grants, so a client that underpays (or sends a bogus kind) only wastes",
+        "its own SOL and gets nothing — and new sinks need no program change. Kinds",
+        "0–2 are reserved for entry/builder/expansion (their own instructions), so",
+        "buy_sink rejects kind < 3. `amount` is split across the three treasuries",
+        "by config.splits exactly like every other payment; `reference` is the",
+        "off-chain-detection no-op the deposit watcher looks up signatures for."
+      ],
+      "discriminator": [
+        220,
+        121,
+        168,
+        150,
+        121,
+        25,
+        213,
+        14
+      ],
+      "accounts": [
+        {
+          "name": "config",
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  99,
+                  111,
+                  110,
+                  102,
+                  105,
+                  103
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "player_wallet",
+          "writable": true,
+          "signer": true
+        },
+        {
+          "name": "treasury_liquidity",
+          "writable": true
+        },
+        {
+          "name": "treasury_dev",
+          "writable": true
+        },
+        {
+          "name": "treasury_ops",
+          "writable": true
+        },
+        {
+          "name": "reference"
+        },
+        {
+          "name": "system_program",
+          "address": "11111111111111111111111111111111"
+        }
+      ],
+      "args": [
+        {
+          "name": "kind",
+          "type": "u8"
+        },
+        {
+          "name": "amount",
+          "type": "u64"
+        }
+      ]
+    },
+    {
+      "name": "initialize",
+      "discriminator": [
+        175,
+        175,
+        109,
+        31,
+        13,
+        152,
+        155,
+        237
+      ],
+      "accounts": [
+        {
+          "name": "admin",
+          "writable": true,
+          "signer": true
+        },
+        {
+          "name": "program",
+          "docs": [
+            "The canonical Config PDA may only be initialized by this program's",
+            "current upgrade authority. Binding the executable to its ProgramData",
+            "account closes the first-signer race without pinning a stale authority."
+          ],
+          "address": "mYYQFnpyGofG31y5oJkiKVmNwifbSXBMnQ5aUgQkL6b"
+        },
+        {
+          "name": "program_data"
+        },
+        {
+          "name": "config",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  99,
+                  111,
+                  110,
+                  102,
+                  105,
+                  103
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "system_program",
+          "address": "11111111111111111111111111111111"
+        }
+      ],
+      "args": [
+        {
+          "name": "args",
+          "type": {
+            "defined": {
+              "name": "InitializeArgs"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "pay_entry",
+      "docs": [
+        "Player signs; entry price is split across the three treasuries by bps",
+        "(remainder dust deterministically to the liquidity leg); Player PDA is",
+        "`init` (NOT init_if_needed) so one wallet = one base, enforced on-chain.",
+        "`reference` is a client-supplied no-op account for off-chain detection."
+      ],
+      "discriminator": [
+        187,
+        10,
+        90,
+        67,
+        83,
+        172,
+        196,
+        207
+      ],
+      "accounts": [
+        {
+          "name": "config",
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  99,
+                  111,
+                  110,
+                  102,
+                  105,
+                  103
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "player_wallet",
+          "writable": true,
+          "signer": true
+        },
+        {
+          "name": "player",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  112,
+                  108,
+                  97,
+                  121,
+                  101,
+                  114
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "player_wallet"
+              }
+            ]
+          }
+        },
+        {
+          "name": "treasury_liquidity",
+          "writable": true
+        },
+        {
+          "name": "treasury_dev",
+          "writable": true
+        },
+        {
+          "name": "treasury_ops",
+          "writable": true
+        },
+        {
+          "name": "reference",
+          "docs": [
+            "off-chain payment detection can find the tx by this key. Never read."
+          ]
+        },
+        {
+          "name": "system_program",
+          "address": "11111111111111111111111111111111"
+        }
+      ],
+      "args": []
+    },
+    {
+      "name": "post_root",
+      "docs": [
+        "Admin-only weekly proof-of-liabilities snapshot. `init`-once per epoch:",
+        "an EpochRoot is immutable after posting."
+      ],
+      "discriminator": [
+        154,
+        210,
+        156,
+        158,
+        199,
+        27,
+        174,
+        35
+      ],
+      "accounts": [
+        {
+          "name": "config",
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  99,
+                  111,
+                  110,
+                  102,
+                  105,
+                  103
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "admin",
+          "writable": true,
+          "signer": true,
+          "relations": [
+            "config"
+          ]
+        },
+        {
+          "name": "epoch_root",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  114,
+                  111,
+                  111,
+                  116
+                ]
+              },
+              {
+                "kind": "arg",
+                "path": "epoch"
+              }
+            ]
+          }
+        },
+        {
+          "name": "system_program",
+          "address": "11111111111111111111111111111111"
+        }
+      ],
+      "args": [
+        {
+          "name": "epoch",
+          "type": "u64"
+        },
+        {
+          "name": "root",
+          "type": {
+            "array": [
+              "u8",
+              32
+            ]
+          }
+        },
+        {
+          "name": "total_balance",
+          "type": "u64"
+        }
+      ]
+    },
+    {
+      "name": "propose_admin",
+      "discriminator": [
+        121,
+        214,
+        199,
+        212,
+        87,
+        39,
+        117,
+        234
+      ],
+      "accounts": [
+        {
+          "name": "config",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  99,
+                  111,
+                  110,
+                  102,
+                  105,
+                  103
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "admin",
+          "signer": true,
+          "relations": [
+            "config"
+          ]
+        }
+      ],
+      "args": [
+        {
+          "name": "new_admin",
+          "type": "pubkey"
+        }
+      ]
+    },
+    {
+      "name": "set_paused",
+      "discriminator": [
+        91,
+        60,
+        125,
+        192,
+        176,
+        225,
+        166,
+        218
+      ],
+      "accounts": [
+        {
+          "name": "config",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  99,
+                  111,
+                  110,
+                  102,
+                  105,
+                  103
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "admin",
+          "signer": true,
+          "relations": [
+            "config"
+          ]
+        }
+      ],
+      "args": [
+        {
+          "name": "paused",
+          "type": "bool"
+        }
+      ]
+    }
+  ],
+  "accounts": [
+    {
+      "name": "Config",
+      "discriminator": [
+        155,
+        12,
+        170,
+        224,
+        30,
+        250,
+        204,
+        130
+      ]
+    },
+    {
+      "name": "EpochRoot",
+      "discriminator": [
+        84,
+        115,
+        245,
+        96,
+        45,
+        165,
+        224,
+        31
+      ]
+    },
+    {
+      "name": "Player",
+      "discriminator": [
+        205,
+        222,
+        112,
+        7,
+        165,
+        155,
+        206,
+        218
+      ]
+    }
+  ],
+  "events": [
+    {
+      "name": "PaymentMade",
+      "discriminator": [
+        227,
+        251,
+        123,
+        16,
+        133,
+        220,
+        83,
+        242
+      ]
+    },
+    {
+      "name": "RootPosted",
+      "discriminator": [
+        245,
+        251,
+        4,
+        0,
+        87,
+        227,
+        252,
+        231
+      ]
+    }
+  ],
+  "errors": [
+    {
+      "code": 6000,
+      "name": "InvalidSplits",
+      "msg": "Splits must sum to 10000 bps"
+    },
+    {
+      "code": 6001,
+      "name": "Paused",
+      "msg": "Payments are paused"
+    },
+    {
+      "code": 6002,
+      "name": "OutOfOrderPurchase",
+      "msg": "Purchase index must equal the current purchase count"
+    },
+    {
+      "code": 6003,
+      "name": "PurchaseLimitReached",
+      "msg": "Purchase limit reached"
+    },
+    {
+      "code": 6004,
+      "name": "InvalidTreasury",
+      "msg": "Treasury account does not match config"
+    },
+    {
+      "code": 6005,
+      "name": "Unauthorized",
+      "msg": "Unauthorized"
+    },
+    {
+      "code": 6006,
+      "name": "MathOverflow",
+      "msg": "Math overflow"
+    },
+    {
+      "code": 6007,
+      "name": "InvalidPaymentKind",
+      "msg": "Payment kind is not a valid SOL sink"
+    },
+    {
+      "code": 6008,
+      "name": "InvalidAmount",
+      "msg": "Amount must be positive"
+    }
+  ],
+  "types": [
+    {
+      "name": "Config",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "admin",
+            "type": "pubkey"
+          },
+          {
+            "name": "pending_admin",
+            "type": {
+              "option": "pubkey"
+            }
+          },
+          {
+            "name": "keep_mint",
+            "type": "pubkey"
+          },
+          {
+            "name": "treasury_liquidity",
+            "type": "pubkey"
+          },
+          {
+            "name": "treasury_dev",
+            "type": "pubkey"
+          },
+          {
+            "name": "treasury_ops",
+            "type": "pubkey"
+          },
+          {
+            "name": "splits",
+            "type": {
+              "array": [
+                "u16",
+                3
+              ]
+            }
+          },
+          {
+            "name": "prices",
+            "type": {
+              "defined": {
+                "name": "Prices"
+              }
+            }
+          },
+          {
+            "name": "paused",
+            "type": "bool"
+          },
+          {
+            "name": "bump",
+            "type": "u8"
+          }
+        ]
+      }
+    },
+    {
+      "name": "EpochRoot",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "epoch",
+            "type": "u64"
+          },
+          {
+            "name": "root",
+            "type": {
+              "array": [
+                "u8",
+                32
+              ]
+            }
+          },
+          {
+            "name": "total_balance",
+            "type": "u64"
+          },
+          {
+            "name": "posted_at",
+            "type": "i64"
+          },
+          {
+            "name": "bump",
+            "type": "u8"
+          }
+        ]
+      }
+    },
+    {
+      "name": "InitializeArgs",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "keep_mint",
+            "type": "pubkey"
+          },
+          {
+            "name": "treasury_liquidity",
+            "type": "pubkey"
+          },
+          {
+            "name": "treasury_dev",
+            "type": "pubkey"
+          },
+          {
+            "name": "treasury_ops",
+            "type": "pubkey"
+          },
+          {
+            "name": "splits",
+            "docs": [
+              "[liquidity, dev, ops] in bps; must sum to 10_000."
+            ],
+            "type": {
+              "array": [
+                "u16",
+                3
+              ]
+            }
+          },
+          {
+            "name": "prices",
+            "type": {
+              "defined": {
+                "name": "Prices"
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "PaymentMade",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "wallet",
+            "type": "pubkey"
+          },
+          {
+            "name": "kind",
+            "docs": [
+              "0=entry, 1=builder, 2=expansion, 3=energy, 4=shield, 5=mine (≥3 = SOL sink)."
+            ],
+            "type": "u8"
+          },
+          {
+            "name": "lamports",
+            "type": "u64"
+          },
+          {
+            "name": "reference",
+            "type": "pubkey"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Player",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "wallet",
+            "type": "pubkey"
+          },
+          {
+            "name": "opened_at",
+            "type": "i64"
+          },
+          {
+            "name": "builders_purchased",
+            "type": "u8"
+          },
+          {
+            "name": "expansions_purchased",
+            "type": "u8"
+          },
+          {
+            "name": "bump",
+            "type": "u8"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Prices",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "entry_lamports",
+            "type": "u64"
+          },
+          {
+            "name": "builder_lamports",
+            "docs": [
+              "Prices for the 2nd and 3rd builder (index 0 = first purchasable builder)."
+            ],
+            "type": {
+              "array": [
+                "u64",
+                2
+              ]
+            }
+          },
+          {
+            "name": "expansion_lamports",
+            "type": "u64"
+          }
+        ]
+      }
+    },
+    {
+      "name": "RootPosted",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "epoch",
+            "type": "u64"
+          },
+          {
+            "name": "root",
+            "type": {
+              "array": [
+                "u8",
+                32
+              ]
+            }
+          },
+          {
+            "name": "total_balance",
+            "type": "u64"
+          }
+        ]
+      }
+    }
+  ]
+}

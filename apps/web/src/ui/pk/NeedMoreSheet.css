@@ -1,0 +1,48 @@
+/* NeedMoreSheet.css — the generic SHORT sheet (need-more.png). Tokens only. The host decides position and height;
+ * this fills it: header fixed, blocks scroll, best door pinned at the bottom. The frame, title plate, parchment and
+ * every button are P0 parts (Plate.css, Button.css); the rules below only lay them out, each scoped under this sheet's
+ * own classes (parity verdict B3). */
+
+.pk-needmore { width: 100%; height: 100%; max-height: 100%; display: flex; flex-direction: column; min-height: 0; color: var(--pk-ink-text); }
+/* P0 <PkPlate kind="WOOD">: its face is the column (head, loading line, parchment). */
+.pk-needmore__wood { flex: 1 1 auto; min-height: 0; max-height: 100%; }
+.pk-needmore__wood > .pk-plate__face { gap: var(--pk-s6); min-height: 0; }
+
+.pk-needmore__head { display: flex; align-items: stretch; gap: var(--pk-s8); flex: none; }
+/* P0 <PkPlate kind="CHARCOAL"> title plate, 48 tall beside the P0 <PkCloseSquare>. */
+.pk-needmore__title { flex: 1 1 auto; min-width: 0; height: var(--pk-min-tap); }
+.pk-needmore__title > .pk-plate__face { justify-content: center; }
+.pk-needmore__titleIn { display: flex; align-items: center; justify-content: space-between; gap: var(--pk-s8); min-width: 0; padding: 0 var(--pk-s8); }
+.pk-needmore__titleText { color: var(--pk-gold-hi); white-space: nowrap; }
+.pk-needmore__for { color: var(--pk-text-muted); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; min-width: 0; }
+
+/* 2 px stone line while the numbers refresh; the doors stay live. */
+.pk-needmore__loading { flex: none; height: var(--pk-s2); background: linear-gradient(90deg, var(--pk-stone-hi) 0 30%, var(--pk-stone-lo) 30%); background-size: 200% 100%; animation: pk-needmore-load var(--pk-dur-celebrate) var(--pk-ease-linear) infinite; }
+@keyframes pk-needmore-load { from { background-position: 100% 0; } to { background-position: -100% 0; } }
+
+/* P0 <PkPlate kind="PARCHMENT">; Android contentPadding 8 (NeedMoreSheet.kt:124) replaces P0's default 5/6/6. */
+.pk-needmore .pk-needmore__parch { padding: var(--pk-s8); gap: var(--pk-s12); min-height: 0; flex: 1 1 auto; }
+.pk-needmore__enough { margin: 0; text-align: center; color: var(--pk-ink-text); }
+.pk-needmore__blocks { display: flex; flex-direction: column; gap: var(--pk-s8); overflow-y: auto; overscroll-behavior: contain; min-height: 0; flex: 0 1 auto; }
+
+/* A shortfall block: cream card with a 3 px blood rim (stepped). */
+.pk-needmore__block { flex: none; background: var(--pk-blood); clip-path: var(--pk-k-clip-m); padding: var(--pk-outline-plate);
+  animation: pk-needmore-row var(--pk-dur-half-sheet-in) var(--pk-ease-out) both; animation-delay: calc(var(--pk-row-i) * var(--pk-dur-drawer-row-stagger)); }
+@keyframes pk-needmore-row { from { opacity: 0; } }
+.pk-needmore__blockIn { clip-path: var(--pk-clip-s); background: var(--pk-cream); box-shadow: inset 0 calc(-1 * var(--pk-lip-plate)) 0 var(--pk-cream-lo);
+  padding: var(--pk-s6) var(--pk-s8) var(--pk-s12); display: flex; flex-direction: column; gap: var(--pk-s4); }
+.pk-needmore__row { display: flex; align-items: center; gap: var(--pk-s8); }
+.pk-needmore__well { flex: none; width: calc(var(--pk-s32) + var(--pk-s12)); height: calc(var(--pk-s32) + var(--pk-s12)); box-sizing: border-box;
+  background: var(--pk-cream-lo); box-shadow: inset 0 0 0 var(--pk-s2) var(--pk-ink); display: flex; align-items: center; justify-content: center; }
+.pk-needmore__nums { flex: 1 1 auto; min-width: 0; display: flex; flex-direction: column; gap: var(--pk-s2); }
+.pk-needmore__nameRow { display: flex; align-items: baseline; gap: var(--pk-s8); }
+.pk-needmore__name { flex: 1 1 auto; min-width: 0; color: var(--pk-ink-text); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.pk-needmore__more { flex: none; color: var(--pk-short-text); white-space: nowrap; }
+.pk-needmore__haveNeed { color: var(--pk-ink-text-2); }
+.pk-needmore__source { margin: 0; color: var(--pk-ink-text); }
+.pk-needmore__locked { margin: 0; color: var(--pk-ink-text-2); }
+
+/* Block doors: P0 <PkSecondaryButton>s sharing the row equally (Android Modifier.weight(1f)). */
+.pk-needmore__doors { display: flex; gap: var(--pk-s8); }
+.pk-needmore__doors > .pk-btn { flex: 1 1 0; min-width: 0; }
+/* Reduced motion (both triggers) lives in kitBase.css: one list for the whole kit. */

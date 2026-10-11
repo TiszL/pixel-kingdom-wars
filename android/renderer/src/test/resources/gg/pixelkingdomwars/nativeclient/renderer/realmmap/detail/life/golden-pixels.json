@@ -1,0 +1,121 @@
+{
+ "cases": [
+  {
+   "LH": 32,
+   "LW": 32,
+   "bleed": "5ecac2b082ba76ad931a105cee9246d110e289a6c228d943ed4c706a60669b8c",
+   "chain": [
+    [16,16,"acf39fe790db49acab5aaf42f9dbbbe59dd9f0ae95386dc3c520839029c0e385"],
+    [8,8,"65f0fc3e5150dc8293070c54b10ecb552a810f547b79caab787c29939497cce5"],
+    [4,4,"ccfa376ba82c1dd37d08cc947468b8c5dd9c0cab83eb7396d15c77e97a78c277"],
+    [2,2,"f6b88ed15a4a4c88d06316ca863ad5eb01754deccda7154b9e75791a3b75919e"],
+    [1,1,"c1da4af0e56f96291ba4dfb7c8997abd7f146e9960f23b890dfa0cd5fe9fc732"]
+   ],
+   "frame": "bcb880cf2577ba35832d982e0fbfbd712b116ab13911f72a58b71be3576c0b73",
+   "h": 20,
+   "image": "9e132fc283bce0bd43785491563657931b298afe5823bad499317f72dcfc2485",
+   "ink": [12,31,8,23],
+   "reduceMap": [4,3,2,3,"883ccdcaad8d6e95a60e743cff9a2099b4806225d465aa02388d81093c09e79b"],
+   "seed": 1,
+   "w": 16
+  },
+  {
+   "LH": 64,
+   "LW": 64,
+   "bleed": "ba7a05dbb4a643e74aedae773822f057c05e8a28fce22d215c1c7c118ff4fb70",
+   "chain": [
+    [32,32,"816391ad269828c3c57e56d986c2acf4281a111d29d1bfbf71a681998eb25c05"],
+    [16,16,"15247c6e6812a2c556148c12c491879cd9d694a8f43198cf36557e8ecf95ae5a"],
+    [8,8,"0875be2637359b45cd95d820678d37b2908eaed8b8dab4079ee19da235b0ab25"],
+    [4,4,"0ac8ab7035d3f8ab5dc2255110ec0554c9bddf33534c53f433e233df9b12ab92"],
+    [2,2,"5f9fd8ab8bc7c6f51ac39c60b7de97259ba6db7ecfc438624df3ac4e0faf1b9f"],
+    [1,1,"c1da4af0e56f96291ba4dfb7c8997abd7f146e9960f23b890dfa0cd5fe9fc732"]
+   ],
+   "frame": "c365b80f590f3961521ea0a0b93c006d1569dc251455f3833a5a491e94888804",
+   "h": 60,
+   "image": "8f48528349b9ce7daf1744b2277501d302ff1beb88026c9acf79ce82ec516d97",
+   "ink": [4,63,12,51],
+   "reduceMap": [6,9,3,9,"50401bb7d136ec3b933da76979bd7fa2546ee7212b7d05057f13ac76365a37fa"],
+   "seed": 2,
+   "w": 40
+  },
+  {
+   "LH": 64,
+   "LW": 64,
+   "bleed": "188dc0cc2ba5e47e400c89ed745693ddd7b128700a1f10e9e0bc6054ad6c78cc",
+   "chain": [
+    [32,32,"212b8f11b2e21037a6dc1391de64bbb77c6296243d1e4de63d42c9e5d75a84e6"],
+    [16,16,"2cb0b95f2cf2eae101cbc316c9777c741685d72d60dc650637034db20873bcec"],
+    [8,8,"271d7f8f948672ed82f1b7cfebfa90f71a3b2eb884fcb5ac1a35fd6520453a42"],
+    [4,4,"c976a1e6f69808041cda1c2709ba907e7c9f5b0fb76d5b35259e90e538aeac62"],
+    [2,2,"6c28a6d6c23562f47706d7b729af49ea22b4fdbad3cae63454305f148546833c"],
+    [1,1,"94b3c90de6e5812a55849efbc8e3a6ee05aa0315751d0919ae297d6ad471d144"]
+   ],
+   "frame": "b489499744f2bbe8b7c96a3f8ca8602705ac4a88b9bcf5ce87ba1cacf9dfeabd",
+   "h": 64,
+   "image": "8c6f3a7c6e3912c748a3ced965882c491d13b1a7a8e309909e6f02ac219df0e9",
+   "ink": [0,63,0,63],
+   "reduceMap": [10,10,5,10,"ca6df8a9ae868cd9aa21c8ee9734437ed409b8bb4c1fd9236d79f25c0b96f708"],
+   "seed": 3,
+   "w": 64
+  },
+  {
+   "LH": 128,
+   "LW": 160,
+   "bleed": "1656635041133446d9fe970aa45573b22fe6c2350b52d403ad5b6818d2374be1",
+   "chain": [
+    [80,64,"1ba63fea4628d6651c818d753e19cc5f485d44a9ccd61b48135deec704d97078"],
+    [40,32,"3b9e7bfabfebdccbddf2da06b3cbeef39b316abeb6589c165a82bd54a3b7da34"],
+    [20,16,"407c7d3b35e9e321db74e06a89d4028806405ffbab6ba7019e79b78cdcdb5300"],
+    [10,8,"962cf95fd374688639eb980e777ffd5e4fc835ed15d13c422684ca91e539e963"],
+    [5,4,"8187cde20083fedcb1e702ea54b9e02f93b278d8b0fe4777e81cb55e46dce91f"],
+    [2,2,"d2c786866bc18f08a0568f5e1074c0e1e2a1774eca0d9006366c115d355b781b"],
+    [1,1,"c1da4af0e56f96291ba4dfb7c8997abd7f146e9960f23b890dfa0cd5fe9fc732"]
+   ],
+   "frame": "506086978d037a2e3f805c8d4c58de6c0381aa9b45d5fb3271496bad195fdc28",
+   "h": 120,
+   "image": "213a1be111b176a85d0ddb0222d1a1e67357df04627cf35fc87002c3bca49729",
+   "ink": [8,127,5,154],
+   "reduceMap": [22,18,11,18,"a64e78561b5536178d6f749c81c8ed8a8e9a2e23eac607495f5d62922c733640"],
+   "seed": 4,
+   "w": 150
+  },
+  {
+   "LH": 16,
+   "LW": 16,
+   "bleed": "d18b3564a13b7fb3e6720124907fa13f7b3c71f3348e12ea095762d28f84f35c",
+   "chain": [
+    [8,8,"53f51fcbaa44dd16f51727b6d0d2775ee14f5b304c8fbfeddaea62e550429ef3"],
+    [4,4,"4d98ad9e0bf35beecb6757eeaf9ede40ddfe7241404797a7a9d4f5635e584369"],
+    [2,2,"8be49c8fb64ec66eb18a68245120a0e36afd833f4577d7eb94f7fc4ae8c28d7e"],
+    [1,1,"839be31a4b8d37e7971aaeafca350e23c3e1165c01c347e60feb4afbe0c38a7a"]
+   ],
+   "frame": "2e7950761216d877c0074e4be5b6c56729eb1405587d53dd46b8d76bf288f642",
+   "h": 5,
+   "image": "531105c212f2b8ffd6a0b62dc41b7d3a284ae36d8b4bf81e1ac38b70be82b879",
+   "ink": [11,15,4,10],
+   "reduceMap": [2,1,1,1,"af5570f5a1810b7af78caf4bc70a660f0df51e42baf91d4de5b2328de0e83dfc"],
+   "seed": 5,
+   "w": 7
+  }
+ ],
+ "generator": "e0af2a2f70adeedd0578d5bd3951b358a91d0f21008f730540f148482e6c6f20",
+ "note": "synthImage(w+6, h+4, seed) (mulberry32 palette, see generator); copyFrame(img, 3, 2, w, h, LW, LH, (LW−w)>>1, LH−h); chain = reduce2 levels",
+ "pin": "02e9da8414156b9e0000df1653de6273b196cca6",
+ "schema": 1,
+ "sources": {
+  "concepts/globe3d-2026-09-23/src/realm/bases.js": "7e3db4e21e3c9b1e9a5bec2c5f717d859876ee5b4e9e29f28710e9f58ad1cad6",
+  "concepts/globe3d-2026-09-23/src/realm/camera.js": "879c4d6aabda484b36b3ceeea69108692131a5c222579c7983c9a282d8e5c4a9",
+  "concepts/globe3d-2026-09-23/src/realm/contracts.js": "3d3215dee2273b456c98b6684f5dc6835c1aaea1c3f7ea98e55fa462cb693eb0",
+  "concepts/globe3d-2026-09-23/src/realm/decor.js": "5c8eb39e2fe633ab67cd01193b38d3b07aaadf2dc4d9fcc558f3101ef1d1b59b",
+  "concepts/globe3d-2026-09-23/src/realm/demo-bases.js": "e4441307fc9e0129614fb083b4661ff6e828ca1dbd4f7bbd17b733a3c5165c02",
+  "concepts/globe3d-2026-09-23/src/realm/glsl/common.glsl.js": "7492ff9f85f283d3263fa3671907a9116ba646b5fdb56b100ae7cad73c35d52c",
+  "concepts/globe3d-2026-09-23/src/realm/life.js": "716142c459c8ccb8cc8d0a1e7d980cf502d5deda7480ed43a99d0b6f3f5ac169",
+  "concepts/globe3d-2026-09-23/src/realm/loader.js": "3aedcb60d54c73c883f5f8d4032ed1959d2e9f0febad0441f6ca3a9cd37668cb",
+  "concepts/globe3d-2026-09-23/src/realm/scatter.js": "969f0a75f67509f393ad48c252a7a1ea2ac149991be3c1df2424b682fb393cae",
+  "packages/shared/src/constants.ts": "360f8c643ee0211b5a7d8a81eedb60dc5fb3c47a67c9202109c424794d4821d6",
+  "packages/shared/src/wallConnect.ts": "ff7784ca91d3069b6f0ef217c6543eb002445fdbadb7d10bd50823097ee5b45b"
+ },
+ "suite": "pixels",
+ "tolerance": "exact"
+}

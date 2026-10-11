@@ -1,0 +1,55 @@
+/* NamePlate.css — selected-building name plate. Only --pk-* values.
+ * Transient (only while something is selected), so not permanent HUD. Same size on every class; at the 320 floor the
+ * 280 max still fits inside the 8 px clamp (320 - 16 = 304). On phone-landscape it flips below when the sprite is
+ * near the top (the placement function decides, not a breakpoint). */
+
+.pk-nameplate {
+  position: absolute;
+  z-index: var(--z-anchor); /* world markers: bridge --z-anchor 900 (pk-tokens.generated.md §5) */
+  display: block;
+  pointer-events: none;
+  animation: pk-plate-in var(--pk-dur-plate-in) var(--pk-ease-out) both;
+}
+.pk-nameplate__plate {
+  min-width: var(--pk-size-name-plate-min-w);
+  max-width: var(--pk-size-name-plate-max-w);
+  min-height: var(--pk-size-name-plate-h);
+}
+/* NamePlate.kt contentPadding 12/6/10/8 (outer edge -> content), minus the 3 px rim */
+.pk-nameplate__plate > .pk-plate__face {
+  justify-content: center;
+  gap: var(--pk-s2);
+  padding: var(--pk-k-3) calc(var(--pk-s8) - var(--pk-text-outline-1)) var(--pk-k-5) calc(var(--pk-s8) + var(--pk-text-outline-1));
+}
+.pk-nameplate__l1 { display: flex; align-items: center; gap: var(--pk-s8); min-width: 0; }
+.pk-nameplate__name { color: var(--pk-gold-hi); min-width: 0; }
+.pk-nameplate__state { color: var(--pk-text-muted); }
+.pk-run--muted { color: var(--pk-text-muted); }
+.pk-run--value { color: var(--pk-text); }
+.pk-run--time { color: var(--pk-gold-hi); }
+.pk-run--ready { color: var(--pk-green-hi); }
+.pk-run--danger { color: var(--pk-danger); }
+/* 12 px job meter (ProgressBar): ink S rim 2, track, green with a 2 px highlight */
+.pk-nameplate__meter {
+  display: block; box-sizing: border-box; height: var(--pk-s12); margin-top: var(--pk-outline-button);
+  padding: var(--pk-s2); background: var(--pk-ink); clip-path: var(--pk-clip-s);
+}
+.pk-nameplate__meter { position: relative; }
+.pk-nameplate__meter::before { content: ''; position: absolute; inset: var(--pk-s2); background: var(--pk-k-track); }
+.pk-nameplate__meter > i {
+  position: relative; display: block; height: 100%;
+  background: linear-gradient(var(--pk-green-hi) 0 var(--pk-s2), var(--pk-green) var(--pk-s2));
+}
+
+/* 4 x 20 ink stem from the plate to the roof (or up to the sprite when flipped below) */
+.pk-nameplate__stem {
+  position: absolute;
+  left: calc(var(--pk-stem-x) - var(--pk-size-name-plate-stem-w) / 2);
+  top: 100%;
+  width: var(--pk-size-name-plate-stem-w);
+  height: var(--pk-size-name-plate-stem-h);
+  background: var(--pk-ink);
+}
+.pk-nameplate--below .pk-nameplate__stem { top: auto; bottom: 100%; }
+
+@keyframes pk-plate-in { from { opacity: 0; transform: translateY(var(--pk-s4)); } to { opacity: 1; transform: none; } }

@@ -1,0 +1,1936 @@
+{
+  "schemaVersion": 1,
+  "sourceCommit": "427381a2adf934bbcc902baefc207a655b185eb6",
+  "simVersion": 18,
+  "snapshot": {
+    "keepLevel": 1,
+    "buildings": [
+      {
+        "id": "keep",
+        "type": "keep",
+        "level": 2,
+        "tx": 8,
+        "ty": 8
+      },
+      {
+        "id": "vault",
+        "type": "vault",
+        "level": 2,
+        "tx": 11,
+        "ty": 8
+      },
+      {
+        "id": "wall_0",
+        "type": "wall",
+        "level": 2,
+        "tx": 2,
+        "ty": 2
+      },
+      {
+        "id": "wall_1",
+        "type": "wall",
+        "level": 2,
+        "tx": 2,
+        "ty": 15
+      },
+      {
+        "id": "wall_2",
+        "type": "wall",
+        "level": 2,
+        "tx": 3,
+        "ty": 2
+      },
+      {
+        "id": "wall_3",
+        "type": "wall",
+        "level": 2,
+        "tx": 3,
+        "ty": 15
+      },
+      {
+        "id": "wall_4",
+        "type": "wall",
+        "level": 2,
+        "tx": 4,
+        "ty": 2
+      },
+      {
+        "id": "wall_5",
+        "type": "wall",
+        "level": 2,
+        "tx": 4,
+        "ty": 15
+      },
+      {
+        "id": "wall_6",
+        "type": "wall",
+        "level": 2,
+        "tx": 5,
+        "ty": 2
+      },
+      {
+        "id": "wall_7",
+        "type": "wall",
+        "level": 2,
+        "tx": 5,
+        "ty": 15
+      },
+      {
+        "id": "wall_8",
+        "type": "wall",
+        "level": 2,
+        "tx": 6,
+        "ty": 2
+      },
+      {
+        "id": "wall_9",
+        "type": "wall",
+        "level": 2,
+        "tx": 6,
+        "ty": 15
+      },
+      {
+        "id": "wall_10",
+        "type": "wall",
+        "level": 2,
+        "tx": 7,
+        "ty": 2
+      },
+      {
+        "id": "wall_11",
+        "type": "wall",
+        "level": 2,
+        "tx": 7,
+        "ty": 15
+      },
+      {
+        "id": "wall_12",
+        "type": "wall",
+        "level": 2,
+        "tx": 8,
+        "ty": 2
+      },
+      {
+        "id": "wall_13",
+        "type": "wall",
+        "level": 2,
+        "tx": 8,
+        "ty": 15
+      },
+      {
+        "id": "wall_14",
+        "type": "wall",
+        "level": 2,
+        "tx": 9,
+        "ty": 2
+      },
+      {
+        "id": "wall_15",
+        "type": "wall",
+        "level": 2,
+        "tx": 9,
+        "ty": 15
+      },
+      {
+        "id": "wall_16",
+        "type": "wall",
+        "level": 2,
+        "tx": 10,
+        "ty": 2
+      },
+      {
+        "id": "wall_17",
+        "type": "wall",
+        "level": 2,
+        "tx": 10,
+        "ty": 15
+      },
+      {
+        "id": "wall_18",
+        "type": "wall",
+        "level": 2,
+        "tx": 11,
+        "ty": 2
+      },
+      {
+        "id": "wall_19",
+        "type": "wall",
+        "level": 2,
+        "tx": 11,
+        "ty": 15
+      },
+      {
+        "id": "wall_20",
+        "type": "wall",
+        "level": 2,
+        "tx": 12,
+        "ty": 2
+      },
+      {
+        "id": "wall_21",
+        "type": "wall",
+        "level": 2,
+        "tx": 12,
+        "ty": 15
+      },
+      {
+        "id": "wall_22",
+        "type": "wall",
+        "level": 2,
+        "tx": 13,
+        "ty": 2
+      },
+      {
+        "id": "wall_23",
+        "type": "wall",
+        "level": 2,
+        "tx": 13,
+        "ty": 15
+      },
+      {
+        "id": "wall_24",
+        "type": "wall",
+        "level": 2,
+        "tx": 14,
+        "ty": 2
+      },
+      {
+        "id": "wall_25",
+        "type": "wall",
+        "level": 2,
+        "tx": 14,
+        "ty": 15
+      },
+      {
+        "id": "wall_26",
+        "type": "wall",
+        "level": 2,
+        "tx": 15,
+        "ty": 2
+      },
+      {
+        "id": "wall_27",
+        "type": "wall",
+        "level": 2,
+        "tx": 15,
+        "ty": 15
+      },
+      {
+        "id": "wall_28",
+        "type": "wall",
+        "level": 2,
+        "tx": 2,
+        "ty": 3
+      },
+      {
+        "id": "wall_29",
+        "type": "wall",
+        "level": 2,
+        "tx": 15,
+        "ty": 3
+      },
+      {
+        "id": "wall_30",
+        "type": "wall",
+        "level": 2,
+        "tx": 2,
+        "ty": 4
+      },
+      {
+        "id": "wall_31",
+        "type": "wall",
+        "level": 2,
+        "tx": 15,
+        "ty": 4
+      },
+      {
+        "id": "wall_32",
+        "type": "wall",
+        "level": 2,
+        "tx": 2,
+        "ty": 5
+      },
+      {
+        "id": "wall_33",
+        "type": "wall",
+        "level": 2,
+        "tx": 15,
+        "ty": 5
+      },
+      {
+        "id": "wall_34",
+        "type": "wall",
+        "level": 2,
+        "tx": 2,
+        "ty": 6
+      },
+      {
+        "id": "wall_35",
+        "type": "wall",
+        "level": 2,
+        "tx": 15,
+        "ty": 6
+      },
+      {
+        "id": "wall_36",
+        "type": "wall",
+        "level": 2,
+        "tx": 2,
+        "ty": 7
+      },
+      {
+        "id": "wall_37",
+        "type": "wall",
+        "level": 2,
+        "tx": 15,
+        "ty": 7
+      },
+      {
+        "id": "wall_38",
+        "type": "wall",
+        "level": 2,
+        "tx": 2,
+        "ty": 8
+      },
+      {
+        "id": "wall_39",
+        "type": "wall",
+        "level": 2,
+        "tx": 15,
+        "ty": 8
+      },
+      {
+        "id": "wall_40",
+        "type": "wall",
+        "level": 2,
+        "tx": 2,
+        "ty": 9
+      },
+      {
+        "id": "wall_41",
+        "type": "wall",
+        "level": 2,
+        "tx": 15,
+        "ty": 9
+      },
+      {
+        "id": "wall_42",
+        "type": "wall",
+        "level": 2,
+        "tx": 2,
+        "ty": 10
+      },
+      {
+        "id": "wall_43",
+        "type": "wall",
+        "level": 2,
+        "tx": 15,
+        "ty": 10
+      },
+      {
+        "id": "wall_44",
+        "type": "wall",
+        "level": 2,
+        "tx": 2,
+        "ty": 11
+      },
+      {
+        "id": "wall_45",
+        "type": "wall",
+        "level": 2,
+        "tx": 15,
+        "ty": 11
+      },
+      {
+        "id": "wall_46",
+        "type": "wall",
+        "level": 2,
+        "tx": 2,
+        "ty": 12
+      },
+      {
+        "id": "wall_47",
+        "type": "wall",
+        "level": 2,
+        "tx": 15,
+        "ty": 12
+      },
+      {
+        "id": "wall_48",
+        "type": "wall",
+        "level": 2,
+        "tx": 2,
+        "ty": 13
+      },
+      {
+        "id": "wall_49",
+        "type": "wall",
+        "level": 2,
+        "tx": 15,
+        "ty": 13
+      },
+      {
+        "id": "wall_50",
+        "type": "wall",
+        "level": 2,
+        "tx": 2,
+        "ty": 14
+      },
+      {
+        "id": "wall_51",
+        "type": "wall",
+        "level": 2,
+        "tx": 15,
+        "ty": 14
+      }
+    ],
+    "surplusShards": 1000,
+    "claimMin": 2,
+    "claimMax": 16
+  },
+  "orders": {
+    "deploys": [
+      {
+        "troop": "giant",
+        "tx": 0,
+        "ty": 8,
+        "tMs": 0
+      }
+    ]
+  },
+  "seed": 334359,
+  "options": {},
+  "stars": 3,
+  "destructionPct": 100,
+  "keepDestroyed": true,
+  "vaultDestroyed": true,
+  "mineDestroyed": false,
+  "victory": true,
+  "buildings": [
+    {
+      "id": "keep",
+      "type": "keep",
+      "hp": 0,
+      "maxHp": 1500,
+      "destroyed": true
+    },
+    {
+      "id": "vault",
+      "type": "vault",
+      "hp": 0,
+      "maxHp": 625,
+      "destroyed": true
+    },
+    {
+      "id": "wall_0",
+      "type": "wall",
+      "hp": 600,
+      "maxHp": 600,
+      "destroyed": false
+    },
+    {
+      "id": "wall_1",
+      "type": "wall",
+      "hp": 600,
+      "maxHp": 600,
+      "destroyed": false
+    },
+    {
+      "id": "wall_2",
+      "type": "wall",
+      "hp": 600,
+      "maxHp": 600,
+      "destroyed": false
+    },
+    {
+      "id": "wall_3",
+      "type": "wall",
+      "hp": 600,
+      "maxHp": 600,
+      "destroyed": false
+    },
+    {
+      "id": "wall_4",
+      "type": "wall",
+      "hp": 600,
+      "maxHp": 600,
+      "destroyed": false
+    },
+    {
+      "id": "wall_5",
+      "type": "wall",
+      "hp": 600,
+      "maxHp": 600,
+      "destroyed": false
+    },
+    {
+      "id": "wall_6",
+      "type": "wall",
+      "hp": 600,
+      "maxHp": 600,
+      "destroyed": false
+    },
+    {
+      "id": "wall_7",
+      "type": "wall",
+      "hp": 600,
+      "maxHp": 600,
+      "destroyed": false
+    },
+    {
+      "id": "wall_8",
+      "type": "wall",
+      "hp": 600,
+      "maxHp": 600,
+      "destroyed": false
+    },
+    {
+      "id": "wall_9",
+      "type": "wall",
+      "hp": 600,
+      "maxHp": 600,
+      "destroyed": false
+    },
+    {
+      "id": "wall_10",
+      "type": "wall",
+      "hp": 600,
+      "maxHp": 600,
+      "destroyed": false
+    },
+    {
+      "id": "wall_11",
+      "type": "wall",
+      "hp": 600,
+      "maxHp": 600,
+      "destroyed": false
+    },
+    {
+      "id": "wall_12",
+      "type": "wall",
+      "hp": 600,
+      "maxHp": 600,
+      "destroyed": false
+    },
+    {
+      "id": "wall_13",
+      "type": "wall",
+      "hp": 600,
+      "maxHp": 600,
+      "destroyed": false
+    },
+    {
+      "id": "wall_14",
+      "type": "wall",
+      "hp": 600,
+      "maxHp": 600,
+      "destroyed": false
+    },
+    {
+      "id": "wall_15",
+      "type": "wall",
+      "hp": 600,
+      "maxHp": 600,
+      "destroyed": false
+    },
+    {
+      "id": "wall_16",
+      "type": "wall",
+      "hp": 600,
+      "maxHp": 600,
+      "destroyed": false
+    },
+    {
+      "id": "wall_17",
+      "type": "wall",
+      "hp": 600,
+      "maxHp": 600,
+      "destroyed": false
+    },
+    {
+      "id": "wall_18",
+      "type": "wall",
+      "hp": 600,
+      "maxHp": 600,
+      "destroyed": false
+    },
+    {
+      "id": "wall_19",
+      "type": "wall",
+      "hp": 600,
+      "maxHp": 600,
+      "destroyed": false
+    },
+    {
+      "id": "wall_20",
+      "type": "wall",
+      "hp": 600,
+      "maxHp": 600,
+      "destroyed": false
+    },
+    {
+      "id": "wall_21",
+      "type": "wall",
+      "hp": 600,
+      "maxHp": 600,
+      "destroyed": false
+    },
+    {
+      "id": "wall_22",
+      "type": "wall",
+      "hp": 600,
+      "maxHp": 600,
+      "destroyed": false
+    },
+    {
+      "id": "wall_23",
+      "type": "wall",
+      "hp": 600,
+      "maxHp": 600,
+      "destroyed": false
+    },
+    {
+      "id": "wall_24",
+      "type": "wall",
+      "hp": 600,
+      "maxHp": 600,
+      "destroyed": false
+    },
+    {
+      "id": "wall_25",
+      "type": "wall",
+      "hp": 600,
+      "maxHp": 600,
+      "destroyed": false
+    },
+    {
+      "id": "wall_26",
+      "type": "wall",
+      "hp": 600,
+      "maxHp": 600,
+      "destroyed": false
+    },
+    {
+      "id": "wall_27",
+      "type": "wall",
+      "hp": 600,
+      "maxHp": 600,
+      "destroyed": false
+    },
+    {
+      "id": "wall_28",
+      "type": "wall",
+      "hp": 600,
+      "maxHp": 600,
+      "destroyed": false
+    },
+    {
+      "id": "wall_29",
+      "type": "wall",
+      "hp": 600,
+      "maxHp": 600,
+      "destroyed": false
+    },
+    {
+      "id": "wall_30",
+      "type": "wall",
+      "hp": 600,
+      "maxHp": 600,
+      "destroyed": false
+    },
+    {
+      "id": "wall_31",
+      "type": "wall",
+      "hp": 600,
+      "maxHp": 600,
+      "destroyed": false
+    },
+    {
+      "id": "wall_32",
+      "type": "wall",
+      "hp": 600,
+      "maxHp": 600,
+      "destroyed": false
+    },
+    {
+      "id": "wall_33",
+      "type": "wall",
+      "hp": 600,
+      "maxHp": 600,
+      "destroyed": false
+    },
+    {
+      "id": "wall_34",
+      "type": "wall",
+      "hp": 600,
+      "maxHp": 600,
+      "destroyed": false
+    },
+    {
+      "id": "wall_35",
+      "type": "wall",
+      "hp": 600,
+      "maxHp": 600,
+      "destroyed": false
+    },
+    {
+      "id": "wall_36",
+      "type": "wall",
+      "hp": 600,
+      "maxHp": 600,
+      "destroyed": false
+    },
+    {
+      "id": "wall_37",
+      "type": "wall",
+      "hp": 600,
+      "maxHp": 600,
+      "destroyed": false
+    },
+    {
+      "id": "wall_38",
+      "type": "wall",
+      "hp": 0,
+      "maxHp": 600,
+      "destroyed": true
+    },
+    {
+      "id": "wall_39",
+      "type": "wall",
+      "hp": 600,
+      "maxHp": 600,
+      "destroyed": false
+    },
+    {
+      "id": "wall_40",
+      "type": "wall",
+      "hp": 600,
+      "maxHp": 600,
+      "destroyed": false
+    },
+    {
+      "id": "wall_41",
+      "type": "wall",
+      "hp": 600,
+      "maxHp": 600,
+      "destroyed": false
+    },
+    {
+      "id": "wall_42",
+      "type": "wall",
+      "hp": 600,
+      "maxHp": 600,
+      "destroyed": false
+    },
+    {
+      "id": "wall_43",
+      "type": "wall",
+      "hp": 600,
+      "maxHp": 600,
+      "destroyed": false
+    },
+    {
+      "id": "wall_44",
+      "type": "wall",
+      "hp": 600,
+      "maxHp": 600,
+      "destroyed": false
+    },
+    {
+      "id": "wall_45",
+      "type": "wall",
+      "hp": 600,
+      "maxHp": 600,
+      "destroyed": false
+    },
+    {
+      "id": "wall_46",
+      "type": "wall",
+      "hp": 600,
+      "maxHp": 600,
+      "destroyed": false
+    },
+    {
+      "id": "wall_47",
+      "type": "wall",
+      "hp": 600,
+      "maxHp": 600,
+      "destroyed": false
+    },
+    {
+      "id": "wall_48",
+      "type": "wall",
+      "hp": 600,
+      "maxHp": 600,
+      "destroyed": false
+    },
+    {
+      "id": "wall_49",
+      "type": "wall",
+      "hp": 600,
+      "maxHp": 600,
+      "destroyed": false
+    },
+    {
+      "id": "wall_50",
+      "type": "wall",
+      "hp": 600,
+      "maxHp": 600,
+      "destroyed": false
+    },
+    {
+      "id": "wall_51",
+      "type": "wall",
+      "hp": 600,
+      "maxHp": 600,
+      "destroyed": false
+    }
+  ],
+  "ticks": 383,
+  "events": [
+    {
+      "t": 0,
+      "e": "deploy",
+      "id": 0,
+      "troop": "giant",
+      "x": 128,
+      "y": 2176
+    },
+    {
+      "t": 0,
+      "e": "pos",
+      "id": 0,
+      "x": 149,
+      "y": 2176
+    },
+    {
+      "t": 5,
+      "e": "pos",
+      "id": 0,
+      "x": 254,
+      "y": 2176
+    },
+    {
+      "t": 10,
+      "e": "pos",
+      "id": 0,
+      "x": 359,
+      "y": 2176
+    },
+    {
+      "t": 15,
+      "e": "pos",
+      "id": 0,
+      "x": 464,
+      "y": 2176
+    },
+    {
+      "t": 19,
+      "e": "attackRun",
+      "id": 0,
+      "side": "attacker",
+      "troop": "giant",
+      "targetKind": "building",
+      "target": "wall_38",
+      "ix": 512,
+      "iy": 2176,
+      "mode": "melee",
+      "technique": "strike",
+      "cycleMs": 728,
+      "releaseOffsetMs": 364,
+      "cycleTicks": 8,
+      "releaseOffsetTicks": 4,
+      "impactOffsetsTicks": [
+        4
+      ],
+      "cadenceTicks": 8,
+      "count": 1
+    },
+    {
+      "t": 23,
+      "e": "hit",
+      "target": "wall_38",
+      "dmg": 88
+    },
+    {
+      "t": 27,
+      "e": "attackRun",
+      "id": 0,
+      "side": "attacker",
+      "troop": "giant",
+      "targetKind": "building",
+      "target": "wall_38",
+      "ix": 512,
+      "iy": 2176,
+      "mode": "melee",
+      "technique": "strike",
+      "cycleMs": 728,
+      "releaseOffsetMs": 364,
+      "cycleTicks": 8,
+      "releaseOffsetTicks": 4,
+      "impactOffsetsTicks": [
+        4
+      ],
+      "cadenceTicks": 8,
+      "count": 1
+    },
+    {
+      "t": 31,
+      "e": "hit",
+      "target": "wall_38",
+      "dmg": 88
+    },
+    {
+      "t": 35,
+      "e": "attackRun",
+      "id": 0,
+      "side": "attacker",
+      "troop": "giant",
+      "targetKind": "building",
+      "target": "wall_38",
+      "ix": 512,
+      "iy": 2176,
+      "mode": "melee",
+      "technique": "strike",
+      "cycleMs": 728,
+      "releaseOffsetMs": 364,
+      "cycleTicks": 8,
+      "releaseOffsetTicks": 4,
+      "impactOffsetsTicks": [
+        4
+      ],
+      "cadenceTicks": 8,
+      "count": 1
+    },
+    {
+      "t": 39,
+      "e": "hit",
+      "target": "wall_38",
+      "dmg": 88
+    },
+    {
+      "t": 43,
+      "e": "attackRun",
+      "id": 0,
+      "side": "attacker",
+      "troop": "giant",
+      "targetKind": "building",
+      "target": "wall_38",
+      "ix": 512,
+      "iy": 2176,
+      "mode": "melee",
+      "technique": "strike",
+      "cycleMs": 728,
+      "releaseOffsetMs": 364,
+      "cycleTicks": 8,
+      "releaseOffsetTicks": 4,
+      "impactOffsetsTicks": [
+        4
+      ],
+      "cadenceTicks": 8,
+      "count": 1
+    },
+    {
+      "t": 47,
+      "e": "hit",
+      "target": "wall_38",
+      "dmg": 88
+    },
+    {
+      "t": 51,
+      "e": "attackRun",
+      "id": 0,
+      "side": "attacker",
+      "troop": "giant",
+      "targetKind": "building",
+      "target": "wall_38",
+      "ix": 512,
+      "iy": 2176,
+      "mode": "melee",
+      "technique": "strike",
+      "cycleMs": 728,
+      "releaseOffsetMs": 364,
+      "cycleTicks": 8,
+      "releaseOffsetTicks": 4,
+      "impactOffsetsTicks": [
+        4
+      ],
+      "cadenceTicks": 8,
+      "count": 1
+    },
+    {
+      "t": 55,
+      "e": "hit",
+      "target": "wall_38",
+      "dmg": 88
+    },
+    {
+      "t": 59,
+      "e": "attackRun",
+      "id": 0,
+      "side": "attacker",
+      "troop": "giant",
+      "targetKind": "building",
+      "target": "wall_38",
+      "ix": 512,
+      "iy": 2176,
+      "mode": "melee",
+      "technique": "strike",
+      "cycleMs": 728,
+      "releaseOffsetMs": 364,
+      "cycleTicks": 8,
+      "releaseOffsetTicks": 4,
+      "impactOffsetsTicks": [
+        4
+      ],
+      "cadenceTicks": 8,
+      "count": 1
+    },
+    {
+      "t": 63,
+      "e": "hit",
+      "target": "wall_38",
+      "dmg": 88
+    },
+    {
+      "t": 67,
+      "e": "attackRun",
+      "id": 0,
+      "side": "attacker",
+      "troop": "giant",
+      "targetKind": "building",
+      "target": "wall_38",
+      "ix": 512,
+      "iy": 2176,
+      "mode": "melee",
+      "technique": "strike",
+      "cycleMs": 728,
+      "releaseOffsetMs": 364,
+      "cycleTicks": 8,
+      "releaseOffsetTicks": 4,
+      "impactOffsetsTicks": [
+        4
+      ],
+      "cadenceTicks": 8,
+      "count": 1
+    },
+    {
+      "t": 71,
+      "e": "hit",
+      "target": "wall_38",
+      "dmg": 88
+    },
+    {
+      "t": 71,
+      "e": "destroyed",
+      "id": "wall_38"
+    },
+    {
+      "t": 75,
+      "e": "pos",
+      "id": 0,
+      "x": 527,
+      "y": 2176
+    },
+    {
+      "t": 80,
+      "e": "pos",
+      "id": 0,
+      "x": 632,
+      "y": 2176
+    },
+    {
+      "t": 85,
+      "e": "pos",
+      "id": 0,
+      "x": 737,
+      "y": 2176
+    },
+    {
+      "t": 90,
+      "e": "pos",
+      "id": 0,
+      "x": 842,
+      "y": 2176
+    },
+    {
+      "t": 95,
+      "e": "pos",
+      "id": 0,
+      "x": 947,
+      "y": 2176
+    },
+    {
+      "t": 100,
+      "e": "pos",
+      "id": 0,
+      "x": 1052,
+      "y": 2176
+    },
+    {
+      "t": 105,
+      "e": "pos",
+      "id": 0,
+      "x": 1157,
+      "y": 2176
+    },
+    {
+      "t": 110,
+      "e": "pos",
+      "id": 0,
+      "x": 1262,
+      "y": 2176
+    },
+    {
+      "t": 115,
+      "e": "pos",
+      "id": 0,
+      "x": 1367,
+      "y": 2176
+    },
+    {
+      "t": 120,
+      "e": "pos",
+      "id": 0,
+      "x": 1472,
+      "y": 2176
+    },
+    {
+      "t": 125,
+      "e": "pos",
+      "id": 0,
+      "x": 1577,
+      "y": 2176
+    },
+    {
+      "t": 130,
+      "e": "pos",
+      "id": 0,
+      "x": 1682,
+      "y": 2176
+    },
+    {
+      "t": 135,
+      "e": "pos",
+      "id": 0,
+      "x": 1787,
+      "y": 2176
+    },
+    {
+      "t": 140,
+      "e": "pos",
+      "id": 0,
+      "x": 1892,
+      "y": 2176
+    },
+    {
+      "t": 141,
+      "e": "attackRun",
+      "id": 0,
+      "side": "attacker",
+      "troop": "giant",
+      "targetKind": "building",
+      "target": "keep",
+      "ix": 2048,
+      "iy": 2176,
+      "mode": "melee",
+      "technique": "strike",
+      "cycleMs": 728,
+      "releaseOffsetMs": 364,
+      "cycleTicks": 8,
+      "releaseOffsetTicks": 4,
+      "impactOffsetsTicks": [
+        4
+      ],
+      "cadenceTicks": 8,
+      "count": 1
+    },
+    {
+      "t": 145,
+      "e": "hit",
+      "target": "keep",
+      "dmg": 88
+    },
+    {
+      "t": 149,
+      "e": "attackRun",
+      "id": 0,
+      "side": "attacker",
+      "troop": "giant",
+      "targetKind": "building",
+      "target": "keep",
+      "ix": 2048,
+      "iy": 2176,
+      "mode": "melee",
+      "technique": "strike",
+      "cycleMs": 728,
+      "releaseOffsetMs": 364,
+      "cycleTicks": 8,
+      "releaseOffsetTicks": 4,
+      "impactOffsetsTicks": [
+        4
+      ],
+      "cadenceTicks": 8,
+      "count": 1
+    },
+    {
+      "t": 153,
+      "e": "hit",
+      "target": "keep",
+      "dmg": 88
+    },
+    {
+      "t": 157,
+      "e": "attackRun",
+      "id": 0,
+      "side": "attacker",
+      "troop": "giant",
+      "targetKind": "building",
+      "target": "keep",
+      "ix": 2048,
+      "iy": 2176,
+      "mode": "melee",
+      "technique": "strike",
+      "cycleMs": 728,
+      "releaseOffsetMs": 364,
+      "cycleTicks": 8,
+      "releaseOffsetTicks": 4,
+      "impactOffsetsTicks": [
+        4
+      ],
+      "cadenceTicks": 8,
+      "count": 1
+    },
+    {
+      "t": 161,
+      "e": "hit",
+      "target": "keep",
+      "dmg": 88
+    },
+    {
+      "t": 165,
+      "e": "attackRun",
+      "id": 0,
+      "side": "attacker",
+      "troop": "giant",
+      "targetKind": "building",
+      "target": "keep",
+      "ix": 2048,
+      "iy": 2176,
+      "mode": "melee",
+      "technique": "strike",
+      "cycleMs": 728,
+      "releaseOffsetMs": 364,
+      "cycleTicks": 8,
+      "releaseOffsetTicks": 4,
+      "impactOffsetsTicks": [
+        4
+      ],
+      "cadenceTicks": 8,
+      "count": 1
+    },
+    {
+      "t": 169,
+      "e": "hit",
+      "target": "keep",
+      "dmg": 88
+    },
+    {
+      "t": 173,
+      "e": "attackRun",
+      "id": 0,
+      "side": "attacker",
+      "troop": "giant",
+      "targetKind": "building",
+      "target": "keep",
+      "ix": 2048,
+      "iy": 2176,
+      "mode": "melee",
+      "technique": "strike",
+      "cycleMs": 728,
+      "releaseOffsetMs": 364,
+      "cycleTicks": 8,
+      "releaseOffsetTicks": 4,
+      "impactOffsetsTicks": [
+        4
+      ],
+      "cadenceTicks": 8,
+      "count": 1
+    },
+    {
+      "t": 177,
+      "e": "hit",
+      "target": "keep",
+      "dmg": 88
+    },
+    {
+      "t": 181,
+      "e": "attackRun",
+      "id": 0,
+      "side": "attacker",
+      "troop": "giant",
+      "targetKind": "building",
+      "target": "keep",
+      "ix": 2048,
+      "iy": 2176,
+      "mode": "melee",
+      "technique": "strike",
+      "cycleMs": 728,
+      "releaseOffsetMs": 364,
+      "cycleTicks": 8,
+      "releaseOffsetTicks": 4,
+      "impactOffsetsTicks": [
+        4
+      ],
+      "cadenceTicks": 8,
+      "count": 1
+    },
+    {
+      "t": 185,
+      "e": "hit",
+      "target": "keep",
+      "dmg": 88
+    },
+    {
+      "t": 189,
+      "e": "attackRun",
+      "id": 0,
+      "side": "attacker",
+      "troop": "giant",
+      "targetKind": "building",
+      "target": "keep",
+      "ix": 2048,
+      "iy": 2176,
+      "mode": "melee",
+      "technique": "strike",
+      "cycleMs": 728,
+      "releaseOffsetMs": 364,
+      "cycleTicks": 8,
+      "releaseOffsetTicks": 4,
+      "impactOffsetsTicks": [
+        4
+      ],
+      "cadenceTicks": 8,
+      "count": 1
+    },
+    {
+      "t": 193,
+      "e": "hit",
+      "target": "keep",
+      "dmg": 88
+    },
+    {
+      "t": 197,
+      "e": "attackRun",
+      "id": 0,
+      "side": "attacker",
+      "troop": "giant",
+      "targetKind": "building",
+      "target": "keep",
+      "ix": 2048,
+      "iy": 2176,
+      "mode": "melee",
+      "technique": "strike",
+      "cycleMs": 728,
+      "releaseOffsetMs": 364,
+      "cycleTicks": 8,
+      "releaseOffsetTicks": 4,
+      "impactOffsetsTicks": [
+        4
+      ],
+      "cadenceTicks": 8,
+      "count": 1
+    },
+    {
+      "t": 201,
+      "e": "hit",
+      "target": "keep",
+      "dmg": 88
+    },
+    {
+      "t": 205,
+      "e": "attackRun",
+      "id": 0,
+      "side": "attacker",
+      "troop": "giant",
+      "targetKind": "building",
+      "target": "keep",
+      "ix": 2048,
+      "iy": 2176,
+      "mode": "melee",
+      "technique": "strike",
+      "cycleMs": 728,
+      "releaseOffsetMs": 364,
+      "cycleTicks": 8,
+      "releaseOffsetTicks": 4,
+      "impactOffsetsTicks": [
+        4
+      ],
+      "cadenceTicks": 8,
+      "count": 1
+    },
+    {
+      "t": 209,
+      "e": "hit",
+      "target": "keep",
+      "dmg": 88
+    },
+    {
+      "t": 213,
+      "e": "attackRun",
+      "id": 0,
+      "side": "attacker",
+      "troop": "giant",
+      "targetKind": "building",
+      "target": "keep",
+      "ix": 2048,
+      "iy": 2176,
+      "mode": "melee",
+      "technique": "strike",
+      "cycleMs": 728,
+      "releaseOffsetMs": 364,
+      "cycleTicks": 8,
+      "releaseOffsetTicks": 4,
+      "impactOffsetsTicks": [
+        4
+      ],
+      "cadenceTicks": 8,
+      "count": 1
+    },
+    {
+      "t": 217,
+      "e": "hit",
+      "target": "keep",
+      "dmg": 88
+    },
+    {
+      "t": 221,
+      "e": "attackRun",
+      "id": 0,
+      "side": "attacker",
+      "troop": "giant",
+      "targetKind": "building",
+      "target": "keep",
+      "ix": 2048,
+      "iy": 2176,
+      "mode": "melee",
+      "technique": "strike",
+      "cycleMs": 728,
+      "releaseOffsetMs": 364,
+      "cycleTicks": 8,
+      "releaseOffsetTicks": 4,
+      "impactOffsetsTicks": [
+        4
+      ],
+      "cadenceTicks": 8,
+      "count": 1
+    },
+    {
+      "t": 225,
+      "e": "hit",
+      "target": "keep",
+      "dmg": 88
+    },
+    {
+      "t": 229,
+      "e": "attackRun",
+      "id": 0,
+      "side": "attacker",
+      "troop": "giant",
+      "targetKind": "building",
+      "target": "keep",
+      "ix": 2048,
+      "iy": 2176,
+      "mode": "melee",
+      "technique": "strike",
+      "cycleMs": 728,
+      "releaseOffsetMs": 364,
+      "cycleTicks": 8,
+      "releaseOffsetTicks": 4,
+      "impactOffsetsTicks": [
+        4
+      ],
+      "cadenceTicks": 8,
+      "count": 1
+    },
+    {
+      "t": 233,
+      "e": "hit",
+      "target": "keep",
+      "dmg": 88
+    },
+    {
+      "t": 237,
+      "e": "attackRun",
+      "id": 0,
+      "side": "attacker",
+      "troop": "giant",
+      "targetKind": "building",
+      "target": "keep",
+      "ix": 2048,
+      "iy": 2176,
+      "mode": "melee",
+      "technique": "strike",
+      "cycleMs": 728,
+      "releaseOffsetMs": 364,
+      "cycleTicks": 8,
+      "releaseOffsetTicks": 4,
+      "impactOffsetsTicks": [
+        4
+      ],
+      "cadenceTicks": 8,
+      "count": 1
+    },
+    {
+      "t": 241,
+      "e": "hit",
+      "target": "keep",
+      "dmg": 88
+    },
+    {
+      "t": 245,
+      "e": "attackRun",
+      "id": 0,
+      "side": "attacker",
+      "troop": "giant",
+      "targetKind": "building",
+      "target": "keep",
+      "ix": 2048,
+      "iy": 2176,
+      "mode": "melee",
+      "technique": "strike",
+      "cycleMs": 728,
+      "releaseOffsetMs": 364,
+      "cycleTicks": 8,
+      "releaseOffsetTicks": 4,
+      "impactOffsetsTicks": [
+        4
+      ],
+      "cadenceTicks": 8,
+      "count": 1
+    },
+    {
+      "t": 249,
+      "e": "hit",
+      "target": "keep",
+      "dmg": 88
+    },
+    {
+      "t": 253,
+      "e": "attackRun",
+      "id": 0,
+      "side": "attacker",
+      "troop": "giant",
+      "targetKind": "building",
+      "target": "keep",
+      "ix": 2048,
+      "iy": 2176,
+      "mode": "melee",
+      "technique": "strike",
+      "cycleMs": 728,
+      "releaseOffsetMs": 364,
+      "cycleTicks": 8,
+      "releaseOffsetTicks": 4,
+      "impactOffsetsTicks": [
+        4
+      ],
+      "cadenceTicks": 8,
+      "count": 1
+    },
+    {
+      "t": 257,
+      "e": "hit",
+      "target": "keep",
+      "dmg": 88
+    },
+    {
+      "t": 261,
+      "e": "attackRun",
+      "id": 0,
+      "side": "attacker",
+      "troop": "giant",
+      "targetKind": "building",
+      "target": "keep",
+      "ix": 2048,
+      "iy": 2176,
+      "mode": "melee",
+      "technique": "strike",
+      "cycleMs": 728,
+      "releaseOffsetMs": 364,
+      "cycleTicks": 8,
+      "releaseOffsetTicks": 4,
+      "impactOffsetsTicks": [
+        4
+      ],
+      "cadenceTicks": 8,
+      "count": 1
+    },
+    {
+      "t": 265,
+      "e": "hit",
+      "target": "keep",
+      "dmg": 88
+    },
+    {
+      "t": 269,
+      "e": "attackRun",
+      "id": 0,
+      "side": "attacker",
+      "troop": "giant",
+      "targetKind": "building",
+      "target": "keep",
+      "ix": 2048,
+      "iy": 2176,
+      "mode": "melee",
+      "technique": "strike",
+      "cycleMs": 728,
+      "releaseOffsetMs": 364,
+      "cycleTicks": 8,
+      "releaseOffsetTicks": 4,
+      "impactOffsetsTicks": [
+        4
+      ],
+      "cadenceTicks": 8,
+      "count": 1
+    },
+    {
+      "t": 273,
+      "e": "hit",
+      "target": "keep",
+      "dmg": 88
+    },
+    {
+      "t": 277,
+      "e": "attackRun",
+      "id": 0,
+      "side": "attacker",
+      "troop": "giant",
+      "targetKind": "building",
+      "target": "keep",
+      "ix": 2048,
+      "iy": 2176,
+      "mode": "melee",
+      "technique": "strike",
+      "cycleMs": 728,
+      "releaseOffsetMs": 364,
+      "cycleTicks": 8,
+      "releaseOffsetTicks": 4,
+      "impactOffsetsTicks": [
+        4
+      ],
+      "cadenceTicks": 8,
+      "count": 1
+    },
+    {
+      "t": 281,
+      "e": "hit",
+      "target": "keep",
+      "dmg": 88
+    },
+    {
+      "t": 281,
+      "e": "destroyed",
+      "id": "keep"
+    },
+    {
+      "t": 281,
+      "e": "star",
+      "n": 1
+    },
+    {
+      "t": 281,
+      "e": "star",
+      "n": 2
+    },
+    {
+      "t": 285,
+      "e": "pos",
+      "id": 0,
+      "x": 1913,
+      "y": 2176
+    },
+    {
+      "t": 290,
+      "e": "pos",
+      "id": 0,
+      "x": 2018,
+      "y": 2176
+    },
+    {
+      "t": 295,
+      "e": "pos",
+      "id": 0,
+      "x": 2123,
+      "y": 2176
+    },
+    {
+      "t": 300,
+      "e": "pos",
+      "id": 0,
+      "x": 2228,
+      "y": 2176
+    },
+    {
+      "t": 305,
+      "e": "pos",
+      "id": 0,
+      "x": 2333,
+      "y": 2176
+    },
+    {
+      "t": 310,
+      "e": "pos",
+      "id": 0,
+      "x": 2438,
+      "y": 2176
+    },
+    {
+      "t": 315,
+      "e": "pos",
+      "id": 0,
+      "x": 2543,
+      "y": 2176
+    },
+    {
+      "t": 320,
+      "e": "pos",
+      "id": 0,
+      "x": 2648,
+      "y": 2176
+    },
+    {
+      "t": 322,
+      "e": "attackRun",
+      "id": 0,
+      "side": "attacker",
+      "troop": "giant",
+      "targetKind": "building",
+      "target": "vault",
+      "ix": 2816,
+      "iy": 2176,
+      "mode": "melee",
+      "technique": "strike",
+      "cycleMs": 728,
+      "releaseOffsetMs": 364,
+      "cycleTicks": 8,
+      "releaseOffsetTicks": 4,
+      "impactOffsetsTicks": [
+        4
+      ],
+      "cadenceTicks": 8,
+      "count": 1
+    },
+    {
+      "t": 326,
+      "e": "hit",
+      "target": "vault",
+      "dmg": 88
+    },
+    {
+      "t": 330,
+      "e": "attackRun",
+      "id": 0,
+      "side": "attacker",
+      "troop": "giant",
+      "targetKind": "building",
+      "target": "vault",
+      "ix": 2816,
+      "iy": 2176,
+      "mode": "melee",
+      "technique": "strike",
+      "cycleMs": 728,
+      "releaseOffsetMs": 364,
+      "cycleTicks": 8,
+      "releaseOffsetTicks": 4,
+      "impactOffsetsTicks": [
+        4
+      ],
+      "cadenceTicks": 8,
+      "count": 1
+    },
+    {
+      "t": 334,
+      "e": "hit",
+      "target": "vault",
+      "dmg": 88
+    },
+    {
+      "t": 338,
+      "e": "attackRun",
+      "id": 0,
+      "side": "attacker",
+      "troop": "giant",
+      "targetKind": "building",
+      "target": "vault",
+      "ix": 2816,
+      "iy": 2176,
+      "mode": "melee",
+      "technique": "strike",
+      "cycleMs": 728,
+      "releaseOffsetMs": 364,
+      "cycleTicks": 8,
+      "releaseOffsetTicks": 4,
+      "impactOffsetsTicks": [
+        4
+      ],
+      "cadenceTicks": 8,
+      "count": 1
+    },
+    {
+      "t": 342,
+      "e": "hit",
+      "target": "vault",
+      "dmg": 88
+    },
+    {
+      "t": 346,
+      "e": "attackRun",
+      "id": 0,
+      "side": "attacker",
+      "troop": "giant",
+      "targetKind": "building",
+      "target": "vault",
+      "ix": 2816,
+      "iy": 2176,
+      "mode": "melee",
+      "technique": "strike",
+      "cycleMs": 728,
+      "releaseOffsetMs": 364,
+      "cycleTicks": 8,
+      "releaseOffsetTicks": 4,
+      "impactOffsetsTicks": [
+        4
+      ],
+      "cadenceTicks": 8,
+      "count": 1
+    },
+    {
+      "t": 350,
+      "e": "hit",
+      "target": "vault",
+      "dmg": 88
+    },
+    {
+      "t": 354,
+      "e": "attackRun",
+      "id": 0,
+      "side": "attacker",
+      "troop": "giant",
+      "targetKind": "building",
+      "target": "vault",
+      "ix": 2816,
+      "iy": 2176,
+      "mode": "melee",
+      "technique": "strike",
+      "cycleMs": 728,
+      "releaseOffsetMs": 364,
+      "cycleTicks": 8,
+      "releaseOffsetTicks": 4,
+      "impactOffsetsTicks": [
+        4
+      ],
+      "cadenceTicks": 8,
+      "count": 1
+    },
+    {
+      "t": 358,
+      "e": "hit",
+      "target": "vault",
+      "dmg": 88
+    },
+    {
+      "t": 362,
+      "e": "attackRun",
+      "id": 0,
+      "side": "attacker",
+      "troop": "giant",
+      "targetKind": "building",
+      "target": "vault",
+      "ix": 2816,
+      "iy": 2176,
+      "mode": "melee",
+      "technique": "strike",
+      "cycleMs": 728,
+      "releaseOffsetMs": 364,
+      "cycleTicks": 8,
+      "releaseOffsetTicks": 4,
+      "impactOffsetsTicks": [
+        4
+      ],
+      "cadenceTicks": 8,
+      "count": 1
+    },
+    {
+      "t": 366,
+      "e": "hit",
+      "target": "vault",
+      "dmg": 88
+    },
+    {
+      "t": 370,
+      "e": "attackRun",
+      "id": 0,
+      "side": "attacker",
+      "troop": "giant",
+      "targetKind": "building",
+      "target": "vault",
+      "ix": 2816,
+      "iy": 2176,
+      "mode": "melee",
+      "technique": "strike",
+      "cycleMs": 728,
+      "releaseOffsetMs": 364,
+      "cycleTicks": 8,
+      "releaseOffsetTicks": 4,
+      "impactOffsetsTicks": [
+        4
+      ],
+      "cadenceTicks": 8,
+      "count": 1
+    },
+    {
+      "t": 374,
+      "e": "hit",
+      "target": "vault",
+      "dmg": 88
+    },
+    {
+      "t": 378,
+      "e": "attackRun",
+      "id": 0,
+      "side": "attacker",
+      "troop": "giant",
+      "targetKind": "building",
+      "target": "vault",
+      "ix": 2816,
+      "iy": 2176,
+      "mode": "melee",
+      "technique": "strike",
+      "cycleMs": 728,
+      "releaseOffsetMs": 364,
+      "cycleTicks": 8,
+      "releaseOffsetTicks": 4,
+      "impactOffsetsTicks": [
+        4
+      ],
+      "cadenceTicks": 8,
+      "count": 1
+    },
+    {
+      "t": 382,
+      "e": "hit",
+      "target": "vault",
+      "dmg": 88
+    },
+    {
+      "t": 382,
+      "e": "destroyed",
+      "id": "vault"
+    },
+    {
+      "t": 382,
+      "e": "star",
+      "n": 3
+    }
+  ]
+}

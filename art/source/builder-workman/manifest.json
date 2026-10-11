@@ -1,0 +1,57 @@
+{
+  "version": 1,
+  "characterId": "8ccaa9b2-6743-4522-b1af-ff9c53041de9",
+  "name": "Builder Workman",
+  "sheet": "Builder_Workman-Idle.png",
+  "layout": "Builder_Workman-Idle.json",
+  "cellW": 84,
+  "cellH": 84,
+  "anchorPx": [
+    42,
+    70
+  ],
+  "sourceScale": 1,
+  "frameIndexBase": 0,
+  "directions": [
+    "s",
+    "se",
+    "e",
+    "ne",
+    "n",
+    "nw",
+    "w",
+    "sw"
+  ],
+  "clips": {
+    "idle": {
+      "frames": 1,
+      "fps": 1,
+      "loop": false
+    },
+    "walk": {
+      "frames": 8,
+      "fps": 10,
+      "loop": true
+    },
+    "work": {
+      "frames": 6,
+      "fps": 8,
+      "loop": true
+    }
+  },
+  "files": {
+    "Builder_Workman-Idle.png": "a782288fea3920526e1f41863db0a04851c12dff1b6564bb15d9c80371255010",
+    "Builder_Workman-Idle.json": "03a8f068aa6b4b8773a9991c6ffbbcf0a9bca4b0b96b06bc365345c8a01021a4",
+    "south.png": "9fd201ae94cf045d5b9bb1d2897408714fb7ba99b78d4f668de3430c3bec9e29",
+    "character-metadata.json": "1ed49d231b112197fd0efd9a1df139ff7e5886a16601c7ff55cc137786f4310a"
+  },
+  "provenance": {
+    "provider": "PixelLab",
+    "exportedAt": "2026-09-10",
+    "ownerApproval": "2026-09-10: replace current builder with existing Builder Workman and animate it",
+    "generationCalls": 0,
+    "generationSpend": 0,
+    "spritesheetZipSha256": "253b9e328d8167814795d609df4377190440ef8ab3b12e6b9541a5fba7c77e58",
+    "characterZipSha256": "803260dd686a706727ccd8e250f1ada3a1076b8c50f7980400bbfbdce49f5243"
+  }
+}

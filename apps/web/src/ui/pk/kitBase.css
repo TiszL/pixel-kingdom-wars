@@ -1,0 +1,139 @@
+/* kitBase.css — shared P0 kit rules: the type styles, the 2-pass text outline, the pointer rule and focus/hover.
+ * Loads AFTER pk-tokens.css. Every value is a --pk-* bridge property or arithmetic on one (no literal colours or sizes).
+ *
+ * PERMANENT HUD BUDGET (<= 12% of the viewport, LANE §1 / §10.3). P0 owns no HUD layout, but the numbers below are what
+ * the P0 pieces cost the P1 Home HUD at DS sizes (level badge 40x40, StatusChip 238x30, resource stack 108x110,
+ * deck ATTACK 80x72 + ARMY 52x52 + MAP 52x52 + BUILD 72x72; edge buttons only while badged, worst case 2 x 48x64):
+ *   phone-portrait   412x915  = 376,980 px2: HUD 36,972 = 9.8%  (+2 edge 11.4%)            OK
+ *   phone-landscape  844x390  = 329,160 px2: chip icon-only 144x30, deck 64x60/48x48: 30,088 = 9.1% (+2 edge 11.0%) OK
+ *   phone-landscape  844x311  = 262,484 px2: 30,088 = 11.5%; +2 edge = 13.8%  OVER -> P1 must fold edges to 1 here
+ *   phone-landscape  915x311  = 284,565 px2: 30,088 = 10.6%; +2 edge = 12.7%  OVER -> same fold rule
+ *   tablet-portrait  768x1024 = 786,432 px2: 36,972 = 4.7%  (+2 edge 5.5%)              OK
+ *   tablet-landscape 1024x768 = 786,432 px2: 4.7% (+edge 5.5%)                           OK
+ *   desktop          1440x900 = 1,296,000 px2: 2.9% (+edge 3.3%); 1920x1080: 1.8%       OK
+ *   phone-portrait floor 320x640 = 204,800 px2: icon-only chip 34,152 = 16.7%  OVER (LANE §9 Q3 owner question, ~17%)
+ */
+
+:root {
+  /* ---- Bridge gaps (fail loud): KIT PkwTokens colours that TOKENS.json does not carry. Each resolves to the nearest
+   *      bridge value so no literal is introduced; replace with real tokens if the owner adds them. ---- */
+  --pk-k-label: var(--pk-parch-hi);      /* KIT Colors.label #FFFFFF (button / caption fill)  -> parchment.hi #FFF8E6 */
+  --pk-k-plate-band: var(--pk-charcoal); /* KIT Colors.plateBand #2C2832                      -> charcoal #29262E */
+  --pk-k-plate-lip: var(--pk-bg);        /* KIT Colors.plateLip #0F0D12                       -> bg #100E14 */
+  --pk-k-charcoal-hi: var(--pk-veil-hi); /* KIT charcoalRamp.hi #4A4552                       -> veilHi #4A4152 */
+  --pk-k-charcoal-mid: var(--pk-veil);   /* KIT charcoalRamp.mid #232028                      -> veil #221D27 */
+  --pk-k-charcoal-lo: var(--pk-ink);     /* KIT charcoalRamp.lo #151218                       -> ink #140F17 */
+  --pk-k-moss-mid: var(--pk-moss);       /* KIT moss.mid #52793A                              -> moss #5D8A3C */
+  --pk-k-track: var(--pk-border);        /* KIT Colors.track #3A2F28                          -> border #3D3833 */
+
+  /* The five VT323 display steps are emitted by pk-tokens.mjs (review 90845456 F5).
+   * Import pk-tokens.generated.css first; do not override those literal tokens with spacing arithmetic here. */
+}
+
+/* Shape + odd paddings shared by every kit file (moved here so any single import gets them). */
+:root {
+  /* shape.stepM as a size-independent clip-path (KIT CornerProfiles.M: (0,8)(2,8)(2,4)(4,4)(4,2)(8,2)(8,0)). The bridge
+   * does not emit --pk-clip-m (pk-tokens.generated.md §4 item 5); built here from the spacing tokens. */
+  --pk-k-clip-m: polygon(
+    0 var(--pk-s8), var(--pk-s2) var(--pk-s8), var(--pk-s2) var(--pk-s4), var(--pk-s4) var(--pk-s4), var(--pk-s4) var(--pk-s2), var(--pk-s8) var(--pk-s2), var(--pk-s8) 0,
+    calc(100% - var(--pk-s8)) 0, calc(100% - var(--pk-s8)) var(--pk-s2), calc(100% - var(--pk-s4)) var(--pk-s2), calc(100% - var(--pk-s4)) var(--pk-s4), calc(100% - var(--pk-s2)) var(--pk-s4), calc(100% - var(--pk-s2)) var(--pk-s8), 100% var(--pk-s8),
+    100% calc(100% - var(--pk-s8)), calc(100% - var(--pk-s2)) calc(100% - var(--pk-s8)), calc(100% - var(--pk-s2)) calc(100% - var(--pk-s4)), calc(100% - var(--pk-s4)) calc(100% - var(--pk-s4)), calc(100% - var(--pk-s4)) calc(100% - var(--pk-s2)), calc(100% - var(--pk-s8)) calc(100% - var(--pk-s2)), calc(100% - var(--pk-s8)) 100%,
+    var(--pk-s8) 100%, var(--pk-s8) calc(100% - var(--pk-s2)), var(--pk-s4) calc(100% - var(--pk-s2)), var(--pk-s4) calc(100% - var(--pk-s4)), var(--pk-s2) calc(100% - var(--pk-s4)), var(--pk-s2) calc(100% - var(--pk-s8)), 0 calc(100% - var(--pk-s8)));
+  /* Odd paddings Plate.kt uses that are not on the 2 px space scale, built from tokens. */
+  --pk-k-3: var(--pk-outline-plate);                          /* 3 px */
+  --pk-k-5: calc(var(--pk-s4) + var(--pk-text-outline-1));    /* 5 px */
+  --pk-k-7: calc(var(--pk-s6) + var(--pk-text-outline-1));    /* 7 px */
+}
+
+/* ---- Type (KitText.kt / PkwTokens.Type): line-height = size + 2, never below the 18 px body floor ---- */
+.pk-t-numeral-l, .pk-t-primary, .pk-t-title, .pk-t-label, .pk-t-caption { font-family: var(--pk-font-display); }
+.pk-t-lead, .pk-t-body, .pk-t-small { font-family: var(--pk-font-body); }
+.pk-t-numeral-l { font-size: var(--pk-k-type-numeral-l); line-height: calc(var(--pk-k-type-numeral-l) + var(--pk-s2)); }
+.pk-t-primary { font-size: var(--pk-k-type-primary); line-height: calc(var(--pk-k-type-primary) + var(--pk-s2)); }
+.pk-t-title { font-size: var(--pk-k-type-title); line-height: calc(var(--pk-k-type-title) + var(--pk-s2)); }
+.pk-t-label { font-size: var(--pk-k-type-label); line-height: calc(var(--pk-k-type-label) + var(--pk-s2)); }
+.pk-t-caption { font-size: var(--pk-k-type-caption); line-height: calc(var(--pk-k-type-caption) + var(--pk-s2)); }
+.pk-t-lead { font-size: var(--pk-type-lead); line-height: calc(var(--pk-type-lead) + var(--pk-s2)); }
+.pk-t-body { font-size: var(--pk-type-body); line-height: calc(var(--pk-type-body) + var(--pk-s2)); }
+.pk-t-small { font-size: var(--pk-type-small); line-height: calc(var(--pk-type-small) + var(--pk-s2)); }
+[class*="pk-t-"] { font-weight: normal; letter-spacing: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.pk-t-wrap { white-space: normal; }
+
+/* ---- 2-pass outline (ink stroke, then fill), hard offsets only: never a blur. Never used on parchment. ---- */
+.pk-ol1 {
+  text-shadow:
+    var(--pk-text-outline-1) 0 var(--pk-ink), calc(-1 * var(--pk-text-outline-1)) 0 var(--pk-ink),
+    0 var(--pk-text-outline-1) var(--pk-ink), 0 calc(-1 * var(--pk-text-outline-1)) var(--pk-ink),
+    var(--pk-text-outline-1) var(--pk-text-outline-1) var(--pk-ink), calc(-1 * var(--pk-text-outline-1)) var(--pk-text-outline-1) var(--pk-ink),
+    var(--pk-text-outline-1) calc(-1 * var(--pk-text-outline-1)) var(--pk-ink), calc(-1 * var(--pk-text-outline-1)) calc(-1 * var(--pk-text-outline-1)) var(--pk-ink),
+    0 var(--pk-text-outline-2) var(--pk-ink);
+}
+.pk-ol2 {
+  text-shadow:
+    var(--pk-text-outline-2) 0 var(--pk-ink), calc(-1 * var(--pk-text-outline-2)) 0 var(--pk-ink),
+    0 var(--pk-text-outline-2) var(--pk-ink), 0 calc(-1 * var(--pk-text-outline-2)) var(--pk-ink),
+    var(--pk-text-outline-2) var(--pk-text-outline-2) var(--pk-ink), calc(-1 * var(--pk-text-outline-2)) var(--pk-text-outline-2) var(--pk-ink),
+    var(--pk-text-outline-2) calc(-1 * var(--pk-text-outline-2)) var(--pk-ink), calc(-1 * var(--pk-text-outline-2)) calc(-1 * var(--pk-text-outline-2)) var(--pk-ink),
+    0 calc(var(--pk-text-outline-2) + var(--pk-text-outline-1)) var(--pk-ink);
+}
+
+/* ---- Pointer rule (LANE §6, KIT rule 2): shell roots never take input; painted kit pieces carry .interactive
+ *      (the existing `#overlay-root .interactive { pointer-events: auto }` in styles.css). A non-blocking marker
+ *      (NamePlate, TimerPlate) is .pk-pass so a pan can start on it. ---- */
+.pk-pass, .pk-pass * { pointer-events: none; }
+
+/* ---- Focus: keyboard focus is always visible (every class); hover is desktop-only and is the first 1 px of press
+ *      travel, never a colour change (LANE §4 Input). Rings are solid outlines: no blur, no radius. ---- */
+.pk-focusable:focus { outline: none; }
+.pk-focusable:focus-visible {
+  outline: var(--pk-outline-chip) solid var(--pk-gold-hi);
+  outline-offset: var(--pk-s2);
+}
+
+/* ---- Pixel art: nearest sampling at an integer device scale (sizes come from pixelArtCssSize in JS) ---- */
+.pk-pixel { image-rendering: crisp-edges; image-rendering: pixelated; }
+
+/* ---- Reduced motion: ONE list for the whole kit (P0, P1, P2), under BOTH bridge triggers ----
+ * The bridge (pk-tokens.generated.css, "Reduced motion") applies the same recipe for `@media (prefers-reduced-motion:
+ * reduce)` (before JS runs) and for `html[data-motion="reduce"]` (useMotion(): OS preference OR the in-game REDUCE
+ * MOTION toggle), and shortens the --pk-dur-* values; consumers must remove the MOVEMENT itself under both. CSS cannot
+ * OR a media query with a selector, so the same rules appear twice below, in this one place. Every per-part
+ * reduced-motion block was folded in here (parity verdict M4); kit CSS files carry no other reduced-motion rule.
+ *   1. loops and decorative motion stop: Celebration rays + ribbon drop, Seal scale, edge glow, Need-more loading line,
+ *      the DISABLED shake. (Sparks are not drawn.)
+ *   2. entrances that slide or pop cross-fade instead (same duration / easing / fill; delay 0): badge pop, name plates,
+ *      HUD edge buttons, tools shelf, context chip, herald, drawer drop, command rise, selection plate, sheet slide.
+ *   3. their exits fade out (exit selectors are more specific and come later, so they win over list 2).
+ *   4. slides driven by a transition (the deck sliding down on a selection) do not move.
+ * Left alone on purpose: fades (already cross-fades), holds and guards (toast hold, the Seal arm bar, the Celebration
+ * clock: timing and safety, not movement; the bridge leaves them too), and press travel (P0 Button parity). Exit fades
+ * keep their `animationend`, which Presence (Seal, Celebration) and the drawer rely on. */
+@keyframes pk-k-fade-in { from { opacity: 0; } }
+@keyframes pk-k-fade-out { to { opacity: 0; } }
+@media (prefers-reduced-motion: reduce) {
+  .pk-celebration__rays, .pk-celebration__ribbon, .pk-seal, .pk-edge__glow, .pk-needmore__loading, .pk-cmd__faceWrap { animation: none !important; }
+  .pk-celebration__sparks { display: none !important; }
+  .pk-edge__glow { opacity: .8; } /* the still glow (HomeHud.kt: no ready pulse when reduced) */
+  .pk-badge, .pk-nameplate, .pk-edge, .pk-tools, .pk-context, .pk-herald, .pk-drawer__panel, .pk-cbar .pk-cmd,
+  .pk-sel__plateAt, .pk-sel__stem, .pk-sheethost__panel { animation-name: pk-k-fade-in !important; animation-delay: 0ms !important; }
+  .pk-drawer[data-state='out'] .pk-drawer__panel, .pk-cbar[data-motion="exit"] .pk-cmd,
+  .pk-sel[data-motion="exit"] .pk-sel__plateAt, .pk-sel[data-motion="exit"] .pk-sel__stem,
+  .pk-sheethost[data-phase="out"] .pk-sheethost__panel { animation-name: pk-k-fade-out !important; }
+  .pk-toast { animation-name: pk-k-fade-in, pk-toast-out !important; } /* keeps the hold's delayed fade-out */
+  .pk-hud__deck[data-hidden] { transform: none !important; }
+}
+html[data-motion="reduce"] .pk-celebration__rays, html[data-motion="reduce"] .pk-celebration__ribbon,
+html[data-motion="reduce"] .pk-seal, html[data-motion="reduce"] .pk-edge__glow, html[data-motion="reduce"] .pk-needmore__loading,
+html[data-motion="reduce"] .pk-cmd__faceWrap { animation: none !important; }
+html[data-motion="reduce"] .pk-celebration__sparks { display: none !important; }
+html[data-motion="reduce"] .pk-edge__glow { opacity: .8; }
+html[data-motion="reduce"] .pk-badge, html[data-motion="reduce"] .pk-nameplate, html[data-motion="reduce"] .pk-edge,
+html[data-motion="reduce"] .pk-tools, html[data-motion="reduce"] .pk-context, html[data-motion="reduce"] .pk-herald,
+html[data-motion="reduce"] .pk-drawer__panel, html[data-motion="reduce"] .pk-cbar .pk-cmd,
+html[data-motion="reduce"] .pk-sel__plateAt, html[data-motion="reduce"] .pk-sel__stem,
+html[data-motion="reduce"] .pk-sheethost__panel { animation-name: pk-k-fade-in !important; animation-delay: 0ms !important; }
+html[data-motion="reduce"] .pk-drawer[data-state='out'] .pk-drawer__panel, html[data-motion="reduce"] .pk-cbar[data-motion="exit"] .pk-cmd,
+html[data-motion="reduce"] .pk-sel[data-motion="exit"] .pk-sel__plateAt, html[data-motion="reduce"] .pk-sel[data-motion="exit"] .pk-sel__stem,
+html[data-motion="reduce"] .pk-sheethost[data-phase="out"] .pk-sheethost__panel { animation-name: pk-k-fade-out !important; }
+html[data-motion="reduce"] .pk-toast { animation-name: pk-k-fade-in, pk-toast-out !important; }
+html[data-motion="reduce"] .pk-hud__deck[data-hidden] { transform: none !important; }

@@ -1,0 +1,14 @@
+import { test } from 'vitest';
+import assert from 'node:assert/strict';
+import { boardView, fractionText, orderQuests, letterControls, reportUnreadBadge, feedbackCanSend, feedbackNeedsDiscardConfirm, ratedAttacksLabel, chatCanSend, cacheDays, cacheClaimLabel, orderReports, earningTag, eventShowsJoin } from './HubLogic';
+test('kept data survives refresh and error',()=>{assert.equal(boardView('LOADING',true),'REFRESHING');assert.equal(boardView('ERROR',true),'ERROR_KEPT');assert.equal(boardView('ERROR',false),'ERROR_EMPTY');});
+test('unknown progress is not a fake zero',()=>assert.equal(fractionText(null,null),'…/…'));
+test('quests put ready first and done last while keeping server order',()=>assert.deepEqual(orderQuests([{id:'a',state:'DONE'},{id:'b',state:'GO'},{id:'c',state:'READY'},{id:'d',state:'GO'}]).map(x=>x.id),['c','b','d','a']));
+test('an uncertain letter claim keeps recovery and cannot be archived',()=>{const x=letterControls('CHECKING',true);assert.equal(x.recheck,true);assert.equal(x.archiveEnabled,false);assert.equal(x.claim,false);assert.equal(letterControls('FAILED',true).claimLabel,'RETRY');});
+test('an unread reply without a server count draws ellipsis and zero draws none',()=>{assert.equal(reportUnreadBadge(null),'…');assert.equal(reportUnreadBadge(0),null);});
+test('feedback waits for valid input and never sends twice',()=>{assert.equal(feedbackCanSend({category:'BUG',title:'Lost',body:'',send:'SENDING',titleMax:null,bodyMax:null}),false);assert.equal(feedbackCanSend({category:'BUG',title:'Lost',body:'',send:'READY',titleMax:3,bodyMax:null}),false);assert.equal(feedbackNeedsDiscardConfirm('draft','','READY'),true);assert.equal(feedbackNeedsDiscardConfirm('draft','','SENT'),false);});
+test('weekly eligibility says rated attacks and never wins',()=>{assert.equal(ratedAttacksLabel(2,5),'ATTACKS 2/5');assert.equal(earningTag(null,false),null);assert.equal(earningTag(false,true),'PAID');});
+test('locked clan chat and sending cannot submit',()=>{assert.equal(chatCanSend({draft:'hello',canSend:true,sending:false,tab:'CLAN',clanLockedReason:'Not open',blockedReason:null}),false);});
+test('cache days never invent a missing pack constant',()=>{assert.equal(cacheDays(1,null,false),null);assert.deepEqual(cacheDays(2,3,true),['CLAIMED','CLAIMED','FUTURE']);assert.equal(cacheClaimLabel('CHECKING'),'RETRY');});
+test('unread reports retain stable server order',()=>assert.deepEqual(orderReports([{id:'a',unread:0},{id:'b',unread:null},{id:'c',unread:1}]).map(x=>x.id),['b','c','a']));
+test('only live unjoined events show join',()=>{assert.equal(eventShowsJoin('UPCOMING',false),false);assert.equal(eventShowsJoin('LIVE',false),true);assert.equal(eventShowsJoin('LIVE',true),false);});

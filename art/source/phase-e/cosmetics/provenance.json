@@ -1,0 +1,284 @@
+{
+  "schemaVersion": 1,
+  "indexSha256": "04f96c922ca04d93f1bf760e6385713908b971ce82c3aa022602f1fa199e2181",
+  "sourceManifestSha256": "b4b67f78efd4d74fa416e78822af9f0e037ad6d3bc30f3fc77127cd169292394",
+  "zipSha256": "7a381d75251b280459dda151dba7d2ad7f3d1b8945d01af0f847528436e05aa3",
+  "docsCommit": "11504e2316bd33a6d092f87b8d114f159aa0249c",
+  "files": [
+    {
+      "path": "cosmetics/animations/artisan-market-t1-collapse.png",
+      "bytes": 13192,
+      "sha256": "d3235e5b4d722c1cb48d8c6e39f4b0cf6ca9e816b9172241c22a5931a57839a6",
+      "size": [
+        1008,
+        112
+      ]
+    },
+    {
+      "path": "cosmetics/animations/artisan-market-t1-construction.png",
+      "bytes": 15322,
+      "sha256": "423b7502a6c1af3e16af8737def458ef94125c44cd75be712ee61b86a8a209a9",
+      "size": [
+        1008,
+        112
+      ]
+    },
+    {
+      "path": "cosmetics/animations/artisan-market-t1-working.png",
+      "bytes": 8931,
+      "sha256": "e7ef5ba7a125f1ffb71beedf6780897bd430daf465ca3eace92e9b644224ffb5",
+      "size": [
+        896,
+        112
+      ]
+    },
+    {
+      "path": "cosmetics/animations/artisan-market-t2-collapse.png",
+      "bytes": 14594,
+      "sha256": "01be02e5dce2e3e3c7539f928451ccbf7d682d088157b730ad325aa4c61254e4",
+      "size": [
+        1008,
+        112
+      ]
+    },
+    {
+      "path": "cosmetics/animations/artisan-market-t2-construction.png",
+      "bytes": 16668,
+      "sha256": "390a8064039e5a47e36139cfab46ed6961afbda56f795d30c766db78dada46a6",
+      "size": [
+        1008,
+        112
+      ]
+    },
+    {
+      "path": "cosmetics/animations/artisan-market-t2-working.png",
+      "bytes": 9732,
+      "sha256": "100e3fd88bdd274cfd6d6676f59ccb6ab9f14dba32021d81cfd36f41283afebf",
+      "size": [
+        896,
+        112
+      ]
+    },
+    {
+      "path": "cosmetics/animations/artisan-market-t3-collapse.png",
+      "bytes": 17213,
+      "sha256": "e15f280143a47cf86050670f7814409c0ccaa9c45e331ea578259205e9451957",
+      "size": [
+        1008,
+        112
+      ]
+    },
+    {
+      "path": "cosmetics/animations/artisan-market-t3-construction.png",
+      "bytes": 16992,
+      "sha256": "9fb3c74bd9fc599930bc8dba68844b7153a90b46262a6acb744c5fbb35a0f8a0",
+      "size": [
+        1008,
+        112
+      ]
+    },
+    {
+      "path": "cosmetics/animations/artisan-market-t3-working.png",
+      "bytes": 10334,
+      "sha256": "0e4d4f904c12208cc5ee936367603ebd0ffde32b038e3a73d24c2cc56952ca4c",
+      "size": [
+        896,
+        112
+      ]
+    },
+    {
+      "path": "cosmetics/animations/artisan-market-t4-collapse.png",
+      "bytes": 17705,
+      "sha256": "32ec5346b61ba34bdad327ae1ae3f14b2fdaa8bf7d70cf35c0a8e007e67f93d9",
+      "size": [
+        1008,
+        112
+      ]
+    },
+    {
+      "path": "cosmetics/animations/artisan-market-t4-construction.png",
+      "bytes": 18534,
+      "sha256": "8a0d91330b0fe8f477932cc83d8e5796782debbafb805a1c6a1bc84e8f4dde2f",
+      "size": [
+        1008,
+        112
+      ]
+    },
+    {
+      "path": "cosmetics/animations/artisan-market-t4-working.png",
+      "bytes": 10218,
+      "sha256": "afd5b960c388947045840f69a9aaa2bce30e04a35023f17cdfa96ab2080470ed",
+      "size": [
+        896,
+        112
+      ]
+    },
+    {
+      "path": "cosmetics/animations/aurora-wake.png",
+      "bytes": 4038,
+      "sha256": "6acc6e80907c7c6e2a19d2c5580403cfeedb99cd79aabb750427b688eae74f33",
+      "size": [
+        512,
+        64
+      ]
+    },
+    {
+      "path": "cosmetics/manifest.json",
+      "bytes": 15966,
+      "sha256": "b4b67f78efd4d74fa416e78822af9f0e037ad6d3bc30f3fc77127cd169292394"
+    },
+    {
+      "path": "cosmetics/static/artisan-market-t1-damaged.png",
+      "bytes": 3980,
+      "sha256": "e56757cffd47d58141c55623773a36cb9840231e9b5901484f713622bdd6dcff",
+      "size": [
+        112,
+        112
+      ]
+    },
+    {
+      "path": "cosmetics/static/artisan-market-t1-idle.png",
+      "bytes": 5132,
+      "sha256": "be46bcdafdc1bfa186693204937877be3e892a676f386d7c5ee2217e03a77612",
+      "size": [
+        112,
+        112
+      ]
+    },
+    {
+      "path": "cosmetics/static/artisan-market-t2-damaged.png",
+      "bytes": 5293,
+      "sha256": "0aae61a9279c54efdd71cb159f7ee317aa19f91df1b473b8257576c52faa4166",
+      "size": [
+        112,
+        112
+      ]
+    },
+    {
+      "path": "cosmetics/static/artisan-market-t2-idle.png",
+      "bytes": 5918,
+      "sha256": "c787691dbfad005d80627ea01d4f1d99d70d2ac6a5266cce2c2fc0ac5b28a4b3",
+      "size": [
+        112,
+        112
+      ]
+    },
+    {
+      "path": "cosmetics/static/artisan-market-t3-damaged.png",
+      "bytes": 8575,
+      "sha256": "02565fc0ab81b7f5406bac006163eceec62ead07f5fa945307e0c47d7470bb4b",
+      "size": [
+        112,
+        112
+      ]
+    },
+    {
+      "path": "cosmetics/static/artisan-market-t3-idle.png",
+      "bytes": 6741,
+      "sha256": "08529d33d2c898e631407c897c03a481f795fa0c8be523876ca8eb14f80b513d",
+      "size": [
+        112,
+        112
+      ]
+    },
+    {
+      "path": "cosmetics/static/artisan-market-t4-damaged.png",
+      "bytes": 7619,
+      "sha256": "1e34c5d51ac05cad170d7172e839f86b1fe99ad11c8c842d8d65c7335ad1b430",
+      "size": [
+        112,
+        112
+      ]
+    },
+    {
+      "path": "cosmetics/static/artisan-market-t4-idle.png",
+      "bytes": 6404,
+      "sha256": "73425d7c9c011ecb44aa2eb3773d1e02ecc1bab15ea210160928ff8df0c5e7d0",
+      "size": [
+        112,
+        112
+      ]
+    },
+    {
+      "path": "shared-fx/craft-success/atlas.png",
+      "bytes": 7460,
+      "sha256": "593ded1c87df4e6e44bfa4a197dde464713970d04174326967c30718d9edf424",
+      "size": [
+        512,
+        64
+      ]
+    },
+    {
+      "path": "workshop/derived/static/t1-construction.png",
+      "bytes": 6600,
+      "sha256": "9e546a251cee6324ada3a3a02b8d95607147088f4ee7f2734f056025bd3381a2",
+      "size": [
+        112,
+        112
+      ]
+    },
+    {
+      "path": "workshop/derived/static/t1-rubble.png",
+      "bytes": 5607,
+      "sha256": "3db88e664ca741c6555fdd469a3eefdd76396070821d17e479adb70b6e2dc4e9",
+      "size": [
+        112,
+        112
+      ]
+    },
+    {
+      "path": "workshop/derived/static/t2-construction.png",
+      "bytes": 6664,
+      "sha256": "fcb6dd3af4bdfe4598dbfee3126d5770c9994995553eb47301200a602c2fb3f1",
+      "size": [
+        112,
+        112
+      ]
+    },
+    {
+      "path": "workshop/derived/static/t2-rubble.png",
+      "bytes": 5349,
+      "sha256": "964fd0bcd258eadf75a183747651019ece004ce93a79db0a05c353e38b9d1c82",
+      "size": [
+        112,
+        112
+      ]
+    },
+    {
+      "path": "workshop/derived/static/t3-construction.png",
+      "bytes": 5985,
+      "sha256": "cead6e7968a5460219dbd269e0e2cef7401be6b92a1d500407acf684e8f88ffe",
+      "size": [
+        112,
+        112
+      ]
+    },
+    {
+      "path": "workshop/derived/static/t3-rubble.png",
+      "bytes": 5026,
+      "sha256": "5eb600d816e71f47d2e29f354e5647987c65aa96db784e9fea3637cefb26e610",
+      "size": [
+        112,
+        112
+      ]
+    },
+    {
+      "path": "workshop/derived/static/t4-construction.png",
+      "bytes": 7846,
+      "sha256": "3dc1bad0c91190090fdbdb8d1acbdc94f2f68cfd97530b830fa0dd6711a7cfc2",
+      "size": [
+        112,
+        112
+      ]
+    },
+    {
+      "path": "workshop/derived/static/t4-rubble.png",
+      "bytes": 5976,
+      "sha256": "78136a68f1f2f4f045bed29b53b00f62adb4af83e88e712602dcb12a1ea439d0",
+      "size": [
+        112,
+        112
+      ]
+    }
+  ]
+}

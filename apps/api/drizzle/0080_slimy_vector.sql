@@ -1,0 +1,1 @@
+CREATE UNIQUE INDEX "players_avatar_generation_uq" ON "players" USING btree ("avatar_generation") WHERE avatar_generation IS NOT NULL;

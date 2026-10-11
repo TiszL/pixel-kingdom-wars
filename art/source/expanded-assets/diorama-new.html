@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>SHARDKEEP — NEW Assets Diorama</title>
+<link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#1A171E;color:#EFE8D6;font-family:"VT323",monospace;font-size:20px;padding:32px 40px 90px}
+h1{font-size:38px;letter-spacing:2px}
+h1 em{color:#E3AE3C;font-style:normal}
+p.sub{color:#9C937F;margin:6px 0 22px}
+h2{color:#E3AE3C;font-size:24px;letter-spacing:1px;margin:30px 0 8px}
+h2 em{color:#9377C9;font-style:normal}
+p.desc{color:#9C937F;font-size:15px;margin-bottom:8px;max-width:900px}
+#scene{position:relative;width:832px;height:716px;border:2px solid #3D3833;overflow:hidden;background:#567A4B}
+#scene img{position:absolute;image-rendering:pixelated}
+#action,#action2{position:relative;width:832px;height:220px;border:2px solid #3D3833;overflow:hidden;background:#3D3833}
+#action img,#action2 img{position:absolute;image-rendering:pixelated}
+#progression{display:flex;gap:16px;align-items:flex-end;background:#242128;border:1px solid #3D3833;padding:14px;overflow-x:auto}
+#progression figure{margin:0;text-align:center}
+#progression img{image-rendering:pixelated;display:block}
+#progression figcaption{font-size:14px;color:#9C937F;margin-top:4px}
+.tag{position:absolute;font-size:13px;color:#EFE8D6;background:rgba(26,23,30,.85);padding:1px 6px;pointer-events:none}
+a{color:#BBD0D6}
+</style>
+</head>
+<body>
+<h1>SHARDKEEP <em>/ NEW ASSETS DIORAMA</em></h1>
+<p class="sub">Mythic-tier base (<b style="color:#6FE0D9">L20 Ascension</b>) with 4 new epic defenses garrisoned by the full roster &middot; see <a href="contact-sheet-new.html">contact-sheet-new.html</a> for the full catalog</p>
+
+<h2>BASE — <em>MYTHIC ZENITH (L20)</em></h2>
+<p class="desc">Keep at L20 — the shard-crystal spire has grown through violet awakening and cyan ascension into its full gold+violet+cyan mythic crown. Four new defenses (Dragon Nest, Electric Tower, Mage Tower, Laser Tower) stand alongside the original nine buildings, all at their new L20 ceiling.</p>
+<div id="scene"></div>
+
+<h2>NEW DEFENSES IN ACTION — <em>chain lightning &middot; AOE burst &middot; beam &middot; wyrmling sortie</em></h2>
+<div id="action2"></div>
+
+<h2>ORIGINAL NEW-ROSTER TROOPS IN ACTION</h2>
+<div id="action"></div>
+
+<h2>KEEP PROGRESSION — L1 &rarr; L6 &rarr; L9 &rarr; L12 &rarr; L15 &rarr; L20</h2>
+<div id="progression"></div>
+
+<script>
+const OLD='../assets-v2/', NB='buildings/', CB='characters/', FXB='fx/';
+const S=document.getElementById('scene');
+const TOPMARGIN=140;
+function put(container,src,x,y,w,h,z){
+  const img=document.createElement('img'); img.src=src; img.width=w; img.height=h;
+  img.style.left=Math.round(x)+'px'; img.style.top=Math.round(y)+'px'; img.style.zIndex=(z!=null?z:Math.round(y+h));
+  container.appendChild(img); return img;
+}
+function tag(container,text,x,y){
+  const d=document.createElement('div'); d.className='tag'; d.textContent=text;
+  d.style.left=x+'px'; d.style.top=y+'px'; d.style.zIndex=2000; container.appendChild(d);
+}
+// ground
+for(let ty=0; ty<9; ty++) for(let tx=0; tx<13; tx++){
+  const dirt = (tx>=9&&tx<=10&&ty>=1&&ty<=2);
+  put(S, OLD+(dirt?'tile_dirt':'tile_grass_1')+'.svg', tx*64, TOPMARGIN+ty*64, 64, 64, 0);
+}
+// path
+for(let tx=2; tx<=6; tx++) put(S, OLD+'tile_path.svg', tx*64, TOPMARGIN+6*64, 64, 64, 1);
+
+// Keep L20 hero, center — mythic zenith crown
+put(S, NB+'bld_keep_l20.svg', 4*64, TOPMARGIN+0, 64*2, 232*2, 400);
+put(S, NB+'bld_keep_l20_banner_f1.svg', 4*64+40, TOPMARGIN+6, 24*2, 42*2, 401);
+// Vault L20
+put(S, NB+'bld_vault_l20.svg', 9*64, TOPMARGIN+2*64, 32*2, 70*2, 300);
+// Mine L20 (work frame, cart mid-cycle)
+put(S, NB+'bld_mine_l20_work_f1.svg', 11*64, TOPMARGIN+1*64+20, 32*2, 66*2, 260);
+// Archer Tower L20 west flank
+put(S, NB+'bld_archertower_l20.svg', 0, TOPMARGIN+1*64, 32*2, 102*2, 260);
+// Cannon L20 + Mortar L20 south wall
+put(S, NB+'bld_cannon_l20.svg', 7*64, TOPMARGIN+3*64+16, 32*2, 66*2, 330);
+put(S, NB+'bld_mortar_l20.svg', 2*64, TOPMARGIN+6*64-30, 64*2, 96*2, 460);
+// Barracks L20 + Forge L20 + Camp L20
+put(S, NB+'bld_barracks_l20.svg', 9*64, TOPMARGIN+5*64+16, 64*2, 74*2, 420);
+put(S, NB+'bld_forge_l20.svg', 6*64+16, TOPMARGIN+2*64+8, 32*2, 74*2, 260);
+put(S, NB+'bld_camp_l20.svg', 0, TOPMARGIN+5*64, 64*2, 90*2, 420);
+// wall run tier 20 with corner, guarding the south-east
+for(let wx=8; wx<=12; wx++) put(S, NB+'bld_wall_straight_t20.svg', wx*64, TOPMARGIN+4*64, 64, 112, Math.round(TOPMARGIN+4*64+112));
+put(S, NB+'bld_wall_corner_se_t20.svg', 12*64, TOPMARGIN+4*64, 64, 112, Math.round(TOPMARGIN+4*64+112));
+
+// ---- 4 NEW DEFENSES, elevated back row, L20 ----
+put(S, NB+'bld_dragonnest_l20.svg', 7*64, TOPMARGIN-76, 64*2, 108*2, Math.round(TOPMARGIN-76+216));
+put(S, NB+'bld_electrictower_l20.svg', 10*64, TOPMARGIN-56, 32*2, 98*2, Math.round(TOPMARGIN-56+196));
+put(S, NB+'bld_magetower_l20.svg', 12*64, TOPMARGIN-72, 32*2, 106*2, Math.round(TOPMARGIN-72+212));
+put(S, NB+'bld_lasertower_l20.svg', 2*64, TOPMARGIN-48, 32*2, 94*2, Math.round(TOPMARGIN-48+188));
+tag(S,'DRAGON NEST', 7*64+4, TOPMARGIN-90);
+tag(S,'ELECTRIC TOWER', 10*64-14, TOPMARGIN-70);
+tag(S,'MAGE TOWER (AOE)', 12*64-18, TOPMARGIN-86);
+tag(S,'LASER TOWER', 2*64+2, TOPMARGIN-62);
+// wyrmlings on patrol near the nest
+put(S, CB+'trp_wyrmling_fly_e_f3.svg', 7*64+70, TOPMARGIN-40, 32*2, 28*2, 900);
+put(S, CB+'trp_wyrmling_fly_e_f1.svg', 7*64+130, TOPMARGIN-10, 32*2, 28*2, 900);
+
+// New roster garrisoned around camp + one Bilgewraith mid-infiltration near the Mine
+put(S, CB+'trp_giant_walk_s_f2.svg', 1*64-4, TOPMARGIN+6*64+30, 56*2, 64*2, Math.round(TOPMARGIN+6*64+30+128));
+put(S, CB+'trp_troll_walk_s_f2.svg', 2*64+40, TOPMARGIN+6*64+50, 56*2, 56*2, Math.round(TOPMARGIN+6*64+50+112));
+put(S, CB+'trp_mage_walk_e_f2.svg', 4*64+10, TOPMARGIN+7*64+10, 32*2, 32*2, Math.round(TOPMARGIN+7*64+10+64));
+put(S, CB+'trp_dragon_walk_s_f2.svg', 5*64+70, TOPMARGIN+6*64+8, 72*2, 64*2, Math.round(TOPMARGIN+6*64+8+128));
+// bilgewraith: burrow mound approaching the mine, and one already emerged attacking it
+put(S, CB+'trp_bilgewraith_burrow_f2.svg', 11*64+16, TOPMARGIN+3*64+44, 24*2, 16*2, Math.round(TOPMARGIN+3*64+44+32));
+put(S, CB+'trp_bilgewraith_walk_e_f2.svg', 10*64+30, TOPMARGIN+1*64+50, 24*2, 24*2, Math.round(TOPMARGIN+1*64+50+48));
+tag(S,'burrows under walls \u2192 targets Mines first', 11*64-30, TOPMARGIN+3*64+16);
+
+// selection + range ring flourish on the cannon to show overlays still work with new levels
+(function(){
+  const img=put(S, OLD+'ovl_range_r3.svg', 7*64+16-192+16, TOPMARGIN+3*64+16+24-192+16, 384,384, 350);
+  img.style.opacity=0.75;
+})();
+// AOE splash preview ring on the mage tower
+(function(){
+  const cx = 12*64+32, cy = TOPMARGIN-72+106;
+  const img=put(S, FXB+'ovl_aoe_r3.svg', cx-96, cy-96, 192,192, 351);
+  img.style.opacity=0.8;
+})();
+
+// ---------------- ACTION STRIP 2: NEW DEFENSES ----------------
+const A2=document.getElementById('action2');
+for(let i=0;i<13;i++) for(let j=0;j<4;j++) put(A2, OLD+'tile_grass_1.svg', i*64,j*64,64,64,0);
+
+const nestImg = put(A2, NB+'bld_dragonnest_l8.svg', 10, 40, 128,162, 200);
+const wyrm = put(A2, CB+'trp_wyrmling_fly_e_f1.svg', 150, 70, 64,56, 210);
+const wyrmTarget = put(A2, OLD+'trp_bowman_walk_e_f1.svg', 260, 150, 64,64, 200);
+const elecImg = put(A2, NB+'bld_electrictower_l8.svg', 340, 78, 64,118, 200);
+const elecTarget = put(A2, OLD+'trp_highlander_walk_e_f1.svg', 430, 150, 64,64, 200);
+const mageTowerImg = put(A2, NB+'bld_magetower_l8.svg', 520, 62, 64,158, 200);
+const aoeT1 = put(A2, OLD+'trp_tunneler_walk_e_f1.svg', 610, 150, 48,48, 200);
+const aoeT2 = put(A2, OLD+'trp_plunderer_walk_e_f1.svg', 650, 155, 48,48, 205);
+const laserImg = put(A2, NB+'bld_lasertower_l8.svg', 740, 86, 64,134, 200);
+tag(A2,'DRAGON NEST \u2014 wyrmling sortie', 10, 205);
+tag(A2,'ELECTRIC \u2014 chain arc', 340, 205);
+tag(A2,'MAGE \u2014 AOE burst', 520, 8);
+tag(A2,'LASER \u2014 beam + scorch', 740, 8);
+
+const breathW = put(A2, FXB+'fx_breath_wyrmling_f1.svg', 210, 100, 48,32, 215); breathW.style.display='none';
+const shockFx = put(A2, FXB+'fx_shock_f1.svg', 415, 140, 32,32, 220); shockFx.style.display='none';
+const boltE = put(A2, FXB+'fx_bolt_electric_f1.svg', 400, 130, 28,20, 220); boltE.style.display='none';
+const aoeFx = put(A2, FXB+'fx_aoe_burst_f1.svg', 590, 100, 128,128, 230); aoeFx.style.display='none';
+const scorchFx = put(A2, FXB+'fx_scorch_f1.svg', 770, 165, 24,16, 240); scorchFx.style.display='none';
+
+function loopAction2(){
+  // wyrmling launches, flies to bowman, breathes
+  wyrm.style.display='block'; wyrm.style.left='150px';
+  setTimeout(()=>{ wyrm.src=CB+'trp_wyrmling_fly_e_f2.svg'; wyrm.style.left='190px'; },150);
+  setTimeout(()=>{ wyrm.src=CB+'trp_wyrmling_fly_e_f3.svg'; wyrm.style.left='230px'; },300);
+  setTimeout(()=>{ wyrm.src=CB+'trp_wyrmling_attack_e_f1.svg'; breathW.style.display='block'; },450);
+  setTimeout(()=>{ wyrm.src=CB+'trp_wyrmling_attack_e_f2.svg'; breathW.src=FXB+'fx_breath_wyrmling_f2.svg'; },600);
+  setTimeout(()=>{ breathW.src=FXB+'fx_breath_wyrmling_f3.svg'; wyrmTarget.style.filter='brightness(3)'; },750);
+  setTimeout(()=>{ breathW.style.display='none'; wyrmTarget.style.filter=''; wyrm.src=CB+'trp_wyrmling_fly_e_f4.svg'; },900);
+
+  // electric tower zaps
+  setTimeout(()=>{ boltE.style.display='block'; boltE.style.left='400px'; },1000);
+  setTimeout(()=>{ boltE.style.left='420px'; },1120);
+  setTimeout(()=>{ boltE.style.display='none'; shockFx.style.display='block'; shockFx.src=FXB+'fx_shock_f1.svg'; elecTarget.style.filter='brightness(3)'; },1240);
+  setTimeout(()=>{ shockFx.src=FXB+'fx_shock_f2.svg'; elecTarget.style.filter=''; },1340);
+  setTimeout(()=>{ shockFx.src=FXB+'fx_shock_f3.svg'; },1440);
+  setTimeout(()=>{ shockFx.style.display='none'; },1560);
+
+  // mage tower AOE — hits both targets at once
+  setTimeout(()=>{ aoeFx.style.display='block'; aoeFx.src=FXB+'fx_aoe_burst_f1.svg'; },1700);
+  setTimeout(()=>{ aoeFx.src=FXB+'fx_aoe_burst_f2.svg'; aoeT1.style.filter='brightness(3)'; aoeT2.style.filter='brightness(3)'; },1850);
+  setTimeout(()=>{ aoeFx.src=FXB+'fx_aoe_burst_f3.svg'; aoeT1.style.filter=''; aoeT2.style.filter=''; },2000);
+  setTimeout(()=>{ aoeFx.src=FXB+'fx_aoe_burst_f4.svg'; },2150);
+  setTimeout(()=>{ aoeFx.style.display='none'; },2300);
+
+  // laser tower beam
+  setTimeout(()=>{ laserImg.src=NB+'bld_lasertower_l8.svg'; },2450);
+  setTimeout(()=>{ scorchFx.style.display='block'; scorchFx.src=FXB+'fx_scorch_f1.svg'; },2550);
+  setTimeout(()=>{ scorchFx.src=FXB+'fx_scorch_f2.svg'; },2700);
+  setTimeout(()=>{ scorchFx.style.display='none'; },2900);
+}
+loopAction2();
+setInterval(loopAction2, 3600);
+
+// ---------------- ACTION STRIP: original new-roster troops ----------------
+const A=document.getElementById('action');
+put(A, OLD+'tile_grass_1.svg', 0,0,832,220,0);
+for(let i=1;i<13;i++) put(A, OLD+'tile_grass_1.svg', i*64,0,64,64,0);
+for(let i=0;i<13;i++) for(let j=1;j<4;j++) put(A, OLD+'tile_grass_1.svg', i*64,j*64,64,64,0);
+
+const dragonImg = put(A, CB+'trp_dragon_walk_e_f2.svg', 20, 60, 144,128, 200);
+const target1 = put(A, OLD+'trp_highlander_walk_e_f1.svg', 300, 130, 64,64, 200);
+const mageImg = put(A, CB+'trp_mage_walk_e_f2.svg', 460, 130, 64,64, 210);
+const target2 = put(A, OLD+'trp_tunneler_walk_e_f1.svg', 640, 140, 48,48, 210);
+const giantImg = put(A, CB+'trp_giant_walk_e_f2.svg', 700, 40, 112,128, 220);
+tag(A,'DRAGON \u2014 fire-breath cone', 20, 200);
+tag(A,'MAGE \u2014 shard bolt', 460, 200);
+tag(A,'GIANT \u2014 building-slam', 700, 10);
+
+const breath = put(A, FXB+'fx_breath_dragon_f1.svg', 150, 95, 80,48, 205); breath.style.display='none';
+const bolt = put(A, FXB+'fx_bolt_mage.svg', 500, 150, 20,20, 215); bolt.style.display='none';
+const slam1 = put(A, FXB+'fx_slam_giant_f1.svg', 690, 150, 96,48, 225); slam1.style.display='none';
+
+function loopAction(){
+  breath.style.display='block'; breath.src=FXB+'fx_breath_dragon_f1.svg';
+  setTimeout(()=>breath.src=FXB+'fx_breath_dragon_f2.svg',150);
+  setTimeout(()=>breath.src=FXB+'fx_breath_dragon_f3.svg',300);
+  setTimeout(()=>{ breath.style.display='none'; target1.style.filter='brightness(3)'; },500);
+  setTimeout(()=>target1.style.filter='',600);
+
+  setTimeout(()=>{ bolt.style.display='block'; bolt.style.left='500px'; },700);
+  setTimeout(()=>{ bolt.style.left='620px'; },900);
+  setTimeout(()=>{ bolt.style.display='none'; target2.style.filter='brightness(3)'; },1050);
+  setTimeout(()=>target2.style.filter='',1150);
+
+  setTimeout(()=>{ slam1.style.display='block'; slam1.src=FXB+'fx_slam_giant_f1.svg'; },1300);
+  setTimeout(()=>slam1.src=FXB+'fx_slam_giant_f2.svg',1500);
+  setTimeout(()=>slam1.style.display='none',1800);
+}
+loopAction();
+setInterval(loopAction, 3200);
+
+// ---------------- PROGRESSION STRIP ----------------
+const P=document.getElementById('progression');
+[[1,'L1',OLD,80],[6,'L6',NB,120],[9,'L9',NB,144],[12,'L12',NB,168],[15,'L15',NB,192],[20,'L20',NB,232]].forEach(([L,label,base,h])=>{
+  const f=document.createElement('figure');
+  const img=document.createElement('img'); img.src=base+'bld_keep_l'+L+'.svg'; img.style.height=Math.round(h*1.3)+'px';
+  f.appendChild(img);
+  const cap=document.createElement('figcaption'); cap.textContent=label+(L>5?(L>=13?' (mythic)':' (new)'):''); f.appendChild(cap);
+  P.appendChild(f);
+});
+</script>
+</body>
+</html>

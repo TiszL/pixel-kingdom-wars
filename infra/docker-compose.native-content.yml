@@ -1,0 +1,28 @@
+# D-134 in-process API: this separate project serves immutable native content only.
+# Never combine it with docker-compose.native.yml: both own the native-content alias.
+name: shardkeep-native-content
+services:
+  content:
+    image: caddy:2.11.4-alpine
+    user: '1000:1000'
+    command: ['caddy', 'run', '--config', '/etc/caddy/native-content.caddyfile', '--adapter', 'caddyfile']
+    restart: unless-stopped
+    read_only: true
+    cap_drop: [ALL]
+    # The pinned image binary has cap_net_bind_service=ep; its bounding bit is
+    # required even to exec as UID1000, including when listening only on :8080.
+    cap_add: [NET_BIND_SERVICE]
+    security_opt: [no-new-privileges:true]
+    tmpfs: ['/tmp:rw,noexec,nosuid,nodev,size=16m']
+    cpus: 0.25
+    mem_limit: 128m
+    pids_limit: 32
+    volumes:
+      - ./Caddyfile.native-content:/etc/caddy/native-content.caddyfile:ro
+      - ${NATIVE_CONTENT_ROOT:?verified immutable content directory required}:/srv/content:ro
+    networks:
+      game: { aliases: [native-content] }
+networks:
+  game:
+    external: true
+    name: ${NATIVE_GAME_NETWORK:-shardkeep_default}

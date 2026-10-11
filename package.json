@@ -1,0 +1,20 @@
+{
+  "name": "shardkeep",
+  "private": true,
+  "version": "0.7.1",
+  "description": "Pixel Kingdom Wars \u2014 server-authoritative pixel base-builder on Solana (devnet)",
+  "engines": {
+    "node": ">=22"
+  },
+  "packageManager": "pnpm@10.19.0",
+  "scripts": {
+    "build": "pnpm -r build",
+    "test": "pnpm -r test",
+    "typecheck": "pnpm -r typecheck",
+    "lint": "pnpm -r lint",
+    "dev": "pnpm --parallel --filter @shardkeep/api --filter @shardkeep/web dev",
+    "dev:api": "pnpm --filter @shardkeep/api dev",
+    "dev:web": "pnpm --filter @shardkeep/web dev",
+    "bootstrap:devnet": "pnpm --filter @shardkeep/scripts bootstrap:devnet"
+  }
+}

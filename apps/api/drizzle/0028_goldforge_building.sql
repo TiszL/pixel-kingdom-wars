@@ -1,0 +1,1 @@
+ALTER TYPE "public"."building_type" ADD VALUE 'goldforge';

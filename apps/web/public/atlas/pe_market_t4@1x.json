@@ -1,0 +1,796 @@
+{
+	"textures": [
+		{
+			"image": "pe_market_t4@1x.png",
+			"format": "RGBA8888",
+			"size": {
+				"w": 708,
+				"h": 660
+			},
+			"scale": 1,
+			"frames": [
+				{
+					"filename": "pe_market_t4_collapse_f1",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 112,
+						"h": 112
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 112,
+						"h": 112
+					},
+					"frame": {
+						"x": 3,
+						"y": 3,
+						"w": 112,
+						"h": 112
+					}
+				},
+				{
+					"filename": "pe_market_t4_collapse_f2",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 112,
+						"h": 112
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 112,
+						"h": 112
+					},
+					"frame": {
+						"x": 121,
+						"y": 3,
+						"w": 112,
+						"h": 112
+					}
+				},
+				{
+					"filename": "pe_market_t4_collapse_f3",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 112,
+						"h": 112
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 112,
+						"h": 112
+					},
+					"frame": {
+						"x": 3,
+						"y": 121,
+						"w": 112,
+						"h": 112
+					}
+				},
+				{
+					"filename": "pe_market_t4_collapse_f4",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 112,
+						"h": 112
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 112,
+						"h": 112
+					},
+					"frame": {
+						"x": 121,
+						"y": 121,
+						"w": 112,
+						"h": 112
+					}
+				},
+				{
+					"filename": "pe_market_t4_collapse_f5",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 112,
+						"h": 112
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 112,
+						"h": 112
+					},
+					"frame": {
+						"x": 239,
+						"y": 3,
+						"w": 112,
+						"h": 112
+					}
+				},
+				{
+					"filename": "pe_market_t4_collapse_f6",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 112,
+						"h": 112
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 112,
+						"h": 112
+					},
+					"frame": {
+						"x": 239,
+						"y": 121,
+						"w": 112,
+						"h": 112
+					}
+				},
+				{
+					"filename": "pe_market_t4_collapse_f7",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 112,
+						"h": 112
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 112,
+						"h": 112
+					},
+					"frame": {
+						"x": 3,
+						"y": 239,
+						"w": 112,
+						"h": 112
+					}
+				},
+				{
+					"filename": "pe_market_t4_collapse_f8",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 112,
+						"h": 112
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 112,
+						"h": 112
+					},
+					"frame": {
+						"x": 121,
+						"y": 239,
+						"w": 112,
+						"h": 112
+					}
+				},
+				{
+					"filename": "pe_market_t4_collapse_f9",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 112,
+						"h": 112
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 112,
+						"h": 112
+					},
+					"frame": {
+						"x": 239,
+						"y": 239,
+						"w": 112,
+						"h": 112
+					}
+				},
+				{
+					"filename": "pe_market_t4_construction_f1",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 112,
+						"h": 112
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 112,
+						"h": 112
+					},
+					"frame": {
+						"x": 357,
+						"y": 3,
+						"w": 112,
+						"h": 112
+					}
+				},
+				{
+					"filename": "pe_market_t4_construction_f2",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 112,
+						"h": 112
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 112,
+						"h": 112
+					},
+					"frame": {
+						"x": 357,
+						"y": 121,
+						"w": 112,
+						"h": 112
+					}
+				},
+				{
+					"filename": "pe_market_t4_construction_f3",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 112,
+						"h": 112
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 112,
+						"h": 112
+					},
+					"frame": {
+						"x": 357,
+						"y": 239,
+						"w": 112,
+						"h": 112
+					}
+				},
+				{
+					"filename": "pe_market_t4_construction_f4",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 112,
+						"h": 112
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 112,
+						"h": 112
+					},
+					"frame": {
+						"x": 3,
+						"y": 357,
+						"w": 112,
+						"h": 112
+					}
+				},
+				{
+					"filename": "pe_market_t4_construction_f5",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 112,
+						"h": 112
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 112,
+						"h": 112
+					},
+					"frame": {
+						"x": 121,
+						"y": 357,
+						"w": 112,
+						"h": 112
+					}
+				},
+				{
+					"filename": "pe_market_t4_construction_f6",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 112,
+						"h": 112
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 112,
+						"h": 112
+					},
+					"frame": {
+						"x": 239,
+						"y": 357,
+						"w": 112,
+						"h": 112
+					}
+				},
+				{
+					"filename": "pe_market_t4_construction_f7",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 112,
+						"h": 112
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 112,
+						"h": 112
+					},
+					"frame": {
+						"x": 357,
+						"y": 357,
+						"w": 112,
+						"h": 112
+					}
+				},
+				{
+					"filename": "pe_market_t4_construction_f8",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 112,
+						"h": 112
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 112,
+						"h": 112
+					},
+					"frame": {
+						"x": 475,
+						"y": 3,
+						"w": 112,
+						"h": 112
+					}
+				},
+				{
+					"filename": "pe_market_t4_construction_f9",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 112,
+						"h": 112
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 112,
+						"h": 112
+					},
+					"frame": {
+						"x": 475,
+						"y": 121,
+						"w": 112,
+						"h": 112
+					}
+				},
+				{
+					"filename": "pe_market_t4_damaged_f1",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 112,
+						"h": 112
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 112,
+						"h": 112
+					},
+					"frame": {
+						"x": 475,
+						"y": 239,
+						"w": 112,
+						"h": 112
+					}
+				},
+				{
+					"filename": "pe_market_t4_destroyed_f1",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 112,
+						"h": 112
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 112,
+						"h": 112
+					},
+					"frame": {
+						"x": 475,
+						"y": 357,
+						"w": 112,
+						"h": 112
+					}
+				},
+				{
+					"filename": "pe_market_t4_idle_f1",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 112,
+						"h": 112
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 112,
+						"h": 112
+					},
+					"frame": {
+						"x": 3,
+						"y": 475,
+						"w": 112,
+						"h": 112
+					}
+				},
+				{
+					"filename": "pe_market_t4_working_f1",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 112,
+						"h": 112
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 112,
+						"h": 112
+					},
+					"frame": {
+						"x": 121,
+						"y": 475,
+						"w": 112,
+						"h": 112
+					}
+				},
+				{
+					"filename": "pe_market_t4_working_f2",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 112,
+						"h": 112
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 112,
+						"h": 112
+					},
+					"frame": {
+						"x": 239,
+						"y": 475,
+						"w": 112,
+						"h": 112
+					}
+				},
+				{
+					"filename": "pe_market_t4_working_f3",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 112,
+						"h": 112
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 112,
+						"h": 112
+					},
+					"frame": {
+						"x": 357,
+						"y": 475,
+						"w": 112,
+						"h": 112
+					}
+				},
+				{
+					"filename": "pe_market_t4_working_f4",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 112,
+						"h": 112
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 112,
+						"h": 112
+					},
+					"frame": {
+						"x": 475,
+						"y": 475,
+						"w": 112,
+						"h": 112
+					}
+				},
+				{
+					"filename": "pe_market_t4_working_f5",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 112,
+						"h": 112
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 112,
+						"h": 112
+					},
+					"frame": {
+						"x": 593,
+						"y": 3,
+						"w": 112,
+						"h": 112
+					}
+				},
+				{
+					"filename": "pe_market_t4_working_f6",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 112,
+						"h": 112
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 112,
+						"h": 112
+					},
+					"frame": {
+						"x": 593,
+						"y": 121,
+						"w": 112,
+						"h": 112
+					}
+				},
+				{
+					"filename": "pe_market_t4_working_f7",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 112,
+						"h": 112
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 112,
+						"h": 112
+					},
+					"frame": {
+						"x": 593,
+						"y": 239,
+						"w": 112,
+						"h": 112
+					}
+				},
+				{
+					"filename": "pe_market_t4_working_f8",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 112,
+						"h": 112
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 112,
+						"h": 112
+					},
+					"frame": {
+						"x": 593,
+						"y": 357,
+						"w": 112,
+						"h": 112
+					}
+				},
+				{
+					"filename": "pe_market_t4_ready_fx_f1",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 64,
+						"h": 64
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 64,
+						"h": 64
+					},
+					"frame": {
+						"x": 593,
+						"y": 475,
+						"w": 64,
+						"h": 64
+					}
+				},
+				{
+					"filename": "pe_market_t4_ready_fx_f2",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 64,
+						"h": 64
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 64,
+						"h": 64
+					},
+					"frame": {
+						"x": 3,
+						"y": 593,
+						"w": 64,
+						"h": 64
+					}
+				},
+				{
+					"filename": "pe_market_t4_ready_fx_f3",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 64,
+						"h": 64
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 64,
+						"h": 64
+					},
+					"frame": {
+						"x": 73,
+						"y": 593,
+						"w": 64,
+						"h": 64
+					}
+				},
+				{
+					"filename": "pe_market_t4_ready_fx_f4",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 64,
+						"h": 64
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 64,
+						"h": 64
+					},
+					"frame": {
+						"x": 143,
+						"y": 593,
+						"w": 64,
+						"h": 64
+					}
+				},
+				{
+					"filename": "pe_market_t4_ready_fx_f5",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 64,
+						"h": 64
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 64,
+						"h": 64
+					},
+					"frame": {
+						"x": 213,
+						"y": 593,
+						"w": 64,
+						"h": 64
+					}
+				},
+				{
+					"filename": "pe_market_t4_ready_fx_f6",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 64,
+						"h": 64
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 64,
+						"h": 64
+					},
+					"frame": {
+						"x": 283,
+						"y": 593,
+						"w": 64,
+						"h": 64
+					}
+				},
+				{
+					"filename": "pe_market_t4_ready_fx_f7",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 64,
+						"h": 64
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 64,
+						"h": 64
+					},
+					"frame": {
+						"x": 353,
+						"y": 593,
+						"w": 64,
+						"h": 64
+					}
+				},
+				{
+					"filename": "pe_market_t4_ready_fx_f8",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 64,
+						"h": 64
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 64,
+						"h": 64
+					},
+					"frame": {
+						"x": 423,
+						"y": 593,
+						"w": 64,
+						"h": 64
+					}
+				}
+			]
+		}
+	],
+	"meta": {
+		"app": "shardkeep/scripts/rasterize",
+		"version": "1"
+	}
+}

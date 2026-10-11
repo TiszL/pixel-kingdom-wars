@@ -1,0 +1,1986 @@
+{
+  "schemaVersion": 1,
+  "sourceCommit": "427381a2adf934bbcc902baefc207a655b185eb6",
+  "simVersion": 18,
+  "snapshot": {
+    "keepLevel": 1,
+    "buildings": [
+      {
+        "id": "keep",
+        "type": "keep",
+        "level": 1,
+        "tx": 14,
+        "ty": 14
+      },
+      {
+        "id": "spike",
+        "type": "spiketrap",
+        "level": 6,
+        "tx": 3,
+        "ty": 8
+      },
+      {
+        "id": "powder",
+        "type": "powdermine",
+        "level": 11,
+        "tx": 5,
+        "ty": 8
+      },
+      {
+        "id": "pitfall",
+        "type": "pitfall",
+        "level": 16,
+        "tx": 7,
+        "ty": 8
+      },
+      {
+        "id": "airmine",
+        "type": "airmine",
+        "level": 20,
+        "tx": 9,
+        "ty": 10
+      }
+    ],
+    "surplusShards": 1000,
+    "claimMin": 2,
+    "claimMax": 16
+  },
+  "orders": {
+    "deploys": [
+      {
+        "troop": "giant",
+        "tx": 0,
+        "ty": 8,
+        "tMs": 0
+      },
+      {
+        "troop": "highlander",
+        "tx": 0,
+        "ty": 8,
+        "tMs": 0
+      },
+      {
+        "troop": "dragon",
+        "tx": 9,
+        "ty": 0,
+        "tMs": 0
+      }
+    ]
+  },
+  "seed": 141840,
+  "options": {},
+  "stars": 3,
+  "destructionPct": 100,
+  "keepDestroyed": true,
+  "vaultDestroyed": false,
+  "mineDestroyed": false,
+  "victory": true,
+  "buildings": [
+    {
+      "id": "keep",
+      "type": "keep",
+      "hp": 0,
+      "maxHp": 1200,
+      "destroyed": true
+    },
+    {
+      "id": "spike",
+      "type": "spiketrap",
+      "hp": 0,
+      "maxHp": 0,
+      "destroyed": false
+    },
+    {
+      "id": "powder",
+      "type": "powdermine",
+      "hp": 0,
+      "maxHp": 0,
+      "destroyed": false
+    },
+    {
+      "id": "pitfall",
+      "type": "pitfall",
+      "hp": 0,
+      "maxHp": 0,
+      "destroyed": false
+    },
+    {
+      "id": "airmine",
+      "type": "airmine",
+      "hp": 0,
+      "maxHp": 0,
+      "destroyed": false
+    }
+  ],
+  "ticks": 211,
+  "events": [
+    {
+      "t": 0,
+      "e": "deploy",
+      "id": 0,
+      "troop": "giant",
+      "x": 128,
+      "y": 2176
+    },
+    {
+      "t": 0,
+      "e": "deploy",
+      "id": 1,
+      "troop": "highlander",
+      "x": 128,
+      "y": 2176
+    },
+    {
+      "t": 0,
+      "e": "deploy",
+      "id": 2,
+      "troop": "dragon",
+      "x": 2432,
+      "y": 128
+    },
+    {
+      "t": 0,
+      "e": "pos",
+      "id": 0,
+      "x": 147,
+      "y": 2183
+    },
+    {
+      "t": 0,
+      "e": "pos",
+      "id": 1,
+      "x": 155,
+      "y": 2187
+    },
+    {
+      "t": 0,
+      "e": "pos",
+      "id": 2,
+      "x": 2439,
+      "y": 151
+    },
+    {
+      "t": 5,
+      "e": "pos",
+      "id": 0,
+      "x": 242,
+      "y": 2218
+    },
+    {
+      "t": 5,
+      "e": "pos",
+      "id": 1,
+      "x": 290,
+      "y": 2242
+    },
+    {
+      "t": 5,
+      "e": "pos",
+      "id": 2,
+      "x": 2474,
+      "y": 266
+    },
+    {
+      "t": 10,
+      "e": "pos",
+      "id": 0,
+      "x": 337,
+      "y": 2253
+    },
+    {
+      "t": 10,
+      "e": "pos",
+      "id": 1,
+      "x": 425,
+      "y": 2297
+    },
+    {
+      "t": 10,
+      "e": "pos",
+      "id": 2,
+      "x": 2509,
+      "y": 381
+    },
+    {
+      "t": 15,
+      "e": "pos",
+      "id": 0,
+      "x": 432,
+      "y": 2288
+    },
+    {
+      "t": 15,
+      "e": "pos",
+      "id": 1,
+      "x": 560,
+      "y": 2352
+    },
+    {
+      "t": 15,
+      "e": "pos",
+      "id": 2,
+      "x": 2544,
+      "y": 496
+    },
+    {
+      "t": 20,
+      "e": "pos",
+      "id": 0,
+      "x": 527,
+      "y": 2324
+    },
+    {
+      "t": 20,
+      "e": "pos",
+      "id": 1,
+      "x": 695,
+      "y": 2407
+    },
+    {
+      "t": 20,
+      "e": "pos",
+      "id": 2,
+      "x": 2580,
+      "y": 611
+    },
+    {
+      "t": 25,
+      "e": "pos",
+      "id": 0,
+      "x": 622,
+      "y": 2363
+    },
+    {
+      "t": 25,
+      "e": "pos",
+      "id": 1,
+      "x": 830,
+      "y": 2462
+    },
+    {
+      "t": 25,
+      "e": "pos",
+      "id": 2,
+      "x": 2619,
+      "y": 726
+    },
+    {
+      "t": 30,
+      "e": "pos",
+      "id": 0,
+      "x": 717,
+      "y": 2403
+    },
+    {
+      "t": 30,
+      "e": "pos",
+      "id": 1,
+      "x": 965,
+      "y": 2517
+    },
+    {
+      "t": 30,
+      "e": "pos",
+      "id": 2,
+      "x": 2657,
+      "y": 841
+    },
+    {
+      "t": 35,
+      "e": "pos",
+      "id": 0,
+      "x": 812,
+      "y": 2442
+    },
+    {
+      "t": 35,
+      "e": "pos",
+      "id": 1,
+      "x": 1100,
+      "y": 2572
+    },
+    {
+      "t": 35,
+      "e": "pos",
+      "id": 2,
+      "x": 2696,
+      "y": 956
+    },
+    {
+      "t": 40,
+      "e": "pos",
+      "id": 0,
+      "x": 907,
+      "y": 2481
+    },
+    {
+      "t": 40,
+      "e": "pos",
+      "id": 1,
+      "x": 1235,
+      "y": 2627
+    },
+    {
+      "t": 40,
+      "e": "pos",
+      "id": 2,
+      "x": 2735,
+      "y": 1071
+    },
+    {
+      "t": 45,
+      "e": "pos",
+      "id": 0,
+      "x": 1002,
+      "y": 2520
+    },
+    {
+      "t": 45,
+      "e": "pos",
+      "id": 1,
+      "x": 1370,
+      "y": 2682
+    },
+    {
+      "t": 45,
+      "e": "pos",
+      "id": 2,
+      "x": 2774,
+      "y": 1186
+    },
+    {
+      "t": 50,
+      "e": "pos",
+      "id": 0,
+      "x": 1097,
+      "y": 2559
+    },
+    {
+      "t": 50,
+      "e": "pos",
+      "id": 1,
+      "x": 1505,
+      "y": 2737
+    },
+    {
+      "t": 50,
+      "e": "pos",
+      "id": 2,
+      "x": 2813,
+      "y": 1301
+    },
+    {
+      "t": 55,
+      "e": "pos",
+      "id": 0,
+      "x": 1192,
+      "y": 2598
+    },
+    {
+      "t": 55,
+      "e": "pos",
+      "id": 1,
+      "x": 1640,
+      "y": 2792
+    },
+    {
+      "t": 55,
+      "e": "pos",
+      "id": 2,
+      "x": 2852,
+      "y": 1416
+    },
+    {
+      "t": 60,
+      "e": "pos",
+      "id": 0,
+      "x": 1287,
+      "y": 2638
+    },
+    {
+      "t": 60,
+      "e": "pos",
+      "id": 1,
+      "x": 1775,
+      "y": 2847
+    },
+    {
+      "t": 60,
+      "e": "pos",
+      "id": 2,
+      "x": 2890,
+      "y": 1531
+    },
+    {
+      "t": 65,
+      "e": "pos",
+      "id": 0,
+      "x": 1382,
+      "y": 2676
+    },
+    {
+      "t": 65,
+      "e": "pos",
+      "id": 1,
+      "x": 1910,
+      "y": 2902
+    },
+    {
+      "t": 65,
+      "e": "pos",
+      "id": 2,
+      "x": 2929,
+      "y": 1646
+    },
+    {
+      "t": 70,
+      "e": "pos",
+      "id": 0,
+      "x": 1477,
+      "y": 2716
+    },
+    {
+      "t": 70,
+      "e": "pos",
+      "id": 1,
+      "x": 2045,
+      "y": 2957
+    },
+    {
+      "t": 70,
+      "e": "pos",
+      "id": 2,
+      "x": 2968,
+      "y": 1761
+    },
+    {
+      "t": 75,
+      "e": "pos",
+      "id": 0,
+      "x": 1572,
+      "y": 2755
+    },
+    {
+      "t": 75,
+      "e": "pos",
+      "id": 1,
+      "x": 2180,
+      "y": 3012
+    },
+    {
+      "t": 75,
+      "e": "pos",
+      "id": 2,
+      "x": 3007,
+      "y": 1876
+    },
+    {
+      "t": 80,
+      "e": "pos",
+      "id": 0,
+      "x": 1667,
+      "y": 2794
+    },
+    {
+      "t": 80,
+      "e": "pos",
+      "id": 1,
+      "x": 2315,
+      "y": 3067
+    },
+    {
+      "t": 80,
+      "e": "pos",
+      "id": 2,
+      "x": 3046,
+      "y": 1991
+    },
+    {
+      "t": 85,
+      "e": "pos",
+      "id": 0,
+      "x": 1762,
+      "y": 2833
+    },
+    {
+      "t": 85,
+      "e": "pos",
+      "id": 1,
+      "x": 2450,
+      "y": 3122
+    },
+    {
+      "t": 85,
+      "e": "pos",
+      "id": 2,
+      "x": 3085,
+      "y": 2106
+    },
+    {
+      "t": 90,
+      "e": "pos",
+      "id": 0,
+      "x": 1857,
+      "y": 2872
+    },
+    {
+      "t": 90,
+      "e": "pos",
+      "id": 1,
+      "x": 2585,
+      "y": 3177
+    },
+    {
+      "t": 90,
+      "e": "pos",
+      "id": 2,
+      "x": 3124,
+      "y": 2221
+    },
+    {
+      "t": 95,
+      "e": "pos",
+      "id": 0,
+      "x": 1952,
+      "y": 2912
+    },
+    {
+      "t": 95,
+      "e": "pos",
+      "id": 1,
+      "x": 2720,
+      "y": 3232
+    },
+    {
+      "t": 95,
+      "e": "pos",
+      "id": 2,
+      "x": 3162,
+      "y": 2336
+    },
+    {
+      "t": 100,
+      "e": "pos",
+      "id": 0,
+      "x": 2047,
+      "y": 2951
+    },
+    {
+      "t": 100,
+      "e": "pos",
+      "id": 1,
+      "x": 2855,
+      "y": 3287
+    },
+    {
+      "t": 100,
+      "e": "pos",
+      "id": 2,
+      "x": 3201,
+      "y": 2451
+    },
+    {
+      "t": 105,
+      "e": "pos",
+      "id": 0,
+      "x": 2142,
+      "y": 2990
+    },
+    {
+      "t": 105,
+      "e": "pos",
+      "id": 1,
+      "x": 2990,
+      "y": 3342
+    },
+    {
+      "t": 105,
+      "e": "pos",
+      "id": 2,
+      "x": 3240,
+      "y": 2566
+    },
+    {
+      "t": 109,
+      "e": "attackRun",
+      "id": 2,
+      "side": "attacker",
+      "troop": "dragon",
+      "targetKind": "building",
+      "target": "keep",
+      "ix": 3584,
+      "iy": 3584,
+      "mode": "stream",
+      "technique": "breath",
+      "cycleMs": 667,
+      "releaseOffsetMs": 250,
+      "cycleTicks": 7,
+      "releaseOffsetTicks": 3,
+      "impactOffsetsTicks": [
+        3,
+        4,
+        5
+      ],
+      "cadenceTicks": 7,
+      "count": 1
+    },
+    {
+      "t": 110,
+      "e": "pos",
+      "id": 0,
+      "x": 2237,
+      "y": 3029
+    },
+    {
+      "t": 110,
+      "e": "pos",
+      "id": 1,
+      "x": 3125,
+      "y": 3397
+    },
+    {
+      "t": 112,
+      "e": "hit",
+      "target": "keep",
+      "dmg": 16
+    },
+    {
+      "t": 113,
+      "e": "hit",
+      "target": "keep",
+      "dmg": 16
+    },
+    {
+      "t": 114,
+      "e": "hit",
+      "target": "keep",
+      "dmg": 16
+    },
+    {
+      "t": 115,
+      "e": "pos",
+      "id": 0,
+      "x": 2332,
+      "y": 3068
+    },
+    {
+      "t": 115,
+      "e": "pos",
+      "id": 1,
+      "x": 3260,
+      "y": 3452
+    },
+    {
+      "t": 116,
+      "e": "attackRun",
+      "id": 2,
+      "side": "attacker",
+      "troop": "dragon",
+      "targetKind": "building",
+      "target": "keep",
+      "ix": 3584,
+      "iy": 3584,
+      "mode": "stream",
+      "technique": "breath",
+      "cycleMs": 667,
+      "releaseOffsetMs": 250,
+      "cycleTicks": 7,
+      "releaseOffsetTicks": 3,
+      "impactOffsetsTicks": [
+        3,
+        4,
+        5
+      ],
+      "cadenceTicks": 7,
+      "count": 1
+    },
+    {
+      "t": 119,
+      "e": "hit",
+      "target": "keep",
+      "dmg": 16
+    },
+    {
+      "t": 120,
+      "e": "hit",
+      "target": "keep",
+      "dmg": 16
+    },
+    {
+      "t": 120,
+      "e": "pos",
+      "id": 0,
+      "x": 2427,
+      "y": 3107
+    },
+    {
+      "t": 120,
+      "e": "pos",
+      "id": 1,
+      "x": 3395,
+      "y": 3507
+    },
+    {
+      "t": 121,
+      "e": "hit",
+      "target": "keep",
+      "dmg": 16
+    },
+    {
+      "t": 123,
+      "e": "attackRun",
+      "id": 1,
+      "side": "attacker",
+      "troop": "highlander",
+      "targetKind": "building",
+      "target": "keep",
+      "ix": 3584,
+      "iy": 3584,
+      "mode": "melee",
+      "technique": "strike",
+      "cycleMs": 500,
+      "releaseOffsetMs": 167,
+      "cycleTicks": 5,
+      "releaseOffsetTicks": 2,
+      "impactOffsetsTicks": [
+        2
+      ],
+      "cadenceTicks": 5,
+      "count": 1
+    },
+    {
+      "t": 123,
+      "e": "attackRun",
+      "id": 2,
+      "side": "attacker",
+      "troop": "dragon",
+      "targetKind": "building",
+      "target": "keep",
+      "ix": 3584,
+      "iy": 3584,
+      "mode": "stream",
+      "technique": "breath",
+      "cycleMs": 667,
+      "releaseOffsetMs": 250,
+      "cycleTicks": 7,
+      "releaseOffsetTicks": 3,
+      "impactOffsetsTicks": [
+        3,
+        4,
+        5
+      ],
+      "cadenceTicks": 7,
+      "count": 1
+    },
+    {
+      "t": 125,
+      "e": "hit",
+      "target": "keep",
+      "dmg": 9
+    },
+    {
+      "t": 125,
+      "e": "pos",
+      "id": 0,
+      "x": 2522,
+      "y": 3146
+    },
+    {
+      "t": 126,
+      "e": "hit",
+      "target": "keep",
+      "dmg": 16
+    },
+    {
+      "t": 127,
+      "e": "hit",
+      "target": "keep",
+      "dmg": 16
+    },
+    {
+      "t": 128,
+      "e": "hit",
+      "target": "keep",
+      "dmg": 16
+    },
+    {
+      "t": 128,
+      "e": "attackRun",
+      "id": 1,
+      "side": "attacker",
+      "troop": "highlander",
+      "targetKind": "building",
+      "target": "keep",
+      "ix": 3584,
+      "iy": 3584,
+      "mode": "melee",
+      "technique": "strike",
+      "cycleMs": 500,
+      "releaseOffsetMs": 167,
+      "cycleTicks": 5,
+      "releaseOffsetTicks": 2,
+      "impactOffsetsTicks": [
+        2
+      ],
+      "cadenceTicks": 5,
+      "count": 1
+    },
+    {
+      "t": 130,
+      "e": "hit",
+      "target": "keep",
+      "dmg": 9
+    },
+    {
+      "t": 130,
+      "e": "pos",
+      "id": 0,
+      "x": 2617,
+      "y": 3185
+    },
+    {
+      "t": 130,
+      "e": "attackRun",
+      "id": 2,
+      "side": "attacker",
+      "troop": "dragon",
+      "targetKind": "building",
+      "target": "keep",
+      "ix": 3584,
+      "iy": 3584,
+      "mode": "stream",
+      "technique": "breath",
+      "cycleMs": 667,
+      "releaseOffsetMs": 250,
+      "cycleTicks": 7,
+      "releaseOffsetTicks": 3,
+      "impactOffsetsTicks": [
+        3,
+        4,
+        5
+      ],
+      "cadenceTicks": 7,
+      "count": 1
+    },
+    {
+      "t": 133,
+      "e": "hit",
+      "target": "keep",
+      "dmg": 16
+    },
+    {
+      "t": 133,
+      "e": "attackRun",
+      "id": 1,
+      "side": "attacker",
+      "troop": "highlander",
+      "targetKind": "building",
+      "target": "keep",
+      "ix": 3584,
+      "iy": 3584,
+      "mode": "melee",
+      "technique": "strike",
+      "cycleMs": 500,
+      "releaseOffsetMs": 167,
+      "cycleTicks": 5,
+      "releaseOffsetTicks": 2,
+      "impactOffsetsTicks": [
+        2
+      ],
+      "cadenceTicks": 5,
+      "count": 1
+    },
+    {
+      "t": 134,
+      "e": "hit",
+      "target": "keep",
+      "dmg": 16
+    },
+    {
+      "t": 135,
+      "e": "hit",
+      "target": "keep",
+      "dmg": 16
+    },
+    {
+      "t": 135,
+      "e": "hit",
+      "target": "keep",
+      "dmg": 9
+    },
+    {
+      "t": 135,
+      "e": "pos",
+      "id": 0,
+      "x": 2712,
+      "y": 3225
+    },
+    {
+      "t": 137,
+      "e": "attackRun",
+      "id": 2,
+      "side": "attacker",
+      "troop": "dragon",
+      "targetKind": "building",
+      "target": "keep",
+      "ix": 3584,
+      "iy": 3584,
+      "mode": "stream",
+      "technique": "breath",
+      "cycleMs": 667,
+      "releaseOffsetMs": 250,
+      "cycleTicks": 7,
+      "releaseOffsetTicks": 3,
+      "impactOffsetsTicks": [
+        3,
+        4,
+        5
+      ],
+      "cadenceTicks": 7,
+      "count": 1
+    },
+    {
+      "t": 138,
+      "e": "attackRun",
+      "id": 1,
+      "side": "attacker",
+      "troop": "highlander",
+      "targetKind": "building",
+      "target": "keep",
+      "ix": 3584,
+      "iy": 3584,
+      "mode": "melee",
+      "technique": "strike",
+      "cycleMs": 500,
+      "releaseOffsetMs": 167,
+      "cycleTicks": 5,
+      "releaseOffsetTicks": 2,
+      "impactOffsetsTicks": [
+        2
+      ],
+      "cadenceTicks": 5,
+      "count": 1
+    },
+    {
+      "t": 140,
+      "e": "hit",
+      "target": "keep",
+      "dmg": 16
+    },
+    {
+      "t": 140,
+      "e": "hit",
+      "target": "keep",
+      "dmg": 9
+    },
+    {
+      "t": 140,
+      "e": "pos",
+      "id": 0,
+      "x": 2807,
+      "y": 3264
+    },
+    {
+      "t": 141,
+      "e": "hit",
+      "target": "keep",
+      "dmg": 16
+    },
+    {
+      "t": 142,
+      "e": "hit",
+      "target": "keep",
+      "dmg": 16
+    },
+    {
+      "t": 143,
+      "e": "attackRun",
+      "id": 1,
+      "side": "attacker",
+      "troop": "highlander",
+      "targetKind": "building",
+      "target": "keep",
+      "ix": 3584,
+      "iy": 3584,
+      "mode": "melee",
+      "technique": "strike",
+      "cycleMs": 500,
+      "releaseOffsetMs": 167,
+      "cycleTicks": 5,
+      "releaseOffsetTicks": 2,
+      "impactOffsetsTicks": [
+        2
+      ],
+      "cadenceTicks": 5,
+      "count": 1
+    },
+    {
+      "t": 144,
+      "e": "attackRun",
+      "id": 2,
+      "side": "attacker",
+      "troop": "dragon",
+      "targetKind": "building",
+      "target": "keep",
+      "ix": 3584,
+      "iy": 3584,
+      "mode": "stream",
+      "technique": "breath",
+      "cycleMs": 667,
+      "releaseOffsetMs": 250,
+      "cycleTicks": 7,
+      "releaseOffsetTicks": 3,
+      "impactOffsetsTicks": [
+        3,
+        4,
+        5
+      ],
+      "cadenceTicks": 7,
+      "count": 1
+    },
+    {
+      "t": 145,
+      "e": "hit",
+      "target": "keep",
+      "dmg": 9
+    },
+    {
+      "t": 145,
+      "e": "pos",
+      "id": 0,
+      "x": 2902,
+      "y": 3303
+    },
+    {
+      "t": 147,
+      "e": "hit",
+      "target": "keep",
+      "dmg": 16
+    },
+    {
+      "t": 148,
+      "e": "hit",
+      "target": "keep",
+      "dmg": 16
+    },
+    {
+      "t": 148,
+      "e": "attackRun",
+      "id": 1,
+      "side": "attacker",
+      "troop": "highlander",
+      "targetKind": "building",
+      "target": "keep",
+      "ix": 3584,
+      "iy": 3584,
+      "mode": "melee",
+      "technique": "strike",
+      "cycleMs": 500,
+      "releaseOffsetMs": 167,
+      "cycleTicks": 5,
+      "releaseOffsetTicks": 2,
+      "impactOffsetsTicks": [
+        2
+      ],
+      "cadenceTicks": 5,
+      "count": 1
+    },
+    {
+      "t": 149,
+      "e": "hit",
+      "target": "keep",
+      "dmg": 16
+    },
+    {
+      "t": 150,
+      "e": "hit",
+      "target": "keep",
+      "dmg": 9
+    },
+    {
+      "t": 150,
+      "e": "pos",
+      "id": 0,
+      "x": 2997,
+      "y": 3342
+    },
+    {
+      "t": 151,
+      "e": "attackRun",
+      "id": 2,
+      "side": "attacker",
+      "troop": "dragon",
+      "targetKind": "building",
+      "target": "keep",
+      "ix": 3584,
+      "iy": 3584,
+      "mode": "stream",
+      "technique": "breath",
+      "cycleMs": 667,
+      "releaseOffsetMs": 250,
+      "cycleTicks": 7,
+      "releaseOffsetTicks": 3,
+      "impactOffsetsTicks": [
+        3,
+        4,
+        5
+      ],
+      "cadenceTicks": 7,
+      "count": 1
+    },
+    {
+      "t": 153,
+      "e": "attackRun",
+      "id": 1,
+      "side": "attacker",
+      "troop": "highlander",
+      "targetKind": "building",
+      "target": "keep",
+      "ix": 3584,
+      "iy": 3584,
+      "mode": "melee",
+      "technique": "strike",
+      "cycleMs": 500,
+      "releaseOffsetMs": 167,
+      "cycleTicks": 5,
+      "releaseOffsetTicks": 2,
+      "impactOffsetsTicks": [
+        2
+      ],
+      "cadenceTicks": 5,
+      "count": 1
+    },
+    {
+      "t": 154,
+      "e": "hit",
+      "target": "keep",
+      "dmg": 16
+    },
+    {
+      "t": 155,
+      "e": "hit",
+      "target": "keep",
+      "dmg": 16
+    },
+    {
+      "t": 155,
+      "e": "hit",
+      "target": "keep",
+      "dmg": 9
+    },
+    {
+      "t": 155,
+      "e": "pos",
+      "id": 0,
+      "x": 3092,
+      "y": 3381
+    },
+    {
+      "t": 156,
+      "e": "hit",
+      "target": "keep",
+      "dmg": 16
+    },
+    {
+      "t": 158,
+      "e": "attackRun",
+      "id": 1,
+      "side": "attacker",
+      "troop": "highlander",
+      "targetKind": "building",
+      "target": "keep",
+      "ix": 3584,
+      "iy": 3584,
+      "mode": "melee",
+      "technique": "strike",
+      "cycleMs": 500,
+      "releaseOffsetMs": 167,
+      "cycleTicks": 5,
+      "releaseOffsetTicks": 2,
+      "impactOffsetsTicks": [
+        2
+      ],
+      "cadenceTicks": 5,
+      "count": 1
+    },
+    {
+      "t": 158,
+      "e": "attackRun",
+      "id": 2,
+      "side": "attacker",
+      "troop": "dragon",
+      "targetKind": "building",
+      "target": "keep",
+      "ix": 3584,
+      "iy": 3584,
+      "mode": "stream",
+      "technique": "breath",
+      "cycleMs": 667,
+      "releaseOffsetMs": 250,
+      "cycleTicks": 7,
+      "releaseOffsetTicks": 3,
+      "impactOffsetsTicks": [
+        3,
+        4,
+        5
+      ],
+      "cadenceTicks": 7,
+      "count": 1
+    },
+    {
+      "t": 160,
+      "e": "hit",
+      "target": "keep",
+      "dmg": 9
+    },
+    {
+      "t": 160,
+      "e": "pos",
+      "id": 0,
+      "x": 3187,
+      "y": 3420
+    },
+    {
+      "t": 161,
+      "e": "hit",
+      "target": "keep",
+      "dmg": 16
+    },
+    {
+      "t": 162,
+      "e": "hit",
+      "target": "keep",
+      "dmg": 16
+    },
+    {
+      "t": 163,
+      "e": "hit",
+      "target": "keep",
+      "dmg": 16
+    },
+    {
+      "t": 163,
+      "e": "attackRun",
+      "id": 1,
+      "side": "attacker",
+      "troop": "highlander",
+      "targetKind": "building",
+      "target": "keep",
+      "ix": 3584,
+      "iy": 3584,
+      "mode": "melee",
+      "technique": "strike",
+      "cycleMs": 500,
+      "releaseOffsetMs": 167,
+      "cycleTicks": 5,
+      "releaseOffsetTicks": 2,
+      "impactOffsetsTicks": [
+        2
+      ],
+      "cadenceTicks": 5,
+      "count": 1
+    },
+    {
+      "t": 165,
+      "e": "hit",
+      "target": "keep",
+      "dmg": 9
+    },
+    {
+      "t": 165,
+      "e": "pos",
+      "id": 0,
+      "x": 3282,
+      "y": 3459
+    },
+    {
+      "t": 165,
+      "e": "attackRun",
+      "id": 2,
+      "side": "attacker",
+      "troop": "dragon",
+      "targetKind": "building",
+      "target": "keep",
+      "ix": 3584,
+      "iy": 3584,
+      "mode": "stream",
+      "technique": "breath",
+      "cycleMs": 667,
+      "releaseOffsetMs": 250,
+      "cycleTicks": 7,
+      "releaseOffsetTicks": 3,
+      "impactOffsetsTicks": [
+        3,
+        4,
+        5
+      ],
+      "cadenceTicks": 7,
+      "count": 1
+    },
+    {
+      "t": 168,
+      "e": "hit",
+      "target": "keep",
+      "dmg": 16
+    },
+    {
+      "t": 168,
+      "e": "attackRun",
+      "id": 1,
+      "side": "attacker",
+      "troop": "highlander",
+      "targetKind": "building",
+      "target": "keep",
+      "ix": 3584,
+      "iy": 3584,
+      "mode": "melee",
+      "technique": "strike",
+      "cycleMs": 500,
+      "releaseOffsetMs": 167,
+      "cycleTicks": 5,
+      "releaseOffsetTicks": 2,
+      "impactOffsetsTicks": [
+        2
+      ],
+      "cadenceTicks": 5,
+      "count": 1
+    },
+    {
+      "t": 169,
+      "e": "hit",
+      "target": "keep",
+      "dmg": 16
+    },
+    {
+      "t": 170,
+      "e": "hit",
+      "target": "keep",
+      "dmg": 16
+    },
+    {
+      "t": 170,
+      "e": "hit",
+      "target": "keep",
+      "dmg": 9
+    },
+    {
+      "t": 170,
+      "e": "pos",
+      "id": 0,
+      "x": 3377,
+      "y": 3499
+    },
+    {
+      "t": 172,
+      "e": "attackRun",
+      "id": 2,
+      "side": "attacker",
+      "troop": "dragon",
+      "targetKind": "building",
+      "target": "keep",
+      "ix": 3584,
+      "iy": 3584,
+      "mode": "stream",
+      "technique": "breath",
+      "cycleMs": 667,
+      "releaseOffsetMs": 250,
+      "cycleTicks": 7,
+      "releaseOffsetTicks": 3,
+      "impactOffsetsTicks": [
+        3,
+        4,
+        5
+      ],
+      "cadenceTicks": 7,
+      "count": 1
+    },
+    {
+      "t": 173,
+      "e": "attackRun",
+      "id": 1,
+      "side": "attacker",
+      "troop": "highlander",
+      "targetKind": "building",
+      "target": "keep",
+      "ix": 3584,
+      "iy": 3584,
+      "mode": "melee",
+      "technique": "strike",
+      "cycleMs": 500,
+      "releaseOffsetMs": 167,
+      "cycleTicks": 5,
+      "releaseOffsetTicks": 2,
+      "impactOffsetsTicks": [
+        2
+      ],
+      "cadenceTicks": 5,
+      "count": 1
+    },
+    {
+      "t": 175,
+      "e": "hit",
+      "target": "keep",
+      "dmg": 16
+    },
+    {
+      "t": 175,
+      "e": "hit",
+      "target": "keep",
+      "dmg": 9
+    },
+    {
+      "t": 175,
+      "e": "attackRun",
+      "id": 0,
+      "side": "attacker",
+      "troop": "giant",
+      "targetKind": "building",
+      "target": "keep",
+      "ix": 3584,
+      "iy": 3584,
+      "mode": "melee",
+      "technique": "strike",
+      "cycleMs": 728,
+      "releaseOffsetMs": 364,
+      "cycleTicks": 8,
+      "releaseOffsetTicks": 4,
+      "impactOffsetsTicks": [
+        4
+      ],
+      "cadenceTicks": 8,
+      "count": 1
+    },
+    {
+      "t": 176,
+      "e": "hit",
+      "target": "keep",
+      "dmg": 16
+    },
+    {
+      "t": 177,
+      "e": "hit",
+      "target": "keep",
+      "dmg": 16
+    },
+    {
+      "t": 178,
+      "e": "attackRun",
+      "id": 1,
+      "side": "attacker",
+      "troop": "highlander",
+      "targetKind": "building",
+      "target": "keep",
+      "ix": 3584,
+      "iy": 3584,
+      "mode": "melee",
+      "technique": "strike",
+      "cycleMs": 500,
+      "releaseOffsetMs": 167,
+      "cycleTicks": 5,
+      "releaseOffsetTicks": 2,
+      "impactOffsetsTicks": [
+        2
+      ],
+      "cadenceTicks": 5,
+      "count": 1
+    },
+    {
+      "t": 179,
+      "e": "hit",
+      "target": "keep",
+      "dmg": 88
+    },
+    {
+      "t": 179,
+      "e": "attackRun",
+      "id": 2,
+      "side": "attacker",
+      "troop": "dragon",
+      "targetKind": "building",
+      "target": "keep",
+      "ix": 3584,
+      "iy": 3584,
+      "mode": "stream",
+      "technique": "breath",
+      "cycleMs": 667,
+      "releaseOffsetMs": 250,
+      "cycleTicks": 7,
+      "releaseOffsetTicks": 3,
+      "impactOffsetsTicks": [
+        3,
+        4,
+        5
+      ],
+      "cadenceTicks": 7,
+      "count": 1
+    },
+    {
+      "t": 180,
+      "e": "hit",
+      "target": "keep",
+      "dmg": 9
+    },
+    {
+      "t": 182,
+      "e": "hit",
+      "target": "keep",
+      "dmg": 16
+    },
+    {
+      "t": 183,
+      "e": "hit",
+      "target": "keep",
+      "dmg": 16
+    },
+    {
+      "t": 183,
+      "e": "attackRun",
+      "id": 0,
+      "side": "attacker",
+      "troop": "giant",
+      "targetKind": "building",
+      "target": "keep",
+      "ix": 3584,
+      "iy": 3584,
+      "mode": "melee",
+      "technique": "strike",
+      "cycleMs": 728,
+      "releaseOffsetMs": 364,
+      "cycleTicks": 8,
+      "releaseOffsetTicks": 4,
+      "impactOffsetsTicks": [
+        4
+      ],
+      "cadenceTicks": 8,
+      "count": 1
+    },
+    {
+      "t": 183,
+      "e": "attackRun",
+      "id": 1,
+      "side": "attacker",
+      "troop": "highlander",
+      "targetKind": "building",
+      "target": "keep",
+      "ix": 3584,
+      "iy": 3584,
+      "mode": "melee",
+      "technique": "strike",
+      "cycleMs": 500,
+      "releaseOffsetMs": 167,
+      "cycleTicks": 5,
+      "releaseOffsetTicks": 2,
+      "impactOffsetsTicks": [
+        2
+      ],
+      "cadenceTicks": 5,
+      "count": 1
+    },
+    {
+      "t": 184,
+      "e": "hit",
+      "target": "keep",
+      "dmg": 16
+    },
+    {
+      "t": 185,
+      "e": "hit",
+      "target": "keep",
+      "dmg": 9
+    },
+    {
+      "t": 186,
+      "e": "attackRun",
+      "id": 2,
+      "side": "attacker",
+      "troop": "dragon",
+      "targetKind": "building",
+      "target": "keep",
+      "ix": 3584,
+      "iy": 3584,
+      "mode": "stream",
+      "technique": "breath",
+      "cycleMs": 667,
+      "releaseOffsetMs": 250,
+      "cycleTicks": 7,
+      "releaseOffsetTicks": 3,
+      "impactOffsetsTicks": [
+        3,
+        4,
+        5
+      ],
+      "cadenceTicks": 7,
+      "count": 1
+    },
+    {
+      "t": 187,
+      "e": "hit",
+      "target": "keep",
+      "dmg": 88
+    },
+    {
+      "t": 188,
+      "e": "attackRun",
+      "id": 1,
+      "side": "attacker",
+      "troop": "highlander",
+      "targetKind": "building",
+      "target": "keep",
+      "ix": 3584,
+      "iy": 3584,
+      "mode": "melee",
+      "technique": "strike",
+      "cycleMs": 500,
+      "releaseOffsetMs": 167,
+      "cycleTicks": 5,
+      "releaseOffsetTicks": 2,
+      "impactOffsetsTicks": [
+        2
+      ],
+      "cadenceTicks": 5,
+      "count": 1
+    },
+    {
+      "t": 189,
+      "e": "hit",
+      "target": "keep",
+      "dmg": 16
+    },
+    {
+      "t": 190,
+      "e": "hit",
+      "target": "keep",
+      "dmg": 16
+    },
+    {
+      "t": 190,
+      "e": "hit",
+      "target": "keep",
+      "dmg": 9
+    },
+    {
+      "t": 191,
+      "e": "hit",
+      "target": "keep",
+      "dmg": 16
+    },
+    {
+      "t": 191,
+      "e": "attackRun",
+      "id": 0,
+      "side": "attacker",
+      "troop": "giant",
+      "targetKind": "building",
+      "target": "keep",
+      "ix": 3584,
+      "iy": 3584,
+      "mode": "melee",
+      "technique": "strike",
+      "cycleMs": 728,
+      "releaseOffsetMs": 364,
+      "cycleTicks": 8,
+      "releaseOffsetTicks": 4,
+      "impactOffsetsTicks": [
+        4
+      ],
+      "cadenceTicks": 8,
+      "count": 1
+    },
+    {
+      "t": 193,
+      "e": "attackRun",
+      "id": 1,
+      "side": "attacker",
+      "troop": "highlander",
+      "targetKind": "building",
+      "target": "keep",
+      "ix": 3584,
+      "iy": 3584,
+      "mode": "melee",
+      "technique": "strike",
+      "cycleMs": 500,
+      "releaseOffsetMs": 167,
+      "cycleTicks": 5,
+      "releaseOffsetTicks": 2,
+      "impactOffsetsTicks": [
+        2
+      ],
+      "cadenceTicks": 5,
+      "count": 1
+    },
+    {
+      "t": 193,
+      "e": "attackRun",
+      "id": 2,
+      "side": "attacker",
+      "troop": "dragon",
+      "targetKind": "building",
+      "target": "keep",
+      "ix": 3584,
+      "iy": 3584,
+      "mode": "stream",
+      "technique": "breath",
+      "cycleMs": 667,
+      "releaseOffsetMs": 250,
+      "cycleTicks": 7,
+      "releaseOffsetTicks": 3,
+      "impactOffsetsTicks": [
+        3,
+        4,
+        5
+      ],
+      "cadenceTicks": 7,
+      "count": 1
+    },
+    {
+      "t": 195,
+      "e": "hit",
+      "target": "keep",
+      "dmg": 88
+    },
+    {
+      "t": 195,
+      "e": "hit",
+      "target": "keep",
+      "dmg": 9
+    },
+    {
+      "t": 196,
+      "e": "hit",
+      "target": "keep",
+      "dmg": 16
+    },
+    {
+      "t": 197,
+      "e": "hit",
+      "target": "keep",
+      "dmg": 16
+    },
+    {
+      "t": 198,
+      "e": "hit",
+      "target": "keep",
+      "dmg": 16
+    },
+    {
+      "t": 198,
+      "e": "attackRun",
+      "id": 1,
+      "side": "attacker",
+      "troop": "highlander",
+      "targetKind": "building",
+      "target": "keep",
+      "ix": 3584,
+      "iy": 3584,
+      "mode": "melee",
+      "technique": "strike",
+      "cycleMs": 500,
+      "releaseOffsetMs": 167,
+      "cycleTicks": 5,
+      "releaseOffsetTicks": 2,
+      "impactOffsetsTicks": [
+        2
+      ],
+      "cadenceTicks": 5,
+      "count": 1
+    },
+    {
+      "t": 199,
+      "e": "attackRun",
+      "id": 0,
+      "side": "attacker",
+      "troop": "giant",
+      "targetKind": "building",
+      "target": "keep",
+      "ix": 3584,
+      "iy": 3584,
+      "mode": "melee",
+      "technique": "strike",
+      "cycleMs": 728,
+      "releaseOffsetMs": 364,
+      "cycleTicks": 8,
+      "releaseOffsetTicks": 4,
+      "impactOffsetsTicks": [
+        4
+      ],
+      "cadenceTicks": 8,
+      "count": 1
+    },
+    {
+      "t": 200,
+      "e": "hit",
+      "target": "keep",
+      "dmg": 9
+    },
+    {
+      "t": 200,
+      "e": "attackRun",
+      "id": 2,
+      "side": "attacker",
+      "troop": "dragon",
+      "targetKind": "building",
+      "target": "keep",
+      "ix": 3584,
+      "iy": 3584,
+      "mode": "stream",
+      "technique": "breath",
+      "cycleMs": 667,
+      "releaseOffsetMs": 250,
+      "cycleTicks": 7,
+      "releaseOffsetTicks": 3,
+      "impactOffsetsTicks": [
+        3,
+        4,
+        5
+      ],
+      "cadenceTicks": 7,
+      "count": 1
+    },
+    {
+      "t": 203,
+      "e": "hit",
+      "target": "keep",
+      "dmg": 88
+    },
+    {
+      "t": 203,
+      "e": "hit",
+      "target": "keep",
+      "dmg": 16
+    },
+    {
+      "t": 203,
+      "e": "attackRun",
+      "id": 1,
+      "side": "attacker",
+      "troop": "highlander",
+      "targetKind": "building",
+      "target": "keep",
+      "ix": 3584,
+      "iy": 3584,
+      "mode": "melee",
+      "technique": "strike",
+      "cycleMs": 500,
+      "releaseOffsetMs": 167,
+      "cycleTicks": 5,
+      "releaseOffsetTicks": 2,
+      "impactOffsetsTicks": [
+        2
+      ],
+      "cadenceTicks": 5,
+      "count": 1
+    },
+    {
+      "t": 204,
+      "e": "hit",
+      "target": "keep",
+      "dmg": 16
+    },
+    {
+      "t": 205,
+      "e": "hit",
+      "target": "keep",
+      "dmg": 16
+    },
+    {
+      "t": 205,
+      "e": "hit",
+      "target": "keep",
+      "dmg": 9
+    },
+    {
+      "t": 207,
+      "e": "attackRun",
+      "id": 0,
+      "side": "attacker",
+      "troop": "giant",
+      "targetKind": "building",
+      "target": "keep",
+      "ix": 3584,
+      "iy": 3584,
+      "mode": "melee",
+      "technique": "strike",
+      "cycleMs": 728,
+      "releaseOffsetMs": 364,
+      "cycleTicks": 8,
+      "releaseOffsetTicks": 4,
+      "impactOffsetsTicks": [
+        4
+      ],
+      "cadenceTicks": 8,
+      "count": 1
+    },
+    {
+      "t": 207,
+      "e": "attackRun",
+      "id": 2,
+      "side": "attacker",
+      "troop": "dragon",
+      "targetKind": "building",
+      "target": "keep",
+      "ix": 3584,
+      "iy": 3584,
+      "mode": "stream",
+      "technique": "breath",
+      "cycleMs": 667,
+      "releaseOffsetMs": 250,
+      "cycleTicks": 7,
+      "releaseOffsetTicks": 3,
+      "impactOffsetsTicks": [
+        3,
+        4,
+        5
+      ],
+      "cadenceTicks": 7,
+      "count": 1
+    },
+    {
+      "t": 208,
+      "e": "attackRun",
+      "id": 1,
+      "side": "attacker",
+      "troop": "highlander",
+      "targetKind": "building",
+      "target": "keep",
+      "ix": 3584,
+      "iy": 3584,
+      "mode": "melee",
+      "technique": "strike",
+      "cycleMs": 500,
+      "releaseOffsetMs": 167,
+      "cycleTicks": 5,
+      "releaseOffsetTicks": 2,
+      "impactOffsetsTicks": [
+        2
+      ],
+      "cadenceTicks": 5,
+      "count": 1
+    },
+    {
+      "t": 210,
+      "e": "hit",
+      "target": "keep",
+      "dmg": 16
+    },
+    {
+      "t": 210,
+      "e": "destroyed",
+      "id": "keep"
+    },
+    {
+      "t": 210,
+      "e": "star",
+      "n": 1
+    },
+    {
+      "t": 210,
+      "e": "star",
+      "n": 2
+    },
+    {
+      "t": 210,
+      "e": "star",
+      "n": 3
+    }
+  ]
+}

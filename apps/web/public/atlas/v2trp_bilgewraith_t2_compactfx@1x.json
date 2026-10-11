@@ -1,0 +1,208 @@
+{
+	"textures": [
+		{
+			"image": "v2trp_bilgewraith_t2_compactfx@1x.png",
+			"format": "RGBA8888",
+			"size": {
+				"w": 186,
+				"h": 174
+			},
+			"scale": 1,
+			"frames": [
+				{
+					"filename": "v2_compact_fx_bilgewraith_t2_soil_f1",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 56,
+						"h": 56
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 56,
+						"h": 56
+					},
+					"frame": {
+						"x": 3,
+						"y": 3,
+						"w": 56,
+						"h": 56
+					}
+				},
+				{
+					"filename": "v2_compact_fx_bilgewraith_t2_soil_f2",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 56,
+						"h": 56
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 56,
+						"h": 56
+					},
+					"frame": {
+						"x": 65,
+						"y": 3,
+						"w": 56,
+						"h": 56
+					}
+				},
+				{
+					"filename": "v2_compact_fx_bilgewraith_t2_soil_f3",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 56,
+						"h": 56
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 56,
+						"h": 56
+					},
+					"frame": {
+						"x": 3,
+						"y": 65,
+						"w": 56,
+						"h": 56
+					}
+				},
+				{
+					"filename": "v2_compact_fx_bilgewraith_t2_soil_f4",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 56,
+						"h": 56
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 56,
+						"h": 56
+					},
+					"frame": {
+						"x": 65,
+						"y": 65,
+						"w": 56,
+						"h": 56
+					}
+				},
+				{
+					"filename": "v2_compact_fx_bilgewraith_t2_soil_f5",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 56,
+						"h": 56
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 56,
+						"h": 56
+					},
+					"frame": {
+						"x": 127,
+						"y": 3,
+						"w": 56,
+						"h": 56
+					}
+				},
+				{
+					"filename": "v2_compact_fx_bilgewraith_t2_slash_f1",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 44,
+						"h": 44
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 44,
+						"h": 44
+					},
+					"frame": {
+						"x": 127,
+						"y": 65,
+						"w": 44,
+						"h": 44
+					}
+				},
+				{
+					"filename": "v2_compact_fx_bilgewraith_t2_slash_f2",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 44,
+						"h": 44
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 44,
+						"h": 44
+					},
+					"frame": {
+						"x": 3,
+						"y": 127,
+						"w": 44,
+						"h": 44
+					}
+				},
+				{
+					"filename": "v2_compact_fx_bilgewraith_t2_slash_f3",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 44,
+						"h": 44
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 44,
+						"h": 44
+					},
+					"frame": {
+						"x": 53,
+						"y": 127,
+						"w": 44,
+						"h": 44
+					}
+				},
+				{
+					"filename": "v2_compact_fx_bilgewraith_t2_slash_f4",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 44,
+						"h": 44
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 44,
+						"h": 44
+					},
+					"frame": {
+						"x": 103,
+						"y": 127,
+						"w": 44,
+						"h": 44
+					}
+				}
+			]
+		}
+	],
+	"meta": {
+		"app": "shardkeep/scripts/rasterize",
+		"version": "1"
+	}
+}

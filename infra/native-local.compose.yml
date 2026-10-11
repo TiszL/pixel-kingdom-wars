@@ -1,0 +1,28 @@
+# Local synthetic data only; separate project, ports and volume from ordinary development.
+services:
+  postgres:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_USER: pkw_native
+      POSTGRES_PASSWORD: ${PKW_NATIVE_DB_PASSWORD:?Prepare the native local profile first}
+      POSTGRES_DB: pkw_native_local
+    ports:
+      - "127.0.0.1:55473:5432"
+    volumes:
+      - native_local_pg:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U pkw_native -d pkw_native_local"]
+      interval: 2s
+      timeout: 3s
+      retries: 30
+  redis:
+    image: redis:7-alpine
+    ports:
+      - "127.0.0.1:56389:6379"
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 2s
+      timeout: 3s
+      retries: 30
+volumes:
+  native_local_pg:

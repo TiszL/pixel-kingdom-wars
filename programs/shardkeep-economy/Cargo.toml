@@ -1,0 +1,25 @@
+[package]
+name = "shardkeep-economy"
+version = "0.1.0"
+description = "SHARDKEEP Seeker auction authority and immutable term evidence"
+edition = "2021"
+
+[lib]
+crate-type = ["cdylib", "lib"]
+name = "shardkeep_economy"
+
+[features]
+default = []
+cpi = ["no-entrypoint"]
+no-entrypoint = []
+no-idl = []
+no-log-ix-name = []
+idl-build = ["anchor-lang/idl-build", "anchor-spl/idl-build"]
+devnet-test = []
+
+[dependencies]
+anchor-lang = "0.32.1"
+anchor-spl = "0.32.1"
+solana-keccak-hasher = { version = "2.2.1", features = ["sha3"] }
+
+shardkeep-charter-interface = { path = "../charter-interface" }

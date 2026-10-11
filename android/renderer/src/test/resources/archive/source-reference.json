@@ -1,0 +1,1745 @@
+{
+  "policy": {
+    "version": 1,
+    "minimumSimVersion": 1,
+    "maximumSimVersion": 18,
+    "mode": "currentWebArchive",
+    "legacyMelee": {
+      "mode": "sourceIdleAttack",
+      "positionSnapDistance": 1,
+      "aim": {
+        "minimumDeltaSquared": 0.25,
+        "retainWithinDegrees": 32.5
+      },
+      "selfDescribingSimVersion": 7,
+      "targetAwareSimVersion": 5
+    },
+    "sourceHashes": {
+      "apps/web/src/game/scenes/BattleScene.ts": "caa08a270b3a16950ed5eac7c0de3f86a3b7f47e154d8fd30c096b25d168ae7d",
+      "apps/web/src/game/v2/troop.ts": "a0412bbd11e587cfeacfc9b1d407ffb2b9116e61c228bda5cd290f48e60471f6",
+      "apps/web/src/game/v2/clips.ts": "b11eedf2d8fd11adff8901c9316e27f466c57b391d105f9edcf0353d0938d5ca",
+      "packages/sim/src/version.ts": "80754e3e7aa8bf1915c7f732ca99105919abfa8839cdad764cead72d9ca14a20",
+      "packages/shared/src/constants.ts": "d289876ff1f02ca5a6ca917123b4cca956f7da15386447eeb0ab31c4cbbb9ba8"
+    }
+  },
+  "cases": [
+    {
+      "simVersion": 4,
+      "events": [
+        {
+          "e": "deploy",
+          "id": 1,
+          "troop": "giant"
+        },
+        {
+          "e": "deploy",
+          "id": 2,
+          "troop": "troll"
+        },
+        {
+          "e": "deploy",
+          "id": 3,
+          "troop": "giant",
+          "hero": "theodor"
+        },
+        {
+          "e": "troopSpawn",
+          "id": 4,
+          "troop": "barrowling"
+        },
+        {
+          "e": "troopAttack",
+          "id": 5
+        },
+        {
+          "e": "spawn",
+          "id": 6,
+          "troop": "giant"
+        }
+      ],
+      "driven": [
+        5
+      ]
+    },
+    {
+      "simVersion": 5,
+      "events": [
+        {
+          "e": "deploy",
+          "id": 1,
+          "troop": "giant"
+        },
+        {
+          "e": "deploy",
+          "id": 2,
+          "troop": "troll"
+        },
+        {
+          "e": "deploy",
+          "id": 3,
+          "troop": "giant",
+          "hero": "theodor"
+        },
+        {
+          "e": "troopSpawn",
+          "id": 4,
+          "troop": "barrowling"
+        },
+        {
+          "e": "troopAttack",
+          "id": 5
+        },
+        {
+          "e": "spawn",
+          "id": 6,
+          "troop": "giant"
+        }
+      ],
+      "driven": [
+        2
+      ]
+    },
+    {
+      "simVersion": 6,
+      "events": [
+        {
+          "e": "deploy",
+          "id": 1,
+          "troop": "giant"
+        },
+        {
+          "e": "deploy",
+          "id": 2,
+          "troop": "troll"
+        },
+        {
+          "e": "deploy",
+          "id": 3,
+          "troop": "giant",
+          "hero": "theodor"
+        },
+        {
+          "e": "troopSpawn",
+          "id": 4,
+          "troop": "barrowling"
+        },
+        {
+          "e": "troopAttack",
+          "id": 5
+        },
+        {
+          "e": "spawn",
+          "id": 6,
+          "troop": "giant"
+        }
+      ],
+      "driven": [
+        2
+      ]
+    },
+    {
+      "simVersion": 7,
+      "events": [
+        {
+          "e": "deploy",
+          "id": 1,
+          "troop": "giant"
+        },
+        {
+          "e": "deploy",
+          "id": 2,
+          "troop": "troll"
+        },
+        {
+          "e": "deploy",
+          "id": 3,
+          "troop": "giant",
+          "hero": "theodor"
+        },
+        {
+          "e": "troopSpawn",
+          "id": 4,
+          "troop": "barrowling"
+        },
+        {
+          "e": "troopAttack",
+          "id": 5
+        },
+        {
+          "e": "spawn",
+          "id": 6,
+          "troop": "giant"
+        }
+      ],
+      "driven": [
+        1,
+        2,
+        4
+      ]
+    },
+    {
+      "simVersion": 18,
+      "events": [
+        {
+          "e": "deploy",
+          "id": 1,
+          "troop": "giant"
+        },
+        {
+          "e": "deploy",
+          "id": 2,
+          "troop": "troll"
+        },
+        {
+          "e": "deploy",
+          "id": 3,
+          "troop": "giant",
+          "hero": "theodor"
+        },
+        {
+          "e": "troopSpawn",
+          "id": 4,
+          "troop": "barrowling"
+        },
+        {
+          "e": "troopAttack",
+          "id": 5
+        },
+        {
+          "e": "spawn",
+          "id": 6,
+          "troop": "giant"
+        }
+      ],
+      "driven": [
+        1,
+        2,
+        4
+      ]
+    }
+  ],
+  "legacy": {
+    "mode": "sourceIdleAttack",
+    "positionSnapDistance": 1,
+    "cases": [
+      {
+        "unit": "highlander",
+        "first": {
+          "state": "idle",
+          "moving": false,
+          "facing": "e",
+          "body": {
+            "kind": "once",
+            "state": "attack",
+            "facing": "e"
+          },
+          "count": 1
+        },
+        "repeat": {
+          "state": "idle",
+          "moving": false,
+          "facing": "e",
+          "body": {
+            "kind": "once",
+            "state": "attack",
+            "facing": "e"
+          },
+          "count": 2
+        },
+        "moving": {
+          "state": "walking",
+          "moving": true,
+          "facing": "se",
+          "body": {
+            "kind": "loop",
+            "state": "walk",
+            "facing": "se"
+          },
+          "count": 3
+        },
+        "arrived": {
+          "state": "idle",
+          "moving": false,
+          "facing": "n",
+          "body": {
+            "kind": "once",
+            "state": "attack",
+            "facing": "n"
+          },
+          "count": 4
+        },
+        "empty": {
+          "state": "idle",
+          "moving": false,
+          "facing": "n",
+          "body": {
+            "kind": "loop",
+            "state": "idle",
+            "facing": "n"
+          },
+          "count": 5
+        },
+        "armed": {
+          "state": "idle",
+          "moving": false,
+          "facing": "e",
+          "body": {
+            "kind": "loop",
+            "state": "idle",
+            "facing": "e"
+          },
+          "count": 1
+        },
+        "missing": {
+          "state": "idle",
+          "moving": false,
+          "facing": "e",
+          "body": {
+            "kind": "loop",
+            "state": "idle",
+            "facing": "e"
+          },
+          "count": 1
+        },
+        "correction": {
+          "state": "idle",
+          "moving": false,
+          "facing": "e",
+          "body": {
+            "kind": "once",
+            "state": "attack",
+            "facing": "e"
+          },
+          "count": 1
+        },
+        "rowRetained": {
+          "state": "idle",
+          "moving": false,
+          "facing": "w",
+          "body": {
+            "kind": "once",
+            "state": "attack",
+            "facing": "e"
+          },
+          "count": 1
+        },
+        "nextRow": {
+          "state": "idle",
+          "moving": false,
+          "facing": "w",
+          "body": {
+            "kind": "once",
+            "state": "attack",
+            "facing": "w"
+          },
+          "count": 2
+        },
+        "afterCue": {
+          "state": "idle",
+          "moving": false,
+          "facing": "e",
+          "body": {
+            "kind": "loop",
+            "state": "idle",
+            "facing": "e"
+          },
+          "count": 3
+        },
+        "flinch": {
+          "state": "acting",
+          "moving": false,
+          "facing": "e",
+          "body": {
+            "kind": "once",
+            "state": "hit",
+            "facing": "e"
+          },
+          "count": 2
+        },
+        "afterHit": {
+          "state": "idle",
+          "moving": false,
+          "facing": "e",
+          "body": {
+            "kind": "once",
+            "state": "attack",
+            "facing": "e"
+          },
+          "count": 3
+        },
+        "afterTurnHit": {
+          "state": "acting",
+          "moving": false,
+          "facing": "w",
+          "body": {
+            "kind": "once",
+            "state": "hit",
+            "facing": "w"
+          },
+          "count": 2
+        },
+        "beforeTurnHit": {
+          "state": "acting",
+          "moving": false,
+          "facing": "e",
+          "body": {
+            "kind": "once",
+            "state": "hit",
+            "facing": "e"
+          },
+          "count": 2
+        }
+      },
+      {
+        "unit": "tunneler",
+        "first": {
+          "state": "idle",
+          "moving": false,
+          "facing": "e",
+          "body": {
+            "kind": "once",
+            "state": "attack",
+            "facing": "e"
+          },
+          "count": 1
+        },
+        "repeat": {
+          "state": "idle",
+          "moving": false,
+          "facing": "e",
+          "body": {
+            "kind": "once",
+            "state": "attack",
+            "facing": "e"
+          },
+          "count": 2
+        },
+        "moving": {
+          "state": "walking",
+          "moving": true,
+          "facing": "se",
+          "body": {
+            "kind": "loop",
+            "state": "walk",
+            "facing": "se"
+          },
+          "count": 3
+        },
+        "arrived": {
+          "state": "idle",
+          "moving": false,
+          "facing": "n",
+          "body": {
+            "kind": "once",
+            "state": "attack",
+            "facing": "n"
+          },
+          "count": 4
+        },
+        "empty": {
+          "state": "idle",
+          "moving": false,
+          "facing": "n",
+          "body": {
+            "kind": "loop",
+            "state": "idle",
+            "facing": "n"
+          },
+          "count": 5
+        },
+        "armed": {
+          "state": "idle",
+          "moving": false,
+          "facing": "e",
+          "body": {
+            "kind": "loop",
+            "state": "idle",
+            "facing": "e"
+          },
+          "count": 1
+        },
+        "missing": {
+          "state": "idle",
+          "moving": false,
+          "facing": "e",
+          "body": {
+            "kind": "loop",
+            "state": "idle",
+            "facing": "e"
+          },
+          "count": 1
+        },
+        "correction": {
+          "state": "idle",
+          "moving": false,
+          "facing": "e",
+          "body": {
+            "kind": "once",
+            "state": "attack",
+            "facing": "e"
+          },
+          "count": 1
+        },
+        "rowRetained": {
+          "state": "idle",
+          "moving": false,
+          "facing": "w",
+          "body": {
+            "kind": "once",
+            "state": "attack",
+            "facing": "e"
+          },
+          "count": 1
+        },
+        "nextRow": {
+          "state": "idle",
+          "moving": false,
+          "facing": "w",
+          "body": {
+            "kind": "once",
+            "state": "attack",
+            "facing": "w"
+          },
+          "count": 2
+        },
+        "afterCue": {
+          "state": "idle",
+          "moving": false,
+          "facing": "e",
+          "body": {
+            "kind": "loop",
+            "state": "idle",
+            "facing": "e"
+          },
+          "count": 3
+        },
+        "flinch": {
+          "state": "acting",
+          "moving": false,
+          "facing": "e",
+          "body": {
+            "kind": "once",
+            "state": "hit",
+            "facing": "e"
+          },
+          "count": 2
+        },
+        "afterHit": {
+          "state": "idle",
+          "moving": false,
+          "facing": "e",
+          "body": {
+            "kind": "once",
+            "state": "attack",
+            "facing": "e"
+          },
+          "count": 3
+        },
+        "afterTurnHit": {
+          "state": "acting",
+          "moving": false,
+          "facing": "w",
+          "body": {
+            "kind": "once",
+            "state": "hit",
+            "facing": "w"
+          },
+          "count": 2
+        },
+        "beforeTurnHit": {
+          "state": "acting",
+          "moving": false,
+          "facing": "e",
+          "body": {
+            "kind": "once",
+            "state": "hit",
+            "facing": "e"
+          },
+          "count": 2
+        }
+      },
+      {
+        "unit": "turrider",
+        "first": {
+          "state": "idle",
+          "moving": false,
+          "facing": "e",
+          "body": {
+            "kind": "once",
+            "state": "attack",
+            "facing": "e"
+          },
+          "count": 1
+        },
+        "repeat": {
+          "state": "idle",
+          "moving": false,
+          "facing": "e",
+          "body": {
+            "kind": "once",
+            "state": "attack",
+            "facing": "e"
+          },
+          "count": 2
+        },
+        "moving": {
+          "state": "walking",
+          "moving": true,
+          "facing": "se",
+          "body": {
+            "kind": "loop",
+            "state": "charge",
+            "facing": "se"
+          },
+          "count": 3
+        },
+        "arrived": {
+          "state": "idle",
+          "moving": false,
+          "facing": "n",
+          "body": {
+            "kind": "once",
+            "state": "attack",
+            "facing": "n"
+          },
+          "count": 4
+        },
+        "empty": {
+          "state": "idle",
+          "moving": false,
+          "facing": "n",
+          "body": {
+            "kind": "loop",
+            "state": "idle",
+            "facing": "n"
+          },
+          "count": 5
+        },
+        "armed": {
+          "state": "idle",
+          "moving": false,
+          "facing": "e",
+          "body": {
+            "kind": "loop",
+            "state": "idle",
+            "facing": "e"
+          },
+          "count": 1
+        },
+        "missing": {
+          "state": "idle",
+          "moving": false,
+          "facing": "e",
+          "body": {
+            "kind": "loop",
+            "state": "idle",
+            "facing": "e"
+          },
+          "count": 1
+        },
+        "correction": {
+          "state": "idle",
+          "moving": false,
+          "facing": "e",
+          "body": {
+            "kind": "once",
+            "state": "attack",
+            "facing": "e"
+          },
+          "count": 1
+        },
+        "rowRetained": {
+          "state": "idle",
+          "moving": false,
+          "facing": "w",
+          "body": {
+            "kind": "once",
+            "state": "attack",
+            "facing": "e"
+          },
+          "count": 1
+        },
+        "nextRow": {
+          "state": "idle",
+          "moving": false,
+          "facing": "w",
+          "body": {
+            "kind": "once",
+            "state": "attack",
+            "facing": "w"
+          },
+          "count": 2
+        },
+        "afterCue": {
+          "state": "idle",
+          "moving": false,
+          "facing": "e",
+          "body": {
+            "kind": "loop",
+            "state": "idle",
+            "facing": "e"
+          },
+          "count": 3
+        },
+        "flinch": {
+          "state": "acting",
+          "moving": false,
+          "facing": "e",
+          "body": {
+            "kind": "once",
+            "state": "hit",
+            "facing": "e"
+          },
+          "count": 2
+        },
+        "afterHit": {
+          "state": "idle",
+          "moving": false,
+          "facing": "e",
+          "body": {
+            "kind": "once",
+            "state": "attack",
+            "facing": "e"
+          },
+          "count": 3
+        },
+        "afterTurnHit": {
+          "state": "acting",
+          "moving": false,
+          "facing": "w",
+          "body": {
+            "kind": "once",
+            "state": "hit",
+            "facing": "w"
+          },
+          "count": 2
+        },
+        "beforeTurnHit": {
+          "state": "acting",
+          "moving": false,
+          "facing": "e",
+          "body": {
+            "kind": "once",
+            "state": "hit",
+            "facing": "e"
+          },
+          "count": 2
+        }
+      },
+      {
+        "unit": "plunderer",
+        "first": {
+          "state": "idle",
+          "moving": false,
+          "facing": "e",
+          "body": {
+            "kind": "once",
+            "state": "attack",
+            "facing": "e"
+          },
+          "count": 1
+        },
+        "repeat": {
+          "state": "idle",
+          "moving": false,
+          "facing": "e",
+          "body": {
+            "kind": "once",
+            "state": "attack",
+            "facing": "e"
+          },
+          "count": 2
+        },
+        "moving": {
+          "state": "walking",
+          "moving": true,
+          "facing": "se",
+          "body": {
+            "kind": "loop",
+            "state": "walk",
+            "facing": "se"
+          },
+          "count": 3
+        },
+        "arrived": {
+          "state": "idle",
+          "moving": false,
+          "facing": "n",
+          "body": {
+            "kind": "once",
+            "state": "attack",
+            "facing": "n"
+          },
+          "count": 4
+        },
+        "empty": {
+          "state": "idle",
+          "moving": false,
+          "facing": "n",
+          "body": {
+            "kind": "loop",
+            "state": "idle",
+            "facing": "n"
+          },
+          "count": 5
+        },
+        "armed": {
+          "state": "idle",
+          "moving": false,
+          "facing": "e",
+          "body": {
+            "kind": "loop",
+            "state": "idle",
+            "facing": "e"
+          },
+          "count": 1
+        },
+        "missing": {
+          "state": "idle",
+          "moving": false,
+          "facing": "e",
+          "body": {
+            "kind": "loop",
+            "state": "idle",
+            "facing": "e"
+          },
+          "count": 1
+        },
+        "correction": {
+          "state": "idle",
+          "moving": false,
+          "facing": "e",
+          "body": {
+            "kind": "once",
+            "state": "attack",
+            "facing": "e"
+          },
+          "count": 1
+        },
+        "rowRetained": {
+          "state": "idle",
+          "moving": false,
+          "facing": "w",
+          "body": {
+            "kind": "once",
+            "state": "attack",
+            "facing": "e"
+          },
+          "count": 1
+        },
+        "nextRow": {
+          "state": "idle",
+          "moving": false,
+          "facing": "w",
+          "body": {
+            "kind": "once",
+            "state": "attack",
+            "facing": "w"
+          },
+          "count": 2
+        },
+        "afterCue": {
+          "state": "idle",
+          "moving": false,
+          "facing": "e",
+          "body": {
+            "kind": "loop",
+            "state": "idle",
+            "facing": "e"
+          },
+          "count": 3
+        },
+        "flinch": {
+          "state": "acting",
+          "moving": false,
+          "facing": "e",
+          "body": {
+            "kind": "once",
+            "state": "hit",
+            "facing": "e"
+          },
+          "count": 2
+        },
+        "afterHit": {
+          "state": "idle",
+          "moving": false,
+          "facing": "e",
+          "body": {
+            "kind": "once",
+            "state": "attack",
+            "facing": "e"
+          },
+          "count": 3
+        },
+        "afterTurnHit": {
+          "state": "acting",
+          "moving": false,
+          "facing": "w",
+          "body": {
+            "kind": "once",
+            "state": "hit",
+            "facing": "w"
+          },
+          "count": 2
+        },
+        "beforeTurnHit": {
+          "state": "acting",
+          "moving": false,
+          "facing": "e",
+          "body": {
+            "kind": "once",
+            "state": "hit",
+            "facing": "e"
+          },
+          "count": 2
+        }
+      },
+      {
+        "unit": "giant",
+        "first": {
+          "state": "idle",
+          "moving": false,
+          "facing": "e",
+          "body": {
+            "kind": "once",
+            "state": "attack",
+            "facing": "e"
+          },
+          "count": 1
+        },
+        "repeat": {
+          "state": "idle",
+          "moving": false,
+          "facing": "e",
+          "body": {
+            "kind": "once",
+            "state": "attack",
+            "facing": "e"
+          },
+          "count": 2
+        },
+        "moving": {
+          "state": "walking",
+          "moving": true,
+          "facing": "se",
+          "body": {
+            "kind": "loop",
+            "state": "walk",
+            "facing": "se"
+          },
+          "count": 3
+        },
+        "arrived": {
+          "state": "idle",
+          "moving": false,
+          "facing": "n",
+          "body": {
+            "kind": "once",
+            "state": "attack",
+            "facing": "n"
+          },
+          "count": 4
+        },
+        "empty": {
+          "state": "idle",
+          "moving": false,
+          "facing": "n",
+          "body": {
+            "kind": "loop",
+            "state": "idle",
+            "facing": "n"
+          },
+          "count": 5
+        },
+        "armed": {
+          "state": "idle",
+          "moving": false,
+          "facing": "e",
+          "body": {
+            "kind": "loop",
+            "state": "idle",
+            "facing": "e"
+          },
+          "count": 1
+        },
+        "missing": {
+          "state": "idle",
+          "moving": false,
+          "facing": "e",
+          "body": {
+            "kind": "loop",
+            "state": "idle",
+            "facing": "e"
+          },
+          "count": 1
+        },
+        "correction": {
+          "state": "idle",
+          "moving": false,
+          "facing": "e",
+          "body": {
+            "kind": "once",
+            "state": "attack",
+            "facing": "e"
+          },
+          "count": 1
+        },
+        "rowRetained": {
+          "state": "idle",
+          "moving": false,
+          "facing": "w",
+          "body": {
+            "kind": "once",
+            "state": "attack",
+            "facing": "e"
+          },
+          "count": 1
+        },
+        "nextRow": {
+          "state": "idle",
+          "moving": false,
+          "facing": "w",
+          "body": {
+            "kind": "once",
+            "state": "attack",
+            "facing": "w"
+          },
+          "count": 2
+        },
+        "afterCue": {
+          "state": "idle",
+          "moving": false,
+          "facing": "e",
+          "body": {
+            "kind": "loop",
+            "state": "idle",
+            "facing": "e"
+          },
+          "count": 3
+        },
+        "flinch": {
+          "state": "acting",
+          "moving": false,
+          "facing": "e",
+          "body": {
+            "kind": "once",
+            "state": "hit",
+            "facing": "e"
+          },
+          "count": 2
+        },
+        "afterHit": {
+          "state": "idle",
+          "moving": false,
+          "facing": "e",
+          "body": {
+            "kind": "once",
+            "state": "attack",
+            "facing": "e"
+          },
+          "count": 3
+        },
+        "afterTurnHit": {
+          "state": "acting",
+          "moving": false,
+          "facing": "w",
+          "body": {
+            "kind": "once",
+            "state": "hit",
+            "facing": "w"
+          },
+          "count": 2
+        },
+        "beforeTurnHit": {
+          "state": "acting",
+          "moving": false,
+          "facing": "e",
+          "body": {
+            "kind": "once",
+            "state": "hit",
+            "facing": "e"
+          },
+          "count": 2
+        }
+      },
+      {
+        "unit": "troll",
+        "first": {
+          "state": "idle",
+          "moving": false,
+          "facing": "e",
+          "body": {
+            "kind": "once",
+            "state": "attack",
+            "facing": "e"
+          },
+          "count": 1
+        },
+        "repeat": {
+          "state": "idle",
+          "moving": false,
+          "facing": "e",
+          "body": {
+            "kind": "once",
+            "state": "attack",
+            "facing": "e"
+          },
+          "count": 2
+        },
+        "moving": {
+          "state": "walking",
+          "moving": true,
+          "facing": "se",
+          "body": {
+            "kind": "loop",
+            "state": "walk",
+            "facing": "se"
+          },
+          "count": 3
+        },
+        "arrived": {
+          "state": "idle",
+          "moving": false,
+          "facing": "n",
+          "body": {
+            "kind": "once",
+            "state": "attack",
+            "facing": "n"
+          },
+          "count": 4
+        },
+        "empty": {
+          "state": "idle",
+          "moving": false,
+          "facing": "n",
+          "body": {
+            "kind": "loop",
+            "state": "idle",
+            "facing": "n"
+          },
+          "count": 5
+        },
+        "armed": {
+          "state": "idle",
+          "moving": false,
+          "facing": "e",
+          "body": {
+            "kind": "loop",
+            "state": "idle",
+            "facing": "e"
+          },
+          "count": 1
+        },
+        "missing": {
+          "state": "idle",
+          "moving": false,
+          "facing": "e",
+          "body": {
+            "kind": "loop",
+            "state": "idle",
+            "facing": "e"
+          },
+          "count": 1
+        },
+        "correction": {
+          "state": "idle",
+          "moving": false,
+          "facing": "e",
+          "body": {
+            "kind": "once",
+            "state": "attack",
+            "facing": "e"
+          },
+          "count": 1
+        },
+        "rowRetained": {
+          "state": "idle",
+          "moving": false,
+          "facing": "w",
+          "body": {
+            "kind": "once",
+            "state": "attack",
+            "facing": "e"
+          },
+          "count": 1
+        },
+        "nextRow": {
+          "state": "idle",
+          "moving": false,
+          "facing": "w",
+          "body": {
+            "kind": "once",
+            "state": "attack",
+            "facing": "w"
+          },
+          "count": 2
+        },
+        "afterCue": {
+          "state": "idle",
+          "moving": false,
+          "facing": "e",
+          "body": {
+            "kind": "loop",
+            "state": "idle",
+            "facing": "e"
+          },
+          "count": 3
+        },
+        "flinch": {
+          "state": "acting",
+          "moving": false,
+          "facing": "e",
+          "body": {
+            "kind": "once",
+            "state": "hit",
+            "facing": "e"
+          },
+          "count": 2
+        },
+        "afterHit": {
+          "state": "idle",
+          "moving": false,
+          "facing": "e",
+          "body": {
+            "kind": "once",
+            "state": "attack",
+            "facing": "e"
+          },
+          "count": 3
+        },
+        "afterTurnHit": {
+          "state": "acting",
+          "moving": false,
+          "facing": "w",
+          "body": {
+            "kind": "once",
+            "state": "hit",
+            "facing": "w"
+          },
+          "count": 2
+        },
+        "beforeTurnHit": {
+          "state": "acting",
+          "moving": false,
+          "facing": "e",
+          "body": {
+            "kind": "once",
+            "state": "hit",
+            "facing": "e"
+          },
+          "count": 2
+        }
+      },
+      {
+        "unit": "bilgewraith",
+        "first": {
+          "state": "idle",
+          "moving": false,
+          "facing": "e",
+          "body": {
+            "kind": "once",
+            "state": "attack",
+            "facing": "e"
+          },
+          "count": 1
+        },
+        "repeat": {
+          "state": "idle",
+          "moving": false,
+          "facing": "e",
+          "body": {
+            "kind": "once",
+            "state": "attack",
+            "facing": "e"
+          },
+          "count": 2
+        },
+        "moving": {
+          "state": "walking",
+          "moving": true,
+          "facing": "se",
+          "body": {
+            "kind": "loop",
+            "state": "walk",
+            "facing": "se"
+          },
+          "count": 3
+        },
+        "arrived": {
+          "state": "idle",
+          "moving": false,
+          "facing": "n",
+          "body": {
+            "kind": "once",
+            "state": "attack",
+            "facing": "n"
+          },
+          "count": 4
+        },
+        "empty": {
+          "state": "idle",
+          "moving": false,
+          "facing": "n",
+          "body": {
+            "kind": "loop",
+            "state": "idle",
+            "facing": "n"
+          },
+          "count": 5
+        },
+        "armed": {
+          "state": "idle",
+          "moving": false,
+          "facing": "e",
+          "body": {
+            "kind": "loop",
+            "state": "idle",
+            "facing": "e"
+          },
+          "count": 1
+        },
+        "missing": {
+          "state": "idle",
+          "moving": false,
+          "facing": "e",
+          "body": {
+            "kind": "loop",
+            "state": "idle",
+            "facing": "e"
+          },
+          "count": 1
+        },
+        "correction": {
+          "state": "idle",
+          "moving": false,
+          "facing": "e",
+          "body": {
+            "kind": "once",
+            "state": "attack",
+            "facing": "e"
+          },
+          "count": 1
+        },
+        "rowRetained": {
+          "state": "idle",
+          "moving": false,
+          "facing": "w",
+          "body": {
+            "kind": "once",
+            "state": "attack",
+            "facing": "e"
+          },
+          "count": 1
+        },
+        "nextRow": {
+          "state": "idle",
+          "moving": false,
+          "facing": "w",
+          "body": {
+            "kind": "once",
+            "state": "attack",
+            "facing": "w"
+          },
+          "count": 2
+        },
+        "afterCue": {
+          "state": "idle",
+          "moving": false,
+          "facing": "e",
+          "body": {
+            "kind": "loop",
+            "state": "idle",
+            "facing": "e"
+          },
+          "count": 3
+        },
+        "flinch": {
+          "state": "acting",
+          "moving": false,
+          "facing": "e",
+          "body": {
+            "kind": "once",
+            "state": "hit",
+            "facing": "e"
+          },
+          "count": 2
+        },
+        "afterHit": {
+          "state": "idle",
+          "moving": false,
+          "facing": "e",
+          "body": {
+            "kind": "once",
+            "state": "attack",
+            "facing": "e"
+          },
+          "count": 3
+        },
+        "afterTurnHit": {
+          "state": "acting",
+          "moving": false,
+          "facing": "w",
+          "body": {
+            "kind": "once",
+            "state": "hit",
+            "facing": "w"
+          },
+          "count": 2
+        },
+        "beforeTurnHit": {
+          "state": "acting",
+          "moving": false,
+          "facing": "e",
+          "body": {
+            "kind": "once",
+            "state": "hit",
+            "facing": "e"
+          },
+          "count": 2
+        }
+      },
+      {
+        "unit": "gloamfang",
+        "first": {
+          "state": "idle",
+          "moving": false,
+          "facing": "e",
+          "body": {
+            "kind": "once",
+            "state": "rend",
+            "facing": "e"
+          },
+          "count": 1
+        },
+        "repeat": {
+          "state": "idle",
+          "moving": false,
+          "facing": "e",
+          "body": {
+            "kind": "once",
+            "state": "rend",
+            "facing": "e"
+          },
+          "count": 2
+        },
+        "moving": {
+          "state": "walking",
+          "moving": true,
+          "facing": "se",
+          "body": {
+            "kind": "loop",
+            "state": "prowl",
+            "facing": "se"
+          },
+          "count": 3
+        },
+        "arrived": {
+          "state": "idle",
+          "moving": false,
+          "facing": "n",
+          "body": {
+            "kind": "once",
+            "state": "rend",
+            "facing": "n"
+          },
+          "count": 4
+        },
+        "empty": {
+          "state": "idle",
+          "moving": false,
+          "facing": "n",
+          "body": {
+            "kind": "loop",
+            "state": "prowl",
+            "facing": "n"
+          },
+          "count": 5
+        },
+        "armed": {
+          "state": "idle",
+          "moving": false,
+          "facing": "e",
+          "body": {
+            "kind": "loop",
+            "state": "prowl",
+            "facing": "e"
+          },
+          "count": 1
+        },
+        "missing": {
+          "state": "idle",
+          "moving": false,
+          "facing": "e",
+          "body": {
+            "kind": "loop",
+            "state": "prowl",
+            "facing": "e"
+          },
+          "count": 1
+        },
+        "correction": {
+          "state": "idle",
+          "moving": false,
+          "facing": "e",
+          "body": {
+            "kind": "once",
+            "state": "rend",
+            "facing": "e"
+          },
+          "count": 1
+        },
+        "rowRetained": {
+          "state": "idle",
+          "moving": false,
+          "facing": "w",
+          "body": {
+            "kind": "once",
+            "state": "rend",
+            "facing": "e"
+          },
+          "count": 1
+        },
+        "nextRow": {
+          "state": "idle",
+          "moving": false,
+          "facing": "w",
+          "body": {
+            "kind": "once",
+            "state": "rend",
+            "facing": "w"
+          },
+          "count": 2
+        },
+        "afterCue": {
+          "state": "idle",
+          "moving": false,
+          "facing": "e",
+          "body": {
+            "kind": "loop",
+            "state": "prowl",
+            "facing": "e"
+          },
+          "count": 3
+        },
+        "flinch": {
+          "state": "acting",
+          "moving": false,
+          "facing": "e",
+          "body": {
+            "kind": "once",
+            "state": "hit",
+            "facing": "e"
+          },
+          "count": 2
+        },
+        "afterHit": {
+          "state": "idle",
+          "moving": false,
+          "facing": "e",
+          "body": {
+            "kind": "once",
+            "state": "rend",
+            "facing": "e"
+          },
+          "count": 3
+        },
+        "afterTurnHit": {
+          "state": "acting",
+          "moving": false,
+          "facing": "w",
+          "body": {
+            "kind": "once",
+            "state": "hit",
+            "facing": "w"
+          },
+          "count": 2
+        },
+        "beforeTurnHit": {
+          "state": "acting",
+          "moving": false,
+          "facing": "e",
+          "body": {
+            "kind": "once",
+            "state": "hit",
+            "facing": "e"
+          },
+          "count": 2
+        }
+      },
+      {
+        "unit": "barrowling",
+        "first": {
+          "state": "idle",
+          "moving": false,
+          "facing": "e",
+          "body": {
+            "kind": "once",
+            "state": "claw",
+            "facing": "e"
+          },
+          "count": 1
+        },
+        "repeat": {
+          "state": "idle",
+          "moving": false,
+          "facing": "e",
+          "body": {
+            "kind": "once",
+            "state": "claw",
+            "facing": "e"
+          },
+          "count": 2
+        },
+        "moving": {
+          "state": "walking",
+          "moving": true,
+          "facing": "se",
+          "body": {
+            "kind": "loop",
+            "state": "scurry",
+            "facing": "se"
+          },
+          "count": 3
+        },
+        "arrived": {
+          "state": "idle",
+          "moving": false,
+          "facing": "n",
+          "body": {
+            "kind": "once",
+            "state": "claw",
+            "facing": "n"
+          },
+          "count": 4
+        },
+        "empty": {
+          "state": "idle",
+          "moving": false,
+          "facing": "n",
+          "body": {
+            "kind": "loop",
+            "state": "scurry",
+            "facing": "n"
+          },
+          "count": 5
+        },
+        "armed": {
+          "state": "idle",
+          "moving": false,
+          "facing": "e",
+          "body": {
+            "kind": "loop",
+            "state": "scurry",
+            "facing": "e"
+          },
+          "count": 1
+        },
+        "missing": {
+          "state": "idle",
+          "moving": false,
+          "facing": "e",
+          "body": {
+            "kind": "loop",
+            "state": "scurry",
+            "facing": "e"
+          },
+          "count": 1
+        },
+        "correction": {
+          "state": "idle",
+          "moving": false,
+          "facing": "e",
+          "body": {
+            "kind": "once",
+            "state": "claw",
+            "facing": "e"
+          },
+          "count": 1
+        },
+        "rowRetained": {
+          "state": "idle",
+          "moving": false,
+          "facing": "w",
+          "body": {
+            "kind": "once",
+            "state": "claw",
+            "facing": "e"
+          },
+          "count": 1
+        },
+        "nextRow": {
+          "state": "idle",
+          "moving": false,
+          "facing": "w",
+          "body": {
+            "kind": "once",
+            "state": "claw",
+            "facing": "w"
+          },
+          "count": 2
+        },
+        "afterCue": {
+          "state": "idle",
+          "moving": false,
+          "facing": "e",
+          "body": {
+            "kind": "loop",
+            "state": "scurry",
+            "facing": "e"
+          },
+          "count": 3
+        },
+        "flinch": {
+          "state": "acting",
+          "moving": false,
+          "facing": "e",
+          "body": {
+            "kind": "once",
+            "state": "hit",
+            "facing": "e"
+          },
+          "count": 2
+        },
+        "afterHit": {
+          "state": "idle",
+          "moving": false,
+          "facing": "e",
+          "body": {
+            "kind": "once",
+            "state": "claw",
+            "facing": "e"
+          },
+          "count": 3
+        },
+        "afterTurnHit": {
+          "state": "acting",
+          "moving": false,
+          "facing": "w",
+          "body": {
+            "kind": "once",
+            "state": "hit",
+            "facing": "w"
+          },
+          "count": 2
+        },
+        "beforeTurnHit": {
+          "state": "acting",
+          "moving": false,
+          "facing": "e",
+          "body": {
+            "kind": "once",
+            "state": "hit",
+            "facing": "e"
+          },
+          "count": 2
+        }
+      }
+    ],
+    "aim": {
+      "minimumDeltaSquared": 0.25,
+      "retainWithinDegrees": 32.5
+    },
+    "selfDescribingSimVersion": 7,
+    "targetAwareSimVersion": 5
+  }
+}

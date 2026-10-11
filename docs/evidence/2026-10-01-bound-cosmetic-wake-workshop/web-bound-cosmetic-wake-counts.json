@@ -1,0 +1,64 @@
+{
+  "distinctPassing": 37,
+  "suites": {
+    "new journal": 6,
+    "affected Awning controller": 14,
+    "affected Awning browser": 4,
+    "Wake controller": 7,
+    "Wake browser": 4,
+    "actual source pairs": 2
+  },
+  "runs": [
+    {
+      "log": "/tmp/web-bound-cosmetic-wake-journal-tests1.log",
+      "passed": 20,
+      "failed": 0,
+      "filtered": 0
+    },
+    {
+      "log": "/tmp/web-bound-cosmetic-wake-controller-tests1.log",
+      "passed": 14,
+      "failed": 6,
+      "filtered": 0,
+      "reason": "Old Awning synthetic wallet was not canonical32-byte key required by new sibling schema. Fixed only Wake fixture identity/proof/Blueprint wallet."
+    },
+    {
+      "log": "/tmp/web-bound-cosmetic-wake-controller-tests2.log",
+      "passed": 6,
+      "failed": 0,
+      "filtered": 0
+    },
+    {
+      "log": "/tmp/web-bound-cosmetic-wake-browser-tests1.log",
+      "passed": 14,
+      "failed": 1,
+      "filtered": 0,
+      "reason": "ABA test mocked session assertions but omitted real authCookies invalidation. Fixed fixture to perform auth generation transition, no production guard change."
+    },
+    {
+      "log": "/tmp/web-bound-cosmetic-wake-browser-tests2.log",
+      "passed": 1,
+      "failed": 0,
+      "filtered": 3,
+      "reason": "Exact failed ABA case only; Vitest reports name-filtered3 as skipped."
+    },
+    {
+      "log": "/tmp/web-bound-cosmetic-wake-pair-tests1.log",
+      "passed": 0,
+      "failed": 1,
+      "filtered": 0,
+      "reason": "Vitest transformed import.meta.url into non-file URL; test-resource reader repaired. Initial combined case split into2 independent actual-account cases because runtime and completed fixtures have different authenticated owners."
+    },
+    {
+      "log": "/tmp/web-bound-cosmetic-wake-pair-tests2.log",
+      "passed": 2,
+      "failed": 0,
+      "filtered": 0
+    }
+  ],
+  "verification": {
+    "journalWebTypes": "/tmp/web-bound-cosmetic-wake-journal-types1.log (before controller extraction; final combined types root-owned)",
+    "lint": "/tmp/web-bound-cosmetic-wake-lint2.log PASS",
+    "whitespace": "git diff --check PASS"
+  }
+}

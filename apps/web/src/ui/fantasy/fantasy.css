@@ -1,0 +1,22 @@
+.fantasy-globe{position:absolute;inset:0;width:100%;height:100%;isolation:isolate;touch-action:none;background:#0b0e14;color:#efe8d6;overflow:hidden;container-type:inline-size}
+.fantasy-globe canvas{position:absolute;inset:0;width:100%;height:100%;image-rendering:pixelated}
+.fantasy-globe canvas:first-child{touch-action:none;cursor:grab;outline-offset:-4px}
+.fantasy-globe canvas:first-child:active{cursor:grabbing}
+.fantasy-effects,.fantasy-clouds{pointer-events:none}
+.fantasy-labels,.fantasy-markers{position:absolute;inset:0;pointer-events:none}
+.fantasy-globe button{font:inherit;color:inherit;cursor:pointer;touch-action:manipulation}
+.fantasy-world .fantasy-realm-label{position:absolute;transform:translate(-50%,-50%);pointer-events:auto;text-transform:uppercase;background:#191820e8;border:1px solid #847657;box-shadow:2px 2px #07090d;padding:2px 8px;font-size:clamp(12px,2.3cqw,18px)!important;letter-spacing:1px;white-space:nowrap;min-height:28px}
+.fantasy-realm-label[hidden],.fantasy-owner-marker[hidden]{display:none}
+.fantasy-world .fantasy-owner-marker{position:absolute;transform:translate(-50%,-50%);pointer-events:auto;display:flex;align-items:center;gap:3px;background:#1b2529dd;border:1px solid #79bfbf;color:#d0e4df;max-width:176px;box-sizing:border-box;font-size:13px!important;padding:3px;min-width:28px;min-height:28px}
+.fantasy-owner-marker.owned{border-color:#e3ae3c;color:#f4d77b}.fantasy-owner-marker.selected{outline:2px solid #f4d77b}
+.fantasy-owner-glyph{font-size:20px;line-height:20px}.fantasy-owner-name{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.fantasy-owner-marker .fantasy-owner-name{min-width:0;flex:1;text-align:left}.fantasy-owner-glyph,.fantasy-owner-count{flex-shrink:0}
+.fantasy-controls{position:absolute;left:max(14px,env(safe-area-inset-left));bottom:calc(var(--game-ui-bottom-clearance,0px) + var(--fantasy-bottom-clearance,0px) + 30px + env(safe-area-inset-bottom));display:flex;gap:4px}.fantasy-controls button{background:#29242deb;border:1px solid #847657;min-width:40px;min-height:40px;padding:4px 8px;font-size:16px}
+.fantasy-controls button[aria-pressed=true]{border-color:#d7aed5;color:#f5d3e8}.fantasy-coordinate{position:absolute;bottom:calc(var(--game-ui-bottom-clearance,0px) + var(--fantasy-bottom-clearance,0px) + 8px + env(safe-area-inset-bottom));left:max(14px,env(safe-area-inset-left));color:#c4bba4;font-size:13px;pointer-events:none}
+.fantasy-load{position:absolute;left:14px;top:180px;max-width:calc(100% - 28px);text-align:center;background:#13131cf2;padding:8px;border:1px solid #847657;font-size:15px;pointer-events:none}.fantasy-load button{pointer-events:auto;margin-left:10px;background:#39333e;border:1px solid #e3ae3c;min-height:36px}
+.fantasy-globe button:focus-visible,.fantasy-globe canvas:focus-visible{outline:2px solid #f4d77b;outline-offset:2px}
+.fantasy-owner-members{position:absolute;z-index:2;box-sizing:border-box;display:flex;flex-direction:column;color:#efe8d6;background:#1b202af5;border:1px solid #97c7b9;box-shadow:3px 3px #07090d;touch-action:pan-y;overflow:hidden}
+.fantasy-owner-members header{display:flex;align-items:center;justify-content:space-between;padding-left:12px;flex-shrink:0}.fantasy-owner-members header button{min-width:44px;min-height:44px}.fantasy-owner-members-scroll{overflow:auto;min-height:0;overscroll-behavior:contain}.fantasy-owner-members ul{list-style:none;margin:0;padding:0}.fantasy-owner-members li button{display:block;width:100%;min-height:44px;text-align:left;overflow-wrap:anywhere}.fantasy-owner-members small{display:block;color:#c4bba4;font-size:13px}.fantasy-owner-members p{padding:8px 12px;margin:0;font-size:14px}
+@media(max-height:480px) and (min-width:600px){.fantasy-controls{left:max(8px,env(safe-area-inset-left));bottom:calc(var(--game-ui-bottom-clearance,0px) + 24px + env(safe-area-inset-bottom))}.fantasy-controls button{min-width:34px;min-height:34px}}
+
+.fantasy-globe[data-presented=false] .fantasy-controls,.fantasy-globe[data-presented=false] .fantasy-labels,.fantasy-globe[data-presented=false] .fantasy-markers,.fantasy-globe[data-presented=false] .fantasy-coordinate{visibility:hidden}

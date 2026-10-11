@@ -1,0 +1,216 @@
+# ONE ORIGIN, REAL TLS: the game and its API behind play.pixelkingdomwars.com.
+#
+# Mounted into the caddy container by infra/docker-compose.prod.yml. Derived
+# from Caddyfile.single-origin (the Mac/tunnel variant, which stays for the
+# Seeker test flow) with the Mac assumptions removed: no `auto_https off`, no
+# :8080, no host-loopback upstream, no WEB_DIST env indirection.
+#
+# WHY ONE HOSTNAME AND NOT TWO.
+#
+# The session cookie is `sameSite: 'lax'` and host-only (apps/api/src/auth/
+# routes.ts). A browser does not send a Lax cookie on a cross-SITE request, so a
+# game on one hostname talking to an API on another never sends the session:
+# sign-in appears to succeed and then every authenticated request 401s, which
+# the client turns into a forced logout. The installed APK (TWA) is pinned to
+# this origin. Splitting the API onto api.* would require relaxing the cookie to
+# SameSite=None — a change to money-path auth in a codebase with no CSRF token
+# and no Origin check. Not worth it. Nothing in the application source changes
+# under one origin.
+#
+# TLS: Caddy obtains and renews Let's Encrypt certificates itself (certs live in
+# the caddydata volume — losing it means re-issuing, and rate limits). The DNS A
+# record must be DNS-ONLY (grey cloud) so the ACME HTTP challenge reaches this
+# box directly. A future Cloudflare-proxied topology requires an explicit trusted-
+# proxy configuration; never trust a client-supplied CF-Connecting-IP header here.
+
+{$API_DOMAIN} {
+	encode gzip zstd
+
+	# API FIRST. `handle_path` STRIPS the /api prefix, which is required because
+	# the routes register at the root (game/routes.ts has no prefix). If this
+	# block came after the SPA fallback below, every API call would be answered
+	# with index.html and die as a JSON parse error somewhere unhelpful.
+	handle_path /api/* {
+		# THE REAL CLIENT IP HAS TO SURVIVE THE WHOLE CHAIN.
+		#
+		# DNS-only is the production contract: the socket peer IS the client.
+		# Always overwrite XFF from that peer. Trusting CF-Connecting-IP merely
+		# because a header exists lets a direct client forge/rotate its identity
+		# and bypass every API IP limiter. If Cloudflare proxying is introduced,
+		# first restrict trusted sources to Cloudflare's maintained CIDRs.
+		reverse_proxy api:3001 {
+			header_up X-Forwarded-For {remote_host}
+			header_up X-Forwarded-Proto https
+		}
+	}
+
+	header {
+		# NOINDEX while the alpha is closed. The one item here that cannot be
+		# undone later: closing the access gate afterwards does not un-cache a
+		# search result. A header rather than a robots.txt in the bundle, because
+		# a header can be removed without rebuilding the client. Android's
+		# Digital Asset Links verifier ignores robots directives (TWA unaffected).
+		X-Robots-Tag "noindex, nofollow, noarchive, nosnippet"
+		X-Content-Type-Options nosniff
+		X-Frame-Options DENY
+		Referrer-Policy no-referrer
+		# Safe here (unlike the Mac tunnel variant) because TLS is real.
+		Strict-Transport-Security "max-age=31536000; includeSubDomains"
+		-Server
+	}
+
+	# DIGITAL ASSET LINKS — served literally, NEVER through the SPA fallback.
+	#
+	# Without this block, `try_files {path} /index.html` answers a MISSING
+	# assetlinks.json with 200 text/html. Chrome verifies asset links on-device,
+	# requires 200 + application/json, and follows no redirects, so it rejects
+	# the HTML shell and the APK opens WITH AN ADDRESS BAR — indistinguishable
+	# from a wrong signing fingerprint, and `curl -I` says 200 either way. With
+	# this block a missing file is an honest 404.
+	handle /.well-known/* {
+		root * /srv/www
+		file_server
+	}
+
+	# SEARCH ENGINES (M47 §5). The game stays out of search results through the
+	# X-Robots-Tag header above, and a crawler must be ALLOWED to fetch a page to
+	# see that header, so robots.txt allows everything except the API and points
+	# at the website's sitemap. Without these two routes the SPA fallback answered
+	# both with index.html as 200 text/html: an unparseable robots file and a soft 404.
+	handle /robots.txt {
+		header Content-Type "text/plain; charset=utf-8"
+		header Cache-Control "public, max-age=3600"
+		respond <<ROBOTS
+			User-agent: *
+			Allow: /
+			Disallow: /api/
+			Sitemap: https://pixelkingdomwars.com/sitemap.xml
+			ROBOTS 200
+	}
+	handle /sitemap.xml {
+		header Cache-Control no-store
+		respond 404
+	}
+
+	# Snapshots are accessible only through the explicit static/version route.
+	@retentionInternal path /_releases/* /_assets/*
+	handle @retentionInternal {
+		header Cache-Control no-store
+		respond 404
+	}
+
+	# A query is a cache key AND a real generation selector. A validated full
+	# SHA cannot traverse outside this public-only, checksummed snapshot root.
+	@versionedStatic {
+		path /assets/* /atlas/* /audio/* /brand/* /icons/* /asset-pack.json /sw.js
+		expression `{query.v}.matches('^[0-9a-f]{40}$')`
+	}
+	handle @versionedStatic {
+		root * /srv/www/_releases/{query.v}
+		@existing file {path}
+		header @existing Cache-Control "public, max-age=31536000, immutable"
+		@missing not file {path}
+		header @missing Cache-Control no-store
+		file_server
+	}
+	@invalidStaticVersion {
+		path /atlas/* /audio/* /brand/* /asset-pack.json /sw.js
+		expression `{query.v} != ''`
+	}
+	handle @invalidStaticVersion {
+		header Cache-Control no-store
+		respond 404
+	}
+	# The HTML shell pins this one short icon revision; arbitrary explicit
+	# versions must not silently receive today's image under another cache key.
+	@invalidIconVersion {
+		path /icons/*
+		expression `{query.v} != '' && {query.v} != 'c0137365' && !{query.v}.matches('^[0-9a-f]{40}$')`
+	}
+	handle @invalidIconVersion {
+		header Cache-Control no-store
+		respond 404
+	}
+
+	# Vite chunks have content-hashed paths without a build query. This union
+	# retains exact old chunk bytes without adding them to the new pack inventory.
+	handle /assets/* {
+		root * /srv/www/_assets
+		@existing file {path}
+		header @existing Cache-Control "public, max-age=31536000, immutable"
+		@missing not file {path}
+		header @missing Cache-Control no-store
+		file_server
+	}
+	@static path /atlas/* /audio/* /brand/* /icons/* /asset-pack.json
+	handle @static {
+		root * /srv/www
+		@existing file {path}
+		header @existing Cache-Control "public, max-age=31536000, immutable"
+		@missing not file {path}
+		header @missing Cache-Control no-store
+		file_server
+	}
+
+	# NATIVE UPDATE CHANNEL (M45 §3). Signed APKs live in the deed R2 bucket at
+	# native/releases/<versionCode>-<sha256>.apk and are never overwritten, so
+	# only that exact name shape is proxied and marked immutable. The API never
+	# serves APK bytes. Player cookies never travel to R2 and none come back;
+	# only a 2xx is marked cacheable, so an upload race is never cached as a miss.
+	# R2_PUBLIC_BASE_URL must be scheme://host only: Caddy refuses to start on an
+	# upstream URL with any path, including a trailing slash.
+	# The named capture `apk` is the version code for the download file name below.
+	@nativeRelease path_regexp apk ^/native/releases/([0-9]{1,6})-[0-9a-f]{64}\.apk$
+	handle @nativeRelease {
+		# M47 §5: a browser download saves as pixel-kingdom-wars-<code>.apk, not
+		# <code>-<sha256>.apk. Same path and same immutable caching, so the in-app
+		# updater (which names its own file) and every cached copy are unchanged.
+		header {
+			Cache-Control "public, max-age=31536000, immutable"
+			Content-Disposition `attachment; filename="pixel-kingdom-wars-{re.apk.1}.apk"`
+			match status 2xx
+		}
+		header {
+			Cache-Control no-store
+			match status 3xx 4xx 5xx
+		}
+		reverse_proxy {$R2_PUBLIC_BASE_URL} {
+			header_up Host {http.reverse_proxy.upstream.hostport}
+			header_up -Cookie
+			header_up -Authorization
+			header_down -Set-Cookie
+			header_down -Cache-Control
+		}
+	}
+	handle /native/releases/* {
+		header Cache-Control no-store
+		respond 404
+	}
+
+	# Everything else is the built client, bind-mounted read-only from
+	# infra/dist (published there by infra/deploy.sh — see docker-compose.prod.yml).
+	# BEGIN NATIVE CONTENT
+	handle /native-content/* {
+		reverse_proxy native-content:8080
+	}
+	# END NATIVE CONTENT
+
+	handle {
+		root * /srv/www
+		# Caddy 2.11 serves .webmanifest with no Content-Type at all (verified).
+		header /manifest.webmanifest Content-Type application/manifest+json
+		# version.json is how a running client learns a newer bundle exists; any
+		# cache in front of it turns "update available" into a stale answer.
+		header /version.json Cache-Control no-store
+		# try_files → /index.html so a deep link lands on the SPA, not a 404.
+		try_files {path} /index.html
+		file_server
+	}
+
+	log {
+		output file /data/access.log {
+			roll_size 50MiB
+			roll_keep 5
+		}
+	}
+}

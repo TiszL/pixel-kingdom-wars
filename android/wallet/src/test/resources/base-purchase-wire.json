@@ -1,0 +1,151 @@
+{
+  "sourceCommit": "633c280086d98725c8a971a8f19f28c8a3c8a3ca",
+  "sourcePath": "apps/web/src/lib/chain.ts",
+  "sourceSha256": "8ec9eae90b864f7b78c62c54358cc7281f59849fe5568fea0ddef0c6de2948fa",
+  "provenance": "Actual canonical web functions executed after TypeScript compilation; only release address module injected; all amounts read from canonical shared constants",
+  "wallet": "4vJ9JU1bJJE96FWSJKvHsmmFADCg4gpZQff4P3bkLKi",
+  "reference": "8qbHbw2BbbTHBW1sbeqakYXVKRQM8Ne7pLK7m6CVfeR",
+  "blockhash": "CktRuQ2mttgRGkXJtyksdKHjUdc2C4TgDzyB98oEzy8",
+  "vectors": [
+    {
+      "label": "builder",
+      "kind": "builder",
+      "destination": null,
+      "amountLamports": "500000000",
+      "unsigned": "AQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAQIAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQFIYWPBRQO/BXM3bIQD3u92BIpeW1FjqBQ2b9mdMeY58IXpUVKBMf9RH7INZP+u1l2H2n+6Q15h0cL9IP9I6YGLCckG8+TYu3/GnGa2Mpo28hXejxTjqZrJrwK22YZEiRsAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICiUhjjlYWqk+yvRII7VeInfV9paZ8kTnStdQl6jjYoEALaTg1rccgnH0iz1r3pfSA8LFOGbth2ek9SDAMxFLIuAMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAQcHBgACAQMFBBHceaiWeRnVDggAZc0dAAAAAA==",
+      "instructions": [
+        {
+          "program": "mYYQFnpyGofG31y5oJkiKVmNwifbSXBMnQ5aUgQkL6b",
+          "data": "dc79a8967919d50e080065cd1d00000000",
+          "keys": [
+            {
+              "address": "AEtsnqdSXDwGDBeovnD9XoutQmNptcPWC8ygieZSkKHH",
+              "signer": false,
+              "writable": false
+            },
+            {
+              "address": "4vJ9JU1bJJE96FWSJKvHsmmFADCg4gpZQff4P3bkLKi",
+              "signer": true,
+              "writable": true
+            },
+            {
+              "address": "A1ja8GwrTM2KvS4tKJJaVaLk57xJeehuk2F9Exbz82QA",
+              "signer": false,
+              "writable": true
+            },
+            {
+              "address": "5sYVCRd1onSre8EKujE5vDKa9KeF2KuJvPA3rpRonfif",
+              "signer": false,
+              "writable": true
+            },
+            {
+              "address": "fCTc8TgJCvHUkn1aaME2gDcs69LpgtVXq1rmBSvS3Bx",
+              "signer": false,
+              "writable": true
+            },
+            {
+              "address": "8qbHbw2BbbTHBW1sbeqakYXVKRQM8Ne7pLK7m6CVfeR",
+              "signer": false,
+              "writable": false
+            },
+            {
+              "address": "11111111111111111111111111111111",
+              "signer": false,
+              "writable": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "expansion",
+      "kind": "expansion",
+      "destination": "A1ja8GwrTM2KvS4tKJJaVaLk57xJeehuk2F9Exbz82QA",
+      "amountLamports": "150000000",
+      "unsigned": "AQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAIEAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQGF6VFSgTH/UR+yDWT/rtZdh9p/ukNeYdHC/SD/SOmBiwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwECAwABAwwCAAAAgNHwCAAAAAA=",
+      "instructions": [
+        {
+          "program": "11111111111111111111111111111111",
+          "data": "0200000080d1f00800000000",
+          "keys": [
+            {
+              "address": "4vJ9JU1bJJE96FWSJKvHsmmFADCg4gpZQff4P3bkLKi",
+              "signer": true,
+              "writable": true
+            },
+            {
+              "address": "A1ja8GwrTM2KvS4tKJJaVaLk57xJeehuk2F9Exbz82QA",
+              "signer": false,
+              "writable": true
+            },
+            {
+              "address": "8qbHbw2BbbTHBW1sbeqakYXVKRQM8Ne7pLK7m6CVfeR",
+              "signer": false,
+              "writable": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "mine",
+      "kind": "mine",
+      "destination": "A1ja8GwrTM2KvS4tKJJaVaLk57xJeehuk2F9Exbz82QA",
+      "amountLamports": "500000000",
+      "unsigned": "AQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAIEAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQGF6VFSgTH/UR+yDWT/rtZdh9p/ukNeYdHC/SD/SOmBiwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwECAwABAwwCAAAAAGXNHQAAAAA=",
+      "instructions": [
+        {
+          "program": "11111111111111111111111111111111",
+          "data": "020000000065cd1d00000000",
+          "keys": [
+            {
+              "address": "4vJ9JU1bJJE96FWSJKvHsmmFADCg4gpZQff4P3bkLKi",
+              "signer": true,
+              "writable": true
+            },
+            {
+              "address": "A1ja8GwrTM2KvS4tKJJaVaLk57xJeehuk2F9Exbz82QA",
+              "signer": false,
+              "writable": true
+            },
+            {
+              "address": "8qbHbw2BbbTHBW1sbeqakYXVKRQM8Ne7pLK7m6CVfeR",
+              "signer": false,
+              "writable": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "goldforge",
+      "kind": "mine",
+      "destination": "A1ja8GwrTM2KvS4tKJJaVaLk57xJeehuk2F9Exbz82QA",
+      "amountLamports": "100000000",
+      "unsigned": "AQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAIEAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQGF6VFSgTH/UR+yDWT/rtZdh9p/ukNeYdHC/SD/SOmBiwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwECAwABAwwCAAAAAOH1BQAAAAA=",
+      "instructions": [
+        {
+          "program": "11111111111111111111111111111111",
+          "data": "0200000000e1f50500000000",
+          "keys": [
+            {
+              "address": "4vJ9JU1bJJE96FWSJKvHsmmFADCg4gpZQff4P3bkLKi",
+              "signer": true,
+              "writable": true
+            },
+            {
+              "address": "A1ja8GwrTM2KvS4tKJJaVaLk57xJeehuk2F9Exbz82QA",
+              "signer": false,
+              "writable": true
+            },
+            {
+              "address": "8qbHbw2BbbTHBW1sbeqakYXVKRQM8Ne7pLK7m6CVfeR",
+              "signer": false,
+              "writable": false
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

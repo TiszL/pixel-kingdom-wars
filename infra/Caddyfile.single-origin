@@ -1,0 +1,109 @@
+# ONE ORIGIN: the game and its API behind a single hostname.
+#
+# Used by infra/serve-single-origin.sh for the Seeker test build, and it is the
+# shape a real domain should keep too.
+#
+# WHY THIS EXISTS AND NOT TWO HOSTNAMES.
+#
+# The session cookie is `sameSite: 'lax'` and host-only (apps/api/src/auth/
+# routes.ts). A browser does not send a Lax cookie on a cross-SITE request, and
+# "site" means registrable domain — so a game on foo.pages.dev talking to an API
+# on bar.trycloudflare.com never sends the session. Sign-in appears to succeed
+# and then every authenticated request 401s, which the client turns into a
+# forced logout: an endless bounce back to CONNECT WALLET that looks exactly
+# like a broken wallet integration.
+#
+# Worse, every free-subdomain host (pages.dev, trycloudflare.com, vercel.app,
+# ts.net, duckdns.org…) is on the Public Suffix List, so even two SIBLING
+# subdomains from the same provider are cross-site to each other.
+#
+# Serving both from one hostname sidesteps all of it: the cookie is first-party,
+# CORS is never consulted, and NOTHING in the application source changes. The
+# alternative — relaxing the cookie to SameSite=None — is a change to money-path
+# auth in a codebase with no CSRF token and no Origin check. Not worth it.
+{
+	auto_https off
+}
+
+:8080 {
+	encode gzip zstd
+
+	# API FIRST. `handle_path` STRIPS the /api prefix, which is required because
+	# the routes register at the root (game/routes.ts has no prefix). If this
+	# block came after the SPA fallback below, every API call would be answered
+	# with index.html and die as a JSON parse error somewhere unhelpful.
+	handle_path /api/* {
+		# THE REAL CLIENT IP HAS TO SURVIVE THE WHOLE CHAIN.
+		#
+		# Behind a Cloudflare Tunnel the path is:
+		#   browser -> Cloudflare edge -> cloudflared -> Caddy -> API
+		# and cloudflared connects over loopback. So `{remote_host}` here is ::1
+		# for EVERY player on earth. The API keys its rate limiter on the address
+		# it is told (trustProxy: 1), which means one 300/min bucket for the entire
+		# playerbase and 20 sign-ins per minute globally — the exact self-inflicted
+		# outage the trustProxy fix was written to prevent, reintroduced by the
+		# topology rather than the code. Verified: a request from the public
+		# internet was logged by the API as ::1.
+		#
+		# CF-Connecting-IP is set by the Cloudflare edge and cannot be forged by the
+		# client — Cloudflare overwrites any client-supplied value — and it is
+		# trustworthy HERE specifically because Caddy is on loopback and reachable
+		# only through the tunnel.
+		@cf header CF-Connecting-IP *
+		reverse_proxy @cf 127.0.0.1:8787 {
+			header_up X-Forwarded-For {http.request.header.Cf-Connecting-Ip}
+			header_up X-Forwarded-Proto https
+		}
+		# No Cloudflare in front (direct local testing): fall back to the socket peer.
+		reverse_proxy 127.0.0.1:8787 {
+			header_up X-Forwarded-For {remote_host}
+			header_up X-Forwarded-Proto https
+		}
+	}
+
+	# NOINDEX, everywhere, before anything else can be served.
+	#
+	# The domain is public knowledge (announced on X), there is no robots.txt and
+	# index.html carries a marketing description — so it WILL be crawled, indexed
+	# and archived. This is the one item here that cannot be undone later: closing
+	# the access gate afterwards does not un-cache a search result. A header rather
+	# than a robots.txt in the bundle, because a header can be removed without
+	# rebuilding the client. Android's Digital Asset Links verifier ignores robots
+	# directives, so this does not affect the TWA.
+	header X-Robots-Tag "noindex, nofollow, noarchive, nosnippet"
+
+	# DIGITAL ASSET LINKS — served literally, NEVER through the SPA fallback.
+	#
+	# Without this block, `try_files {path} /index.html` answers a MISSING
+	# assetlinks.json with 200 text/html (index.html, 2726 bytes — verified). Chrome
+	# verifies asset links on-device, requires 200 + application/json, and follows
+	# no redirects, so it rejects the HTML shell and the app opens WITH AN ADDRESS
+	# BAR — indistinguishable from a wrong signing fingerprint. Worse, every
+	# `curl -I` says 200, so the check you would run to confirm it lies to you.
+	# With this block a missing file is an honest 404.
+	handle /.well-known/* {
+		root * "{$WEB_DIST}"
+		file_server
+	}
+
+	# Missing artwork is an honest, retriable 404, never a successful SPA shell.
+	handle /brand/* {
+		root * "{$WEB_DIST}"
+		@missing not file {path}
+		header @missing Cache-Control no-store
+		file_server
+	}
+
+	# Everything else is the built client. try_files → /index.html so a deep link
+	# lands on the SPA rather than a 404.
+	handle {
+		root * "{$WEB_DIST}"
+		# Caddy 2.11 serves .webmanifest with no Content-Type at all (verified).
+		header /manifest.webmanifest Content-Type application/manifest+json
+		# version.json is how a running client learns a newer bundle exists; any
+		# cache in front of it turns "update available" into a stale answer.
+		header /version.json Cache-Control no-store
+		try_files {path} /index.html
+		file_server
+	}
+}

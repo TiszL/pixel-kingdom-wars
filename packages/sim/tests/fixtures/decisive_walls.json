@@ -1,0 +1,302 @@
+{
+  "hash": "8437256c",
+  "outcome": {
+    "stars": 3,
+    "destructionPct": 100,
+    "keepDestroyed": true,
+    "vaultDestroyed": false,
+    "mineDestroyed": false,
+    "victory": true,
+    "buildings": [
+      {
+        "id": "keep",
+        "type": "keep",
+        "hp": 0,
+        "maxHp": 1500,
+        "destroyed": true
+      },
+      {
+        "id": "cannon",
+        "type": "cannon",
+        "hp": 0,
+        "maxHp": 420,
+        "destroyed": true
+      },
+      {
+        "id": "w_6_6",
+        "type": "wall",
+        "hp": 600,
+        "maxHp": 600,
+        "destroyed": false
+      },
+      {
+        "id": "w_6_16",
+        "type": "wall",
+        "hp": 600,
+        "maxHp": 600,
+        "destroyed": false
+      },
+      {
+        "id": "w_7_6",
+        "type": "wall",
+        "hp": 600,
+        "maxHp": 600,
+        "destroyed": false
+      },
+      {
+        "id": "w_7_16",
+        "type": "wall",
+        "hp": 600,
+        "maxHp": 600,
+        "destroyed": false
+      },
+      {
+        "id": "w_8_6",
+        "type": "wall",
+        "hp": 600,
+        "maxHp": 600,
+        "destroyed": false
+      },
+      {
+        "id": "w_8_16",
+        "type": "wall",
+        "hp": 600,
+        "maxHp": 600,
+        "destroyed": false
+      },
+      {
+        "id": "w_9_6",
+        "type": "wall",
+        "hp": 600,
+        "maxHp": 600,
+        "destroyed": false
+      },
+      {
+        "id": "w_9_16",
+        "type": "wall",
+        "hp": 600,
+        "maxHp": 600,
+        "destroyed": false
+      },
+      {
+        "id": "w_10_6",
+        "type": "wall",
+        "hp": 600,
+        "maxHp": 600,
+        "destroyed": false
+      },
+      {
+        "id": "w_10_16",
+        "type": "wall",
+        "hp": 600,
+        "maxHp": 600,
+        "destroyed": false
+      },
+      {
+        "id": "w_11_16",
+        "type": "wall",
+        "hp": 600,
+        "maxHp": 600,
+        "destroyed": false
+      },
+      {
+        "id": "w_12_6",
+        "type": "wall",
+        "hp": 600,
+        "maxHp": 600,
+        "destroyed": false
+      },
+      {
+        "id": "w_12_16",
+        "type": "wall",
+        "hp": 600,
+        "maxHp": 600,
+        "destroyed": false
+      },
+      {
+        "id": "w_13_6",
+        "type": "wall",
+        "hp": 600,
+        "maxHp": 600,
+        "destroyed": false
+      },
+      {
+        "id": "w_13_16",
+        "type": "wall",
+        "hp": 600,
+        "maxHp": 600,
+        "destroyed": false
+      },
+      {
+        "id": "w_14_6",
+        "type": "wall",
+        "hp": 600,
+        "maxHp": 600,
+        "destroyed": false
+      },
+      {
+        "id": "w_14_16",
+        "type": "wall",
+        "hp": 600,
+        "maxHp": 600,
+        "destroyed": false
+      },
+      {
+        "id": "w_15_6",
+        "type": "wall",
+        "hp": 600,
+        "maxHp": 600,
+        "destroyed": false
+      },
+      {
+        "id": "w_15_16",
+        "type": "wall",
+        "hp": 600,
+        "maxHp": 600,
+        "destroyed": false
+      },
+      {
+        "id": "w_16_6",
+        "type": "wall",
+        "hp": 600,
+        "maxHp": 600,
+        "destroyed": false
+      },
+      {
+        "id": "w_16_16",
+        "type": "wall",
+        "hp": 600,
+        "maxHp": 600,
+        "destroyed": false
+      },
+      {
+        "id": "w_6_7",
+        "type": "wall",
+        "hp": 600,
+        "maxHp": 600,
+        "destroyed": false
+      },
+      {
+        "id": "w_16_7",
+        "type": "wall",
+        "hp": 600,
+        "maxHp": 600,
+        "destroyed": false
+      },
+      {
+        "id": "w_6_8",
+        "type": "wall",
+        "hp": 600,
+        "maxHp": 600,
+        "destroyed": false
+      },
+      {
+        "id": "w_16_8",
+        "type": "wall",
+        "hp": 600,
+        "maxHp": 600,
+        "destroyed": false
+      },
+      {
+        "id": "w_6_9",
+        "type": "wall",
+        "hp": 600,
+        "maxHp": 600,
+        "destroyed": false
+      },
+      {
+        "id": "w_16_9",
+        "type": "wall",
+        "hp": 600,
+        "maxHp": 600,
+        "destroyed": false
+      },
+      {
+        "id": "w_6_10",
+        "type": "wall",
+        "hp": 0,
+        "maxHp": 600,
+        "destroyed": true
+      },
+      {
+        "id": "w_16_10",
+        "type": "wall",
+        "hp": 600,
+        "maxHp": 600,
+        "destroyed": false
+      },
+      {
+        "id": "w_6_11",
+        "type": "wall",
+        "hp": 0,
+        "maxHp": 600,
+        "destroyed": true
+      },
+      {
+        "id": "w_16_11",
+        "type": "wall",
+        "hp": 600,
+        "maxHp": 600,
+        "destroyed": false
+      },
+      {
+        "id": "w_6_12",
+        "type": "wall",
+        "hp": 0,
+        "maxHp": 600,
+        "destroyed": true
+      },
+      {
+        "id": "w_16_12",
+        "type": "wall",
+        "hp": 600,
+        "maxHp": 600,
+        "destroyed": false
+      },
+      {
+        "id": "w_6_13",
+        "type": "wall",
+        "hp": 600,
+        "maxHp": 600,
+        "destroyed": false
+      },
+      {
+        "id": "w_16_13",
+        "type": "wall",
+        "hp": 600,
+        "maxHp": 600,
+        "destroyed": false
+      },
+      {
+        "id": "w_6_14",
+        "type": "wall",
+        "hp": 600,
+        "maxHp": 600,
+        "destroyed": false
+      },
+      {
+        "id": "w_16_14",
+        "type": "wall",
+        "hp": 600,
+        "maxHp": 600,
+        "destroyed": false
+      },
+      {
+        "id": "w_6_15",
+        "type": "wall",
+        "hp": 600,
+        "maxHp": 600,
+        "destroyed": false
+      },
+      {
+        "id": "w_16_15",
+        "type": "wall",
+        "hp": 600,
+        "maxHp": 600,
+        "destroyed": false
+      }
+    ],
+    "ticks": 334,
+    "eventCount": 217
+  }
+}

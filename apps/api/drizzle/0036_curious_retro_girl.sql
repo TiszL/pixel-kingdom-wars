@@ -1,0 +1,1 @@
+ALTER TYPE "public"."deposit_kind" ADD VALUE 'energy_pack' BEFORE 'shield';

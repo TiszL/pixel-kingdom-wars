@@ -1,0 +1,864 @@
+{
+ "BAKE": {
+  "ampCap": 64,
+  "cap": 20,
+  "size": 99
+ },
+ "CLASS_CFG": {
+  "apron": {
+   "amp": 1.5,
+   "feather": 2,
+   "min": 1,
+   "period": 7,
+   "seed": 11933
+  },
+  "beachNoise": {
+   "amp": 1.6,
+   "period": 8,
+   "seed": 11031
+  },
+  "beachW": 2,
+  "bend": {
+   "clear": 1.5,
+   "iters": 3,
+   "seed": 15197,
+   "taper": 26,
+   "taperK": 2
+  },
+  "bridge": {
+   "dirs": 24,
+   "head": 1.6,
+   "k": 3,
+   "max": 30,
+   "seed": 19771,
+   "taper": 0.35,
+   "w": 4,
+   "wAdd": 2,
+   "wob": 1.2,
+   "wobPeriod": 5
+  },
+  "claimRag": {
+   "amp": 2.2,
+   "period": 5,
+   "seed": 28193
+  },
+  "classWarp": {
+   "amp": 12,
+   "amp2": 4,
+   "amp3": 2,
+   "cell3": 6,
+   "period": 44,
+   "period2": 14,
+   "seed": 14993,
+   "zig": 1.6,
+   "zigCell": 5
+  },
+  "clearing": {
+   "amp": 2,
+   "amp2": 5,
+   "corner": 10,
+   "extra": 4,
+   "lobe": 4,
+   "period": 9,
+   "period2": 4,
+   "seed": 23326,
+   "seed2": 15473
+  },
+  "coastK": 8,
+  "coastNoise": {
+   "amp": 3,
+   "period": 20,
+   "seed": 7178
+  },
+  "coastNoise2": {
+   "amp": 2.2,
+   "period": 7,
+   "seed": 31795
+  },
+  "cornerRadius": 3,
+  "deepT": 12,
+  "far": 10000,
+  "fieldT": 0.5,
+  "force": 3,
+  "forestT": 0.5,
+  "g2T": 0.5,
+  "hasShore": false,
+  "inlandK": 2,
+  "inlandNoise": {
+   "amp": 1,
+   "period": 9,
+   "seed": 6734
+  },
+  "island": {
+   "amp": 3.5,
+   "amp2": 2,
+   "base": 4,
+   "corner": 12,
+   "halo": 10,
+   "haloDeep": 300,
+   "haloFade": 8,
+   "k": 4,
+   "lobe": 9,
+   "period": 11,
+   "period2": 5,
+   "seed": 29123,
+   "shallow": 0.8,
+   "shallowPeriod": 17,
+   "slope": 2,
+   "zig": 1.2,
+   "zigCell": 3
+  },
+  "lakeWarp": {
+   "amp": 5,
+   "amp2": 2.6,
+   "period": 29,
+   "period2": 11,
+   "seed": 24081
+  },
+  "parcel": {
+   "block": 28,
+   "max": 18,
+   "min": 10,
+   "salt": 39484
+  },
+  "plotMargin": 2,
+  "rim": {
+   "gap": 0
+  },
+  "ringNoise": {
+   "amp": 3,
+   "period": 9,
+   "seed": 23326
+  },
+  "riverMeander": {
+   "amp": 2.6,
+   "amp2": 1,
+   "hw": 0.3,
+   "hwPeriod": 21,
+   "period": 26,
+   "period2": 9,
+   "seed": 27437,
+   "step": 5
+  },
+  "riverNoiseReach": 2,
+  "roadCoast": 3,
+  "roadInland": 2,
+  "rockPlotGap": 2,
+  "rockT": 0.5,
+  "rockWaterGap": 2,
+  "slopeStep": 6,
+  "slopeT": "Infinity",
+  "snowT": 0.5,
+  "specialT": 0.5,
+  "warpFine": 1
+ },
+ "CLASS_RANK": [2,3,4,5,13,12,9,6,7,11,8,0,1,10],
+ "DESPECKLE_PASSES": 6,
+ "LINES": {
+  "lensMargin": 6,
+  "riverHwMin": 1.5,
+  "riverNoiseK": 0.35,
+  "trackHwMin": 1
+ },
+ "LINE_CAP": {
+  "hwMax": 49,
+  "margin": 196,
+  "perDeed": 128
+ },
+ "MAP_DESPECKLE": 2,
+ "PLOT_CENTRE": 49,
+ "TILES": 98,
+ "count": 302,
+ "generator": "251203cdb5ac7ac1746b028619374210b14619c55a9ad11df5a7dbd09a121d22",
+ "islandMaxMargin": "40376d8c4cdac4d6",
+ "islandReach": "4044b6c6266d626b",
+ "mapNoiseDefault": [14,31251,1,0,14,6597,1,0,5,20011,1,0,5,27911,1,0,11,25011,1,0,5,12145,1,0,29,24081,2,0,29,24082,2,0,11,24083,2,0,11,24084,2,0,20,7178,2,0,7,31795,2,0,9,6734,4,0,8,11031,4,0,11,29123,8,0,5,29124,8,0,17,29126,8,0,5,19771,16,0,9,23326,16,0,7,11933,16,0,5,28193,32,0,48,28435,64,0,20,7463,64,0,7,20253,64,0,3,10871,64,0,2,23833,1,0,3,29125,8,0,4,15473,16,0],
+ "pin": "02e9da8414156b9e0000df1653de6273b196cca6",
+ "plotGeom": [
+  [1,14,4,"402a000000000000","404448f7a675251b","4045000000000000","404c000000000000"],
+  [2,14,4,"402a000000000000","404448f7a675251b","4045000000000000","404c000000000000"],
+  [3,16,4,"402c000000000000","4044fdfc99a91efa","4044800000000000","404c800000000000"],
+  [4,16,5,"402e000000000000","4045b3018cdd18d8","4044800000000000","404c800000000000"],
+  [5,16,5,"402e000000000000","4045b3018cdd18d8","4044800000000000","404c800000000000"],
+  [6,18,5,"4030000000000000","40466806801112b6","4044000000000000","404d000000000000"],
+  [7,18,5,"4030000000000000","40466806801112b6","4044000000000000","404d000000000000"],
+  [8,18,6,"4031000000000000","40471d0b73450c94","4044000000000000","404d000000000000"],
+  [9,20,6,"4032000000000000","4047d21066790673","4043800000000000","404d800000000000"],
+  [10,20,6,"4032000000000000","4047d21066790673","4043800000000000","404d800000000000"],
+  [11,20,6,"4032000000000000","4047d21066790673","4043800000000000","404d800000000000"],
+  [12,22,7,"4034000000000000","40493c1a4ce0fa30","4043000000000000","404e000000000000"],
+  [13,22,7,"4034000000000000","40493c1a4ce0fa30","4043000000000000","404e000000000000"],
+  [14,22,7,"4034000000000000","40493c1a4ce0fa30","4043000000000000","404e000000000000"],
+  [15,24,7,"4035000000000000","4049f11f4014f40e","4042800000000000","404e800000000000"],
+  [16,24,8,"4036000000000000","404aa6243348edec","4042800000000000","404e800000000000"],
+  [17,24,8,"4036000000000000","404aa6243348edec","4042800000000000","404e800000000000"],
+  [18,26,8,"4037000000000000","404b5b29267ce7cb","4042000000000000","404f000000000000"],
+  [19,26,8,"4037000000000000","404b5b29267ce7cb","4042000000000000","404f000000000000"],
+  [20,26,9,"4038000000000000","404c102e19b0e1a9","4042000000000000","404f000000000000"]
+ ],
+ "plotGeomColumns": ["level","claim","ring","half","R","min","max"],
+ "plotRule": [
+  [14,4],
+  [14,4],
+  [16,4],
+  [16,5],
+  [16,5],
+  [18,5],
+  [18,5],
+  [18,6],
+  [20,6],
+  [20,6],
+  [20,6],
+  [22,7],
+  [22,7],
+  [22,7],
+  [24,7],
+  [24,8],
+  [24,8],
+  [26,8],
+  [26,8],
+  [26,9]
+ ],
+ "schema": 1,
+ "sources": {
+  "concepts/globe3d-2026-09-23/src/realm/classify.js": "d94bc474a96b92814daf70e7e912486b2a250ba2f54c40f4612eca8ac758d63e",
+  "concepts/globe3d-2026-09-23/src/realm/contracts.js": "3d3215dee2273b456c98b6684f5dc6835c1aaea1c3f7ea98e55fa462cb693eb0",
+  "concepts/globe3d-2026-09-23/src/realm/core.js": "8a6a17ceb4c2d65d0b18383b57b7f20b0685f471472e7144263b8de0a1f19941",
+  "concepts/globe3d-2026-09-23/src/realm/glsl/common.glsl.js": "7492ff9f85f283d3263fa3671907a9116ba646b5fdb56b100ae7cad73c35d52c",
+  "concepts/globe3d-2026-09-23/src/realm/ground.js": "c6cca38727c661657874b8fbf79f3837e10de96b8755d401d4a678cccfd715e2",
+  "concepts/globe3d-2026-09-23/src/realm/groundcost.js": "52ed0b62657866babdaa84c420fa78ea573e4dbade5406d3aee8defdf8ca05fa",
+  "concepts/globe3d-2026-09-23/src/realm/loader.js": "3aedcb60d54c73c883f5f8d4032ed1959d2e9f0febad0441f6ca3a9cd37668cb",
+  "concepts/globe3d-2026-09-23/src/realm/minimap.js": "75de5dbd648fa3f13a37473995e4f4ecdf357193531f4c48d45fd84e851ad8c9"
+ },
+ "stageB": {
+  "famClamp": [
+   [
+    "crownlands",
+    "undefined",
+    ["3fe3333333333333","3ffccccccccccccd"]
+   ],
+   [
+    "crownlands",
+    [0.5,2],
+    ["3fe0000000000000","4000000000000000"]
+   ],
+   [
+    "crownlands",
+    [0,2],
+    ["3fe3333333333333","3ffccccccccccccd"]
+   ],
+   [
+    "crownlands",
+    [0.5,1],
+    ["3fe3333333333333","3ffccccccccccccd"]
+   ],
+   [
+    "crownlands",
+    [0.5,4],
+    ["3fe0000000000000","4010000000000000"]
+   ],
+   [
+    "crownlands",
+    [0.5,4.5],
+    ["3fe3333333333333","3ffccccccccccccd"]
+   ],
+   [
+    "crownlands",
+    [0.5],
+    ["3fe3333333333333","3ffccccccccccccd"]
+   ],
+   [
+    "crownlands",
+    ["0.5",2],
+    ["3fe3333333333333","3ffccccccccccccd"]
+   ],
+   [
+    "crownlands",
+    [0.99,1.01],
+    ["3fefae147ae147ae","3ff028f5c28f5c29"]
+   ],
+   [
+    "crownlands",
+    ["NaN",2],
+    ["3fe3333333333333","3ffccccccccccccd"]
+   ],
+   [
+    "elderwood",
+    "undefined",
+    ["3fe3333333333333","4003333333333333"]
+   ],
+   [
+    "elderwood",
+    [0.5,2],
+    ["3fe0000000000000","4000000000000000"]
+   ],
+   [
+    "elderwood",
+    [0,2],
+    ["3fe3333333333333","4003333333333333"]
+   ],
+   [
+    "elderwood",
+    [0.5,1],
+    ["3fe3333333333333","4003333333333333"]
+   ],
+   [
+    "elderwood",
+    [0.5,4],
+    ["3fe0000000000000","4010000000000000"]
+   ],
+   [
+    "elderwood",
+    [0.5,4.5],
+    ["3fe3333333333333","4003333333333333"]
+   ],
+   [
+    "elderwood",
+    [0.5],
+    ["3fe3333333333333","4003333333333333"]
+   ],
+   [
+    "elderwood",
+    ["0.5",2],
+    ["3fe3333333333333","4003333333333333"]
+   ],
+   [
+    "elderwood",
+    [0.99,1.01],
+    ["3fefae147ae147ae","3ff028f5c28f5c29"]
+   ],
+   [
+    "elderwood",
+    ["NaN",2],
+    ["3fe3333333333333","4003333333333333"]
+   ],
+   [
+    "thornwake",
+    "undefined",
+    ["3fe3333333333333","4003333333333333"]
+   ],
+   [
+    "thornwake",
+    [0.5,2],
+    ["3fe0000000000000","4000000000000000"]
+   ],
+   [
+    "thornwake",
+    [0,2],
+    ["3fe3333333333333","4003333333333333"]
+   ],
+   [
+    "thornwake",
+    [0.5,1],
+    ["3fe3333333333333","4003333333333333"]
+   ],
+   [
+    "thornwake",
+    [0.5,4],
+    ["3fe0000000000000","4010000000000000"]
+   ],
+   [
+    "thornwake",
+    [0.5,4.5],
+    ["3fe3333333333333","4003333333333333"]
+   ],
+   [
+    "thornwake",
+    [0.5],
+    ["3fe3333333333333","4003333333333333"]
+   ],
+   [
+    "thornwake",
+    ["0.5",2],
+    ["3fe3333333333333","4003333333333333"]
+   ],
+   [
+    "thornwake",
+    [0.99,1.01],
+    ["3fefae147ae147ae","3ff028f5c28f5c29"]
+   ],
+   [
+    "thornwake",
+    ["NaN",2],
+    ["3fe3333333333333","4003333333333333"]
+   ],
+   [
+    "seeker-reach",
+    "undefined",
+    ["3fe3333333333333","4003333333333333"]
+   ],
+   [
+    "seeker-reach",
+    [0.5,2],
+    ["3fe0000000000000","4000000000000000"]
+   ],
+   [
+    "seeker-reach",
+    [0,2],
+    ["3fe3333333333333","4003333333333333"]
+   ],
+   [
+    "seeker-reach",
+    [0.5,1],
+    ["3fe3333333333333","4003333333333333"]
+   ],
+   [
+    "seeker-reach",
+    [0.5,4],
+    ["3fe0000000000000","4010000000000000"]
+   ],
+   [
+    "seeker-reach",
+    [0.5,4.5],
+    ["3fe3333333333333","4003333333333333"]
+   ],
+   [
+    "seeker-reach",
+    [0.5],
+    ["3fe3333333333333","4003333333333333"]
+   ],
+   [
+    "seeker-reach",
+    ["0.5",2],
+    ["3fe3333333333333","4003333333333333"]
+   ],
+   [
+    "seeker-reach",
+    [0.99,1.01],
+    ["3fefae147ae147ae","3ff028f5c28f5c29"]
+   ],
+   [
+    "seeker-reach",
+    ["NaN",2],
+    ["3fe3333333333333","4003333333333333"]
+   ],
+   [
+    "cinderfall",
+    "undefined",
+    ["3fe3333333333333","3ffccccccccccccd"]
+   ],
+   [
+    "cinderfall",
+    [0.5,2],
+    ["3fe0000000000000","4000000000000000"]
+   ],
+   [
+    "cinderfall",
+    [0,2],
+    ["3fe3333333333333","3ffccccccccccccd"]
+   ],
+   [
+    "cinderfall",
+    [0.5,1],
+    ["3fe3333333333333","3ffccccccccccccd"]
+   ],
+   [
+    "cinderfall",
+    [0.5,4],
+    ["3fe0000000000000","4010000000000000"]
+   ],
+   [
+    "cinderfall",
+    [0.5,4.5],
+    ["3fe3333333333333","3ffccccccccccccd"]
+   ],
+   [
+    "cinderfall",
+    [0.5],
+    ["3fe3333333333333","3ffccccccccccccd"]
+   ],
+   [
+    "cinderfall",
+    ["0.5",2],
+    ["3fe3333333333333","3ffccccccccccccd"]
+   ],
+   [
+    "cinderfall",
+    [0.99,1.01],
+    ["3fefae147ae147ae","3ff028f5c28f5c29"]
+   ],
+   [
+    "cinderfall",
+    ["NaN",2],
+    ["3fe3333333333333","3ffccccccccccccd"]
+   ],
+   [
+    "nowhere",
+    "undefined",
+    ["3fe3333333333333","3ffccccccccccccd"]
+   ],
+   [
+    "nowhere",
+    [0.5,2],
+    ["3fe0000000000000","4000000000000000"]
+   ],
+   [
+    "nowhere",
+    [0,2],
+    ["3fe3333333333333","3ffccccccccccccd"]
+   ],
+   [
+    "nowhere",
+    [0.5,1],
+    ["3fe3333333333333","3ffccccccccccccd"]
+   ],
+   [
+    "nowhere",
+    [0.5,4],
+    ["3fe0000000000000","4010000000000000"]
+   ],
+   [
+    "nowhere",
+    [0.5,4.5],
+    ["3fe3333333333333","3ffccccccccccccd"]
+   ],
+   [
+    "nowhere",
+    [0.5],
+    ["3fe3333333333333","3ffccccccccccccd"]
+   ],
+   [
+    "nowhere",
+    ["0.5",2],
+    ["3fe3333333333333","3ffccccccccccccd"]
+   ],
+   [
+    "nowhere",
+    [0.99,1.01],
+    ["3fefae147ae147ae","3ff028f5c28f5c29"]
+   ],
+   [
+    "nowhere",
+    ["NaN",2],
+    ["3fe3333333333333","3ffccccccccccccd"]
+   ]
+  ],
+  "gemDrift": [
+   [
+    null,
+    ["0000000000000000","0000000000000000"]
+   ],
+   [
+    {},
+    ["0000000000000000","0000000000000000"]
+   ],
+   [
+    {
+     "drift": [7,0],
+     "frameMs": 200
+    },
+    ["4014000000000000","0000000000000000"]
+   ],
+   [
+    {
+     "drift": [3,-2],
+     "frameMs": 150
+    },
+    ["4006db6db6db6db7","bffe79e79e79e79f"]
+   ],
+   [
+    {
+     "drift": [1],
+     "frameMs": 200
+    },
+    ["0000000000000000","0000000000000000"]
+   ],
+   [
+    {
+     "drift": [1,1],
+     "frameMs": 0
+    },
+    ["0000000000000000","0000000000000000"]
+   ]
+  ],
+  "gemHighlight": [
+   ["crownlands","0000000000000000"],
+   ["elderwood","0000000000000000"],
+   ["thornwake","0000000000000000"],
+   ["seeker-reach","3fdccccccccccccd"],
+   ["cinderfall","0000000000000000"],
+   ["nowhere","0000000000000000"]
+  ],
+  "note": "waterPhaseStep(loop) (loop null = absent); famClamp({ id, map: { famClamp } }) and waterGems({ id, map: { waterGems } }) per realm id × override (\"undefined\" = the key absent; \"NaN\" = the number NaN; a string stays a string, which the web rejects). Doubles as IEEE-754 bits.",
+  "waterGems": [
+   ["crownlands","undefined","0000000000000000"],
+   ["crownlands",0,"0000000000000000"],
+   ["crownlands",0.05,"3fa999999999999a"],
+   ["crownlands",0.2,"3fc999999999999a"],
+   ["crownlands",0.21,"0000000000000000"],
+   ["crownlands",-0.01,"0000000000000000"],
+   ["crownlands","NaN","0000000000000000"],
+   ["crownlands","0.1","0000000000000000"],
+   ["elderwood","undefined","0000000000000000"],
+   ["elderwood",0,"0000000000000000"],
+   ["elderwood",0.05,"3fa999999999999a"],
+   ["elderwood",0.2,"3fc999999999999a"],
+   ["elderwood",0.21,"0000000000000000"],
+   ["elderwood",-0.01,"0000000000000000"],
+   ["elderwood","NaN","0000000000000000"],
+   ["elderwood","0.1","0000000000000000"],
+   ["thornwake","undefined","0000000000000000"],
+   ["thornwake",0,"0000000000000000"],
+   ["thornwake",0.05,"3fa999999999999a"],
+   ["thornwake",0.2,"3fc999999999999a"],
+   ["thornwake",0.21,"0000000000000000"],
+   ["thornwake",-0.01,"0000000000000000"],
+   ["thornwake","NaN","0000000000000000"],
+   ["thornwake","0.1","0000000000000000"],
+   ["seeker-reach","undefined","3f9eb851eb851eb8"],
+   ["seeker-reach",0,"0000000000000000"],
+   ["seeker-reach",0.05,"3fa999999999999a"],
+   ["seeker-reach",0.2,"3fc999999999999a"],
+   ["seeker-reach",0.21,"3f9eb851eb851eb8"],
+   ["seeker-reach",-0.01,"3f9eb851eb851eb8"],
+   ["seeker-reach","NaN","3f9eb851eb851eb8"],
+   ["seeker-reach","0.1","3f9eb851eb851eb8"],
+   ["cinderfall","undefined","0000000000000000"],
+   ["cinderfall",0,"0000000000000000"],
+   ["cinderfall",0.05,"3fa999999999999a"],
+   ["cinderfall",0.2,"3fc999999999999a"],
+   ["cinderfall",0.21,"0000000000000000"],
+   ["cinderfall",-0.01,"0000000000000000"],
+   ["cinderfall","NaN","0000000000000000"],
+   ["cinderfall","0.1","0000000000000000"],
+   ["nowhere","undefined","0000000000000000"],
+   ["nowhere",0,"0000000000000000"],
+   ["nowhere",0.05,"3fa999999999999a"],
+   ["nowhere",0.2,"3fc999999999999a"],
+   ["nowhere",0.21,"0000000000000000"],
+   ["nowhere",-0.01,"0000000000000000"],
+   ["nowhere","NaN","0000000000000000"],
+   ["nowhere","0.1","0000000000000000"]
+  ],
+  "waterPhaseStep": [
+   [null,2],
+   [
+    {},
+    2
+   ],
+   [
+    {
+     "frames": 8
+    },
+    2
+   ],
+   [
+    {
+     "frames": 8,
+     "phases": 4
+    },
+    2
+   ],
+   [
+    {
+     "frames": 16,
+     "phases": 4
+    },
+    4
+   ],
+   [
+    {
+     "frames": 16,
+     "phaseStep": 4,
+     "phases": 4
+    },
+    4
+   ],
+   [
+    {
+     "frames": 16,
+     "phaseStep": 3,
+     "phases": 4
+    },
+    3
+   ],
+   [
+    {
+     "frames": 8,
+     "phaseStep": 0,
+     "phases": 4
+    },
+    2
+   ],
+   [
+    {
+     "frames": 8,
+     "phaseStep": -2,
+     "phases": 4
+    },
+    2
+   ],
+   [
+    {
+     "frames": 8,
+     "phaseStep": 2.5,
+     "phases": 4
+    },
+    2
+   ],
+   [
+    {
+     "frames": 8,
+     "phaseStep": 99,
+     "phases": 4
+    },
+    8
+   ],
+   [
+    {
+     "frames": 6,
+     "phases": 4
+    },
+    1
+   ],
+   [
+    {
+     "frames": 3,
+     "phases": 4
+    },
+    1
+   ],
+   [
+    {
+     "frames": 1,
+     "phases": 4
+    },
+    1
+   ],
+   [
+    {
+     "frames": 0,
+     "phases": 0
+    },
+    2
+   ],
+   [
+    {
+     "frames": 12,
+     "phases": 5
+    },
+    2
+   ],
+   [
+    {
+     "frames": 7.9,
+     "phases": 2
+    },
+    3
+   ],
+   [
+    {
+     "frames": "8",
+     "phases": 4
+    },
+    2
+   ]
+  ]
+ },
+ "suite": "classify-common",
+ "synthLines": {
+  "bad": 1,
+  "grid": [12,9],
+  "json": {
+   "rivers": [
+    {
+     "hw": [2.5,3.1,4,1,2.2,0.4],
+     "pts": [
+      [100.5,200.25],
+      [260,330],
+      [410.75,300],
+      ["NaN",5],
+      [500,120],
+      [640,90]
+     ]
+    },
+    {
+     "hw": 5,
+     "pts": [700,100,760,180,"812.5",260,1000000000,-1000000000]
+    }
+   ],
+   "tracks": [
+    {
+     "hw": [1.2,0.8,1.5,3],
+     "pts": [
+      [50,50],
+      [300,60],
+      [520,400],
+      [900,820]
+     ]
+    },
+    {
+     "hw": null,
+     "pts": [
+      [1000,10],
+      [1100,700]
+     ]
+    }
+   ]
+  },
+  "note": "non-finite numbers are the strings \"NaN\" / \"Infinity\" here; feed them back as numbers",
+  "pages": [
+   {
+    "dx": 0,
+    "dy": 0,
+    "kind": "land",
+    "sha256": "abc1095441fc5affc4416bc47b74e25a2259a2e4285bba945fc5b2e200fb9e5c"
+   },
+   {
+    "dx": 1,
+    "dy": 0,
+    "kind": "land",
+    "sha256": "08c484256cd2481b967f5334f9dcc3af2947b693a0b2a33bfea2951fa592831e"
+   },
+   {
+    "dx": 2,
+    "dy": 0,
+    "kind": "land",
+    "sha256": "ac518bf66e8e7b150870ec235553ee65d228dd5f7be5d610dcfaefe45f4ea671"
+   },
+   {
+    "dx": 3,
+    "dy": 0,
+    "kind": "land",
+    "sha256": "340e579ea7a59da2291cad1748acacd5593074b226f134c04e767ae604b059c5"
+   },
+   {
+    "dx": 0,
+    "dy": 1,
+    "kind": "river",
+    "sha256": "05b391c5ac1801dc8e23d00d0f0bac4b39b6cd04f22846e418c27168fce41395"
+   },
+   {
+    "dx": 1,
+    "dy": 1,
+    "kind": "river",
+    "sha256": "659e9f354700843714a1c20b7a894577cee7bec2f827e822b1d12342a4e68805"
+   },
+   {
+    "dx": 0,
+    "dy": 2,
+    "kind": "river",
+    "sha256": "5ad6eb747cd17cb8f7f449097d4445ab22156fdb11e3f53c1c7c4d35794ce83c"
+   },
+   {
+    "dx": 1,
+    "dy": 2,
+    "kind": "river",
+    "sha256": "57b73999194059c92a739ee5c1a0c735e0d95168568cd611bb6b900d6c6668fe"
+   }
+  ],
+  "rivers": {
+   "cells": "ff908f2bae1206d567dcef23bd796d89090e913d4744a9196f00e81ee27fe589",
+   "count": 287,
+   "dropped": 0,
+   "segs": "6c1d608c0d1d97f38bcc9467aebc45ef0e2f0bdae3dd7fa14ec83475321575be"
+  },
+  "tracks": {
+   "cells": "bc7494a9eb9712fb79a42d0f014618c3cdc3dae474ade445ca08e2e067122ab0",
+   "count": 4,
+   "dropped": 0,
+   "segs": "bab4b0689491a5fd4899eea20c1c0fe8fed09c86d3fa6a982e18cf20e3b7cb6d"
+  }
+ },
+ "tolerance": "exact"
+}

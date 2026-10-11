@@ -1,0 +1,21 @@
+[package]
+name = "seeker-cpi-probe"
+version = "0.1.0"
+description = "Local-test-only arbitrary CPI probe for Seeker settlement evidence"
+edition = "2021"
+publish = false
+
+[lib]
+crate-type = ["cdylib", "lib"]
+name = "seeker_cpi_probe"
+
+[features]
+default = []
+cpi = ["no-entrypoint"]
+no-entrypoint = []
+no-idl = []
+no-log-ix-name = []
+idl-build = ["anchor-lang/idl-build"]
+
+[dependencies]
+anchor-lang = "0.32.1"

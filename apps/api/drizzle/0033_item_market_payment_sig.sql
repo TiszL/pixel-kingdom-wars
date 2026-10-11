@@ -1,0 +1,1 @@
+ALTER TABLE "item_listings" ADD COLUMN "payment_sig" text;

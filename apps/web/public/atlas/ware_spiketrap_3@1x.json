@@ -1,0 +1,166 @@
+{
+	"textures": [
+		{
+			"image": "ware_spiketrap_3@1x.png",
+			"format": "RGBA8888",
+			"size": {
+				"w": 162,
+				"h": 150
+			},
+			"scale": 1,
+			"frames": [
+				{
+					"filename": "ware_trp_spiketrap_t3_armed_f1",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 48,
+						"h": 44
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 48,
+						"h": 44
+					},
+					"frame": {
+						"x": 3,
+						"y": 3,
+						"w": 48,
+						"h": 44
+					}
+				},
+				{
+					"filename": "ware_trp_spiketrap_t3_hidden_f1",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 48,
+						"h": 44
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 48,
+						"h": 44
+					},
+					"frame": {
+						"x": 3,
+						"y": 53,
+						"w": 48,
+						"h": 44
+					}
+				},
+				{
+					"filename": "ware_trp_spiketrap_t3_sprung_f1",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 48,
+						"h": 44
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 48,
+						"h": 44
+					},
+					"frame": {
+						"x": 57,
+						"y": 3,
+						"w": 48,
+						"h": 44
+					}
+				},
+				{
+					"filename": "ware_trp_spiketrap_t3_trigger_f1",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 48,
+						"h": 44
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 48,
+						"h": 44
+					},
+					"frame": {
+						"x": 57,
+						"y": 53,
+						"w": 48,
+						"h": 44
+					}
+				},
+				{
+					"filename": "ware_trp_spiketrap_t3_trigger_f2",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 48,
+						"h": 44
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 48,
+						"h": 44
+					},
+					"frame": {
+						"x": 3,
+						"y": 103,
+						"w": 48,
+						"h": 44
+					}
+				},
+				{
+					"filename": "ware_trp_spiketrap_t3_trigger_f3",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 48,
+						"h": 44
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 48,
+						"h": 44
+					},
+					"frame": {
+						"x": 57,
+						"y": 103,
+						"w": 48,
+						"h": 44
+					}
+				},
+				{
+					"filename": "ware_trp_spiketrap_t3_trigger_f4",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 48,
+						"h": 44
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 48,
+						"h": 44
+					},
+					"frame": {
+						"x": 111,
+						"y": 3,
+						"w": 48,
+						"h": 44
+					}
+				}
+			]
+		}
+	],
+	"meta": {
+		"app": "shardkeep/scripts/rasterize",
+		"version": "1"
+	}
+}

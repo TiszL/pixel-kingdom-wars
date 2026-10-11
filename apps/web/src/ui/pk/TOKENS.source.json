@@ -1,0 +1,496 @@
+{
+  "$schema": "pkw-ui-tokens/1",
+  "name": "PKW Bright Command, forged (final, colour pass 2)",
+  "date": "2026-10-02",
+  "units": "dp for sizes, sp for type, ms for durations; radii are always 0 (corners are stepped pixel shapes, never rounded)",
+  "color": {
+    "ink": {
+      "hex": "#140F17",
+      "use": "every outline (2-3 dp), text stroke, badge rim, plate shell"
+    },
+    "bg": {
+      "hex": "#100E14",
+      "use": "behind sheets when the world is parked; kit pages"
+    },
+    "surface": {
+      "hex": "#1A171E",
+      "use": "charcoal plate body (name plate, toast, seal header)"
+    },
+    "card": {
+      "hex": "#14121A",
+      "use": "dark wells: portraits, scene frames"
+    },
+    "charcoal": {
+      "hex": "#29262E",
+      "use": "edge buttons, ARMY, locked buttons"
+    },
+    "veil": {
+      "hex": "#221D27",
+      "use": "HUD chip fill over the world (flat, opaque)"
+    },
+    "veilHi": {
+      "hex": "#4A4152",
+      "use": "2 dp top highlight on veil chips"
+    },
+    "border": {
+      "hex": "#3D3833",
+      "use": "dividers inside plates"
+    },
+    "borderLt": {
+      "hex": "#6B6354",
+      "use": "plate inner frame (owner concept)"
+    },
+    "text": {
+      "hex": "#EFE8D6",
+      "use": "text on dark"
+    },
+    "muted": {
+      "hex": "#C4BBA4",
+      "use": "secondary text on dark"
+    },
+    "faint": {
+      "hex": "#9C937F",
+      "use": "captions, kit labels"
+    },
+    "gold": {
+      "hex": "#E3AE3C",
+      "hi": "#FFE38A",
+      "lo": "#8F5A12",
+      "mid": "#D3962A",
+      "use": "VERB: the surface's primary job, one per surface (SMELT, TRAIN, CRAFT, BID, BUY, CLAIM, COLLECT, EXPLORE, SEND; every money Seal). Accent gold (gold.hi text/lines, KEEP, NEW badge, caret, selected rim) never fills an area larger than a 24 dp badge"
+    },
+    "green": {
+      "hex": "#45B23E",
+      "hi": "#A6EA7E",
+      "lo": "#22701E",
+      "mid": "#3A9E35",
+      "use": "VERB: upgrade, confirm, save, valid tile, gain delta; the primary only where the surface's job is to confirm (UPGRADE sheet, editor SAVE)"
+    },
+    "blue": {
+      "hex": "#3A74DA",
+      "hi": "#95C3FF",
+      "lo": "#1A3F8A",
+      "mid": "#2E62C4",
+      "use": "VERB: info, navigation, GO to a place, MAP, SCOUT/look, level chip"
+    },
+    "red": {
+      "hex": "#D23A3A",
+      "hi": "#FF8C7A",
+      "lo": "#771821",
+      "mid": "#BA2E32",
+      "use": "VERB: attack (primary on attack surfaces), close, count badge, OUTBID, invalid tile; never used as text on light (use shortPill.text)"
+    },
+    "stone": {
+      "hex": "#7E7266",
+      "hi": "#B3A797",
+      "lo": "#463D34",
+      "mid": "#716659",
+      "use": "VERB: quiet utility (stepper, take-back, WITHDRAW, BACK, tools, TEST DATA tag), busy money states; unoutlined sentences on it are #FFFFFF (4.7:1)"
+    },
+    "off": {
+      "hex": "#A3A09A",
+      "hi": "#C6C3BC",
+      "lo": "#6E6B66",
+      "use": "disabled face and icon only (server says no); the reason line is textOnParch.secondary on light (5.8:1) or danger on dark (6.4:1), never off"
+    },
+    "moss": {
+      "hex": "#5D8A3C",
+      "hi": "#9CC47A",
+      "lo": "#34501F",
+      "use": "SENT / done money state"
+    },
+    "parchment": {
+      "hex": "#F4E3BC",
+      "hi": "#FFF8E6",
+      "lo": "#C9A86A",
+      "use": "sheet body (picked over charcoal, see colour/ab-sheet.png)"
+    },
+    "cream": {
+      "hex": "#FCF3DC",
+      "lo": "#E8D3A0",
+      "use": "cards, tiles, cost pill body, world bubble"
+    },
+    "wood": {
+      "hex": "#7A4526",
+      "hi": "#A5663A",
+      "lo": "#431F0E",
+      "seam": "#6A3B1F",
+      "use": "sheet frame, inactive tabs, drawer frame"
+    },
+    "textOnParch": {
+      "hex": "#3B2614",
+      "secondary": "#6E5034",
+      "use": "text on parchment / cream; secondary (#6E5034) is also the locked-reason text on light (5.8:1 on parchment)"
+    },
+    "danger": {
+      "hex": "#EE7A50",
+      "use": "reason lines and short text on dark plates (6.4:1 on surface)"
+    },
+    "blood": {
+      "hex": "#8F2C2C",
+      "use": "missing ingredient frame, error toast body"
+    },
+    "shortPill": {
+      "hex": "#FFD9CC",
+      "text": "#A3261A",
+      "use": "cost pill when not enough"
+    },
+    "selectedTint": {
+      "hex": "#FFF3C8",
+      "use": "selected tile / card body"
+    },
+    "resource": {
+      "shards": "#E8A530",
+      "gems": "#2FB879",
+      "keep": "#E3AE3C",
+      "skr": "#C9F29A",
+      "divine": "#ECE1F6"
+    },
+    "scrim": {
+      "sheetHalf": "rgba(14,9,20,0)",
+      "sheetTall": "rgba(14,9,20,0.40)",
+      "fullCard": "rgba(14,9,20,0.60)",
+      "commandShelf": "rgba(16,14,20,0.36)",
+      "seal": "rgba(14,9,20,0.55)"
+    },
+    "budgetOverlay": {
+      "hud": "#FF00C8",
+      "transient": "#00C8FF",
+      "use": "design QA only, never shipped"
+    }
+  },
+  "type": {
+    "families": {
+      "display": {
+        "name": "Press Start 2P",
+        "file": "landing/fonts-latin/PressStart2P-latin-v16.woff2",
+        "status": "needs a docs/DECISIONS.md entry (APK font + web first-paint cost) before shipping"
+      },
+      "body": {
+        "name": "VT323",
+        "file": "res/font/pkw_vt323.ttf",
+        "status": "already in the APK"
+      }
+    },
+    "scale": [
+      {
+        "token": "numeralL",
+        "family": "display",
+        "size": 16,
+        "weight": 400,
+        "tracking": 0,
+        "outline": "2 dp ink, 8 directions + 3 dp drop",
+        "use": "celebration numbers, level badge"
+      },
+      {
+        "token": "primary",
+        "family": "display",
+        "size": 14,
+        "weight": 400,
+        "tracking": 0,
+        "outline": "2 dp ink",
+        "use": "primary button label"
+      },
+      {
+        "token": "title",
+        "family": "display",
+        "size": 13,
+        "weight": 400,
+        "tracking": 0,
+        "outline": "1 dp ink on dark, none on parchment",
+        "use": "sheet / plate title"
+      },
+      {
+        "token": "label",
+        "family": "display",
+        "size": 12,
+        "weight": 400,
+        "tracking": 0,
+        "outline": "1 dp ink",
+        "use": "resource values, button labels, tab labels"
+      },
+      {
+        "token": "caption",
+        "family": "display",
+        "size": 11,
+        "weight": 400,
+        "tracking": 0,
+        "outline": "1 dp ink",
+        "use": "FLOOR for display face: deck/command captions, badges, tags, cost pills"
+      },
+      {
+        "token": "lead",
+        "family": "body",
+        "size": 24,
+        "weight": 400,
+        "tracking": 0,
+        "outline": "none",
+        "use": "dialog lead line"
+      },
+      {
+        "token": "body",
+        "family": "body",
+        "size": 20,
+        "weight": 400,
+        "tracking": 0,
+        "outline": "none (1 dp only when on the world)",
+        "use": "status lines, sentences"
+      },
+      {
+        "token": "small",
+        "family": "body",
+        "size": 18,
+        "weight": 400,
+        "tracking": 0,
+        "outline": "none",
+        "use": "FLOOR for body face: captions, sub-lines"
+      }
+    ],
+    "rules": [
+      "Display face only for numbers and labels of 1-2 words; never for sentences.",
+      "Body face never below 18 sp (VT323 at 18 reads like a 14 sp sans).",
+      "Numerals on the world are always outlined; on parchment never outlined.",
+      "Sentences inside buttons use VT323 without outline."
+    ]
+  },
+  "space": {
+    "unit": 2,
+    "scale": [
+      2,
+      4,
+      6,
+      8,
+      12,
+      16,
+      24,
+      32
+    ],
+    "screenGutter": 8,
+    "sheetGutter": 8,
+    "gridPhone": "412 x 915 dp portrait; edge-to-edge with system insets added"
+  },
+  "shape": {
+    "radius": 0,
+    "stepS": "2 steps of 2 dp (corner cut 4 dp): chips, pills, inner faces, tiles",
+    "stepM": "3 steps (corner cut 8 dp): buttons, plates, cards",
+    "outline": {
+      "chip": 2,
+      "button": 3,
+      "plate": 3,
+      "card": 2
+    },
+    "lip": {
+      "button": 6,
+      "buttonPressed": 3,
+      "plate": 4
+    },
+    "highlightBand": 3
+  },
+  "elevation": {
+    "rule": "hard pixel shadows only; no blur",
+    "e0": "flat (tiles inside a card)",
+    "e1": "2 dp ink outline (chips, pills, tiles)",
+    "e2": "3 dp ink outline + 4 dp inner lip (plates, cards)",
+    "e3": "3 dp ink outline + 6 dp bottom lip (buttons)",
+    "e4": "sheet: 3 dp ink + wood frame; world behind takes the scrim"
+  },
+  "size": {
+    "minTap": 48,
+    "topBar": {
+      "levelBadge": [
+        40,
+        40
+      ],
+      "statusChip": [
+        238,
+        30
+      ],
+      "resourceRow": [
+        108,
+        26
+      ],
+      "resourceGap": 2,
+      "drawerRow": [
+        108,
+        26
+      ]
+    },
+    "deck": {
+      "attack": [
+        80,
+        72
+      ],
+      "army": [
+        52,
+        52
+      ],
+      "map": [
+        52,
+        52
+      ],
+      "build": [
+        72,
+        72
+      ],
+      "bottomInset": 14
+    },
+    "edgeButton": [
+      48,
+      48
+    ],
+    "edgeTab": [
+      44,
+      48
+    ],
+    "contextChip": [
+      108,
+      48
+    ],
+    "command": [
+      68,
+      68
+    ],
+    "commandPrimary": [
+      120,
+      92
+    ],
+    "costPill": {
+      "h": 26,
+      "icon": 24
+    },
+    "namePlate": {
+      "h": 58,
+      "minW": 160,
+      "maxW": 280,
+      "stem": [
+        4,
+        20
+      ]
+    },
+    "badge": {
+      "h": 24,
+      "minW": 24
+    },
+    "worldBubble": [
+      48,
+      48
+    ],
+    "timerPlate": [
+      114,
+      34
+    ],
+    "sheetPrimary": {
+      "h": 60
+    },
+    "secondary": {
+      "h": 52
+    },
+    "tab": {
+      "h": 48
+    },
+    "troopCard": [
+      89,
+      128
+    ],
+    "itemTile": [
+      72,
+      80
+    ],
+    "drawerTile": [
+      48,
+      56
+    ],
+    "ingredientRow": {
+      "h": 52
+    },
+    "bidStepper": {
+      "minus": [
+        48,
+        60
+      ],
+      "value": [
+        76,
+        60
+      ],
+      "plus": [
+        48,
+        60
+      ]
+    },
+    "toast": {
+      "h": 58
+    },
+    "banner": {
+      "h": 44
+    },
+    "troopCardMinus": [
+      89,
+      48
+    ]
+  },
+  "budget": {
+    "homePermanentHudMaxPct": 12,
+    "homePermanentHudMeasuredPct": 11.9,
+    "maxWorldMarkersOnScreen": 3,
+    "maxEdgeButtonsVisible": 2
+  },
+  "pixelArt": {
+    "rule": "integer device scale only (CSS/dp size = art px x k / 2 at DPR 2; k integer)",
+    "icon24": [
+      24,
+      36
+    ],
+    "icon64": [
+      32,
+      64
+    ],
+    "portrait56": [
+      28,
+      56
+    ],
+    "item32": [
+      32
+    ],
+    "builder60": [
+      30
+    ]
+  },
+  "motion": {
+    "easing": {
+      "out": "cubic-bezier(0.2,0,0,1)",
+      "in": "cubic-bezier(0.4,0,1,1)",
+      "pop": "cubic-bezier(0.34,1.56,0.64,1)",
+      "linear": "linear"
+    },
+    "durationMs": {
+      "press": 60,
+      "release": 90,
+      "select": 140,
+      "plateIn": 160,
+      "commandStagger": 30,
+      "deckSwap": 160,
+      "sheetIn": 220,
+      "sheetOut": 160,
+      "drawerIn": 200,
+      "drawerOut": 140,
+      "tabSwitch": 120,
+      "badgePop": 180,
+      "toastIn": 160,
+      "toastHold": 4000,
+      "bannerHold": 4000,
+      "sealArm": 450,
+      "tapThroughLock": 300,
+      "countUp": 600,
+      "coinFly": 450,
+      "celebrate": 900,
+      "paintTile": 60,
+      "snapHint": 120,
+      "invalidShake": 160,
+      "editorEnter": 220,
+      "islandZoom": 280,
+      "readyBounceLoop": 900,
+      "readyBouncePause": 2000
+    },
+    "reducedMotion": "no loops, no fly-ins; state changes cross-fade 120 ms; text carries every status"
+  }
+}

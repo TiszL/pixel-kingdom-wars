@@ -1,0 +1,134 @@
+{
+  "sourceCommit": "6d69d675d48654dd7ce196212fafafa4a561c373",
+  "sourcePath": "apps/web/src/lib/chain.ts",
+  "sourceSha256": "8ec9eae90b864f7b78c62c54358cc7281f59849fe5568fea0ddef0c6de2948fa",
+  "provenance": "Actual canonical web instruction builders executed; prices and split from canonical constants; only the public devnet address module injected.",
+  "wallet": "4vJ9JU1bJJE96FWSJKvHsmmFADCg4gpZQff4P3bkLKi",
+  "reference": "8qbHbw2BbbTHBW1sbeqakYXVKRQM8Ne7pLK7m6CVfeR",
+  "blockhash": "CktRuQ2mttgRGkXJtyksdKHjUdc2C4TgDzyB98oEzy8",
+  "vectors": [
+    {
+      "kind": "shield",
+      "amountLamports": "50000000",
+      "destination": null,
+      "directLamports": null,
+      "splitLamports": null,
+      "unsigned": "AQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAQIAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQFIYWPBRQO/BXM3bIQD3u92BIpeW1FjqBQ2b9mdMeY58IXpUVKBMf9RH7INZP+u1l2H2n+6Q15h0cL9IP9I6YGLCckG8+TYu3/GnGa2Mpo28hXejxTjqZrJrwK22YZEiRsAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICiUhjjlYWqk+yvRII7VeInfV9paZ8kTnStdQl6jjYoEALaTg1rccgnH0iz1r3pfSA8LFOGbth2ek9SDAMxFLIuAMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAQcHBgACAQMFBBHceaiWeRnVDgSA8PoCAAAAAA==",
+      "instructions": [
+        {
+          "program": "mYYQFnpyGofG31y5oJkiKVmNwifbSXBMnQ5aUgQkL6b",
+          "data": "dc79a8967919d50e0480f0fa0200000000",
+          "keys": [
+            {
+              "address": "AEtsnqdSXDwGDBeovnD9XoutQmNptcPWC8ygieZSkKHH",
+              "signer": false,
+              "writable": false
+            },
+            {
+              "address": "4vJ9JU1bJJE96FWSJKvHsmmFADCg4gpZQff4P3bkLKi",
+              "signer": true,
+              "writable": true
+            },
+            {
+              "address": "A1ja8GwrTM2KvS4tKJJaVaLk57xJeehuk2F9Exbz82QA",
+              "signer": false,
+              "writable": true
+            },
+            {
+              "address": "5sYVCRd1onSre8EKujE5vDKa9KeF2KuJvPA3rpRonfif",
+              "signer": false,
+              "writable": true
+            },
+            {
+              "address": "fCTc8TgJCvHUkn1aaME2gDcs69LpgtVXq1rmBSvS3Bx",
+              "signer": false,
+              "writable": true
+            },
+            {
+              "address": "8qbHbw2BbbTHBW1sbeqakYXVKRQM8Ne7pLK7m6CVfeR",
+              "signer": false,
+              "writable": false
+            },
+            {
+              "address": "11111111111111111111111111111111",
+              "signer": false,
+              "writable": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "kind": "warzone_shield",
+      "amountLamports": "10000000000",
+      "destination": "A1ja8GwrTM2KvS4tKJJaVaLk57xJeehuk2F9Exbz82QA",
+      "directLamports": "5000000000",
+      "splitLamports": "5000000000",
+      "unsigned": "AQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAQIAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQFIYWPBRQO/BXM3bIQD3u92BIpeW1FjqBQ2b9mdMeY58IXpUVKBMf9RH7INZP+u1l2H2n+6Q15h0cL9IP9I6YGLCckG8+TYu3/GnGa2Mpo28hXejxTjqZrJrwK22YZEiRsAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICiUhjjlYWqk+yvRII7VeInfV9paZ8kTnStdQl6jjYoEALaTg1rccgnH0iz1r3pfSA8LFOGbth2ek9SDAMxFLIuAMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAgQDAAIFDAIAAAAA8gUqAQAAAAcHBgACAQMFBBHceaiWeRnVDgYA8gUqAQAAAA==",
+      "instructions": [
+        {
+          "program": "11111111111111111111111111111111",
+          "data": "0200000000f2052a01000000",
+          "keys": [
+            {
+              "address": "4vJ9JU1bJJE96FWSJKvHsmmFADCg4gpZQff4P3bkLKi",
+              "signer": true,
+              "writable": true
+            },
+            {
+              "address": "A1ja8GwrTM2KvS4tKJJaVaLk57xJeehuk2F9Exbz82QA",
+              "signer": false,
+              "writable": true
+            },
+            {
+              "address": "8qbHbw2BbbTHBW1sbeqakYXVKRQM8Ne7pLK7m6CVfeR",
+              "signer": false,
+              "writable": false
+            }
+          ]
+        },
+        {
+          "program": "mYYQFnpyGofG31y5oJkiKVmNwifbSXBMnQ5aUgQkL6b",
+          "data": "dc79a8967919d50e0600f2052a01000000",
+          "keys": [
+            {
+              "address": "AEtsnqdSXDwGDBeovnD9XoutQmNptcPWC8ygieZSkKHH",
+              "signer": false,
+              "writable": false
+            },
+            {
+              "address": "4vJ9JU1bJJE96FWSJKvHsmmFADCg4gpZQff4P3bkLKi",
+              "signer": true,
+              "writable": true
+            },
+            {
+              "address": "A1ja8GwrTM2KvS4tKJJaVaLk57xJeehuk2F9Exbz82QA",
+              "signer": false,
+              "writable": true
+            },
+            {
+              "address": "5sYVCRd1onSre8EKujE5vDKa9KeF2KuJvPA3rpRonfif",
+              "signer": false,
+              "writable": true
+            },
+            {
+              "address": "fCTc8TgJCvHUkn1aaME2gDcs69LpgtVXq1rmBSvS3Bx",
+              "signer": false,
+              "writable": true
+            },
+            {
+              "address": "8qbHbw2BbbTHBW1sbeqakYXVKRQM8Ne7pLK7m6CVfeR",
+              "signer": false,
+              "writable": false
+            },
+            {
+              "address": "11111111111111111111111111111111",
+              "signer": false,
+              "writable": false
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "hash": "2685a8ce",
+  "outcome": {
+    "stars": 3,
+    "destructionPct": 100,
+    "keepDestroyed": true,
+    "vaultDestroyed": true,
+    "mineDestroyed": true,
+    "victory": true,
+    "buildings": [
+      {
+        "id": "keep",
+        "type": "keep",
+        "hp": 0,
+        "maxHp": 1200,
+        "destroyed": true
+      },
+      {
+        "id": "vault",
+        "type": "vault",
+        "hp": 0,
+        "maxHp": 500,
+        "destroyed": true
+      },
+      {
+        "id": "mine",
+        "type": "mine",
+        "hp": 0,
+        "maxHp": 300,
+        "destroyed": true
+      }
+    ],
+    "ticks": 742,
+    "eventCount": 213
+  }
+}

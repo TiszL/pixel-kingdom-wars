@@ -1,0 +1,208 @@
+{
+	"textures": [
+		{
+			"image": "dec@2x.png",
+			"format": "RGBA8888",
+			"size": {
+				"w": 274,
+				"h": 236
+			},
+			"scale": 1,
+			"frames": [
+				{
+					"filename": "dec_tree_old",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 96,
+						"h": 128
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 96,
+						"h": 128
+					},
+					"frame": {
+						"x": 3,
+						"y": 3,
+						"w": 96,
+						"h": 128
+					}
+				},
+				{
+					"filename": "dec_boulder",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 96,
+						"h": 80
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 96,
+						"h": 80
+					},
+					"frame": {
+						"x": 105,
+						"y": 3,
+						"w": 96,
+						"h": 80
+					}
+				},
+				{
+					"filename": "dec_pine_1",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 64,
+						"h": 96
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 64,
+						"h": 96
+					},
+					"frame": {
+						"x": 3,
+						"y": 137,
+						"w": 64,
+						"h": 96
+					}
+				},
+				{
+					"filename": "dec_pine_2",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 64,
+						"h": 96
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 64,
+						"h": 96
+					},
+					"frame": {
+						"x": 73,
+						"y": 137,
+						"w": 64,
+						"h": 96
+					}
+				},
+				{
+					"filename": "dec_bush",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 64,
+						"h": 48
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 64,
+						"h": 48
+					},
+					"frame": {
+						"x": 207,
+						"y": 3,
+						"w": 64,
+						"h": 48
+					}
+				},
+				{
+					"filename": "dec_rock_l",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 64,
+						"h": 48
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 64,
+						"h": 48
+					},
+					"frame": {
+						"x": 207,
+						"y": 57,
+						"w": 64,
+						"h": 48
+					}
+				},
+				{
+					"filename": "dec_flowers",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 32,
+						"h": 32
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 32,
+						"h": 32
+					},
+					"frame": {
+						"x": 105,
+						"y": 89,
+						"w": 32,
+						"h": 32
+					}
+				},
+				{
+					"filename": "dec_rock_s",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 32,
+						"h": 32
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 32,
+						"h": 32
+					},
+					"frame": {
+						"x": 143,
+						"y": 89,
+						"w": 32,
+						"h": 32
+					}
+				},
+				{
+					"filename": "dec_stump",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 32,
+						"h": 32
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 32,
+						"h": 32
+					},
+					"frame": {
+						"x": 181,
+						"y": 111,
+						"w": 32,
+						"h": 32
+					}
+				}
+			]
+		}
+	],
+	"meta": {
+		"app": "shardkeep/scripts/rasterize",
+		"version": "1"
+	}
+}

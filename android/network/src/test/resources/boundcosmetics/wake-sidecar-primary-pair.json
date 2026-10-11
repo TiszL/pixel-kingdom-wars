@@ -1,0 +1,1370 @@
+{
+  "provenance": {
+    "kind": "local_private_primary_v1_sidecar_fixture",
+    "source": "Unchanged primary receipt DTOs paired with separate v1 presentation functions, PostgreSQL16 isolated loopback; synthetic locally signed chain/term and historical clocks. No production login, native assets, deployment or renderer proof.",
+    "migrations": 287,
+    "actualAuthenticatedRuntime": true,
+    "restrictedUnfittedOriginal": true
+  },
+  "starter": {
+    "selected": {
+      "original": {
+        "wallet": "3Yw4WmyuQDWNMZVQxScFz2geT3njF2achVEcMbf579r7",
+        "idempotencyKey": "6dc70239-7177-4cc1-9439-9b24407f273e",
+        "serverNow": "2026-09-27T20:36:28.562Z",
+        "status": "accepted",
+        "receipt": {
+          "expeditionId": "6dc70239-7177-4cc1-9439-9b24407f273e",
+          "installationId": "cb397308-311c-4348-9515-da7904a09b70",
+          "route": {
+            "routeCatalogueVersion": 2,
+            "rewardTableVersion": 2,
+            "routeId": "introduction",
+            "realmId": "crownlands",
+            "resourceId": "crown_iron_ore",
+            "vehicleFamily": "starter",
+            "durationSec": 300,
+            "grossQuantity": "5",
+            "netQuantity": "4",
+            "islandPoolQuantity": "1"
+          },
+          "departedAt": "2026-09-27T20:36:28.562Z",
+          "returnsAt": "2026-09-27T20:41:28.562Z",
+          "termId": "bc1072df-d6c5-4016-83e9-592738afc16a",
+          "termHash": "e63b3b6eda36160b4c1d4235cfb958386bed3d6617b8b7dd63952df2c3195c5c",
+          "wallet": "3Yw4WmyuQDWNMZVQxScFz2geT3njF2achVEcMbf579r7",
+          "request": {
+            "idempotencyKey": "6dc70239-7177-4cc1-9439-9b24407f273e",
+            "baseId": "e53de422-477e-4793-8b5b-a6e94bcde6bc",
+            "installationId": "cb397308-311c-4348-9515-da7904a09b70",
+            "routeId": "introduction",
+            "routeVersion": 2,
+            "rewardVersion": 2
+          }
+        },
+        "return": null
+      },
+      "sidecar": {
+        "version": 1,
+        "wallet": "3Yw4WmyuQDWNMZVQxScFz2geT3njF2achVEcMbf579r7",
+        "kind": "starter",
+        "key": "6dc70239-7177-4cc1-9439-9b24407f273e",
+        "serverNow": "2026-09-27T20:36:28.562Z",
+        "status": "known",
+        "presentation": {
+          "expeditionId": "6dc70239-7177-4cc1-9439-9b24407f273e",
+          "installationId": "cb397308-311c-4348-9515-da7904a09b70",
+          "homeRealmId": "crownlands",
+          "realmId": "crownlands",
+          "departedAt": "2026-09-27T20:36:28.562Z",
+          "returnsAt": "2026-09-27T20:41:28.562Z",
+          "wake": {
+            "state": "available",
+            "visual": {
+              "version": 1,
+              "wake": {
+                "version": 1,
+                "outputId": "aurora_wake",
+                "sourceId": "auroraWake",
+                "sourceManifestSha256": "b4b67f78efd4d74fa416e78822af9f0e037ad6d3bc30f3fc77127cd169292394",
+                "sourceIndexSha256": "04f96c922ca04d93f1bf760e6385713908b971ce82c3aa022602f1fa199e2181",
+                "bindingSha256": "f061211842f342a719bbf1ebe09ac2e085043c43f64f85bbc55582ec82d2a094"
+              }
+            }
+          },
+          "baseId": "e53de422-477e-4793-8b5b-a6e94bcde6bc"
+        },
+        "returnedAt": null
+      },
+      "current": {
+        "version": 1,
+        "wallet": "3Yw4WmyuQDWNMZVQxScFz2geT3njF2achVEcMbf579r7",
+        "baseId": "e53de422-477e-4793-8b5b-a6e94bcde6bc",
+        "serverNow": "2026-09-27T20:36:28.562Z",
+        "trips": [
+          {
+            "expeditionId": "6dc70239-7177-4cc1-9439-9b24407f273e",
+            "installationId": "cb397308-311c-4348-9515-da7904a09b70",
+            "homeRealmId": "crownlands",
+            "realmId": "crownlands",
+            "departedAt": "2026-09-27T20:36:28.562Z",
+            "returnsAt": "2026-09-27T20:41:28.562Z",
+            "wake": {
+              "state": "available",
+              "visual": {
+                "version": 1,
+                "wake": {
+                  "version": 1,
+                  "outputId": "aurora_wake",
+                  "sourceId": "auroraWake",
+                  "sourceManifestSha256": "b4b67f78efd4d74fa416e78822af9f0e037ad6d3bc30f3fc77127cd169292394",
+                  "sourceIndexSha256": "04f96c922ca04d93f1bf760e6385713908b971ce82c3aa022602f1fa199e2181",
+                  "bindingSha256": "f061211842f342a719bbf1ebe09ac2e085043c43f64f85bbc55582ec82d2a094"
+                }
+              }
+            },
+            "kind": "starter"
+          }
+        ]
+      },
+      "returnedOriginal": {
+        "wallet": "3Yw4WmyuQDWNMZVQxScFz2geT3njF2achVEcMbf579r7",
+        "idempotencyKey": "6dc70239-7177-4cc1-9439-9b24407f273e",
+        "serverNow": "2026-09-27T20:41:29.562Z",
+        "status": "accepted",
+        "receipt": {
+          "expeditionId": "6dc70239-7177-4cc1-9439-9b24407f273e",
+          "installationId": "cb397308-311c-4348-9515-da7904a09b70",
+          "route": {
+            "routeCatalogueVersion": 2,
+            "rewardTableVersion": 2,
+            "routeId": "introduction",
+            "realmId": "crownlands",
+            "resourceId": "crown_iron_ore",
+            "vehicleFamily": "starter",
+            "durationSec": 300,
+            "grossQuantity": "5",
+            "netQuantity": "4",
+            "islandPoolQuantity": "1"
+          },
+          "departedAt": "2026-09-27T20:36:28.562Z",
+          "returnsAt": "2026-09-27T20:41:28.562Z",
+          "termId": "bc1072df-d6c5-4016-83e9-592738afc16a",
+          "termHash": "e63b3b6eda36160b4c1d4235cfb958386bed3d6617b8b7dd63952df2c3195c5c",
+          "wallet": "3Yw4WmyuQDWNMZVQxScFz2geT3njF2achVEcMbf579r7",
+          "request": {
+            "idempotencyKey": "6dc70239-7177-4cc1-9439-9b24407f273e",
+            "baseId": "e53de422-477e-4793-8b5b-a6e94bcde6bc",
+            "installationId": "cb397308-311c-4348-9515-da7904a09b70",
+            "routeId": "introduction",
+            "routeVersion": 2,
+            "rewardVersion": 2
+          }
+        },
+        "return": {
+          "returnId": "b3d10b7d-ddc3-4ee0-8b42-dad6910123ab",
+          "returnedAt": "2026-09-27T20:41:28.562Z"
+        }
+      },
+      "returnedSidecar": {
+        "version": 1,
+        "wallet": "3Yw4WmyuQDWNMZVQxScFz2geT3njF2achVEcMbf579r7",
+        "kind": "starter",
+        "key": "6dc70239-7177-4cc1-9439-9b24407f273e",
+        "serverNow": "2026-09-27T20:41:29.562Z",
+        "status": "known",
+        "presentation": {
+          "expeditionId": "6dc70239-7177-4cc1-9439-9b24407f273e",
+          "installationId": "cb397308-311c-4348-9515-da7904a09b70",
+          "homeRealmId": "crownlands",
+          "realmId": "crownlands",
+          "departedAt": "2026-09-27T20:36:28.562Z",
+          "returnsAt": "2026-09-27T20:41:28.562Z",
+          "wake": {
+            "state": "available",
+            "visual": {
+              "version": 1,
+              "wake": {
+                "version": 1,
+                "outputId": "aurora_wake",
+                "sourceId": "auroraWake",
+                "sourceManifestSha256": "b4b67f78efd4d74fa416e78822af9f0e037ad6d3bc30f3fc77127cd169292394",
+                "sourceIndexSha256": "04f96c922ca04d93f1bf760e6385713908b971ce82c3aa022602f1fa199e2181",
+                "bindingSha256": "f061211842f342a719bbf1ebe09ac2e085043c43f64f85bbc55582ec82d2a094"
+              }
+            }
+          },
+          "baseId": "e53de422-477e-4793-8b5b-a6e94bcde6bc"
+        },
+        "returnedAt": "2026-09-27T20:41:28.562Z"
+      },
+      "afterReturnCurrent": {
+        "version": 1,
+        "wallet": "49yMoNCZF7dqgjTtxh6DNbG9tioGpx9HfcisV3GVwYSx",
+        "baseId": "e53de422-477e-4793-8b5b-a6e94bcde6bc",
+        "serverNow": "2026-09-27T20:41:29.562Z",
+        "trips": []
+      }
+    },
+    "default": {
+      "view": {
+        "wallet": "VhTfy6diL8mx5sSHHWG1tEpMYkVb8WEGJmGXur32RTy",
+        "baseId": "c3cdf559-70f1-4f97-aca1-8c2d977cff93",
+        "serverNow": "2026-09-29T20:25:29.606Z",
+        "features": {
+          "starterExpeditions": {
+            "version": 1,
+            "receipts": 1
+          }
+        },
+        "acceptingDepartures": false,
+        "home": {
+          "source": "free_assignment",
+          "version": 1,
+          "realmId": "crownlands"
+        },
+        "routes": [
+          {
+            "routeCatalogueVersion": 2,
+            "rewardTableVersion": 2,
+            "routeId": "introduction",
+            "realmId": "crownlands",
+            "resourceId": "crown_iron_ore",
+            "vehicleFamily": "starter",
+            "durationSec": 300,
+            "grossQuantity": "5",
+            "islandPoolQuantity": "1",
+            "netQuantity": "4"
+          },
+          {
+            "routeCatalogueVersion": 2,
+            "rewardTableVersion": 2,
+            "routeId": "coastal_survey",
+            "realmId": "crownlands",
+            "resourceId": "crown_iron_ore",
+            "vehicleFamily": "starter",
+            "durationSec": 1800,
+            "grossQuantity": "25",
+            "islandPoolQuantity": "5",
+            "netQuantity": "20"
+          },
+          {
+            "routeCatalogueVersion": 2,
+            "rewardTableVersion": 2,
+            "routeId": "long_survey",
+            "realmId": "crownlands",
+            "resourceId": "crown_iron_ore",
+            "vehicleFamily": "starter",
+            "durationSec": 7200,
+            "grossQuantity": "80",
+            "islandPoolQuantity": "16",
+            "netQuantity": "64"
+          },
+          {
+            "routeCatalogueVersion": 2,
+            "rewardTableVersion": 2,
+            "routeId": "common_frostveil",
+            "realmId": "frostveil",
+            "resourceId": "frost_quartz",
+            "vehicleFamily": "starter",
+            "access": {
+              "kind": "starter_common",
+              "policyVersion": 1
+            },
+            "durationSec": 1800,
+            "grossQuantity": "5",
+            "islandPoolQuantity": "1",
+            "netQuantity": "4"
+          },
+          {
+            "routeCatalogueVersion": 2,
+            "rewardTableVersion": 2,
+            "routeId": "common_elderwood",
+            "realmId": "elderwood",
+            "resourceId": "heartwood_logs",
+            "vehicleFamily": "starter",
+            "access": {
+              "kind": "starter_common",
+              "policyVersion": 1
+            },
+            "durationSec": 1800,
+            "grossQuantity": "5",
+            "islandPoolQuantity": "1",
+            "netQuantity": "4"
+          },
+          {
+            "routeCatalogueVersion": 2,
+            "rewardTableVersion": 2,
+            "routeId": "common_sunscar",
+            "realmId": "sunscar",
+            "resourceId": "sunstone_rubble",
+            "vehicleFamily": "starter",
+            "access": {
+              "kind": "starter_common",
+              "policyVersion": 1
+            },
+            "durationSec": 1800,
+            "grossQuantity": "5",
+            "islandPoolQuantity": "1",
+            "netQuantity": "4"
+          },
+          {
+            "routeCatalogueVersion": 2,
+            "rewardTableVersion": 2,
+            "routeId": "common_crownlands",
+            "realmId": "crownlands",
+            "resourceId": "crown_iron_ore",
+            "vehicleFamily": "starter",
+            "access": {
+              "kind": "starter_common",
+              "policyVersion": 1
+            },
+            "durationSec": 1800,
+            "grossQuantity": "5",
+            "islandPoolQuantity": "1",
+            "netQuantity": "4"
+          },
+          {
+            "routeCatalogueVersion": 2,
+            "rewardTableVersion": 2,
+            "routeId": "common_seeker_reach",
+            "realmId": "seeker-reach",
+            "resourceId": "rough_prism",
+            "vehicleFamily": "starter",
+            "access": {
+              "kind": "starter_common",
+              "policyVersion": 1
+            },
+            "durationSec": 1800,
+            "grossQuantity": "5",
+            "islandPoolQuantity": "1",
+            "netQuantity": "4"
+          },
+          {
+            "routeCatalogueVersion": 2,
+            "rewardTableVersion": 2,
+            "routeId": "common_stormcairn",
+            "realmId": "stormcairn",
+            "resourceId": "storm_ore",
+            "vehicleFamily": "starter",
+            "access": {
+              "kind": "starter_common",
+              "policyVersion": 1
+            },
+            "durationSec": 1800,
+            "grossQuantity": "5",
+            "islandPoolQuantity": "1",
+            "netQuantity": "4"
+          },
+          {
+            "routeCatalogueVersion": 2,
+            "rewardTableVersion": 2,
+            "routeId": "common_thornwake",
+            "realmId": "thornwake",
+            "resourceId": "thorn_fibre",
+            "vehicleFamily": "starter",
+            "access": {
+              "kind": "starter_common",
+              "policyVersion": 1
+            },
+            "durationSec": 1800,
+            "grossQuantity": "5",
+            "islandPoolQuantity": "1",
+            "netQuantity": "4"
+          },
+          {
+            "routeCatalogueVersion": 2,
+            "rewardTableVersion": 2,
+            "routeId": "common_cinderfall",
+            "realmId": "cinderfall",
+            "resourceId": "ember_nodules",
+            "vehicleFamily": "starter",
+            "access": {
+              "kind": "starter_common",
+              "policyVersion": 1
+            },
+            "durationSec": 1800,
+            "grossQuantity": "5",
+            "islandPoolQuantity": "1",
+            "netQuantity": "4"
+          }
+        ],
+        "installation": {
+          "berthId": "abfad818-7cb5-4dc3-af05-fe2c262d0615",
+          "completedBuildJobId": "8571b826-3b07-4d97-b7f1-e84ad79dcc92",
+          "berthCompletedAt": "2026-09-29T20:25:28.606Z",
+          "installationId": "19084d56-e066-4900-ad59-7cf3310f0374",
+          "baseId": "c3cdf559-70f1-4f97-aca1-8c2d977cff93",
+          "family": "starter",
+          "installedAt": "2026-09-29T20:25:29.606Z"
+        },
+        "flight": {
+          "expeditionId": "2a8aa21c-e76d-4f8a-9338-79a618d7d996",
+          "installationId": "19084d56-e066-4900-ad59-7cf3310f0374",
+          "route": {
+            "routeCatalogueVersion": 2,
+            "rewardTableVersion": 2,
+            "routeId": "introduction",
+            "realmId": "crownlands",
+            "resourceId": "crown_iron_ore",
+            "vehicleFamily": "starter",
+            "durationSec": 300,
+            "grossQuantity": "5",
+            "netQuantity": "4",
+            "islandPoolQuantity": "1"
+          },
+          "departedAt": "2026-09-29T20:25:29.606Z",
+          "returnsAt": "2026-09-29T20:30:29.606Z",
+          "termId": "4f489028-1414-4d54-b173-31b2d8ebdf5f",
+          "termHash": "0adf08a1fcf105bf38eb3285e07709a28c81ed2886fb7bb3fbb76bbade3706fd"
+        },
+        "lodgeCompletedAt": "2026-09-29T20:25:28.606Z",
+        "rawStock": [
+          {
+            "resourceId": "frost_quartz",
+            "available": "0",
+            "reserved": "0",
+            "total": "0"
+          },
+          {
+            "resourceId": "heartwood_logs",
+            "available": "0",
+            "reserved": "0",
+            "total": "0"
+          },
+          {
+            "resourceId": "sunstone_rubble",
+            "available": "0",
+            "reserved": "0",
+            "total": "0"
+          },
+          {
+            "resourceId": "crown_iron_ore",
+            "available": "0",
+            "reserved": "0",
+            "total": "0"
+          },
+          {
+            "resourceId": "rough_prism",
+            "available": "0",
+            "reserved": "0",
+            "total": "0"
+          },
+          {
+            "resourceId": "storm_ore",
+            "available": "0",
+            "reserved": "0",
+            "total": "0"
+          },
+          {
+            "resourceId": "thorn_fibre",
+            "available": "0",
+            "reserved": "0",
+            "total": "0"
+          },
+          {
+            "resourceId": "ember_nodules",
+            "available": "0",
+            "reserved": "0",
+            "total": "0"
+          }
+        ]
+      },
+      "original": {
+        "wallet": "VhTfy6diL8mx5sSHHWG1tEpMYkVb8WEGJmGXur32RTy",
+        "idempotencyKey": "2a8aa21c-e76d-4f8a-9338-79a618d7d996",
+        "serverNow": "2026-09-29T20:25:29.606Z",
+        "status": "accepted",
+        "receipt": {
+          "expeditionId": "2a8aa21c-e76d-4f8a-9338-79a618d7d996",
+          "installationId": "19084d56-e066-4900-ad59-7cf3310f0374",
+          "route": {
+            "routeCatalogueVersion": 2,
+            "rewardTableVersion": 2,
+            "routeId": "introduction",
+            "realmId": "crownlands",
+            "resourceId": "crown_iron_ore",
+            "vehicleFamily": "starter",
+            "durationSec": 300,
+            "grossQuantity": "5",
+            "netQuantity": "4",
+            "islandPoolQuantity": "1"
+          },
+          "departedAt": "2026-09-29T20:25:29.606Z",
+          "returnsAt": "2026-09-29T20:30:29.606Z",
+          "termId": "4f489028-1414-4d54-b173-31b2d8ebdf5f",
+          "termHash": "0adf08a1fcf105bf38eb3285e07709a28c81ed2886fb7bb3fbb76bbade3706fd",
+          "wallet": "VhTfy6diL8mx5sSHHWG1tEpMYkVb8WEGJmGXur32RTy",
+          "request": {
+            "idempotencyKey": "2a8aa21c-e76d-4f8a-9338-79a618d7d996",
+            "baseId": "c3cdf559-70f1-4f97-aca1-8c2d977cff93",
+            "installationId": "19084d56-e066-4900-ad59-7cf3310f0374",
+            "routeId": "introduction",
+            "routeVersion": 2,
+            "rewardVersion": 2
+          }
+        },
+        "return": null
+      },
+      "current": {
+        "version": 1,
+        "wallet": "VhTfy6diL8mx5sSHHWG1tEpMYkVb8WEGJmGXur32RTy",
+        "baseId": "c3cdf559-70f1-4f97-aca1-8c2d977cff93",
+        "serverNow": "2026-09-29T20:25:29.606Z",
+        "trips": [
+          {
+            "expeditionId": "2a8aa21c-e76d-4f8a-9338-79a618d7d996",
+            "installationId": "19084d56-e066-4900-ad59-7cf3310f0374",
+            "homeRealmId": "crownlands",
+            "realmId": "crownlands",
+            "departedAt": "2026-09-29T20:25:29.606Z",
+            "returnsAt": "2026-09-29T20:30:29.606Z",
+            "wake": {
+              "state": "available",
+              "visual": {
+                "version": 1,
+                "wake": null
+              }
+            },
+            "kind": "starter"
+          }
+        ]
+      },
+      "sidecar": {
+        "version": 1,
+        "wallet": "VhTfy6diL8mx5sSHHWG1tEpMYkVb8WEGJmGXur32RTy",
+        "kind": "starter",
+        "key": "2a8aa21c-e76d-4f8a-9338-79a618d7d996",
+        "serverNow": "2026-09-29T20:25:29.606Z",
+        "status": "known",
+        "presentation": {
+          "expeditionId": "2a8aa21c-e76d-4f8a-9338-79a618d7d996",
+          "installationId": "19084d56-e066-4900-ad59-7cf3310f0374",
+          "homeRealmId": "crownlands",
+          "realmId": "crownlands",
+          "departedAt": "2026-09-29T20:25:29.606Z",
+          "returnsAt": "2026-09-29T20:30:29.606Z",
+          "wake": {
+            "state": "available",
+            "visual": {
+              "version": 1,
+              "wake": null
+            }
+          },
+          "baseId": "c3cdf559-70f1-4f97-aca1-8c2d977cff93"
+        },
+        "returnedAt": null
+      }
+    },
+    "unavailable": {
+      "view": {
+        "wallet": "BhNv9g81agwGY5TsMXbfhZUbmwjzGWeQGzBhnuKsaAze",
+        "baseId": "c0a63711-f6f4-428c-9757-50e39ac83b92",
+        "serverNow": "2026-09-29T20:25:30.240Z",
+        "features": {
+          "starterExpeditions": {
+            "version": 1,
+            "receipts": 1
+          }
+        },
+        "acceptingDepartures": false,
+        "home": {
+          "source": "free_assignment",
+          "version": 1,
+          "realmId": "crownlands"
+        },
+        "routes": [
+          {
+            "routeCatalogueVersion": 2,
+            "rewardTableVersion": 2,
+            "routeId": "introduction",
+            "realmId": "crownlands",
+            "resourceId": "crown_iron_ore",
+            "vehicleFamily": "starter",
+            "durationSec": 300,
+            "grossQuantity": "5",
+            "islandPoolQuantity": "1",
+            "netQuantity": "4"
+          },
+          {
+            "routeCatalogueVersion": 2,
+            "rewardTableVersion": 2,
+            "routeId": "coastal_survey",
+            "realmId": "crownlands",
+            "resourceId": "crown_iron_ore",
+            "vehicleFamily": "starter",
+            "durationSec": 1800,
+            "grossQuantity": "25",
+            "islandPoolQuantity": "5",
+            "netQuantity": "20"
+          },
+          {
+            "routeCatalogueVersion": 2,
+            "rewardTableVersion": 2,
+            "routeId": "long_survey",
+            "realmId": "crownlands",
+            "resourceId": "crown_iron_ore",
+            "vehicleFamily": "starter",
+            "durationSec": 7200,
+            "grossQuantity": "80",
+            "islandPoolQuantity": "16",
+            "netQuantity": "64"
+          },
+          {
+            "routeCatalogueVersion": 2,
+            "rewardTableVersion": 2,
+            "routeId": "common_frostveil",
+            "realmId": "frostveil",
+            "resourceId": "frost_quartz",
+            "vehicleFamily": "starter",
+            "access": {
+              "kind": "starter_common",
+              "policyVersion": 1
+            },
+            "durationSec": 1800,
+            "grossQuantity": "5",
+            "islandPoolQuantity": "1",
+            "netQuantity": "4"
+          },
+          {
+            "routeCatalogueVersion": 2,
+            "rewardTableVersion": 2,
+            "routeId": "common_elderwood",
+            "realmId": "elderwood",
+            "resourceId": "heartwood_logs",
+            "vehicleFamily": "starter",
+            "access": {
+              "kind": "starter_common",
+              "policyVersion": 1
+            },
+            "durationSec": 1800,
+            "grossQuantity": "5",
+            "islandPoolQuantity": "1",
+            "netQuantity": "4"
+          },
+          {
+            "routeCatalogueVersion": 2,
+            "rewardTableVersion": 2,
+            "routeId": "common_sunscar",
+            "realmId": "sunscar",
+            "resourceId": "sunstone_rubble",
+            "vehicleFamily": "starter",
+            "access": {
+              "kind": "starter_common",
+              "policyVersion": 1
+            },
+            "durationSec": 1800,
+            "grossQuantity": "5",
+            "islandPoolQuantity": "1",
+            "netQuantity": "4"
+          },
+          {
+            "routeCatalogueVersion": 2,
+            "rewardTableVersion": 2,
+            "routeId": "common_crownlands",
+            "realmId": "crownlands",
+            "resourceId": "crown_iron_ore",
+            "vehicleFamily": "starter",
+            "access": {
+              "kind": "starter_common",
+              "policyVersion": 1
+            },
+            "durationSec": 1800,
+            "grossQuantity": "5",
+            "islandPoolQuantity": "1",
+            "netQuantity": "4"
+          },
+          {
+            "routeCatalogueVersion": 2,
+            "rewardTableVersion": 2,
+            "routeId": "common_seeker_reach",
+            "realmId": "seeker-reach",
+            "resourceId": "rough_prism",
+            "vehicleFamily": "starter",
+            "access": {
+              "kind": "starter_common",
+              "policyVersion": 1
+            },
+            "durationSec": 1800,
+            "grossQuantity": "5",
+            "islandPoolQuantity": "1",
+            "netQuantity": "4"
+          },
+          {
+            "routeCatalogueVersion": 2,
+            "rewardTableVersion": 2,
+            "routeId": "common_stormcairn",
+            "realmId": "stormcairn",
+            "resourceId": "storm_ore",
+            "vehicleFamily": "starter",
+            "access": {
+              "kind": "starter_common",
+              "policyVersion": 1
+            },
+            "durationSec": 1800,
+            "grossQuantity": "5",
+            "islandPoolQuantity": "1",
+            "netQuantity": "4"
+          },
+          {
+            "routeCatalogueVersion": 2,
+            "rewardTableVersion": 2,
+            "routeId": "common_thornwake",
+            "realmId": "thornwake",
+            "resourceId": "thorn_fibre",
+            "vehicleFamily": "starter",
+            "access": {
+              "kind": "starter_common",
+              "policyVersion": 1
+            },
+            "durationSec": 1800,
+            "grossQuantity": "5",
+            "islandPoolQuantity": "1",
+            "netQuantity": "4"
+          },
+          {
+            "routeCatalogueVersion": 2,
+            "rewardTableVersion": 2,
+            "routeId": "common_cinderfall",
+            "realmId": "cinderfall",
+            "resourceId": "ember_nodules",
+            "vehicleFamily": "starter",
+            "access": {
+              "kind": "starter_common",
+              "policyVersion": 1
+            },
+            "durationSec": 1800,
+            "grossQuantity": "5",
+            "islandPoolQuantity": "1",
+            "netQuantity": "4"
+          }
+        ],
+        "installation": {
+          "berthId": "704072cf-4456-4533-9f32-f9d1dc7bc926",
+          "completedBuildJobId": "be01e524-4bc9-479e-b52e-7e95e445e8ad",
+          "berthCompletedAt": "2026-09-29T20:25:29.240Z",
+          "installationId": "2699ae2b-0440-43d7-a732-c784acf424cc",
+          "baseId": "c0a63711-f6f4-428c-9757-50e39ac83b92",
+          "family": "starter",
+          "installedAt": "2026-09-29T20:25:30.240Z"
+        },
+        "flight": {
+          "expeditionId": "8997b258-b64e-4889-a383-393c6edb0168",
+          "installationId": "2699ae2b-0440-43d7-a732-c784acf424cc",
+          "route": {
+            "routeCatalogueVersion": 2,
+            "rewardTableVersion": 2,
+            "routeId": "introduction",
+            "realmId": "crownlands",
+            "resourceId": "crown_iron_ore",
+            "vehicleFamily": "starter",
+            "durationSec": 300,
+            "grossQuantity": "5",
+            "netQuantity": "4",
+            "islandPoolQuantity": "1"
+          },
+          "departedAt": "2026-09-29T20:25:30.240Z",
+          "returnsAt": "2026-09-29T20:30:30.240Z",
+          "termId": "a6a06727-cbf9-4470-a296-f4468366b3b9",
+          "termHash": "c19d57683d6da8fb1805425cf3e7eb8b13147cb1f1e42bf01f7d7fcb722a3c7e"
+        },
+        "lodgeCompletedAt": "2026-09-29T20:25:29.240Z",
+        "rawStock": [
+          {
+            "resourceId": "frost_quartz",
+            "available": "0",
+            "reserved": "0",
+            "total": "0"
+          },
+          {
+            "resourceId": "heartwood_logs",
+            "available": "0",
+            "reserved": "0",
+            "total": "0"
+          },
+          {
+            "resourceId": "sunstone_rubble",
+            "available": "0",
+            "reserved": "0",
+            "total": "0"
+          },
+          {
+            "resourceId": "crown_iron_ore",
+            "available": "0",
+            "reserved": "0",
+            "total": "0"
+          },
+          {
+            "resourceId": "rough_prism",
+            "available": "0",
+            "reserved": "0",
+            "total": "0"
+          },
+          {
+            "resourceId": "storm_ore",
+            "available": "0",
+            "reserved": "0",
+            "total": "0"
+          },
+          {
+            "resourceId": "thorn_fibre",
+            "available": "0",
+            "reserved": "0",
+            "total": "0"
+          },
+          {
+            "resourceId": "ember_nodules",
+            "available": "0",
+            "reserved": "0",
+            "total": "0"
+          }
+        ]
+      },
+      "original": {
+        "wallet": "BhNv9g81agwGY5TsMXbfhZUbmwjzGWeQGzBhnuKsaAze",
+        "idempotencyKey": "8997b258-b64e-4889-a383-393c6edb0168",
+        "serverNow": "2026-09-29T20:25:30.240Z",
+        "status": "accepted",
+        "receipt": {
+          "expeditionId": "8997b258-b64e-4889-a383-393c6edb0168",
+          "installationId": "2699ae2b-0440-43d7-a732-c784acf424cc",
+          "route": {
+            "routeCatalogueVersion": 2,
+            "rewardTableVersion": 2,
+            "routeId": "introduction",
+            "realmId": "crownlands",
+            "resourceId": "crown_iron_ore",
+            "vehicleFamily": "starter",
+            "durationSec": 300,
+            "grossQuantity": "5",
+            "netQuantity": "4",
+            "islandPoolQuantity": "1"
+          },
+          "departedAt": "2026-09-29T20:25:30.240Z",
+          "returnsAt": "2026-09-29T20:30:30.240Z",
+          "termId": "a6a06727-cbf9-4470-a296-f4468366b3b9",
+          "termHash": "c19d57683d6da8fb1805425cf3e7eb8b13147cb1f1e42bf01f7d7fcb722a3c7e",
+          "wallet": "BhNv9g81agwGY5TsMXbfhZUbmwjzGWeQGzBhnuKsaAze",
+          "request": {
+            "idempotencyKey": "8997b258-b64e-4889-a383-393c6edb0168",
+            "baseId": "c0a63711-f6f4-428c-9757-50e39ac83b92",
+            "installationId": "2699ae2b-0440-43d7-a732-c784acf424cc",
+            "routeId": "introduction",
+            "routeVersion": 2,
+            "rewardVersion": 2
+          }
+        },
+        "return": null
+      },
+      "current": {
+        "version": 1,
+        "wallet": "BhNv9g81agwGY5TsMXbfhZUbmwjzGWeQGzBhnuKsaAze",
+        "baseId": "c0a63711-f6f4-428c-9757-50e39ac83b92",
+        "serverNow": "2026-09-29T20:25:30.240Z",
+        "trips": [
+          {
+            "expeditionId": "8997b258-b64e-4889-a383-393c6edb0168",
+            "installationId": "2699ae2b-0440-43d7-a732-c784acf424cc",
+            "homeRealmId": "crownlands",
+            "realmId": "crownlands",
+            "departedAt": "2026-09-29T20:25:30.240Z",
+            "returnsAt": "2026-09-29T20:30:30.240Z",
+            "wake": {
+              "state": "unavailable",
+              "visual": null
+            },
+            "kind": "starter"
+          }
+        ]
+      },
+      "sidecar": {
+        "version": 1,
+        "wallet": "BhNv9g81agwGY5TsMXbfhZUbmwjzGWeQGzBhnuKsaAze",
+        "kind": "starter",
+        "key": "8997b258-b64e-4889-a383-393c6edb0168",
+        "serverNow": "2026-09-29T20:25:30.240Z",
+        "status": "known",
+        "presentation": {
+          "expeditionId": "8997b258-b64e-4889-a383-393c6edb0168",
+          "installationId": "2699ae2b-0440-43d7-a732-c784acf424cc",
+          "homeRealmId": "crownlands",
+          "realmId": "crownlands",
+          "departedAt": "2026-09-29T20:25:30.240Z",
+          "returnsAt": "2026-09-29T20:30:30.240Z",
+          "wake": {
+            "state": "unavailable",
+            "visual": null
+          },
+          "baseId": "c0a63711-f6f4-428c-9757-50e39ac83b92"
+        },
+        "returnedAt": null
+      }
+    }
+  },
+  "advanced": {
+    "selected": {
+      "fleet": {
+        "version": 1,
+        "wallet": "7aPwsMVrik7ahfKWAauVRaqFsBb4vSJxEWT9oJu6fj5k",
+        "baseId": "15dd4e63-3ee6-4344-9bc6-409fd4e8f083",
+        "serverNow": "2026-09-27T20:36:32.086Z",
+        "acceptingNewActions": true,
+        "vehicles": [
+          {
+            "installationId": "54f3bd3d-707b-4c9e-b21d-ca0ee653ee67",
+            "berthId": "1a2e5c03-6d69-4b7e-a5c0-a0cba2e76d6e",
+            "family": "survey_balloon",
+            "tier": 1,
+            "revision": 0,
+            "completedTotal": "0",
+            "allowanceStart": "0",
+            "remainingUses": 100,
+            "away": true,
+            "pendingService": false
+          }
+        ]
+      },
+      "original": {
+        "wallet": "7aPwsMVrik7ahfKWAauVRaqFsBb4vSJxEWT9oJu6fj5k",
+        "idempotencyKey": "5c816161-966d-4ba8-9e7a-471045ae2309",
+        "serverNow": "2026-09-27T20:36:32.086Z",
+        "status": "accepted",
+        "receipt": {
+          "wallet": "7aPwsMVrik7ahfKWAauVRaqFsBb4vSJxEWT9oJu6fj5k",
+          "request": {
+            "idempotencyKey": "5c816161-966d-4ba8-9e7a-471045ae2309",
+            "baseId": "15dd4e63-3ee6-4344-9bc6-409fd4e8f083",
+            "installationId": "54f3bd3d-707b-4c9e-b21d-ca0ee653ee67",
+            "routeId": "coastal_survey",
+            "policyVersion": 1
+          },
+          "expeditionId": "5c816161-966d-4ba8-9e7a-471045ae2309",
+          "installationId": "54f3bd3d-707b-4c9e-b21d-ca0ee653ee67",
+          "route": {
+            "family": "survey_balloon",
+            "tier": 1,
+            "homeRealmId": "crownlands",
+            "routeId": "coastal_survey",
+            "policyVersion": 1,
+            "realmId": "crownlands",
+            "resourceId": "crown_iron_ore",
+            "accessRequirement": "home",
+            "durationSec": 1800,
+            "grossQuantity": "30",
+            "netQuantity": "24",
+            "islandPoolQuantity": "6",
+            "supplies": [
+              {
+                "resourceId": "rough_prism",
+                "quantity": "1"
+              }
+            ]
+          },
+          "departedAt": "2026-09-27T20:36:32.086Z",
+          "returnsAt": "2026-09-27T21:06:32.086Z",
+          "termId": "19d26dc2-e964-587f-b953-414926524029",
+          "termHash": "1d80dbe3faf214a58918030198615ff95979703bb29827aded3fbad730ac8f66",
+          "completedBefore": "0"
+        },
+        "return": null
+      },
+      "current": {
+        "version": 1,
+        "wallet": "7aPwsMVrik7ahfKWAauVRaqFsBb4vSJxEWT9oJu6fj5k",
+        "baseId": "15dd4e63-3ee6-4344-9bc6-409fd4e8f083",
+        "serverNow": "2026-09-27T20:36:32.086Z",
+        "trips": [
+          {
+            "expeditionId": "5c816161-966d-4ba8-9e7a-471045ae2309",
+            "installationId": "54f3bd3d-707b-4c9e-b21d-ca0ee653ee67",
+            "homeRealmId": "crownlands",
+            "realmId": "crownlands",
+            "departedAt": "2026-09-27T20:36:32.086Z",
+            "returnsAt": "2026-09-27T21:06:32.086Z",
+            "wake": {
+              "state": "available",
+              "visual": {
+                "version": 1,
+                "wake": {
+                  "version": 1,
+                  "outputId": "aurora_wake",
+                  "sourceId": "auroraWake",
+                  "sourceManifestSha256": "b4b67f78efd4d74fa416e78822af9f0e037ad6d3bc30f3fc77127cd169292394",
+                  "sourceIndexSha256": "04f96c922ca04d93f1bf760e6385713908b971ce82c3aa022602f1fa199e2181",
+                  "bindingSha256": "f061211842f342a719bbf1ebe09ac2e085043c43f64f85bbc55582ec82d2a094"
+                }
+              }
+            },
+            "kind": "advanced"
+          }
+        ]
+      },
+      "sidecar": {
+        "version": 1,
+        "wallet": "7aPwsMVrik7ahfKWAauVRaqFsBb4vSJxEWT9oJu6fj5k",
+        "kind": "advanced",
+        "key": "5c816161-966d-4ba8-9e7a-471045ae2309",
+        "serverNow": "2026-09-27T20:36:32.086Z",
+        "status": "known",
+        "presentation": {
+          "expeditionId": "5c816161-966d-4ba8-9e7a-471045ae2309",
+          "installationId": "54f3bd3d-707b-4c9e-b21d-ca0ee653ee67",
+          "homeRealmId": "crownlands",
+          "realmId": "crownlands",
+          "departedAt": "2026-09-27T20:36:32.086Z",
+          "returnsAt": "2026-09-27T21:06:32.086Z",
+          "wake": {
+            "state": "available",
+            "visual": {
+              "version": 1,
+              "wake": {
+                "version": 1,
+                "outputId": "aurora_wake",
+                "sourceId": "auroraWake",
+                "sourceManifestSha256": "b4b67f78efd4d74fa416e78822af9f0e037ad6d3bc30f3fc77127cd169292394",
+                "sourceIndexSha256": "04f96c922ca04d93f1bf760e6385713908b971ce82c3aa022602f1fa199e2181",
+                "bindingSha256": "f061211842f342a719bbf1ebe09ac2e085043c43f64f85bbc55582ec82d2a094"
+              }
+            }
+          },
+          "baseId": "15dd4e63-3ee6-4344-9bc6-409fd4e8f083"
+        },
+        "returnedAt": null
+      },
+      "returnedOriginal": {
+        "wallet": "7aPwsMVrik7ahfKWAauVRaqFsBb4vSJxEWT9oJu6fj5k",
+        "idempotencyKey": "5c816161-966d-4ba8-9e7a-471045ae2309",
+        "serverNow": "2026-09-27T21:06:33.086Z",
+        "status": "accepted",
+        "receipt": {
+          "wallet": "7aPwsMVrik7ahfKWAauVRaqFsBb4vSJxEWT9oJu6fj5k",
+          "request": {
+            "idempotencyKey": "5c816161-966d-4ba8-9e7a-471045ae2309",
+            "baseId": "15dd4e63-3ee6-4344-9bc6-409fd4e8f083",
+            "installationId": "54f3bd3d-707b-4c9e-b21d-ca0ee653ee67",
+            "routeId": "coastal_survey",
+            "policyVersion": 1
+          },
+          "expeditionId": "5c816161-966d-4ba8-9e7a-471045ae2309",
+          "installationId": "54f3bd3d-707b-4c9e-b21d-ca0ee653ee67",
+          "route": {
+            "family": "survey_balloon",
+            "tier": 1,
+            "homeRealmId": "crownlands",
+            "routeId": "coastal_survey",
+            "policyVersion": 1,
+            "realmId": "crownlands",
+            "resourceId": "crown_iron_ore",
+            "accessRequirement": "home",
+            "durationSec": 1800,
+            "grossQuantity": "30",
+            "netQuantity": "24",
+            "islandPoolQuantity": "6",
+            "supplies": [
+              {
+                "resourceId": "rough_prism",
+                "quantity": "1"
+              }
+            ]
+          },
+          "departedAt": "2026-09-27T20:36:32.086Z",
+          "returnsAt": "2026-09-27T21:06:32.086Z",
+          "termId": "19d26dc2-e964-587f-b953-414926524029",
+          "termHash": "1d80dbe3faf214a58918030198615ff95979703bb29827aded3fbad730ac8f66",
+          "completedBefore": "0"
+        },
+        "return": {
+          "returnId": "866242da-6fa9-4a46-acd3-d5cc7b5ff586",
+          "returnedAt": "2026-09-27T21:06:32.086Z",
+          "completedTotal": "1"
+        }
+      },
+      "returnedSidecar": {
+        "version": 1,
+        "wallet": "7aPwsMVrik7ahfKWAauVRaqFsBb4vSJxEWT9oJu6fj5k",
+        "kind": "advanced",
+        "key": "5c816161-966d-4ba8-9e7a-471045ae2309",
+        "serverNow": "2026-09-27T21:06:33.086Z",
+        "status": "known",
+        "presentation": {
+          "expeditionId": "5c816161-966d-4ba8-9e7a-471045ae2309",
+          "installationId": "54f3bd3d-707b-4c9e-b21d-ca0ee653ee67",
+          "homeRealmId": "crownlands",
+          "realmId": "crownlands",
+          "departedAt": "2026-09-27T20:36:32.086Z",
+          "returnsAt": "2026-09-27T21:06:32.086Z",
+          "wake": {
+            "state": "available",
+            "visual": {
+              "version": 1,
+              "wake": {
+                "version": 1,
+                "outputId": "aurora_wake",
+                "sourceId": "auroraWake",
+                "sourceManifestSha256": "b4b67f78efd4d74fa416e78822af9f0e037ad6d3bc30f3fc77127cd169292394",
+                "sourceIndexSha256": "04f96c922ca04d93f1bf760e6385713908b971ce82c3aa022602f1fa199e2181",
+                "bindingSha256": "f061211842f342a719bbf1ebe09ac2e085043c43f64f85bbc55582ec82d2a094"
+              }
+            }
+          },
+          "baseId": "15dd4e63-3ee6-4344-9bc6-409fd4e8f083"
+        },
+        "returnedAt": "2026-09-27T21:06:32.086Z"
+      },
+      "afterReturnCurrent": {
+        "version": 1,
+        "wallet": "BPBMdY2bpzEmNybysuDrbZdbLGn6G2s7YA6drpto1GHT",
+        "baseId": "15dd4e63-3ee6-4344-9bc6-409fd4e8f083",
+        "serverNow": "2026-09-27T21:06:33.086Z",
+        "trips": []
+      }
+    },
+    "default": {
+      "original": {
+        "wallet": "2Kn1ppxdHrzA8RfZoePpgeN3q8LUWXYu6ZmMkp5gjgYF",
+        "idempotencyKey": "a622b510-ab15-4e78-8b06-c68ec0164b5a",
+        "serverNow": "2026-09-27T20:25:33.000Z",
+        "status": "accepted",
+        "receipt": {
+          "wallet": "2Kn1ppxdHrzA8RfZoePpgeN3q8LUWXYu6ZmMkp5gjgYF",
+          "request": {
+            "idempotencyKey": "a622b510-ab15-4e78-8b06-c68ec0164b5a",
+            "baseId": "a978c364-219c-456a-8064-4e3cfe02288a",
+            "installationId": "c4037d3c-5bf0-4cad-8f6e-b734569e2b9f",
+            "routeId": "coastal_survey",
+            "policyVersion": 1
+          },
+          "expeditionId": "a622b510-ab15-4e78-8b06-c68ec0164b5a",
+          "installationId": "c4037d3c-5bf0-4cad-8f6e-b734569e2b9f",
+          "route": {
+            "family": "survey_balloon",
+            "tier": 1,
+            "homeRealmId": "crownlands",
+            "routeId": "coastal_survey",
+            "policyVersion": 1,
+            "realmId": "crownlands",
+            "resourceId": "crown_iron_ore",
+            "accessRequirement": "home",
+            "durationSec": 1800,
+            "grossQuantity": "30",
+            "netQuantity": "24",
+            "islandPoolQuantity": "6",
+            "supplies": [
+              {
+                "resourceId": "rough_prism",
+                "quantity": "1"
+              }
+            ]
+          },
+          "departedAt": "2026-09-27T20:25:33.000Z",
+          "returnsAt": "2026-09-27T20:55:33.000Z",
+          "termId": "7dee96bf-1375-51e8-b672-dfa66627f848",
+          "termHash": "a93186806a2c3e94311a903790553d4c51838f902baed3bfc299a62137013eec",
+          "completedBefore": "0"
+        },
+        "return": null
+      },
+      "sidecar": {
+        "version": 1,
+        "wallet": "2Kn1ppxdHrzA8RfZoePpgeN3q8LUWXYu6ZmMkp5gjgYF",
+        "kind": "advanced",
+        "key": "a622b510-ab15-4e78-8b06-c68ec0164b5a",
+        "serverNow": "2026-09-27T20:25:33.000Z",
+        "status": "known",
+        "presentation": {
+          "expeditionId": "a622b510-ab15-4e78-8b06-c68ec0164b5a",
+          "installationId": "c4037d3c-5bf0-4cad-8f6e-b734569e2b9f",
+          "homeRealmId": "crownlands",
+          "realmId": "crownlands",
+          "departedAt": "2026-09-27T20:25:33.000Z",
+          "returnsAt": "2026-09-27T20:55:33.000Z",
+          "wake": {
+            "state": "available",
+            "visual": {
+              "version": 1,
+              "wake": null
+            }
+          },
+          "baseId": "a978c364-219c-456a-8064-4e3cfe02288a"
+        },
+        "returnedAt": null
+      },
+      "current": {
+        "version": 1,
+        "wallet": "2Kn1ppxdHrzA8RfZoePpgeN3q8LUWXYu6ZmMkp5gjgYF",
+        "baseId": "a978c364-219c-456a-8064-4e3cfe02288a",
+        "serverNow": "2026-09-27T20:25:33.000Z",
+        "trips": [
+          {
+            "expeditionId": "a622b510-ab15-4e78-8b06-c68ec0164b5a",
+            "installationId": "c4037d3c-5bf0-4cad-8f6e-b734569e2b9f",
+            "homeRealmId": "crownlands",
+            "realmId": "crownlands",
+            "departedAt": "2026-09-27T20:25:33.000Z",
+            "returnsAt": "2026-09-27T20:55:33.000Z",
+            "wake": {
+              "state": "available",
+              "visual": {
+                "version": 1,
+                "wake": null
+              }
+            },
+            "kind": "advanced"
+          }
+        ]
+      }
+    },
+    "unavailable": {
+      "original": {
+        "wallet": "2Kn1ppxdHrzA8RfZoePpgeN3q8LUWXYu6ZmMkp5gjgYF",
+        "idempotencyKey": "8155ba40-de7a-4bfb-a83a-d4e289458f39",
+        "serverNow": "2026-09-27T20:55:34.000Z",
+        "status": "accepted",
+        "receipt": {
+          "wallet": "2Kn1ppxdHrzA8RfZoePpgeN3q8LUWXYu6ZmMkp5gjgYF",
+          "request": {
+            "idempotencyKey": "8155ba40-de7a-4bfb-a83a-d4e289458f39",
+            "baseId": "a978c364-219c-456a-8064-4e3cfe02288a",
+            "installationId": "c4037d3c-5bf0-4cad-8f6e-b734569e2b9f",
+            "routeId": "coastal_survey",
+            "policyVersion": 1
+          },
+          "expeditionId": "8155ba40-de7a-4bfb-a83a-d4e289458f39",
+          "installationId": "c4037d3c-5bf0-4cad-8f6e-b734569e2b9f",
+          "route": {
+            "family": "survey_balloon",
+            "tier": 1,
+            "homeRealmId": "crownlands",
+            "routeId": "coastal_survey",
+            "policyVersion": 1,
+            "realmId": "crownlands",
+            "resourceId": "crown_iron_ore",
+            "accessRequirement": "home",
+            "durationSec": 1800,
+            "grossQuantity": "30",
+            "netQuantity": "24",
+            "islandPoolQuantity": "6",
+            "supplies": [
+              {
+                "resourceId": "rough_prism",
+                "quantity": "1"
+              }
+            ]
+          },
+          "departedAt": "2026-09-27T20:55:34.000Z",
+          "returnsAt": "2026-09-27T21:25:34.000Z",
+          "termId": "7dee96bf-1375-51e8-b672-dfa66627f848",
+          "termHash": "a93186806a2c3e94311a903790553d4c51838f902baed3bfc299a62137013eec",
+          "completedBefore": "1"
+        },
+        "return": null
+      },
+      "sidecar": {
+        "version": 1,
+        "wallet": "2Kn1ppxdHrzA8RfZoePpgeN3q8LUWXYu6ZmMkp5gjgYF",
+        "kind": "advanced",
+        "key": "8155ba40-de7a-4bfb-a83a-d4e289458f39",
+        "serverNow": "2026-09-27T20:55:34.000Z",
+        "status": "known",
+        "presentation": {
+          "expeditionId": "8155ba40-de7a-4bfb-a83a-d4e289458f39",
+          "installationId": "c4037d3c-5bf0-4cad-8f6e-b734569e2b9f",
+          "homeRealmId": "crownlands",
+          "realmId": "crownlands",
+          "departedAt": "2026-09-27T20:55:34.000Z",
+          "returnsAt": "2026-09-27T21:25:34.000Z",
+          "wake": {
+            "state": "unavailable",
+            "visual": null
+          },
+          "baseId": "a978c364-219c-456a-8064-4e3cfe02288a"
+        },
+        "returnedAt": null
+      },
+      "current": {
+        "version": 1,
+        "wallet": "2Kn1ppxdHrzA8RfZoePpgeN3q8LUWXYu6ZmMkp5gjgYF",
+        "baseId": "a978c364-219c-456a-8064-4e3cfe02288a",
+        "serverNow": "2026-09-27T20:55:34.000Z",
+        "trips": [
+          {
+            "expeditionId": "8155ba40-de7a-4bfb-a83a-d4e289458f39",
+            "installationId": "c4037d3c-5bf0-4cad-8f6e-b734569e2b9f",
+            "homeRealmId": "crownlands",
+            "realmId": "crownlands",
+            "departedAt": "2026-09-27T20:55:34.000Z",
+            "returnsAt": "2026-09-27T21:25:34.000Z",
+            "wake": {
+              "state": "unavailable",
+              "visual": null
+            },
+            "kind": "advanced"
+          }
+        ]
+      }
+    }
+  },
+  "legacy": {
+    "starter": {
+      "original": {
+        "wallet": "38u4i8X5Vm5HuAcy6SPN2oW1mS1gkeJnc8VDYgbGjtwe",
+        "idempotencyKey": "48f0b7c2-5bb6-4a88-9e23-e8b107968dc7",
+        "serverNow": "2026-09-29T20:25:37.843Z",
+        "status": "accepted",
+        "receipt": {
+          "expeditionId": "48f0b7c2-5bb6-4a88-9e23-e8b107968dc7",
+          "installationId": "9195b4f2-f503-4ac3-8157-38bbadecc2ec",
+          "route": {
+            "routeCatalogueVersion": 2,
+            "rewardTableVersion": 2,
+            "routeId": "introduction",
+            "realmId": "crownlands",
+            "resourceId": "crown_iron_ore",
+            "vehicleFamily": "starter",
+            "durationSec": 300,
+            "grossQuantity": "5",
+            "netQuantity": "4",
+            "islandPoolQuantity": "1"
+          },
+          "departedAt": "2026-09-29T20:25:37.843Z",
+          "returnsAt": "2026-09-29T20:30:37.843Z",
+          "termId": "ebc10d05-5dc6-4d4f-80d0-8113bc1fc0b9",
+          "termHash": "ed96e98ecf3104ca39bab3b422a1bff2aefa67f1ee25c13f69793f445852d6aa",
+          "wallet": "38u4i8X5Vm5HuAcy6SPN2oW1mS1gkeJnc8VDYgbGjtwe",
+          "request": {
+            "idempotencyKey": "48f0b7c2-5bb6-4a88-9e23-e8b107968dc7",
+            "baseId": "5d7682d3-070f-4cb4-892d-c0b11ab02e58",
+            "installationId": "9195b4f2-f503-4ac3-8157-38bbadecc2ec",
+            "routeId": "introduction",
+            "routeVersion": 2,
+            "rewardVersion": 2
+          }
+        },
+        "return": null
+      },
+      "sidecar": {
+        "version": 1,
+        "wallet": "38u4i8X5Vm5HuAcy6SPN2oW1mS1gkeJnc8VDYgbGjtwe",
+        "kind": "starter",
+        "key": "48f0b7c2-5bb6-4a88-9e23-e8b107968dc7",
+        "serverNow": "2026-09-29T20:25:37.843Z",
+        "status": "known",
+        "presentation": {
+          "expeditionId": "48f0b7c2-5bb6-4a88-9e23-e8b107968dc7",
+          "installationId": "9195b4f2-f503-4ac3-8157-38bbadecc2ec",
+          "homeRealmId": "crownlands",
+          "realmId": "crownlands",
+          "departedAt": "2026-09-29T20:25:37.843Z",
+          "returnsAt": "2026-09-29T20:30:37.843Z",
+          "wake": {
+            "state": "legacy",
+            "visual": null
+          },
+          "baseId": "5d7682d3-070f-4cb4-892d-c0b11ab02e58"
+        },
+        "returnedAt": null
+      },
+      "current": {
+        "version": 1,
+        "wallet": "38u4i8X5Vm5HuAcy6SPN2oW1mS1gkeJnc8VDYgbGjtwe",
+        "baseId": "5d7682d3-070f-4cb4-892d-c0b11ab02e58",
+        "serverNow": "2026-09-29T20:25:37.843Z",
+        "trips": [
+          {
+            "expeditionId": "48f0b7c2-5bb6-4a88-9e23-e8b107968dc7",
+            "installationId": "9195b4f2-f503-4ac3-8157-38bbadecc2ec",
+            "homeRealmId": "crownlands",
+            "realmId": "crownlands",
+            "departedAt": "2026-09-29T20:25:37.843Z",
+            "returnsAt": "2026-09-29T20:30:37.843Z",
+            "wake": {
+              "state": "legacy",
+              "visual": null
+            },
+            "kind": "starter"
+          }
+        ]
+      }
+    }
+  }
+}

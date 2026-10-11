@@ -1,0 +1,806 @@
+{
+  "schemaVersion": 1,
+  "atlas": "pe_fleet_starter",
+  "sourceScale": 1,
+  "sourceIndexBase": 0,
+  "keyIndexBase": 1,
+  "sourceManifestSha256": "c2de5bfaf3c6d9e5700c613ae6aea0eeb9a57f9a8f055dde08db38402c80a329",
+  "sourceTracksSha256": "33576b7a8c0d6c62658b3c88ef3accb204babe1e21207dc5a2c62234da327b4d",
+  "sourceFxManifestSha256": "db6a01d7d55646b2e23f5fbe5d1cd976fc97e3386f91502f76a4253ffece4f34",
+  "sourceIndexSha256": "04f96c922ca04d93f1bf760e6385713908b971ce82c3aa022602f1fa199e2181",
+  "provenanceSha256": "25007de42cdbe3b9f3440e8999e05da3e4a5b275968a44834e84e96ba43f4840",
+  "fxProvenanceSha256": "e5e5c2dc8151d358b34579b76f20a174b46544d8fc32b1bd5546143d7eeba910",
+  "clips": {
+    "pe_veh_starter_idle": {
+      "sourcePath": "fleet/idle/starter-idle.png",
+      "sourceSha256": "51f7cec3ac48bf9ab336d05699cee4a0075d6ebc1372961e548a12a70332c131",
+      "cellW": 112,
+      "cellH": 112,
+      "anchorKind": "attachment",
+      "anchorPx": [
+        56,
+        105
+      ],
+      "geometry": {
+        "cell": [
+          112,
+          112
+        ],
+        "horizontalPivot": 56,
+        "sourceCellBottom": 112,
+        "contactPx": [
+          56,
+          105
+        ],
+        "dockOffsetPx": [
+          0,
+          -27
+        ],
+        "berthRef": "starter-berth",
+        "drawScale": 1
+      },
+      "fps": 0,
+      "loop": false,
+      "frames": [
+        {
+          "sourceIndex": 0,
+          "key": "pe_veh_starter_idle_f1",
+          "sha256": "ec4aec984da63f7bfc2f165facbc35df23d4e89cff8c070bb1d7a3c179af2928"
+        }
+      ]
+    },
+    "pe_veh_starter_docked": {
+      "sourcePath": "fleet/animations/starter-motion-docked.png",
+      "sourceSha256": "670c923d9fac73ddc0f42463c96fef3e534b4ef22f34bbcc0c003d217999f565",
+      "cellW": 112,
+      "cellH": 112,
+      "anchorKind": "attachment",
+      "anchorPx": [
+        56,
+        105
+      ],
+      "geometry": {
+        "cell": [
+          112,
+          112
+        ],
+        "horizontalPivot": 56,
+        "sourceCellBottom": 112,
+        "contactPx": [
+          56,
+          105
+        ],
+        "dockOffsetPx": [
+          0,
+          -27
+        ],
+        "berthRef": "starter-berth",
+        "drawScale": 1
+      },
+      "fps": 8,
+      "loop": true,
+      "providerIndices": [
+        1,
+        3,
+        5,
+        7
+      ],
+      "reducedMotionFrame": 0,
+      "frames": [
+        {
+          "sourceIndex": 0,
+          "key": "pe_veh_starter_docked_f1",
+          "sha256": "47183223ecef26eb0a80b3c3032d80973cef09aa19172c10170fda86d99292f3"
+        },
+        {
+          "sourceIndex": 1,
+          "key": "pe_veh_starter_docked_f2",
+          "sha256": "95954c631d85b8d9827ef2a8c3ddd125210cdc7b34eda0643c5afda0d6e8e60f"
+        },
+        {
+          "sourceIndex": 2,
+          "key": "pe_veh_starter_docked_f3",
+          "sha256": "ace43efc133a08c5b942f1732e60b669b0a67d49610045fcdf4ea9c5a966fbd9"
+        },
+        {
+          "sourceIndex": 3,
+          "key": "pe_veh_starter_docked_f4",
+          "sha256": "3ae3d79f6a6b7df22bd7937ad319c409da8e57f2557c292d3127a4a8fb4fc46c"
+        }
+      ]
+    },
+    "pe_veh_starter_travel": {
+      "sourcePath": "fleet/animations/starter-motion-travel.png",
+      "sourceSha256": "7c1c1490f99a9e0e1ae714902a4483374cc660e86e4c310519af84019a1875c2",
+      "cellW": 112,
+      "cellH": 112,
+      "anchorKind": "attachment",
+      "anchorPx": [
+        56,
+        105
+      ],
+      "geometry": {
+        "cell": [
+          112,
+          112
+        ],
+        "horizontalPivot": 56,
+        "sourceCellBottom": 112,
+        "contactPx": [
+          56,
+          105
+        ],
+        "dockOffsetPx": [
+          0,
+          -27
+        ],
+        "berthRef": "starter-berth",
+        "drawScale": 1
+      },
+      "fps": 8,
+      "loop": true,
+      "providerIndices": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "reducedMotionFrame": 0,
+      "frames": [
+        {
+          "sourceIndex": 0,
+          "key": "pe_veh_starter_travel_f1",
+          "sha256": "47183223ecef26eb0a80b3c3032d80973cef09aa19172c10170fda86d99292f3"
+        },
+        {
+          "sourceIndex": 1,
+          "key": "pe_veh_starter_travel_f2",
+          "sha256": "4b16f0e87e105d8e81555f8464e7be6608d44a04bc7c1a7d4c8ce24c2d8ab256"
+        },
+        {
+          "sourceIndex": 2,
+          "key": "pe_veh_starter_travel_f3",
+          "sha256": "95954c631d85b8d9827ef2a8c3ddd125210cdc7b34eda0643c5afda0d6e8e60f"
+        },
+        {
+          "sourceIndex": 3,
+          "key": "pe_veh_starter_travel_f4",
+          "sha256": "aa05483cf929d1ce2db09649755dd2b8cdc60719588b71f9d97ec4d4ceea129e"
+        },
+        {
+          "sourceIndex": 4,
+          "key": "pe_veh_starter_travel_f5",
+          "sha256": "ace43efc133a08c5b942f1732e60b669b0a67d49610045fcdf4ea9c5a966fbd9"
+        },
+        {
+          "sourceIndex": 5,
+          "key": "pe_veh_starter_travel_f6",
+          "sha256": "4803d92961f31331fb3d66a1188488d7b3df7505ea058ff5e4c852c821fa2c61"
+        },
+        {
+          "sourceIndex": 6,
+          "key": "pe_veh_starter_travel_f7",
+          "sha256": "3ae3d79f6a6b7df22bd7937ad319c409da8e57f2557c292d3127a4a8fb4fc46c"
+        },
+        {
+          "sourceIndex": 7,
+          "key": "pe_veh_starter_travel_f8",
+          "sha256": "ec4aec984da63f7bfc2f165facbc35df23d4e89cff8c070bb1d7a3c179af2928"
+        }
+      ]
+    },
+    "pe_berth_starter_intact": {
+      "sourcePath": "fleet/berths/starter-berth-intact.png",
+      "sourceSha256": "370b9458cf4c1919818adb654c8146216d421d41e39a652cb19034ee3650dfdc",
+      "cellW": 112,
+      "cellH": 112,
+      "anchorKind": "cellBottomPivotX",
+      "anchorPx": [
+        56,
+        112
+      ],
+      "geometry": {
+        "cell": [
+          112,
+          112
+        ],
+        "footprint": [
+          2,
+          2
+        ],
+        "horizontalPivot": 56,
+        "sourceCellBottom": 112,
+        "groundContact": [
+          56,
+          93
+        ],
+        "attachment": [
+          56,
+          78
+        ],
+        "tidalGate": [
+          56,
+          28
+        ],
+        "drawScale": 1
+      },
+      "fps": 0,
+      "loop": false,
+      "frames": [
+        {
+          "sourceIndex": 0,
+          "key": "pe_berth_starter_intact_f1",
+          "sha256": "5ecb608f4d20843a68bc8bc20a0599b9d5528724f6cebb706b05a72fedf86dcc"
+        }
+      ]
+    },
+    "pe_berth_starter_damaged": {
+      "sourcePath": "fleet/berths/starter-berth-damaged.png",
+      "sourceSha256": "1ac4cb48603b86701152df0821de3d81bf88d8c87fb512cda7088fdaf17ec4bc",
+      "cellW": 112,
+      "cellH": 112,
+      "anchorKind": "cellBottomPivotX",
+      "anchorPx": [
+        56,
+        112
+      ],
+      "geometry": {
+        "cell": [
+          112,
+          112
+        ],
+        "footprint": [
+          2,
+          2
+        ],
+        "horizontalPivot": 56,
+        "sourceCellBottom": 112,
+        "groundContact": [
+          56,
+          93
+        ],
+        "attachment": [
+          56,
+          78
+        ],
+        "tidalGate": [
+          56,
+          28
+        ],
+        "drawScale": 1
+      },
+      "fps": 0,
+      "loop": false,
+      "frames": [
+        {
+          "sourceIndex": 0,
+          "key": "pe_berth_starter_damaged_f1",
+          "sha256": "76f66ea398ac2084c2e9c95c65b19cabdfa39720c1d2e9e87436de1d745e5148"
+        }
+      ]
+    },
+    "pe_berth_starter_destroyed": {
+      "sourcePath": "fleet/berths/starter-berth-destroyed.png",
+      "sourceSha256": "3c4de29fd0367d5708ff9c39cc3e41b6767ec1861dd6127d88459336752eb306",
+      "cellW": 112,
+      "cellH": 112,
+      "anchorKind": "cellBottomPivotX",
+      "anchorPx": [
+        56,
+        112
+      ],
+      "geometry": {
+        "cell": [
+          112,
+          112
+        ],
+        "footprint": [
+          2,
+          2
+        ],
+        "horizontalPivot": 56,
+        "sourceCellBottom": 112,
+        "groundContact": [
+          56,
+          93
+        ],
+        "attachment": [
+          56,
+          78
+        ],
+        "tidalGate": [
+          56,
+          28
+        ],
+        "drawScale": 1
+      },
+      "fps": 0,
+      "loop": false,
+      "frames": [
+        {
+          "sourceIndex": 0,
+          "key": "pe_berth_starter_destroyed_f1",
+          "sha256": "0030f98d5c7902f6ce54848b964b7e73c21be478027ba0a581233403dc45306f"
+        }
+      ]
+    },
+    "pe_berth_starter_ambient": {
+      "sourcePath": "fleet/animations/starter-berth-ambient-ambient.png",
+      "sourceSha256": "aee0540c2b9493cf9d4a3e7d004765f55840572b2b60e82cfffce442dc94db73",
+      "cellW": 112,
+      "cellH": 112,
+      "anchorKind": "cellBottomPivotX",
+      "anchorPx": [
+        56,
+        112
+      ],
+      "geometry": {
+        "cell": [
+          112,
+          112
+        ],
+        "footprint": [
+          2,
+          2
+        ],
+        "horizontalPivot": 56,
+        "sourceCellBottom": 112,
+        "groundContact": [
+          56,
+          93
+        ],
+        "attachment": [
+          56,
+          78
+        ],
+        "tidalGate": [
+          56,
+          28
+        ],
+        "drawScale": 1
+      },
+      "fps": 8,
+      "loop": true,
+      "providerIndices": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "reducedMotionFrame": 0,
+      "frames": [
+        {
+          "sourceIndex": 0,
+          "key": "pe_berth_starter_ambient_f1",
+          "sha256": "9556a57aba2b0024ddc8a25314f31483b7c12f951f57961cc444a88b61568f34"
+        },
+        {
+          "sourceIndex": 1,
+          "key": "pe_berth_starter_ambient_f2",
+          "sha256": "39f8d62ee581006554d0cae26c061010c4516be72462fe39e467f0062aa7e8a4"
+        },
+        {
+          "sourceIndex": 2,
+          "key": "pe_berth_starter_ambient_f3",
+          "sha256": "ef5003dfaa73aac343b917df2727b368f8edbd452e5f2588eb9f7b22c3c81873"
+        },
+        {
+          "sourceIndex": 3,
+          "key": "pe_berth_starter_ambient_f4",
+          "sha256": "d17f87815a767a5d168ecac5d3a0e25476e7fc1f6c0306d1517541fc4942e706"
+        },
+        {
+          "sourceIndex": 4,
+          "key": "pe_berth_starter_ambient_f5",
+          "sha256": "40ee2bec5d60764ace4ec830cd728c46a403dfae7c14466d10a985df71021ad8"
+        },
+        {
+          "sourceIndex": 5,
+          "key": "pe_berth_starter_ambient_f6",
+          "sha256": "45da3d5c4ec344a57b8e988178d5e711d6090f69208cd6be7e678717dd87f7e0"
+        },
+        {
+          "sourceIndex": 6,
+          "key": "pe_berth_starter_ambient_f7",
+          "sha256": "59187da5f4f478e7c60ad1a9a035e1087002ef6c96ad40a7496aee45313db23d"
+        },
+        {
+          "sourceIndex": 7,
+          "key": "pe_berth_starter_ambient_f8",
+          "sha256": "fd52a9d300d74b90b199e440b8643343fcca44e230e4e6ca8da31330d4ce189b"
+        }
+      ]
+    },
+    "pe_fx_departure": {
+      "sourcePath": "shared-fx/departure/atlas.png",
+      "sourceSha256": "1b7a3030ce036bf13808638668b5dc092e102467cf47bacc389e11049f5109e1",
+      "cellW": 64,
+      "cellH": 64,
+      "anchorKind": "centre",
+      "anchorPx": [
+        32,
+        32
+      ],
+      "fps": 8,
+      "loop": false,
+      "providerIndices": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "frames": [
+        {
+          "sourceIndex": 0,
+          "key": "pe_fx_departure_f1",
+          "sha256": "a2934dbca13ecc2b9e06c052091c7dc0811ba0b2dc9d676814ce8cd97ba7a90c"
+        },
+        {
+          "sourceIndex": 1,
+          "key": "pe_fx_departure_f2",
+          "sha256": "1c017ec6b41874035b130dc2c8e18c331c8009533719d5b42b6c65a3cf670b68"
+        },
+        {
+          "sourceIndex": 2,
+          "key": "pe_fx_departure_f3",
+          "sha256": "65326fbe7a34583fe26f400ed39744f22727bf4f0592ba29463fd501b8c076bd"
+        },
+        {
+          "sourceIndex": 3,
+          "key": "pe_fx_departure_f4",
+          "sha256": "4e22560d5aec02f0efef1d5e0f8966c7015c0d610025ab813f333c4f5a624254"
+        },
+        {
+          "sourceIndex": 4,
+          "key": "pe_fx_departure_f5",
+          "sha256": "876b2548089bfbaeca3cc684fc92dc4121dd6c58a61f17aba36a97214cfb1859"
+        },
+        {
+          "sourceIndex": 5,
+          "key": "pe_fx_departure_f6",
+          "sha256": "64e4df9bbcdda51721e9f7389881a60cf1988b857498ece7fa4f7d3ad9ba68ad"
+        },
+        {
+          "sourceIndex": 6,
+          "key": "pe_fx_departure_f7",
+          "sha256": "175bd4334554aa4b6cc1fae12478b123716d5f0ce5ffca578504217dac7890ca"
+        },
+        {
+          "sourceIndex": 7,
+          "key": "pe_fx_departure_f8",
+          "sha256": "e9fa113fbedd245a40eb1e4153c6fb3e9d11596e2aee7c6d29b668fc6b993d40"
+        }
+      ],
+      "reducedMotionClip": "pe_fx_departure_still"
+    },
+    "pe_fx_departure_still": {
+      "sourcePath": "shared-fx/departure/frames/frame-00.png",
+      "sourceSha256": "b55b20e604d6970a8d8ba262903d14fc83809180e89de9bb9714293d33e791e8",
+      "cellW": 64,
+      "cellH": 64,
+      "anchorKind": "centre",
+      "anchorPx": [
+        32,
+        32
+      ],
+      "fps": 0,
+      "loop": false,
+      "providerIndices": [
+        0
+      ],
+      "reducedMotionFrame": 0,
+      "frames": [
+        {
+          "sourceIndex": 0,
+          "key": "pe_fx_departure_still_f1",
+          "sha256": "766b4d791003f3b4b6ad2e0df1b3a74750d54858645c15688c4c86a9c2e98591"
+        }
+      ]
+    },
+    "pe_fx_return": {
+      "sourcePath": "shared-fx/return/atlas.png",
+      "sourceSha256": "16128aba5fd6e67a4c2c14322180063fa6882b5d33ebf30dad044069c6680ab5",
+      "cellW": 64,
+      "cellH": 64,
+      "anchorKind": "centre",
+      "anchorPx": [
+        32,
+        32
+      ],
+      "fps": 8,
+      "loop": false,
+      "providerIndices": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "frames": [
+        {
+          "sourceIndex": 0,
+          "key": "pe_fx_return_f1",
+          "sha256": "ac8680f1e3a5de7b89023386d0b766995b460fbcc04a4e60a2c45956a945c30d"
+        },
+        {
+          "sourceIndex": 1,
+          "key": "pe_fx_return_f2",
+          "sha256": "5a10db5c943856e69f2115fb365a938336d9dcb7f5e2650089f965b5802d79d0"
+        },
+        {
+          "sourceIndex": 2,
+          "key": "pe_fx_return_f3",
+          "sha256": "ef8148df9daf76ce3b5862508026574b40b4fe538c0ec2c20daa9c1514bddbb6"
+        },
+        {
+          "sourceIndex": 3,
+          "key": "pe_fx_return_f4",
+          "sha256": "f657cfc104117792ca1ceffebfd32133e5e8ab18b823ae12ff8dcc94151a8001"
+        },
+        {
+          "sourceIndex": 4,
+          "key": "pe_fx_return_f5",
+          "sha256": "c303e9bd0fac21e395faefe740334df55374f469e51aa70465526bb73a5c3e8b"
+        },
+        {
+          "sourceIndex": 5,
+          "key": "pe_fx_return_f6",
+          "sha256": "10bfb106a379454803c8aae3df00ef88079f910fca8339d0ebbb7b4de0e9e0d6"
+        },
+        {
+          "sourceIndex": 6,
+          "key": "pe_fx_return_f7",
+          "sha256": "e81e0b8bb76dd753a26019d67496d63bb010e085c43e6a5ee203114a20dcc92f"
+        },
+        {
+          "sourceIndex": 7,
+          "key": "pe_fx_return_f8",
+          "sha256": "576c0c193f92a8f53ff5f6154e124a448426aac1758e35d5f98542cb2fd00f57"
+        }
+      ],
+      "reducedMotionClip": "pe_fx_return_still"
+    },
+    "pe_fx_return_still": {
+      "sourcePath": "shared-fx/return/frames/frame-00.png",
+      "sourceSha256": "16811bab6d256c2a2d69290ba797e4de00ac96d86486d1555bad01c8dba3808c",
+      "cellW": 64,
+      "cellH": 64,
+      "anchorKind": "centre",
+      "anchorPx": [
+        32,
+        32
+      ],
+      "fps": 0,
+      "loop": false,
+      "providerIndices": [
+        0
+      ],
+      "reducedMotionFrame": 0,
+      "frames": [
+        {
+          "sourceIndex": 0,
+          "key": "pe_fx_return_still_f1",
+          "sha256": "9f792b40a70ab128ef9818bb993c4d23613d12eb53f654a79998954118fc4913"
+        }
+      ]
+    }
+  },
+  "tracks": {
+    "schemaVersion": 1,
+    "timingUnit": "milliseconds",
+    "fps": 8,
+    "generatedMotionRequired": true,
+    "families": {
+      "starter": {
+        "mode": "tidal-gate",
+        "departure": [
+          {
+            "frame": 0,
+            "offsetPx": [
+              0,
+              0
+            ],
+            "opacity": 1
+          },
+          {
+            "frame": 1,
+            "offsetPx": [
+              0,
+              -4
+            ],
+            "opacity": 1
+          },
+          {
+            "frame": 2,
+            "offsetPx": [
+              0,
+              -10
+            ],
+            "opacity": 1
+          },
+          {
+            "frame": 3,
+            "offsetPx": [
+              0,
+              -16
+            ],
+            "opacity": 1
+          },
+          {
+            "frame": 4,
+            "offsetPx": [
+              0,
+              -22
+            ],
+            "opacity": 0.85
+          },
+          {
+            "frame": 5,
+            "offsetPx": [
+              0,
+              -28
+            ],
+            "opacity": 0.5
+          },
+          {
+            "frame": 6,
+            "offsetPx": [
+              0,
+              -34
+            ],
+            "opacity": 0.15
+          },
+          {
+            "frame": 7,
+            "offsetPx": [
+              0,
+              -40
+            ],
+            "opacity": 0
+          }
+        ],
+        "return": [
+          {
+            "frame": 0,
+            "offsetPx": [
+              0,
+              -40
+            ],
+            "opacity": 0
+          },
+          {
+            "frame": 1,
+            "offsetPx": [
+              0,
+              -34
+            ],
+            "opacity": 0.15
+          },
+          {
+            "frame": 2,
+            "offsetPx": [
+              0,
+              -28
+            ],
+            "opacity": 0.5
+          },
+          {
+            "frame": 3,
+            "offsetPx": [
+              0,
+              -22
+            ],
+            "opacity": 0.85
+          },
+          {
+            "frame": 4,
+            "offsetPx": [
+              0,
+              -16
+            ],
+            "opacity": 1
+          },
+          {
+            "frame": 5,
+            "offsetPx": [
+              0,
+              -10
+            ],
+            "opacity": 1
+          },
+          {
+            "frame": 6,
+            "offsetPx": [
+              0,
+              -4
+            ],
+            "opacity": 1
+          },
+          {
+            "frame": 7,
+            "offsetPx": [
+              0,
+              0
+            ],
+            "opacity": 1
+          }
+        ],
+        "berthPersists": true,
+        "footprint": [
+          2,
+          2
+        ],
+        "sharedFxRef": "departure",
+        "effectAttachmentPx": [
+          56,
+          28
+        ],
+        "contactRemainsOnWater": true,
+        "travelScene": "route view; loop centered independently of base terrain",
+        "reducedMotion": "Immediate scene transition between occupied and away; no movement required."
+      }
+    }
+  },
+  "geometry": {
+    "starter": {
+      "cell": [
+        112,
+        112
+      ],
+      "horizontalPivot": 56,
+      "sourceCellBottom": 112,
+      "contactPx": [
+        56,
+        105
+      ],
+      "dockOffsetPx": [
+        0,
+        -27
+      ],
+      "berthRef": "starter-berth",
+      "drawScale": 1
+    },
+    "berth": {
+      "cell": [
+        112,
+        112
+      ],
+      "footprint": [
+        2,
+        2
+      ],
+      "horizontalPivot": 56,
+      "sourceCellBottom": 112,
+      "groundContact": [
+        56,
+        93
+      ],
+      "attachment": [
+        56,
+        78
+      ],
+      "tidalGate": [
+        56,
+        28
+      ],
+      "drawScale": 1
+    }
+  },
+  "awayComposition": "intact + ambient; no vehicle",
+  "bindingSha256": "ec25edf57184bff954bd6d9861bd9bc87db302a23bd677a06de720b1efe09d83"
+}

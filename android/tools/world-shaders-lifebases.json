@@ -1,0 +1,42 @@
+{
+  "schema": 1,
+  "lane": "NL (LIFE + BASES, N3)",
+  "pin": "02e9da8414156b9e0000df1653de6273b196cca6",
+  "for": "tools/world-shaders.mjs (NT): the LIFE and BASES GLSL programs, read from the pinned src/realm/life.js programs() and bases.js load(). All eleven are in the export at the pin (renderer/src/main/resources/world/shaders/index.json, WorldShaders.realm); NT merges this list for the record and the lane-list check. Stage B (205b6326): life-scatter compiles with defines { LIFE_GLOW: 1 }, so its export key is life-scatter+LIFE_GLOW=1 (the program count stays eleven). Also lists the pack files the N3 debug bundle must carry for these lanes (world-debug-content.mjs selection()).",
+  "includes": {
+    "registeredBy": "life.js createLife(): core.include('life', LIFE); bases.js: none of its own",
+    "life": "glsl/sprites.glsl.js LIFE",
+    "classes": "GROUND's glsl/classes.glsl.js CLASSES (every LIFE program; BASES programs read no terrain, P0)"
+  },
+  "programs": [
+    { "key": "life-scatter+LIFE_GLOW=1", "name": "life-scatter", "vs": "SCATTER_VS", "fs": "SPRITE_FS", "from": "glsl/sprites.glsl.js", "defines": { "LIFE_GLOW": 1 }, "bake": false, "rehearsalSet": "map",
+      "why": "life.js programs() at 205b6326 (stage B, 69fb02c2/39bd2ebc): the only LIFE program with LIFE_GLOW, so only SCATTER_VS writes vGlow and SPRITE_FS reads it (the map-object lens glow); the other SPRITE_FS programs compile without it",
+      "states": ["sprite: depth LEQUAL, writes on, blend off (uMode 0 kit art, 2 twins)", "air: depth off, blend off (uMode 1 emitter puffs)"], "exported": true },
+    { "key": "life-stand", "name": "life-stand", "vs": "STAND_VS", "fs": "SPRITE_FS", "from": "glsl/sprites.glsl.js", "defines": {}, "bake": false, "rehearsalSet": "map",
+      "states": ["sprite (uMode 0 members, 2 own clumps)"], "exported": true },
+    { "key": "life-stand-merged+STAND_MERGED=1", "name": "life-stand-merged", "vs": "STAND_VS", "fs": "SPRITE_FS", "from": "glsl/sprites.glsl.js", "defines": { "STAND_MERGED": 1 }, "bake": false,
+      "rehearsalSet": "map", "states": ["sprite (uMode 3 merged 2x2 clumps)"], "exported": true },
+    { "key": "life-creature", "name": "life-creature", "vs": "CREATURE_VS", "fs": "SPRITE_FS", "from": "glsl/sprites.glsl.js", "defines": {}, "bake": false, "rehearsalSet": "map",
+      "why": "GPU_SAFE.rehearse.trueSet is ['rm-true'] at the pin: life-creature draws MAP herds from BANDS.herds 300, so it is MAP set", "states": ["sprite"], "exported": true },
+    { "key": "life-bird", "name": "life-bird", "vs": "BIRD_VS", "fs": "AIR_FS", "from": "glsl/air.glsl.js", "defines": {}, "bake": false, "rehearsalSet": "map",
+      "states": ["shadow: depth off, writes off, blend DST_COLOR/ZERO (ground shadows)", "air: depth off, blend off"], "exported": true },
+    { "key": "life-particle", "name": "life-particle", "vs": "PARTICLE_VS", "fs": "AIR_FS", "from": "glsl/air.glsl.js", "defines": {}, "bake": false, "rehearsalSet": "map",
+      "states": ["air"], "exported": true },
+    { "key": "bases-sprite", "name": "bases-sprite", "vs": "SPRITE_VS", "fs": "SPRITE_FS", "from": "glsl/bases.glsl.js", "defines": {}, "bake": false, "rehearsalSet": "map",
+      "states": ["sprite: depth LEQUAL, writes on, blend off (minis, icons, keeps, TRUE decor)", "smoke: depth LEQUAL, writes off, blend ONE/ONE_MINUS_SRC_ALPHA"],
+      "rehearsalNote": "bases.js REHEARSAL: two instances (the magnified textureLod path and the minified texture() path)", "exported": true },
+    { "key": "bases-shield", "name": "bases-shield", "vs": "SHIELD_VS", "fs": "SHIELD_FS", "from": "glsl/shield.glsl.js", "defines": {}, "bake": false, "rehearsalSet": "map",
+      "states": ["shieldBack: depth off, writes off, blend over (back shell, selection pulse)", "shieldFront: depth LEQUAL, writes off, blend over"], "exported": true },
+    { "key": "bases-fx", "name": "bases-fx", "vs": "FX_VS", "fs": "FX_FS", "from": "glsl/bases.glsl.js", "defines": {}, "bake": false, "rehearsalSet": "map",
+      "states": ["pennant: depth LEQUAL, writes on, blend off", "glow: depth LEQUAL, writes off, blend ONE/ONE"], "exported": true },
+    { "key": "bases-field", "name": "bases-field", "vs": "FIELD_VS", "fs": "FIELD_FS", "from": "glsl/bases.glsl.js", "defines": {}, "bake": false, "rehearsalSet": "map",
+      "states": ["field (shadow pass): depth off, writes off, blend over"], "exported": true },
+    { "key": "bases-dot", "name": "bases-dot", "vs": "DOT_VS", "fs": "DOT_FS", "from": "glsl/bases.glsl.js", "defines": {}, "bake": false, "rehearsalSet": "map",
+      "states": ["dot (fx pass): depth off, writes off, blend over"], "exported": true }
+  ],
+  "content": {
+    "why": "LIFE reads the realm's sprite atlas (realm.json sprites + creatures), the map twins and map objects (mapkit.png) and the shared fx pack; BASES reads the shared keeps/decor atlases, the realm atlas (kit dressing, edge autotile, bridge pieces, creatures), the MAP minis (plots.webp) and the ROAD terrain's pure layers (the TRUE ground atlas). The N1/N2 debug bundle carries none of them (NT's selection()).",
+    "perRealm": ["realm/<id>/spr.png", "realm/<id>/mapkit.png", "realm/<id>/plots.webp", "realm/<id>/ground.png"],
+    "shared": ["realm/shared/keeps.json", "realm/shared/keeps.png", "realm/shared/decor.json", "realm/shared/decor.png", "realm/shared/fx.json", "realm/shared/fx.png"]
+  }
+}

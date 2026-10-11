@@ -1,0 +1,418 @@
+{
+  "chapters": [
+    {
+      "id": 1,
+      "region": "crownlands",
+      "name": "The Crownroad",
+      "epithet": "A broken road. A first banner.",
+      "lore": "The old market road lies in the hands of petty crowns. Reopen its river crossings and light the first signal on the road to the four realms.",
+      "landmark": "THE WESTERN MARCHES",
+      "names": [
+        "Wayfarer’s Rest",
+        "Barleybank Ford",
+        "The Fallen Milestone",
+        "Rookfield Watch",
+        "The Tollkeeper’s Hold",
+        "Windmill Reach",
+        "Briarbridge",
+        "The Old King’s Road",
+        "Hearthvale Gate",
+        "The First Beacon"
+      ]
+    },
+    {
+      "id": 2,
+      "region": "crownlands",
+      "name": "Banners of the Vale",
+      "epithet": "No throne rules these valleys.",
+      "lore": "Behind every banner is a different claim to the valley. Follow the ruined causeway to the court where the first covenant was broken.",
+      "landmark": "THE CROWNLESS VALLEY",
+      "names": [
+        "Meadowglass",
+        "The Copper Crossing",
+        "Hawthorn Rise",
+        "Orchardguard",
+        "The Bellward",
+        "Rivercourt",
+        "The Empty Granary",
+        "Kingsfall Causeway",
+        "The Bannerless Abbey",
+        "The Crownless Court"
+      ]
+    },
+    {
+      "id": 3,
+      "region": "elderwood",
+      "name": "Beneath the Elderboughs",
+      "epithet": "The forest remembers every debt.",
+      "lore": "Silver roots have swallowed the border strongholds. The grove wardens offer passage only to those who can reach the lanterns buried beneath the canopy.",
+      "landmark": "THE SILVER-ROOT CANOPY",
+      "names": [
+        "Mosswake Trail",
+        "Fernhollow",
+        "The Green Threshold",
+        "Foxglove Hollow",
+        "The Antler Gate",
+        "Oldroot Crossing",
+        "The Lantern Grove",
+        "Rainleaf Refuge",
+        "The Warden’s Stair",
+        "The Elderbough Seat"
+      ]
+    },
+    {
+      "id": 4,
+      "region": "elderwood",
+      "name": "The Rootbound Covenant",
+      "epithet": "Listen beneath the stone.",
+      "lore": "A living network of roots links the abandoned keeps. Its deepest chamber holds the record of a promise made before the Shattering.",
+      "landmark": "THE DEEPWOOD SANCTUM",
+      "names": [
+        "Whispering Weir",
+        "Willowmere",
+        "The Thorn Chapel",
+        "Blackbark Redoubt",
+        "The Verdant Seal",
+        "Dreamwood Passage",
+        "The Hollow Oak",
+        "The Sleeping Orchard",
+        "Rootwarden’s Gate",
+        "The Heartroot Sanctum"
+      ]
+    },
+    {
+      "id": 5,
+      "region": "sunscar",
+      "name": "The Amber Pilgrimage",
+      "epithet": "Follow the shade of the ridges.",
+      "lore": "Across the amber dunes, caravan beacons mark a path between wells. The observatories at its end still point toward a star that no longer shines.",
+      "landmark": "THE CARAVAN SEA",
+      "names": [
+        "Amberwake",
+        "The Last Cistern",
+        "Sunbleached Crossing",
+        "The Brass Caravan",
+        "The Mirage Bastion",
+        "Dunewatch",
+        "The Singing Ridge",
+        "The Pilgrim’s Well",
+        "The Saffron Gate",
+        "The Sunward Observatory"
+      ]
+    },
+    {
+      "id": 6,
+      "region": "sunscar",
+      "name": "The Glass Sun",
+      "epithet": "A lens beneath a broken sky.",
+      "lore": "Fragments of sun-glass lie among the old furnaces. Recover the route to the greatest lens before its wardens wake the light beneath it.",
+      "landmark": "THE GLASSWIND RIDGES",
+      "names": [
+        "Glasswind Verge",
+        "The Ochre Steps",
+        "Copperglass Camp",
+        "The Sundial Vault",
+        "The Ember Lens",
+        "The Long Shadow",
+        "Ashen Meridian",
+        "The Golden Silence",
+        "The Shattered Astrolabe",
+        "The Palace of Noon"
+      ]
+    },
+    {
+      "id": 7,
+      "region": "frostveil",
+      "name": "Beyond the White Gate",
+      "epithet": "The winter roads are still open.",
+      "lore": "The northern guides follow bells across the ice shelves. Beyond the white gate, entire roads disappear beneath the frozen mountains.",
+      "landmark": "THE WINTER APPROACH",
+      "names": [
+        "Snowbell Landing",
+        "The Blue Pass",
+        "Rimewatch",
+        "The Silent Ferry",
+        "The White Gate",
+        "Glacier’s Rest",
+        "The Frostbound Stair",
+        "The Pale Causeway",
+        "The Northern Lantern",
+        "The Winterward"
+      ]
+    },
+    {
+      "id": 8,
+      "region": "frostveil",
+      "name": "The Buried Kingdom",
+      "epithet": "Bells ring below the ice.",
+      "lore": "Towers rise from a kingdom sealed inside the glacier. Its oldest archives remember how the four realms were once joined, and why their roads were cut.",
+      "landmark": "THE KINGDOM UNDER ICE",
+      "names": [
+        "The Drowned Spire",
+        "Iceglass Crossing",
+        "The Frozen Orchard",
+        "The Buried Bell",
+        "The Rime-Crowned Hall",
+        "The Sleepless Archive",
+        "The Glacial Throne",
+        "The Last Winter Road",
+        "The Sepulchre Gate",
+        "The Crown Beneath the Ice"
+      ]
+    },
+    {
+      "id": 9,
+      "region": "crownlands",
+      "name": "The Fourfold Siege",
+      "epithet": "Four roads return to one valley.",
+      "lore": "Wardens, caravans and winter guides return to the Crownlands together. Their roads converge on the broken seat from which the last beacon was extinguished.",
+      "landmark": "THE CONVERGENCE",
+      "names": [
+        "The Returning Road",
+        "The Grove Embassy",
+        "The Amber Standard",
+        "The Winter Banner",
+        "The Fourfold Gate",
+        "The Broken Parliament",
+        "The Covenant Bridge",
+        "The Uncrowned Bastion",
+        "The Beacon Stair",
+        "The Seat of Four Crowns"
+      ]
+    },
+    {
+      "id": 10,
+      "region": "frostveil",
+      "name": "The Last Beacon",
+      "epithet": "Carry the light beyond the map.",
+      "lore": "One signal remains dark beyond the oldest winter road. The final expedition follows the fracture to a citadel that appears in every realm’s oldest stories.",
+      "landmark": "THE EDGE OF THE SHATTERING",
+      "names": [
+        "The Far Signal",
+        "The Blue Silence",
+        "The Broken Horizon",
+        "The Starless Road",
+        "The Final Ward",
+        "The Echoing Crown",
+        "The Unwritten Gate",
+        "The Shardfall Stair",
+        "The Last Threshold",
+        "The Beacon at World’s End"
+      ]
+    }
+  ],
+  "regions": {
+    "crownlands": {
+      "name": "Crownlands",
+      "color": "#d9c38c",
+      "crop": [
+        356,
+        55,
+        226,
+        184
+      ],
+      "points": [
+        [
+          403,
+          166
+        ],
+        [
+          423,
+          145
+        ],
+        [
+          449,
+          149
+        ],
+        [
+          466,
+          168
+        ],
+        [
+          490,
+          137
+        ],
+        [
+          511,
+          115
+        ],
+        [
+          535,
+          93
+        ],
+        [
+          493,
+          94
+        ],
+        [
+          459,
+          108
+        ],
+        [
+          438,
+          89
+        ]
+      ],
+      "ground": "#687344"
+    },
+    "elderwood": {
+      "name": "Elderwood",
+      "color": "#a5c184",
+      "crop": [
+        180,
+        109,
+        190,
+        186
+      ],
+      "points": [
+        [
+          232,
+          262
+        ],
+        [
+          216,
+          236
+        ],
+        [
+          246,
+          230
+        ],
+        [
+          267,
+          253
+        ],
+        [
+          295,
+          226
+        ],
+        [
+          327,
+          210
+        ],
+        [
+          334,
+          177
+        ],
+        [
+          304,
+          179
+        ],
+        [
+          276,
+          159
+        ],
+        [
+          263,
+          194
+        ]
+      ],
+      "ground": "#405c38"
+    },
+    "sunscar": {
+      "name": "Sunscar",
+      "color": "#efc17c",
+      "crop": [
+        380,
+        168,
+        240,
+        195
+      ],
+      "points": [
+        [
+          428,
+          223
+        ],
+        [
+          443,
+          252
+        ],
+        [
+          440,
+          283
+        ],
+        [
+          481,
+          298
+        ],
+        [
+          519,
+          302
+        ],
+        [
+          564,
+          307
+        ],
+        [
+          566,
+          273
+        ],
+        [
+          531,
+          269
+        ],
+        [
+          533,
+          229
+        ],
+        [
+          484,
+          214
+        ]
+      ],
+      "ground": "#af884f"
+    },
+    "frostveil": {
+      "name": "Frostveil",
+      "color": "#b7dce2",
+      "crop": [
+        208,
+        5,
+        225,
+        150
+      ],
+      "points": [
+        [
+          236,
+          66
+        ],
+        [
+          257,
+          48
+        ],
+        [
+          294,
+          36
+        ],
+        [
+          332,
+          35
+        ],
+        [
+          371,
+          32
+        ],
+        [
+          398,
+          52
+        ],
+        [
+          370,
+          76
+        ],
+        [
+          334,
+          92
+        ],
+        [
+          299,
+          101
+        ],
+        [
+          280,
+          76
+        ]
+      ],
+      "ground": "#93aaa4"
+    }
+  }
+}

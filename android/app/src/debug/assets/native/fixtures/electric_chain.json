@@ -1,0 +1,625 @@
+{
+  "schemaVersion": 1,
+  "sourceCommit": "427381a2adf934bbcc902baefc207a655b185eb6",
+  "simVersion": 18,
+  "snapshot": {
+    "keepLevel": 1,
+    "buildings": [
+      {
+        "id": "keep",
+        "type": "keep",
+        "level": 1,
+        "tx": 8,
+        "ty": 8
+      },
+      {
+        "id": "electric",
+        "type": "electrictower",
+        "level": 3,
+        "tx": 8,
+        "ty": 6
+      }
+    ],
+    "surplusShards": 1000,
+    "claimMin": 2,
+    "claimMax": 16
+  },
+  "orders": {
+    "deploys": [
+      {
+        "troop": "highlander",
+        "tx": 7,
+        "ty": 0,
+        "tMs": 0
+      },
+      {
+        "troop": "highlander",
+        "tx": 8,
+        "ty": 0,
+        "tMs": 0
+      },
+      {
+        "troop": "highlander",
+        "tx": 9,
+        "ty": 0,
+        "tMs": 0
+      },
+      {
+        "troop": "highlander",
+        "tx": 8,
+        "ty": 1,
+        "tMs": 0
+      }
+    ]
+  },
+  "seed": 925383,
+  "options": {},
+  "stars": 0,
+  "destructionPct": 2,
+  "keepDestroyed": false,
+  "vaultDestroyed": false,
+  "mineDestroyed": false,
+  "victory": false,
+  "buildings": [
+    {
+      "id": "keep",
+      "type": "keep",
+      "hp": 1200,
+      "maxHp": 1200,
+      "destroyed": false
+    },
+    {
+      "id": "electric",
+      "type": "electrictower",
+      "hp": 558,
+      "maxHp": 594,
+      "destroyed": false
+    }
+  ],
+  "ticks": 62,
+  "events": [
+    {
+      "t": 0,
+      "e": "deploy",
+      "id": 0,
+      "troop": "highlander",
+      "x": 1920,
+      "y": 128
+    },
+    {
+      "t": 0,
+      "e": "deploy",
+      "id": 1,
+      "troop": "highlander",
+      "x": 2176,
+      "y": 128
+    },
+    {
+      "t": 0,
+      "e": "deploy",
+      "id": 2,
+      "troop": "highlander",
+      "x": 2176,
+      "y": 384
+    },
+    {
+      "t": 0,
+      "e": "deploy",
+      "id": 3,
+      "troop": "highlander",
+      "x": 2432,
+      "y": 128
+    },
+    {
+      "t": 0,
+      "e": "pos",
+      "id": 0,
+      "x": 1922,
+      "y": 157
+    },
+    {
+      "t": 0,
+      "e": "pos",
+      "id": 1,
+      "x": 2176,
+      "y": 158
+    },
+    {
+      "t": 0,
+      "e": "pos",
+      "id": 2,
+      "x": 2176,
+      "y": 414
+    },
+    {
+      "t": 0,
+      "e": "pos",
+      "id": 3,
+      "x": 2430,
+      "y": 157
+    },
+    {
+      "t": 5,
+      "e": "pos",
+      "id": 0,
+      "x": 1932,
+      "y": 302
+    },
+    {
+      "t": 5,
+      "e": "pos",
+      "id": 1,
+      "x": 2176,
+      "y": 308
+    },
+    {
+      "t": 5,
+      "e": "pos",
+      "id": 2,
+      "x": 2176,
+      "y": 564
+    },
+    {
+      "t": 5,
+      "e": "pos",
+      "id": 3,
+      "x": 2420,
+      "y": 302
+    },
+    {
+      "t": 8,
+      "e": "fire",
+      "id": "electric",
+      "target": 2,
+      "proj": "arrow",
+      "ix": 2176,
+      "iy": 654,
+      "releaseOffsetMs": 0,
+      "flightMs": 300,
+      "impactOffsetTicks": 3
+    },
+    {
+      "t": 10,
+      "e": "pos",
+      "id": 0,
+      "x": 1942,
+      "y": 447
+    },
+    {
+      "t": 10,
+      "e": "pos",
+      "id": 1,
+      "x": 2176,
+      "y": 458
+    },
+    {
+      "t": 10,
+      "e": "pos",
+      "id": 2,
+      "x": 2176,
+      "y": 714
+    },
+    {
+      "t": 10,
+      "e": "pos",
+      "id": 3,
+      "x": 2410,
+      "y": 447
+    },
+    {
+      "t": 11,
+      "e": "hit",
+      "target": 2,
+      "dmg": 80
+    },
+    {
+      "t": 11,
+      "e": "chain",
+      "id": "electric",
+      "targets": [
+        1,
+        0
+      ],
+      "dmg": [
+        40,
+        20
+      ]
+    },
+    {
+      "t": 15,
+      "e": "pos",
+      "id": 0,
+      "x": 1953,
+      "y": 592
+    },
+    {
+      "t": 15,
+      "e": "pos",
+      "id": 1,
+      "x": 2176,
+      "y": 608
+    },
+    {
+      "t": 15,
+      "e": "pos",
+      "id": 2,
+      "x": 2176,
+      "y": 864
+    },
+    {
+      "t": 15,
+      "e": "pos",
+      "id": 3,
+      "x": 2399,
+      "y": 592
+    },
+    {
+      "t": 20,
+      "e": "pos",
+      "id": 0,
+      "x": 1967,
+      "y": 737
+    },
+    {
+      "t": 20,
+      "e": "pos",
+      "id": 1,
+      "x": 2176,
+      "y": 758
+    },
+    {
+      "t": 20,
+      "e": "pos",
+      "id": 2,
+      "x": 2176,
+      "y": 1014
+    },
+    {
+      "t": 20,
+      "e": "pos",
+      "id": 3,
+      "x": 2385,
+      "y": 737
+    },
+    {
+      "t": 20,
+      "e": "fire",
+      "id": "electric",
+      "target": 2,
+      "proj": "arrow",
+      "ix": 2176,
+      "iy": 1014,
+      "releaseOffsetMs": 0,
+      "flightMs": 300,
+      "impactOffsetTicks": 3
+    },
+    {
+      "t": 23,
+      "e": "hit",
+      "target": 2,
+      "dmg": 72
+    },
+    {
+      "t": 23,
+      "e": "troopDeath",
+      "id": 2
+    },
+    {
+      "t": 23,
+      "e": "chain",
+      "id": "electric",
+      "targets": [
+        1,
+        0
+      ],
+      "dmg": [
+        36,
+        18
+      ]
+    },
+    {
+      "t": 25,
+      "e": "pos",
+      "id": 0,
+      "x": 1982,
+      "y": 882
+    },
+    {
+      "t": 25,
+      "e": "pos",
+      "id": 1,
+      "x": 2176,
+      "y": 908
+    },
+    {
+      "t": 25,
+      "e": "pos",
+      "id": 3,
+      "x": 2370,
+      "y": 882
+    },
+    {
+      "t": 30,
+      "e": "pos",
+      "id": 0,
+      "x": 1997,
+      "y": 1027
+    },
+    {
+      "t": 30,
+      "e": "pos",
+      "id": 1,
+      "x": 2176,
+      "y": 1058
+    },
+    {
+      "t": 30,
+      "e": "pos",
+      "id": 3,
+      "x": 2355,
+      "y": 1027
+    },
+    {
+      "t": 32,
+      "e": "fire",
+      "id": "electric",
+      "target": 1,
+      "proj": "arrow",
+      "ix": 2176,
+      "iy": 1118,
+      "releaseOffsetMs": 0,
+      "flightMs": 300,
+      "impactOffsetTicks": 3
+    },
+    {
+      "t": 35,
+      "e": "pos",
+      "id": 0,
+      "x": 2011,
+      "y": 1172
+    },
+    {
+      "t": 35,
+      "e": "pos",
+      "id": 1,
+      "x": 2176,
+      "y": 1208
+    },
+    {
+      "t": 35,
+      "e": "pos",
+      "id": 3,
+      "x": 2341,
+      "y": 1172
+    },
+    {
+      "t": 35,
+      "e": "hit",
+      "target": 1,
+      "dmg": 77
+    },
+    {
+      "t": 35,
+      "e": "troopDeath",
+      "id": 1
+    },
+    {
+      "t": 35,
+      "e": "chain",
+      "id": "electric",
+      "targets": [
+        0,
+        3
+      ],
+      "dmg": [
+        38,
+        19
+      ]
+    },
+    {
+      "t": 40,
+      "e": "pos",
+      "id": 0,
+      "x": 2026,
+      "y": 1317
+    },
+    {
+      "t": 40,
+      "e": "pos",
+      "id": 3,
+      "x": 2326,
+      "y": 1317
+    },
+    {
+      "t": 44,
+      "e": "attackRun",
+      "id": 0,
+      "side": "attacker",
+      "troop": "highlander",
+      "targetKind": "building",
+      "target": "electric",
+      "ix": 2048,
+      "iy": 1536,
+      "mode": "melee",
+      "technique": "strike",
+      "cycleMs": 500,
+      "releaseOffsetMs": 167,
+      "cycleTicks": 5,
+      "releaseOffsetTicks": 2,
+      "impactOffsetsTicks": [
+        2
+      ],
+      "cadenceTicks": 5,
+      "count": 1
+    },
+    {
+      "t": 44,
+      "e": "attackRun",
+      "id": 3,
+      "side": "attacker",
+      "troop": "highlander",
+      "targetKind": "building",
+      "target": "electric",
+      "ix": 2304,
+      "iy": 1536,
+      "mode": "melee",
+      "technique": "strike",
+      "cycleMs": 500,
+      "releaseOffsetMs": 167,
+      "cycleTicks": 5,
+      "releaseOffsetTicks": 2,
+      "impactOffsetsTicks": [
+        2
+      ],
+      "cadenceTicks": 5,
+      "count": 1
+    },
+    {
+      "t": 44,
+      "e": "fire",
+      "id": "electric",
+      "target": 0,
+      "proj": "arrow",
+      "ix": 2035,
+      "iy": 1406,
+      "releaseOffsetMs": 0,
+      "flightMs": 300,
+      "impactOffsetTicks": 3
+    },
+    {
+      "t": 46,
+      "e": "hit",
+      "target": "electric",
+      "dmg": 9
+    },
+    {
+      "t": 46,
+      "e": "hit",
+      "target": "electric",
+      "dmg": 9
+    },
+    {
+      "t": 47,
+      "e": "hit",
+      "target": 0,
+      "dmg": 71
+    },
+    {
+      "t": 47,
+      "e": "troopDeath",
+      "id": 0
+    },
+    {
+      "t": 47,
+      "e": "chain",
+      "id": "electric",
+      "targets": [
+        3
+      ],
+      "dmg": [
+        36
+      ]
+    },
+    {
+      "t": 49,
+      "e": "attackRun",
+      "id": 3,
+      "side": "attacker",
+      "troop": "highlander",
+      "targetKind": "building",
+      "target": "electric",
+      "ix": 2304,
+      "iy": 1536,
+      "mode": "melee",
+      "technique": "strike",
+      "cycleMs": 500,
+      "releaseOffsetMs": 167,
+      "cycleTicks": 5,
+      "releaseOffsetTicks": 2,
+      "impactOffsetsTicks": [
+        2
+      ],
+      "cadenceTicks": 5,
+      "count": 1
+    },
+    {
+      "t": 51,
+      "e": "hit",
+      "target": "electric",
+      "dmg": 9
+    },
+    {
+      "t": 54,
+      "e": "attackRun",
+      "id": 3,
+      "side": "attacker",
+      "troop": "highlander",
+      "targetKind": "building",
+      "target": "electric",
+      "ix": 2304,
+      "iy": 1536,
+      "mode": "melee",
+      "technique": "strike",
+      "cycleMs": 500,
+      "releaseOffsetMs": 167,
+      "cycleTicks": 5,
+      "releaseOffsetTicks": 2,
+      "impactOffsetsTicks": [
+        2
+      ],
+      "cadenceTicks": 5,
+      "count": 1
+    },
+    {
+      "t": 56,
+      "e": "hit",
+      "target": "electric",
+      "dmg": 9
+    },
+    {
+      "t": 56,
+      "e": "fire",
+      "id": "electric",
+      "target": 3,
+      "proj": "arrow",
+      "ix": 2317,
+      "iy": 1406,
+      "releaseOffsetMs": 0,
+      "flightMs": 300,
+      "impactOffsetTicks": 3
+    },
+    {
+      "t": 59,
+      "e": "attackRun",
+      "id": 3,
+      "side": "attacker",
+      "troop": "highlander",
+      "targetKind": "building",
+      "target": "electric",
+      "ix": 2304,
+      "iy": 1536,
+      "mode": "melee",
+      "technique": "strike",
+      "cycleMs": 500,
+      "releaseOffsetMs": 167,
+      "cycleTicks": 5,
+      "releaseOffsetTicks": 2,
+      "impactOffsetsTicks": [
+        2
+      ],
+      "cadenceTicks": 5,
+      "count": 1
+    },
+    {
+      "t": 59,
+      "e": "hit",
+      "target": 3,
+      "dmg": 76
+    },
+    {
+      "t": 59,
+      "e": "troopDeath",
+      "id": 3
+    }
+  ]
+}

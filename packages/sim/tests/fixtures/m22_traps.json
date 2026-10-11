@@ -1,0 +1,50 @@
+{
+  "hash": "0ac764c3",
+  "outcome": {
+    "stars": 3,
+    "destructionPct": 100,
+    "keepDestroyed": true,
+    "vaultDestroyed": false,
+    "mineDestroyed": false,
+    "victory": true,
+    "buildings": [
+      {
+        "id": "keep",
+        "type": "keep",
+        "hp": 0,
+        "maxHp": 1200,
+        "destroyed": true
+      },
+      {
+        "id": "spike",
+        "type": "spiketrap",
+        "hp": 0,
+        "maxHp": 0,
+        "destroyed": false
+      },
+      {
+        "id": "powder",
+        "type": "powdermine",
+        "hp": 0,
+        "maxHp": 0,
+        "destroyed": false
+      },
+      {
+        "id": "pitfall",
+        "type": "pitfall",
+        "hp": 0,
+        "maxHp": 0,
+        "destroyed": false
+      },
+      {
+        "id": "airmine",
+        "type": "airmine",
+        "hp": 0,
+        "maxHp": 0,
+        "destroyed": false
+      }
+    ],
+    "ticks": 211,
+    "eventCount": 191
+  }
+}

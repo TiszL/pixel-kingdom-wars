@@ -1,0 +1,16 @@
+# Phase E toolchain spike S2 — MagicBlock ephemeral-vrf-sdk under the SHARDKEEP pins.
+# Standalone workspace: NOT a member of programs/ (programs/Cargo.lock is load-bearing).
+[workspace]
+members = ["spike-vrf"]
+resolver = "2"
+
+# Mirror programs/Cargo.toml so build sizes/behaviour are comparable.
+[profile.release]
+overflow-checks = true
+lto = "fat"
+codegen-units = 1
+
+[profile.release.build-override]
+opt-level = 3
+incremental = false
+codegen-units = 1

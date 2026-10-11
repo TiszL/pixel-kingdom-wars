@@ -1,0 +1,45 @@
+# ============================= SUPERSEDED — DO NOT MOUNT =====================
+# This is the REJECTED api-subdomain design (API on api.*, web on Pages).
+# Production is single-origin on play.pixelkingdomwars.com — the session cookie
+# is SameSite=Lax + host-only and the installed APK is pinned to that origin;
+# wiring this file back in logs every player out and breaks the APK.
+# docker-compose.prod.yml mounts infra/Caddyfile.vps. Kept only as the record
+# of what was rejected and why (docs/DEPLOYMENT.md header).
+# =============================================================================
+#
+# TLS termination for the API. Caddy obtains and renews Let's Encrypt
+# certificates automatically; there is nothing to cron.
+#
+# Only the API is served here. The web app is on Cloudflare Pages — a CDN in
+# front of ~15 MB of atlases beats a single VPS in Falkenstein serving them.
+
+{$API_DOMAIN} {
+	encode gzip zstd
+
+	# CORS is handled by Fastify (@fastify/cors, origin pinned to WEB_ORIGIN and
+	# credentialed). Doing it here too would produce duplicate
+	# Access-Control-Allow-Origin headers, which browsers reject outright.
+	reverse_proxy api:3001 {
+		header_up X-Forwarded-For {remote_host}
+		header_up X-Forwarded-Proto {scheme}
+	}
+
+	header {
+		# The API is JSON-only and never framed or rendered.
+		# noindex while the alpha is closed. Cannot be undone later: closing the
+		# access gate does not un-cache a search result.
+		X-Robots-Tag "noindex, nofollow, noarchive, nosnippet"
+		X-Content-Type-Options nosniff
+		X-Frame-Options DENY
+		Referrer-Policy no-referrer
+		Strict-Transport-Security "max-age=31536000; includeSubDomains"
+		-Server
+	}
+
+	log {
+		output file /data/access.log {
+			roll_size 50MiB
+			roll_keep 5
+		}
+	}
+}

@@ -1,0 +1,36 @@
+[package]
+name = "spike-economy-core"
+version = "0.1.0"
+description = "Phase E E1 spike (not deployable)"
+edition = "2021"
+
+[lib]
+crate-type = ["cdylib", "lib"]
+name = "spike_economy_core"
+
+[features]
+default = []
+cpi = ["no-entrypoint"]
+no-entrypoint = []
+no-idl = []
+no-log-ix-name = []
+idl-build = ["anchor-lang/idl-build", "anchor-spl/idl-build"]
+
+[dependencies]
+anchor-lang = "=0.32.1"
+anchor-spl = "=0.32.1"
+solana-keccak-hasher = { version = "2.2.1", features = ["sha3"] }
+
+# Standalone workspace: one lock per spike variant so a variant that drags in an
+# unparseable crate cannot block the others. Lock seeded from programs/Cargo.lock.
+[workspace]
+
+[profile.release]
+overflow-checks = true
+lto = "fat"
+codegen-units = 1
+
+[profile.release.build-override]
+opt-level = 3
+incremental = false
+codegen-units = 1

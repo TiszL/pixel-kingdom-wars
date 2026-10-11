@@ -1,0 +1,439 @@
+{
+	"textures": [
+		{
+			"image": "ovl@2x.png",
+			"format": "RGBA8888",
+			"size": {
+				"w": 1420,
+				"h": 1292
+			},
+			"scale": 1,
+			"frames": [
+				{
+					"filename": "ovl_range_r7",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 896,
+						"h": 896
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 896,
+						"h": 896
+					},
+					"frame": {
+						"x": 3,
+						"y": 3,
+						"w": 896,
+						"h": 896
+					}
+				},
+				{
+					"filename": "ovl_range_r4",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 512,
+						"h": 512
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 512,
+						"h": 512
+					},
+					"frame": {
+						"x": 905,
+						"y": 3,
+						"w": 512,
+						"h": 512
+					}
+				},
+				{
+					"filename": "ovl_range_r3",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 384,
+						"h": 384
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 384,
+						"h": 384
+					},
+					"frame": {
+						"x": 3,
+						"y": 905,
+						"w": 384,
+						"h": 384
+					}
+				},
+				{
+					"filename": "ovl_rally_r2",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 320,
+						"h": 320
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 320,
+						"h": 320
+					},
+					"frame": {
+						"x": 393,
+						"y": 905,
+						"w": 320,
+						"h": 320
+					}
+				},
+				{
+					"filename": "ovl_deadzone_r2",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 256,
+						"h": 256
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 256,
+						"h": 256
+					},
+					"frame": {
+						"x": 719,
+						"y": 905,
+						"w": 256,
+						"h": 256
+					}
+				},
+				{
+					"filename": "ovl_aoe_r3",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 192,
+						"h": 192
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 192,
+						"h": 192
+					},
+					"frame": {
+						"x": 905,
+						"y": 521,
+						"w": 192,
+						"h": 192
+					}
+				},
+				{
+					"filename": "ovl_damage_2x1_s1",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 128,
+						"h": 64
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 128,
+						"h": 64
+					},
+					"frame": {
+						"x": 719,
+						"y": 1167,
+						"w": 128,
+						"h": 64
+					}
+				},
+				{
+					"filename": "ovl_damage_2x1_s2",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 128,
+						"h": 64
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 128,
+						"h": 64
+					},
+					"frame": {
+						"x": 853,
+						"y": 1167,
+						"w": 128,
+						"h": 64
+					}
+				},
+				{
+					"filename": "ovl_damage_2x2_s1",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 128,
+						"h": 128
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 128,
+						"h": 128
+					},
+					"frame": {
+						"x": 905,
+						"y": 719,
+						"w": 128,
+						"h": 128
+					}
+				},
+				{
+					"filename": "ovl_damage_2x2_s2",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 128,
+						"h": 128
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 128,
+						"h": 128
+					},
+					"frame": {
+						"x": 981,
+						"y": 853,
+						"w": 128,
+						"h": 128
+					}
+				},
+				{
+					"filename": "ovl_lift_shadow_2x1",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 128,
+						"h": 32
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 128,
+						"h": 32
+					},
+					"frame": {
+						"x": 393,
+						"y": 1237,
+						"w": 128,
+						"h": 32
+					}
+				},
+				{
+					"filename": "ovl_lift_shadow_2x2",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 128,
+						"h": 64
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 128,
+						"h": 64
+					},
+					"frame": {
+						"x": 1039,
+						"y": 719,
+						"w": 128,
+						"h": 64
+					}
+				},
+				{
+					"filename": "ovl_damage_1x1_s1",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 64,
+						"h": 64
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 64,
+						"h": 64
+					},
+					"frame": {
+						"x": 981,
+						"y": 987,
+						"w": 64,
+						"h": 64
+					}
+				},
+				{
+					"filename": "ovl_damage_1x1_s2",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 64,
+						"h": 64
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 64,
+						"h": 64
+					},
+					"frame": {
+						"x": 981,
+						"y": 1057,
+						"w": 64,
+						"h": 64
+					}
+				},
+				{
+					"filename": "ovl_deploy_edge_f1",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 64,
+						"h": 64
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 64,
+						"h": 64
+					},
+					"frame": {
+						"x": 987,
+						"y": 1127,
+						"w": 64,
+						"h": 64
+					}
+				},
+				{
+					"filename": "ovl_deploy_edge_f2",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 64,
+						"h": 64
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 64,
+						"h": 64
+					},
+					"frame": {
+						"x": 987,
+						"y": 1197,
+						"w": 64,
+						"h": 64
+					}
+				},
+				{
+					"filename": "ovl_grid_tile",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 64,
+						"h": 64
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 64,
+						"h": 64
+					},
+					"frame": {
+						"x": 1051,
+						"y": 987,
+						"w": 64,
+						"h": 64
+					}
+				},
+				{
+					"filename": "ovl_lift_shadow_1x1",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 64,
+						"h": 32
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 64,
+						"h": 32
+					},
+					"frame": {
+						"x": 905,
+						"y": 853,
+						"w": 64,
+						"h": 32
+					}
+				},
+				{
+					"filename": "ovl_tile_fill",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 64,
+						"h": 64
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 64,
+						"h": 64
+					},
+					"frame": {
+						"x": 1051,
+						"y": 1057,
+						"w": 64,
+						"h": 64
+					}
+				},
+				{
+					"filename": "ovl_select_corner",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 32,
+						"h": 32
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 32,
+						"h": 32
+					},
+					"frame": {
+						"x": 527,
+						"y": 1237,
+						"w": 32,
+						"h": 32
+					}
+				}
+			]
+		}
+	],
+	"meta": {
+		"app": "shardkeep/scripts/rasterize",
+		"version": "1"
+	}
+}

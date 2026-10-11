@@ -1,0 +1,42 @@
+/** Actual two-wallet qualification, preparation and verified serialized settlement. */
+import { randomUUID } from 'node:crypto';
+import { Keypair,PublicKey } from '@solana/web3.js';
+import { BUILD_COSTS,FORGE_INGOT } from '@shardkeep/shared';
+import { createMiningPublicationFixture } from '../../../../packages/chain/src/testFixtures/miningPublication';
+import { withInitialFreeMiningFixture } from './initialFreeMining';
+import { createInitialFreePublicationSources } from './initialFreePublication';
+import { enrollInitialFreeCohort } from '../../src/mining/freeCohort';
+import { initializeMiningDevelopmentHistory } from '../../src/mining/developmentHistory';
+import { initializeMiningRosterHistory } from '../../src/mining/rosterHistory';
+import { collectFreeWalletShadow } from '../../src/mining/freeWalletShadow';
+import { rewardBaseShards } from '../../src/game/baseEconomy';
+import { createInitialFreePublicationPreparer,type PreparedMiningPublication } from '../../src/mining/publicationPreparation';
+import { createMiningPublicationOutbox,type MiningPublicationOutboxService,type MiningPublicationOutboxRequest } from '../../src/mining/publicationOutbox';
+import { createMiningPublicationSettlement,type MiningPublicationSettlement } from '../../src/mining/publicationSettlement';
+type Base=Parameters<Parameters<typeof withInitialFreeMiningFixture>[0]>[0];
+export type MiningClaimEntitlementFixture=Base & {epochId:string;prepared:PreparedMiningPublication;request:MiningPublicationOutboxRequest;signer:Keypair;sign:()=>Uint8Array;outbox:MiningPublicationOutboxService;backing:Awaited<ReturnType<typeof createInitialFreePublicationSources>>['backing'];sources:Awaited<ReturnType<typeof createInitialFreePublicationSources>>['sources'];chain:Awaited<ReturnType<typeof createMiningPublicationFixture>>;identity:{genesisHash:string;programId:string;configAddress:string};settle:()=>Promise<MiningPublicationSettlement>};
+export async function withMiningClaimEntitlementFixture(run:(f:MiningClaimEntitlementFixture)=>Promise<void>,options:{genesisHash?:string}={}){return withInitialFreeMiningFixture(async f=>{
+ const day='2020-01-01',secondBase=randomUUID();await f.clock('2019-12-31T13:00:00Z');
+ await f.conn.sql`insert into bases(id,owner_wallet,created_at,keep_level) values(${secondBase},${f.buyer},'2019-12-31',${BUILD_COSTS.workshop.requiresKeepLevel})`;
+ await f.conn.sql`insert into base_slots(wallet,base_id,slot) values(${f.buyer},${secondBase},1)`;
+ await f.conn.sql`insert into buildings(player_wallet,base_id,type,level,tx,ty) values(${f.buyer},${secondBase},'keep',${BUILD_COSTS.workshop.requiresKeepLevel},10,10),(${f.buyer},${secondBase},'workshop',1,20,20)`;
+ await enrollInitialFreeCohort(f.conn.db,f.buyer,{...f.context,baseId:secondBase});
+ await f.conn.sql`insert into buildings(player_wallet,base_id,type,level,tx,ty) values(${f.buyer},${secondBase},'goldforge',1,25,25)`;
+ await initializeMiningDevelopmentHistory(f.conn.db,secondBase);await initializeMiningRosterHistory(f.conn.db,f.buyer);
+ await rewardBaseShards(f.conn.db,secondBase,BigInt(FORGE_INGOT.shardsPerIngot)*100n,'test.entitlement.fund',randomUUID());
+ const first=await f.reserve(day);await f.reserve(day,1,day,f.buyer,secondBase);await f.battle(day);
+ const raid=randomUUID(),at=`${day}T12:01:00Z`;await f.clock(at);
+ await f.conn.sql`insert into raids(id,attacker_wallet,attacker_base_id,campaign_stage,seed,snapshot,army_snapshot,orders,orders_deadline_at,status,bulk_deployment_accepted_at,created_at) values(${raid},${f.buyer},${secondBase},1,1,'{}','{}','{"deploys":[{}]}',${at},'resolving',${at},${new Date(Date.parse(at)-1000).toISOString()})`;
+ await f.conn.sql`update player_action_events set occurred_at=${at} where source_id=${raid} and source_key='battle_fought'`;
+ await f.conn.sql`update raids set status='resolved',result='{"stars":1,"retreated":false}',resolved_at=${at} where id=${raid}`;
+ await f.conn.sql`update player_action_events set occurred_at=${at} where source_id=${raid} and source_key='pve_battle'`;
+ await f.clock(null);await f.collect('2019-12-31');await f.collect(day);await collectFreeWalletShadow(f.conn.db,{wallet:f.buyer,day,policyVersion:'free-shadow-v1'});
+ const s=await createInitialFreePublicationSources(f,undefined,undefined,options.genesisHash),signer=Keypair.generate();s.backing.model.publisher=signer.publicKey;s.backing.model.flags=0;await s.backing.config();
+ const prepare=createInitialFreePublicationPreparer(f.conn.db,{sources:s.sources,signer:signer.publicKey,blockhashSource:()=>({getGenesisHash:async()=>s.backing.trust.expectedGenesisHash,getLatestBlockhashAndContext:async()=>({context:{slot:2000},value:{blockhash:new PublicKey(Buffer.alloc(32,91)).toBase58(),lastValidBlockHeight:2200}})})});
+ const p=await prepare({epochId:first.receipt.epochId,day,policyVersion:1,attemptKey:randomUUID()});if(p.status!=='prepared')throw Error('Expected qualified fixture');
+ const d=p.publication,args={sequence:BigInt(d.sequence),day:BigInt(d.day),kind:0 as const,root:Buffer.from(d.root,'hex'),totalCumulative:BigInt(d.total),leafCount:d.leafCount,budgetGross:BigInt(d.budgetGross),freeGross:BigInt(d.freeGross),deedGross:BigInt(d.deedGross),sourceHash:Buffer.from(p.sourceHash,'hex'),taxCommitment:Buffer.from(d.taxCommitment,'hex'),taxVersion:d.taxVersion};
+ const chain=await createMiningPublicationFixture('legacy',{signer,identity:s.backing.trust,args,genesisHash:s.backing.trust.expectedGenesisHash,programData:s.backing.programData,intentBytes:Buffer.from(p.intentHex,'hex'),publicationSlot:2001});
+ const settle=()=>createMiningPublicationSettlement(f.conn.db,{reader:chain.reader,trust:chain.trusted})({epochId:p.epochId,attemptKey:p.attemptKey,signature:chain.request.signature,signedTransaction:chain.request.signedTransaction});
+ const request={epochId:p.epochId,attemptKey:p.attemptKey},outbox=createMiningPublicationOutbox(f.conn.db,{reader:s.backing.reader,trust:s.backing.trust});
+ await run({...f,epochId:p.epochId,prepared:p,request,signer,sign:()=>Uint8Array.from(chain.request.signedTransaction),outbox,backing:s.backing,sources:s.sources,chain,identity:{genesisHash:s.backing.trust.expectedGenesisHash,programId:d.programId,configAddress:JSON.parse(p.manifestJson).funding.config.address},settle});
+ },{roster:true});}

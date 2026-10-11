@@ -1,0 +1,798 @@
+{
+  "schemaVersion": 1,
+  "provider": "PixelLab",
+  "kind": "shared-effects",
+  "cell": [
+    64,
+    64
+  ],
+  "fps": 8,
+  "loop": false,
+  "exportFrameIndices": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8
+  ],
+  "sourceFrameZero": "Unchanged provider input, retained separately",
+  "effects": [
+    {
+      "id": "departure",
+      "atlas": "departure/atlas.png",
+      "frameCount": 8,
+      "frameWidth": 64,
+      "frameHeight": 64,
+      "anchor": [
+        0.5,
+        0.5
+      ],
+      "fps": 8,
+      "loop": false,
+      "reducedMotion": "departure/frames/frame-00.png",
+      "jobId": "30c166c1-88d7-4b80-82da-c340e2e4c9ba",
+      "staticJobId": "8442c805-6b4c-49f8-bc5d-7e35b8ff73b2",
+      "frameHashes": [
+        "b55b20e604d6970a8d8ba262903d14fc83809180e89de9bb9714293d33e791e8",
+        "1907fdbcc6686523f48a3385a72c325e8c3e8c3d2640be4658bdda59ced5d350",
+        "b2070de0cc2b8b2135bfd83e56190eb5af696210ee52a52b05a8657662a604eb",
+        "8ff57d51d11fd7c35300f603de9b8e7339ad6e681520e14275f74cf79f11fd0a",
+        "155f0abfe7e95d7bac7bd35c9f78e6c23db991aeb7be1f95a93359c4c3c0a364",
+        "5d788ea50489ea82c0cacd1bb932612351d35e5b231f4a5ef0e0c9a4efddd3ae",
+        "afbc4c4a7597d79f27baa81bdd0aa868465d3600bafb430f400d8dd963cebaa9",
+        "f509d01fc49d939b4cd0251774fbe42d4b0f38e19f0386bb91e86b0f56b552d3",
+        "b33ca719596dd5685252fc2eb27733cacd118eadaec322f29d93e057f473ed3c"
+      ],
+      "sourceAlphaBounds": [
+        [
+          9,
+          4,
+          54,
+          52
+        ],
+        [
+          10,
+          12,
+          54,
+          52
+        ],
+        [
+          10,
+          12,
+          54,
+          52
+        ],
+        [
+          10,
+          11,
+          54,
+          52
+        ],
+        [
+          10,
+          7,
+          54,
+          52
+        ],
+        [
+          9,
+          6,
+          54,
+          52
+        ],
+        [
+          9,
+          13,
+          54,
+          52
+        ],
+        [
+          10,
+          5,
+          54,
+          52
+        ],
+        [
+          10,
+          8,
+          54,
+          52
+        ]
+      ],
+      "clippedFrames": [],
+      "review": "all9frames inspected; NFTconsumptionv3 corrects edge/vegetation failures; sourceframes preserved",
+      "technicalStatus": "reviewed-export"
+    },
+    {
+      "id": "return",
+      "atlas": "return/atlas.png",
+      "frameCount": 8,
+      "frameWidth": 64,
+      "frameHeight": 64,
+      "anchor": [
+        0.5,
+        0.5
+      ],
+      "fps": 8,
+      "loop": false,
+      "reducedMotion": "return/frames/frame-00.png",
+      "jobId": "70ef22c3-6662-4ad9-ad54-a8caa3b69435",
+      "staticJobId": "a74ded2f-0701-407a-8b01-d39beccde238",
+      "frameHashes": [
+        "16811bab6d256c2a2d69290ba797e4de00ac96d86486d1555bad01c8dba3808c",
+        "0d7987e708372af5f9d2173af58551bb68e76ae45061972775ebe409956c0814",
+        "caf092d5704ffd7b9054b4e8797e2c7e741f7deead1a2cefc2fce9218af2d4e6",
+        "4edb41eeb99d236e5b615c1826d275d81477da8fea1e61b3c5c3730d47f83907",
+        "9f5025b685b903b74d468f903be2cc33ed1cecb4320fdf2f29ff8cee230647b8",
+        "68dec2ad1acf479baaad80fdb0c6d7b05ef5d4201a0a4f0a2f5b4042fab46750",
+        "98d2941d6641de1095769d172f1c9d21bf9b5955b5fd6c4477b278b3db3c3be7",
+        "c920721d135f11a904eab7293b2a9c14507d484cf7507c59ffaf814d1ddd1dc2",
+        "178f0e1ac477ad3f92c8929b8c5e9878fc6785e44a9c561c6b305603d12fb946"
+      ],
+      "sourceAlphaBounds": [
+        [
+          14,
+          16,
+          45,
+          46
+        ],
+        [
+          14,
+          14,
+          46,
+          46
+        ],
+        [
+          12,
+          14,
+          48,
+          47
+        ],
+        [
+          11,
+          20,
+          50,
+          48
+        ],
+        [
+          11,
+          20,
+          51,
+          48
+        ],
+        [
+          10,
+          18,
+          49,
+          49
+        ],
+        [
+          11,
+          16,
+          49,
+          49
+        ],
+        [
+          11,
+          20,
+          49,
+          50
+        ],
+        [
+          11,
+          14,
+          49,
+          50
+        ]
+      ],
+      "clippedFrames": [],
+      "review": "all9frames inspected; NFTconsumptionv3 corrects edge/vegetation failures; sourceframes preserved",
+      "technicalStatus": "reviewed-export"
+    },
+    {
+      "id": "refining-complete",
+      "atlas": "refining-complete/atlas.png",
+      "frameCount": 8,
+      "frameWidth": 64,
+      "frameHeight": 64,
+      "anchor": [
+        0.5,
+        0.5
+      ],
+      "fps": 8,
+      "loop": false,
+      "reducedMotion": "refining-complete/frames/frame-00.png",
+      "jobId": "2c09dfd1-3b19-4369-99df-bd5fd06164ad",
+      "staticJobId": "f242f5aa-3986-4ba3-9623-2873c8f92751",
+      "frameHashes": [
+        "725f1a9697adb4e3d17775aa57451897cea3a68c81c1d0c24dff9dce00706554",
+        "d99bf558ddb221848a8f9e99a5e945ec4c832789793b1a604afaf32a46fe8564",
+        "f167817ef9796f15a25990956ca73a4dac7e26343057edc81e41c3a985b2f09a",
+        "fc71d84ceecf3a5bed1117c739709527bccbb03fb0cd93b42863acf1b2a34c1d",
+        "8d7ac9df2ba6aa2415292e6a5c19e0f8c8567af01b7f8b2bef424ece49ec3672",
+        "5c0a63f9a9c7df9a279fb849c7d202bc36329a1edd3d40fe9618b92a57e4e863",
+        "ee26f183695f0b45d0479de286c0cef18185d76d66efbf9d5d3856574b9cfa30",
+        "db5be46990f0ffe885dc0dc13ef3a98b23a4e54bf225381f9cac6f78e17aa448",
+        "267379cef03e51f4c41ad305f3a45e1bade7332d9adfbcc3ea4207d2e1fc487f"
+      ],
+      "sourceAlphaBounds": [
+        [
+          24,
+          18,
+          40,
+          46
+        ],
+        [
+          23,
+          19,
+          41,
+          46
+        ],
+        [
+          23,
+          21,
+          41,
+          46
+        ],
+        [
+          20,
+          16,
+          44,
+          45
+        ],
+        [
+          18,
+          18,
+          46,
+          45
+        ],
+        [
+          20,
+          21,
+          44,
+          45
+        ],
+        [
+          26,
+          29,
+          38,
+          45
+        ],
+        [
+          27,
+          26,
+          37,
+          45
+        ],
+        [
+          27,
+          26,
+          37,
+          45
+        ]
+      ],
+      "clippedFrames": [],
+      "review": "all9frames inspected; NFTconsumptionv3 corrects edge/vegetation failures; sourceframes preserved",
+      "technicalStatus": "reviewed-export"
+    },
+    {
+      "id": "craft-success",
+      "atlas": "craft-success/atlas.png",
+      "frameCount": 8,
+      "frameWidth": 64,
+      "frameHeight": 64,
+      "anchor": [
+        0.5,
+        0.5
+      ],
+      "fps": 8,
+      "loop": false,
+      "reducedMotion": "craft-success/frames/frame-00.png",
+      "jobId": "0db6af08-44f3-4850-bd7d-cd1ce3f3894a",
+      "staticJobId": "e5c2a521-83ba-404a-9eb4-4e1191c57ccf",
+      "frameHashes": [
+        "97ebebfec6e8e32db728c2ed44cea9451e49204ba2bf1cf736259e4208d89a7b",
+        "8004ab8d5bfe461dba796e0d07d7c6086da0cccf3a2dc13c9e22024e9be0bb44",
+        "18b3bee148934af4ac004a6389e9074d35fc485ab3e90d7b5221d201ecd492d0",
+        "4126ca3602b02185d41abbd4f2b3dbe88df568205403b850cbaf6ce5102e7335",
+        "43516d33607b0754396ac4d65034de685fcab2b378531809fd04d629f2e47d8f",
+        "c9ab808d92d4d8bc2f38d10617ddddf0d7d3d77d35910ebc5fb7c3d3cfba0a93",
+        "347644b09ba6968f15b3b572a164de1c945f80aec836d7e6fcad8608e739266b",
+        "8b2d255d7fa2363bba81b9f70a7d59c1b2063e5a63052a20032ea52e72829180",
+        "ae48e1ab220d32efc71fc86ff6101bf803df43b039c9aa3145d4b992efa56e43"
+      ],
+      "sourceAlphaBounds": [
+        [
+          17,
+          17,
+          47,
+          47
+        ],
+        [
+          15,
+          15,
+          49,
+          48
+        ],
+        [
+          13,
+          14,
+          51,
+          49
+        ],
+        [
+          13,
+          15,
+          50,
+          47
+        ],
+        [
+          16,
+          16,
+          47,
+          45
+        ],
+        [
+          16,
+          17,
+          48,
+          47
+        ],
+        [
+          15,
+          16,
+          48,
+          46
+        ],
+        [
+          17,
+          17,
+          46,
+          45
+        ],
+        [
+          19,
+          18,
+          45,
+          43
+        ]
+      ],
+      "clippedFrames": [],
+      "review": "all9frames inspected; NFTconsumptionv3 corrects edge/vegetation failures; sourceframes preserved",
+      "technicalStatus": "reviewed-export"
+    },
+    {
+      "id": "craft-failure",
+      "atlas": "craft-failure/atlas.png",
+      "frameCount": 8,
+      "frameWidth": 64,
+      "frameHeight": 64,
+      "anchor": [
+        0.5,
+        0.5
+      ],
+      "fps": 8,
+      "loop": false,
+      "reducedMotion": "craft-failure/frames/frame-00.png",
+      "jobId": "922c5835-6616-49e4-8b24-9f8b5439397e",
+      "staticJobId": "a3c6c12a-84f3-4d10-88f3-c6d12631d109",
+      "frameHashes": [
+        "5126beb59e09f71a01e55249365f091a77478ab7fd37a0daca46e5a1865a642f",
+        "8be2d8cdc1fcaf8aa5474084be6b23dee0a9f01e7a29d752e124324b189e93eb",
+        "9b5105d621284caba4fc4cfd3cdc8c63f9fa05ba7c76424a4451949fe8c62669",
+        "69d776a7f69a1aa3141fd9fbcc5b9b5c01cb2f29f2a6b1ad84e41f99e93de9c1",
+        "8e7939b3cff168134ba42bbffd78004bb5aa75c50a9042e6b7f2e309828e7e47",
+        "b3dbb5d2f933126d1ca47a93e8bb1746b2380d86fecd6dae556bdb016b07296e",
+        "07162a06b64fb305d5416d605165e965f1a4edc3fd9feaa02770a5cec7d616c4",
+        "ab83f1df0278db1162a1f6f305e52a4e46adc706c8e6e1e5da75843b4aeac698",
+        "77849c287477c0affd80a7810b03b73a1cf90870fd917c57397c9fb065bf83d5"
+      ],
+      "sourceAlphaBounds": [
+        [
+          5,
+          8,
+          57,
+          60
+        ],
+        [
+          5,
+          6,
+          56,
+          60
+        ],
+        [
+          6,
+          6,
+          56,
+          59
+        ],
+        [
+          6,
+          5,
+          55,
+          59
+        ],
+        [
+          8,
+          6,
+          55,
+          59
+        ],
+        [
+          8,
+          5,
+          55,
+          60
+        ],
+        [
+          8,
+          5,
+          55,
+          60
+        ],
+        [
+          8,
+          5,
+          55,
+          59
+        ],
+        [
+          8,
+          8,
+          55,
+          59
+        ]
+      ],
+      "clippedFrames": [],
+      "review": "all9frames inspected; NFTconsumptionv3 corrects edge/vegetation failures; sourceframes preserved",
+      "technicalStatus": "reviewed-export"
+    },
+    {
+      "id": "fragment-discovery",
+      "atlas": "fragment-discovery/atlas.png",
+      "frameCount": 8,
+      "frameWidth": 64,
+      "frameHeight": 64,
+      "anchor": [
+        0.5,
+        0.5
+      ],
+      "fps": 8,
+      "loop": false,
+      "reducedMotion": "fragment-discovery/frames/frame-00.png",
+      "jobId": "3aa00198-55ad-4f37-8fed-f9aa592778b0",
+      "staticJobId": "238aea81-8624-47b1-9c21-cbf8695ce8e4",
+      "frameHashes": [
+        "9da416c83c19c8386f83eb86f610ca8e83608607e00d71308c598466c8e8d8af",
+        "4e4eb0cfddfd35183618ba0c66eb682b27a1ad47aae410320e91858f8f2c0909",
+        "0f3ffae323509d9e888112721804e455f95852c0a81eff64e700a14ad433825a",
+        "8ce277e9a5058c52283022df019016b785ceff430d18398332970f855256b008",
+        "f74ebae33dec893ac31e9a1c9b3b8f31c6c162d1bbdf2778181bc56bece4bbed",
+        "b92aafc39784bbc63ddd460f4b65a1fe3c12e17ac2ec2b0c481cc69936d1685b",
+        "dc280dbe77526f2695cc1a562d9b015869e945b2b3f4294bcdd35b5fc8c06d27",
+        "95435d2afcc02254ada64442620934e6b1e56b6dff227f0cc5330ebf7556cbea",
+        "2e47486bfffd2648c543a1ea5d23df4e06d2d9449627a1ef73e8a127fb744564"
+      ],
+      "sourceAlphaBounds": [
+        [
+          17,
+          20,
+          44,
+          43
+        ],
+        [
+          18,
+          15,
+          47,
+          49
+        ],
+        [
+          20,
+          19,
+          41,
+          43
+        ],
+        [
+          21,
+          20,
+          40,
+          43
+        ],
+        [
+          22,
+          21,
+          39,
+          44
+        ],
+        [
+          22,
+          21,
+          39,
+          43
+        ],
+        [
+          20,
+          20,
+          40,
+          43
+        ],
+        [
+          18,
+          20,
+          41,
+          42
+        ],
+        [
+          17,
+          20,
+          43,
+          43
+        ]
+      ],
+      "clippedFrames": [],
+      "review": "all9frames inspected; NFTconsumptionv3 corrects edge/vegetation failures; sourceframes preserved",
+      "technicalStatus": "reviewed-export"
+    },
+    {
+      "id": "nft-consumption",
+      "atlas": "nft-consumption/atlas.png",
+      "frameCount": 8,
+      "frameWidth": 64,
+      "frameHeight": 64,
+      "anchor": [
+        0.5,
+        0.5
+      ],
+      "fps": 8,
+      "loop": false,
+      "reducedMotion": "nft-consumption/frames/frame-00.png",
+      "jobId": "f8016092-adee-4553-8780-e55d87d2633e",
+      "staticJobId": "4f22e01e-d08b-4d6f-adc1-9699b7fb86a4",
+      "frameHashes": [
+        "ac10a360b81321bdf95a996b6e7ce8420c56a4d22b5865e81f8088bd112c5a77",
+        "62b12f1fbba99976a0c86076e9e932ffab4260836cc7457c204273abf09b994d",
+        "758fc75789052d2e81245a515fa8a2e95683641b3926dd3e1cf6a3e5ec15ff1b",
+        "dc80548235e1fda992a98759f57ddeb2ca49af15c2c0bae94e2334ffef5fbe3c",
+        "059fe74cfc1bd46e22b2756674987c05d675c84180fa664e8a7ab8dfd7e12838",
+        "7db5ee5075d8a4deb97b382da8df17d38139e123237627a0caf2527735ccf341",
+        "f993a4aa37660da475331e2b15210f5b35bb39b456e35d982877f07c3c58c9a2",
+        "7090b062d7159b104e84d38b1e8b5b2ad357b93eb23f53055cf6c8a2edf08865",
+        "62294862d4c7ccf08b23cfc25946ec2346ae95bbeebbd4e390d889a26d5424e2"
+      ],
+      "sourceAlphaBounds": [
+        [
+          18,
+          8,
+          48,
+          57
+        ],
+        [
+          18,
+          7,
+          48,
+          56
+        ],
+        [
+          16,
+          7,
+          47,
+          55
+        ],
+        [
+          17,
+          7,
+          47,
+          54
+        ],
+        [
+          17,
+          9,
+          47,
+          52
+        ],
+        [
+          17,
+          13,
+          47,
+          51
+        ],
+        [
+          17,
+          14,
+          47,
+          48
+        ],
+        [
+          17,
+          16,
+          46,
+          47
+        ],
+        [
+          18,
+          16,
+          46,
+          47
+        ]
+      ],
+      "clippedFrames": [],
+      "review": "all9frames inspected; NFTconsumptionv3 corrects edge/vegetation failures; sourceframes preserved",
+      "technicalStatus": "reviewed-export"
+    },
+    {
+      "id": "reward-claim",
+      "atlas": "reward-claim/atlas.png",
+      "frameCount": 8,
+      "frameWidth": 64,
+      "frameHeight": 64,
+      "anchor": [
+        0.5,
+        0.5
+      ],
+      "fps": 8,
+      "loop": false,
+      "reducedMotion": "reward-claim/frames/frame-00.png",
+      "jobId": "d3a6e4f1-2f6c-44d6-ad64-e6254f5668c6",
+      "staticJobId": "ae9e91cd-67e4-4d7a-8823-54eb12232cc8",
+      "frameHashes": [
+        "eea4b1cf754b311537222e6a7888cee46dc625743820815320c814a4d39727c9",
+        "31b9a080de7f4f0793b8e4668c8773941e8a2844c1ce279ad549fe350a786c89",
+        "037b4e25051f5db25a9ee6895224b8de7de275048908b06aaab5329eefb5c7c2",
+        "a7e59bc295fb8616dbef2d56f8291cd85e174ff6f1f56ec98c9395a009659623",
+        "7eea6d6c8cae830cb0d22b75e503ba11ff34351924124f70a10a6bfe6ae5e441",
+        "2e850ededd6026d2658e7fcbb91a1e1126ec16143dbcffbfda1df0e0bae43d06",
+        "be294a568386930bea173ad127cf246480d222d38bb39588b1692f607122c555",
+        "668640d4cdcd8cf9a9a3bc32eee66d0c9a74371810fe088f7380b0b0763a6122",
+        "ab796a74014760c95086dc3a42160fb0ab43a825c9b4a887753f2c5ea1074eca"
+      ],
+      "sourceAlphaBounds": [
+        [
+          7,
+          4,
+          57,
+          58
+        ],
+        [
+          7,
+          4,
+          57,
+          58
+        ],
+        [
+          7,
+          4,
+          57,
+          58
+        ],
+        [
+          7,
+          5,
+          57,
+          58
+        ],
+        [
+          7,
+          5,
+          57,
+          58
+        ],
+        [
+          7,
+          5,
+          57,
+          58
+        ],
+        [
+          7,
+          5,
+          57,
+          58
+        ],
+        [
+          7,
+          5,
+          57,
+          58
+        ],
+        [
+          7,
+          4,
+          57,
+          58
+        ]
+      ],
+      "clippedFrames": [],
+      "review": "all9frames inspected; NFTconsumptionv3 corrects edge/vegetation failures; sourceframes preserved",
+      "technicalStatus": "reviewed-export"
+    },
+    {
+      "id": "renown-recording",
+      "atlas": "renown-recording/atlas.png",
+      "frameCount": 8,
+      "frameWidth": 64,
+      "frameHeight": 64,
+      "anchor": [
+        0.5,
+        0.5
+      ],
+      "fps": 8,
+      "loop": false,
+      "reducedMotion": "renown-recording/frames/frame-00.png",
+      "jobId": "561d0178-3b05-48c7-9538-8d91b63cbaf9",
+      "staticJobId": "ce535859-36cc-4460-a14a-0c1e65f2bc0b",
+      "frameHashes": [
+        "da91c5e276610ee591eefa6ba77cdb321544c7c19831aacf44f059593e5b7c64",
+        "593a5f5afc256b6df4613ee334982cb89d7c21463acd22d41a2fa8c6019106ac",
+        "f62f00759fbd1cf531ed259d954f3c1561f5e66d419bd3db487b60a131d11471",
+        "c9c862abf002152d664f15076c27261e942440f95ea3abbe23ff18ee13bfc50b",
+        "73446900f66d931fb8c7ece373c388da20486aa35607a3184d1c504e9e28f228",
+        "04743f80d3a38006ad50c399afbd6154e89da9dc570fd778ed5fba6fdab30db6",
+        "78c9960607216c66ed4059060272a1d8160f78be52d46e95bb870f65587a7a18",
+        "6fa9d521781397a3db2455c0e8e8359206766bf03e2b5675b7f4b4a8d8515f04",
+        "18fe507a0161891607cadf0cd2fe148c1771273a1681905c914796a38a16ad04"
+      ],
+      "sourceAlphaBounds": [
+        [
+          4,
+          12,
+          57,
+          57
+        ],
+        [
+          4,
+          12,
+          57,
+          57
+        ],
+        [
+          4,
+          12,
+          57,
+          57
+        ],
+        [
+          4,
+          12,
+          57,
+          57
+        ],
+        [
+          4,
+          12,
+          57,
+          57
+        ],
+        [
+          4,
+          12,
+          57,
+          57
+        ],
+        [
+          4,
+          12,
+          57,
+          57
+        ],
+        [
+          4,
+          12,
+          57,
+          57
+        ],
+        [
+          4,
+          12,
+          57,
+          57
+        ]
+      ],
+      "clippedFrames": [],
+      "review": "all9frames inspected; NFTconsumptionv3 corrects edge/vegetation failures; sourceframes preserved",
+      "technicalStatus": "reviewed-export"
+    }
+  ]
+}

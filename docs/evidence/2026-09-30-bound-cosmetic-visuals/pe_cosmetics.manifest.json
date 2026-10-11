@@ -1,0 +1,3132 @@
+{
+  "schemaVersion": 1,
+  "atlas": "pe_cosmetics",
+  "sourceScale": 1,
+  "sourceIndexBase": 0,
+  "keyIndexBase": 1,
+  "sourceManifestSha256": "b4b67f78efd4d74fa416e78822af9f0e037ad6d3bc30f3fc77127cd169292394",
+  "indexSha256": "04f96c922ca04d93f1bf760e6385713908b971ce82c3aa022602f1fa199e2181",
+  "provenanceSha256": "52ea93251eb6aa600af8c15cc9b884a9e55be4941180604956941d5956f27beb",
+  "clips": {
+    "pe_cos_market_t1_idle": {
+      "sourcePath": "cosmetics/static/artisan-market-t1-idle.png",
+      "sourceSha256": "be46bcdafdc1bfa186693204937877be3e892a676f386d7c5ee2217e03a77612",
+      "cellW": 112,
+      "cellH": 112,
+      "anchorPx": [
+        56,
+        112
+      ],
+      "anchorKind": "cellBottomPivotX",
+      "sourcePivot": [
+        56,
+        104
+      ],
+      "footprint": [
+        2,
+        2
+      ],
+      "fps": 0,
+      "loop": false,
+      "reducedMotionFrame": 0,
+      "frames": [
+        {
+          "sourceIndex": 0,
+          "key": "pe_cos_market_t1_idle_f1",
+          "rgbaSha256": "9e12f266dd28cefadc36acd01d3b956ee8f0137aa7141bb32e2317a113aab1ef"
+        }
+      ]
+    },
+    "pe_cos_market_t1_working": {
+      "sourcePath": "cosmetics/animations/artisan-market-t1-working.png",
+      "sourceSha256": "e7ef5ba7a125f1ffb71beedf6780897bd430daf465ca3eace92e9b644224ffb5",
+      "cellW": 112,
+      "cellH": 112,
+      "anchorPx": [
+        56,
+        112
+      ],
+      "anchorKind": "cellBottomPivotX",
+      "sourcePivot": [
+        56,
+        104
+      ],
+      "footprint": [
+        2,
+        2
+      ],
+      "fps": 8,
+      "loop": true,
+      "reducedMotionFrame": 0,
+      "frames": [
+        {
+          "sourceIndex": 0,
+          "key": "pe_cos_market_t1_working_f1",
+          "rgbaSha256": "9e12f266dd28cefadc36acd01d3b956ee8f0137aa7141bb32e2317a113aab1ef"
+        },
+        {
+          "sourceIndex": 1,
+          "key": "pe_cos_market_t1_working_f2",
+          "rgbaSha256": "9e12f266dd28cefadc36acd01d3b956ee8f0137aa7141bb32e2317a113aab1ef"
+        },
+        {
+          "sourceIndex": 2,
+          "key": "pe_cos_market_t1_working_f3",
+          "rgbaSha256": "397c5b59c58c0c38d57f5e609d0fbe9825daae63f790303d81d86486b3f77a81"
+        },
+        {
+          "sourceIndex": 3,
+          "key": "pe_cos_market_t1_working_f4",
+          "rgbaSha256": "397c5b59c58c0c38d57f5e609d0fbe9825daae63f790303d81d86486b3f77a81"
+        },
+        {
+          "sourceIndex": 4,
+          "key": "pe_cos_market_t1_working_f5",
+          "rgbaSha256": "9e12f266dd28cefadc36acd01d3b956ee8f0137aa7141bb32e2317a113aab1ef"
+        },
+        {
+          "sourceIndex": 5,
+          "key": "pe_cos_market_t1_working_f6",
+          "rgbaSha256": "9e12f266dd28cefadc36acd01d3b956ee8f0137aa7141bb32e2317a113aab1ef"
+        },
+        {
+          "sourceIndex": 6,
+          "key": "pe_cos_market_t1_working_f7",
+          "rgbaSha256": "f6b647249578ded9dd50d39c17c32b31e6a833a046c9692e3fc90937362f5909"
+        },
+        {
+          "sourceIndex": 7,
+          "key": "pe_cos_market_t1_working_f8",
+          "rgbaSha256": "9e12f266dd28cefadc36acd01d3b956ee8f0137aa7141bb32e2317a113aab1ef"
+        }
+      ]
+    },
+    "pe_cos_market_t1_damaged": {
+      "sourcePath": "cosmetics/static/artisan-market-t1-damaged.png",
+      "sourceSha256": "e56757cffd47d58141c55623773a36cb9840231e9b5901484f713622bdd6dcff",
+      "cellW": 112,
+      "cellH": 112,
+      "anchorPx": [
+        56,
+        112
+      ],
+      "anchorKind": "cellBottomPivotX",
+      "sourcePivot": [
+        56,
+        104
+      ],
+      "footprint": [
+        2,
+        2
+      ],
+      "fps": 0,
+      "loop": false,
+      "reducedMotionFrame": 0,
+      "frames": [
+        {
+          "sourceIndex": 0,
+          "key": "pe_cos_market_t1_damaged_f1",
+          "rgbaSha256": "d64fb1ef420ded6925350686bcd7838b7b3b1a9c590f6f30523c9efedfa09781"
+        }
+      ]
+    },
+    "pe_cos_market_t1_ready": {
+      "sourcePath": "cosmetics/static/artisan-market-t1-idle.png",
+      "sourceSha256": "be46bcdafdc1bfa186693204937877be3e892a676f386d7c5ee2217e03a77612",
+      "cellW": 112,
+      "cellH": 112,
+      "anchorPx": [
+        56,
+        112
+      ],
+      "anchorKind": "cellBottomPivotX",
+      "sourcePivot": [
+        56,
+        104
+      ],
+      "footprint": [
+        2,
+        2
+      ],
+      "fps": 0,
+      "loop": false,
+      "reducedMotionFrame": 0,
+      "frames": [
+        {
+          "sourceIndex": 0,
+          "key": "pe_cos_market_t1_idle_f1",
+          "rgbaSha256": "9e12f266dd28cefadc36acd01d3b956ee8f0137aa7141bb32e2317a113aab1ef"
+        }
+      ],
+      "alias": "pe_cos_market_t1_idle",
+      "overlay": {
+        "clip": "pe_cos_ready_fx",
+        "offset": [
+          24,
+          0
+        ]
+      }
+    },
+    "pe_cos_market_t1_destroyed": {
+      "sourcePath": "workshop/derived/static/t1-rubble.png",
+      "sourceSha256": "3db88e664ca741c6555fdd469a3eefdd76396070821d17e479adb70b6e2dc4e9",
+      "cellW": 112,
+      "cellH": 112,
+      "anchorPx": [
+        56,
+        112
+      ],
+      "anchorKind": "cellBottomPivotX",
+      "sourcePivot": [
+        56,
+        104
+      ],
+      "footprint": [
+        2,
+        2
+      ],
+      "fps": 0,
+      "loop": false,
+      "reducedMotionFrame": 0,
+      "frames": [
+        {
+          "sourceIndex": 0,
+          "key": "pe_cos_market_t1_destroyed_f1",
+          "rgbaSha256": "d9bd26cb8b8e4aa25689e182e7a40ad9ec0be11de8102fafdb5638adc16e351b"
+        }
+      ]
+    },
+    "pe_cos_market_t1_construction": {
+      "sourcePath": "cosmetics/animations/artisan-market-t1-construction.png",
+      "sourceSha256": "423b7502a6c1af3e16af8737def458ef94125c44cd75be712ee61b86a8a209a9",
+      "cellW": 112,
+      "cellH": 112,
+      "anchorPx": [
+        56,
+        112
+      ],
+      "anchorKind": "cellBottomPivotX",
+      "sourcePivot": [
+        56,
+        104
+      ],
+      "footprint": [
+        2,
+        2
+      ],
+      "fps": 8,
+      "loop": false,
+      "reducedMotionFrame": 0,
+      "frames": [
+        {
+          "sourceIndex": 0,
+          "key": "pe_cos_market_t1_construction_f1",
+          "rgbaSha256": "8b7d8a2ba77e079b79ef2fa119035a68384d600b6082f5290fbf7a467254def0"
+        },
+        {
+          "sourceIndex": 1,
+          "key": "pe_cos_market_t1_construction_f2",
+          "rgbaSha256": "ecdcde5e4e22c38eb1140df4310580e108029d17cb20901e9c7800a6d271b040"
+        },
+        {
+          "sourceIndex": 2,
+          "key": "pe_cos_market_t1_construction_f3",
+          "rgbaSha256": "ea5c6c2cf9083662f05bdbcb1d91a42857b2bb2e100c5de07bc0f502019493c0"
+        },
+        {
+          "sourceIndex": 3,
+          "key": "pe_cos_market_t1_construction_f4",
+          "rgbaSha256": "b45ddcb0f17a3f7387b51480110fce59766e5ef5d6985a29fa51463aed169e8c"
+        },
+        {
+          "sourceIndex": 4,
+          "key": "pe_cos_market_t1_construction_f5",
+          "rgbaSha256": "80f2b2c95ae07c74a64aaff866a42dc7e66a71ecf25602763e09d91add872942"
+        },
+        {
+          "sourceIndex": 5,
+          "key": "pe_cos_market_t1_construction_f6",
+          "rgbaSha256": "7ec182e91aab2e82910ba62c46d6ed3897766929e30f8dfdb4d227cbbbfec77e"
+        },
+        {
+          "sourceIndex": 6,
+          "key": "pe_cos_market_t1_construction_f7",
+          "rgbaSha256": "9e12f266dd28cefadc36acd01d3b956ee8f0137aa7141bb32e2317a113aab1ef"
+        },
+        {
+          "sourceIndex": 7,
+          "key": "pe_cos_market_t1_construction_f8",
+          "rgbaSha256": "9e12f266dd28cefadc36acd01d3b956ee8f0137aa7141bb32e2317a113aab1ef"
+        },
+        {
+          "sourceIndex": 8,
+          "key": "pe_cos_market_t1_construction_f9",
+          "rgbaSha256": "9e12f266dd28cefadc36acd01d3b956ee8f0137aa7141bb32e2317a113aab1ef"
+        }
+      ]
+    },
+    "pe_cos_market_t1_collapse": {
+      "sourcePath": "cosmetics/animations/artisan-market-t1-collapse.png",
+      "sourceSha256": "d3235e5b4d722c1cb48d8c6e39f4b0cf6ca9e816b9172241c22a5931a57839a6",
+      "cellW": 112,
+      "cellH": 112,
+      "anchorPx": [
+        56,
+        112
+      ],
+      "anchorKind": "cellBottomPivotX",
+      "sourcePivot": [
+        56,
+        104
+      ],
+      "footprint": [
+        2,
+        2
+      ],
+      "fps": 8,
+      "loop": false,
+      "reducedMotionFrame": 0,
+      "frames": [
+        {
+          "sourceIndex": 0,
+          "key": "pe_cos_market_t1_collapse_f1",
+          "rgbaSha256": "d64fb1ef420ded6925350686bcd7838b7b3b1a9c590f6f30523c9efedfa09781"
+        },
+        {
+          "sourceIndex": 1,
+          "key": "pe_cos_market_t1_collapse_f2",
+          "rgbaSha256": "f56c129156d9499d915607755188c3be827891c55ad66e6a74f84ae735c097f2"
+        },
+        {
+          "sourceIndex": 2,
+          "key": "pe_cos_market_t1_collapse_f3",
+          "rgbaSha256": "0c5f22036a48804f9554d2f3891d5eadd353d602aee12eed88aea23e24a927e4"
+        },
+        {
+          "sourceIndex": 3,
+          "key": "pe_cos_market_t1_collapse_f4",
+          "rgbaSha256": "d8666765064cfe3d49a7509aeaa009bcbff1a18e53d323ddd13f458f4353bc3d"
+        },
+        {
+          "sourceIndex": 4,
+          "key": "pe_cos_market_t1_collapse_f5",
+          "rgbaSha256": "6f4be56068076b357080b86518b240d0b3093fa29dded604fefe2ffa2ac4a204"
+        },
+        {
+          "sourceIndex": 5,
+          "key": "pe_cos_market_t1_collapse_f6",
+          "rgbaSha256": "8367a63fefa2cab5d81da149e37c3d9ce063087b41244ffeb28c7ff9af09cfd0"
+        },
+        {
+          "sourceIndex": 6,
+          "key": "pe_cos_market_t1_collapse_f7",
+          "rgbaSha256": "d9bd26cb8b8e4aa25689e182e7a40ad9ec0be11de8102fafdb5638adc16e351b"
+        },
+        {
+          "sourceIndex": 7,
+          "key": "pe_cos_market_t1_collapse_f8",
+          "rgbaSha256": "d9bd26cb8b8e4aa25689e182e7a40ad9ec0be11de8102fafdb5638adc16e351b"
+        },
+        {
+          "sourceIndex": 8,
+          "key": "pe_cos_market_t1_collapse_f9",
+          "rgbaSha256": "d9bd26cb8b8e4aa25689e182e7a40ad9ec0be11de8102fafdb5638adc16e351b"
+        }
+      ]
+    },
+    "pe_cos_market_t2_idle": {
+      "sourcePath": "cosmetics/static/artisan-market-t2-idle.png",
+      "sourceSha256": "c787691dbfad005d80627ea01d4f1d99d70d2ac6a5266cce2c2fc0ac5b28a4b3",
+      "cellW": 112,
+      "cellH": 112,
+      "anchorPx": [
+        56,
+        112
+      ],
+      "anchorKind": "cellBottomPivotX",
+      "sourcePivot": [
+        56,
+        104
+      ],
+      "footprint": [
+        2,
+        2
+      ],
+      "fps": 0,
+      "loop": false,
+      "reducedMotionFrame": 0,
+      "frames": [
+        {
+          "sourceIndex": 0,
+          "key": "pe_cos_market_t2_idle_f1",
+          "rgbaSha256": "f33f3898f476f288f2ce14f4c7f28adb249ad15cbe917e45db09f5c411513b59"
+        }
+      ]
+    },
+    "pe_cos_market_t2_working": {
+      "sourcePath": "cosmetics/animations/artisan-market-t2-working.png",
+      "sourceSha256": "100e3fd88bdd274cfd6d6676f59ccb6ab9f14dba32021d81cfd36f41283afebf",
+      "cellW": 112,
+      "cellH": 112,
+      "anchorPx": [
+        56,
+        112
+      ],
+      "anchorKind": "cellBottomPivotX",
+      "sourcePivot": [
+        56,
+        104
+      ],
+      "footprint": [
+        2,
+        2
+      ],
+      "fps": 8,
+      "loop": true,
+      "reducedMotionFrame": 0,
+      "frames": [
+        {
+          "sourceIndex": 0,
+          "key": "pe_cos_market_t2_working_f1",
+          "rgbaSha256": "f33f3898f476f288f2ce14f4c7f28adb249ad15cbe917e45db09f5c411513b59"
+        },
+        {
+          "sourceIndex": 1,
+          "key": "pe_cos_market_t2_working_f2",
+          "rgbaSha256": "f33f3898f476f288f2ce14f4c7f28adb249ad15cbe917e45db09f5c411513b59"
+        },
+        {
+          "sourceIndex": 2,
+          "key": "pe_cos_market_t2_working_f3",
+          "rgbaSha256": "f876d8014e6bf6d2eda2897ab895097aed518e772c60210d1d03866b1697fd55"
+        },
+        {
+          "sourceIndex": 3,
+          "key": "pe_cos_market_t2_working_f4",
+          "rgbaSha256": "f876d8014e6bf6d2eda2897ab895097aed518e772c60210d1d03866b1697fd55"
+        },
+        {
+          "sourceIndex": 4,
+          "key": "pe_cos_market_t2_working_f5",
+          "rgbaSha256": "f33f3898f476f288f2ce14f4c7f28adb249ad15cbe917e45db09f5c411513b59"
+        },
+        {
+          "sourceIndex": 5,
+          "key": "pe_cos_market_t2_working_f6",
+          "rgbaSha256": "f33f3898f476f288f2ce14f4c7f28adb249ad15cbe917e45db09f5c411513b59"
+        },
+        {
+          "sourceIndex": 6,
+          "key": "pe_cos_market_t2_working_f7",
+          "rgbaSha256": "14a9c5564d6bba969b4178808191015c6f9d03bac3f4bf11b61a39e75d73fb94"
+        },
+        {
+          "sourceIndex": 7,
+          "key": "pe_cos_market_t2_working_f8",
+          "rgbaSha256": "f33f3898f476f288f2ce14f4c7f28adb249ad15cbe917e45db09f5c411513b59"
+        }
+      ]
+    },
+    "pe_cos_market_t2_damaged": {
+      "sourcePath": "cosmetics/static/artisan-market-t2-damaged.png",
+      "sourceSha256": "0aae61a9279c54efdd71cb159f7ee317aa19f91df1b473b8257576c52faa4166",
+      "cellW": 112,
+      "cellH": 112,
+      "anchorPx": [
+        56,
+        112
+      ],
+      "anchorKind": "cellBottomPivotX",
+      "sourcePivot": [
+        56,
+        104
+      ],
+      "footprint": [
+        2,
+        2
+      ],
+      "fps": 0,
+      "loop": false,
+      "reducedMotionFrame": 0,
+      "frames": [
+        {
+          "sourceIndex": 0,
+          "key": "pe_cos_market_t2_damaged_f1",
+          "rgbaSha256": "711fc0601e3614a6a15732608281dba7f5cc8d844b8bbfd42b01608955edc979"
+        }
+      ]
+    },
+    "pe_cos_market_t2_ready": {
+      "sourcePath": "cosmetics/static/artisan-market-t2-idle.png",
+      "sourceSha256": "c787691dbfad005d80627ea01d4f1d99d70d2ac6a5266cce2c2fc0ac5b28a4b3",
+      "cellW": 112,
+      "cellH": 112,
+      "anchorPx": [
+        56,
+        112
+      ],
+      "anchorKind": "cellBottomPivotX",
+      "sourcePivot": [
+        56,
+        104
+      ],
+      "footprint": [
+        2,
+        2
+      ],
+      "fps": 0,
+      "loop": false,
+      "reducedMotionFrame": 0,
+      "frames": [
+        {
+          "sourceIndex": 0,
+          "key": "pe_cos_market_t2_idle_f1",
+          "rgbaSha256": "f33f3898f476f288f2ce14f4c7f28adb249ad15cbe917e45db09f5c411513b59"
+        }
+      ],
+      "alias": "pe_cos_market_t2_idle",
+      "overlay": {
+        "clip": "pe_cos_ready_fx",
+        "offset": [
+          24,
+          0
+        ]
+      }
+    },
+    "pe_cos_market_t2_destroyed": {
+      "sourcePath": "workshop/derived/static/t2-rubble.png",
+      "sourceSha256": "964fd0bcd258eadf75a183747651019ece004ce93a79db0a05c353e38b9d1c82",
+      "cellW": 112,
+      "cellH": 112,
+      "anchorPx": [
+        56,
+        112
+      ],
+      "anchorKind": "cellBottomPivotX",
+      "sourcePivot": [
+        56,
+        104
+      ],
+      "footprint": [
+        2,
+        2
+      ],
+      "fps": 0,
+      "loop": false,
+      "reducedMotionFrame": 0,
+      "frames": [
+        {
+          "sourceIndex": 0,
+          "key": "pe_cos_market_t2_destroyed_f1",
+          "rgbaSha256": "0162e24630d8c04df9b50eff6838706f2157a424c18d10c2d33a76573a596cee"
+        }
+      ]
+    },
+    "pe_cos_market_t2_construction": {
+      "sourcePath": "cosmetics/animations/artisan-market-t2-construction.png",
+      "sourceSha256": "390a8064039e5a47e36139cfab46ed6961afbda56f795d30c766db78dada46a6",
+      "cellW": 112,
+      "cellH": 112,
+      "anchorPx": [
+        56,
+        112
+      ],
+      "anchorKind": "cellBottomPivotX",
+      "sourcePivot": [
+        56,
+        104
+      ],
+      "footprint": [
+        2,
+        2
+      ],
+      "fps": 8,
+      "loop": false,
+      "reducedMotionFrame": 0,
+      "frames": [
+        {
+          "sourceIndex": 0,
+          "key": "pe_cos_market_t2_construction_f1",
+          "rgbaSha256": "330d26526b8b6d3d16527eb51b4d25084adc990a3dcf126526a1db74f757284c"
+        },
+        {
+          "sourceIndex": 1,
+          "key": "pe_cos_market_t2_construction_f2",
+          "rgbaSha256": "2899b0a9ea12a82bb22eeedbfb04fffd7d9bdc2f09aa70176e65c4a77d9755bf"
+        },
+        {
+          "sourceIndex": 2,
+          "key": "pe_cos_market_t2_construction_f3",
+          "rgbaSha256": "bcc8a2f1c11e7101e32d89d303c0f24c384b576edbd0c7fb9a361c5d65f6b565"
+        },
+        {
+          "sourceIndex": 3,
+          "key": "pe_cos_market_t2_construction_f4",
+          "rgbaSha256": "f9019184c096978fa55b8e6beea915164b843c8ac755244e80a71ded6168c7ce"
+        },
+        {
+          "sourceIndex": 4,
+          "key": "pe_cos_market_t2_construction_f5",
+          "rgbaSha256": "f7bfa21ae7b7037061c378b4d8e5d9ddd66d08e247211102be9775626c384f0c"
+        },
+        {
+          "sourceIndex": 5,
+          "key": "pe_cos_market_t2_construction_f6",
+          "rgbaSha256": "2e84a8ca2baa801d9b11e9f02ea28bcdafe625748b8cf3e17bd1d6305d38f1be"
+        },
+        {
+          "sourceIndex": 6,
+          "key": "pe_cos_market_t2_construction_f7",
+          "rgbaSha256": "f33f3898f476f288f2ce14f4c7f28adb249ad15cbe917e45db09f5c411513b59"
+        },
+        {
+          "sourceIndex": 7,
+          "key": "pe_cos_market_t2_construction_f8",
+          "rgbaSha256": "f33f3898f476f288f2ce14f4c7f28adb249ad15cbe917e45db09f5c411513b59"
+        },
+        {
+          "sourceIndex": 8,
+          "key": "pe_cos_market_t2_construction_f9",
+          "rgbaSha256": "f33f3898f476f288f2ce14f4c7f28adb249ad15cbe917e45db09f5c411513b59"
+        }
+      ]
+    },
+    "pe_cos_market_t2_collapse": {
+      "sourcePath": "cosmetics/animations/artisan-market-t2-collapse.png",
+      "sourceSha256": "01be02e5dce2e3e3c7539f928451ccbf7d682d088157b730ad325aa4c61254e4",
+      "cellW": 112,
+      "cellH": 112,
+      "anchorPx": [
+        56,
+        112
+      ],
+      "anchorKind": "cellBottomPivotX",
+      "sourcePivot": [
+        56,
+        104
+      ],
+      "footprint": [
+        2,
+        2
+      ],
+      "fps": 8,
+      "loop": false,
+      "reducedMotionFrame": 0,
+      "frames": [
+        {
+          "sourceIndex": 0,
+          "key": "pe_cos_market_t2_collapse_f1",
+          "rgbaSha256": "711fc0601e3614a6a15732608281dba7f5cc8d844b8bbfd42b01608955edc979"
+        },
+        {
+          "sourceIndex": 1,
+          "key": "pe_cos_market_t2_collapse_f2",
+          "rgbaSha256": "c54114830ba06ea0d7db8dc0d175cf35da892c47cce0b0988d4d828423d9b48f"
+        },
+        {
+          "sourceIndex": 2,
+          "key": "pe_cos_market_t2_collapse_f3",
+          "rgbaSha256": "717101df2374f0be29ee20d47d491665bfcf310d6759d4d5222bcfc63d8b2023"
+        },
+        {
+          "sourceIndex": 3,
+          "key": "pe_cos_market_t2_collapse_f4",
+          "rgbaSha256": "8a6293c371a29b226c2421bcff69e18246403e32c15aba0a679eb5d527462a1b"
+        },
+        {
+          "sourceIndex": 4,
+          "key": "pe_cos_market_t2_collapse_f5",
+          "rgbaSha256": "a7ccf61a98938ccf24b8fe1b5bd0e58215fed5fede5cb020f9239201b023cdbd"
+        },
+        {
+          "sourceIndex": 5,
+          "key": "pe_cos_market_t2_collapse_f6",
+          "rgbaSha256": "9d168913d3401aa2c09bcb145fb34313e278f0a4d5bba5c22ebea6be3b8132c4"
+        },
+        {
+          "sourceIndex": 6,
+          "key": "pe_cos_market_t2_collapse_f7",
+          "rgbaSha256": "0162e24630d8c04df9b50eff6838706f2157a424c18d10c2d33a76573a596cee"
+        },
+        {
+          "sourceIndex": 7,
+          "key": "pe_cos_market_t2_collapse_f8",
+          "rgbaSha256": "0162e24630d8c04df9b50eff6838706f2157a424c18d10c2d33a76573a596cee"
+        },
+        {
+          "sourceIndex": 8,
+          "key": "pe_cos_market_t2_collapse_f9",
+          "rgbaSha256": "0162e24630d8c04df9b50eff6838706f2157a424c18d10c2d33a76573a596cee"
+        }
+      ]
+    },
+    "pe_cos_market_t3_idle": {
+      "sourcePath": "cosmetics/static/artisan-market-t3-idle.png",
+      "sourceSha256": "08529d33d2c898e631407c897c03a481f795fa0c8be523876ca8eb14f80b513d",
+      "cellW": 112,
+      "cellH": 112,
+      "anchorPx": [
+        56,
+        112
+      ],
+      "anchorKind": "cellBottomPivotX",
+      "sourcePivot": [
+        56,
+        104
+      ],
+      "footprint": [
+        2,
+        2
+      ],
+      "fps": 0,
+      "loop": false,
+      "reducedMotionFrame": 0,
+      "frames": [
+        {
+          "sourceIndex": 0,
+          "key": "pe_cos_market_t3_idle_f1",
+          "rgbaSha256": "79df016aafc9f02d9542e648f876d67b2722e4fad1eb8be16d68281941cd1702"
+        }
+      ]
+    },
+    "pe_cos_market_t3_working": {
+      "sourcePath": "cosmetics/animations/artisan-market-t3-working.png",
+      "sourceSha256": "0e4d4f904c12208cc5ee936367603ebd0ffde32b038e3a73d24c2cc56952ca4c",
+      "cellW": 112,
+      "cellH": 112,
+      "anchorPx": [
+        56,
+        112
+      ],
+      "anchorKind": "cellBottomPivotX",
+      "sourcePivot": [
+        56,
+        104
+      ],
+      "footprint": [
+        2,
+        2
+      ],
+      "fps": 8,
+      "loop": true,
+      "reducedMotionFrame": 0,
+      "frames": [
+        {
+          "sourceIndex": 0,
+          "key": "pe_cos_market_t3_working_f1",
+          "rgbaSha256": "79df016aafc9f02d9542e648f876d67b2722e4fad1eb8be16d68281941cd1702"
+        },
+        {
+          "sourceIndex": 1,
+          "key": "pe_cos_market_t3_working_f2",
+          "rgbaSha256": "79df016aafc9f02d9542e648f876d67b2722e4fad1eb8be16d68281941cd1702"
+        },
+        {
+          "sourceIndex": 2,
+          "key": "pe_cos_market_t3_working_f3",
+          "rgbaSha256": "312672ca527346e82e33ee25638cdacfd99a2814203866a00edb7fe1f787d3c7"
+        },
+        {
+          "sourceIndex": 3,
+          "key": "pe_cos_market_t3_working_f4",
+          "rgbaSha256": "312672ca527346e82e33ee25638cdacfd99a2814203866a00edb7fe1f787d3c7"
+        },
+        {
+          "sourceIndex": 4,
+          "key": "pe_cos_market_t3_working_f5",
+          "rgbaSha256": "79df016aafc9f02d9542e648f876d67b2722e4fad1eb8be16d68281941cd1702"
+        },
+        {
+          "sourceIndex": 5,
+          "key": "pe_cos_market_t3_working_f6",
+          "rgbaSha256": "79df016aafc9f02d9542e648f876d67b2722e4fad1eb8be16d68281941cd1702"
+        },
+        {
+          "sourceIndex": 6,
+          "key": "pe_cos_market_t3_working_f7",
+          "rgbaSha256": "32061a4ffb008e0402bdcd4a4001e2fc3d761e5700b4691cfe45e8ac7412f94c"
+        },
+        {
+          "sourceIndex": 7,
+          "key": "pe_cos_market_t3_working_f8",
+          "rgbaSha256": "79df016aafc9f02d9542e648f876d67b2722e4fad1eb8be16d68281941cd1702"
+        }
+      ]
+    },
+    "pe_cos_market_t3_damaged": {
+      "sourcePath": "cosmetics/static/artisan-market-t3-damaged.png",
+      "sourceSha256": "02565fc0ab81b7f5406bac006163eceec62ead07f5fa945307e0c47d7470bb4b",
+      "cellW": 112,
+      "cellH": 112,
+      "anchorPx": [
+        56,
+        112
+      ],
+      "anchorKind": "cellBottomPivotX",
+      "sourcePivot": [
+        56,
+        104
+      ],
+      "footprint": [
+        2,
+        2
+      ],
+      "fps": 0,
+      "loop": false,
+      "reducedMotionFrame": 0,
+      "frames": [
+        {
+          "sourceIndex": 0,
+          "key": "pe_cos_market_t3_damaged_f1",
+          "rgbaSha256": "e9b8fa1d5c29a2962fcc662d54f5d53b3f95784741488251c6b92087510c8576"
+        }
+      ]
+    },
+    "pe_cos_market_t3_ready": {
+      "sourcePath": "cosmetics/static/artisan-market-t3-idle.png",
+      "sourceSha256": "08529d33d2c898e631407c897c03a481f795fa0c8be523876ca8eb14f80b513d",
+      "cellW": 112,
+      "cellH": 112,
+      "anchorPx": [
+        56,
+        112
+      ],
+      "anchorKind": "cellBottomPivotX",
+      "sourcePivot": [
+        56,
+        104
+      ],
+      "footprint": [
+        2,
+        2
+      ],
+      "fps": 0,
+      "loop": false,
+      "reducedMotionFrame": 0,
+      "frames": [
+        {
+          "sourceIndex": 0,
+          "key": "pe_cos_market_t3_idle_f1",
+          "rgbaSha256": "79df016aafc9f02d9542e648f876d67b2722e4fad1eb8be16d68281941cd1702"
+        }
+      ],
+      "alias": "pe_cos_market_t3_idle",
+      "overlay": {
+        "clip": "pe_cos_ready_fx",
+        "offset": [
+          24,
+          0
+        ]
+      }
+    },
+    "pe_cos_market_t3_destroyed": {
+      "sourcePath": "workshop/derived/static/t3-rubble.png",
+      "sourceSha256": "5eb600d816e71f47d2e29f354e5647987c65aa96db784e9fea3637cefb26e610",
+      "cellW": 112,
+      "cellH": 112,
+      "anchorPx": [
+        56,
+        112
+      ],
+      "anchorKind": "cellBottomPivotX",
+      "sourcePivot": [
+        56,
+        104
+      ],
+      "footprint": [
+        2,
+        2
+      ],
+      "fps": 0,
+      "loop": false,
+      "reducedMotionFrame": 0,
+      "frames": [
+        {
+          "sourceIndex": 0,
+          "key": "pe_cos_market_t3_destroyed_f1",
+          "rgbaSha256": "86ba562c0cd3428338d648be7040f1d7754dc99c1af6d279140ef8d7e6fb5bc5"
+        }
+      ]
+    },
+    "pe_cos_market_t3_construction": {
+      "sourcePath": "cosmetics/animations/artisan-market-t3-construction.png",
+      "sourceSha256": "9fb3c74bd9fc599930bc8dba68844b7153a90b46262a6acb744c5fbb35a0f8a0",
+      "cellW": 112,
+      "cellH": 112,
+      "anchorPx": [
+        56,
+        112
+      ],
+      "anchorKind": "cellBottomPivotX",
+      "sourcePivot": [
+        56,
+        104
+      ],
+      "footprint": [
+        2,
+        2
+      ],
+      "fps": 8,
+      "loop": false,
+      "reducedMotionFrame": 0,
+      "frames": [
+        {
+          "sourceIndex": 0,
+          "key": "pe_cos_market_t3_construction_f1",
+          "rgbaSha256": "962bb103b268087f53b18d8f25aaabfcba1ed99889cb5db1dbb049aff51238c8"
+        },
+        {
+          "sourceIndex": 1,
+          "key": "pe_cos_market_t3_construction_f2",
+          "rgbaSha256": "5b9a7418017b7acdccfcc5ca0a91ff7ba311220e96f5dd86b341617b4c823231"
+        },
+        {
+          "sourceIndex": 2,
+          "key": "pe_cos_market_t3_construction_f3",
+          "rgbaSha256": "84290483bcce8fa05034a8b2e9a249e88d70e7ee0b82d7347215a110fa5cf973"
+        },
+        {
+          "sourceIndex": 3,
+          "key": "pe_cos_market_t3_construction_f4",
+          "rgbaSha256": "ec3fdad11d4dcc0bad1f72078ec6c254627f28776dc46d0dd5d5fddb2748c1e0"
+        },
+        {
+          "sourceIndex": 4,
+          "key": "pe_cos_market_t3_construction_f5",
+          "rgbaSha256": "43062512465554a40e21a32a55ce221ed42b7788dafb54a967c58ae52f6e61b4"
+        },
+        {
+          "sourceIndex": 5,
+          "key": "pe_cos_market_t3_construction_f6",
+          "rgbaSha256": "13dd132108d4319b6d1de4a26bab9e79ef889c01976e2d504721245f9cb7d8c8"
+        },
+        {
+          "sourceIndex": 6,
+          "key": "pe_cos_market_t3_construction_f7",
+          "rgbaSha256": "79df016aafc9f02d9542e648f876d67b2722e4fad1eb8be16d68281941cd1702"
+        },
+        {
+          "sourceIndex": 7,
+          "key": "pe_cos_market_t3_construction_f8",
+          "rgbaSha256": "79df016aafc9f02d9542e648f876d67b2722e4fad1eb8be16d68281941cd1702"
+        },
+        {
+          "sourceIndex": 8,
+          "key": "pe_cos_market_t3_construction_f9",
+          "rgbaSha256": "79df016aafc9f02d9542e648f876d67b2722e4fad1eb8be16d68281941cd1702"
+        }
+      ]
+    },
+    "pe_cos_market_t3_collapse": {
+      "sourcePath": "cosmetics/animations/artisan-market-t3-collapse.png",
+      "sourceSha256": "e15f280143a47cf86050670f7814409c0ccaa9c45e331ea578259205e9451957",
+      "cellW": 112,
+      "cellH": 112,
+      "anchorPx": [
+        56,
+        112
+      ],
+      "anchorKind": "cellBottomPivotX",
+      "sourcePivot": [
+        56,
+        104
+      ],
+      "footprint": [
+        2,
+        2
+      ],
+      "fps": 8,
+      "loop": false,
+      "reducedMotionFrame": 0,
+      "frames": [
+        {
+          "sourceIndex": 0,
+          "key": "pe_cos_market_t3_collapse_f1",
+          "rgbaSha256": "e9b8fa1d5c29a2962fcc662d54f5d53b3f95784741488251c6b92087510c8576"
+        },
+        {
+          "sourceIndex": 1,
+          "key": "pe_cos_market_t3_collapse_f2",
+          "rgbaSha256": "1cea51f3f3c652c2dc45fe9e654c7b1606c02efe721c1374db649135813ec87c"
+        },
+        {
+          "sourceIndex": 2,
+          "key": "pe_cos_market_t3_collapse_f3",
+          "rgbaSha256": "c1f45dad9851eff1f78fbfb7326aa0f23293b96018242639f5511cb94ecf2f60"
+        },
+        {
+          "sourceIndex": 3,
+          "key": "pe_cos_market_t3_collapse_f4",
+          "rgbaSha256": "d305a192cf37243172f95c08660d6f41eca0a9b8932a7f218af13b97045bd838"
+        },
+        {
+          "sourceIndex": 4,
+          "key": "pe_cos_market_t3_collapse_f5",
+          "rgbaSha256": "d40d44df34ed7a510c0baee83dbb6c846e9161095641d41053d6106731f918e0"
+        },
+        {
+          "sourceIndex": 5,
+          "key": "pe_cos_market_t3_collapse_f6",
+          "rgbaSha256": "20828eb96853b1447d4c475ecb14208b18a53d9b713990b31d3adbdcb5fe83b4"
+        },
+        {
+          "sourceIndex": 6,
+          "key": "pe_cos_market_t3_collapse_f7",
+          "rgbaSha256": "86ba562c0cd3428338d648be7040f1d7754dc99c1af6d279140ef8d7e6fb5bc5"
+        },
+        {
+          "sourceIndex": 7,
+          "key": "pe_cos_market_t3_collapse_f8",
+          "rgbaSha256": "86ba562c0cd3428338d648be7040f1d7754dc99c1af6d279140ef8d7e6fb5bc5"
+        },
+        {
+          "sourceIndex": 8,
+          "key": "pe_cos_market_t3_collapse_f9",
+          "rgbaSha256": "86ba562c0cd3428338d648be7040f1d7754dc99c1af6d279140ef8d7e6fb5bc5"
+        }
+      ]
+    },
+    "pe_cos_market_t4_idle": {
+      "sourcePath": "cosmetics/static/artisan-market-t4-idle.png",
+      "sourceSha256": "73425d7c9c011ecb44aa2eb3773d1e02ecc1bab15ea210160928ff8df0c5e7d0",
+      "cellW": 112,
+      "cellH": 112,
+      "anchorPx": [
+        56,
+        112
+      ],
+      "anchorKind": "cellBottomPivotX",
+      "sourcePivot": [
+        56,
+        104
+      ],
+      "footprint": [
+        2,
+        2
+      ],
+      "fps": 0,
+      "loop": false,
+      "reducedMotionFrame": 0,
+      "frames": [
+        {
+          "sourceIndex": 0,
+          "key": "pe_cos_market_t4_idle_f1",
+          "rgbaSha256": "a95b0ddbcc0ee02190dc58a8516839bdc4b0bdde24a2bb4e8b28ca05cb9fc686"
+        }
+      ]
+    },
+    "pe_cos_market_t4_working": {
+      "sourcePath": "cosmetics/animations/artisan-market-t4-working.png",
+      "sourceSha256": "afd5b960c388947045840f69a9aaa2bce30e04a35023f17cdfa96ab2080470ed",
+      "cellW": 112,
+      "cellH": 112,
+      "anchorPx": [
+        56,
+        112
+      ],
+      "anchorKind": "cellBottomPivotX",
+      "sourcePivot": [
+        56,
+        104
+      ],
+      "footprint": [
+        2,
+        2
+      ],
+      "fps": 8,
+      "loop": true,
+      "reducedMotionFrame": 0,
+      "frames": [
+        {
+          "sourceIndex": 0,
+          "key": "pe_cos_market_t4_working_f1",
+          "rgbaSha256": "a95b0ddbcc0ee02190dc58a8516839bdc4b0bdde24a2bb4e8b28ca05cb9fc686"
+        },
+        {
+          "sourceIndex": 1,
+          "key": "pe_cos_market_t4_working_f2",
+          "rgbaSha256": "a95b0ddbcc0ee02190dc58a8516839bdc4b0bdde24a2bb4e8b28ca05cb9fc686"
+        },
+        {
+          "sourceIndex": 2,
+          "key": "pe_cos_market_t4_working_f3",
+          "rgbaSha256": "3fdaaddbdc87fe74304928e2a3574b34e572121383e1f4b666b4ad444fa58230"
+        },
+        {
+          "sourceIndex": 3,
+          "key": "pe_cos_market_t4_working_f4",
+          "rgbaSha256": "3fdaaddbdc87fe74304928e2a3574b34e572121383e1f4b666b4ad444fa58230"
+        },
+        {
+          "sourceIndex": 4,
+          "key": "pe_cos_market_t4_working_f5",
+          "rgbaSha256": "a95b0ddbcc0ee02190dc58a8516839bdc4b0bdde24a2bb4e8b28ca05cb9fc686"
+        },
+        {
+          "sourceIndex": 5,
+          "key": "pe_cos_market_t4_working_f6",
+          "rgbaSha256": "a95b0ddbcc0ee02190dc58a8516839bdc4b0bdde24a2bb4e8b28ca05cb9fc686"
+        },
+        {
+          "sourceIndex": 6,
+          "key": "pe_cos_market_t4_working_f7",
+          "rgbaSha256": "b78f17ade1fa667b38426d2369002fde4c58fd7133385126f71b353bb0734311"
+        },
+        {
+          "sourceIndex": 7,
+          "key": "pe_cos_market_t4_working_f8",
+          "rgbaSha256": "a95b0ddbcc0ee02190dc58a8516839bdc4b0bdde24a2bb4e8b28ca05cb9fc686"
+        }
+      ]
+    },
+    "pe_cos_market_t4_damaged": {
+      "sourcePath": "cosmetics/static/artisan-market-t4-damaged.png",
+      "sourceSha256": "1e34c5d51ac05cad170d7172e839f86b1fe99ad11c8c842d8d65c7335ad1b430",
+      "cellW": 112,
+      "cellH": 112,
+      "anchorPx": [
+        56,
+        112
+      ],
+      "anchorKind": "cellBottomPivotX",
+      "sourcePivot": [
+        56,
+        104
+      ],
+      "footprint": [
+        2,
+        2
+      ],
+      "fps": 0,
+      "loop": false,
+      "reducedMotionFrame": 0,
+      "frames": [
+        {
+          "sourceIndex": 0,
+          "key": "pe_cos_market_t4_damaged_f1",
+          "rgbaSha256": "b68b4a796ea56d301b3124cbeaa4c3522f74cff67083d1c090f25b6150862dc2"
+        }
+      ]
+    },
+    "pe_cos_market_t4_ready": {
+      "sourcePath": "cosmetics/static/artisan-market-t4-idle.png",
+      "sourceSha256": "73425d7c9c011ecb44aa2eb3773d1e02ecc1bab15ea210160928ff8df0c5e7d0",
+      "cellW": 112,
+      "cellH": 112,
+      "anchorPx": [
+        56,
+        112
+      ],
+      "anchorKind": "cellBottomPivotX",
+      "sourcePivot": [
+        56,
+        104
+      ],
+      "footprint": [
+        2,
+        2
+      ],
+      "fps": 0,
+      "loop": false,
+      "reducedMotionFrame": 0,
+      "frames": [
+        {
+          "sourceIndex": 0,
+          "key": "pe_cos_market_t4_idle_f1",
+          "rgbaSha256": "a95b0ddbcc0ee02190dc58a8516839bdc4b0bdde24a2bb4e8b28ca05cb9fc686"
+        }
+      ],
+      "alias": "pe_cos_market_t4_idle",
+      "overlay": {
+        "clip": "pe_cos_ready_fx",
+        "offset": [
+          24,
+          0
+        ]
+      }
+    },
+    "pe_cos_market_t4_destroyed": {
+      "sourcePath": "workshop/derived/static/t4-rubble.png",
+      "sourceSha256": "78136a68f1f2f4f045bed29b53b00f62adb4af83e88e712602dcb12a1ea439d0",
+      "cellW": 112,
+      "cellH": 112,
+      "anchorPx": [
+        56,
+        112
+      ],
+      "anchorKind": "cellBottomPivotX",
+      "sourcePivot": [
+        56,
+        104
+      ],
+      "footprint": [
+        2,
+        2
+      ],
+      "fps": 0,
+      "loop": false,
+      "reducedMotionFrame": 0,
+      "frames": [
+        {
+          "sourceIndex": 0,
+          "key": "pe_cos_market_t4_destroyed_f1",
+          "rgbaSha256": "cf961623edebd953d32ccb3ac3b41f594187ae78a0e12552e94d76002aff92f8"
+        }
+      ]
+    },
+    "pe_cos_market_t4_construction": {
+      "sourcePath": "cosmetics/animations/artisan-market-t4-construction.png",
+      "sourceSha256": "8a0d91330b0fe8f477932cc83d8e5796782debbafb805a1c6a1bc84e8f4dde2f",
+      "cellW": 112,
+      "cellH": 112,
+      "anchorPx": [
+        56,
+        112
+      ],
+      "anchorKind": "cellBottomPivotX",
+      "sourcePivot": [
+        56,
+        104
+      ],
+      "footprint": [
+        2,
+        2
+      ],
+      "fps": 8,
+      "loop": false,
+      "reducedMotionFrame": 0,
+      "frames": [
+        {
+          "sourceIndex": 0,
+          "key": "pe_cos_market_t4_construction_f1",
+          "rgbaSha256": "90b155e45745ad03f7bd477498ee49f2ab7f0f098dc0646cf9708d186df2b00e"
+        },
+        {
+          "sourceIndex": 1,
+          "key": "pe_cos_market_t4_construction_f2",
+          "rgbaSha256": "829bdf510fe4e9b9441519b532db7c771bf240136951e6bc5bc8485e6fb55090"
+        },
+        {
+          "sourceIndex": 2,
+          "key": "pe_cos_market_t4_construction_f3",
+          "rgbaSha256": "c58611ebaa741e34e647fe45e51dfab3c4778b1e1b1ef8cd48b9442bf93769ee"
+        },
+        {
+          "sourceIndex": 3,
+          "key": "pe_cos_market_t4_construction_f4",
+          "rgbaSha256": "9266cc43a4c991e658f02e72b8e8165d7b3cb75b0001dc8fc94e6fc3fe18e77e"
+        },
+        {
+          "sourceIndex": 4,
+          "key": "pe_cos_market_t4_construction_f5",
+          "rgbaSha256": "0e1407c21fde7264a73753ed4e994e400d9bcad6e14e5cb3dcf4a7d20c4258af"
+        },
+        {
+          "sourceIndex": 5,
+          "key": "pe_cos_market_t4_construction_f6",
+          "rgbaSha256": "8d66622945bf334ce79d74abc1ccb22f98cb2064f9b2de1c5c9ee14f534a1bd6"
+        },
+        {
+          "sourceIndex": 6,
+          "key": "pe_cos_market_t4_construction_f7",
+          "rgbaSha256": "a95b0ddbcc0ee02190dc58a8516839bdc4b0bdde24a2bb4e8b28ca05cb9fc686"
+        },
+        {
+          "sourceIndex": 7,
+          "key": "pe_cos_market_t4_construction_f8",
+          "rgbaSha256": "a95b0ddbcc0ee02190dc58a8516839bdc4b0bdde24a2bb4e8b28ca05cb9fc686"
+        },
+        {
+          "sourceIndex": 8,
+          "key": "pe_cos_market_t4_construction_f9",
+          "rgbaSha256": "a95b0ddbcc0ee02190dc58a8516839bdc4b0bdde24a2bb4e8b28ca05cb9fc686"
+        }
+      ]
+    },
+    "pe_cos_market_t4_collapse": {
+      "sourcePath": "cosmetics/animations/artisan-market-t4-collapse.png",
+      "sourceSha256": "32ec5346b61ba34bdad327ae1ae3f14b2fdaa8bf7d70cf35c0a8e007e67f93d9",
+      "cellW": 112,
+      "cellH": 112,
+      "anchorPx": [
+        56,
+        112
+      ],
+      "anchorKind": "cellBottomPivotX",
+      "sourcePivot": [
+        56,
+        104
+      ],
+      "footprint": [
+        2,
+        2
+      ],
+      "fps": 8,
+      "loop": false,
+      "reducedMotionFrame": 0,
+      "frames": [
+        {
+          "sourceIndex": 0,
+          "key": "pe_cos_market_t4_collapse_f1",
+          "rgbaSha256": "b68b4a796ea56d301b3124cbeaa4c3522f74cff67083d1c090f25b6150862dc2"
+        },
+        {
+          "sourceIndex": 1,
+          "key": "pe_cos_market_t4_collapse_f2",
+          "rgbaSha256": "67d69d81f484b2d693d385437b2ec22bf2bee629fd5bbf80fbb59b647c99814e"
+        },
+        {
+          "sourceIndex": 2,
+          "key": "pe_cos_market_t4_collapse_f3",
+          "rgbaSha256": "9cbd4098b7063950859d6f28fdb10e7c523e14144cb3b48754f1697388017bb2"
+        },
+        {
+          "sourceIndex": 3,
+          "key": "pe_cos_market_t4_collapse_f4",
+          "rgbaSha256": "da05c447b231b2b758ef2664afc4fe41d41968fd27c8830dd98f6748cd9ca645"
+        },
+        {
+          "sourceIndex": 4,
+          "key": "pe_cos_market_t4_collapse_f5",
+          "rgbaSha256": "75305705e41fc1ebeff1ce4dab8657a7f404830fbb52b5f31653773419223331"
+        },
+        {
+          "sourceIndex": 5,
+          "key": "pe_cos_market_t4_collapse_f6",
+          "rgbaSha256": "ddf1a36d46b21debc59158134e903f4eb1455e61ee713a08fbcd93ba67c04ece"
+        },
+        {
+          "sourceIndex": 6,
+          "key": "pe_cos_market_t4_collapse_f7",
+          "rgbaSha256": "cf961623edebd953d32ccb3ac3b41f594187ae78a0e12552e94d76002aff92f8"
+        },
+        {
+          "sourceIndex": 7,
+          "key": "pe_cos_market_t4_collapse_f8",
+          "rgbaSha256": "cf961623edebd953d32ccb3ac3b41f594187ae78a0e12552e94d76002aff92f8"
+        },
+        {
+          "sourceIndex": 8,
+          "key": "pe_cos_market_t4_collapse_f9",
+          "rgbaSha256": "cf961623edebd953d32ccb3ac3b41f594187ae78a0e12552e94d76002aff92f8"
+        }
+      ]
+    },
+    "pe_cos_wake": {
+      "sourcePath": "cosmetics/animations/aurora-wake.png",
+      "sourceSha256": "6acc6e80907c7c6e2a19d2c5580403cfeedb99cd79aabb750427b688eae74f33",
+      "cellW": 64,
+      "cellH": 64,
+      "anchorPx": [
+        32,
+        32
+      ],
+      "anchorKind": "centre",
+      "fps": 8,
+      "loop": true,
+      "reducedMotionFrame": 0,
+      "sourceFrameIndices": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "frames": [
+        {
+          "sourceIndex": 0,
+          "key": "pe_cos_wake_f1",
+          "rgbaSha256": "8dcc877dc95b65107ed5cab9e9670390aded80a88d180ab3145b8277a84dc6a3"
+        },
+        {
+          "sourceIndex": 1,
+          "key": "pe_cos_wake_f2",
+          "rgbaSha256": "5213e444be0f58e1c2606c759129bc64db833c3cdf5d10180df6e0f76bb7a4b6"
+        },
+        {
+          "sourceIndex": 2,
+          "key": "pe_cos_wake_f3",
+          "rgbaSha256": "333cd84d9a55f979d4d543a345e1e8c38703eb5158b9650d97ed729d260ac7cd"
+        },
+        {
+          "sourceIndex": 3,
+          "key": "pe_cos_wake_f4",
+          "rgbaSha256": "16f863ac6a16229210aa48be2cd517c5a0a2aef08658aa0d9a6ddda12f9ab311"
+        },
+        {
+          "sourceIndex": 4,
+          "key": "pe_cos_wake_f5",
+          "rgbaSha256": "dc307ecc998c9ac98c826b106ded5f3dcf94e595ab2b7f017a0e494008574a24"
+        },
+        {
+          "sourceIndex": 5,
+          "key": "pe_cos_wake_f6",
+          "rgbaSha256": "cd3193c5360a1e6ac8fdf19a7c2c487788077f218248b1c2109c9f91a9ef2c5a"
+        },
+        {
+          "sourceIndex": 6,
+          "key": "pe_cos_wake_f7",
+          "rgbaSha256": "e61153b017cd5e75b11b8d522f25b383f8c94816eb1ea018440d4d6c94de5616"
+        },
+        {
+          "sourceIndex": 7,
+          "key": "pe_cos_wake_f8",
+          "rgbaSha256": "029d4bbf6593c6327b04af63de0033608927d81273ca1c9bfac5e0c02cc88c55"
+        }
+      ]
+    },
+    "pe_cos_ready_fx": {
+      "sourcePath": "shared-fx/craft-success/atlas.png",
+      "sourceSha256": "593ded1c87df4e6e44bfa4a197dde464713970d04174326967c30718d9edf424",
+      "cellW": 64,
+      "cellH": 64,
+      "anchorPx": [
+        32,
+        32
+      ],
+      "anchorKind": "centre",
+      "fps": 8,
+      "loop": false,
+      "reducedMotionFrame": 0,
+      "frames": [
+        {
+          "sourceIndex": 0,
+          "key": "pe_cos_ready_fx_f1",
+          "rgbaSha256": "ffc92e6b601b2a40cf9ff1add8b280f4c16b18d6a9e67357ee59be809ce654cb"
+        },
+        {
+          "sourceIndex": 1,
+          "key": "pe_cos_ready_fx_f2",
+          "rgbaSha256": "9779f4fe5e4ca17e5d1562f188043e0dec673c918dfd9504cba1a45fb4610f6a"
+        },
+        {
+          "sourceIndex": 2,
+          "key": "pe_cos_ready_fx_f3",
+          "rgbaSha256": "8cf4dbebd83b506787ac766cb7e110bae19ac3af60e01af96115865b14ec95c7"
+        },
+        {
+          "sourceIndex": 3,
+          "key": "pe_cos_ready_fx_f4",
+          "rgbaSha256": "5b804c7579a179bc5edf87f3f72a0f700cd069b36e2e76f714c692b34d30a81a"
+        },
+        {
+          "sourceIndex": 4,
+          "key": "pe_cos_ready_fx_f5",
+          "rgbaSha256": "2d26cedb48ea3ab3a27a66bf0e547458457a41ca30459759ed07fb41803f0159"
+        },
+        {
+          "sourceIndex": 5,
+          "key": "pe_cos_ready_fx_f6",
+          "rgbaSha256": "84bf951b8cddc77bfe33c8aa3e440d24685b1d2905a516547ba05e1442dc7a85"
+        },
+        {
+          "sourceIndex": 6,
+          "key": "pe_cos_ready_fx_f7",
+          "rgbaSha256": "159c8d1e974bbe051562fcfbe1e36c6977bea1363de5b674bb7951a188df9a5f"
+        },
+        {
+          "sourceIndex": 7,
+          "key": "pe_cos_ready_fx_f8",
+          "rgbaSha256": "c1c7a8f9c15d5d5c9cbd0173b57ee4b58aed10a04318e599e5c738b1f09c90c1"
+        }
+      ]
+    }
+  },
+  "bindings": {
+    "artisan_market_awning_t1": {
+      "sha256": "eb0f98c1eeb2dd4657fc2f2144c2f387e7fc763a9c9e95c6c77598e5458acea5",
+      "value": {
+        "version": 1,
+        "outputId": "artisan_market_awning_t1",
+        "sourceId": "artisan-market-t1",
+        "sourceManifestSha256": "b4b67f78efd4d74fa416e78822af9f0e037ad6d3bc30f3fc77127cd169292394",
+        "sourceIndexSha256": "04f96c922ca04d93f1bf760e6385713908b971ce82c3aa022602f1fa199e2181",
+        "sourceScale": 1,
+        "clips": [
+          {
+            "id": "pe_cos_market_t1_idle",
+            "sourcePath": "cosmetics/static/artisan-market-t1-idle.png",
+            "sourceSha256": "be46bcdafdc1bfa186693204937877be3e892a676f386d7c5ee2217e03a77612",
+            "cellW": 112,
+            "cellH": 112,
+            "anchorPx": [
+              56,
+              112
+            ],
+            "anchorKind": "cellBottomPivotX",
+            "sourcePivot": [
+              56,
+              104
+            ],
+            "footprint": [
+              2,
+              2
+            ],
+            "fps": 0,
+            "loop": false,
+            "reducedMotionFrame": 0,
+            "frames": [
+              {
+                "sourceIndex": 0,
+                "key": "pe_cos_market_t1_idle_f1",
+                "rgbaSha256": "9e12f266dd28cefadc36acd01d3b956ee8f0137aa7141bb32e2317a113aab1ef"
+              }
+            ]
+          },
+          {
+            "id": "pe_cos_market_t1_working",
+            "sourcePath": "cosmetics/animations/artisan-market-t1-working.png",
+            "sourceSha256": "e7ef5ba7a125f1ffb71beedf6780897bd430daf465ca3eace92e9b644224ffb5",
+            "cellW": 112,
+            "cellH": 112,
+            "anchorPx": [
+              56,
+              112
+            ],
+            "anchorKind": "cellBottomPivotX",
+            "sourcePivot": [
+              56,
+              104
+            ],
+            "footprint": [
+              2,
+              2
+            ],
+            "fps": 8,
+            "loop": true,
+            "reducedMotionFrame": 0,
+            "frames": [
+              {
+                "sourceIndex": 0,
+                "key": "pe_cos_market_t1_working_f1",
+                "rgbaSha256": "9e12f266dd28cefadc36acd01d3b956ee8f0137aa7141bb32e2317a113aab1ef"
+              },
+              {
+                "sourceIndex": 1,
+                "key": "pe_cos_market_t1_working_f2",
+                "rgbaSha256": "9e12f266dd28cefadc36acd01d3b956ee8f0137aa7141bb32e2317a113aab1ef"
+              },
+              {
+                "sourceIndex": 2,
+                "key": "pe_cos_market_t1_working_f3",
+                "rgbaSha256": "397c5b59c58c0c38d57f5e609d0fbe9825daae63f790303d81d86486b3f77a81"
+              },
+              {
+                "sourceIndex": 3,
+                "key": "pe_cos_market_t1_working_f4",
+                "rgbaSha256": "397c5b59c58c0c38d57f5e609d0fbe9825daae63f790303d81d86486b3f77a81"
+              },
+              {
+                "sourceIndex": 4,
+                "key": "pe_cos_market_t1_working_f5",
+                "rgbaSha256": "9e12f266dd28cefadc36acd01d3b956ee8f0137aa7141bb32e2317a113aab1ef"
+              },
+              {
+                "sourceIndex": 5,
+                "key": "pe_cos_market_t1_working_f6",
+                "rgbaSha256": "9e12f266dd28cefadc36acd01d3b956ee8f0137aa7141bb32e2317a113aab1ef"
+              },
+              {
+                "sourceIndex": 6,
+                "key": "pe_cos_market_t1_working_f7",
+                "rgbaSha256": "f6b647249578ded9dd50d39c17c32b31e6a833a046c9692e3fc90937362f5909"
+              },
+              {
+                "sourceIndex": 7,
+                "key": "pe_cos_market_t1_working_f8",
+                "rgbaSha256": "9e12f266dd28cefadc36acd01d3b956ee8f0137aa7141bb32e2317a113aab1ef"
+              }
+            ]
+          },
+          {
+            "id": "pe_cos_market_t1_damaged",
+            "sourcePath": "cosmetics/static/artisan-market-t1-damaged.png",
+            "sourceSha256": "e56757cffd47d58141c55623773a36cb9840231e9b5901484f713622bdd6dcff",
+            "cellW": 112,
+            "cellH": 112,
+            "anchorPx": [
+              56,
+              112
+            ],
+            "anchorKind": "cellBottomPivotX",
+            "sourcePivot": [
+              56,
+              104
+            ],
+            "footprint": [
+              2,
+              2
+            ],
+            "fps": 0,
+            "loop": false,
+            "reducedMotionFrame": 0,
+            "frames": [
+              {
+                "sourceIndex": 0,
+                "key": "pe_cos_market_t1_damaged_f1",
+                "rgbaSha256": "d64fb1ef420ded6925350686bcd7838b7b3b1a9c590f6f30523c9efedfa09781"
+              }
+            ]
+          },
+          {
+            "id": "pe_cos_market_t1_ready",
+            "sourcePath": "cosmetics/static/artisan-market-t1-idle.png",
+            "sourceSha256": "be46bcdafdc1bfa186693204937877be3e892a676f386d7c5ee2217e03a77612",
+            "cellW": 112,
+            "cellH": 112,
+            "anchorPx": [
+              56,
+              112
+            ],
+            "anchorKind": "cellBottomPivotX",
+            "sourcePivot": [
+              56,
+              104
+            ],
+            "footprint": [
+              2,
+              2
+            ],
+            "fps": 0,
+            "loop": false,
+            "reducedMotionFrame": 0,
+            "frames": [
+              {
+                "sourceIndex": 0,
+                "key": "pe_cos_market_t1_idle_f1",
+                "rgbaSha256": "9e12f266dd28cefadc36acd01d3b956ee8f0137aa7141bb32e2317a113aab1ef"
+              }
+            ],
+            "alias": "pe_cos_market_t1_idle",
+            "overlay": {
+              "clip": "pe_cos_ready_fx",
+              "offset": [
+                24,
+                0
+              ]
+            }
+          },
+          {
+            "id": "pe_cos_market_t1_destroyed",
+            "sourcePath": "workshop/derived/static/t1-rubble.png",
+            "sourceSha256": "3db88e664ca741c6555fdd469a3eefdd76396070821d17e479adb70b6e2dc4e9",
+            "cellW": 112,
+            "cellH": 112,
+            "anchorPx": [
+              56,
+              112
+            ],
+            "anchorKind": "cellBottomPivotX",
+            "sourcePivot": [
+              56,
+              104
+            ],
+            "footprint": [
+              2,
+              2
+            ],
+            "fps": 0,
+            "loop": false,
+            "reducedMotionFrame": 0,
+            "frames": [
+              {
+                "sourceIndex": 0,
+                "key": "pe_cos_market_t1_destroyed_f1",
+                "rgbaSha256": "d9bd26cb8b8e4aa25689e182e7a40ad9ec0be11de8102fafdb5638adc16e351b"
+              }
+            ]
+          },
+          {
+            "id": "pe_cos_market_t1_construction",
+            "sourcePath": "cosmetics/animations/artisan-market-t1-construction.png",
+            "sourceSha256": "423b7502a6c1af3e16af8737def458ef94125c44cd75be712ee61b86a8a209a9",
+            "cellW": 112,
+            "cellH": 112,
+            "anchorPx": [
+              56,
+              112
+            ],
+            "anchorKind": "cellBottomPivotX",
+            "sourcePivot": [
+              56,
+              104
+            ],
+            "footprint": [
+              2,
+              2
+            ],
+            "fps": 8,
+            "loop": false,
+            "reducedMotionFrame": 0,
+            "frames": [
+              {
+                "sourceIndex": 0,
+                "key": "pe_cos_market_t1_construction_f1",
+                "rgbaSha256": "8b7d8a2ba77e079b79ef2fa119035a68384d600b6082f5290fbf7a467254def0"
+              },
+              {
+                "sourceIndex": 1,
+                "key": "pe_cos_market_t1_construction_f2",
+                "rgbaSha256": "ecdcde5e4e22c38eb1140df4310580e108029d17cb20901e9c7800a6d271b040"
+              },
+              {
+                "sourceIndex": 2,
+                "key": "pe_cos_market_t1_construction_f3",
+                "rgbaSha256": "ea5c6c2cf9083662f05bdbcb1d91a42857b2bb2e100c5de07bc0f502019493c0"
+              },
+              {
+                "sourceIndex": 3,
+                "key": "pe_cos_market_t1_construction_f4",
+                "rgbaSha256": "b45ddcb0f17a3f7387b51480110fce59766e5ef5d6985a29fa51463aed169e8c"
+              },
+              {
+                "sourceIndex": 4,
+                "key": "pe_cos_market_t1_construction_f5",
+                "rgbaSha256": "80f2b2c95ae07c74a64aaff866a42dc7e66a71ecf25602763e09d91add872942"
+              },
+              {
+                "sourceIndex": 5,
+                "key": "pe_cos_market_t1_construction_f6",
+                "rgbaSha256": "7ec182e91aab2e82910ba62c46d6ed3897766929e30f8dfdb4d227cbbbfec77e"
+              },
+              {
+                "sourceIndex": 6,
+                "key": "pe_cos_market_t1_construction_f7",
+                "rgbaSha256": "9e12f266dd28cefadc36acd01d3b956ee8f0137aa7141bb32e2317a113aab1ef"
+              },
+              {
+                "sourceIndex": 7,
+                "key": "pe_cos_market_t1_construction_f8",
+                "rgbaSha256": "9e12f266dd28cefadc36acd01d3b956ee8f0137aa7141bb32e2317a113aab1ef"
+              },
+              {
+                "sourceIndex": 8,
+                "key": "pe_cos_market_t1_construction_f9",
+                "rgbaSha256": "9e12f266dd28cefadc36acd01d3b956ee8f0137aa7141bb32e2317a113aab1ef"
+              }
+            ]
+          },
+          {
+            "id": "pe_cos_market_t1_collapse",
+            "sourcePath": "cosmetics/animations/artisan-market-t1-collapse.png",
+            "sourceSha256": "d3235e5b4d722c1cb48d8c6e39f4b0cf6ca9e816b9172241c22a5931a57839a6",
+            "cellW": 112,
+            "cellH": 112,
+            "anchorPx": [
+              56,
+              112
+            ],
+            "anchorKind": "cellBottomPivotX",
+            "sourcePivot": [
+              56,
+              104
+            ],
+            "footprint": [
+              2,
+              2
+            ],
+            "fps": 8,
+            "loop": false,
+            "reducedMotionFrame": 0,
+            "frames": [
+              {
+                "sourceIndex": 0,
+                "key": "pe_cos_market_t1_collapse_f1",
+                "rgbaSha256": "d64fb1ef420ded6925350686bcd7838b7b3b1a9c590f6f30523c9efedfa09781"
+              },
+              {
+                "sourceIndex": 1,
+                "key": "pe_cos_market_t1_collapse_f2",
+                "rgbaSha256": "f56c129156d9499d915607755188c3be827891c55ad66e6a74f84ae735c097f2"
+              },
+              {
+                "sourceIndex": 2,
+                "key": "pe_cos_market_t1_collapse_f3",
+                "rgbaSha256": "0c5f22036a48804f9554d2f3891d5eadd353d602aee12eed88aea23e24a927e4"
+              },
+              {
+                "sourceIndex": 3,
+                "key": "pe_cos_market_t1_collapse_f4",
+                "rgbaSha256": "d8666765064cfe3d49a7509aeaa009bcbff1a18e53d323ddd13f458f4353bc3d"
+              },
+              {
+                "sourceIndex": 4,
+                "key": "pe_cos_market_t1_collapse_f5",
+                "rgbaSha256": "6f4be56068076b357080b86518b240d0b3093fa29dded604fefe2ffa2ac4a204"
+              },
+              {
+                "sourceIndex": 5,
+                "key": "pe_cos_market_t1_collapse_f6",
+                "rgbaSha256": "8367a63fefa2cab5d81da149e37c3d9ce063087b41244ffeb28c7ff9af09cfd0"
+              },
+              {
+                "sourceIndex": 6,
+                "key": "pe_cos_market_t1_collapse_f7",
+                "rgbaSha256": "d9bd26cb8b8e4aa25689e182e7a40ad9ec0be11de8102fafdb5638adc16e351b"
+              },
+              {
+                "sourceIndex": 7,
+                "key": "pe_cos_market_t1_collapse_f8",
+                "rgbaSha256": "d9bd26cb8b8e4aa25689e182e7a40ad9ec0be11de8102fafdb5638adc16e351b"
+              },
+              {
+                "sourceIndex": 8,
+                "key": "pe_cos_market_t1_collapse_f9",
+                "rgbaSha256": "d9bd26cb8b8e4aa25689e182e7a40ad9ec0be11de8102fafdb5638adc16e351b"
+              }
+            ]
+          },
+          {
+            "id": "pe_cos_ready_fx",
+            "sourcePath": "shared-fx/craft-success/atlas.png",
+            "sourceSha256": "593ded1c87df4e6e44bfa4a197dde464713970d04174326967c30718d9edf424",
+            "cellW": 64,
+            "cellH": 64,
+            "anchorPx": [
+              32,
+              32
+            ],
+            "anchorKind": "centre",
+            "fps": 8,
+            "loop": false,
+            "reducedMotionFrame": 0,
+            "frames": [
+              {
+                "sourceIndex": 0,
+                "key": "pe_cos_ready_fx_f1",
+                "rgbaSha256": "ffc92e6b601b2a40cf9ff1add8b280f4c16b18d6a9e67357ee59be809ce654cb"
+              },
+              {
+                "sourceIndex": 1,
+                "key": "pe_cos_ready_fx_f2",
+                "rgbaSha256": "9779f4fe5e4ca17e5d1562f188043e0dec673c918dfd9504cba1a45fb4610f6a"
+              },
+              {
+                "sourceIndex": 2,
+                "key": "pe_cos_ready_fx_f3",
+                "rgbaSha256": "8cf4dbebd83b506787ac766cb7e110bae19ac3af60e01af96115865b14ec95c7"
+              },
+              {
+                "sourceIndex": 3,
+                "key": "pe_cos_ready_fx_f4",
+                "rgbaSha256": "5b804c7579a179bc5edf87f3f72a0f700cd069b36e2e76f714c692b34d30a81a"
+              },
+              {
+                "sourceIndex": 4,
+                "key": "pe_cos_ready_fx_f5",
+                "rgbaSha256": "2d26cedb48ea3ab3a27a66bf0e547458457a41ca30459759ed07fb41803f0159"
+              },
+              {
+                "sourceIndex": 5,
+                "key": "pe_cos_ready_fx_f6",
+                "rgbaSha256": "84bf951b8cddc77bfe33c8aa3e440d24685b1d2905a516547ba05e1442dc7a85"
+              },
+              {
+                "sourceIndex": 6,
+                "key": "pe_cos_ready_fx_f7",
+                "rgbaSha256": "159c8d1e974bbe051562fcfbe1e36c6977bea1363de5b674bb7951a188df9a5f"
+              },
+              {
+                "sourceIndex": 7,
+                "key": "pe_cos_ready_fx_f8",
+                "rgbaSha256": "c1c7a8f9c15d5d5c9cbd0173b57ee4b58aed10a04318e599e5c738b1f09c90c1"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "artisan_market_awning_t2": {
+      "sha256": "805ddc70f1794a2625aeaefea705e71b5d92d73127c976b7d665c71f70c131e2",
+      "value": {
+        "version": 1,
+        "outputId": "artisan_market_awning_t2",
+        "sourceId": "artisan-market-t2",
+        "sourceManifestSha256": "b4b67f78efd4d74fa416e78822af9f0e037ad6d3bc30f3fc77127cd169292394",
+        "sourceIndexSha256": "04f96c922ca04d93f1bf760e6385713908b971ce82c3aa022602f1fa199e2181",
+        "sourceScale": 1,
+        "clips": [
+          {
+            "id": "pe_cos_market_t2_idle",
+            "sourcePath": "cosmetics/static/artisan-market-t2-idle.png",
+            "sourceSha256": "c787691dbfad005d80627ea01d4f1d99d70d2ac6a5266cce2c2fc0ac5b28a4b3",
+            "cellW": 112,
+            "cellH": 112,
+            "anchorPx": [
+              56,
+              112
+            ],
+            "anchorKind": "cellBottomPivotX",
+            "sourcePivot": [
+              56,
+              104
+            ],
+            "footprint": [
+              2,
+              2
+            ],
+            "fps": 0,
+            "loop": false,
+            "reducedMotionFrame": 0,
+            "frames": [
+              {
+                "sourceIndex": 0,
+                "key": "pe_cos_market_t2_idle_f1",
+                "rgbaSha256": "f33f3898f476f288f2ce14f4c7f28adb249ad15cbe917e45db09f5c411513b59"
+              }
+            ]
+          },
+          {
+            "id": "pe_cos_market_t2_working",
+            "sourcePath": "cosmetics/animations/artisan-market-t2-working.png",
+            "sourceSha256": "100e3fd88bdd274cfd6d6676f59ccb6ab9f14dba32021d81cfd36f41283afebf",
+            "cellW": 112,
+            "cellH": 112,
+            "anchorPx": [
+              56,
+              112
+            ],
+            "anchorKind": "cellBottomPivotX",
+            "sourcePivot": [
+              56,
+              104
+            ],
+            "footprint": [
+              2,
+              2
+            ],
+            "fps": 8,
+            "loop": true,
+            "reducedMotionFrame": 0,
+            "frames": [
+              {
+                "sourceIndex": 0,
+                "key": "pe_cos_market_t2_working_f1",
+                "rgbaSha256": "f33f3898f476f288f2ce14f4c7f28adb249ad15cbe917e45db09f5c411513b59"
+              },
+              {
+                "sourceIndex": 1,
+                "key": "pe_cos_market_t2_working_f2",
+                "rgbaSha256": "f33f3898f476f288f2ce14f4c7f28adb249ad15cbe917e45db09f5c411513b59"
+              },
+              {
+                "sourceIndex": 2,
+                "key": "pe_cos_market_t2_working_f3",
+                "rgbaSha256": "f876d8014e6bf6d2eda2897ab895097aed518e772c60210d1d03866b1697fd55"
+              },
+              {
+                "sourceIndex": 3,
+                "key": "pe_cos_market_t2_working_f4",
+                "rgbaSha256": "f876d8014e6bf6d2eda2897ab895097aed518e772c60210d1d03866b1697fd55"
+              },
+              {
+                "sourceIndex": 4,
+                "key": "pe_cos_market_t2_working_f5",
+                "rgbaSha256": "f33f3898f476f288f2ce14f4c7f28adb249ad15cbe917e45db09f5c411513b59"
+              },
+              {
+                "sourceIndex": 5,
+                "key": "pe_cos_market_t2_working_f6",
+                "rgbaSha256": "f33f3898f476f288f2ce14f4c7f28adb249ad15cbe917e45db09f5c411513b59"
+              },
+              {
+                "sourceIndex": 6,
+                "key": "pe_cos_market_t2_working_f7",
+                "rgbaSha256": "14a9c5564d6bba969b4178808191015c6f9d03bac3f4bf11b61a39e75d73fb94"
+              },
+              {
+                "sourceIndex": 7,
+                "key": "pe_cos_market_t2_working_f8",
+                "rgbaSha256": "f33f3898f476f288f2ce14f4c7f28adb249ad15cbe917e45db09f5c411513b59"
+              }
+            ]
+          },
+          {
+            "id": "pe_cos_market_t2_damaged",
+            "sourcePath": "cosmetics/static/artisan-market-t2-damaged.png",
+            "sourceSha256": "0aae61a9279c54efdd71cb159f7ee317aa19f91df1b473b8257576c52faa4166",
+            "cellW": 112,
+            "cellH": 112,
+            "anchorPx": [
+              56,
+              112
+            ],
+            "anchorKind": "cellBottomPivotX",
+            "sourcePivot": [
+              56,
+              104
+            ],
+            "footprint": [
+              2,
+              2
+            ],
+            "fps": 0,
+            "loop": false,
+            "reducedMotionFrame": 0,
+            "frames": [
+              {
+                "sourceIndex": 0,
+                "key": "pe_cos_market_t2_damaged_f1",
+                "rgbaSha256": "711fc0601e3614a6a15732608281dba7f5cc8d844b8bbfd42b01608955edc979"
+              }
+            ]
+          },
+          {
+            "id": "pe_cos_market_t2_ready",
+            "sourcePath": "cosmetics/static/artisan-market-t2-idle.png",
+            "sourceSha256": "c787691dbfad005d80627ea01d4f1d99d70d2ac6a5266cce2c2fc0ac5b28a4b3",
+            "cellW": 112,
+            "cellH": 112,
+            "anchorPx": [
+              56,
+              112
+            ],
+            "anchorKind": "cellBottomPivotX",
+            "sourcePivot": [
+              56,
+              104
+            ],
+            "footprint": [
+              2,
+              2
+            ],
+            "fps": 0,
+            "loop": false,
+            "reducedMotionFrame": 0,
+            "frames": [
+              {
+                "sourceIndex": 0,
+                "key": "pe_cos_market_t2_idle_f1",
+                "rgbaSha256": "f33f3898f476f288f2ce14f4c7f28adb249ad15cbe917e45db09f5c411513b59"
+              }
+            ],
+            "alias": "pe_cos_market_t2_idle",
+            "overlay": {
+              "clip": "pe_cos_ready_fx",
+              "offset": [
+                24,
+                0
+              ]
+            }
+          },
+          {
+            "id": "pe_cos_market_t2_destroyed",
+            "sourcePath": "workshop/derived/static/t2-rubble.png",
+            "sourceSha256": "964fd0bcd258eadf75a183747651019ece004ce93a79db0a05c353e38b9d1c82",
+            "cellW": 112,
+            "cellH": 112,
+            "anchorPx": [
+              56,
+              112
+            ],
+            "anchorKind": "cellBottomPivotX",
+            "sourcePivot": [
+              56,
+              104
+            ],
+            "footprint": [
+              2,
+              2
+            ],
+            "fps": 0,
+            "loop": false,
+            "reducedMotionFrame": 0,
+            "frames": [
+              {
+                "sourceIndex": 0,
+                "key": "pe_cos_market_t2_destroyed_f1",
+                "rgbaSha256": "0162e24630d8c04df9b50eff6838706f2157a424c18d10c2d33a76573a596cee"
+              }
+            ]
+          },
+          {
+            "id": "pe_cos_market_t2_construction",
+            "sourcePath": "cosmetics/animations/artisan-market-t2-construction.png",
+            "sourceSha256": "390a8064039e5a47e36139cfab46ed6961afbda56f795d30c766db78dada46a6",
+            "cellW": 112,
+            "cellH": 112,
+            "anchorPx": [
+              56,
+              112
+            ],
+            "anchorKind": "cellBottomPivotX",
+            "sourcePivot": [
+              56,
+              104
+            ],
+            "footprint": [
+              2,
+              2
+            ],
+            "fps": 8,
+            "loop": false,
+            "reducedMotionFrame": 0,
+            "frames": [
+              {
+                "sourceIndex": 0,
+                "key": "pe_cos_market_t2_construction_f1",
+                "rgbaSha256": "330d26526b8b6d3d16527eb51b4d25084adc990a3dcf126526a1db74f757284c"
+              },
+              {
+                "sourceIndex": 1,
+                "key": "pe_cos_market_t2_construction_f2",
+                "rgbaSha256": "2899b0a9ea12a82bb22eeedbfb04fffd7d9bdc2f09aa70176e65c4a77d9755bf"
+              },
+              {
+                "sourceIndex": 2,
+                "key": "pe_cos_market_t2_construction_f3",
+                "rgbaSha256": "bcc8a2f1c11e7101e32d89d303c0f24c384b576edbd0c7fb9a361c5d65f6b565"
+              },
+              {
+                "sourceIndex": 3,
+                "key": "pe_cos_market_t2_construction_f4",
+                "rgbaSha256": "f9019184c096978fa55b8e6beea915164b843c8ac755244e80a71ded6168c7ce"
+              },
+              {
+                "sourceIndex": 4,
+                "key": "pe_cos_market_t2_construction_f5",
+                "rgbaSha256": "f7bfa21ae7b7037061c378b4d8e5d9ddd66d08e247211102be9775626c384f0c"
+              },
+              {
+                "sourceIndex": 5,
+                "key": "pe_cos_market_t2_construction_f6",
+                "rgbaSha256": "2e84a8ca2baa801d9b11e9f02ea28bcdafe625748b8cf3e17bd1d6305d38f1be"
+              },
+              {
+                "sourceIndex": 6,
+                "key": "pe_cos_market_t2_construction_f7",
+                "rgbaSha256": "f33f3898f476f288f2ce14f4c7f28adb249ad15cbe917e45db09f5c411513b59"
+              },
+              {
+                "sourceIndex": 7,
+                "key": "pe_cos_market_t2_construction_f8",
+                "rgbaSha256": "f33f3898f476f288f2ce14f4c7f28adb249ad15cbe917e45db09f5c411513b59"
+              },
+              {
+                "sourceIndex": 8,
+                "key": "pe_cos_market_t2_construction_f9",
+                "rgbaSha256": "f33f3898f476f288f2ce14f4c7f28adb249ad15cbe917e45db09f5c411513b59"
+              }
+            ]
+          },
+          {
+            "id": "pe_cos_market_t2_collapse",
+            "sourcePath": "cosmetics/animations/artisan-market-t2-collapse.png",
+            "sourceSha256": "01be02e5dce2e3e3c7539f928451ccbf7d682d088157b730ad325aa4c61254e4",
+            "cellW": 112,
+            "cellH": 112,
+            "anchorPx": [
+              56,
+              112
+            ],
+            "anchorKind": "cellBottomPivotX",
+            "sourcePivot": [
+              56,
+              104
+            ],
+            "footprint": [
+              2,
+              2
+            ],
+            "fps": 8,
+            "loop": false,
+            "reducedMotionFrame": 0,
+            "frames": [
+              {
+                "sourceIndex": 0,
+                "key": "pe_cos_market_t2_collapse_f1",
+                "rgbaSha256": "711fc0601e3614a6a15732608281dba7f5cc8d844b8bbfd42b01608955edc979"
+              },
+              {
+                "sourceIndex": 1,
+                "key": "pe_cos_market_t2_collapse_f2",
+                "rgbaSha256": "c54114830ba06ea0d7db8dc0d175cf35da892c47cce0b0988d4d828423d9b48f"
+              },
+              {
+                "sourceIndex": 2,
+                "key": "pe_cos_market_t2_collapse_f3",
+                "rgbaSha256": "717101df2374f0be29ee20d47d491665bfcf310d6759d4d5222bcfc63d8b2023"
+              },
+              {
+                "sourceIndex": 3,
+                "key": "pe_cos_market_t2_collapse_f4",
+                "rgbaSha256": "8a6293c371a29b226c2421bcff69e18246403e32c15aba0a679eb5d527462a1b"
+              },
+              {
+                "sourceIndex": 4,
+                "key": "pe_cos_market_t2_collapse_f5",
+                "rgbaSha256": "a7ccf61a98938ccf24b8fe1b5bd0e58215fed5fede5cb020f9239201b023cdbd"
+              },
+              {
+                "sourceIndex": 5,
+                "key": "pe_cos_market_t2_collapse_f6",
+                "rgbaSha256": "9d168913d3401aa2c09bcb145fb34313e278f0a4d5bba5c22ebea6be3b8132c4"
+              },
+              {
+                "sourceIndex": 6,
+                "key": "pe_cos_market_t2_collapse_f7",
+                "rgbaSha256": "0162e24630d8c04df9b50eff6838706f2157a424c18d10c2d33a76573a596cee"
+              },
+              {
+                "sourceIndex": 7,
+                "key": "pe_cos_market_t2_collapse_f8",
+                "rgbaSha256": "0162e24630d8c04df9b50eff6838706f2157a424c18d10c2d33a76573a596cee"
+              },
+              {
+                "sourceIndex": 8,
+                "key": "pe_cos_market_t2_collapse_f9",
+                "rgbaSha256": "0162e24630d8c04df9b50eff6838706f2157a424c18d10c2d33a76573a596cee"
+              }
+            ]
+          },
+          {
+            "id": "pe_cos_ready_fx",
+            "sourcePath": "shared-fx/craft-success/atlas.png",
+            "sourceSha256": "593ded1c87df4e6e44bfa4a197dde464713970d04174326967c30718d9edf424",
+            "cellW": 64,
+            "cellH": 64,
+            "anchorPx": [
+              32,
+              32
+            ],
+            "anchorKind": "centre",
+            "fps": 8,
+            "loop": false,
+            "reducedMotionFrame": 0,
+            "frames": [
+              {
+                "sourceIndex": 0,
+                "key": "pe_cos_ready_fx_f1",
+                "rgbaSha256": "ffc92e6b601b2a40cf9ff1add8b280f4c16b18d6a9e67357ee59be809ce654cb"
+              },
+              {
+                "sourceIndex": 1,
+                "key": "pe_cos_ready_fx_f2",
+                "rgbaSha256": "9779f4fe5e4ca17e5d1562f188043e0dec673c918dfd9504cba1a45fb4610f6a"
+              },
+              {
+                "sourceIndex": 2,
+                "key": "pe_cos_ready_fx_f3",
+                "rgbaSha256": "8cf4dbebd83b506787ac766cb7e110bae19ac3af60e01af96115865b14ec95c7"
+              },
+              {
+                "sourceIndex": 3,
+                "key": "pe_cos_ready_fx_f4",
+                "rgbaSha256": "5b804c7579a179bc5edf87f3f72a0f700cd069b36e2e76f714c692b34d30a81a"
+              },
+              {
+                "sourceIndex": 4,
+                "key": "pe_cos_ready_fx_f5",
+                "rgbaSha256": "2d26cedb48ea3ab3a27a66bf0e547458457a41ca30459759ed07fb41803f0159"
+              },
+              {
+                "sourceIndex": 5,
+                "key": "pe_cos_ready_fx_f6",
+                "rgbaSha256": "84bf951b8cddc77bfe33c8aa3e440d24685b1d2905a516547ba05e1442dc7a85"
+              },
+              {
+                "sourceIndex": 6,
+                "key": "pe_cos_ready_fx_f7",
+                "rgbaSha256": "159c8d1e974bbe051562fcfbe1e36c6977bea1363de5b674bb7951a188df9a5f"
+              },
+              {
+                "sourceIndex": 7,
+                "key": "pe_cos_ready_fx_f8",
+                "rgbaSha256": "c1c7a8f9c15d5d5c9cbd0173b57ee4b58aed10a04318e599e5c738b1f09c90c1"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "artisan_market_awning_t3": {
+      "sha256": "0e2d687e929e2505170f039a5902229a1be22e6c7a8adaff1c90bfa0bf4bde88",
+      "value": {
+        "version": 1,
+        "outputId": "artisan_market_awning_t3",
+        "sourceId": "artisan-market-t3",
+        "sourceManifestSha256": "b4b67f78efd4d74fa416e78822af9f0e037ad6d3bc30f3fc77127cd169292394",
+        "sourceIndexSha256": "04f96c922ca04d93f1bf760e6385713908b971ce82c3aa022602f1fa199e2181",
+        "sourceScale": 1,
+        "clips": [
+          {
+            "id": "pe_cos_market_t3_idle",
+            "sourcePath": "cosmetics/static/artisan-market-t3-idle.png",
+            "sourceSha256": "08529d33d2c898e631407c897c03a481f795fa0c8be523876ca8eb14f80b513d",
+            "cellW": 112,
+            "cellH": 112,
+            "anchorPx": [
+              56,
+              112
+            ],
+            "anchorKind": "cellBottomPivotX",
+            "sourcePivot": [
+              56,
+              104
+            ],
+            "footprint": [
+              2,
+              2
+            ],
+            "fps": 0,
+            "loop": false,
+            "reducedMotionFrame": 0,
+            "frames": [
+              {
+                "sourceIndex": 0,
+                "key": "pe_cos_market_t3_idle_f1",
+                "rgbaSha256": "79df016aafc9f02d9542e648f876d67b2722e4fad1eb8be16d68281941cd1702"
+              }
+            ]
+          },
+          {
+            "id": "pe_cos_market_t3_working",
+            "sourcePath": "cosmetics/animations/artisan-market-t3-working.png",
+            "sourceSha256": "0e4d4f904c12208cc5ee936367603ebd0ffde32b038e3a73d24c2cc56952ca4c",
+            "cellW": 112,
+            "cellH": 112,
+            "anchorPx": [
+              56,
+              112
+            ],
+            "anchorKind": "cellBottomPivotX",
+            "sourcePivot": [
+              56,
+              104
+            ],
+            "footprint": [
+              2,
+              2
+            ],
+            "fps": 8,
+            "loop": true,
+            "reducedMotionFrame": 0,
+            "frames": [
+              {
+                "sourceIndex": 0,
+                "key": "pe_cos_market_t3_working_f1",
+                "rgbaSha256": "79df016aafc9f02d9542e648f876d67b2722e4fad1eb8be16d68281941cd1702"
+              },
+              {
+                "sourceIndex": 1,
+                "key": "pe_cos_market_t3_working_f2",
+                "rgbaSha256": "79df016aafc9f02d9542e648f876d67b2722e4fad1eb8be16d68281941cd1702"
+              },
+              {
+                "sourceIndex": 2,
+                "key": "pe_cos_market_t3_working_f3",
+                "rgbaSha256": "312672ca527346e82e33ee25638cdacfd99a2814203866a00edb7fe1f787d3c7"
+              },
+              {
+                "sourceIndex": 3,
+                "key": "pe_cos_market_t3_working_f4",
+                "rgbaSha256": "312672ca527346e82e33ee25638cdacfd99a2814203866a00edb7fe1f787d3c7"
+              },
+              {
+                "sourceIndex": 4,
+                "key": "pe_cos_market_t3_working_f5",
+                "rgbaSha256": "79df016aafc9f02d9542e648f876d67b2722e4fad1eb8be16d68281941cd1702"
+              },
+              {
+                "sourceIndex": 5,
+                "key": "pe_cos_market_t3_working_f6",
+                "rgbaSha256": "79df016aafc9f02d9542e648f876d67b2722e4fad1eb8be16d68281941cd1702"
+              },
+              {
+                "sourceIndex": 6,
+                "key": "pe_cos_market_t3_working_f7",
+                "rgbaSha256": "32061a4ffb008e0402bdcd4a4001e2fc3d761e5700b4691cfe45e8ac7412f94c"
+              },
+              {
+                "sourceIndex": 7,
+                "key": "pe_cos_market_t3_working_f8",
+                "rgbaSha256": "79df016aafc9f02d9542e648f876d67b2722e4fad1eb8be16d68281941cd1702"
+              }
+            ]
+          },
+          {
+            "id": "pe_cos_market_t3_damaged",
+            "sourcePath": "cosmetics/static/artisan-market-t3-damaged.png",
+            "sourceSha256": "02565fc0ab81b7f5406bac006163eceec62ead07f5fa945307e0c47d7470bb4b",
+            "cellW": 112,
+            "cellH": 112,
+            "anchorPx": [
+              56,
+              112
+            ],
+            "anchorKind": "cellBottomPivotX",
+            "sourcePivot": [
+              56,
+              104
+            ],
+            "footprint": [
+              2,
+              2
+            ],
+            "fps": 0,
+            "loop": false,
+            "reducedMotionFrame": 0,
+            "frames": [
+              {
+                "sourceIndex": 0,
+                "key": "pe_cos_market_t3_damaged_f1",
+                "rgbaSha256": "e9b8fa1d5c29a2962fcc662d54f5d53b3f95784741488251c6b92087510c8576"
+              }
+            ]
+          },
+          {
+            "id": "pe_cos_market_t3_ready",
+            "sourcePath": "cosmetics/static/artisan-market-t3-idle.png",
+            "sourceSha256": "08529d33d2c898e631407c897c03a481f795fa0c8be523876ca8eb14f80b513d",
+            "cellW": 112,
+            "cellH": 112,
+            "anchorPx": [
+              56,
+              112
+            ],
+            "anchorKind": "cellBottomPivotX",
+            "sourcePivot": [
+              56,
+              104
+            ],
+            "footprint": [
+              2,
+              2
+            ],
+            "fps": 0,
+            "loop": false,
+            "reducedMotionFrame": 0,
+            "frames": [
+              {
+                "sourceIndex": 0,
+                "key": "pe_cos_market_t3_idle_f1",
+                "rgbaSha256": "79df016aafc9f02d9542e648f876d67b2722e4fad1eb8be16d68281941cd1702"
+              }
+            ],
+            "alias": "pe_cos_market_t3_idle",
+            "overlay": {
+              "clip": "pe_cos_ready_fx",
+              "offset": [
+                24,
+                0
+              ]
+            }
+          },
+          {
+            "id": "pe_cos_market_t3_destroyed",
+            "sourcePath": "workshop/derived/static/t3-rubble.png",
+            "sourceSha256": "5eb600d816e71f47d2e29f354e5647987c65aa96db784e9fea3637cefb26e610",
+            "cellW": 112,
+            "cellH": 112,
+            "anchorPx": [
+              56,
+              112
+            ],
+            "anchorKind": "cellBottomPivotX",
+            "sourcePivot": [
+              56,
+              104
+            ],
+            "footprint": [
+              2,
+              2
+            ],
+            "fps": 0,
+            "loop": false,
+            "reducedMotionFrame": 0,
+            "frames": [
+              {
+                "sourceIndex": 0,
+                "key": "pe_cos_market_t3_destroyed_f1",
+                "rgbaSha256": "86ba562c0cd3428338d648be7040f1d7754dc99c1af6d279140ef8d7e6fb5bc5"
+              }
+            ]
+          },
+          {
+            "id": "pe_cos_market_t3_construction",
+            "sourcePath": "cosmetics/animations/artisan-market-t3-construction.png",
+            "sourceSha256": "9fb3c74bd9fc599930bc8dba68844b7153a90b46262a6acb744c5fbb35a0f8a0",
+            "cellW": 112,
+            "cellH": 112,
+            "anchorPx": [
+              56,
+              112
+            ],
+            "anchorKind": "cellBottomPivotX",
+            "sourcePivot": [
+              56,
+              104
+            ],
+            "footprint": [
+              2,
+              2
+            ],
+            "fps": 8,
+            "loop": false,
+            "reducedMotionFrame": 0,
+            "frames": [
+              {
+                "sourceIndex": 0,
+                "key": "pe_cos_market_t3_construction_f1",
+                "rgbaSha256": "962bb103b268087f53b18d8f25aaabfcba1ed99889cb5db1dbb049aff51238c8"
+              },
+              {
+                "sourceIndex": 1,
+                "key": "pe_cos_market_t3_construction_f2",
+                "rgbaSha256": "5b9a7418017b7acdccfcc5ca0a91ff7ba311220e96f5dd86b341617b4c823231"
+              },
+              {
+                "sourceIndex": 2,
+                "key": "pe_cos_market_t3_construction_f3",
+                "rgbaSha256": "84290483bcce8fa05034a8b2e9a249e88d70e7ee0b82d7347215a110fa5cf973"
+              },
+              {
+                "sourceIndex": 3,
+                "key": "pe_cos_market_t3_construction_f4",
+                "rgbaSha256": "ec3fdad11d4dcc0bad1f72078ec6c254627f28776dc46d0dd5d5fddb2748c1e0"
+              },
+              {
+                "sourceIndex": 4,
+                "key": "pe_cos_market_t3_construction_f5",
+                "rgbaSha256": "43062512465554a40e21a32a55ce221ed42b7788dafb54a967c58ae52f6e61b4"
+              },
+              {
+                "sourceIndex": 5,
+                "key": "pe_cos_market_t3_construction_f6",
+                "rgbaSha256": "13dd132108d4319b6d1de4a26bab9e79ef889c01976e2d504721245f9cb7d8c8"
+              },
+              {
+                "sourceIndex": 6,
+                "key": "pe_cos_market_t3_construction_f7",
+                "rgbaSha256": "79df016aafc9f02d9542e648f876d67b2722e4fad1eb8be16d68281941cd1702"
+              },
+              {
+                "sourceIndex": 7,
+                "key": "pe_cos_market_t3_construction_f8",
+                "rgbaSha256": "79df016aafc9f02d9542e648f876d67b2722e4fad1eb8be16d68281941cd1702"
+              },
+              {
+                "sourceIndex": 8,
+                "key": "pe_cos_market_t3_construction_f9",
+                "rgbaSha256": "79df016aafc9f02d9542e648f876d67b2722e4fad1eb8be16d68281941cd1702"
+              }
+            ]
+          },
+          {
+            "id": "pe_cos_market_t3_collapse",
+            "sourcePath": "cosmetics/animations/artisan-market-t3-collapse.png",
+            "sourceSha256": "e15f280143a47cf86050670f7814409c0ccaa9c45e331ea578259205e9451957",
+            "cellW": 112,
+            "cellH": 112,
+            "anchorPx": [
+              56,
+              112
+            ],
+            "anchorKind": "cellBottomPivotX",
+            "sourcePivot": [
+              56,
+              104
+            ],
+            "footprint": [
+              2,
+              2
+            ],
+            "fps": 8,
+            "loop": false,
+            "reducedMotionFrame": 0,
+            "frames": [
+              {
+                "sourceIndex": 0,
+                "key": "pe_cos_market_t3_collapse_f1",
+                "rgbaSha256": "e9b8fa1d5c29a2962fcc662d54f5d53b3f95784741488251c6b92087510c8576"
+              },
+              {
+                "sourceIndex": 1,
+                "key": "pe_cos_market_t3_collapse_f2",
+                "rgbaSha256": "1cea51f3f3c652c2dc45fe9e654c7b1606c02efe721c1374db649135813ec87c"
+              },
+              {
+                "sourceIndex": 2,
+                "key": "pe_cos_market_t3_collapse_f3",
+                "rgbaSha256": "c1f45dad9851eff1f78fbfb7326aa0f23293b96018242639f5511cb94ecf2f60"
+              },
+              {
+                "sourceIndex": 3,
+                "key": "pe_cos_market_t3_collapse_f4",
+                "rgbaSha256": "d305a192cf37243172f95c08660d6f41eca0a9b8932a7f218af13b97045bd838"
+              },
+              {
+                "sourceIndex": 4,
+                "key": "pe_cos_market_t3_collapse_f5",
+                "rgbaSha256": "d40d44df34ed7a510c0baee83dbb6c846e9161095641d41053d6106731f918e0"
+              },
+              {
+                "sourceIndex": 5,
+                "key": "pe_cos_market_t3_collapse_f6",
+                "rgbaSha256": "20828eb96853b1447d4c475ecb14208b18a53d9b713990b31d3adbdcb5fe83b4"
+              },
+              {
+                "sourceIndex": 6,
+                "key": "pe_cos_market_t3_collapse_f7",
+                "rgbaSha256": "86ba562c0cd3428338d648be7040f1d7754dc99c1af6d279140ef8d7e6fb5bc5"
+              },
+              {
+                "sourceIndex": 7,
+                "key": "pe_cos_market_t3_collapse_f8",
+                "rgbaSha256": "86ba562c0cd3428338d648be7040f1d7754dc99c1af6d279140ef8d7e6fb5bc5"
+              },
+              {
+                "sourceIndex": 8,
+                "key": "pe_cos_market_t3_collapse_f9",
+                "rgbaSha256": "86ba562c0cd3428338d648be7040f1d7754dc99c1af6d279140ef8d7e6fb5bc5"
+              }
+            ]
+          },
+          {
+            "id": "pe_cos_ready_fx",
+            "sourcePath": "shared-fx/craft-success/atlas.png",
+            "sourceSha256": "593ded1c87df4e6e44bfa4a197dde464713970d04174326967c30718d9edf424",
+            "cellW": 64,
+            "cellH": 64,
+            "anchorPx": [
+              32,
+              32
+            ],
+            "anchorKind": "centre",
+            "fps": 8,
+            "loop": false,
+            "reducedMotionFrame": 0,
+            "frames": [
+              {
+                "sourceIndex": 0,
+                "key": "pe_cos_ready_fx_f1",
+                "rgbaSha256": "ffc92e6b601b2a40cf9ff1add8b280f4c16b18d6a9e67357ee59be809ce654cb"
+              },
+              {
+                "sourceIndex": 1,
+                "key": "pe_cos_ready_fx_f2",
+                "rgbaSha256": "9779f4fe5e4ca17e5d1562f188043e0dec673c918dfd9504cba1a45fb4610f6a"
+              },
+              {
+                "sourceIndex": 2,
+                "key": "pe_cos_ready_fx_f3",
+                "rgbaSha256": "8cf4dbebd83b506787ac766cb7e110bae19ac3af60e01af96115865b14ec95c7"
+              },
+              {
+                "sourceIndex": 3,
+                "key": "pe_cos_ready_fx_f4",
+                "rgbaSha256": "5b804c7579a179bc5edf87f3f72a0f700cd069b36e2e76f714c692b34d30a81a"
+              },
+              {
+                "sourceIndex": 4,
+                "key": "pe_cos_ready_fx_f5",
+                "rgbaSha256": "2d26cedb48ea3ab3a27a66bf0e547458457a41ca30459759ed07fb41803f0159"
+              },
+              {
+                "sourceIndex": 5,
+                "key": "pe_cos_ready_fx_f6",
+                "rgbaSha256": "84bf951b8cddc77bfe33c8aa3e440d24685b1d2905a516547ba05e1442dc7a85"
+              },
+              {
+                "sourceIndex": 6,
+                "key": "pe_cos_ready_fx_f7",
+                "rgbaSha256": "159c8d1e974bbe051562fcfbe1e36c6977bea1363de5b674bb7951a188df9a5f"
+              },
+              {
+                "sourceIndex": 7,
+                "key": "pe_cos_ready_fx_f8",
+                "rgbaSha256": "c1c7a8f9c15d5d5c9cbd0173b57ee4b58aed10a04318e599e5c738b1f09c90c1"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "artisan_market_awning_t4": {
+      "sha256": "38a533ed017a858e5862d1c6e27e52f2e80787ccc52518bc5c51c46dc968537a",
+      "value": {
+        "version": 1,
+        "outputId": "artisan_market_awning_t4",
+        "sourceId": "artisan-market-t4",
+        "sourceManifestSha256": "b4b67f78efd4d74fa416e78822af9f0e037ad6d3bc30f3fc77127cd169292394",
+        "sourceIndexSha256": "04f96c922ca04d93f1bf760e6385713908b971ce82c3aa022602f1fa199e2181",
+        "sourceScale": 1,
+        "clips": [
+          {
+            "id": "pe_cos_market_t4_idle",
+            "sourcePath": "cosmetics/static/artisan-market-t4-idle.png",
+            "sourceSha256": "73425d7c9c011ecb44aa2eb3773d1e02ecc1bab15ea210160928ff8df0c5e7d0",
+            "cellW": 112,
+            "cellH": 112,
+            "anchorPx": [
+              56,
+              112
+            ],
+            "anchorKind": "cellBottomPivotX",
+            "sourcePivot": [
+              56,
+              104
+            ],
+            "footprint": [
+              2,
+              2
+            ],
+            "fps": 0,
+            "loop": false,
+            "reducedMotionFrame": 0,
+            "frames": [
+              {
+                "sourceIndex": 0,
+                "key": "pe_cos_market_t4_idle_f1",
+                "rgbaSha256": "a95b0ddbcc0ee02190dc58a8516839bdc4b0bdde24a2bb4e8b28ca05cb9fc686"
+              }
+            ]
+          },
+          {
+            "id": "pe_cos_market_t4_working",
+            "sourcePath": "cosmetics/animations/artisan-market-t4-working.png",
+            "sourceSha256": "afd5b960c388947045840f69a9aaa2bce30e04a35023f17cdfa96ab2080470ed",
+            "cellW": 112,
+            "cellH": 112,
+            "anchorPx": [
+              56,
+              112
+            ],
+            "anchorKind": "cellBottomPivotX",
+            "sourcePivot": [
+              56,
+              104
+            ],
+            "footprint": [
+              2,
+              2
+            ],
+            "fps": 8,
+            "loop": true,
+            "reducedMotionFrame": 0,
+            "frames": [
+              {
+                "sourceIndex": 0,
+                "key": "pe_cos_market_t4_working_f1",
+                "rgbaSha256": "a95b0ddbcc0ee02190dc58a8516839bdc4b0bdde24a2bb4e8b28ca05cb9fc686"
+              },
+              {
+                "sourceIndex": 1,
+                "key": "pe_cos_market_t4_working_f2",
+                "rgbaSha256": "a95b0ddbcc0ee02190dc58a8516839bdc4b0bdde24a2bb4e8b28ca05cb9fc686"
+              },
+              {
+                "sourceIndex": 2,
+                "key": "pe_cos_market_t4_working_f3",
+                "rgbaSha256": "3fdaaddbdc87fe74304928e2a3574b34e572121383e1f4b666b4ad444fa58230"
+              },
+              {
+                "sourceIndex": 3,
+                "key": "pe_cos_market_t4_working_f4",
+                "rgbaSha256": "3fdaaddbdc87fe74304928e2a3574b34e572121383e1f4b666b4ad444fa58230"
+              },
+              {
+                "sourceIndex": 4,
+                "key": "pe_cos_market_t4_working_f5",
+                "rgbaSha256": "a95b0ddbcc0ee02190dc58a8516839bdc4b0bdde24a2bb4e8b28ca05cb9fc686"
+              },
+              {
+                "sourceIndex": 5,
+                "key": "pe_cos_market_t4_working_f6",
+                "rgbaSha256": "a95b0ddbcc0ee02190dc58a8516839bdc4b0bdde24a2bb4e8b28ca05cb9fc686"
+              },
+              {
+                "sourceIndex": 6,
+                "key": "pe_cos_market_t4_working_f7",
+                "rgbaSha256": "b78f17ade1fa667b38426d2369002fde4c58fd7133385126f71b353bb0734311"
+              },
+              {
+                "sourceIndex": 7,
+                "key": "pe_cos_market_t4_working_f8",
+                "rgbaSha256": "a95b0ddbcc0ee02190dc58a8516839bdc4b0bdde24a2bb4e8b28ca05cb9fc686"
+              }
+            ]
+          },
+          {
+            "id": "pe_cos_market_t4_damaged",
+            "sourcePath": "cosmetics/static/artisan-market-t4-damaged.png",
+            "sourceSha256": "1e34c5d51ac05cad170d7172e839f86b1fe99ad11c8c842d8d65c7335ad1b430",
+            "cellW": 112,
+            "cellH": 112,
+            "anchorPx": [
+              56,
+              112
+            ],
+            "anchorKind": "cellBottomPivotX",
+            "sourcePivot": [
+              56,
+              104
+            ],
+            "footprint": [
+              2,
+              2
+            ],
+            "fps": 0,
+            "loop": false,
+            "reducedMotionFrame": 0,
+            "frames": [
+              {
+                "sourceIndex": 0,
+                "key": "pe_cos_market_t4_damaged_f1",
+                "rgbaSha256": "b68b4a796ea56d301b3124cbeaa4c3522f74cff67083d1c090f25b6150862dc2"
+              }
+            ]
+          },
+          {
+            "id": "pe_cos_market_t4_ready",
+            "sourcePath": "cosmetics/static/artisan-market-t4-idle.png",
+            "sourceSha256": "73425d7c9c011ecb44aa2eb3773d1e02ecc1bab15ea210160928ff8df0c5e7d0",
+            "cellW": 112,
+            "cellH": 112,
+            "anchorPx": [
+              56,
+              112
+            ],
+            "anchorKind": "cellBottomPivotX",
+            "sourcePivot": [
+              56,
+              104
+            ],
+            "footprint": [
+              2,
+              2
+            ],
+            "fps": 0,
+            "loop": false,
+            "reducedMotionFrame": 0,
+            "frames": [
+              {
+                "sourceIndex": 0,
+                "key": "pe_cos_market_t4_idle_f1",
+                "rgbaSha256": "a95b0ddbcc0ee02190dc58a8516839bdc4b0bdde24a2bb4e8b28ca05cb9fc686"
+              }
+            ],
+            "alias": "pe_cos_market_t4_idle",
+            "overlay": {
+              "clip": "pe_cos_ready_fx",
+              "offset": [
+                24,
+                0
+              ]
+            }
+          },
+          {
+            "id": "pe_cos_market_t4_destroyed",
+            "sourcePath": "workshop/derived/static/t4-rubble.png",
+            "sourceSha256": "78136a68f1f2f4f045bed29b53b00f62adb4af83e88e712602dcb12a1ea439d0",
+            "cellW": 112,
+            "cellH": 112,
+            "anchorPx": [
+              56,
+              112
+            ],
+            "anchorKind": "cellBottomPivotX",
+            "sourcePivot": [
+              56,
+              104
+            ],
+            "footprint": [
+              2,
+              2
+            ],
+            "fps": 0,
+            "loop": false,
+            "reducedMotionFrame": 0,
+            "frames": [
+              {
+                "sourceIndex": 0,
+                "key": "pe_cos_market_t4_destroyed_f1",
+                "rgbaSha256": "cf961623edebd953d32ccb3ac3b41f594187ae78a0e12552e94d76002aff92f8"
+              }
+            ]
+          },
+          {
+            "id": "pe_cos_market_t4_construction",
+            "sourcePath": "cosmetics/animations/artisan-market-t4-construction.png",
+            "sourceSha256": "8a0d91330b0fe8f477932cc83d8e5796782debbafb805a1c6a1bc84e8f4dde2f",
+            "cellW": 112,
+            "cellH": 112,
+            "anchorPx": [
+              56,
+              112
+            ],
+            "anchorKind": "cellBottomPivotX",
+            "sourcePivot": [
+              56,
+              104
+            ],
+            "footprint": [
+              2,
+              2
+            ],
+            "fps": 8,
+            "loop": false,
+            "reducedMotionFrame": 0,
+            "frames": [
+              {
+                "sourceIndex": 0,
+                "key": "pe_cos_market_t4_construction_f1",
+                "rgbaSha256": "90b155e45745ad03f7bd477498ee49f2ab7f0f098dc0646cf9708d186df2b00e"
+              },
+              {
+                "sourceIndex": 1,
+                "key": "pe_cos_market_t4_construction_f2",
+                "rgbaSha256": "829bdf510fe4e9b9441519b532db7c771bf240136951e6bc5bc8485e6fb55090"
+              },
+              {
+                "sourceIndex": 2,
+                "key": "pe_cos_market_t4_construction_f3",
+                "rgbaSha256": "c58611ebaa741e34e647fe45e51dfab3c4778b1e1b1ef8cd48b9442bf93769ee"
+              },
+              {
+                "sourceIndex": 3,
+                "key": "pe_cos_market_t4_construction_f4",
+                "rgbaSha256": "9266cc43a4c991e658f02e72b8e8165d7b3cb75b0001dc8fc94e6fc3fe18e77e"
+              },
+              {
+                "sourceIndex": 4,
+                "key": "pe_cos_market_t4_construction_f5",
+                "rgbaSha256": "0e1407c21fde7264a73753ed4e994e400d9bcad6e14e5cb3dcf4a7d20c4258af"
+              },
+              {
+                "sourceIndex": 5,
+                "key": "pe_cos_market_t4_construction_f6",
+                "rgbaSha256": "8d66622945bf334ce79d74abc1ccb22f98cb2064f9b2de1c5c9ee14f534a1bd6"
+              },
+              {
+                "sourceIndex": 6,
+                "key": "pe_cos_market_t4_construction_f7",
+                "rgbaSha256": "a95b0ddbcc0ee02190dc58a8516839bdc4b0bdde24a2bb4e8b28ca05cb9fc686"
+              },
+              {
+                "sourceIndex": 7,
+                "key": "pe_cos_market_t4_construction_f8",
+                "rgbaSha256": "a95b0ddbcc0ee02190dc58a8516839bdc4b0bdde24a2bb4e8b28ca05cb9fc686"
+              },
+              {
+                "sourceIndex": 8,
+                "key": "pe_cos_market_t4_construction_f9",
+                "rgbaSha256": "a95b0ddbcc0ee02190dc58a8516839bdc4b0bdde24a2bb4e8b28ca05cb9fc686"
+              }
+            ]
+          },
+          {
+            "id": "pe_cos_market_t4_collapse",
+            "sourcePath": "cosmetics/animations/artisan-market-t4-collapse.png",
+            "sourceSha256": "32ec5346b61ba34bdad327ae1ae3f14b2fdaa8bf7d70cf35c0a8e007e67f93d9",
+            "cellW": 112,
+            "cellH": 112,
+            "anchorPx": [
+              56,
+              112
+            ],
+            "anchorKind": "cellBottomPivotX",
+            "sourcePivot": [
+              56,
+              104
+            ],
+            "footprint": [
+              2,
+              2
+            ],
+            "fps": 8,
+            "loop": false,
+            "reducedMotionFrame": 0,
+            "frames": [
+              {
+                "sourceIndex": 0,
+                "key": "pe_cos_market_t4_collapse_f1",
+                "rgbaSha256": "b68b4a796ea56d301b3124cbeaa4c3522f74cff67083d1c090f25b6150862dc2"
+              },
+              {
+                "sourceIndex": 1,
+                "key": "pe_cos_market_t4_collapse_f2",
+                "rgbaSha256": "67d69d81f484b2d693d385437b2ec22bf2bee629fd5bbf80fbb59b647c99814e"
+              },
+              {
+                "sourceIndex": 2,
+                "key": "pe_cos_market_t4_collapse_f3",
+                "rgbaSha256": "9cbd4098b7063950859d6f28fdb10e7c523e14144cb3b48754f1697388017bb2"
+              },
+              {
+                "sourceIndex": 3,
+                "key": "pe_cos_market_t4_collapse_f4",
+                "rgbaSha256": "da05c447b231b2b758ef2664afc4fe41d41968fd27c8830dd98f6748cd9ca645"
+              },
+              {
+                "sourceIndex": 4,
+                "key": "pe_cos_market_t4_collapse_f5",
+                "rgbaSha256": "75305705e41fc1ebeff1ce4dab8657a7f404830fbb52b5f31653773419223331"
+              },
+              {
+                "sourceIndex": 5,
+                "key": "pe_cos_market_t4_collapse_f6",
+                "rgbaSha256": "ddf1a36d46b21debc59158134e903f4eb1455e61ee713a08fbcd93ba67c04ece"
+              },
+              {
+                "sourceIndex": 6,
+                "key": "pe_cos_market_t4_collapse_f7",
+                "rgbaSha256": "cf961623edebd953d32ccb3ac3b41f594187ae78a0e12552e94d76002aff92f8"
+              },
+              {
+                "sourceIndex": 7,
+                "key": "pe_cos_market_t4_collapse_f8",
+                "rgbaSha256": "cf961623edebd953d32ccb3ac3b41f594187ae78a0e12552e94d76002aff92f8"
+              },
+              {
+                "sourceIndex": 8,
+                "key": "pe_cos_market_t4_collapse_f9",
+                "rgbaSha256": "cf961623edebd953d32ccb3ac3b41f594187ae78a0e12552e94d76002aff92f8"
+              }
+            ]
+          },
+          {
+            "id": "pe_cos_ready_fx",
+            "sourcePath": "shared-fx/craft-success/atlas.png",
+            "sourceSha256": "593ded1c87df4e6e44bfa4a197dde464713970d04174326967c30718d9edf424",
+            "cellW": 64,
+            "cellH": 64,
+            "anchorPx": [
+              32,
+              32
+            ],
+            "anchorKind": "centre",
+            "fps": 8,
+            "loop": false,
+            "reducedMotionFrame": 0,
+            "frames": [
+              {
+                "sourceIndex": 0,
+                "key": "pe_cos_ready_fx_f1",
+                "rgbaSha256": "ffc92e6b601b2a40cf9ff1add8b280f4c16b18d6a9e67357ee59be809ce654cb"
+              },
+              {
+                "sourceIndex": 1,
+                "key": "pe_cos_ready_fx_f2",
+                "rgbaSha256": "9779f4fe5e4ca17e5d1562f188043e0dec673c918dfd9504cba1a45fb4610f6a"
+              },
+              {
+                "sourceIndex": 2,
+                "key": "pe_cos_ready_fx_f3",
+                "rgbaSha256": "8cf4dbebd83b506787ac766cb7e110bae19ac3af60e01af96115865b14ec95c7"
+              },
+              {
+                "sourceIndex": 3,
+                "key": "pe_cos_ready_fx_f4",
+                "rgbaSha256": "5b804c7579a179bc5edf87f3f72a0f700cd069b36e2e76f714c692b34d30a81a"
+              },
+              {
+                "sourceIndex": 4,
+                "key": "pe_cos_ready_fx_f5",
+                "rgbaSha256": "2d26cedb48ea3ab3a27a66bf0e547458457a41ca30459759ed07fb41803f0159"
+              },
+              {
+                "sourceIndex": 5,
+                "key": "pe_cos_ready_fx_f6",
+                "rgbaSha256": "84bf951b8cddc77bfe33c8aa3e440d24685b1d2905a516547ba05e1442dc7a85"
+              },
+              {
+                "sourceIndex": 6,
+                "key": "pe_cos_ready_fx_f7",
+                "rgbaSha256": "159c8d1e974bbe051562fcfbe1e36c6977bea1363de5b674bb7951a188df9a5f"
+              },
+              {
+                "sourceIndex": 7,
+                "key": "pe_cos_ready_fx_f8",
+                "rgbaSha256": "c1c7a8f9c15d5d5c9cbd0173b57ee4b58aed10a04318e599e5c738b1f09c90c1"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "aurora_wake": {
+      "sha256": "f061211842f342a719bbf1ebe09ac2e085043c43f64f85bbc55582ec82d2a094",
+      "value": {
+        "version": 1,
+        "outputId": "aurora_wake",
+        "sourceId": "auroraWake",
+        "sourceManifestSha256": "b4b67f78efd4d74fa416e78822af9f0e037ad6d3bc30f3fc77127cd169292394",
+        "sourceIndexSha256": "04f96c922ca04d93f1bf760e6385713908b971ce82c3aa022602f1fa199e2181",
+        "sourceScale": 1,
+        "clips": [
+          {
+            "id": "pe_cos_wake",
+            "sourcePath": "cosmetics/animations/aurora-wake.png",
+            "sourceSha256": "6acc6e80907c7c6e2a19d2c5580403cfeedb99cd79aabb750427b688eae74f33",
+            "cellW": 64,
+            "cellH": 64,
+            "anchorPx": [
+              32,
+              32
+            ],
+            "anchorKind": "centre",
+            "fps": 8,
+            "loop": true,
+            "reducedMotionFrame": 0,
+            "sourceFrameIndices": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8
+            ],
+            "frames": [
+              {
+                "sourceIndex": 0,
+                "key": "pe_cos_wake_f1",
+                "rgbaSha256": "8dcc877dc95b65107ed5cab9e9670390aded80a88d180ab3145b8277a84dc6a3"
+              },
+              {
+                "sourceIndex": 1,
+                "key": "pe_cos_wake_f2",
+                "rgbaSha256": "5213e444be0f58e1c2606c759129bc64db833c3cdf5d10180df6e0f76bb7a4b6"
+              },
+              {
+                "sourceIndex": 2,
+                "key": "pe_cos_wake_f3",
+                "rgbaSha256": "333cd84d9a55f979d4d543a345e1e8c38703eb5158b9650d97ed729d260ac7cd"
+              },
+              {
+                "sourceIndex": 3,
+                "key": "pe_cos_wake_f4",
+                "rgbaSha256": "16f863ac6a16229210aa48be2cd517c5a0a2aef08658aa0d9a6ddda12f9ab311"
+              },
+              {
+                "sourceIndex": 4,
+                "key": "pe_cos_wake_f5",
+                "rgbaSha256": "dc307ecc998c9ac98c826b106ded5f3dcf94e595ab2b7f017a0e494008574a24"
+              },
+              {
+                "sourceIndex": 5,
+                "key": "pe_cos_wake_f6",
+                "rgbaSha256": "cd3193c5360a1e6ac8fdf19a7c2c487788077f218248b1c2109c9f91a9ef2c5a"
+              },
+              {
+                "sourceIndex": 6,
+                "key": "pe_cos_wake_f7",
+                "rgbaSha256": "e61153b017cd5e75b11b8d522f25b383f8c94816eb1ea018440d4d6c94de5616"
+              },
+              {
+                "sourceIndex": 7,
+                "key": "pe_cos_wake_f8",
+                "rgbaSha256": "029d4bbf6593c6327b04af63de0033608927d81273ca1c9bfac5e0c02cc88c55"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

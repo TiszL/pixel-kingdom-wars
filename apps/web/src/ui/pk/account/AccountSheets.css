@@ -1,0 +1,26 @@
+/* Inside the existing PkSheetHost. No positioning, global media breakpoints or scene lifecycle. */
+.pk-account { --pk-account-row-pad:var(--pk-s12); --pk-account-row-gap:var(--pk-s8); min-width:0; max-width:100%; height:100%; }
+.pk-account h3 { font:inherit; font-family:var(--pk-font-display); margin:0; }
+.pk-account p { margin:var(--pk-s4) 0; overflow-wrap:anywhere; }
+.pk-account__rows { display:grid; gap:var(--pk-account-row-gap); }
+.pk-account__row > .pk-plate__face { display:flex; flex-wrap:wrap; align-items:center; gap:var(--pk-s12); padding:var(--pk-account-row-pad); }
+.pk-account__copy { flex:1 1 calc(var(--pk-s32) * 4 + var(--pk-s12)); min-width:0; overflow-wrap:anywhere; }
+.pk-account__art { display:grid; place-items:center; flex:none; max-width:calc(var(--pk-min-tap) * 2); image-rendering:pixelated; }
+.pk-account__art img { max-width:100%; height:auto; }
+.pk-account__tabs { display:flex; overflow-x:auto; gap:var(--pk-s4); padding-bottom:var(--pk-s8); }
+.pk-account__tabs button, .pk-account__grid button { min-height:var(--pk-min-tap); color:var(--pk-ink-text); background:var(--pk-cream); border:var(--pk-outline-plate) solid var(--pk-ink); font:inherit; padding:var(--pk-s8); }
+.pk-account__tabs button { flex:1 0 auto; }
+.pk-account button[aria-pressed=true] { background:var(--pk-gold-hi); border-color:var(--pk-gold); }
+.pk-account :focus-visible { outline:var(--pk-outline-plate) solid var(--pk-blue); outline-offset:var(--pk-outline-plate); }
+.pk-account__grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(min(calc(var(--pk-s32) * 4 + var(--pk-s12)),100%),1fr)); gap:var(--pk-s8); }
+.pk-account__grid button { display:flex; flex-direction:column; gap:var(--pk-s8); }
+.pk-account input { box-sizing:border-box; width:100%; min-height:var(--pk-min-tap); font:inherit; background:var(--pk-cream); color:var(--pk-ink-text); border:var(--pk-outline-plate) solid var(--pk-ink); }
+.pk-account__wallet, .pk-account__provider { display:flex; align-items:center; flex-wrap:wrap; gap:var(--pk-s8); padding:var(--pk-s8) 0; }
+.pk-account [data-kept=true] { opacity:.6; }
+
+html[data-pk-vp="phone-portrait"] .pk-account { --pk-account-row-pad:var(--pk-s12); --pk-account-row-gap:var(--pk-s8); }
+html[data-pk-vp="phone-landscape"] .pk-account { --pk-account-row-pad:var(--pk-s8); --pk-account-row-gap:var(--pk-s4); }
+html[data-pk-vp="tablet-portrait"] .pk-account { --pk-account-row-pad:var(--pk-s12); --pk-account-row-gap:var(--pk-s8); }
+html[data-pk-vp="tablet-landscape"] .pk-account { --pk-account-row-pad:var(--pk-s12); --pk-account-row-gap:var(--pk-s8); }
+html[data-pk-vp="desktop"] .pk-account { --pk-account-row-pad:var(--pk-s16); --pk-account-row-gap:var(--pk-s12); }
+html[data-pk-vp="desktop"] .pk-account__tabs button:hover { background:var(--pk-cream-lo); }

@@ -1,0 +1,45 @@
+{
+  "protocolVersion": 2,
+  "raidId": "11111111-1111-4111-8111-111111111111",
+  "revision": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+  "parentRevision": null,
+  "replaceFromTick": 0,
+  "generation": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+  "eventOffset": 0,
+  "totalEvents": 1,
+  "commandOffset": 0,
+  "totalCommands": 0,
+  "commands": [],
+  "events": [{ "t": 10, "e": "star", "n": 1 }],
+  "nextCursor": null,
+  "state": {
+    "source": "archive",
+    "status": "resolved",
+    "simVersion": 15,
+    "raidProtocolVersion": 2,
+    "clock": null,
+    "lastSequence": -1,
+    "snapshot": {},
+    "armySnapshot": { "heroLoadouts": { "theodor": { "hash": "frozen-army-fallback" } } },
+    "orders": {
+      "heroDeploys": [
+        {
+          "hero": "theodor",
+          "tx": -34,
+          "ty": 63,
+          "tMs": 80000,
+          "level": 20,
+          "loadout": {
+            "catalogRevision": 2,
+            "version": 6,
+            "hash": "frozen-accepted-order",
+            "modifiers": { "allied_troop_hp_bps": 600, "hero_hp_bps": -500 }
+          }
+        },
+        { "hero": "vex", "tx": 63, "ty": -34, "tMs": 81000 }
+      ]
+    },
+    "commands": [],
+    "result": { "lootShards": "9007199254740993123" }
+  }
+}

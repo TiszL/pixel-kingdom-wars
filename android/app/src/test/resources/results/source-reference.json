@@ -1,0 +1,237 @@
+{
+  "policy": {
+    "version": 1,
+    "stars": {
+      "atlasPath": "atlas/ui@1x.json",
+      "frameKey": "ui_icon_star",
+      "source": "art/game-v4/ui/legacy-ui_icon_star.png",
+      "size": 48,
+      "gap": 14,
+      "paddingTop": 14,
+      "paddingBottom": 4,
+      "opacity": [
+        0.25,
+        0.25,
+        0.25
+      ],
+      "filledOpacity": [
+        1,
+        1,
+        1
+      ],
+      "offsetY": [
+        0,
+        -10,
+        0
+      ]
+    },
+    "fx": {
+      "sparkle": {
+        "frames": [
+          {
+            "path": "ui/results/fx_sparkle_f1.png",
+            "width": 32,
+            "height": 32
+          },
+          {
+            "path": "ui/results/fx_sparkle_f2.png",
+            "width": 32,
+            "height": 32
+          },
+          {
+            "path": "ui/results/fx_sparkle_f3.png",
+            "width": 32,
+            "height": 32
+          }
+        ],
+        "size": 64,
+        "frameMs": 260,
+        "style": {
+          "left": "8%",
+          "top": "10%"
+        }
+      },
+      "loot": {
+        "frames": [
+          {
+            "path": "ui/results/fx_loot_f1.png",
+            "width": 32,
+            "height": 32
+          },
+          {
+            "path": "ui/results/fx_loot_f2.png",
+            "width": 32,
+            "height": 32
+          },
+          {
+            "path": "ui/results/fx_loot_f3.png",
+            "width": 32,
+            "height": 32
+          }
+        ],
+        "size": 64,
+        "frameMs": 260,
+        "style": {
+          "right": "7%",
+          "bottom": "12%"
+        }
+      }
+    },
+    "victory": [
+      {
+        "stars": 0,
+        "audio": [
+          {
+            "legacy": "sfx_star_1",
+            "family": "sfx_battle_star_1",
+            "gain": 1,
+            "priority": "normal"
+          }
+        ],
+        "haptics": [
+          "light"
+        ]
+      },
+      {
+        "stars": 1,
+        "audio": [
+          {
+            "legacy": "sfx_star_1",
+            "family": "sfx_battle_star_1",
+            "gain": 1,
+            "priority": "normal"
+          }
+        ],
+        "haptics": [
+          "light"
+        ]
+      },
+      {
+        "stars": 2,
+        "audio": [
+          {
+            "legacy": "sfx_star_2",
+            "family": "sfx_battle_star_2",
+            "gain": 1,
+            "priority": "normal"
+          }
+        ],
+        "haptics": [
+          "medium"
+        ]
+      },
+      {
+        "stars": 3,
+        "audio": [
+          {
+            "legacy": "sfx_star_3",
+            "family": "sfx_battle_star_3",
+            "gain": 1,
+            "priority": "normal"
+          }
+        ],
+        "haptics": [
+          "heavy"
+        ]
+      },
+      {
+        "stars": 4,
+        "audio": [
+          {
+            "legacy": "sfx_star_3",
+            "family": "sfx_battle_star_3",
+            "gain": 1,
+            "priority": "normal"
+          }
+        ],
+        "haptics": [
+          "heavy"
+        ]
+      }
+    ],
+    "defeat": {
+      "audio": [
+        {
+          "legacy": "sfx_shield_up",
+          "family": "sfx_battle_shield_up",
+          "gain": 0.8,
+          "priority": "normal"
+        }
+      ],
+      "haptics": []
+    },
+    "patterns": {
+      "light": [
+        10
+      ],
+      "medium": [
+        25
+      ],
+      "heavy": [
+        35,
+        30,
+        45
+      ]
+    },
+    "sourceHashes": {
+      "apps/web/src/ui/screens/results.tsx": "bca9cb4e24e449d199686799500c220b13f3f94012bc2c02f007f2c90c26b444",
+      "apps/web/src/ui/icons.ts": "a35b304aa8f8bd341d08770f1856de780b3c86c764d66ba0534d17a56f4119b8",
+      "apps/web/src/ui/primitives.tsx": "4f2095843a65a7b75c7c35ee534168af5e48050860dce9e36a1f0c04a8d67f25",
+      "apps/web/src/ui/RaidUI.tsx": "7ec3ea66ed1fde73b23a312f1cfa8b2d19d0b318a29d603a4e4ef73af3ab0ebd",
+      "apps/web/src/lib/audio.ts": "862ec588e8cda4c745596bdbc3ec714f84a9e579513b4961a7a055685a18c9fa",
+      "apps/web/src/lib/juice.ts": "c6734e05040297272e4780319d73bb7e93979819017f5e6e494dd8531113404b",
+      "scripts/src/rasterize.ts": "21f186a1fd45bda302e0e31b0b8126395f5b7db5cd919a64cf4059121cd63281",
+      "art/source/assets-v2/fx_sparkle_f1.svg": "d96c51fee2423ab2854f4b83ac78e41203a2a2c1e545debfe63fddd27be38646",
+      "art/source/assets-v2/fx_sparkle_f2.svg": "64fde1b08872e35c4f3c299981697d20c994c87148f5abfb7b5bfbe20191046a",
+      "art/source/assets-v2/fx_sparkle_f3.svg": "2f858042af0e2f311f7af084eeba2687801de23b2facc939dd600271c7bf848e",
+      "art/source/assets-v2/fx_loot_f1.svg": "0a4a10591653baa522795d23b575fb198c5d2419b5d01464dafc5eff13a29581",
+      "art/source/assets-v2/fx_loot_f2.svg": "beb20008b4055e8c070f25fe8490d42cdd9fc6938baec1322af9531d996adeec",
+      "art/source/assets-v2/fx_loot_f3.svg": "56bfb97df9de89259012c0735bde88dd66d3f2c6163997e79c14bf3cf5dfa39d",
+      "art/game-v4/ui/legacy-ui_icon_star.png": "e3d355f151d531dcc4a7cf5f1e4225c810031053956026de76a43a7ec960495e"
+    }
+  },
+  "fx": [
+    {
+      "name": "fx_sparkle_f1",
+      "source": "art/source/assets-v2/fx_sparkle_f1.svg",
+      "pngSha256": "e0e8b706a6dbe611e583ba5a079654179a7632d7dec008d916f7bf95bea38f35",
+      "width": 32,
+      "height": 32
+    },
+    {
+      "name": "fx_sparkle_f2",
+      "source": "art/source/assets-v2/fx_sparkle_f2.svg",
+      "pngSha256": "a2024e1005092b512010ff8088d06a24fc772bc0a7f758622941e8d69ffc7db4",
+      "width": 32,
+      "height": 32
+    },
+    {
+      "name": "fx_sparkle_f3",
+      "source": "art/source/assets-v2/fx_sparkle_f3.svg",
+      "pngSha256": "b25153be624828a294916b44850e1563e247a5933d3d576b148f8f54e1f74a1b",
+      "width": 32,
+      "height": 32
+    },
+    {
+      "name": "fx_loot_f1",
+      "source": "art/source/assets-v2/fx_loot_f1.svg",
+      "pngSha256": "4b47a164797568a9550e3ffb1862eda94c0a4490e8bb7d1b67e9d305f3e069d0",
+      "width": 32,
+      "height": 32
+    },
+    {
+      "name": "fx_loot_f2",
+      "source": "art/source/assets-v2/fx_loot_f2.svg",
+      "pngSha256": "bf7879799d4f1ea6d5d093439f2412e6131ed014c6afe19797cec6f3f3f34f1b",
+      "width": 32,
+      "height": 32
+    },
+    {
+      "name": "fx_loot_f3",
+      "source": "art/source/assets-v2/fx_loot_f3.svg",
+      "pngSha256": "f047af898b037a8a9a7f7d56b322c277cb310eaf71fdb4a65b640f79e77b46a5",
+      "width": 32,
+      "height": 32
+    }
+  ]
+}

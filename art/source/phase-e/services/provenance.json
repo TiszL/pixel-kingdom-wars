@@ -1,0 +1,275 @@
+{
+  "schemaVersion": 1,
+  "indexSha256": "04f96c922ca04d93f1bf760e6385713908b971ce82c3aa022602f1fa199e2181",
+  "sourceManifestSha256": "f7cbf1bf9646d31baf5d7fcd0706e85348f24c199022dde22292adb3e19f1885",
+  "zipSha256": "7a381d75251b280459dda151dba7d2ad7f3d1b8945d01af0f847528436e05aa3",
+  "docsCommit": "11504e2316bd33a6d092f87b8d114f159aa0249c",
+  "files": [
+    {
+      "path": "services/animations/market-t1-collapse.png",
+      "bytes": 12542,
+      "sha256": "09c184960655c6e7c58bafa670c92306e687f793306be9242471c6675bb3280e",
+      "size": [
+        1008,
+        112
+      ]
+    },
+    {
+      "path": "services/animations/market-t1-construction.png",
+      "bytes": 14126,
+      "sha256": "409f049bd9e2a8b5c9beb9cea7a53f554e134d1bd6db187b4a948eda65b1144d",
+      "size": [
+        1008,
+        112
+      ]
+    },
+    {
+      "path": "services/animations/market-t1-working.png",
+      "bytes": 9973,
+      "sha256": "b224b9d21140c2b74d9a52e6478ff45cd12a7d2584551bc2ce0ef43f290544d6",
+      "size": [
+        896,
+        112
+      ]
+    },
+    {
+      "path": "services/animations/market-t2-collapse.png",
+      "bytes": 13524,
+      "sha256": "75b2d8c6334afb3ca8ad386d8b5916e531ac88e3ccb94befb741536076eabf4b",
+      "size": [
+        1008,
+        112
+      ]
+    },
+    {
+      "path": "services/animations/market-t2-construction.png",
+      "bytes": 16104,
+      "sha256": "fd928ae11e38a64337860cd89097b2353f71c71ecde60c038f568958aa4cc61a",
+      "size": [
+        1008,
+        112
+      ]
+    },
+    {
+      "path": "services/animations/market-t2-working.png",
+      "bytes": 13838,
+      "sha256": "9702445d6f0364ce8ca6180e1fa06d076a51e13308df9d4256c91a7fcb42514a",
+      "size": [
+        896,
+        112
+      ]
+    },
+    {
+      "path": "services/animations/market-t3-collapse.png",
+      "bytes": 17625,
+      "sha256": "e2dfda59ed9840f69ef26d0a772abcff937eead1a4ae0af8d679009cf7d7c098",
+      "size": [
+        1008,
+        112
+      ]
+    },
+    {
+      "path": "services/animations/market-t3-construction.png",
+      "bytes": 16453,
+      "sha256": "fb6b75fafc2a8b26ee9f183a6b0f78da1a3174398bb8239c1f303445551ec92e",
+      "size": [
+        1008,
+        112
+      ]
+    },
+    {
+      "path": "services/animations/market-t3-working.png",
+      "bytes": 13465,
+      "sha256": "298d3e0b56cd43d21c2f16c651ddef2231b4c7afc6edbd0de0e199082aafe2da",
+      "size": [
+        896,
+        112
+      ]
+    },
+    {
+      "path": "services/animations/market-t4-collapse.png",
+      "bytes": 17429,
+      "sha256": "bd38b4659807187e1ab06f1c746f9ce8439d446cff0cf2fb4ea5ab753bb52e90",
+      "size": [
+        1008,
+        112
+      ]
+    },
+    {
+      "path": "services/animations/market-t4-construction.png",
+      "bytes": 18366,
+      "sha256": "fa095b54e188fc48b2dc1fb16b8bd4e9304694cbc87114a3c6af7d7936549840",
+      "size": [
+        1008,
+        112
+      ]
+    },
+    {
+      "path": "services/animations/market-t4-working.png",
+      "bytes": 13994,
+      "sha256": "15bdaaef67a66e8f2ec9f8561af54677c63217d66fc66a50667f7a2a7a98e425",
+      "size": [
+        896,
+        112
+      ]
+    },
+    {
+      "path": "services/manifest.json",
+      "bytes": 48979,
+      "sha256": "f7cbf1bf9646d31baf5d7fcd0706e85348f24c199022dde22292adb3e19f1885"
+    },
+    {
+      "path": "services/static/market-t1-damaged.png",
+      "bytes": 3596,
+      "sha256": "f69d53dcd7eebe5da07deec18423503a984c6cf8ecd0502c10225aeb5a92df94",
+      "size": [
+        112,
+        112
+      ]
+    },
+    {
+      "path": "services/static/market-t1-idle.png",
+      "bytes": 4025,
+      "sha256": "c4a85ee766f11e75616577ceed2e8b0fdaee1cda32ddb343470801a1a84d3a16",
+      "size": [
+        112,
+        112
+      ]
+    },
+    {
+      "path": "services/static/market-t2-damaged.png",
+      "bytes": 4457,
+      "sha256": "bfd7ee82a147b61a7ece72071762cb9a4fb3ff3bedc769824aa6c7ac3ab3a843",
+      "size": [
+        112,
+        112
+      ]
+    },
+    {
+      "path": "services/static/market-t2-idle.png",
+      "bytes": 5377,
+      "sha256": "71e0ec40bf715c444d824895834b7a6400e0f006af2aef7fc63fb64db3ad5d36",
+      "size": [
+        112,
+        112
+      ]
+    },
+    {
+      "path": "services/static/market-t3-damaged.png",
+      "bytes": 8873,
+      "sha256": "f466e07e3357478fcdb734dd799ef5b9c4e712578ec4369a94b61d70f8560e77",
+      "size": [
+        112,
+        112
+      ]
+    },
+    {
+      "path": "services/static/market-t3-idle.png",
+      "bytes": 6296,
+      "sha256": "a0e62fd2992cab4eb6a85c4a76ad341a6350e5222cc3b1ee00f3f86b83135147",
+      "size": [
+        112,
+        112
+      ]
+    },
+    {
+      "path": "services/static/market-t4-damaged.png",
+      "bytes": 7353,
+      "sha256": "06d9cc413b9044b7a328b29c183ec8b4bc3ee8b220ae76f467330ce9081b6afb",
+      "size": [
+        112,
+        112
+      ]
+    },
+    {
+      "path": "services/static/market-t4-idle.png",
+      "bytes": 6226,
+      "sha256": "1091c20731f3a993092c5c380105d7900c9d98549df6f10c0f97d2ba5390077c",
+      "size": [
+        112,
+        112
+      ]
+    },
+    {
+      "path": "shared-fx/craft-success/atlas.png",
+      "bytes": 7460,
+      "sha256": "593ded1c87df4e6e44bfa4a197dde464713970d04174326967c30718d9edf424",
+      "size": [
+        512,
+        64
+      ]
+    },
+    {
+      "path": "workshop/derived/static/t1-construction.png",
+      "bytes": 6600,
+      "sha256": "9e546a251cee6324ada3a3a02b8d95607147088f4ee7f2734f056025bd3381a2",
+      "size": [
+        112,
+        112
+      ]
+    },
+    {
+      "path": "workshop/derived/static/t1-rubble.png",
+      "bytes": 5607,
+      "sha256": "3db88e664ca741c6555fdd469a3eefdd76396070821d17e479adb70b6e2dc4e9",
+      "size": [
+        112,
+        112
+      ]
+    },
+    {
+      "path": "workshop/derived/static/t2-construction.png",
+      "bytes": 6664,
+      "sha256": "fcb6dd3af4bdfe4598dbfee3126d5770c9994995553eb47301200a602c2fb3f1",
+      "size": [
+        112,
+        112
+      ]
+    },
+    {
+      "path": "workshop/derived/static/t2-rubble.png",
+      "bytes": 5349,
+      "sha256": "964fd0bcd258eadf75a183747651019ece004ce93a79db0a05c353e38b9d1c82",
+      "size": [
+        112,
+        112
+      ]
+    },
+    {
+      "path": "workshop/derived/static/t3-construction.png",
+      "bytes": 5985,
+      "sha256": "cead6e7968a5460219dbd269e0e2cef7401be6b92a1d500407acf684e8f88ffe",
+      "size": [
+        112,
+        112
+      ]
+    },
+    {
+      "path": "workshop/derived/static/t3-rubble.png",
+      "bytes": 5026,
+      "sha256": "5eb600d816e71f47d2e29f354e5647987c65aa96db784e9fea3637cefb26e610",
+      "size": [
+        112,
+        112
+      ]
+    },
+    {
+      "path": "workshop/derived/static/t4-construction.png",
+      "bytes": 7846,
+      "sha256": "3dc1bad0c91190090fdbdb8d1acbdc94f2f68cfd97530b830fa0dd6711a7cfc2",
+      "size": [
+        112,
+        112
+      ]
+    },
+    {
+      "path": "workshop/derived/static/t4-rubble.png",
+      "bytes": 5976,
+      "sha256": "78136a68f1f2f4f045bed29b53b00f62adb4af83e88e712602dcb12a1ea439d0",
+      "size": [
+        112,
+        112
+      ]
+    }
+  ]
+}

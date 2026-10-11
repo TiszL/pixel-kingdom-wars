@@ -1,0 +1,2961 @@
+{
+  "schemaVersion": 1,
+  "sourceCommit": "427381a2adf934bbcc902baefc207a655b185eb6",
+  "simVersion": 18,
+  "snapshot": {
+    "keepLevel": 1,
+    "buildings": [
+      {
+        "id": "keep",
+        "type": "keep",
+        "level": 1,
+        "tx": 8,
+        "ty": 8
+      },
+      {
+        "id": "vault",
+        "type": "vault",
+        "level": 1,
+        "tx": 10,
+        "ty": 8
+      },
+      {
+        "id": "mine",
+        "type": "mine",
+        "level": 1,
+        "tx": 8,
+        "ty": 10
+      }
+    ],
+    "surplusShards": 1000,
+    "claimMin": 2,
+    "claimMax": 16
+  },
+  "orders": {
+    "deploys": [
+      {
+        "troop": "mage",
+        "tx": 0,
+        "ty": 8,
+        "tMs": 0
+      }
+    ]
+  },
+  "seed": 240103,
+  "options": {},
+  "stars": 3,
+  "destructionPct": 100,
+  "keepDestroyed": true,
+  "vaultDestroyed": true,
+  "mineDestroyed": true,
+  "victory": true,
+  "buildings": [
+    {
+      "id": "keep",
+      "type": "keep",
+      "hp": 0,
+      "maxHp": 1200,
+      "destroyed": true
+    },
+    {
+      "id": "vault",
+      "type": "vault",
+      "hp": 0,
+      "maxHp": 500,
+      "destroyed": true
+    },
+    {
+      "id": "mine",
+      "type": "mine",
+      "hp": 0,
+      "maxHp": 300,
+      "destroyed": true
+    }
+  ],
+  "ticks": 742,
+  "events": [
+    {
+      "t": 0,
+      "e": "deploy",
+      "id": 0,
+      "troop": "mage",
+      "x": 128,
+      "y": 2176
+    },
+    {
+      "t": 0,
+      "e": "pos",
+      "id": 0,
+      "x": 161,
+      "y": 2176
+    },
+    {
+      "t": 5,
+      "e": "pos",
+      "id": 0,
+      "x": 326,
+      "y": 2176
+    },
+    {
+      "t": 10,
+      "e": "pos",
+      "id": 0,
+      "x": 491,
+      "y": 2176
+    },
+    {
+      "t": 15,
+      "e": "pos",
+      "id": 0,
+      "x": 656,
+      "y": 2176
+    },
+    {
+      "t": 20,
+      "e": "pos",
+      "id": 0,
+      "x": 821,
+      "y": 2176
+    },
+    {
+      "t": 25,
+      "e": "pos",
+      "id": 0,
+      "x": 986,
+      "y": 2176
+    },
+    {
+      "t": 28,
+      "e": "attackRun",
+      "id": 0,
+      "side": "attacker",
+      "troop": "mage",
+      "targetKind": "building",
+      "target": "keep",
+      "ix": 2048,
+      "iy": 2176,
+      "mode": "projectile",
+      "technique": "bolt",
+      "cycleMs": 616,
+      "releaseOffsetMs": 308,
+      "cycleTicks": 7,
+      "releaseOffsetTicks": 4,
+      "impactOffsetsTicks": [
+        12
+      ],
+      "cadenceTicks": 7,
+      "count": 1
+    },
+    {
+      "t": 35,
+      "e": "attackRun",
+      "id": 0,
+      "side": "attacker",
+      "troop": "mage",
+      "targetKind": "building",
+      "target": "keep",
+      "ix": 2048,
+      "iy": 2176,
+      "mode": "projectile",
+      "technique": "bolt",
+      "cycleMs": 616,
+      "releaseOffsetMs": 308,
+      "cycleTicks": 7,
+      "releaseOffsetTicks": 4,
+      "impactOffsetsTicks": [
+        12
+      ],
+      "cadenceTicks": 7,
+      "count": 1
+    },
+    {
+      "t": 40,
+      "e": "hit",
+      "target": "keep",
+      "dmg": 21
+    },
+    {
+      "t": 42,
+      "e": "attackRun",
+      "id": 0,
+      "side": "attacker",
+      "troop": "mage",
+      "targetKind": "building",
+      "target": "keep",
+      "ix": 2048,
+      "iy": 2176,
+      "mode": "projectile",
+      "technique": "bolt",
+      "cycleMs": 616,
+      "releaseOffsetMs": 308,
+      "cycleTicks": 7,
+      "releaseOffsetTicks": 4,
+      "impactOffsetsTicks": [
+        12
+      ],
+      "cadenceTicks": 7,
+      "count": 1
+    },
+    {
+      "t": 47,
+      "e": "hit",
+      "target": "keep",
+      "dmg": 21
+    },
+    {
+      "t": 49,
+      "e": "attackRun",
+      "id": 0,
+      "side": "attacker",
+      "troop": "mage",
+      "targetKind": "building",
+      "target": "keep",
+      "ix": 2048,
+      "iy": 2176,
+      "mode": "projectile",
+      "technique": "bolt",
+      "cycleMs": 616,
+      "releaseOffsetMs": 308,
+      "cycleTicks": 7,
+      "releaseOffsetTicks": 4,
+      "impactOffsetsTicks": [
+        12
+      ],
+      "cadenceTicks": 7,
+      "count": 1
+    },
+    {
+      "t": 54,
+      "e": "hit",
+      "target": "keep",
+      "dmg": 21
+    },
+    {
+      "t": 56,
+      "e": "attackRun",
+      "id": 0,
+      "side": "attacker",
+      "troop": "mage",
+      "targetKind": "building",
+      "target": "keep",
+      "ix": 2048,
+      "iy": 2176,
+      "mode": "projectile",
+      "technique": "bolt",
+      "cycleMs": 616,
+      "releaseOffsetMs": 308,
+      "cycleTicks": 7,
+      "releaseOffsetTicks": 4,
+      "impactOffsetsTicks": [
+        12
+      ],
+      "cadenceTicks": 7,
+      "count": 1
+    },
+    {
+      "t": 61,
+      "e": "hit",
+      "target": "keep",
+      "dmg": 21
+    },
+    {
+      "t": 63,
+      "e": "attackRun",
+      "id": 0,
+      "side": "attacker",
+      "troop": "mage",
+      "targetKind": "building",
+      "target": "keep",
+      "ix": 2048,
+      "iy": 2176,
+      "mode": "projectile",
+      "technique": "bolt",
+      "cycleMs": 616,
+      "releaseOffsetMs": 308,
+      "cycleTicks": 7,
+      "releaseOffsetTicks": 4,
+      "impactOffsetsTicks": [
+        12
+      ],
+      "cadenceTicks": 7,
+      "count": 1
+    },
+    {
+      "t": 68,
+      "e": "hit",
+      "target": "keep",
+      "dmg": 21
+    },
+    {
+      "t": 70,
+      "e": "attackRun",
+      "id": 0,
+      "side": "attacker",
+      "troop": "mage",
+      "targetKind": "building",
+      "target": "keep",
+      "ix": 2048,
+      "iy": 2176,
+      "mode": "projectile",
+      "technique": "bolt",
+      "cycleMs": 616,
+      "releaseOffsetMs": 308,
+      "cycleTicks": 7,
+      "releaseOffsetTicks": 4,
+      "impactOffsetsTicks": [
+        12
+      ],
+      "cadenceTicks": 7,
+      "count": 1
+    },
+    {
+      "t": 75,
+      "e": "hit",
+      "target": "keep",
+      "dmg": 21
+    },
+    {
+      "t": 77,
+      "e": "attackRun",
+      "id": 0,
+      "side": "attacker",
+      "troop": "mage",
+      "targetKind": "building",
+      "target": "keep",
+      "ix": 2048,
+      "iy": 2176,
+      "mode": "projectile",
+      "technique": "bolt",
+      "cycleMs": 616,
+      "releaseOffsetMs": 308,
+      "cycleTicks": 7,
+      "releaseOffsetTicks": 4,
+      "impactOffsetsTicks": [
+        12
+      ],
+      "cadenceTicks": 7,
+      "count": 1
+    },
+    {
+      "t": 82,
+      "e": "hit",
+      "target": "keep",
+      "dmg": 21
+    },
+    {
+      "t": 84,
+      "e": "attackRun",
+      "id": 0,
+      "side": "attacker",
+      "troop": "mage",
+      "targetKind": "building",
+      "target": "keep",
+      "ix": 2048,
+      "iy": 2176,
+      "mode": "projectile",
+      "technique": "bolt",
+      "cycleMs": 616,
+      "releaseOffsetMs": 308,
+      "cycleTicks": 7,
+      "releaseOffsetTicks": 4,
+      "impactOffsetsTicks": [
+        12
+      ],
+      "cadenceTicks": 7,
+      "count": 1
+    },
+    {
+      "t": 89,
+      "e": "hit",
+      "target": "keep",
+      "dmg": 21
+    },
+    {
+      "t": 91,
+      "e": "attackRun",
+      "id": 0,
+      "side": "attacker",
+      "troop": "mage",
+      "targetKind": "building",
+      "target": "keep",
+      "ix": 2048,
+      "iy": 2176,
+      "mode": "projectile",
+      "technique": "bolt",
+      "cycleMs": 616,
+      "releaseOffsetMs": 308,
+      "cycleTicks": 7,
+      "releaseOffsetTicks": 4,
+      "impactOffsetsTicks": [
+        12
+      ],
+      "cadenceTicks": 7,
+      "count": 1
+    },
+    {
+      "t": 96,
+      "e": "hit",
+      "target": "keep",
+      "dmg": 21
+    },
+    {
+      "t": 98,
+      "e": "attackRun",
+      "id": 0,
+      "side": "attacker",
+      "troop": "mage",
+      "targetKind": "building",
+      "target": "keep",
+      "ix": 2048,
+      "iy": 2176,
+      "mode": "projectile",
+      "technique": "bolt",
+      "cycleMs": 616,
+      "releaseOffsetMs": 308,
+      "cycleTicks": 7,
+      "releaseOffsetTicks": 4,
+      "impactOffsetsTicks": [
+        12
+      ],
+      "cadenceTicks": 7,
+      "count": 1
+    },
+    {
+      "t": 103,
+      "e": "hit",
+      "target": "keep",
+      "dmg": 21
+    },
+    {
+      "t": 105,
+      "e": "attackRun",
+      "id": 0,
+      "side": "attacker",
+      "troop": "mage",
+      "targetKind": "building",
+      "target": "keep",
+      "ix": 2048,
+      "iy": 2176,
+      "mode": "projectile",
+      "technique": "bolt",
+      "cycleMs": 616,
+      "releaseOffsetMs": 308,
+      "cycleTicks": 7,
+      "releaseOffsetTicks": 4,
+      "impactOffsetsTicks": [
+        12
+      ],
+      "cadenceTicks": 7,
+      "count": 1
+    },
+    {
+      "t": 110,
+      "e": "hit",
+      "target": "keep",
+      "dmg": 21
+    },
+    {
+      "t": 112,
+      "e": "attackRun",
+      "id": 0,
+      "side": "attacker",
+      "troop": "mage",
+      "targetKind": "building",
+      "target": "keep",
+      "ix": 2048,
+      "iy": 2176,
+      "mode": "projectile",
+      "technique": "bolt",
+      "cycleMs": 616,
+      "releaseOffsetMs": 308,
+      "cycleTicks": 7,
+      "releaseOffsetTicks": 4,
+      "impactOffsetsTicks": [
+        12
+      ],
+      "cadenceTicks": 7,
+      "count": 1
+    },
+    {
+      "t": 117,
+      "e": "hit",
+      "target": "keep",
+      "dmg": 21
+    },
+    {
+      "t": 119,
+      "e": "attackRun",
+      "id": 0,
+      "side": "attacker",
+      "troop": "mage",
+      "targetKind": "building",
+      "target": "keep",
+      "ix": 2048,
+      "iy": 2176,
+      "mode": "projectile",
+      "technique": "bolt",
+      "cycleMs": 616,
+      "releaseOffsetMs": 308,
+      "cycleTicks": 7,
+      "releaseOffsetTicks": 4,
+      "impactOffsetsTicks": [
+        12
+      ],
+      "cadenceTicks": 7,
+      "count": 1
+    },
+    {
+      "t": 124,
+      "e": "hit",
+      "target": "keep",
+      "dmg": 21
+    },
+    {
+      "t": 126,
+      "e": "attackRun",
+      "id": 0,
+      "side": "attacker",
+      "troop": "mage",
+      "targetKind": "building",
+      "target": "keep",
+      "ix": 2048,
+      "iy": 2176,
+      "mode": "projectile",
+      "technique": "bolt",
+      "cycleMs": 616,
+      "releaseOffsetMs": 308,
+      "cycleTicks": 7,
+      "releaseOffsetTicks": 4,
+      "impactOffsetsTicks": [
+        12
+      ],
+      "cadenceTicks": 7,
+      "count": 1
+    },
+    {
+      "t": 131,
+      "e": "hit",
+      "target": "keep",
+      "dmg": 21
+    },
+    {
+      "t": 133,
+      "e": "attackRun",
+      "id": 0,
+      "side": "attacker",
+      "troop": "mage",
+      "targetKind": "building",
+      "target": "keep",
+      "ix": 2048,
+      "iy": 2176,
+      "mode": "projectile",
+      "technique": "bolt",
+      "cycleMs": 616,
+      "releaseOffsetMs": 308,
+      "cycleTicks": 7,
+      "releaseOffsetTicks": 4,
+      "impactOffsetsTicks": [
+        12
+      ],
+      "cadenceTicks": 7,
+      "count": 1
+    },
+    {
+      "t": 138,
+      "e": "hit",
+      "target": "keep",
+      "dmg": 21
+    },
+    {
+      "t": 140,
+      "e": "attackRun",
+      "id": 0,
+      "side": "attacker",
+      "troop": "mage",
+      "targetKind": "building",
+      "target": "keep",
+      "ix": 2048,
+      "iy": 2176,
+      "mode": "projectile",
+      "technique": "bolt",
+      "cycleMs": 616,
+      "releaseOffsetMs": 308,
+      "cycleTicks": 7,
+      "releaseOffsetTicks": 4,
+      "impactOffsetsTicks": [
+        12
+      ],
+      "cadenceTicks": 7,
+      "count": 1
+    },
+    {
+      "t": 145,
+      "e": "hit",
+      "target": "keep",
+      "dmg": 21
+    },
+    {
+      "t": 147,
+      "e": "attackRun",
+      "id": 0,
+      "side": "attacker",
+      "troop": "mage",
+      "targetKind": "building",
+      "target": "keep",
+      "ix": 2048,
+      "iy": 2176,
+      "mode": "projectile",
+      "technique": "bolt",
+      "cycleMs": 616,
+      "releaseOffsetMs": 308,
+      "cycleTicks": 7,
+      "releaseOffsetTicks": 4,
+      "impactOffsetsTicks": [
+        12
+      ],
+      "cadenceTicks": 7,
+      "count": 1
+    },
+    {
+      "t": 152,
+      "e": "hit",
+      "target": "keep",
+      "dmg": 21
+    },
+    {
+      "t": 154,
+      "e": "attackRun",
+      "id": 0,
+      "side": "attacker",
+      "troop": "mage",
+      "targetKind": "building",
+      "target": "keep",
+      "ix": 2048,
+      "iy": 2176,
+      "mode": "projectile",
+      "technique": "bolt",
+      "cycleMs": 616,
+      "releaseOffsetMs": 308,
+      "cycleTicks": 7,
+      "releaseOffsetTicks": 4,
+      "impactOffsetsTicks": [
+        12
+      ],
+      "cadenceTicks": 7,
+      "count": 1
+    },
+    {
+      "t": 159,
+      "e": "hit",
+      "target": "keep",
+      "dmg": 21
+    },
+    {
+      "t": 161,
+      "e": "attackRun",
+      "id": 0,
+      "side": "attacker",
+      "troop": "mage",
+      "targetKind": "building",
+      "target": "keep",
+      "ix": 2048,
+      "iy": 2176,
+      "mode": "projectile",
+      "technique": "bolt",
+      "cycleMs": 616,
+      "releaseOffsetMs": 308,
+      "cycleTicks": 7,
+      "releaseOffsetTicks": 4,
+      "impactOffsetsTicks": [
+        12
+      ],
+      "cadenceTicks": 7,
+      "count": 1
+    },
+    {
+      "t": 166,
+      "e": "hit",
+      "target": "keep",
+      "dmg": 21
+    },
+    {
+      "t": 168,
+      "e": "attackRun",
+      "id": 0,
+      "side": "attacker",
+      "troop": "mage",
+      "targetKind": "building",
+      "target": "keep",
+      "ix": 2048,
+      "iy": 2176,
+      "mode": "projectile",
+      "technique": "bolt",
+      "cycleMs": 616,
+      "releaseOffsetMs": 308,
+      "cycleTicks": 7,
+      "releaseOffsetTicks": 4,
+      "impactOffsetsTicks": [
+        12
+      ],
+      "cadenceTicks": 7,
+      "count": 1
+    },
+    {
+      "t": 173,
+      "e": "hit",
+      "target": "keep",
+      "dmg": 21
+    },
+    {
+      "t": 175,
+      "e": "attackRun",
+      "id": 0,
+      "side": "attacker",
+      "troop": "mage",
+      "targetKind": "building",
+      "target": "keep",
+      "ix": 2048,
+      "iy": 2176,
+      "mode": "projectile",
+      "technique": "bolt",
+      "cycleMs": 616,
+      "releaseOffsetMs": 308,
+      "cycleTicks": 7,
+      "releaseOffsetTicks": 4,
+      "impactOffsetsTicks": [
+        12
+      ],
+      "cadenceTicks": 7,
+      "count": 1
+    },
+    {
+      "t": 180,
+      "e": "hit",
+      "target": "keep",
+      "dmg": 21
+    },
+    {
+      "t": 182,
+      "e": "attackRun",
+      "id": 0,
+      "side": "attacker",
+      "troop": "mage",
+      "targetKind": "building",
+      "target": "keep",
+      "ix": 2048,
+      "iy": 2176,
+      "mode": "projectile",
+      "technique": "bolt",
+      "cycleMs": 616,
+      "releaseOffsetMs": 308,
+      "cycleTicks": 7,
+      "releaseOffsetTicks": 4,
+      "impactOffsetsTicks": [
+        12
+      ],
+      "cadenceTicks": 7,
+      "count": 1
+    },
+    {
+      "t": 187,
+      "e": "hit",
+      "target": "keep",
+      "dmg": 21
+    },
+    {
+      "t": 189,
+      "e": "attackRun",
+      "id": 0,
+      "side": "attacker",
+      "troop": "mage",
+      "targetKind": "building",
+      "target": "keep",
+      "ix": 2048,
+      "iy": 2176,
+      "mode": "projectile",
+      "technique": "bolt",
+      "cycleMs": 616,
+      "releaseOffsetMs": 308,
+      "cycleTicks": 7,
+      "releaseOffsetTicks": 4,
+      "impactOffsetsTicks": [
+        12
+      ],
+      "cadenceTicks": 7,
+      "count": 1
+    },
+    {
+      "t": 194,
+      "e": "hit",
+      "target": "keep",
+      "dmg": 21
+    },
+    {
+      "t": 196,
+      "e": "attackRun",
+      "id": 0,
+      "side": "attacker",
+      "troop": "mage",
+      "targetKind": "building",
+      "target": "keep",
+      "ix": 2048,
+      "iy": 2176,
+      "mode": "projectile",
+      "technique": "bolt",
+      "cycleMs": 616,
+      "releaseOffsetMs": 308,
+      "cycleTicks": 7,
+      "releaseOffsetTicks": 4,
+      "impactOffsetsTicks": [
+        12
+      ],
+      "cadenceTicks": 7,
+      "count": 1
+    },
+    {
+      "t": 201,
+      "e": "hit",
+      "target": "keep",
+      "dmg": 21
+    },
+    {
+      "t": 203,
+      "e": "attackRun",
+      "id": 0,
+      "side": "attacker",
+      "troop": "mage",
+      "targetKind": "building",
+      "target": "keep",
+      "ix": 2048,
+      "iy": 2176,
+      "mode": "projectile",
+      "technique": "bolt",
+      "cycleMs": 616,
+      "releaseOffsetMs": 308,
+      "cycleTicks": 7,
+      "releaseOffsetTicks": 4,
+      "impactOffsetsTicks": [
+        12
+      ],
+      "cadenceTicks": 7,
+      "count": 1
+    },
+    {
+      "t": 208,
+      "e": "hit",
+      "target": "keep",
+      "dmg": 21
+    },
+    {
+      "t": 210,
+      "e": "attackRun",
+      "id": 0,
+      "side": "attacker",
+      "troop": "mage",
+      "targetKind": "building",
+      "target": "keep",
+      "ix": 2048,
+      "iy": 2176,
+      "mode": "projectile",
+      "technique": "bolt",
+      "cycleMs": 616,
+      "releaseOffsetMs": 308,
+      "cycleTicks": 7,
+      "releaseOffsetTicks": 4,
+      "impactOffsetsTicks": [
+        12
+      ],
+      "cadenceTicks": 7,
+      "count": 1
+    },
+    {
+      "t": 215,
+      "e": "hit",
+      "target": "keep",
+      "dmg": 21
+    },
+    {
+      "t": 217,
+      "e": "attackRun",
+      "id": 0,
+      "side": "attacker",
+      "troop": "mage",
+      "targetKind": "building",
+      "target": "keep",
+      "ix": 2048,
+      "iy": 2176,
+      "mode": "projectile",
+      "technique": "bolt",
+      "cycleMs": 616,
+      "releaseOffsetMs": 308,
+      "cycleTicks": 7,
+      "releaseOffsetTicks": 4,
+      "impactOffsetsTicks": [
+        12
+      ],
+      "cadenceTicks": 7,
+      "count": 1
+    },
+    {
+      "t": 222,
+      "e": "hit",
+      "target": "keep",
+      "dmg": 21
+    },
+    {
+      "t": 224,
+      "e": "attackRun",
+      "id": 0,
+      "side": "attacker",
+      "troop": "mage",
+      "targetKind": "building",
+      "target": "keep",
+      "ix": 2048,
+      "iy": 2176,
+      "mode": "projectile",
+      "technique": "bolt",
+      "cycleMs": 616,
+      "releaseOffsetMs": 308,
+      "cycleTicks": 7,
+      "releaseOffsetTicks": 4,
+      "impactOffsetsTicks": [
+        12
+      ],
+      "cadenceTicks": 7,
+      "count": 1
+    },
+    {
+      "t": 229,
+      "e": "hit",
+      "target": "keep",
+      "dmg": 21
+    },
+    {
+      "t": 231,
+      "e": "attackRun",
+      "id": 0,
+      "side": "attacker",
+      "troop": "mage",
+      "targetKind": "building",
+      "target": "keep",
+      "ix": 2048,
+      "iy": 2176,
+      "mode": "projectile",
+      "technique": "bolt",
+      "cycleMs": 616,
+      "releaseOffsetMs": 308,
+      "cycleTicks": 7,
+      "releaseOffsetTicks": 4,
+      "impactOffsetsTicks": [
+        12
+      ],
+      "cadenceTicks": 7,
+      "count": 1
+    },
+    {
+      "t": 236,
+      "e": "hit",
+      "target": "keep",
+      "dmg": 21
+    },
+    {
+      "t": 238,
+      "e": "attackRun",
+      "id": 0,
+      "side": "attacker",
+      "troop": "mage",
+      "targetKind": "building",
+      "target": "keep",
+      "ix": 2048,
+      "iy": 2176,
+      "mode": "projectile",
+      "technique": "bolt",
+      "cycleMs": 616,
+      "releaseOffsetMs": 308,
+      "cycleTicks": 7,
+      "releaseOffsetTicks": 4,
+      "impactOffsetsTicks": [
+        12
+      ],
+      "cadenceTicks": 7,
+      "count": 1
+    },
+    {
+      "t": 243,
+      "e": "hit",
+      "target": "keep",
+      "dmg": 21
+    },
+    {
+      "t": 245,
+      "e": "attackRun",
+      "id": 0,
+      "side": "attacker",
+      "troop": "mage",
+      "targetKind": "building",
+      "target": "keep",
+      "ix": 2048,
+      "iy": 2176,
+      "mode": "projectile",
+      "technique": "bolt",
+      "cycleMs": 616,
+      "releaseOffsetMs": 308,
+      "cycleTicks": 7,
+      "releaseOffsetTicks": 4,
+      "impactOffsetsTicks": [
+        12
+      ],
+      "cadenceTicks": 7,
+      "count": 1
+    },
+    {
+      "t": 250,
+      "e": "hit",
+      "target": "keep",
+      "dmg": 21
+    },
+    {
+      "t": 252,
+      "e": "attackRun",
+      "id": 0,
+      "side": "attacker",
+      "troop": "mage",
+      "targetKind": "building",
+      "target": "keep",
+      "ix": 2048,
+      "iy": 2176,
+      "mode": "projectile",
+      "technique": "bolt",
+      "cycleMs": 616,
+      "releaseOffsetMs": 308,
+      "cycleTicks": 7,
+      "releaseOffsetTicks": 4,
+      "impactOffsetsTicks": [
+        12
+      ],
+      "cadenceTicks": 7,
+      "count": 1
+    },
+    {
+      "t": 257,
+      "e": "hit",
+      "target": "keep",
+      "dmg": 21
+    },
+    {
+      "t": 259,
+      "e": "attackRun",
+      "id": 0,
+      "side": "attacker",
+      "troop": "mage",
+      "targetKind": "building",
+      "target": "keep",
+      "ix": 2048,
+      "iy": 2176,
+      "mode": "projectile",
+      "technique": "bolt",
+      "cycleMs": 616,
+      "releaseOffsetMs": 308,
+      "cycleTicks": 7,
+      "releaseOffsetTicks": 4,
+      "impactOffsetsTicks": [
+        12
+      ],
+      "cadenceTicks": 7,
+      "count": 1
+    },
+    {
+      "t": 264,
+      "e": "hit",
+      "target": "keep",
+      "dmg": 21
+    },
+    {
+      "t": 266,
+      "e": "attackRun",
+      "id": 0,
+      "side": "attacker",
+      "troop": "mage",
+      "targetKind": "building",
+      "target": "keep",
+      "ix": 2048,
+      "iy": 2176,
+      "mode": "projectile",
+      "technique": "bolt",
+      "cycleMs": 616,
+      "releaseOffsetMs": 308,
+      "cycleTicks": 7,
+      "releaseOffsetTicks": 4,
+      "impactOffsetsTicks": [
+        12
+      ],
+      "cadenceTicks": 7,
+      "count": 1
+    },
+    {
+      "t": 271,
+      "e": "hit",
+      "target": "keep",
+      "dmg": 21
+    },
+    {
+      "t": 273,
+      "e": "attackRun",
+      "id": 0,
+      "side": "attacker",
+      "troop": "mage",
+      "targetKind": "building",
+      "target": "keep",
+      "ix": 2048,
+      "iy": 2176,
+      "mode": "projectile",
+      "technique": "bolt",
+      "cycleMs": 616,
+      "releaseOffsetMs": 308,
+      "cycleTicks": 7,
+      "releaseOffsetTicks": 4,
+      "impactOffsetsTicks": [
+        12
+      ],
+      "cadenceTicks": 7,
+      "count": 1
+    },
+    {
+      "t": 278,
+      "e": "hit",
+      "target": "keep",
+      "dmg": 21
+    },
+    {
+      "t": 280,
+      "e": "attackRun",
+      "id": 0,
+      "side": "attacker",
+      "troop": "mage",
+      "targetKind": "building",
+      "target": "keep",
+      "ix": 2048,
+      "iy": 2176,
+      "mode": "projectile",
+      "technique": "bolt",
+      "cycleMs": 616,
+      "releaseOffsetMs": 308,
+      "cycleTicks": 7,
+      "releaseOffsetTicks": 4,
+      "impactOffsetsTicks": [
+        12
+      ],
+      "cadenceTicks": 7,
+      "count": 1
+    },
+    {
+      "t": 285,
+      "e": "hit",
+      "target": "keep",
+      "dmg": 21
+    },
+    {
+      "t": 287,
+      "e": "attackRun",
+      "id": 0,
+      "side": "attacker",
+      "troop": "mage",
+      "targetKind": "building",
+      "target": "keep",
+      "ix": 2048,
+      "iy": 2176,
+      "mode": "projectile",
+      "technique": "bolt",
+      "cycleMs": 616,
+      "releaseOffsetMs": 308,
+      "cycleTicks": 7,
+      "releaseOffsetTicks": 4,
+      "impactOffsetsTicks": [
+        12
+      ],
+      "cadenceTicks": 7,
+      "count": 1
+    },
+    {
+      "t": 292,
+      "e": "hit",
+      "target": "keep",
+      "dmg": 21
+    },
+    {
+      "t": 294,
+      "e": "attackRun",
+      "id": 0,
+      "side": "attacker",
+      "troop": "mage",
+      "targetKind": "building",
+      "target": "keep",
+      "ix": 2048,
+      "iy": 2176,
+      "mode": "projectile",
+      "technique": "bolt",
+      "cycleMs": 616,
+      "releaseOffsetMs": 308,
+      "cycleTicks": 7,
+      "releaseOffsetTicks": 4,
+      "impactOffsetsTicks": [
+        12
+      ],
+      "cadenceTicks": 7,
+      "count": 1
+    },
+    {
+      "t": 299,
+      "e": "hit",
+      "target": "keep",
+      "dmg": 21
+    },
+    {
+      "t": 301,
+      "e": "attackRun",
+      "id": 0,
+      "side": "attacker",
+      "troop": "mage",
+      "targetKind": "building",
+      "target": "keep",
+      "ix": 2048,
+      "iy": 2176,
+      "mode": "projectile",
+      "technique": "bolt",
+      "cycleMs": 616,
+      "releaseOffsetMs": 308,
+      "cycleTicks": 7,
+      "releaseOffsetTicks": 4,
+      "impactOffsetsTicks": [
+        12
+      ],
+      "cadenceTicks": 7,
+      "count": 1
+    },
+    {
+      "t": 306,
+      "e": "hit",
+      "target": "keep",
+      "dmg": 21
+    },
+    {
+      "t": 308,
+      "e": "attackRun",
+      "id": 0,
+      "side": "attacker",
+      "troop": "mage",
+      "targetKind": "building",
+      "target": "keep",
+      "ix": 2048,
+      "iy": 2176,
+      "mode": "projectile",
+      "technique": "bolt",
+      "cycleMs": 616,
+      "releaseOffsetMs": 308,
+      "cycleTicks": 7,
+      "releaseOffsetTicks": 4,
+      "impactOffsetsTicks": [
+        12
+      ],
+      "cadenceTicks": 7,
+      "count": 1
+    },
+    {
+      "t": 313,
+      "e": "hit",
+      "target": "keep",
+      "dmg": 21
+    },
+    {
+      "t": 315,
+      "e": "attackRun",
+      "id": 0,
+      "side": "attacker",
+      "troop": "mage",
+      "targetKind": "building",
+      "target": "keep",
+      "ix": 2048,
+      "iy": 2176,
+      "mode": "projectile",
+      "technique": "bolt",
+      "cycleMs": 616,
+      "releaseOffsetMs": 308,
+      "cycleTicks": 7,
+      "releaseOffsetTicks": 4,
+      "impactOffsetsTicks": [
+        12
+      ],
+      "cadenceTicks": 7,
+      "count": 1
+    },
+    {
+      "t": 320,
+      "e": "hit",
+      "target": "keep",
+      "dmg": 21
+    },
+    {
+      "t": 322,
+      "e": "attackRun",
+      "id": 0,
+      "side": "attacker",
+      "troop": "mage",
+      "targetKind": "building",
+      "target": "keep",
+      "ix": 2048,
+      "iy": 2176,
+      "mode": "projectile",
+      "technique": "bolt",
+      "cycleMs": 616,
+      "releaseOffsetMs": 308,
+      "cycleTicks": 7,
+      "releaseOffsetTicks": 4,
+      "impactOffsetsTicks": [
+        12
+      ],
+      "cadenceTicks": 7,
+      "count": 1
+    },
+    {
+      "t": 327,
+      "e": "hit",
+      "target": "keep",
+      "dmg": 21
+    },
+    {
+      "t": 329,
+      "e": "attackRun",
+      "id": 0,
+      "side": "attacker",
+      "troop": "mage",
+      "targetKind": "building",
+      "target": "keep",
+      "ix": 2048,
+      "iy": 2176,
+      "mode": "projectile",
+      "technique": "bolt",
+      "cycleMs": 616,
+      "releaseOffsetMs": 308,
+      "cycleTicks": 7,
+      "releaseOffsetTicks": 4,
+      "impactOffsetsTicks": [
+        12
+      ],
+      "cadenceTicks": 7,
+      "count": 1
+    },
+    {
+      "t": 334,
+      "e": "hit",
+      "target": "keep",
+      "dmg": 21
+    },
+    {
+      "t": 336,
+      "e": "attackRun",
+      "id": 0,
+      "side": "attacker",
+      "troop": "mage",
+      "targetKind": "building",
+      "target": "keep",
+      "ix": 2048,
+      "iy": 2176,
+      "mode": "projectile",
+      "technique": "bolt",
+      "cycleMs": 616,
+      "releaseOffsetMs": 308,
+      "cycleTicks": 7,
+      "releaseOffsetTicks": 4,
+      "impactOffsetsTicks": [
+        12
+      ],
+      "cadenceTicks": 7,
+      "count": 1
+    },
+    {
+      "t": 341,
+      "e": "hit",
+      "target": "keep",
+      "dmg": 21
+    },
+    {
+      "t": 343,
+      "e": "attackRun",
+      "id": 0,
+      "side": "attacker",
+      "troop": "mage",
+      "targetKind": "building",
+      "target": "keep",
+      "ix": 2048,
+      "iy": 2176,
+      "mode": "projectile",
+      "technique": "bolt",
+      "cycleMs": 616,
+      "releaseOffsetMs": 308,
+      "cycleTicks": 7,
+      "releaseOffsetTicks": 4,
+      "impactOffsetsTicks": [
+        12
+      ],
+      "cadenceTicks": 7,
+      "count": 1
+    },
+    {
+      "t": 348,
+      "e": "hit",
+      "target": "keep",
+      "dmg": 21
+    },
+    {
+      "t": 350,
+      "e": "attackRun",
+      "id": 0,
+      "side": "attacker",
+      "troop": "mage",
+      "targetKind": "building",
+      "target": "keep",
+      "ix": 2048,
+      "iy": 2176,
+      "mode": "projectile",
+      "technique": "bolt",
+      "cycleMs": 616,
+      "releaseOffsetMs": 308,
+      "cycleTicks": 7,
+      "releaseOffsetTicks": 4,
+      "impactOffsetsTicks": [
+        12
+      ],
+      "cadenceTicks": 7,
+      "count": 1
+    },
+    {
+      "t": 355,
+      "e": "hit",
+      "target": "keep",
+      "dmg": 21
+    },
+    {
+      "t": 357,
+      "e": "attackRun",
+      "id": 0,
+      "side": "attacker",
+      "troop": "mage",
+      "targetKind": "building",
+      "target": "keep",
+      "ix": 2048,
+      "iy": 2176,
+      "mode": "projectile",
+      "technique": "bolt",
+      "cycleMs": 616,
+      "releaseOffsetMs": 308,
+      "cycleTicks": 7,
+      "releaseOffsetTicks": 4,
+      "impactOffsetsTicks": [
+        12
+      ],
+      "cadenceTicks": 7,
+      "count": 1
+    },
+    {
+      "t": 362,
+      "e": "hit",
+      "target": "keep",
+      "dmg": 21
+    },
+    {
+      "t": 364,
+      "e": "attackRun",
+      "id": 0,
+      "side": "attacker",
+      "troop": "mage",
+      "targetKind": "building",
+      "target": "keep",
+      "ix": 2048,
+      "iy": 2176,
+      "mode": "projectile",
+      "technique": "bolt",
+      "cycleMs": 616,
+      "releaseOffsetMs": 308,
+      "cycleTicks": 7,
+      "releaseOffsetTicks": 4,
+      "impactOffsetsTicks": [
+        12
+      ],
+      "cadenceTicks": 7,
+      "count": 1
+    },
+    {
+      "t": 369,
+      "e": "hit",
+      "target": "keep",
+      "dmg": 21
+    },
+    {
+      "t": 371,
+      "e": "attackRun",
+      "id": 0,
+      "side": "attacker",
+      "troop": "mage",
+      "targetKind": "building",
+      "target": "keep",
+      "ix": 2048,
+      "iy": 2176,
+      "mode": "projectile",
+      "technique": "bolt",
+      "cycleMs": 616,
+      "releaseOffsetMs": 308,
+      "cycleTicks": 7,
+      "releaseOffsetTicks": 4,
+      "impactOffsetsTicks": [
+        12
+      ],
+      "cadenceTicks": 7,
+      "count": 1
+    },
+    {
+      "t": 376,
+      "e": "hit",
+      "target": "keep",
+      "dmg": 21
+    },
+    {
+      "t": 378,
+      "e": "attackRun",
+      "id": 0,
+      "side": "attacker",
+      "troop": "mage",
+      "targetKind": "building",
+      "target": "keep",
+      "ix": 2048,
+      "iy": 2176,
+      "mode": "projectile",
+      "technique": "bolt",
+      "cycleMs": 616,
+      "releaseOffsetMs": 308,
+      "cycleTicks": 7,
+      "releaseOffsetTicks": 4,
+      "impactOffsetsTicks": [
+        12
+      ],
+      "cadenceTicks": 7,
+      "count": 1
+    },
+    {
+      "t": 383,
+      "e": "hit",
+      "target": "keep",
+      "dmg": 21
+    },
+    {
+      "t": 385,
+      "e": "attackRun",
+      "id": 0,
+      "side": "attacker",
+      "troop": "mage",
+      "targetKind": "building",
+      "target": "keep",
+      "ix": 2048,
+      "iy": 2176,
+      "mode": "projectile",
+      "technique": "bolt",
+      "cycleMs": 616,
+      "releaseOffsetMs": 308,
+      "cycleTicks": 7,
+      "releaseOffsetTicks": 4,
+      "impactOffsetsTicks": [
+        12
+      ],
+      "cadenceTicks": 7,
+      "count": 1
+    },
+    {
+      "t": 390,
+      "e": "hit",
+      "target": "keep",
+      "dmg": 21
+    },
+    {
+      "t": 392,
+      "e": "attackRun",
+      "id": 0,
+      "side": "attacker",
+      "troop": "mage",
+      "targetKind": "building",
+      "target": "keep",
+      "ix": 2048,
+      "iy": 2176,
+      "mode": "projectile",
+      "technique": "bolt",
+      "cycleMs": 616,
+      "releaseOffsetMs": 308,
+      "cycleTicks": 7,
+      "releaseOffsetTicks": 4,
+      "impactOffsetsTicks": [
+        12
+      ],
+      "cadenceTicks": 7,
+      "count": 1
+    },
+    {
+      "t": 397,
+      "e": "hit",
+      "target": "keep",
+      "dmg": 21
+    },
+    {
+      "t": 399,
+      "e": "attackRun",
+      "id": 0,
+      "side": "attacker",
+      "troop": "mage",
+      "targetKind": "building",
+      "target": "keep",
+      "ix": 2048,
+      "iy": 2176,
+      "mode": "projectile",
+      "technique": "bolt",
+      "cycleMs": 616,
+      "releaseOffsetMs": 308,
+      "cycleTicks": 7,
+      "releaseOffsetTicks": 4,
+      "impactOffsetsTicks": [
+        12
+      ],
+      "cadenceTicks": 7,
+      "count": 1
+    },
+    {
+      "t": 404,
+      "e": "hit",
+      "target": "keep",
+      "dmg": 21
+    },
+    {
+      "t": 406,
+      "e": "attackRun",
+      "id": 0,
+      "side": "attacker",
+      "troop": "mage",
+      "targetKind": "building",
+      "target": "keep",
+      "ix": 2048,
+      "iy": 2176,
+      "mode": "projectile",
+      "technique": "bolt",
+      "cycleMs": 616,
+      "releaseOffsetMs": 308,
+      "cycleTicks": 7,
+      "releaseOffsetTicks": 4,
+      "impactOffsetsTicks": [
+        12
+      ],
+      "cadenceTicks": 7,
+      "count": 1
+    },
+    {
+      "t": 411,
+      "e": "hit",
+      "target": "keep",
+      "dmg": 21
+    },
+    {
+      "t": 413,
+      "e": "attackRun",
+      "id": 0,
+      "side": "attacker",
+      "troop": "mage",
+      "targetKind": "building",
+      "target": "keep",
+      "ix": 2048,
+      "iy": 2176,
+      "mode": "projectile",
+      "technique": "bolt",
+      "cycleMs": 616,
+      "releaseOffsetMs": 308,
+      "cycleTicks": 7,
+      "releaseOffsetTicks": 4,
+      "impactOffsetsTicks": [
+        12
+      ],
+      "cadenceTicks": 7,
+      "count": 1
+    },
+    {
+      "t": 418,
+      "e": "hit",
+      "target": "keep",
+      "dmg": 21
+    },
+    {
+      "t": 420,
+      "e": "attackRun",
+      "id": 0,
+      "side": "attacker",
+      "troop": "mage",
+      "targetKind": "building",
+      "target": "keep",
+      "ix": 2048,
+      "iy": 2176,
+      "mode": "projectile",
+      "technique": "bolt",
+      "cycleMs": 616,
+      "releaseOffsetMs": 308,
+      "cycleTicks": 7,
+      "releaseOffsetTicks": 4,
+      "impactOffsetsTicks": [
+        12
+      ],
+      "cadenceTicks": 7,
+      "count": 1
+    },
+    {
+      "t": 425,
+      "e": "hit",
+      "target": "keep",
+      "dmg": 21
+    },
+    {
+      "t": 427,
+      "e": "attackRun",
+      "id": 0,
+      "side": "attacker",
+      "troop": "mage",
+      "targetKind": "building",
+      "target": "keep",
+      "ix": 2048,
+      "iy": 2176,
+      "mode": "projectile",
+      "technique": "bolt",
+      "cycleMs": 616,
+      "releaseOffsetMs": 308,
+      "cycleTicks": 7,
+      "releaseOffsetTicks": 4,
+      "impactOffsetsTicks": [
+        12
+      ],
+      "cadenceTicks": 7,
+      "count": 1
+    },
+    {
+      "t": 432,
+      "e": "hit",
+      "target": "keep",
+      "dmg": 21
+    },
+    {
+      "t": 434,
+      "e": "attackRun",
+      "id": 0,
+      "side": "attacker",
+      "troop": "mage",
+      "targetKind": "building",
+      "target": "keep",
+      "ix": 2048,
+      "iy": 2176,
+      "mode": "projectile",
+      "technique": "bolt",
+      "cycleMs": 616,
+      "releaseOffsetMs": 308,
+      "cycleTicks": 7,
+      "releaseOffsetTicks": 4,
+      "impactOffsetsTicks": [
+        12
+      ],
+      "cadenceTicks": 7,
+      "count": 1
+    },
+    {
+      "t": 439,
+      "e": "hit",
+      "target": "keep",
+      "dmg": 21
+    },
+    {
+      "t": 439,
+      "e": "destroyed",
+      "id": "keep"
+    },
+    {
+      "t": 439,
+      "e": "star",
+      "n": 1
+    },
+    {
+      "t": 439,
+      "e": "star",
+      "n": 2
+    },
+    {
+      "t": 443,
+      "e": "attackRun",
+      "id": 0,
+      "side": "attacker",
+      "troop": "mage",
+      "targetKind": "building",
+      "target": "mine",
+      "ix": 2048,
+      "iy": 2560,
+      "mode": "projectile",
+      "technique": "bolt",
+      "cycleMs": 616,
+      "releaseOffsetMs": 308,
+      "cycleTicks": 7,
+      "releaseOffsetTicks": 4,
+      "impactOffsetsTicks": [
+        12
+      ],
+      "cadenceTicks": 7,
+      "count": 1
+    },
+    {
+      "t": 450,
+      "e": "attackRun",
+      "id": 0,
+      "side": "attacker",
+      "troop": "mage",
+      "targetKind": "building",
+      "target": "mine",
+      "ix": 2048,
+      "iy": 2560,
+      "mode": "projectile",
+      "technique": "bolt",
+      "cycleMs": 616,
+      "releaseOffsetMs": 308,
+      "cycleTicks": 7,
+      "releaseOffsetTicks": 4,
+      "impactOffsetsTicks": [
+        12
+      ],
+      "cadenceTicks": 7,
+      "count": 1
+    },
+    {
+      "t": 455,
+      "e": "hit",
+      "target": "mine",
+      "dmg": 21
+    },
+    {
+      "t": 457,
+      "e": "attackRun",
+      "id": 0,
+      "side": "attacker",
+      "troop": "mage",
+      "targetKind": "building",
+      "target": "mine",
+      "ix": 2048,
+      "iy": 2560,
+      "mode": "projectile",
+      "technique": "bolt",
+      "cycleMs": 616,
+      "releaseOffsetMs": 308,
+      "cycleTicks": 7,
+      "releaseOffsetTicks": 4,
+      "impactOffsetsTicks": [
+        12
+      ],
+      "cadenceTicks": 7,
+      "count": 1
+    },
+    {
+      "t": 462,
+      "e": "hit",
+      "target": "mine",
+      "dmg": 21
+    },
+    {
+      "t": 464,
+      "e": "attackRun",
+      "id": 0,
+      "side": "attacker",
+      "troop": "mage",
+      "targetKind": "building",
+      "target": "mine",
+      "ix": 2048,
+      "iy": 2560,
+      "mode": "projectile",
+      "technique": "bolt",
+      "cycleMs": 616,
+      "releaseOffsetMs": 308,
+      "cycleTicks": 7,
+      "releaseOffsetTicks": 4,
+      "impactOffsetsTicks": [
+        12
+      ],
+      "cadenceTicks": 7,
+      "count": 1
+    },
+    {
+      "t": 469,
+      "e": "hit",
+      "target": "mine",
+      "dmg": 21
+    },
+    {
+      "t": 471,
+      "e": "attackRun",
+      "id": 0,
+      "side": "attacker",
+      "troop": "mage",
+      "targetKind": "building",
+      "target": "mine",
+      "ix": 2048,
+      "iy": 2560,
+      "mode": "projectile",
+      "technique": "bolt",
+      "cycleMs": 616,
+      "releaseOffsetMs": 308,
+      "cycleTicks": 7,
+      "releaseOffsetTicks": 4,
+      "impactOffsetsTicks": [
+        12
+      ],
+      "cadenceTicks": 7,
+      "count": 1
+    },
+    {
+      "t": 476,
+      "e": "hit",
+      "target": "mine",
+      "dmg": 21
+    },
+    {
+      "t": 478,
+      "e": "attackRun",
+      "id": 0,
+      "side": "attacker",
+      "troop": "mage",
+      "targetKind": "building",
+      "target": "mine",
+      "ix": 2048,
+      "iy": 2560,
+      "mode": "projectile",
+      "technique": "bolt",
+      "cycleMs": 616,
+      "releaseOffsetMs": 308,
+      "cycleTicks": 7,
+      "releaseOffsetTicks": 4,
+      "impactOffsetsTicks": [
+        12
+      ],
+      "cadenceTicks": 7,
+      "count": 1
+    },
+    {
+      "t": 483,
+      "e": "hit",
+      "target": "mine",
+      "dmg": 21
+    },
+    {
+      "t": 485,
+      "e": "attackRun",
+      "id": 0,
+      "side": "attacker",
+      "troop": "mage",
+      "targetKind": "building",
+      "target": "mine",
+      "ix": 2048,
+      "iy": 2560,
+      "mode": "projectile",
+      "technique": "bolt",
+      "cycleMs": 616,
+      "releaseOffsetMs": 308,
+      "cycleTicks": 7,
+      "releaseOffsetTicks": 4,
+      "impactOffsetsTicks": [
+        12
+      ],
+      "cadenceTicks": 7,
+      "count": 1
+    },
+    {
+      "t": 490,
+      "e": "hit",
+      "target": "mine",
+      "dmg": 21
+    },
+    {
+      "t": 492,
+      "e": "attackRun",
+      "id": 0,
+      "side": "attacker",
+      "troop": "mage",
+      "targetKind": "building",
+      "target": "mine",
+      "ix": 2048,
+      "iy": 2560,
+      "mode": "projectile",
+      "technique": "bolt",
+      "cycleMs": 616,
+      "releaseOffsetMs": 308,
+      "cycleTicks": 7,
+      "releaseOffsetTicks": 4,
+      "impactOffsetsTicks": [
+        12
+      ],
+      "cadenceTicks": 7,
+      "count": 1
+    },
+    {
+      "t": 497,
+      "e": "hit",
+      "target": "mine",
+      "dmg": 21
+    },
+    {
+      "t": 499,
+      "e": "attackRun",
+      "id": 0,
+      "side": "attacker",
+      "troop": "mage",
+      "targetKind": "building",
+      "target": "mine",
+      "ix": 2048,
+      "iy": 2560,
+      "mode": "projectile",
+      "technique": "bolt",
+      "cycleMs": 616,
+      "releaseOffsetMs": 308,
+      "cycleTicks": 7,
+      "releaseOffsetTicks": 4,
+      "impactOffsetsTicks": [
+        12
+      ],
+      "cadenceTicks": 7,
+      "count": 1
+    },
+    {
+      "t": 504,
+      "e": "hit",
+      "target": "mine",
+      "dmg": 21
+    },
+    {
+      "t": 506,
+      "e": "attackRun",
+      "id": 0,
+      "side": "attacker",
+      "troop": "mage",
+      "targetKind": "building",
+      "target": "mine",
+      "ix": 2048,
+      "iy": 2560,
+      "mode": "projectile",
+      "technique": "bolt",
+      "cycleMs": 616,
+      "releaseOffsetMs": 308,
+      "cycleTicks": 7,
+      "releaseOffsetTicks": 4,
+      "impactOffsetsTicks": [
+        12
+      ],
+      "cadenceTicks": 7,
+      "count": 1
+    },
+    {
+      "t": 511,
+      "e": "hit",
+      "target": "mine",
+      "dmg": 21
+    },
+    {
+      "t": 513,
+      "e": "attackRun",
+      "id": 0,
+      "side": "attacker",
+      "troop": "mage",
+      "targetKind": "building",
+      "target": "mine",
+      "ix": 2048,
+      "iy": 2560,
+      "mode": "projectile",
+      "technique": "bolt",
+      "cycleMs": 616,
+      "releaseOffsetMs": 308,
+      "cycleTicks": 7,
+      "releaseOffsetTicks": 4,
+      "impactOffsetsTicks": [
+        12
+      ],
+      "cadenceTicks": 7,
+      "count": 1
+    },
+    {
+      "t": 518,
+      "e": "hit",
+      "target": "mine",
+      "dmg": 21
+    },
+    {
+      "t": 520,
+      "e": "attackRun",
+      "id": 0,
+      "side": "attacker",
+      "troop": "mage",
+      "targetKind": "building",
+      "target": "mine",
+      "ix": 2048,
+      "iy": 2560,
+      "mode": "projectile",
+      "technique": "bolt",
+      "cycleMs": 616,
+      "releaseOffsetMs": 308,
+      "cycleTicks": 7,
+      "releaseOffsetTicks": 4,
+      "impactOffsetsTicks": [
+        12
+      ],
+      "cadenceTicks": 7,
+      "count": 1
+    },
+    {
+      "t": 525,
+      "e": "hit",
+      "target": "mine",
+      "dmg": 21
+    },
+    {
+      "t": 527,
+      "e": "attackRun",
+      "id": 0,
+      "side": "attacker",
+      "troop": "mage",
+      "targetKind": "building",
+      "target": "mine",
+      "ix": 2048,
+      "iy": 2560,
+      "mode": "projectile",
+      "technique": "bolt",
+      "cycleMs": 616,
+      "releaseOffsetMs": 308,
+      "cycleTicks": 7,
+      "releaseOffsetTicks": 4,
+      "impactOffsetsTicks": [
+        12
+      ],
+      "cadenceTicks": 7,
+      "count": 1
+    },
+    {
+      "t": 532,
+      "e": "hit",
+      "target": "mine",
+      "dmg": 21
+    },
+    {
+      "t": 534,
+      "e": "attackRun",
+      "id": 0,
+      "side": "attacker",
+      "troop": "mage",
+      "targetKind": "building",
+      "target": "mine",
+      "ix": 2048,
+      "iy": 2560,
+      "mode": "projectile",
+      "technique": "bolt",
+      "cycleMs": 616,
+      "releaseOffsetMs": 308,
+      "cycleTicks": 7,
+      "releaseOffsetTicks": 4,
+      "impactOffsetsTicks": [
+        12
+      ],
+      "cadenceTicks": 7,
+      "count": 1
+    },
+    {
+      "t": 539,
+      "e": "hit",
+      "target": "mine",
+      "dmg": 21
+    },
+    {
+      "t": 541,
+      "e": "attackRun",
+      "id": 0,
+      "side": "attacker",
+      "troop": "mage",
+      "targetKind": "building",
+      "target": "mine",
+      "ix": 2048,
+      "iy": 2560,
+      "mode": "projectile",
+      "technique": "bolt",
+      "cycleMs": 616,
+      "releaseOffsetMs": 308,
+      "cycleTicks": 7,
+      "releaseOffsetTicks": 4,
+      "impactOffsetsTicks": [
+        12
+      ],
+      "cadenceTicks": 7,
+      "count": 1
+    },
+    {
+      "t": 546,
+      "e": "hit",
+      "target": "mine",
+      "dmg": 21
+    },
+    {
+      "t": 548,
+      "e": "attackRun",
+      "id": 0,
+      "side": "attacker",
+      "troop": "mage",
+      "targetKind": "building",
+      "target": "mine",
+      "ix": 2048,
+      "iy": 2560,
+      "mode": "projectile",
+      "technique": "bolt",
+      "cycleMs": 616,
+      "releaseOffsetMs": 308,
+      "cycleTicks": 7,
+      "releaseOffsetTicks": 4,
+      "impactOffsetsTicks": [
+        12
+      ],
+      "cadenceTicks": 7,
+      "count": 1
+    },
+    {
+      "t": 553,
+      "e": "hit",
+      "target": "mine",
+      "dmg": 21
+    },
+    {
+      "t": 553,
+      "e": "destroyed",
+      "id": "mine"
+    },
+    {
+      "t": 555,
+      "e": "pos",
+      "id": 0,
+      "x": 1145,
+      "y": 2198
+    },
+    {
+      "t": 560,
+      "e": "pos",
+      "id": 0,
+      "x": 1310,
+      "y": 2198
+    },
+    {
+      "t": 565,
+      "e": "pos",
+      "id": 0,
+      "x": 1475,
+      "y": 2198
+    },
+    {
+      "t": 568,
+      "e": "attackRun",
+      "id": 0,
+      "side": "attacker",
+      "troop": "mage",
+      "targetKind": "building",
+      "target": "vault",
+      "ix": 2560,
+      "iy": 2198,
+      "mode": "projectile",
+      "technique": "bolt",
+      "cycleMs": 616,
+      "releaseOffsetMs": 308,
+      "cycleTicks": 7,
+      "releaseOffsetTicks": 4,
+      "impactOffsetsTicks": [
+        12
+      ],
+      "cadenceTicks": 7,
+      "count": 1
+    },
+    {
+      "t": 575,
+      "e": "attackRun",
+      "id": 0,
+      "side": "attacker",
+      "troop": "mage",
+      "targetKind": "building",
+      "target": "vault",
+      "ix": 2560,
+      "iy": 2198,
+      "mode": "projectile",
+      "technique": "bolt",
+      "cycleMs": 616,
+      "releaseOffsetMs": 308,
+      "cycleTicks": 7,
+      "releaseOffsetTicks": 4,
+      "impactOffsetsTicks": [
+        12
+      ],
+      "cadenceTicks": 7,
+      "count": 1
+    },
+    {
+      "t": 580,
+      "e": "hit",
+      "target": "vault",
+      "dmg": 21
+    },
+    {
+      "t": 582,
+      "e": "attackRun",
+      "id": 0,
+      "side": "attacker",
+      "troop": "mage",
+      "targetKind": "building",
+      "target": "vault",
+      "ix": 2560,
+      "iy": 2198,
+      "mode": "projectile",
+      "technique": "bolt",
+      "cycleMs": 616,
+      "releaseOffsetMs": 308,
+      "cycleTicks": 7,
+      "releaseOffsetTicks": 4,
+      "impactOffsetsTicks": [
+        12
+      ],
+      "cadenceTicks": 7,
+      "count": 1
+    },
+    {
+      "t": 587,
+      "e": "hit",
+      "target": "vault",
+      "dmg": 21
+    },
+    {
+      "t": 589,
+      "e": "attackRun",
+      "id": 0,
+      "side": "attacker",
+      "troop": "mage",
+      "targetKind": "building",
+      "target": "vault",
+      "ix": 2560,
+      "iy": 2198,
+      "mode": "projectile",
+      "technique": "bolt",
+      "cycleMs": 616,
+      "releaseOffsetMs": 308,
+      "cycleTicks": 7,
+      "releaseOffsetTicks": 4,
+      "impactOffsetsTicks": [
+        12
+      ],
+      "cadenceTicks": 7,
+      "count": 1
+    },
+    {
+      "t": 594,
+      "e": "hit",
+      "target": "vault",
+      "dmg": 21
+    },
+    {
+      "t": 596,
+      "e": "attackRun",
+      "id": 0,
+      "side": "attacker",
+      "troop": "mage",
+      "targetKind": "building",
+      "target": "vault",
+      "ix": 2560,
+      "iy": 2198,
+      "mode": "projectile",
+      "technique": "bolt",
+      "cycleMs": 616,
+      "releaseOffsetMs": 308,
+      "cycleTicks": 7,
+      "releaseOffsetTicks": 4,
+      "impactOffsetsTicks": [
+        12
+      ],
+      "cadenceTicks": 7,
+      "count": 1
+    },
+    {
+      "t": 601,
+      "e": "hit",
+      "target": "vault",
+      "dmg": 21
+    },
+    {
+      "t": 603,
+      "e": "attackRun",
+      "id": 0,
+      "side": "attacker",
+      "troop": "mage",
+      "targetKind": "building",
+      "target": "vault",
+      "ix": 2560,
+      "iy": 2198,
+      "mode": "projectile",
+      "technique": "bolt",
+      "cycleMs": 616,
+      "releaseOffsetMs": 308,
+      "cycleTicks": 7,
+      "releaseOffsetTicks": 4,
+      "impactOffsetsTicks": [
+        12
+      ],
+      "cadenceTicks": 7,
+      "count": 1
+    },
+    {
+      "t": 608,
+      "e": "hit",
+      "target": "vault",
+      "dmg": 21
+    },
+    {
+      "t": 610,
+      "e": "attackRun",
+      "id": 0,
+      "side": "attacker",
+      "troop": "mage",
+      "targetKind": "building",
+      "target": "vault",
+      "ix": 2560,
+      "iy": 2198,
+      "mode": "projectile",
+      "technique": "bolt",
+      "cycleMs": 616,
+      "releaseOffsetMs": 308,
+      "cycleTicks": 7,
+      "releaseOffsetTicks": 4,
+      "impactOffsetsTicks": [
+        12
+      ],
+      "cadenceTicks": 7,
+      "count": 1
+    },
+    {
+      "t": 615,
+      "e": "hit",
+      "target": "vault",
+      "dmg": 21
+    },
+    {
+      "t": 617,
+      "e": "attackRun",
+      "id": 0,
+      "side": "attacker",
+      "troop": "mage",
+      "targetKind": "building",
+      "target": "vault",
+      "ix": 2560,
+      "iy": 2198,
+      "mode": "projectile",
+      "technique": "bolt",
+      "cycleMs": 616,
+      "releaseOffsetMs": 308,
+      "cycleTicks": 7,
+      "releaseOffsetTicks": 4,
+      "impactOffsetsTicks": [
+        12
+      ],
+      "cadenceTicks": 7,
+      "count": 1
+    },
+    {
+      "t": 622,
+      "e": "hit",
+      "target": "vault",
+      "dmg": 21
+    },
+    {
+      "t": 624,
+      "e": "attackRun",
+      "id": 0,
+      "side": "attacker",
+      "troop": "mage",
+      "targetKind": "building",
+      "target": "vault",
+      "ix": 2560,
+      "iy": 2198,
+      "mode": "projectile",
+      "technique": "bolt",
+      "cycleMs": 616,
+      "releaseOffsetMs": 308,
+      "cycleTicks": 7,
+      "releaseOffsetTicks": 4,
+      "impactOffsetsTicks": [
+        12
+      ],
+      "cadenceTicks": 7,
+      "count": 1
+    },
+    {
+      "t": 629,
+      "e": "hit",
+      "target": "vault",
+      "dmg": 21
+    },
+    {
+      "t": 631,
+      "e": "attackRun",
+      "id": 0,
+      "side": "attacker",
+      "troop": "mage",
+      "targetKind": "building",
+      "target": "vault",
+      "ix": 2560,
+      "iy": 2198,
+      "mode": "projectile",
+      "technique": "bolt",
+      "cycleMs": 616,
+      "releaseOffsetMs": 308,
+      "cycleTicks": 7,
+      "releaseOffsetTicks": 4,
+      "impactOffsetsTicks": [
+        12
+      ],
+      "cadenceTicks": 7,
+      "count": 1
+    },
+    {
+      "t": 636,
+      "e": "hit",
+      "target": "vault",
+      "dmg": 21
+    },
+    {
+      "t": 638,
+      "e": "attackRun",
+      "id": 0,
+      "side": "attacker",
+      "troop": "mage",
+      "targetKind": "building",
+      "target": "vault",
+      "ix": 2560,
+      "iy": 2198,
+      "mode": "projectile",
+      "technique": "bolt",
+      "cycleMs": 616,
+      "releaseOffsetMs": 308,
+      "cycleTicks": 7,
+      "releaseOffsetTicks": 4,
+      "impactOffsetsTicks": [
+        12
+      ],
+      "cadenceTicks": 7,
+      "count": 1
+    },
+    {
+      "t": 643,
+      "e": "hit",
+      "target": "vault",
+      "dmg": 21
+    },
+    {
+      "t": 645,
+      "e": "attackRun",
+      "id": 0,
+      "side": "attacker",
+      "troop": "mage",
+      "targetKind": "building",
+      "target": "vault",
+      "ix": 2560,
+      "iy": 2198,
+      "mode": "projectile",
+      "technique": "bolt",
+      "cycleMs": 616,
+      "releaseOffsetMs": 308,
+      "cycleTicks": 7,
+      "releaseOffsetTicks": 4,
+      "impactOffsetsTicks": [
+        12
+      ],
+      "cadenceTicks": 7,
+      "count": 1
+    },
+    {
+      "t": 650,
+      "e": "hit",
+      "target": "vault",
+      "dmg": 21
+    },
+    {
+      "t": 652,
+      "e": "attackRun",
+      "id": 0,
+      "side": "attacker",
+      "troop": "mage",
+      "targetKind": "building",
+      "target": "vault",
+      "ix": 2560,
+      "iy": 2198,
+      "mode": "projectile",
+      "technique": "bolt",
+      "cycleMs": 616,
+      "releaseOffsetMs": 308,
+      "cycleTicks": 7,
+      "releaseOffsetTicks": 4,
+      "impactOffsetsTicks": [
+        12
+      ],
+      "cadenceTicks": 7,
+      "count": 1
+    },
+    {
+      "t": 657,
+      "e": "hit",
+      "target": "vault",
+      "dmg": 21
+    },
+    {
+      "t": 659,
+      "e": "attackRun",
+      "id": 0,
+      "side": "attacker",
+      "troop": "mage",
+      "targetKind": "building",
+      "target": "vault",
+      "ix": 2560,
+      "iy": 2198,
+      "mode": "projectile",
+      "technique": "bolt",
+      "cycleMs": 616,
+      "releaseOffsetMs": 308,
+      "cycleTicks": 7,
+      "releaseOffsetTicks": 4,
+      "impactOffsetsTicks": [
+        12
+      ],
+      "cadenceTicks": 7,
+      "count": 1
+    },
+    {
+      "t": 664,
+      "e": "hit",
+      "target": "vault",
+      "dmg": 21
+    },
+    {
+      "t": 666,
+      "e": "attackRun",
+      "id": 0,
+      "side": "attacker",
+      "troop": "mage",
+      "targetKind": "building",
+      "target": "vault",
+      "ix": 2560,
+      "iy": 2198,
+      "mode": "projectile",
+      "technique": "bolt",
+      "cycleMs": 616,
+      "releaseOffsetMs": 308,
+      "cycleTicks": 7,
+      "releaseOffsetTicks": 4,
+      "impactOffsetsTicks": [
+        12
+      ],
+      "cadenceTicks": 7,
+      "count": 1
+    },
+    {
+      "t": 671,
+      "e": "hit",
+      "target": "vault",
+      "dmg": 21
+    },
+    {
+      "t": 673,
+      "e": "attackRun",
+      "id": 0,
+      "side": "attacker",
+      "troop": "mage",
+      "targetKind": "building",
+      "target": "vault",
+      "ix": 2560,
+      "iy": 2198,
+      "mode": "projectile",
+      "technique": "bolt",
+      "cycleMs": 616,
+      "releaseOffsetMs": 308,
+      "cycleTicks": 7,
+      "releaseOffsetTicks": 4,
+      "impactOffsetsTicks": [
+        12
+      ],
+      "cadenceTicks": 7,
+      "count": 1
+    },
+    {
+      "t": 678,
+      "e": "hit",
+      "target": "vault",
+      "dmg": 21
+    },
+    {
+      "t": 680,
+      "e": "attackRun",
+      "id": 0,
+      "side": "attacker",
+      "troop": "mage",
+      "targetKind": "building",
+      "target": "vault",
+      "ix": 2560,
+      "iy": 2198,
+      "mode": "projectile",
+      "technique": "bolt",
+      "cycleMs": 616,
+      "releaseOffsetMs": 308,
+      "cycleTicks": 7,
+      "releaseOffsetTicks": 4,
+      "impactOffsetsTicks": [
+        12
+      ],
+      "cadenceTicks": 7,
+      "count": 1
+    },
+    {
+      "t": 685,
+      "e": "hit",
+      "target": "vault",
+      "dmg": 21
+    },
+    {
+      "t": 687,
+      "e": "attackRun",
+      "id": 0,
+      "side": "attacker",
+      "troop": "mage",
+      "targetKind": "building",
+      "target": "vault",
+      "ix": 2560,
+      "iy": 2198,
+      "mode": "projectile",
+      "technique": "bolt",
+      "cycleMs": 616,
+      "releaseOffsetMs": 308,
+      "cycleTicks": 7,
+      "releaseOffsetTicks": 4,
+      "impactOffsetsTicks": [
+        12
+      ],
+      "cadenceTicks": 7,
+      "count": 1
+    },
+    {
+      "t": 692,
+      "e": "hit",
+      "target": "vault",
+      "dmg": 21
+    },
+    {
+      "t": 694,
+      "e": "attackRun",
+      "id": 0,
+      "side": "attacker",
+      "troop": "mage",
+      "targetKind": "building",
+      "target": "vault",
+      "ix": 2560,
+      "iy": 2198,
+      "mode": "projectile",
+      "technique": "bolt",
+      "cycleMs": 616,
+      "releaseOffsetMs": 308,
+      "cycleTicks": 7,
+      "releaseOffsetTicks": 4,
+      "impactOffsetsTicks": [
+        12
+      ],
+      "cadenceTicks": 7,
+      "count": 1
+    },
+    {
+      "t": 699,
+      "e": "hit",
+      "target": "vault",
+      "dmg": 21
+    },
+    {
+      "t": 701,
+      "e": "attackRun",
+      "id": 0,
+      "side": "attacker",
+      "troop": "mage",
+      "targetKind": "building",
+      "target": "vault",
+      "ix": 2560,
+      "iy": 2198,
+      "mode": "projectile",
+      "technique": "bolt",
+      "cycleMs": 616,
+      "releaseOffsetMs": 308,
+      "cycleTicks": 7,
+      "releaseOffsetTicks": 4,
+      "impactOffsetsTicks": [
+        12
+      ],
+      "cadenceTicks": 7,
+      "count": 1
+    },
+    {
+      "t": 706,
+      "e": "hit",
+      "target": "vault",
+      "dmg": 21
+    },
+    {
+      "t": 708,
+      "e": "attackRun",
+      "id": 0,
+      "side": "attacker",
+      "troop": "mage",
+      "targetKind": "building",
+      "target": "vault",
+      "ix": 2560,
+      "iy": 2198,
+      "mode": "projectile",
+      "technique": "bolt",
+      "cycleMs": 616,
+      "releaseOffsetMs": 308,
+      "cycleTicks": 7,
+      "releaseOffsetTicks": 4,
+      "impactOffsetsTicks": [
+        12
+      ],
+      "cadenceTicks": 7,
+      "count": 1
+    },
+    {
+      "t": 713,
+      "e": "hit",
+      "target": "vault",
+      "dmg": 21
+    },
+    {
+      "t": 715,
+      "e": "attackRun",
+      "id": 0,
+      "side": "attacker",
+      "troop": "mage",
+      "targetKind": "building",
+      "target": "vault",
+      "ix": 2560,
+      "iy": 2198,
+      "mode": "projectile",
+      "technique": "bolt",
+      "cycleMs": 616,
+      "releaseOffsetMs": 308,
+      "cycleTicks": 7,
+      "releaseOffsetTicks": 4,
+      "impactOffsetsTicks": [
+        12
+      ],
+      "cadenceTicks": 7,
+      "count": 1
+    },
+    {
+      "t": 720,
+      "e": "hit",
+      "target": "vault",
+      "dmg": 21
+    },
+    {
+      "t": 722,
+      "e": "attackRun",
+      "id": 0,
+      "side": "attacker",
+      "troop": "mage",
+      "targetKind": "building",
+      "target": "vault",
+      "ix": 2560,
+      "iy": 2198,
+      "mode": "projectile",
+      "technique": "bolt",
+      "cycleMs": 616,
+      "releaseOffsetMs": 308,
+      "cycleTicks": 7,
+      "releaseOffsetTicks": 4,
+      "impactOffsetsTicks": [
+        12
+      ],
+      "cadenceTicks": 7,
+      "count": 1
+    },
+    {
+      "t": 727,
+      "e": "hit",
+      "target": "vault",
+      "dmg": 21
+    },
+    {
+      "t": 729,
+      "e": "attackRun",
+      "id": 0,
+      "side": "attacker",
+      "troop": "mage",
+      "targetKind": "building",
+      "target": "vault",
+      "ix": 2560,
+      "iy": 2198,
+      "mode": "projectile",
+      "technique": "bolt",
+      "cycleMs": 616,
+      "releaseOffsetMs": 308,
+      "cycleTicks": 7,
+      "releaseOffsetTicks": 4,
+      "impactOffsetsTicks": [
+        12
+      ],
+      "cadenceTicks": 7,
+      "count": 1
+    },
+    {
+      "t": 734,
+      "e": "hit",
+      "target": "vault",
+      "dmg": 21
+    },
+    {
+      "t": 736,
+      "e": "attackRun",
+      "id": 0,
+      "side": "attacker",
+      "troop": "mage",
+      "targetKind": "building",
+      "target": "vault",
+      "ix": 2560,
+      "iy": 2198,
+      "mode": "projectile",
+      "technique": "bolt",
+      "cycleMs": 616,
+      "releaseOffsetMs": 308,
+      "cycleTicks": 7,
+      "releaseOffsetTicks": 4,
+      "impactOffsetsTicks": [
+        12
+      ],
+      "cadenceTicks": 7,
+      "count": 1
+    },
+    {
+      "t": 741,
+      "e": "hit",
+      "target": "vault",
+      "dmg": 21
+    },
+    {
+      "t": 741,
+      "e": "destroyed",
+      "id": "vault"
+    },
+    {
+      "t": 741,
+      "e": "star",
+      "n": 3
+    }
+  ]
+}

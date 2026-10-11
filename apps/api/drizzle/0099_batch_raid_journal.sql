@@ -1,0 +1,2 @@
+ALTER TABLE "raid_live_states" ADD COLUMN "mode" text DEFAULT 'live' NOT NULL;--> statement-breakpoint
+ALTER TABLE "raid_live_states" ADD CONSTRAINT "raid_live_states_mode_ck" CHECK ("raid_live_states"."mode" IN ('live', 'batch'));

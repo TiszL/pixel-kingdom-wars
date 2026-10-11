@@ -1,0 +1,35 @@
+{
+  "schema": 1,
+  "lane": "NR (GROUND, N3)",
+  "pin": "02e9da8414156b9e0000df1653de6273b196cca6",
+  "for": "tools/world-shaders.mjs (NT): GROUND's GLSL programs, read from the pinned src/realm/ground.js createGround() programs() and runProbe(). NT merges this list into the exporter; the NR JVM test GroundShaderRulesTest reads it.",
+  "note": "ground.js passes rm-map its defines through a variable (`defines: gd`), which the exporter's call-site reader treats as 'debug switches, empty in production'. Cinderfall's rm-map compiles with RM_LAVA (ground.js:108, P0 fix pass #1: the lava branch compiles only for Cinderfall), so the native port needs the rm-map+RM_LAVA stage too: tools/world-shaders.mjs reads this list and exports the listed variant after checking that ground.js assigns gd.RM_LAVA = true (NT, N3). The ?gdbg profiling switches (RM_DBG_*) of the same variable stay out of production, as before.",
+  "includes": {
+    "registeredBy": "ground.js createGround(): core.include(...)",
+    "rm-fields": "glsl/classes.glsl.js RM_FIELDS",
+    "rm-shore": "glsl/classes.glsl.js RM_SHORE",
+    "rm-classify": "glsl/classes.glsl.js RM_CLASSIFY",
+    "rm-water": "glsl/water.glsl.js RM_WATER",
+    "classes": "glsl/classes.glsl.js CLASSES"
+  },
+  "rules": {
+    "loopMaxLiteral": 16,
+    "loopNote": "every GROUND loop has a literal trip count <= 16 (groundcost.test 'ground shaders cannot spin the GPU'); stricter than the native 64 rule",
+    "classifierBake": 1,
+    "classifierDisplay": 0,
+    "classifierNote": "rmClassCore is reached only by rm-raw, exactly once per vertex; every other program (display, the other bakes, and every program that includes \"classes\": LIFE, BASES) reaches none of rm-classify's functions"
+  },
+  "programs": [
+    { "key": "rm-raw", "name": "rm-raw", "vs": "RESOLVE_VS", "fs": "RAW_FS", "from": "glsl/resolve.glsl.js", "defines": {}, "bake": true, "pass": "raw", "rehearsalSet": "map", "targets": ["R8UI 2D (lattice steps, TRUE page steps)"], "blend": ["off"], "realms": "all", "exported": true },
+    { "key": "rm-despeckle", "name": "rm-despeckle", "vs": "RESOLVE_VS", "fs": "DESPECKLE_FS", "from": "glsl/resolve.glsl.js", "defines": {}, "bake": true, "pass": "despeckle", "rehearsalSet": "map", "targets": ["R8UI 2D"], "blend": ["off"], "realms": "all", "exported": true },
+    { "key": "rm-legalise", "name": "rm-legalise", "vs": "RESOLVE_VS", "fs": "LEGALISE_FS", "from": "glsl/resolve.glsl.js", "defines": {}, "bake": true, "pass": "legalise", "rehearsalSet": "map", "targets": ["R8UI 2D"], "blend": ["off"], "realms": "all", "exported": true },
+    { "key": "rm-pure", "name": "rm-pure", "vs": "RESOLVE_VS", "fs": "PURE_FS", "from": "glsl/resolve.glsl.js", "defines": {}, "bake": true, "pass": "pure", "rehearsalSet": "map", "targets": ["R8UI 2D-array layer (the lattice page)"], "blend": ["off"], "realms": "all", "exported": true },
+    { "key": "rm-record", "name": "rm-record", "vs": "RESOLVE_VS", "fs": "RECORD_FS", "from": "glsl/resolve.glsl.js", "defines": {}, "bake": true, "pass": "record", "rehearsalSet": "map", "targets": ["RGBA16UI 2D-array layer (the TRUE record page)"], "blend": ["off"], "realms": "all", "exported": true },
+    { "key": "rm-chart", "name": "rm-chart", "vs": "CHART_VS", "fs": "CHART_FS", "from": "glsl/chart.glsl.js", "defines": {}, "bake": false, "pass": "chart", "rehearsalSet": "map", "targets": ["the ground target (RGBA8 k x) or the screen"], "blend": ["off"], "realms": "all", "exported": true },
+    { "key": "rm-map", "name": "rm-map", "vs": "MAP_VS", "fs": "MAP_FS", "from": "glsl/mapground.glsl.js", "defines": {}, "bake": false, "pass": "map", "rehearsalSet": "map", "targets": ["the ground target or the screen"], "blend": ["off", "SRC_ALPHA, ONE_MINUS_SRC_ALPHA (the FAR->MAP fade)"], "realms": "every realm but cinderfall", "exported": true },
+    { "key": "rm-map+RM_LAVA", "name": "rm-map", "vs": "MAP_VS", "fs": "MAP_FS", "from": "glsl/mapground.glsl.js", "defines": { "RM_LAVA": true }, "bake": false, "pass": "map", "rehearsalSet": "map", "targets": ["the ground target or the screen"], "blend": ["off", "SRC_ALPHA, ONE_MINUS_SRC_ALPHA"], "realms": ["cinderfall"], "why": "ground.js:108 programs(): if (meta?.id === 'cinderfall') gd.RM_LAVA = true", "exported": true },
+    { "key": "rm-true", "name": "rm-true", "vs": "TRUE_VS", "fs": "TRUE_FS", "from": "glsl/trueground.glsl.js", "defines": {}, "bake": false, "pass": "true", "rehearsalSet": "true", "targets": ["the ground target or the screen"], "blend": ["off", "SRC_ALPHA, ONE_MINUS_SRC_ALPHA (the MAP->TRUE fade)"], "realms": "all", "exported": true },
+    { "key": "rm-map-wmask+RM_DBG_WMASK", "name": "rm-map-wmask", "vs": "MAP_VS", "fs": "MAP_FS", "from": "glsl/mapground.glsl.js", "defines": { "RM_DBG_WMASK": true }, "bake": false, "pass": "map", "qa": true, "why": "ground.js runProbe(): the MAP/TRUE water-line probe (QA only, never drawn in production)", "realms": "all", "exported": true },
+    { "key": "rm-true-wmask+RM_DBG_WMASK", "name": "rm-true-wmask", "vs": "TRUE_VS", "fs": "TRUE_FS", "from": "glsl/trueground.glsl.js", "defines": { "RM_DBG_WMASK": true }, "bake": false, "pass": "true", "qa": true, "why": "ground.js runProbe() (QA only)", "realms": "all", "exported": true }
+  ]
+}

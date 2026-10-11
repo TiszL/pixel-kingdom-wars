@@ -1,0 +1,32 @@
+/* Existing stone, parchment, pixel typography and HUD artwork; Phase E scope only. */
+.sk-realm-panel { color:var(--sk-text); background:var(--sk-panel); outline:none; overflow-wrap:anywhere; }
+.sk-realm-banner { display:flex; align-items:center; gap:12px; padding:14px 10px; }
+.sk-realm-banner h2 { color:var(--sk-goldHi); font-size:32px; font-weight:normal; line-height:1; margin:4px 0; }
+.sk-realm-banner p { color:var(--sk-textDim); margin:0; }
+.sk-realm-eyebrow { color:var(--sk-gold); letter-spacing:3px; font-size:13px; }
+.sk-realm-emblem { display:flex; padding:8px; flex-shrink:0; }
+.sk-realm-close { margin-left:auto; align-self:flex-start; min-height:44px; min-width:44px; background:transparent; border:0; display:grid; place-items:center; cursor:pointer; }
+.sk-realm-content { display:grid; gap:14px; padding:16px; }
+.sk-realm-content>p { margin:0; }
+.sk-realm-content p { line-height:1.35; }
+.sk-realm-offer { background:var(--sk-text); color:var(--sk-ink); padding:14px; border:2px solid var(--sk-borderLt); box-shadow:inset 0 2px var(--sk-text),0 3px var(--sk-ink); }
+.sk-realm-offer h3 { display:flex; align-items:center; gap:8px; font-size:23px; font-weight:normal; margin:0 0 14px; }
+.sk-realm-offer label { display:block; margin:8px 0; font-size:17px; }
+.sk-realm-panel select { display:block; box-sizing:border-box; font:inherit; color:var(--sk-ink); background:var(--sk-text); border:2px solid var(--sk-textFaint); border-radius:0; padding:6px 10px; cursor:pointer; }
+.sk-realm-panel button { white-space:normal; overflow-wrap:anywhere; }
+.sk-realm-content section>button+button { margin-top:8px; }
+.sk-realm-saved { display:grid; gap:12px; padding:14px; background:var(--sk-slate); border:2px solid var(--sk-sky); box-shadow:inset 0 2px var(--sk-sky),0 3px var(--sk-ink); }
+.sk-realm-saved>strong { font-size:22px; font-weight:normal; color:var(--sk-text); }
+.sk-realm-saved p { margin:0 0 8px; }
+.sk-realm-costs { border-top:1px solid var(--sk-sky); padding-top:10px; }
+.sk-realm-costs details { font-size:14px; }
+.sk-realm-panel summary { min-height:44px; display:flex; align-items:center; text-decoration:underline; cursor:pointer; }
+.sk-realm-panel details[open] summary { color:var(--sk-goldHi); }
+.sk-realm-confirm { padding:12px; background:var(--sk-panel); border:2px solid var(--sk-gold); }
+.sk-realm-outcome { border-left:4px solid var(--sk-gold); padding:12px; background:var(--sk-panel); }
+.sk-realm-outcome strong { color:var(--sk-goldHi); font-size:24px; font-weight:normal; }
+.sk-realm-history { border:1px solid var(--sk-borderLt); padding:12px; }
+.sk-realm-panel a { color:var(--sk-sky); }
+.sk-realm-panel :focus-visible { outline:3px solid var(--sk-goldHi); outline-offset:2px; }
+.sk-realm-offer :focus-visible { outline-color:var(--sk-slate); }
+@media(max-width:380px) { .sk-realm-banner { gap:8px; padding:10px 6px; }.sk-realm-banner h2 { font-size:27px; }.sk-realm-emblem { padding:3px; }.sk-realm-content { padding:12px; }.sk-realm-offer,.sk-realm-saved { padding:10px; } }

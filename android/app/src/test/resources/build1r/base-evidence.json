@@ -1,0 +1,24 @@
+{
+  "schema": "build1r-actual-base/v1",
+  "capturedAtUtc": "2026-10-02T17:12:29.521232+00:00",
+  "runId": "eee40e97bb054224b2b1a12d3b88f600",
+  "qaManifestSha256": "278e1f546f324c04ff5800bb9aa52f57caffafaa31368fb8e162865044dc843a",
+  "readySha256": "b7de76a4b496d892361f87c70f9a07099879ff195ba853d0f84bb97f26c3707f",
+  "fixtureSourceCommit": "aec6176209cd7c7ab91bf8aa8f47fa8a0bd3ae73",
+  "bodySha256": "53ffda831957562f02886c8c8f806b7ea22a9a9298f34deb808d649d7b2b24b5",
+  "packManifestSha256": "7ce8c43ec191e9b6ba7be4d3b399c46acc3913c3ef1f06ef16209472483c981c",
+  "catalogueSha256": "a844d2ee5322bc687eaaea2874eb87a7df9ef2b1775171397750dce56685a5a2",
+  "renderCatalogueSha256": "f9eff00c5a8119e3aed0675d816ba5371d1634332f36a398b570c1c488988133",
+  "request": {
+    "method": "GET",
+    "path": "/api/base",
+    "baseId": "68e055bf-6fb3-4afa-b3af-6b86ac044ef9",
+    "status": 200,
+    "rendererContractVersion": 17,
+    "simVersion": 18
+  },
+  "secretAudit": {
+    "passed": true,
+    "redacted": false
+  }
+}

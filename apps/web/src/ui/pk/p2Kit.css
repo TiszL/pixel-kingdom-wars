@@ -1,0 +1,8 @@
+/* p2Kit.css — the only P2 look with no P0 part: the VT body / small helpers (byte-identical to P1's HudKit.css copies;
+ * P0's own type classes are `.pk-t-body` / `.pk-t-small`, which add a size + 2 line box and ellipsis).
+ * Everything else P2 used to draw here (chunky face, cost pill, badge, plates, wood, parchment, outlined text, display
+ * steps, busy dots, glyphs, art) is now P0's: Button.css, PriceChip.css, Plate.css, Icon.css, kitBase.css (parity
+ * verdict B3 + M5, Rule 7). The command bar's press shell moved to CommandBar.css, its only user. Tokens only. */
+
+.pk-body { font-family: var(--pk-font-body); font-size: var(--pk-type-body); line-height: 1; }
+.pk-small { font-family: var(--pk-font-body); font-size: var(--pk-type-small); line-height: 1; }

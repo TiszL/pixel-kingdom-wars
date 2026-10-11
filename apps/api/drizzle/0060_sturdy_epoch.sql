@@ -1,0 +1,1 @@
+ALTER TABLE "email_otps" ADD COLUMN "delivered_at" timestamp with time zone;

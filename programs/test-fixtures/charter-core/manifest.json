@@ -1,0 +1,43 @@
+{
+  "provenance": "SYNTHETIC: raw SDK serialization, no Core execution or chain authority",
+  "sdk": "1.10.0",
+  "freezePda": {
+    "program": "ws91DX9HBAAxGW77BZs5FogRDwpRtcUpiLBpKdPTfWu",
+    "seed": "charter_freeze",
+    "charterId": "12345678-1234-5678-9abc-def012345678"
+  },
+  "keys": {
+    "ASSET": "k7FaK87WHGVXzkaoHb7CdVPgkKDQhZ29VLDeBVbDfYn",
+    "OWNER": "p2Yicb86aZig616Eav2VWG9vuXR5mEqhtzshZYBxzsV",
+    "COLLECTION": "swqrv48gsrwpBFbftEwnP2vB4jckpvfGJfXkwaniLCC",
+    "COLLECTION_AUTHORITY": "21nS9Wz9sUTQ6MkcYUtnN8aSfPA26xJJP7zqshfzCzqc",
+    "FREEZE_AUTHORITY": "4d3Ur8AcrzXd2Xr6wDDv3J6YeehzfRpZFd6fEe9XEqp8"
+  },
+  "offsets": {
+    "BASE_END": 132,
+    "NAME_LENGTH": 66,
+    "NAME_START": 70,
+    "URI_LENGTH": 91,
+    "SEQ_TAG": 131,
+    "PLUGIN_START": 141,
+    "REGISTRY_START": 143
+  },
+  "codecSha256": {
+    "types/assetV1AccountData": "de12a3cdafd85a27adc8072ddae369e735b6abb59f908a1e89c7a9daa9fd1c5c",
+    "types/collectionV1AccountData": "8f6e4963ed0b4736918717015338353fb15344f029478d3236a77aa0e83e3e13",
+    "accounts/pluginHeaderV1": "4fd6c08d43caf21749e6564d40af5eca56496cd1497397245c5830edaf149980",
+    "types/pluginRegistryV1AccountData": "3b7e52f9d37d70746ea84283510add0634882398af3d9102e7cd8e1855f02ef6",
+    "types/plugin": "155f63043abd98f94256e4ecbb3fb093dc0beebd55c344a05efe27904cde25bb",
+    "types/registryRecord": "b09dbdd71eec840bb8ea4e1a3143bca6ffafd27f8550133f1280133ce688ec2c",
+    "types/basePluginAuthority": "68a9ef4dca2c858ad05434585e3239c4f4f2f39286707989780942dbb01079c4",
+    "types/baseUpdateAuthority": "a2fd57ccf7cd9a8d9805ec9449a32ef48ed2baf7289e7c4eeef8c0c641df540d",
+    "types/key": "0ee92b40b66de502faeed285e15bbad565bb2339400f630e01d09c5be3d34997",
+    "types/pluginType": "9e9b310b488ba9a0a6bcbe52d3824d1909c81986c51a3d51eb70f78f858ccbf7",
+    "types/permanentFreezeDelegate": "68b504fdfd443183e522d2cb3ea0ddc0578968c6921bd6299488598b2597154e"
+  },
+  "vectorSha256": {
+    "ASSET_NONE": "4c7e3ed2bdea7c37dace3f5df8ea54f16ecbcc23b8835efe0d6d1469bb14fb83",
+    "ASSET_SOME": "c5b6940dbb35be7e93951c9cc63d01de2d7d10b36bdbfc2591e55f563d4f5417",
+    "COLLECTION_BYTES": "6c87c0973a848f9e2d4eac5676db061c6638f0706ab9929fc937acc5b996e484"
+  }
+}

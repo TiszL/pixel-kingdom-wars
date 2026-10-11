@@ -1,0 +1,297 @@
+{
+  "_provenance": {
+    "source": "FIXTURE-DERIVED, not a live capture (night 2026-10-06, K-night-A1)",
+    "what": "GET /devnet-skr-faucet/grants head-to-tail over 21 requested grants (newerPage = the full first page, pendingPage = the lost claim), an empty wallet page, and the status on the claim day and today.",
+    "server": "TiszL server night/server ca7fe4d7d: apps/api/test/skr-faucet-fixtures.ts through apps/api/src/devnet-only/skrFaucet.ts; checked by apps/api/test/skr-faucet-native-decoder.ts",
+    "generator": "tools/skr-faucet-fixture-vectors.mts",
+    "recapture": "Re-capture from a live chain lane with scripts/candidate/capture-skr-faucet-vectors.mjs (server repo) and the tester phone; newerPage cannot come from a live server and stays fixture-derived.",
+    "pin": {
+      "mint": "Bincuik5v411CXzJaptVZu2xsMwQrcfc4D5epovrRa3R",
+      "decimals": 6,
+      "grantSkr": 1000,
+      "grantReadPageSize": 20
+    }
+  },
+  "beforeClaimStatus": {
+    "enabled": true,
+    "cluster": "devnet",
+    "isTestToken": true,
+    "label": "Devnet Test SKR — not official SKR",
+    "symbol": "tSKR",
+    "mint": "Bincuik5v411CXzJaptVZu2xsMwQrcfc4D5epovrRa3R",
+    "decimals": 6,
+    "grantSkr": "1000",
+    "grantRaw": "1000000000",
+    "day": "2026-09-15",
+    "nextEligibleAt": "2026-09-16T00:00:00.000Z",
+    "eligible": true,
+    "reason": "ok",
+    "today": null
+  },
+  "nextDayStatus": {
+    "enabled": true,
+    "cluster": "devnet",
+    "isTestToken": true,
+    "label": "Devnet Test SKR — not official SKR",
+    "symbol": "tSKR",
+    "mint": "Bincuik5v411CXzJaptVZu2xsMwQrcfc4D5epovrRa3R",
+    "decimals": 6,
+    "grantSkr": "1000",
+    "grantRaw": "1000000000",
+    "day": "2026-10-06",
+    "nextEligibleAt": "2026-10-07T00:00:00.000Z",
+    "eligible": true,
+    "reason": "ok",
+    "today": null
+  },
+  "newerPage": {
+    "items": [
+      {
+        "id": "2ff2fdac-516c-415f-b93d-1a154e625d89",
+        "status": "requested",
+        "mint": "Bincuik5v411CXzJaptVZu2xsMwQrcfc4D5epovrRa3R",
+        "decimals": 6,
+        "amountRaw": "1000000000",
+        "error": null,
+        "requestedAt": "2026-10-05T12:00:00.000Z",
+        "sentAt": null,
+        "attempt": null
+      },
+      {
+        "id": "ed7bf427-c187-437a-8e11-9cbea1ab42a3",
+        "status": "requested",
+        "mint": "Bincuik5v411CXzJaptVZu2xsMwQrcfc4D5epovrRa3R",
+        "decimals": 6,
+        "amountRaw": "1000000000",
+        "error": null,
+        "requestedAt": "2026-10-04T12:00:00.000Z",
+        "sentAt": null,
+        "attempt": null
+      },
+      {
+        "id": "68357bf7-50a8-4477-937f-99804a5cef4f",
+        "status": "requested",
+        "mint": "Bincuik5v411CXzJaptVZu2xsMwQrcfc4D5epovrRa3R",
+        "decimals": 6,
+        "amountRaw": "1000000000",
+        "error": null,
+        "requestedAt": "2026-10-03T12:00:00.000Z",
+        "sentAt": null,
+        "attempt": null
+      },
+      {
+        "id": "a039981c-9a72-4f2d-b550-0eab48203dfd",
+        "status": "requested",
+        "mint": "Bincuik5v411CXzJaptVZu2xsMwQrcfc4D5epovrRa3R",
+        "decimals": 6,
+        "amountRaw": "1000000000",
+        "error": null,
+        "requestedAt": "2026-10-02T12:00:00.000Z",
+        "sentAt": null,
+        "attempt": null
+      },
+      {
+        "id": "4f4c6999-236b-4280-b140-2c7e3e510f84",
+        "status": "requested",
+        "mint": "Bincuik5v411CXzJaptVZu2xsMwQrcfc4D5epovrRa3R",
+        "decimals": 6,
+        "amountRaw": "1000000000",
+        "error": null,
+        "requestedAt": "2026-10-01T12:00:00.000Z",
+        "sentAt": null,
+        "attempt": null
+      },
+      {
+        "id": "9a835034-871f-4753-a840-9d69077934d6",
+        "status": "requested",
+        "mint": "Bincuik5v411CXzJaptVZu2xsMwQrcfc4D5epovrRa3R",
+        "decimals": 6,
+        "amountRaw": "1000000000",
+        "error": null,
+        "requestedAt": "2026-09-30T12:00:00.000Z",
+        "sentAt": null,
+        "attempt": null
+      },
+      {
+        "id": "826f4e6b-a9b2-47d9-a536-12a42348010a",
+        "status": "requested",
+        "mint": "Bincuik5v411CXzJaptVZu2xsMwQrcfc4D5epovrRa3R",
+        "decimals": 6,
+        "amountRaw": "1000000000",
+        "error": null,
+        "requestedAt": "2026-09-29T12:00:00.000Z",
+        "sentAt": null,
+        "attempt": null
+      },
+      {
+        "id": "01680bdd-2621-4e28-a353-7381e0939069",
+        "status": "requested",
+        "mint": "Bincuik5v411CXzJaptVZu2xsMwQrcfc4D5epovrRa3R",
+        "decimals": 6,
+        "amountRaw": "1000000000",
+        "error": null,
+        "requestedAt": "2026-09-28T12:00:00.000Z",
+        "sentAt": null,
+        "attempt": null
+      },
+      {
+        "id": "e24a0947-f356-4fa3-bdc7-7df213de80ed",
+        "status": "requested",
+        "mint": "Bincuik5v411CXzJaptVZu2xsMwQrcfc4D5epovrRa3R",
+        "decimals": 6,
+        "amountRaw": "1000000000",
+        "error": null,
+        "requestedAt": "2026-09-27T12:00:00.000Z",
+        "sentAt": null,
+        "attempt": null
+      },
+      {
+        "id": "5690a499-6463-4f4a-ae6b-b679b8463ff9",
+        "status": "requested",
+        "mint": "Bincuik5v411CXzJaptVZu2xsMwQrcfc4D5epovrRa3R",
+        "decimals": 6,
+        "amountRaw": "1000000000",
+        "error": null,
+        "requestedAt": "2026-09-26T12:00:00.000Z",
+        "sentAt": null,
+        "attempt": null
+      },
+      {
+        "id": "5436cc03-6f16-4492-a2ae-75c3359655b0",
+        "status": "requested",
+        "mint": "Bincuik5v411CXzJaptVZu2xsMwQrcfc4D5epovrRa3R",
+        "decimals": 6,
+        "amountRaw": "1000000000",
+        "error": null,
+        "requestedAt": "2026-09-25T12:00:00.000Z",
+        "sentAt": null,
+        "attempt": null
+      },
+      {
+        "id": "154a1508-e351-44ee-901c-5280dcb6f72b",
+        "status": "requested",
+        "mint": "Bincuik5v411CXzJaptVZu2xsMwQrcfc4D5epovrRa3R",
+        "decimals": 6,
+        "amountRaw": "1000000000",
+        "error": null,
+        "requestedAt": "2026-09-24T12:00:00.000Z",
+        "sentAt": null,
+        "attempt": null
+      },
+      {
+        "id": "e9527827-15d8-4142-b8bc-dd57f2d2c3a0",
+        "status": "requested",
+        "mint": "Bincuik5v411CXzJaptVZu2xsMwQrcfc4D5epovrRa3R",
+        "decimals": 6,
+        "amountRaw": "1000000000",
+        "error": null,
+        "requestedAt": "2026-09-23T12:00:00.000Z",
+        "sentAt": null,
+        "attempt": null
+      },
+      {
+        "id": "e38b6a46-72f9-4c3e-ad79-c278d148ecc1",
+        "status": "requested",
+        "mint": "Bincuik5v411CXzJaptVZu2xsMwQrcfc4D5epovrRa3R",
+        "decimals": 6,
+        "amountRaw": "1000000000",
+        "error": null,
+        "requestedAt": "2026-09-22T12:00:00.000Z",
+        "sentAt": null,
+        "attempt": null
+      },
+      {
+        "id": "0180894e-e0f3-4a90-9cd4-76633bf9e5cd",
+        "status": "requested",
+        "mint": "Bincuik5v411CXzJaptVZu2xsMwQrcfc4D5epovrRa3R",
+        "decimals": 6,
+        "amountRaw": "1000000000",
+        "error": null,
+        "requestedAt": "2026-09-21T12:00:00.000Z",
+        "sentAt": null,
+        "attempt": null
+      },
+      {
+        "id": "5d86007f-fc5b-4870-8634-e26abcfe84fd",
+        "status": "requested",
+        "mint": "Bincuik5v411CXzJaptVZu2xsMwQrcfc4D5epovrRa3R",
+        "decimals": 6,
+        "amountRaw": "1000000000",
+        "error": null,
+        "requestedAt": "2026-09-20T12:00:00.000Z",
+        "sentAt": null,
+        "attempt": null
+      },
+      {
+        "id": "691c89d2-59c7-4a62-bd31-10aa473fa26b",
+        "status": "requested",
+        "mint": "Bincuik5v411CXzJaptVZu2xsMwQrcfc4D5epovrRa3R",
+        "decimals": 6,
+        "amountRaw": "1000000000",
+        "error": null,
+        "requestedAt": "2026-09-19T12:00:00.000Z",
+        "sentAt": null,
+        "attempt": null
+      },
+      {
+        "id": "22f4b130-40c8-431f-9b15-68d8bb4b742b",
+        "status": "requested",
+        "mint": "Bincuik5v411CXzJaptVZu2xsMwQrcfc4D5epovrRa3R",
+        "decimals": 6,
+        "amountRaw": "1000000000",
+        "error": null,
+        "requestedAt": "2026-09-18T12:00:00.000Z",
+        "sentAt": null,
+        "attempt": null
+      },
+      {
+        "id": "27e5f293-3bc6-4bd3-a52c-c70ad41566fc",
+        "status": "requested",
+        "mint": "Bincuik5v411CXzJaptVZu2xsMwQrcfc4D5epovrRa3R",
+        "decimals": 6,
+        "amountRaw": "1000000000",
+        "error": null,
+        "requestedAt": "2026-09-17T12:00:00.000Z",
+        "sentAt": null,
+        "attempt": null
+      },
+      {
+        "id": "a9c01849-7073-426f-ba46-444ad5126062",
+        "status": "requested",
+        "mint": "Bincuik5v411CXzJaptVZu2xsMwQrcfc4D5epovrRa3R",
+        "decimals": 6,
+        "amountRaw": "1000000000",
+        "error": null,
+        "requestedAt": "2026-09-16T12:00:00.000Z",
+        "sentAt": null,
+        "attempt": null
+      }
+    ],
+    "nextCursor": "a9c01849-7073-426f-ba46-444ad5126062"
+  },
+  "pendingPage": {
+    "items": [
+      {
+        "id": "e7a2d883-0130-4fa4-b0ab-b9ab902d755b",
+        "status": "requested",
+        "mint": "Bincuik5v411CXzJaptVZu2xsMwQrcfc4D5epovrRa3R",
+        "decimals": 6,
+        "amountRaw": "1000000000",
+        "error": null,
+        "requestedAt": "2026-09-15T12:00:00.000Z",
+        "sentAt": null,
+        "attempt": {
+          "id": "ce7d2ab0-851c-46df-8fd4-61390c16f098",
+          "phase": "prepared",
+          "signature": null,
+          "lastValidBlockHeight": "200"
+        }
+      }
+    ],
+    "nextCursor": null
+  },
+  "emptyPage": {
+    "items": [],
+    "nextCursor": null
+  }
+}

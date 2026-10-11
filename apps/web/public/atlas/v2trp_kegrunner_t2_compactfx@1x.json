@@ -1,0 +1,145 @@
+{
+	"textures": [
+		{
+			"image": "v2trp_kegrunner_t2_compactfx@1x.png",
+			"format": "RGBA8888",
+			"size": {
+				"w": 234,
+				"h": 156
+			},
+			"scale": 1,
+			"frames": [
+				{
+					"filename": "v2_compact_fx_kegrunner_t2_keg_blast_f1",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 72,
+						"h": 72
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 72,
+						"h": 72
+					},
+					"frame": {
+						"x": 3,
+						"y": 3,
+						"w": 72,
+						"h": 72
+					}
+				},
+				{
+					"filename": "v2_compact_fx_kegrunner_t2_keg_blast_f2",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 72,
+						"h": 72
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 72,
+						"h": 72
+					},
+					"frame": {
+						"x": 81,
+						"y": 3,
+						"w": 72,
+						"h": 72
+					}
+				},
+				{
+					"filename": "v2_compact_fx_kegrunner_t2_keg_blast_f3",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 72,
+						"h": 72
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 72,
+						"h": 72
+					},
+					"frame": {
+						"x": 3,
+						"y": 81,
+						"w": 72,
+						"h": 72
+					}
+				},
+				{
+					"filename": "v2_compact_fx_kegrunner_t2_keg_blast_f4",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 72,
+						"h": 72
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 72,
+						"h": 72
+					},
+					"frame": {
+						"x": 81,
+						"y": 81,
+						"w": 72,
+						"h": 72
+					}
+				},
+				{
+					"filename": "v2_compact_fx_kegrunner_t2_keg_blast_f5",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 72,
+						"h": 72
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 72,
+						"h": 72
+					},
+					"frame": {
+						"x": 159,
+						"y": 3,
+						"w": 72,
+						"h": 72
+					}
+				},
+				{
+					"filename": "v2_compact_fx_kegrunner_t2_keg_blast_f6",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 72,
+						"h": 72
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 72,
+						"h": 72
+					},
+					"frame": {
+						"x": 159,
+						"y": 81,
+						"w": 72,
+						"h": 72
+					}
+				}
+			]
+		}
+	],
+	"meta": {
+		"app": "shardkeep/scripts/rasterize",
+		"version": "1"
+	}
+}

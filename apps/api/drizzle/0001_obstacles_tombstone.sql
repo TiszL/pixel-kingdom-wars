@@ -1,0 +1,1 @@
+ALTER TABLE "obstacles" ADD COLUMN "cleared_at" timestamp with time zone;

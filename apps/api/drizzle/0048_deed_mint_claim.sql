@@ -1,0 +1,1 @@
+ALTER TABLE "players" ADD COLUMN "deed_minting_at" timestamp with time zone;

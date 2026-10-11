@@ -1,0 +1,114 @@
+{
+ "schema": 1,
+ "realms": [
+  {
+   "id": "cinderfall",
+   "name": "Cinderfall",
+   "packVersion": "2026-09-25-8fabe2ef",
+   "kitCommit": "da494449391d559e91a8bb9d358067602bc6d31b",
+   "kitManifestSha": "a197c6732b4244c5bc95f9cd1205311ef24e82644d3f2c629538be53690c21cd",
+   "status": "preview",
+   "deeds": 4237,
+   "mapMode": "D′ (ART map masters)"
+  },
+  {
+   "id": "crownlands",
+   "name": "Crownlands",
+   "packVersion": "2026-09-25-a8604550",
+   "kitCommit": "07b4bde7e35b97fc9b2c5c477d89b546c0408544",
+   "kitManifestSha": "e5c6aa10608f2ad2a30d022dd6e58963edd7e9e5fb85cbb47b4383cebd9775b4",
+   "status": "preview",
+   "deeds": 12958,
+   "mapMode": "D′ (ART map masters, option E for M1/M3/M5)"
+  },
+  {
+   "id": "elderwood",
+   "name": "Elderwood",
+   "packVersion": "2026-09-25-dcaab3dc",
+   "kitCommit": "99147f2077685774c6eacc0a8a49902c7c76c187",
+   "kitManifestSha": "169ec6e4954fb399a77c84eccd8cf126be710bee7acc4852d425388e093dcd1b",
+   "status": "preview",
+   "deeds": 13609,
+   "mapMode": "D′ (ART map masters, option E for M2/M4/M5)"
+  },
+  {
+   "id": "frostveil",
+   "name": "Frostveil",
+   "packVersion": "2026-09-25-af8c42a5",
+   "kitCommit": "fc5c6ad19ea6bf33a0687a2620974c87410601b3",
+   "kitManifestSha": "4c2716173e0b2a6983748716833c4c724e0a532c5abb6b27d2eb17197c3a6f36",
+   "status": "preview",
+   "deeds": 13127,
+   "mapMode": "D′ (ART map masters)"
+  },
+  {
+   "id": "seeker-reach",
+   "name": "Solana Reach",
+   "packVersion": "2026-09-25-7677b944",
+   "kitCommit": "a65cede02c68a1977ac4426f4259381d6ce0ea58",
+   "kitManifestSha": "ea829df3479f2e92e519dec44a6e4d1eb0468a4ba351cbce5cd7a165dacf03c4",
+   "status": "preview",
+   "deeds": 5585,
+   "mapMode": "D′ (ART map masters)"
+  },
+  {
+   "id": "stormcairn",
+   "name": "Stormcairn",
+   "packVersion": "2026-09-25-be64165b",
+   "kitCommit": "6f581d639671184caef566cfeb15013c95374927",
+   "kitManifestSha": "8599b3af0a12ce79608c351e74474cdbfe47801ae0cd618aad70e07d34c40b1c",
+   "status": "preview",
+   "deeds": 15268,
+   "mapMode": "D′ (ART map masters)"
+  },
+  {
+   "id": "sunscar",
+   "name": "Sunscar",
+   "packVersion": "2026-09-25-c950ec12",
+   "kitCommit": "fc5c6ad19ea6bf33a0687a2620974c87410601b3",
+   "kitManifestSha": "b23665fa9859e4a4db632ce961969fc590d60de59a4e86c469c2785f1ce688cd",
+   "status": "preview",
+   "deeds": 13931,
+   "mapMode": "D′ (ART map masters, option E for M3/M4)"
+  },
+  {
+   "id": "thornwake",
+   "name": "Thornwake",
+   "packVersion": "2026-09-25-fdc24709",
+   "kitCommit": "e02e40b8b795f865a26bdbe86f4e073507fc8db5",
+   "kitManifestSha": "70837cf9fe88861e9c9bedeec2005d039d1a5dfd0a768ca07998d1c1722ef641",
+   "status": "preview",
+   "deeds": 6706,
+   "mapMode": "D′ (ART map masters, option E for M2/M4/M5)"
+  }
+ ],
+ "shared": {
+  "dir": "shared",
+  "files": {
+   "decor.json": {
+    "sha256": "1fc128b1990587ea6718f4e0feeca9fea76c19ec46ec32b080a1f54c90849d2f",
+    "bytes": 29065
+   },
+   "decor.png": {
+    "sha256": "7aca574a3020511e887210880e27c7ff9e5c9cf66199fb472e55b6f360c9d575",
+    "bytes": 242588
+   },
+   "fx.json": {
+    "sha256": "c9f5e7c3a7c004cfe17e2b318af50bc29a1b7f6116d8b3a1ac9e17b0f9bb1d35",
+    "bytes": 2898
+   },
+   "fx.png": {
+    "sha256": "4db1e03e60f479d9efde876550627ad0420f39ffaccd1e8e64d23788c089c9e1",
+    "bytes": 2245
+   },
+   "keeps.json": {
+    "sha256": "992ff8ab895648e99173de729f1ec0d4bb6ab2c753be226916e53413c3358cfa",
+    "bytes": 4901
+   },
+   "keeps.png": {
+    "sha256": "80b3ba95b4e08bb3a9cc9ee93f43ae0c1b6eee5c0f6eb5548c17e7b24b673c13",
+    "bytes": 344932
+   }
+  }
+ }
+}

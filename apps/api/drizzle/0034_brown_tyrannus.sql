@@ -1,0 +1,1 @@
+ALTER TABLE "withdrawals" ADD COLUMN "last_error" text;

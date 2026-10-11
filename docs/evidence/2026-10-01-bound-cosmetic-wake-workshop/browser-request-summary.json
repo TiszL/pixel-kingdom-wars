@@ -1,0 +1,68 @@
+[
+  {
+    "method": "OPTIONS",
+    "path": "/base",
+    "status": 204,
+    "count": 20
+  },
+  {
+    "method": "GET",
+    "path": "/base",
+    "status": 200,
+    "count": 23
+  },
+  {
+    "method": "OPTIONS",
+    "path": "/bound-cosmetics",
+    "status": 204,
+    "count": 4
+  },
+  {
+    "method": "GET",
+    "path": "/base",
+    "status": 503,
+    "count": 4
+  },
+  {
+    "method": "GET",
+    "path": "/bound-cosmetics",
+    "status": 200,
+    "count": 4
+  },
+  {
+    "method": "OPTIONS",
+    "path": "/ordinary-crafting",
+    "status": 204,
+    "count": 6
+  },
+  {
+    "method": "GET",
+    "path": "/ordinary-crafting",
+    "status": 200,
+    "count": 7
+  },
+  {
+    "method": "OPTIONS",
+    "path": "/bound-cosmetics/wakes/v1/workshop",
+    "status": 204,
+    "count": 10
+  },
+  {
+    "method": "GET",
+    "path": "/bound-cosmetics/wakes/v1/workshop",
+    "status": 200,
+    "count": 18
+  },
+  {
+    "method": "OPTIONS",
+    "path": "/bound-cosmetics/wakes/v1/preference",
+    "status": 204,
+    "count": 1
+  },
+  {
+    "method": "PUT",
+    "path": "/bound-cosmetics/wakes/v1/preference",
+    "status": 200,
+    "count": 1
+  }
+]

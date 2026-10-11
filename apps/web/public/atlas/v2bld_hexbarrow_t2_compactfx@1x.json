@@ -1,0 +1,712 @@
+{
+	"textures": [
+		{
+			"image": "v2bld_hexbarrow_t2_compactfx@1x.png",
+			"format": "RGBA8888",
+			"size": {
+				"w": 284,
+				"h": 278
+			},
+			"scale": 1,
+			"frames": [
+				{
+					"filename": "v2_compact_fx_hexbarrow_t2_impact_crater_f1",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 76,
+						"h": 76
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 76,
+						"h": 76
+					},
+					"frame": {
+						"x": 3,
+						"y": 3,
+						"w": 76,
+						"h": 76
+					}
+				},
+				{
+					"filename": "v2_compact_fx_hexbarrow_t2_impact_crater_f2",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 76,
+						"h": 76
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 76,
+						"h": 76
+					},
+					"frame": {
+						"x": 85,
+						"y": 3,
+						"w": 76,
+						"h": 76
+					}
+				},
+				{
+					"filename": "v2_compact_fx_hexbarrow_t2_impact_crater_f3",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 76,
+						"h": 76
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 76,
+						"h": 76
+					},
+					"frame": {
+						"x": 3,
+						"y": 85,
+						"w": 76,
+						"h": 76
+					}
+				},
+				{
+					"filename": "v2_compact_fx_hexbarrow_t2_impact_crater_f4",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 76,
+						"h": 76
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 76,
+						"h": 76
+					},
+					"frame": {
+						"x": 85,
+						"y": 85,
+						"w": 76,
+						"h": 76
+					}
+				},
+				{
+					"filename": "v2_compact_fx_hexbarrow_t2_impact_crater_f5",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 76,
+						"h": 76
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 76,
+						"h": 76
+					},
+					"frame": {
+						"x": 167,
+						"y": 3,
+						"w": 76,
+						"h": 76
+					}
+				},
+				{
+					"filename": "v2_compact_fx_hexbarrow_t2_impact_crater_f6",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 76,
+						"h": 76
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 76,
+						"h": 76
+					},
+					"frame": {
+						"x": 167,
+						"y": 85,
+						"w": 76,
+						"h": 76
+					}
+				},
+				{
+					"filename": "v2_compact_fx_hexbarrow_t2_hexshot_d0_f1",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 32,
+						"h": 32
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 32,
+						"h": 32
+					},
+					"frame": {
+						"x": 3,
+						"y": 167,
+						"w": 32,
+						"h": 32
+					}
+				},
+				{
+					"filename": "v2_compact_fx_hexbarrow_t2_hexshot_d0_f2",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 32,
+						"h": 32
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 32,
+						"h": 32
+					},
+					"frame": {
+						"x": 41,
+						"y": 167,
+						"w": 32,
+						"h": 32
+					}
+				},
+				{
+					"filename": "v2_compact_fx_hexbarrow_t2_hexshot_d0_f3",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 32,
+						"h": 32
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 32,
+						"h": 32
+					},
+					"frame": {
+						"x": 79,
+						"y": 167,
+						"w": 32,
+						"h": 32
+					}
+				},
+				{
+					"filename": "v2_compact_fx_hexbarrow_t2_hexshot_d1_f1",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 32,
+						"h": 32
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 32,
+						"h": 32
+					},
+					"frame": {
+						"x": 117,
+						"y": 167,
+						"w": 32,
+						"h": 32
+					}
+				},
+				{
+					"filename": "v2_compact_fx_hexbarrow_t2_hexshot_d1_f2",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 32,
+						"h": 32
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 32,
+						"h": 32
+					},
+					"frame": {
+						"x": 155,
+						"y": 167,
+						"w": 32,
+						"h": 32
+					}
+				},
+				{
+					"filename": "v2_compact_fx_hexbarrow_t2_hexshot_d1_f3",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 32,
+						"h": 32
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 32,
+						"h": 32
+					},
+					"frame": {
+						"x": 193,
+						"y": 167,
+						"w": 32,
+						"h": 32
+					}
+				},
+				{
+					"filename": "v2_compact_fx_hexbarrow_t2_hexshot_d2_f1",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 32,
+						"h": 32
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 32,
+						"h": 32
+					},
+					"frame": {
+						"x": 3,
+						"y": 205,
+						"w": 32,
+						"h": 32
+					}
+				},
+				{
+					"filename": "v2_compact_fx_hexbarrow_t2_hexshot_d2_f2",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 32,
+						"h": 32
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 32,
+						"h": 32
+					},
+					"frame": {
+						"x": 41,
+						"y": 205,
+						"w": 32,
+						"h": 32
+					}
+				},
+				{
+					"filename": "v2_compact_fx_hexbarrow_t2_hexshot_d2_f3",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 32,
+						"h": 32
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 32,
+						"h": 32
+					},
+					"frame": {
+						"x": 79,
+						"y": 205,
+						"w": 32,
+						"h": 32
+					}
+				},
+				{
+					"filename": "v2_compact_fx_hexbarrow_t2_hexshot_d3_f1",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 32,
+						"h": 32
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 32,
+						"h": 32
+					},
+					"frame": {
+						"x": 117,
+						"y": 205,
+						"w": 32,
+						"h": 32
+					}
+				},
+				{
+					"filename": "v2_compact_fx_hexbarrow_t2_hexshot_d3_f2",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 32,
+						"h": 32
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 32,
+						"h": 32
+					},
+					"frame": {
+						"x": 155,
+						"y": 205,
+						"w": 32,
+						"h": 32
+					}
+				},
+				{
+					"filename": "v2_compact_fx_hexbarrow_t2_hexshot_d3_f3",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 32,
+						"h": 32
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 32,
+						"h": 32
+					},
+					"frame": {
+						"x": 193,
+						"y": 205,
+						"w": 32,
+						"h": 32
+					}
+				},
+				{
+					"filename": "v2_compact_fx_hexbarrow_t2_hexshot_d4_f1",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 32,
+						"h": 32
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 32,
+						"h": 32
+					},
+					"frame": {
+						"x": 3,
+						"y": 243,
+						"w": 32,
+						"h": 32
+					}
+				},
+				{
+					"filename": "v2_compact_fx_hexbarrow_t2_hexshot_d4_f2",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 32,
+						"h": 32
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 32,
+						"h": 32
+					},
+					"frame": {
+						"x": 41,
+						"y": 243,
+						"w": 32,
+						"h": 32
+					}
+				},
+				{
+					"filename": "v2_compact_fx_hexbarrow_t2_hexshot_d4_f3",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 32,
+						"h": 32
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 32,
+						"h": 32
+					},
+					"frame": {
+						"x": 79,
+						"y": 243,
+						"w": 32,
+						"h": 32
+					}
+				},
+				{
+					"filename": "v2_compact_fx_hexbarrow_t2_hexshot_d5_f1",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 32,
+						"h": 32
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 32,
+						"h": 32
+					},
+					"frame": {
+						"x": 117,
+						"y": 243,
+						"w": 32,
+						"h": 32
+					}
+				},
+				{
+					"filename": "v2_compact_fx_hexbarrow_t2_hexshot_d5_f2",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 32,
+						"h": 32
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 32,
+						"h": 32
+					},
+					"frame": {
+						"x": 155,
+						"y": 243,
+						"w": 32,
+						"h": 32
+					}
+				},
+				{
+					"filename": "v2_compact_fx_hexbarrow_t2_hexshot_d5_f3",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 32,
+						"h": 32
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 32,
+						"h": 32
+					},
+					"frame": {
+						"x": 193,
+						"y": 243,
+						"w": 32,
+						"h": 32
+					}
+				},
+				{
+					"filename": "v2_compact_fx_hexbarrow_t2_hexshot_d6_f1",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 32,
+						"h": 32
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 32,
+						"h": 32
+					},
+					"frame": {
+						"x": 249,
+						"y": 3,
+						"w": 32,
+						"h": 32
+					}
+				},
+				{
+					"filename": "v2_compact_fx_hexbarrow_t2_hexshot_d6_f2",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 32,
+						"h": 32
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 32,
+						"h": 32
+					},
+					"frame": {
+						"x": 249,
+						"y": 41,
+						"w": 32,
+						"h": 32
+					}
+				},
+				{
+					"filename": "v2_compact_fx_hexbarrow_t2_hexshot_d6_f3",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 32,
+						"h": 32
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 32,
+						"h": 32
+					},
+					"frame": {
+						"x": 249,
+						"y": 79,
+						"w": 32,
+						"h": 32
+					}
+				},
+				{
+					"filename": "v2_compact_fx_hexbarrow_t2_hexshot_d7_f1",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 32,
+						"h": 32
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 32,
+						"h": 32
+					},
+					"frame": {
+						"x": 249,
+						"y": 117,
+						"w": 32,
+						"h": 32
+					}
+				},
+				{
+					"filename": "v2_compact_fx_hexbarrow_t2_hexshot_d7_f2",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 32,
+						"h": 32
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 32,
+						"h": 32
+					},
+					"frame": {
+						"x": 249,
+						"y": 155,
+						"w": 32,
+						"h": 32
+					}
+				},
+				{
+					"filename": "v2_compact_fx_hexbarrow_t2_hexshot_d7_f3",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 32,
+						"h": 32
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 32,
+						"h": 32
+					},
+					"frame": {
+						"x": 231,
+						"y": 193,
+						"w": 32,
+						"h": 32
+					}
+				},
+				{
+					"filename": "v2_compact_fx_hexbarrow_t2_shadow_f1",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 20,
+						"h": 12
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 20,
+						"h": 12
+					},
+					"frame": {
+						"x": 231,
+						"y": 231,
+						"w": 20,
+						"h": 12
+					}
+				},
+				{
+					"filename": "v2_compact_fx_hexbarrow_t2_shadow_f2",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 20,
+						"h": 12
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 20,
+						"h": 12
+					},
+					"frame": {
+						"x": 257,
+						"y": 231,
+						"w": 20,
+						"h": 12
+					}
+				},
+				{
+					"filename": "v2_compact_fx_hexbarrow_t2_shadow_f3",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 20,
+						"h": 12
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 20,
+						"h": 12
+					},
+					"frame": {
+						"x": 231,
+						"y": 249,
+						"w": 20,
+						"h": 12
+					}
+				}
+			]
+		}
+	],
+	"meta": {
+		"app": "shardkeep/scripts/rasterize",
+		"version": "1"
+	}
+}

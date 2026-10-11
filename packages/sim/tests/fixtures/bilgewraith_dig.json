@@ -1,0 +1,71 @@
+{
+  "hash": "e27e6f11",
+  "outcome": {
+    "stars": 2,
+    "destructionPct": 89,
+    "keepDestroyed": true,
+    "vaultDestroyed": false,
+    "mineDestroyed": true,
+    "victory": true,
+    "buildings": [
+      {
+        "id": "keep",
+        "type": "keep",
+        "hp": 0,
+        "maxHp": 1200,
+        "destroyed": true
+      },
+      {
+        "id": "vault",
+        "type": "vault",
+        "hp": 212,
+        "maxHp": 500,
+        "destroyed": false
+      },
+      {
+        "id": "mine",
+        "type": "mine",
+        "hp": 0,
+        "maxHp": 300,
+        "destroyed": true
+      },
+      {
+        "id": "wall_0",
+        "type": "wall",
+        "hp": 300,
+        "maxHp": 300,
+        "destroyed": false
+      },
+      {
+        "id": "wall_1",
+        "type": "wall",
+        "hp": 300,
+        "maxHp": 300,
+        "destroyed": false
+      },
+      {
+        "id": "wall_2",
+        "type": "wall",
+        "hp": 300,
+        "maxHp": 300,
+        "destroyed": false
+      },
+      {
+        "id": "wall_3",
+        "type": "wall",
+        "hp": 300,
+        "maxHp": 300,
+        "destroyed": false
+      },
+      {
+        "id": "wall_4",
+        "type": "wall",
+        "hp": 300,
+        "maxHp": 300,
+        "destroyed": false
+      }
+    ],
+    "ticks": 900,
+    "eventCount": 336
+  }
+}

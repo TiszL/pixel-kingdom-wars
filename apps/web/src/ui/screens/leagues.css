@@ -1,0 +1,56 @@
+.lg-stack { width: min(820px, 100%); margin: 0 auto; display: flex; flex-direction: column; gap: 9px; }
+.lg-well { padding: 9px; color: var(--sk-text); background: var(--sk-card); box-shadow: inset 0 0 0 2px var(--sk-border), inset 0 2px 0 rgba(255,255,255,.05); }
+.lg-heading { margin: 8px 2px 4px; color: var(--sk-text-faint); font-size: 15px; font-weight: 400; letter-spacing: 2px; }
+.lg-crest { width: 44px; height: 44px; flex: none; object-fit: contain; image-rendering: pixelated; filter: drop-shadow(0 2px 0 rgba(16,14,20,.65)); }
+.lg-crest-large { width: 68px; height: 68px; }
+.lg-crest-small { width: 26px; height: 26px; }
+.lg-standing { display: flex; align-items: center; gap: 11px; flex-wrap: wrap; }
+.lg-standing-main { min-width: 135px; flex: 1; display: flex; flex-direction: column; gap: 4px; }
+.lg-tier { font-size: 25px; line-height: 1; letter-spacing: 3px; text-shadow: 1px 1px 0 var(--sk-bg); }
+.lg-trophies { display: flex; align-items: center; gap: 5px; color: var(--sk-text-faint); font-size: 13px; }
+.lg-trophies b { color: var(--sk-text); font-size: 21px; font-weight: 400; }
+.lg-progress { display: block; height: 8px; background: var(--sk-bg); box-shadow: inset 0 0 0 1px var(--sk-border); }
+.lg-progress i { display: block; height: 100%; }
+.lg-muted { color: var(--sk-text-faint); font-size: 13px; letter-spacing: 1px; }
+.lg-clock { margin-left: auto; display: flex; flex-direction: column; align-items: flex-end; color: var(--sk-text-faint); font-size: 11px; letter-spacing: 1px; }
+.lg-clock b { color: var(--sk-gold-hi); font-size: 19px; font-weight: 400; white-space: nowrap; }
+.lg-reward-state { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; color: var(--sk-text-dim); font-size: 13px; }
+.lg-reward-state b { padding: 3px 6px; color: var(--sk-bg); background: var(--sk-text-faint); letter-spacing: 1px; }
+.lg-reward-state.is-active b { background: var(--sk-success); }
+.lg-reward-state.is-scheduled b { background: var(--sk-gold); }
+.lg-error { display: flex; align-items: center; justify-content: space-between; gap: 8px; color: var(--sk-danger); }
+.lg-loading, .lg-empty { color: var(--sk-text-faint); font-size: 14px; letter-spacing: 1px; text-align: center; }
+.lg-participation { display: flex; align-items: center; justify-content: space-between; gap: 10px; color: var(--sk-text-faint); font-size: 13px; }
+.lg-participation > div { display: flex; align-items: baseline; gap: 8px; flex: none; }
+.lg-participation b { color: var(--sk-gold-hi); font-size: 20px; font-weight: 400; }
+.lg-kicker { letter-spacing: 1px; }
+.lg-participation .is-good { color: var(--sk-success); }
+.lg-ladder, .lg-board { display: flex; flex-direction: column; gap: 5px; }
+.lg-row { min-height: 64px; display: flex; align-items: flex-start; gap: 10px; }
+.lg-row > div { flex: 1; min-width: 0; }
+.lg-row-title { font-size: 19px; letter-spacing: 2px; }
+.lg-row-title span { margin-left: 6px; color: var(--sk-text-faint); font-size: 13px; letter-spacing: 0; }
+.lg-row ul { list-style: none; margin: 4px 0 0; padding: 0; }
+.lg-row li { position: relative; padding-left: 12px; color: var(--sk-text-dim); font-size: 14px; }
+.lg-row li::before { position: absolute; left: 0; content: '▸'; color: var(--sk-gold-dp); }
+.lg-row strong { color: var(--sk-gold-hi); font-size: 12px; letter-spacing: 2px; }
+.lg-row.is-current { box-shadow: inset 0 0 0 2px var(--sk-gold-dp); }
+.lg-rule-copy { margin: 0; color: var(--sk-text-faint); font-size: 13px; line-height: 1.4; }
+.lg-board-row { min-height: 42px; display: flex; align-items: center; gap: 8px; }
+.lg-board-row.is-you { box-shadow: inset 0 0 0 2px var(--sk-gold-dp); }
+.lg-rank { width: 34px; flex: none; color: var(--sk-text-faint); text-align: right; }
+.lg-name { flex: 1; min-width: 0; overflow: hidden; color: var(--sk-text); text-overflow: ellipsis; white-space: nowrap; }
+.lg-last { display: flex; align-items: flex-start; gap: 10px; }
+.lg-last > div { display: flex; flex-direction: column; gap: 2px; color: var(--sk-text-dim); font-size: 14px; }
+.lg-last b { color: var(--sk-text); font-weight: 400; }
+@media (max-width: 420px) {
+  .lg-crest-large { width: 52px; height: 52px; }
+  .lg-tier { font-size: 21px; letter-spacing: 2px; }
+  .lg-clock { width: 100%; }
+  .lg-participation { align-items: flex-start; flex-direction: column; }
+}
+@media (max-height: 500px) and (orientation: landscape) {
+  .lg-stack { gap: 6px; }
+  .lg-standing { padding-block: 6px; }
+  .lg-crest-large { width: 48px; height: 48px; }
+}

@@ -1,0 +1,14 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    <application>
+        <!-- Debug builds only (GLOBE-NATIVE-PLAN §8.3, N0): the GPU device probe. Exported so `adb shell am start` can open
+             it on the owner's USB session; it reads no account, wallet or session data and never touches the network.
+             A candidate build replaces this manifest (app/build.gradle.kts), so the probe is absent there. -->
+        <activity android:name=".scene.probe.DeviceProbeActivity" android:exported="true"
+            android:configChanges="keyboard|keyboardHidden|navigation|orientation|screenSize|screenLayout" />
+        <!-- Debug builds only (N1/N2 lead integration): the guarded-emulator smoke host of the GL30 world surface. It
+             mounts the World tab's own WorldEngineFragment on the debug world bundle and bundled pack files; no account,
+             wallet, session or network. Absent from candidate and release builds (this manifest is debug-only). -->
+        <activity android:name=".scene.world.WorldEngineSmokeActivity" android:exported="true"
+            android:configChanges="keyboard|keyboardHidden|navigation|orientation|screenSize|screenLayout" />
+    </application>
+</manifest>

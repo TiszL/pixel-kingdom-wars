@@ -1,0 +1,82 @@
+{
+  "scope": "Seven exact public accounts from confirmed B6g Core mint; raw-byte replay only. ProgramData, Clock and RPC envelopes in the test are synthetic and do not re-prove chain execution or finality.",
+  "source": {
+    "genesis": "5NrzB9XjK3jy38XyxNo87WykHnMT13jB6HF1u6JEE8DD",
+    "snapshotSlot": 70,
+    "mint": {
+      "signature": "4Vj1hFmefdqTa6Fz6YvsrQDaB6svfk7iswSLEH5WtLxGzYUxUFmS3rJkBKfpbVNsQCRHPPRcmiJ3s237uGpjmWwU",
+      "slot": 63
+    }
+  },
+  "expected": {
+    "creationIntentId": "87654321-4321-4321-8abc-def012345678",
+    "clanId": "12345678-1234-5678-9abc-def012345678",
+    "payer": "2cHDoCsVajd8VTtZnmJEVZAri3mSFZPHdwteinw6NAUj",
+    "metadata": {
+      "name": "Fixture Charter",
+      "uri": "https://invalid.example/charter.json",
+      "hash": "ef7a1c63cafdaff7d6d8d1a3cd6d02e0561065b65f65e0c9abb1c5e4ce05855a"
+    },
+    "admissionCommitment": "1313131313131313131313131313131313131313131313131313131313131313",
+    "permitId": "03e23ca3fd819434bb8591bf62f5a2a2",
+    "createdAt": "1790498824"
+  },
+  "accounts": [
+    {
+      "label": "config",
+      "address": "ChN39UVh7eMZBkeuVXBVpvRtskC8ktgzHnDyE6DQgBNR",
+      "owner": "27bgnruDhviykKK12k5t2imTEgLUYfAgZRwGiD4zxWDf",
+      "executable": false,
+      "dataBase64": "PZbu4voxfasBIbiFJCwWT/BmWFTsM1yaB65ofLxrWV3FpS7mMiYThD65WYwypkLqqLI09IE0pwxAUajZ+gm58sdFwWfz0rlSX5xl88f/5SL1vGds3y6kBVUQi11dhx/YYck+IBT+rlWaa3rbvglMbUprpJ+fqXJOXbdZtouAegW8sxA15i7QdGtv7ZPYdA+zOiVB3q8S+JoosJYHuAYP/J1Fo5NclbMnE/4=",
+      "dataSha256": "aae21d3a59990321e10cd7c7713f8fa2dd2e556c5338597432ce97d83e0ef829"
+    },
+    {
+      "label": "craftControl",
+      "address": "BXWmYQMiRjcTWFZLJhcatU1JbZobNa5ExQdEu7U8Z9HB",
+      "owner": "DUXczJ1EUMgyRVRFbToB95SiuAKEkewJ4iarhDaZTNMt",
+      "executable": false,
+      "dataBase64": "0F431coK24oBOaobyxb6IVqQZA5WeDuyBLDQX7lYM4OTCp/ocG9Bc1kQjGQ0Ajb+AJCwT6JTPSLxW9bZyBbbb4d/Fh8cu/Icemt6274JTG1Ka6Sfn6lyTl23WbaLgHoFvLMQNeYu0HRrb+2T2HQPszolQd6vEviaKLCWB7gGD/ydRaOTXJWzJxMA/P//",
+      "dataSha256": "87d0a4145f2d5c8adf7f29378e21bc96f78fa8493cadc73952a4d5d84988472e"
+    },
+    {
+      "label": "collection",
+      "address": "8EZHFg8iGYHyaNhmexjDqj34dhsJxJiLZue75gZ9c8Cz",
+      "owner": "CoREENxT6tW1HoK8ypY1SxRMZTcVPm7R94rH4PZNhX7d",
+      "executable": false,
+      "dataBase64": "BW/tk9h0D7M6JUHerxL4miiwlge4Bg/8nUWjk1yVsycTCAAAAENoYXJ0ZXJzJQAAAGh0dHBzOi8vaW52YWxpZC5leGFtcGxlL2NoYXJ0ZXJzLmpzb24BAAAAAQAAAA==",
+      "dataSha256": "6962a074e3105e462a61736f879937ea7f860cb9c81d117288c7791610adfd8d"
+    },
+    {
+      "label": "charter",
+      "address": "4FvstGZBQcm93ZH3hNMBQxwEevyXP7U9HYkWk2wV5XUe",
+      "owner": "27bgnruDhviykKK12k5t2imTEgLUYfAgZRwGiD4zxWDf",
+      "executable": false,
+      "dataBase64": "9dWgiZ/wq74BrceTPh8BatnLY5WkjFVQ0Eq0No7meRAEOrI6D5OqkAoSNFZ4EjRWeJq83vASNFZ4OXsp8s5rd6juyX0sCEciNn0yCF+fkyqbrdemju8OnIFretu+CUxtSmukn5+pck5dt1m2i4B6BbyzEDXmLtB0axflWyDjb8HsLcg6njhioEnpRJF+k6YJU/kRoSpsiEWkAAAAAAEAAAAAAAAAAAAAAAAAAAAAAIdlQyFDIUMhirze8BI0Vnjvehxjyv2v99bY0aPNbQLgVhBltl9l4MmrscXkzgWFWhMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTA+I8o/2BlDS7hZG/YvWiogjYuGoAAAAA/w==",
+      "dataSha256": "ba26631ff84eda29e2edbc319911d9b216b15993b1508a5f13bceb9846cf5547"
+    },
+    {
+      "label": "assetBinding",
+      "address": "E75K99KfSPvsjg7WGxdXfbPKnp2hLTsb8aPFvYu5MUXY",
+      "owner": "27bgnruDhviykKK12k5t2imTEgLUYfAgZRwGiD4zxWDf",
+      "executable": false,
+      "dataBase64": "cXO9hd/TDr4BOXsp8s5rd6juyX0sCEciNn0yCF+fkyqbrdemju8OnIESNFZ4EjRWeJq83vASNFZ4MGYcgv8U3rzlO0Tp3ocJr4NJjqrYf4AUXHda8bdTd1v/",
+      "dataSha256": "2d5015dda51bc878970012cf08dda4c424b699b50f035654402dee3fd4f8bdc8"
+    },
+    {
+      "label": "creationReceipt",
+      "address": "4zENMyNhMy2UHodKFuJEku1VjyMEZ94Ehf6xWohhgpsX",
+      "owner": "27bgnruDhviykKK12k5t2imTEgLUYfAgZRwGiD4zxWDf",
+      "executable": false,
+      "dataBase64": "M279lMJ/eJwBh2VDIUMhQyGKvN7wEjRWeBI0VngSNFZ4mrze8BI0VngwZhyC/xTevOU7ROnehwmvg0mOqth/gBRcd1rxt1N3Wzl7KfLOa3eo7sl9LAhHIjZ9Mghfn5Mqm63Xpo7vDpyBF+VbIONvwewtyDqeOGKgSelEkX6TpglT+RGhKmyIRaQD4jyj/YGUNLuFkb9i9aKi/w==",
+      "dataSha256": "928e517efcd9994f89adf0e53ff9621d8e7049fb9510c8068073c42022b6a7de"
+    },
+    {
+      "label": "asset",
+      "address": "4sPAbo5SWipbvzGWLxbZQMViSFbV7EDAyqVgQ5sdYyfn",
+      "owner": "CoREENxT6tW1HoK8ypY1SxRMZTcVPm7R94rH4PZNhX7d",
+      "executable": false,
+      "dataBase64": "ARflWyDjb8HsLcg6njhioEnpRJF+k6YJU/kRoSpsiEWkAmt6274JTG1Ka6Sfn6lyTl23WbaLgHoFvLMQNeYu0HRrDwAAAEZpeHR1cmUgQ2hhcnRlciQAAABodHRwczovL2ludmFsaWQuZXhhbXBsZS9jaGFydGVyLmpzb24AA4kAAAAAAAAABQEEAQAAAAUDG69jSqHZhY7iDR0smdehym/zS2uBcu8Osr09ykdp71KHAAAAAAAAAAAAAAA=",
+      "dataSha256": "75907dedc526716e26bb570aae97e836229f2208e2afdd4a7ba296f0dad29edb"
+    }
+  ]
+}

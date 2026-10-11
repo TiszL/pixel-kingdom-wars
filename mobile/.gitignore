@@ -1,0 +1,24 @@
+# The release signing key. Losing it means this dApp Store listing can NEVER be
+# updated again — but committing it means anyone who clones the repo can publish
+# an "update" to your app. Back it up outside the repo instead.
+keystore/
+*.keystore
+*.jks
+
+# Bubblewrap's generated Android project + build outputs. All reproducible from
+# twa.config.json + the live manifest; none of it belongs in review.
+build/
+*.apk
+*.aab
+*.keystore.md5
+
+# dApp Store release lane: every publisher/submission artifact stays out of git.
+dappstore/
+
+# Any ARCHIVE of the key folder too — a zipped backup left inside the repo is
+# still a committed secret (incident 2026-08-16: git add -A swept dappstore.zip).
+dappstore*.zip
+dappstore*.tar*
+keystore*.zip
+keystore*.tar*
+*.keystore.zip

@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="theme-color" content="#100E14" />
+    <title>Pixel Kingdom Wars — Play on Solana</title>
+    <meta name="description" content="Play Pixel Kingdom Wars, a Fun-to-Earn (F2E) pixel strategy game on Solana. Build your kingdom and raid rivals. Open devnet playtest; tokens have no monetary value." />
+    <link rel="canonical" href="https://play.pixelkingdomwars.com/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Pixel Kingdom Wars" />
+    <meta property="og:url" content="https://play.pixelkingdomwars.com/" />
+    <meta property="og:title" content="Pixel Kingdom Wars — Play on Solana" />
+    <meta property="og:description" content="Play Pixel Kingdom Wars, a Fun-to-Earn (F2E) pixel strategy game on Solana. Build your kingdom and raid rivals. Open devnet playtest; tokens have no monetary value." />
+    <meta property="og:image" content="https://pixelkingdomwars.com/media/card-home.jpg?v=435feeb8" />
+    <meta property="og:image:type" content="image/jpeg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="The Pixel Kingdom Wars logo beside a dragon, a hero and a giant besieging a sandstone keep." />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Pixel Kingdom Wars — Play on Solana" />
+    <meta name="twitter:description" content="Play Pixel Kingdom Wars, a Fun-to-Earn (F2E) pixel strategy game on Solana. Build your kingdom and raid rivals. Open devnet playtest; tokens have no monetary value." />
+    <meta name="twitter:image" content="https://pixelkingdomwars.com/media/card-home.jpg?v=435feeb8" />
+    <meta name="twitter:image:alt" content="The Pixel Kingdom Wars logo beside a dragon, a hero and a giant besieging a sandstone keep." />
+    <meta name="application-name" content="Pixel Kingdom Wars" />
+    <meta name="apple-mobile-web-app-title" content="Kingdom Wars" />
+    <link rel="manifest" href="/manifest.webmanifest?v=c0137365" />
+    <link rel="icon" type="image/png" sizes="96x96" href="/icons/icon-96.png?v=c0137365" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/icons/icon-32.png?v=c0137365" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/icons/icon-16.png?v=c0137365" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/icons/icon-180.png?v=c0137365" />
+    <link rel="preload" as="image" href="/brand/brand_loading_bg_portrait.png?v=__PKW_BUILD_SHA__" media="(max-aspect-ratio: 11/10)" fetchpriority="high" />
+    <link rel="preload" as="image" href="/brand/brand_loading_bg_landscape.png?v=__PKW_BUILD_SHA__" media="(min-aspect-ratio: 1101/1000)" fetchpriority="high" />
+    <style>
+      :root {
+        --boot-bg: #100e14;
+        --boot-text: #efe8d6;
+        --boot-dim: #c4bba4;
+        --boot-gold: #e3ae3c;
+        --boot-gold-hi: #f4d77b;
+        --boot-recovery-delay: 8s;
+      }
+      html,
+      body {
+        margin: 0;
+        min-height: 100%;
+        background: var(--boot-bg);
+        color: var(--boot-text);
+      }
+      .pre-react-boot {
+        box-sizing: border-box;
+        position: relative;
+        z-index: 1;
+        min-height: 100vh;
+        min-height: 100svh;
+        display: grid;
+        align-content: end;
+        justify-items: center;
+        padding: max(24px, env(safe-area-inset-top)) max(16px, env(safe-area-inset-right)) calc(12px + env(safe-area-inset-bottom, 0px)) max(16px, env(safe-area-inset-left));
+        font-family: monospace;
+      }
+      /* The status is a plate of the size and place of React's loading strip (D-193: min(100%, 560px) x 88px,
+         66px compact, in the bottom band 12px + inset on phones / 24px on desktop) with the title line and the
+         meter track where the strip draws its own, so the first React frame paints its strip OVER this box
+         instead of moving the loading words from the screen centre to the bottom. */
+      .pre-react-boot__strip {
+        position: relative;
+        box-sizing: border-box;
+        width: min(100%, 560px);
+        height: 88px;
+        padding: 10px 12px 10px 80px;
+        text-align: left;
+        background: rgba(26, 23, 30, .82);
+        border: 1px solid #6b6354;
+      }
+      .pre-react-boot__strip::after {
+        content: "";
+        position: absolute;
+        left: 80px;
+        right: 12px;
+        top: 36px;
+        height: 4px;
+        background: #3d3833;
+      }
+      @media (max-height: 499px), (max-width: 359px) {
+        .pre-react-boot__strip { height: 66px; padding: 6px 10px 6px 64px; }
+        .pre-react-boot__strip::after { left: 64px; right: 10px; top: 26px; }
+        .pre-react-boot__status { font-size: 15px; line-height: 18px; }
+      }
+      @media (min-width: 768px) and (min-height: 500px) {
+        .pre-react-boot { padding-bottom: 24px; }
+      }
+      .pre-react-boot__backdrop {
+        position: fixed;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        image-rendering: pixelated;
+        filter: brightness(.9);
+      }
+      .pre-react-boot__status {
+        margin: 0;
+        font-size: 18px;
+        line-height: 22px;
+        color: var(--boot-gold-hi);
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+      /* The bright wallpaper stays bright; the weak-network help pops in on its own plate ABOVE the strip box,
+         so the box itself never moves. */
+      .pre-react-boot__recovery {
+        visibility: hidden;
+        opacity: 0;
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: calc(100% + 8px);
+        margin: 0;
+        padding: 8px 14px;
+        text-align: center;
+        background: rgba(16, 14, 20, .72);
+        animation: pre-react-recovery-reveal 1ms linear var(--boot-recovery-delay) forwards;
+      }
+      .pre-react-boot__recovery p {
+        margin: 0 0 16px;
+      }
+      .pre-react-boot__retry {
+        display: inline-block;
+        border: 1px solid var(--boot-gold);
+        padding: 10px 20px;
+        color: var(--boot-text);
+        text-decoration: none;
+      }
+      @keyframes pre-react-recovery-reveal {
+        to {
+          visibility: visible;
+          opacity: 1;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root">
+      <picture aria-hidden="true">
+        <source media="(max-aspect-ratio: 11/10)" srcset="/brand/brand_loading_bg_portrait.png?v=__PKW_BUILD_SHA__" />
+        <img class="pre-react-boot__backdrop" src="/brand/brand_loading_bg_landscape.png?v=__PKW_BUILD_SHA__" alt="" decoding="sync" fetchpriority="high" />
+      </picture>
+      <main class="pre-react-boot" data-pre-react-boot role="status" aria-live="polite" aria-atomic="true">
+        <div class="pre-react-boot__strip">
+          <p class="pre-react-boot__status">Loading game…</p>
+          <div class="pre-react-boot__recovery" data-pre-react-recovery>
+            <p>Still loading. Check your connection, then try again.</p>
+            <a class="pre-react-boot__retry" href="">RETRY</a>
+          </div>
+        </div>
+      </main>
+    </div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

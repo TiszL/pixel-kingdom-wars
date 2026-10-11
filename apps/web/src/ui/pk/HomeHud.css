@@ -1,0 +1,295 @@
+/* HomeHud.css — <HomeHud> (DESIGN-SYSTEM §6 HUD, design/final/home.html; geometry = AND:K/ui/hud/HudBudget.kt HudGeometry).
+ *
+ * Layout by viewport class (lane §10.1), read from the token bridge as data-vp (pkViewport.ts); no pixel breakpoint
+ * appears in this file. Same information order on every class: TL cluster, TR stack, edges, herald, deck.
+ *   phone-portrait   — DS geometry exactly (home.png).
+ *   phone-landscape  — HUD on the edges, never over the base centre: MAIL/CHAT tabs join the TL row's right end,
+ *                      status chip tightens (no divider padding), context chip hidden (its content rides the herald),
+ *                      deck ATTACK/BUILD 64 × 60, ARMY/MAP 48 × 48 (MAP §4.2).
+ *   tablet-portrait / tablet-landscape / desktop — the four corners at DS sizes, nothing in the middle (MAP §4.1);
+ *                      the edge gutter grows to --pk-hud-edge (12 / 16) so the right edge buttons form a side rail
+ *                      under the stack and the left tabs a rail above ATTACK.
+ *
+ * PERMANENT HUD BUDGET (≤ 12 % on every class; union of the painted [data-pk-hud] boxes, nothing selected, the
+ * home.png set: level badge, status chip with 3 segments, 4 readouts, QUESTS (badged) + label, MAIL + CHAT tabs,
+ * 4-button deck). MEASURED 2026-10-03 by the preview's [data-pk-qa] overlay (same DOM, same CSS, stage pinned to the
+ * exact size with ?w=&h=) in headless SwiftShader; union on the CSS-px grid exactly like design/final/home.html:
+ *   phone-portrait    412 × 915  : 11.55 %
+ *   phone-landscape   844 × 390  :  9.91 %   (re-measured 2026-10-03 after the icon-only status chip)
+ *   phone-landscape   915 × 311  : 11.46 %
+ *   tablet-portrait   768 × 1024 :  5.53 %
+ *   tablet-landscape 1024 × 768  :  5.53 %
+ *   desktop          1440 × 900  :  3.36 %
+ *   desktop          1920 × 1080 :  2.10 %
+ *   floor (phone-portrait) 320 × 640 : 20.58 % uncollapsed → 16.64 % with `floor` (data-floor: packed deck, icon-only
+ *                      status chip, no edge caption pill, no context chip). Still over 12 %: what is left is the stack
+ *                      (108 × 110 ≈ 5.8 %) + level + chip + QUESTS + MAIL/CHAT + deck, and reaching 12 % means hiding a
+ *                      whole zone — an owner ruling (lane §9 Q3), not something this file decides.
+ * Android's own figure for the reference phone is 11.9 % (HudBudget.kt; design 44,790 of 376,980 dp²).
+ */
+
+.pk-hud {
+  /* --- HudGeometry constants with no TOKENS key (proposed bridge additions; HudBudget.kt:31-111) --- */
+  --hud-level-y: 10px;            /* LEVEL_Y */
+  --hud-stack-top: 10px;          /* STACK_TOP */
+  --hud-status-inset: 9px;        /* STATUS_TOUCH_INSET: 48 touch row around the 30 veil */
+  --hud-edge-top: 142px;          /* EDGE_TOP */
+  --hud-edge-label-w-max: 74px;   /* EDGE_LABEL_W_MAX */
+  --hud-edge-label-h: 24px;       /* EDGE_LABEL_H */
+  --hud-tabs-bottom: 103px;       /* TABS_BOTTOM */
+  --hud-herald-top: 56px;         /* HERALD_TOP */
+  --hud-pips-w: 36px;             /* HomeHud.kt DeckButton meter 36 × 5 */
+  --hud-pips-h: 5px;
+  --hud-deselect: var(--pk-dur-crossfade); /* DS §7 "exit: reverse 120 ms"; HomeHud.kt DESELECT_MS (no TOKENS key) */
+  /* Deck sizes (TOKENS size.deck.*) */
+  --hud-deck-first-w: var(--pk-size-deck-attack-w);
+  --hud-deck-first-h: var(--pk-size-deck-attack-h);
+  --hud-deck-primary-w: var(--pk-size-deck-build);
+  --hud-deck-primary-h: var(--pk-size-deck-build);
+  --hud-deck-small: var(--pk-size-deck-army);
+
+  position: absolute;
+  inset: 0;
+  pointer-events: none;   /* the overlay root's rule; only .interactive pieces take input */
+  overflow: hidden;       /* nothing here can create page scroll */
+}
+.pk-hud[data-vp='phone-landscape'], .pk-hud[data-floor] {
+  /* (data-floor: the 320 floor reuses this packed deck — lane §9 Q3, set by the shell, not a breakpoint.)
+   * MAP §4.2 item 3 proposed ATTACK/BUILD 64 × 60, ARMY/MAP 48 × 48 with captions and 48-tall tabs; with those the
+   * same overlay gives ≈ 11.8 % at 844 × 390 but ≈ 12.7 % at 915 × 311 (the Seeker floor), over the 12 % wall
+   * (§10.3), and one class cannot pick by height without a breakpoint. So this class packs (HomeHud.md question 2):
+   * ATTACK/BUILD 60 × 48 with caption, ARMY/MAP 44 × 44 icon-only (caption → aria-label + title), edge-button caption
+   * pill hidden (aria-label + title), MAIL/CHAT tabs painted 30 tall inside their 48 touch row like the status chip. */
+  --hud-deck-first-w: 60px;
+  --hud-deck-first-h: var(--pk-min-tap);
+  --hud-deck-primary-w: 60px;
+  --hud-deck-primary-h: var(--pk-min-tap);
+  --hud-deck-small: 44px;          /* lane §10.2 touch floor */
+}
+
+/* The safe frame: every zone is positioned inside the device's safe area (top/bottom here; left/right are in
+ * --pk-hud-edge). Zero-size insets fall back to 0. */
+.pk-hud__safe {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: env(safe-area-inset-top, 0px);
+  bottom: env(safe-area-inset-bottom, 0px);
+}
+
+/* Zones show/hide on selection: back in 120 ms, out in 160 ms (DS §7), and stay out of the tab order while hidden. */
+.pk-hud__tl, .pk-hud__re, .pk-hud__deck {
+  z-index: var(--z-hud);
+  transition: opacity var(--hud-deselect) var(--pk-ease-out), transform var(--hud-deselect) var(--pk-ease-out), visibility 0s linear 0s;
+}
+.pk-hud__tl[data-hidden], .pk-hud__re[data-hidden], .pk-hud__deck[data-hidden] {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity var(--pk-dur-deck-swap) var(--pk-ease-in), transform var(--pk-dur-deck-swap) var(--pk-ease-in), visibility 0s linear var(--pk-dur-deck-swap);
+}
+
+/* ---------- TL: level badge + status chip (+ tabs on phone-landscape) ---------- */
+.pk-hud__tl { position: absolute; inset: 0; }
+.pk-hud__tlrow {
+  display: flex;
+  align-items: flex-start;
+  padding-top: calc(var(--hud-level-y) - var(--pk-s4));
+  padding-left: calc(var(--pk-hud-edge) - var(--pk-s4));
+  /* never run under the resource stack */
+  padding-right: calc(var(--pk-hud-edge) + var(--pk-size-resource-row-w) + var(--pk-s8));
+}
+.pk-level { width: var(--pk-min-tap); height: var(--pk-min-tap); z-index: 1; }
+.pk-level__face { display: block; width: var(--pk-size-level-badge); height: var(--pk-size-level-badge); }
+.pk-level .pk-chunky { padding-bottom: var(--pk-hud-lip-face); }
+.pk-level .pk-chunky__face { box-shadow: inset 0 calc(-1 * var(--pk-lip-plate)) 0 var(--c-lo); color: var(--pk-text); }
+
+/* The status chip is P0's <PkStatusChip> (StatusChip.css; parity verdict B3). P1 only places it: the veil starts at
+ * x 44 under the badge's right edge (STATUS_X), and the chip may shrink before the stack. */
+.pk-hud__status { display: flex; align-items: center; flex: 0 1 auto; min-width: 0; margin-left: calc(-1 * var(--pk-s8)); }
+
+/* the veil plate (Plate.kt VEIL; design .veil) */
+.pk-veil { display: block; position: relative; width: 100%; height: 100%; background: var(--pk-ink); clip-path: var(--pk-clip-s); padding: var(--pk-s2); }
+.pk-veil__in { display: flex; align-items: center; position: relative; height: 100%; clip-path: var(--pk-clip-s); background: var(--pk-veil); box-shadow: inset 0 var(--pk-s2) 0 var(--pk-veil-hi); }
+
+/* ---------- TR: the resource stack (Chips.kt ResourceStack / ResourceRow) ---------- */
+.pk-stack {
+  position: absolute;
+  z-index: var(--z-hud);
+  top: var(--hud-stack-top);
+  right: var(--pk-hud-edge);
+  width: var(--pk-size-resource-row-w);
+  display: flex;
+  flex-direction: column;
+  gap: var(--pk-size-resource-gap);
+}
+.pk-rrow { display: block; width: var(--pk-size-resource-row-w); height: var(--pk-size-resource-row-h); text-align: left; }
+.pk-rrow .pk-veil__in { justify-content: flex-end; gap: var(--pk-s4); padding: 0 calc(var(--pk-s4) + var(--pk-text-outline-1)) 0 calc(var(--pk-s32) - var(--pk-s2)); }
+.pk-rrow__ic { position: absolute; left: var(--pk-text-outline-1); top: calc(-1 * var(--pk-text-outline-1)); }
+.pk-rrow__v { color: var(--pk-text); white-space: nowrap; }
+.pk-rrow[data-accent='KEEP'] .pk-rrow__v { color: var(--pk-gold-hi); }   /* KEEP stays distinct from GEMS (lane P1) */
+.pk-rrow[data-accent='SKR'] .pk-rrow__v { color: var(--pk-res-skr); }
+.pk-rrow[data-accent='DIVINE'] .pk-rrow__v { color: var(--pk-res-divine); }
+.pk-rrow:has(.pk-caret) .pk-veil__in { justify-content: space-between; padding-right: var(--pk-text-outline-1); }
+.pk-rrow:hover:not([disabled]) .pk-veil { transform: translateY(var(--pk-text-outline-1)); }
+.pk-rrow:active:not([disabled]) .pk-veil__in { background: var(--pk-veil-hi); }
+.pk-rrow__bar { position: absolute; left: calc(var(--pk-s32) - var(--pk-s4)); right: var(--pk-s4); bottom: 0; height: calc(var(--pk-s2) + var(--pk-text-outline-1)); background: var(--pk-veil-hi); }
+.pk-rrow__bar > i { position: absolute; left: 0; top: 0; bottom: 0; background: var(--pk-res-shards); }
+.pk-rrow__bar[data-full] > i { background: var(--pk-red); }
+.pk-rrow__badge { top: calc(-1 * var(--pk-s8)); left: calc(-1 * var(--pk-s8)); }
+.pk-rrow__gain { position: absolute; right: var(--pk-s4); top: 100%; color: var(--pk-green-hi); pointer-events: none;
+  animation: pk-gain-rise var(--pk-dur-coin-fly) var(--pk-ease-out) both; }
+@keyframes pk-gain-rise { from { transform: translateY(0); opacity: 1; } to { transform: translateY(calc(-1 * var(--pk-s12))); opacity: 0; } }
+/* the gold drawer caret (Chips.kt DrawerCaret 22 × 18; design .caret) */
+.pk-caret { position: relative; display: inline-flex; align-items: center; justify-content: center; flex: none;
+  width: calc(var(--pk-s16) + var(--pk-s6)); height: calc(var(--pk-s16) + var(--pk-s2)); background: var(--pk-ink); clip-path: var(--pk-clip-s); }
+.pk-caret > i { position: absolute; inset: var(--pk-s2); clip-path: var(--pk-clip-s); background: linear-gradient(var(--pk-gold-hi) 0 var(--pk-s2), var(--pk-gold) var(--pk-s2)); }
+.pk-caret > .pk-shape { position: relative; }
+
+/* ---------- RE: edge buttons, a side rail under the stack ---------- */
+.pk-hud__re {
+  position: absolute;
+  top: var(--hud-edge-top);
+  right: calc(var(--pk-hud-edge) + var(--pk-s4));
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: var(--pk-s12);
+}
+.pk-edge-row { display: flex; align-items: flex-start; }
+.pk-edge { display: flex; flex-direction: column; align-items: center; width: var(--pk-size-edge-button);
+  animation: pk-edge-in var(--pk-dur-plate-in) var(--pk-ease-out) both; }
+@keyframes pk-edge-in { from { transform: scale(0.8); opacity: 0; } to { transform: none; opacity: 1; } }
+.pk-edge__btn { width: var(--pk-size-edge-button); height: var(--pk-size-edge-button); }
+.pk-edge__face { display: block; width: 100%; height: 100%; }
+.pk-edge__glow { position: absolute; inset: calc(-1 * var(--pk-s2)); border: var(--pk-s2) solid var(--pk-gold-hi); pointer-events: none;
+  animation: pk-edge-glow var(--pk-dur-ready-bounce-loop) var(--pk-ease-linear) infinite alternate; }
+@keyframes pk-edge-glow { from { opacity: 0.35; } to { opacity: 1; } }
+.pk-edge__label {
+  flex: none;
+  width: max-content;
+  max-width: var(--hud-edge-label-w-max);
+  min-height: var(--hud-edge-label-h);
+  margin-top: var(--pk-s2);
+  padding: 0 var(--pk-s4);
+  display: flex; align-items: center; justify-content: center;
+  background: var(--pk-ink);
+  clip-path: var(--pk-clip-s);
+  color: var(--pk-text);
+  white-space: nowrap; overflow: hidden;
+}
+.pk-overflow { width: var(--pk-min-tap); height: var(--pk-min-tap); align-items: flex-start; justify-content: flex-end; }
+/* In flow, not on the corner: beats HudKit.css `.pk-tap > .pk-badge` (0,2,0) whatever the load order. */
+.pk-tap.pk-overflow > .pk-overflow__badge { position: relative; top: calc(-1 * var(--pk-s6)); }
+
+/* ---------- LE: edge tabs (square on the screen side; design .chat) ---------- */
+.pk-hud__tabs {
+  position: absolute;
+  left: 0;
+  bottom: var(--hud-tabs-bottom);
+  display: flex;
+  flex-direction: column;
+  gap: var(--pk-s4);
+}
+.pk-tab { width: var(--pk-size-edge-tab-w); height: var(--pk-size-edge-tab-h); }
+.pk-tab__face, .pk-tab__in {
+  clip-path: polygon(0 0, calc(100% - var(--pk-s4)) 0, calc(100% - var(--pk-s4)) var(--pk-s2), calc(100% - var(--pk-s2)) var(--pk-s2), calc(100% - var(--pk-s2)) var(--pk-s4), 100% var(--pk-s4),
+    100% calc(100% - var(--pk-s4)), calc(100% - var(--pk-s2)) calc(100% - var(--pk-s4)), calc(100% - var(--pk-s2)) calc(100% - var(--pk-s2)), calc(100% - var(--pk-s4)) calc(100% - var(--pk-s2)), calc(100% - var(--pk-s4)) 100%, 0 100%);
+}
+.pk-tab__face { display: block; width: 100%; height: 100%; background: var(--pk-ink); padding: var(--pk-outline-button) var(--pk-outline-button) calc(var(--pk-s4) + var(--pk-text-outline-1)) 0;
+  transition: transform var(--pk-dur-release) var(--pk-ease-pop); }
+.pk-tab__in { display: flex; align-items: center; justify-content: center; height: 100%;
+  background: linear-gradient(var(--pk-hud-char-hi) 0 var(--pk-hi-band), var(--pk-charcoal) var(--pk-hi-band)); box-shadow: inset 0 calc(-1 * var(--pk-lip-plate)) 0 var(--pk-hud-char-lo); }
+.pk-tab:hover .pk-tab__face { transform: translateY(var(--pk-text-outline-1)); }
+.pk-tab:active .pk-tab__face { transform: translateY(var(--pk-lip-button-pressed)); transition-duration: var(--pk-dur-press); }
+/* phone-landscape: the tabs move into the TL row's right end so the vertical edges stay free for the deck. */
+.pk-hud[data-vp='phone-landscape'] .pk-hud__tabs { position: static; flex-direction: row; margin-left: var(--pk-s4); }
+.pk-hud[data-vp='phone-landscape'] .pk-status__sep { margin: 0; }
+.pk-hud[data-vp='phone-landscape'] .pk-status__seg { padding: 0 var(--pk-s2); }
+.pk-hud[data-vp='phone-landscape'] .pk-tab__face { height: var(--pk-size-status-chip-h); margin-top: var(--hud-status-inset); clip-path: var(--pk-clip-s); padding: var(--pk-s2); }
+.pk-hud[data-vp='phone-landscape'] .pk-tab__in { clip-path: var(--pk-clip-s); }
+.pk-hud[data-vp='phone-landscape'] .pk-tab { align-items: flex-start; }
+.pk-hud[data-vp='phone-landscape'] .pk-tab .pk-badge--tr { top: calc(var(--hud-status-inset) - var(--pk-s6)); }
+.pk-hud[data-vp='phone-landscape'] .pk-edge__label { display: none; }
+/* Lane §4: the status chip is icon-only on phone-landscape and at the floor: HomeHud passes `compact` to P0's
+ * PkStatusChip (`.pk-status--compact`). The value stays in each segment's aria-label; the 48 touch row is unchanged.
+ * The two rules on P0's `.pk-status__sep` / `.pk-status__seg` above and here are scoped HUD-budget packing (HomeHud.md). */
+.pk-hud[data-floor] .pk-status__sep { margin: 0; }
+.pk-hud[data-floor] .pk-edge__label { display: none; }
+
+/* ---------- HB: herald (transient) ---------- */
+.pk-herald {
+  position: absolute;
+  /* Android HERALD 6 sits between DRAWER 5 and TOAST 7 (PkwTokens.kt:232-245). The bridge has no herald slot, so it
+   * takes the next free integer above the drawer: --z-tray + 1 = 1101 (free: nothing in the M48 scale uses 1101-1199;
+   * below --z-page 1200, --z-scout 1400 and --z-toast 3000). README "Z order". */
+  z-index: calc(var(--z-tray) + 1);
+  top: var(--hud-herald-top);
+  left: var(--pk-hud-edge);
+  max-width: calc(100% - 2 * var(--pk-hud-edge) - var(--pk-size-resource-row-w) - var(--pk-s8));
+  height: var(--pk-size-banner-h);
+  animation: pk-herald-in var(--pk-dur-toast-in) var(--pk-ease-out) both;
+}
+.pk-herald__veil .pk-veil__in { gap: var(--pk-s6); padding: 0 var(--pk-s8) 0 var(--pk-s4); }
+.pk-herald__t { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; min-width: 0; }
+@keyframes pk-herald-in { from { opacity: 0; transform: translateY(calc(-1 * var(--pk-s8))); } to { opacity: 1; transform: none; } }
+
+/* ---------- BD: the deck in the two bottom corners ---------- */
+.pk-hud__deck {
+  position: absolute;
+  left: var(--pk-hud-edge);
+  right: var(--pk-hud-edge);
+  bottom: var(--pk-size-deck-bottom-inset);
+  height: var(--hud-deck-first-h);
+}
+.pk-hud__deck[data-hidden] { transform: translateY(calc(100% + var(--pk-size-deck-bottom-inset))); }
+.pk-deck__corner { position: absolute; bottom: 0; display: flex; align-items: flex-end; gap: var(--pk-s4); }
+.pk-deck__corner--l { left: 0; }
+.pk-deck__corner--r { right: 0; }
+.pk-deck__btn--first { width: var(--hud-deck-first-w); height: var(--hud-deck-first-h); }
+.pk-deck__btn--primary { width: var(--hud-deck-primary-w); height: var(--hud-deck-primary-h); }
+.pk-deck__btn--small { width: var(--hud-deck-small); height: var(--hud-deck-small); }
+.pk-deck__face { display: block; width: 100%; height: 100%; }
+.pk-deck__btn .pk-chunky__face { gap: 0; }
+.pk-deck__cap { color: var(--pk-text); white-space: nowrap; }
+/* The display stand-in (VT323 20) is taller than PS 11: on the small faces the content overflows evenly onto the rim
+ * with a tighter line box rather than squeezing the caption (HomeHud.kt SMALL_DECK_CAPTION, DS §11 risk 2). */
+.pk-deck__btn--small .pk-deck__cap { line-height: 0.75; }
+.pk-deck__btn--small .pk-deck__ic { margin-top: calc(-1 * var(--pk-s2)); }
+.pk-deck__pips { display: block; width: var(--hud-pips-w); height: var(--hud-pips-h); background: var(--pk-ink); padding: var(--pk-text-outline-1); margin-top: var(--pk-text-outline-1); }
+.pk-deck__pips > i { display: block; height: 100%; background: var(--pk-green-hi); }
+.pk-hud[data-vp='phone-landscape'] .pk-deck__btn--small .pk-deck__pips,
+.pk-hud[data-vp='phone-landscape'] .pk-deck__btn--small .pk-deck__cap,
+.pk-hud[data-floor] .pk-deck__btn--small .pk-deck__pips,
+.pk-hud[data-floor] .pk-deck__btn--small .pk-deck__cap { display: none; }   /* 44 face: icon only */
+.pk-hud[data-vp='phone-landscape'] .pk-deck__cap, .pk-hud[data-floor] .pk-deck__cap { line-height: 0.75; }
+.pk-hud[data-vp='phone-landscape'] .pk-deck__btn--small .pk-deck__ic, .pk-hud[data-floor] .pk-deck__btn--small .pk-deck__ic { margin-top: 0; }
+
+/* context chip (transient, 6 s; DS §6 ContextChip; design .next card) — never on phone-landscape (MAP §4.2 item 2) */
+.pk-context { position: absolute; left: 50%; bottom: 0; transform: translateX(-50%);
+  width: var(--pk-size-context-chip-w); height: var(--pk-size-context-chip-h);
+  animation: pk-context-in var(--pk-dur-toast-in) var(--pk-ease-out) both; }
+@keyframes pk-context-in { from { opacity: 0; translate: 0 var(--pk-s12); } to { opacity: 1; translate: 0 0; } }
+.pk-context__card { display: block; width: 100%; height: 100%; background: var(--pk-ink); clip-path: var(--pk-hud-clip-m); padding: var(--pk-s2); }
+.pk-context__in { display: flex; flex-direction: column; justify-content: center; height: 100%; padding: var(--pk-s2) var(--pk-s6) 0 calc(var(--pk-s24) + var(--pk-s6));
+  clip-path: var(--pk-clip-s); background: var(--pk-cream); box-shadow: inset 0 calc(-1 * var(--pk-lip-plate)) 0 var(--pk-cream-lo); text-align: left; }
+.pk-context__what { color: var(--pk-ink-text); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.pk-context__where { color: var(--pk-gold-lo); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.pk-context__arrow { transform: rotate(-90deg) scale(0.6); vertical-align: middle; background: var(--pk-gold-lo); }
+.pk-context__ic { position: absolute; left: calc(-1 * var(--pk-s6)); top: calc(-1 * var(--pk-s8)); }
+.pk-context:hover .pk-context__card { transform: translateY(var(--pk-text-outline-1)); }
+.pk-hud[data-vp='phone-landscape'] .pk-context, .pk-hud[data-floor] .pk-context { display: none; }  /* floor: no room between the corners */
+
+/* tools shelf (transient): one row of 52 faces 8 above BUILD's corner */
+.pk-tools {
+  position: absolute;
+  z-index: var(--z-hud);
+  bottom: calc(var(--pk-size-deck-bottom-inset) + var(--hud-deck-primary-h) + var(--pk-s8));
+  display: flex;
+  gap: var(--pk-s4);
+  animation: pk-edge-in var(--pk-dur-plate-in) var(--pk-ease-out) both;
+}
+.pk-tools--r { right: var(--pk-hud-edge); }
+.pk-tools--l { left: var(--pk-hud-edge); }
+
+/* Reduced motion (no slides, no pops, no loops; state changes cross-fade) is the shared kitBase.css block, under BOTH
+ * triggers (the OS query and html[data-motion="reduce"]). */

@@ -1,0 +1,1158 @@
+[
+ {
+  "file": "map_grass_1.svg",
+  "w": 32,
+  "h": 32,
+  "frames": 1,
+  "anchor": [
+   0,
+   0
+  ],
+  "footprint": null,
+  "batch": 8,
+  "tags": [
+   "map",
+   "terrain"
+  ],
+  "palette_swap": null
+ },
+ {
+  "file": "map_grass_2.svg",
+  "w": 32,
+  "h": 32,
+  "frames": 1,
+  "anchor": [
+   0,
+   0
+  ],
+  "footprint": null,
+  "batch": 8,
+  "tags": [
+   "map",
+   "terrain"
+  ],
+  "palette_swap": null
+ },
+ {
+  "file": "map_grass_3.svg",
+  "w": 32,
+  "h": 32,
+  "frames": 1,
+  "anchor": [
+   0,
+   0
+  ],
+  "footprint": null,
+  "batch": 8,
+  "tags": [
+   "map",
+   "terrain"
+  ],
+  "palette_swap": null
+ },
+ {
+  "file": "map_grass_4.svg",
+  "w": 32,
+  "h": 32,
+  "frames": 1,
+  "anchor": [
+   0,
+   0
+  ],
+  "footprint": null,
+  "batch": 8,
+  "tags": [
+   "map",
+   "terrain"
+  ],
+  "palette_swap": null
+ },
+ {
+  "file": "map_forest_1.svg",
+  "w": 32,
+  "h": 32,
+  "frames": 1,
+  "anchor": [
+   0,
+   0
+  ],
+  "footprint": null,
+  "batch": 8,
+  "tags": [
+   "map",
+   "terrain"
+  ],
+  "palette_swap": null
+ },
+ {
+  "file": "map_forest_2.svg",
+  "w": 32,
+  "h": 32,
+  "frames": 1,
+  "anchor": [
+   0,
+   0
+  ],
+  "footprint": null,
+  "batch": 8,
+  "tags": [
+   "map",
+   "terrain"
+  ],
+  "palette_swap": null
+ },
+ {
+  "file": "map_forest_3.svg",
+  "w": 32,
+  "h": 32,
+  "frames": 1,
+  "anchor": [
+   0,
+   0
+  ],
+  "footprint": null,
+  "batch": 8,
+  "tags": [
+   "map",
+   "terrain"
+  ],
+  "palette_swap": null
+ },
+ {
+  "file": "map_pine_1.svg",
+  "w": 32,
+  "h": 32,
+  "frames": 1,
+  "anchor": [
+   0,
+   0
+  ],
+  "footprint": null,
+  "batch": 8,
+  "tags": [
+   "map",
+   "terrain"
+  ],
+  "palette_swap": null
+ },
+ {
+  "file": "map_pine_2.svg",
+  "w": 32,
+  "h": 32,
+  "frames": 1,
+  "anchor": [
+   0,
+   0
+  ],
+  "footprint": null,
+  "batch": 8,
+  "tags": [
+   "map",
+   "terrain"
+  ],
+  "palette_swap": null
+ },
+ {
+  "file": "map_hill_1.svg",
+  "w": 32,
+  "h": 32,
+  "frames": 1,
+  "anchor": [
+   0,
+   0
+  ],
+  "footprint": null,
+  "batch": 8,
+  "tags": [
+   "map",
+   "terrain"
+  ],
+  "palette_swap": null
+ },
+ {
+  "file": "map_hill_2.svg",
+  "w": 32,
+  "h": 32,
+  "frames": 1,
+  "anchor": [
+   0,
+   0
+  ],
+  "footprint": null,
+  "batch": 8,
+  "tags": [
+   "map",
+   "terrain"
+  ],
+  "palette_swap": null
+ },
+ {
+  "file": "map_mtn_low.svg",
+  "w": 32,
+  "h": 32,
+  "frames": 1,
+  "anchor": [
+   0,
+   0
+  ],
+  "footprint": null,
+  "batch": 8,
+  "tags": [
+   "map",
+   "terrain"
+  ],
+  "palette_swap": null
+ },
+ {
+  "file": "map_mtn_mid.svg",
+  "w": 32,
+  "h": 32,
+  "frames": 1,
+  "anchor": [
+   0,
+   0
+  ],
+  "footprint": null,
+  "batch": 8,
+  "tags": [
+   "map",
+   "terrain"
+  ],
+  "palette_swap": null
+ },
+ {
+  "file": "map_mtn_peak.svg",
+  "w": 32,
+  "h": 32,
+  "frames": 1,
+  "anchor": [
+   0,
+   0
+  ],
+  "footprint": null,
+  "batch": 8,
+  "tags": [
+   "map",
+   "terrain"
+  ],
+  "palette_swap": null
+ },
+ {
+  "file": "map_water_c.svg",
+  "w": 32,
+  "h": 32,
+  "frames": 1,
+  "anchor": [
+   0,
+   0
+  ],
+  "footprint": null,
+  "batch": 8,
+  "tags": [
+   "map",
+   "terrain"
+  ],
+  "palette_swap": null
+ },
+ {
+  "file": "map_water_n.svg",
+  "w": 32,
+  "h": 32,
+  "frames": 1,
+  "anchor": [
+   0,
+   0
+  ],
+  "footprint": null,
+  "batch": 8,
+  "tags": [
+   "map",
+   "terrain"
+  ],
+  "palette_swap": null
+ },
+ {
+  "file": "map_water_s.svg",
+  "w": 32,
+  "h": 32,
+  "frames": 1,
+  "anchor": [
+   0,
+   0
+  ],
+  "footprint": null,
+  "batch": 8,
+  "tags": [
+   "map",
+   "terrain"
+  ],
+  "palette_swap": null
+ },
+ {
+  "file": "map_water_e.svg",
+  "w": 32,
+  "h": 32,
+  "frames": 1,
+  "anchor": [
+   0,
+   0
+  ],
+  "footprint": null,
+  "batch": 8,
+  "tags": [
+   "map",
+   "terrain"
+  ],
+  "palette_swap": null
+ },
+ {
+  "file": "map_water_w.svg",
+  "w": 32,
+  "h": 32,
+  "frames": 1,
+  "anchor": [
+   0,
+   0
+  ],
+  "footprint": null,
+  "batch": 8,
+  "tags": [
+   "map",
+   "terrain"
+  ],
+  "palette_swap": null
+ },
+ {
+  "file": "map_water_nw.svg",
+  "w": 32,
+  "h": 32,
+  "frames": 1,
+  "anchor": [
+   0,
+   0
+  ],
+  "footprint": null,
+  "batch": 8,
+  "tags": [
+   "map",
+   "terrain"
+  ],
+  "palette_swap": null
+ },
+ {
+  "file": "map_water_ne.svg",
+  "w": 32,
+  "h": 32,
+  "frames": 1,
+  "anchor": [
+   0,
+   0
+  ],
+  "footprint": null,
+  "batch": 8,
+  "tags": [
+   "map",
+   "terrain"
+  ],
+  "palette_swap": null
+ },
+ {
+  "file": "map_water_sw.svg",
+  "w": 32,
+  "h": 32,
+  "frames": 1,
+  "anchor": [
+   0,
+   0
+  ],
+  "footprint": null,
+  "batch": 8,
+  "tags": [
+   "map",
+   "terrain"
+  ],
+  "palette_swap": null
+ },
+ {
+  "file": "map_water_se.svg",
+  "w": 32,
+  "h": 32,
+  "frames": 1,
+  "anchor": [
+   0,
+   0
+  ],
+  "footprint": null,
+  "batch": 8,
+  "tags": [
+   "map",
+   "terrain"
+  ],
+  "palette_swap": null
+ },
+ {
+  "file": "map_river_ns.svg",
+  "w": 32,
+  "h": 32,
+  "frames": 1,
+  "anchor": [
+   0,
+   0
+  ],
+  "footprint": null,
+  "batch": 8,
+  "tags": [
+   "map",
+   "terrain"
+  ],
+  "palette_swap": null
+ },
+ {
+  "file": "map_river_ew.svg",
+  "w": 32,
+  "h": 32,
+  "frames": 1,
+  "anchor": [
+   0,
+   0
+  ],
+  "footprint": null,
+  "batch": 8,
+  "tags": [
+   "map",
+   "terrain"
+  ],
+  "palette_swap": null
+ },
+ {
+  "file": "map_river_ne.svg",
+  "w": 32,
+  "h": 32,
+  "frames": 1,
+  "anchor": [
+   0,
+   0
+  ],
+  "footprint": null,
+  "batch": 8,
+  "tags": [
+   "map",
+   "terrain"
+  ],
+  "palette_swap": null
+ },
+ {
+  "file": "map_river_nw.svg",
+  "w": 32,
+  "h": 32,
+  "frames": 1,
+  "anchor": [
+   0,
+   0
+  ],
+  "footprint": null,
+  "batch": 8,
+  "tags": [
+   "map",
+   "terrain"
+  ],
+  "palette_swap": null
+ },
+ {
+  "file": "map_river_se.svg",
+  "w": 32,
+  "h": 32,
+  "frames": 1,
+  "anchor": [
+   0,
+   0
+  ],
+  "footprint": null,
+  "batch": 8,
+  "tags": [
+   "map",
+   "terrain"
+  ],
+  "palette_swap": null
+ },
+ {
+  "file": "map_river_sw.svg",
+  "w": 32,
+  "h": 32,
+  "frames": 1,
+  "anchor": [
+   0,
+   0
+  ],
+  "footprint": null,
+  "batch": 8,
+  "tags": [
+   "map",
+   "terrain"
+  ],
+  "palette_swap": null
+ },
+ {
+  "file": "map_road_ns.svg",
+  "w": 32,
+  "h": 32,
+  "frames": 1,
+  "anchor": [
+   0,
+   0
+  ],
+  "footprint": null,
+  "batch": 8,
+  "tags": [
+   "map",
+   "terrain"
+  ],
+  "palette_swap": null
+ },
+ {
+  "file": "map_road_ew.svg",
+  "w": 32,
+  "h": 32,
+  "frames": 1,
+  "anchor": [
+   0,
+   0
+  ],
+  "footprint": null,
+  "batch": 8,
+  "tags": [
+   "map",
+   "terrain"
+  ],
+  "palette_swap": null
+ },
+ {
+  "file": "map_road_ne.svg",
+  "w": 32,
+  "h": 32,
+  "frames": 1,
+  "anchor": [
+   0,
+   0
+  ],
+  "footprint": null,
+  "batch": 8,
+  "tags": [
+   "map",
+   "terrain"
+  ],
+  "palette_swap": null
+ },
+ {
+  "file": "map_road_nw.svg",
+  "w": 32,
+  "h": 32,
+  "frames": 1,
+  "anchor": [
+   0,
+   0
+  ],
+  "footprint": null,
+  "batch": 8,
+  "tags": [
+   "map",
+   "terrain"
+  ],
+  "palette_swap": null
+ },
+ {
+  "file": "map_road_se.svg",
+  "w": 32,
+  "h": 32,
+  "frames": 1,
+  "anchor": [
+   0,
+   0
+  ],
+  "footprint": null,
+  "batch": 8,
+  "tags": [
+   "map",
+   "terrain"
+  ],
+  "palette_swap": null
+ },
+ {
+  "file": "map_road_sw.svg",
+  "w": 32,
+  "h": 32,
+  "frames": 1,
+  "anchor": [
+   0,
+   0
+  ],
+  "footprint": null,
+  "batch": 8,
+  "tags": [
+   "map",
+   "terrain"
+  ],
+  "palette_swap": null
+ },
+ {
+  "file": "map_road_cross.svg",
+  "w": 32,
+  "h": 32,
+  "frames": 1,
+  "anchor": [
+   0,
+   0
+  ],
+  "footprint": null,
+  "batch": 8,
+  "tags": [
+   "map",
+   "terrain"
+  ],
+  "palette_swap": null
+ },
+ {
+  "file": "map_road_t_e.svg",
+  "w": 32,
+  "h": 32,
+  "frames": 1,
+  "anchor": [
+   0,
+   0
+  ],
+  "footprint": null,
+  "batch": 8,
+  "tags": [
+   "map",
+   "terrain"
+  ],
+  "palette_swap": null
+ },
+ {
+  "file": "map_road_end.svg",
+  "w": 32,
+  "h": 32,
+  "frames": 1,
+  "anchor": [
+   0,
+   0
+  ],
+  "footprint": null,
+  "batch": 8,
+  "tags": [
+   "map",
+   "terrain"
+  ],
+  "palette_swap": null
+ },
+ {
+  "file": "map_bridge_ns.svg",
+  "w": 32,
+  "h": 32,
+  "frames": 1,
+  "anchor": [
+   0,
+   0
+  ],
+  "footprint": null,
+  "batch": 8,
+  "tags": [
+   "map",
+   "terrain"
+  ],
+  "palette_swap": null
+ },
+ {
+  "file": "map_bridge_ew.svg",
+  "w": 32,
+  "h": 32,
+  "frames": 1,
+  "anchor": [
+   0,
+   0
+  ],
+  "footprint": null,
+  "batch": 8,
+  "tags": [
+   "map",
+   "terrain"
+  ],
+  "palette_swap": null
+ },
+ {
+  "file": "map_marsh.svg",
+  "w": 32,
+  "h": 32,
+  "frames": 1,
+  "anchor": [
+   0,
+   0
+  ],
+  "footprint": null,
+  "batch": 8,
+  "tags": [
+   "map",
+   "terrain"
+  ],
+  "palette_swap": null
+ },
+ {
+  "file": "map_sand.svg",
+  "w": 32,
+  "h": 32,
+  "frames": 1,
+  "anchor": [
+   0,
+   0
+  ],
+  "footprint": null,
+  "batch": 8,
+  "tags": [
+   "map",
+   "terrain"
+  ],
+  "palette_swap": null
+ },
+ {
+  "file": "map_farm.svg",
+  "w": 32,
+  "h": 32,
+  "frames": 1,
+  "anchor": [
+   0,
+   0
+  ],
+  "footprint": null,
+  "batch": 8,
+  "tags": [
+   "map",
+   "terrain"
+  ],
+  "palette_swap": null
+ },
+ {
+  "file": "map_ash.svg",
+  "w": 32,
+  "h": 32,
+  "frames": 1,
+  "anchor": [
+   0,
+   0
+  ],
+  "footprint": null,
+  "batch": 8,
+  "tags": [
+   "map",
+   "terrain"
+  ],
+  "palette_swap": null
+ },
+ {
+  "file": "map_snow.svg",
+  "w": 32,
+  "h": 32,
+  "frames": 1,
+  "anchor": [
+   0,
+   0
+  ],
+  "footprint": null,
+  "batch": 8,
+  "tags": [
+   "map",
+   "terrain"
+  ],
+  "palette_swap": null
+ },
+ {
+  "file": "map_ruins.svg",
+  "w": 32,
+  "h": 32,
+  "frames": 1,
+  "anchor": [
+   0,
+   0
+  ],
+  "footprint": null,
+  "batch": 8,
+  "tags": [
+   "map",
+   "terrain"
+  ],
+  "palette_swap": null
+ },
+ {
+  "file": "map_camp.svg",
+  "w": 32,
+  "h": 32,
+  "frames": 1,
+  "anchor": [
+   0,
+   0
+  ],
+  "footprint": null,
+  "batch": 8,
+  "tags": [
+   "map",
+   "terrain"
+  ],
+  "palette_swap": null
+ },
+ {
+  "file": "map_keep_t1.svg",
+  "w": 40,
+  "h": 44,
+  "frames": 1,
+  "anchor": [
+   0.5,
+   1
+  ],
+  "footprint": null,
+  "batch": 8,
+  "tags": [
+   "map",
+   "marker"
+  ],
+  "palette_swap": null
+ },
+ {
+  "file": "map_keep_t2.svg",
+  "w": 40,
+  "h": 44,
+  "frames": 1,
+  "anchor": [
+   0.5,
+   1
+  ],
+  "footprint": null,
+  "batch": 8,
+  "tags": [
+   "map",
+   "marker"
+  ],
+  "palette_swap": null
+ },
+ {
+  "file": "map_keep_t3.svg",
+  "w": 40,
+  "h": 44,
+  "frames": 1,
+  "anchor": [
+   0.5,
+   1
+  ],
+  "footprint": null,
+  "batch": 8,
+  "tags": [
+   "map",
+   "marker"
+  ],
+  "palette_swap": null
+ },
+ {
+  "file": "map_keep_t4.svg",
+  "w": 40,
+  "h": 44,
+  "frames": 1,
+  "anchor": [
+   0.5,
+   1
+  ],
+  "footprint": null,
+  "batch": 8,
+  "tags": [
+   "map",
+   "marker"
+  ],
+  "palette_swap": null
+ },
+ {
+  "file": "map_keep_t5.svg",
+  "w": 40,
+  "h": 44,
+  "frames": 1,
+  "anchor": [
+   0.5,
+   1
+  ],
+  "footprint": null,
+  "batch": 8,
+  "tags": [
+   "map",
+   "marker"
+  ],
+  "palette_swap": null
+ },
+ {
+  "file": "map_own.svg",
+  "w": 48,
+  "h": 48,
+  "frames": 1,
+  "anchor": [
+   0.5,
+   1
+  ],
+  "footprint": null,
+  "batch": 8,
+  "tags": [
+   "map",
+   "marker"
+  ],
+  "palette_swap": null
+ },
+ {
+  "file": "map_shield.svg",
+  "w": 40,
+  "h": 40,
+  "frames": 1,
+  "anchor": [
+   0.5,
+   1
+  ],
+  "footprint": null,
+  "batch": 8,
+  "tags": [
+   "map",
+   "marker"
+  ],
+  "palette_swap": null
+ },
+ {
+  "file": "map_loot.svg",
+  "w": 28,
+  "h": 28,
+  "frames": 1,
+  "anchor": [
+   0.5,
+   1
+  ],
+  "footprint": null,
+  "batch": 8,
+  "tags": [
+   "map",
+   "marker"
+  ],
+  "palette_swap": null
+ },
+ {
+  "file": "map_revenge.svg",
+  "w": 32,
+  "h": 32,
+  "frames": 1,
+  "anchor": [
+   0.5,
+   1
+  ],
+  "footprint": null,
+  "batch": 8,
+  "tags": [
+   "map",
+   "marker"
+  ],
+  "palette_swap": null
+ },
+ {
+  "file": "map_scouted.svg",
+  "w": 32,
+  "h": 24,
+  "frames": 1,
+  "anchor": [
+   0.5,
+   1
+  ],
+  "footprint": null,
+  "batch": 8,
+  "tags": [
+   "map",
+   "marker"
+  ],
+  "palette_swap": null
+ },
+ {
+  "file": "map_node_locked.svg",
+  "w": 44,
+  "h": 44,
+  "frames": 1,
+  "anchor": [
+   0.5,
+   1
+  ],
+  "footprint": null,
+  "batch": 8,
+  "tags": [
+   "map",
+   "marker"
+  ],
+  "palette_swap": null
+ },
+ {
+  "file": "map_node_open.svg",
+  "w": 44,
+  "h": 44,
+  "frames": 1,
+  "anchor": [
+   0.5,
+   1
+  ],
+  "footprint": null,
+  "batch": 8,
+  "tags": [
+   "map",
+   "marker"
+  ],
+  "palette_swap": null
+ },
+ {
+  "file": "map_node_done.svg",
+  "w": 44,
+  "h": 44,
+  "frames": 1,
+  "anchor": [
+   0.5,
+   1
+  ],
+  "footprint": null,
+  "batch": 8,
+  "tags": [
+   "map",
+   "marker"
+  ],
+  "palette_swap": null
+ },
+ {
+  "file": "map_node_boss.svg",
+  "w": 44,
+  "h": 44,
+  "frames": 1,
+  "anchor": [
+   0.5,
+   1
+  ],
+  "footprint": null,
+  "batch": 8,
+  "tags": [
+   "map",
+   "marker"
+  ],
+  "palette_swap": null
+ },
+ {
+  "file": "map_star_on.svg",
+  "w": 16,
+  "h": 16,
+  "frames": 1,
+  "anchor": [
+   0.5,
+   1
+  ],
+  "footprint": null,
+  "batch": 8,
+  "tags": [
+   "map",
+   "marker"
+  ],
+  "palette_swap": null
+ },
+ {
+  "file": "map_star_off.svg",
+  "w": 16,
+  "h": 16,
+  "frames": 1,
+  "anchor": [
+   0.5,
+   1
+  ],
+  "footprint": null,
+  "batch": 8,
+  "tags": [
+   "map",
+   "marker"
+  ],
+  "palette_swap": null
+ },
+ {
+  "file": "map_path_dot.svg",
+  "w": 10,
+  "h": 10,
+  "frames": 1,
+  "anchor": [
+   0.5,
+   1
+  ],
+  "footprint": null,
+  "batch": 8,
+  "tags": [
+   "map",
+   "marker"
+  ],
+  "palette_swap": null
+ },
+ {
+  "file": "map_path_dot_off.svg",
+  "w": 10,
+  "h": 10,
+  "frames": 1,
+  "anchor": [
+   0.5,
+   1
+  ],
+  "footprint": null,
+  "batch": 8,
+  "tags": [
+   "map",
+   "marker"
+  ],
+  "palette_swap": null
+ },
+ {
+  "file": "map_flag_player.svg",
+  "w": 24,
+  "h": 32,
+  "frames": 1,
+  "anchor": [
+   0.5,
+   1
+  ],
+  "footprint": null,
+  "batch": 8,
+  "tags": [
+   "map",
+   "marker"
+  ],
+  "palette_swap": null
+ },
+ {
+  "file": "ui_compass.svg",
+  "w": 48,
+  "h": 48,
+  "frames": 1,
+  "anchor": [
+   0.5,
+   1
+  ],
+  "footprint": null,
+  "batch": 8,
+  "tags": [
+   "map",
+   "marker"
+  ],
+  "palette_swap": null
+ },
+ {
+  "file": "ui_map_banner.svg",
+  "w": 160,
+  "h": 32,
+  "frames": 1,
+  "anchor": [
+   0.5,
+   1
+  ],
+  "footprint": null,
+  "batch": 8,
+  "tags": [
+   "map",
+   "marker"
+  ],
+  "palette_swap": null
+ }
+]

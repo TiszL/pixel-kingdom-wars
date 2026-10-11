@@ -1,0 +1,284 @@
+{
+  "description": "Public synthetic transport vectors validated by shared D192 schemas; not a source or finality proof.",
+  "policy": {
+    "version": 1,
+    "resourceId": "crystal_fragment",
+    "weeklyGross": "10000",
+    "periodDays": 7,
+    "individualGross": "7000",
+    "clanGross": "2000",
+    "salvageGross": "1000",
+    "individualSites": 500,
+    "grossPerSite": "14",
+    "basisPoints": 10000,
+    "playerBps": 8000,
+    "seekerBps": 2000,
+    "developerBps": 0
+  },
+  "rules": {
+    "policy": {
+      "version": 1,
+      "resourceId": "crystal_fragment",
+      "weeklyGross": "10000",
+      "periodDays": 7,
+      "individualGross": "7000",
+      "clanGross": "2000",
+      "salvageGross": "1000",
+      "individualSites": 500,
+      "grossPerSite": "14",
+      "basisPoints": 10000,
+      "playerBps": 8000,
+      "seekerBps": 2000,
+      "developerBps": 0
+    },
+    "limits": {
+      "totalSpots": 100,
+      "termSeconds": 604800,
+      "pageSize": 20,
+      "localLimit": 32
+    }
+  },
+  "catalogue": {
+    "constants": {
+      "PHASE_E_POLICY": {
+        "basisPoints": 10000,
+        "mining": {
+          "grossDailyCeilingKeep": 98000,
+          "freePoolBps": 500,
+          "deedPoolBps": 9500,
+          "freeCapacityUnitsPerWalletDay": 2,
+          "fixedWalletPayoutCapKeep": null,
+          "scoreGraceSec": 172800,
+          "seekerBonusBps": 1000,
+          "genesisBaseBonusBps": 2000
+        },
+        "bases": {
+          "activePerWalletMax": 5,
+          "freePerWalletMax": 2,
+          "replacementFeeLamports": 100000000,
+          "navigationFeeLamports": 0,
+          "secondFreeBaseCostShards": 100000
+        },
+        "forge": {
+          "shardsPerIngot": 10000
+        },
+        "taxes": {
+          "resources": {
+            "playerBps": 8000,
+            "islandPoolBps": 2000,
+            "devBps": 0
+          },
+          "minedKeep": {
+            "playerBps": 8000,
+            "islandPoolBps": 1000,
+            "recycleBps": 1000,
+            "devBps": 0
+          },
+          "keepMarket": {
+            "sellerBps": 9000,
+            "burnBps": 1000
+          }
+        },
+        "seekerIsland": {
+          "totalSpots": 100,
+          "kingSpots": 20,
+          "regularSpots": 80,
+          "realmCount": 8,
+          "regularRealmCountMin": 1,
+          "regularRealmCountMax": 4,
+          "paidContractsPerSpotDayMax": 10,
+          "operatingTermSec": 604800,
+          "overlappingAuctionSec": 86400,
+          "permitDurationSec": 604800,
+          "permitPriceLamports": 10000000,
+          "contractSellerBps": 5000,
+          "contractDevBps": 5000
+        },
+        "currencies": {
+          "spendable": [
+            "SOL",
+            "SKR",
+            "KEEP",
+            "GEMS"
+          ],
+          "resources": {
+            "shards": true,
+            "realmResourceCount": 8,
+            "crystalFragments": true
+          },
+          "gems": {
+            "gemsPerKeep": 1,
+            "shardsPerGem": 1,
+            "purchaseBurnBps": 0,
+            "withdrawable": false,
+            "listable": false
+          },
+          "markets": {
+            "resources": "KEEP",
+            "items": "KEEP",
+            "nft": "SOL",
+            "auctions": "SKR"
+          },
+          "legacyCustodialKeep": "converts-to-gems-at-cutover"
+        },
+        "craft": {
+          "applicationFeeLamports": 50000000
+        },
+        "claims": {
+          "applicationFeeLamports": 0
+        }
+      },
+      "PHASE_E_DIVINE_TRIALS": {
+        "version": 1,
+        "entryWeekdayUtc": 6,
+        "entryDurationDays": 1,
+        "playDurationDays": 1,
+        "occupationDurationDays": 7,
+        "divineSites": 500,
+        "attemptsPerWallet": 3,
+        "maxUnfinishedAttempts": 1,
+        "minRenown": 1,
+        "minDaysAttested": 1,
+        "minWinningStars": 1,
+        "maxStars": 3,
+        "maxDestruction": 100,
+        "campaignStage": 5,
+        "simVersion": 17,
+        "seed": 184,
+        "army": {
+          "highlander": 6,
+          "bowman": 8
+        },
+        "levels": {
+          "highlander": 1,
+          "bowman": 1
+        },
+        "maxDeploys": 14,
+        "deployTimeMs": 0,
+        "observationMaxAgeMs": 30000,
+        "rpcTimeoutMs": 30000,
+        "maxSourceConcurrency": 32,
+        "discoveryPageSize": 20,
+        "localEventLimit": 32,
+        "maxSnapshotBuildings": 128,
+        "maxStringLength": 256,
+        "maxObjectKeys": 64,
+        "maxJsonDepth": 16,
+        "maxJsonNodes": 1000000,
+        "maxPayloadBytes": 16777216,
+        "maxReplayEvents": 50000
+      }
+    }
+  },
+  "award": {
+    "version": 1,
+    "resourceId": "crystal_fragment",
+    "economicLineage": "shardkeep",
+    "domain": {
+      "genesisHash": "GySVDr1omr3GTodgWFH7qD1ZKav9C5NMPFjdpwb33LvU",
+      "economyProgram": "GySVDr1omr3GTodgWFH7qD1ZKav9C5NMPFjdpwb33LvU"
+    },
+    "eventId": "00000000-0000-4000-8000-000000000001",
+    "wallet": "GySVDr1omr3GTodgWFH7qD1ZKav9C5NMPFjdpwb33LvU",
+    "site": "divine-individual-001",
+    "weekStart": "2026-09-24T00:00:00.000Z",
+    "earnedAt": "2026-09-28T00:00:00.000Z",
+    "sourceHash": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    "termId": "00000000-0000-4000-8000-000000000020",
+    "termHash": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+    "winnerCount": 2,
+    "poolDisposition": "original_winning_spots",
+    "gross": "14",
+    "net": "12",
+    "tax": "2",
+    "carryBefore": "0",
+    "carryAfter": "8000",
+    "settledAt": "2026-09-28T00:00:00.000Z"
+  },
+  "delivery": {
+    "idempotencyKey": "00000000-0000-4000-8000-000000000003",
+    "baseId": "00000000-0000-4000-8000-000000000004",
+    "version": 1,
+    "resourceId": "crystal_fragment",
+    "eventId": "00000000-0000-4000-8000-000000000001",
+    "wallet": "GySVDr1omr3GTodgWFH7qD1ZKav9C5NMPFjdpwb33LvU",
+    "quantity": "12",
+    "stockBefore": "0",
+    "stockAfter": "12",
+    "deliveredAt": "2026-09-28T00:00:00.000Z"
+  },
+  "claim": {
+    "idempotencyKey": "00000000-0000-4000-8000-000000000003",
+    "baseId": "00000000-0000-4000-8000-000000000004",
+    "termId": "00000000-0000-4000-8000-000000000020",
+    "spotId": 0,
+    "version": 1,
+    "resourceId": "crystal_fragment",
+    "wallet": "GySVDr1omr3GTodgWFH7qD1ZKav9C5NMPFjdpwb33LvU",
+    "termHash": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+    "winnerCount": 2,
+    "poolTotal": "11",
+    "previousTotal": "2",
+    "cumulativeTotal": "5",
+    "quantity": "3",
+    "stockBefore": "0",
+    "stockAfter": "3",
+    "claimedAt": "2026-09-28T00:00:00.000Z"
+  },
+  "entitlement": {
+    "termId": "00000000-0000-4000-8000-000000000020",
+    "termHash": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+    "startsAt": "2026-09-28T00:00:00.000Z",
+    "endsAt": "2026-10-05T00:00:00.000Z",
+    "spotId": 0,
+    "winnerCount": 2,
+    "poolTotal": "11",
+    "previousTotal": "2",
+    "cumulativeTotal": "5",
+    "claimable": "3"
+  },
+  "consent": {
+    "version": 1,
+    "wallet": "GySVDr1omr3GTodgWFH7qD1ZKav9C5NMPFjdpwb33LvU",
+    "eventId": "00000000-0000-4000-8000-000000000001",
+    "request": {
+      "idempotencyKey": "00000000-0000-4000-8000-000000000003",
+      "baseId": "00000000-0000-4000-8000-000000000004"
+    },
+    "award": {
+      "version": 1,
+      "resourceId": "crystal_fragment",
+      "economicLineage": "shardkeep",
+      "domain": {
+        "genesisHash": "GySVDr1omr3GTodgWFH7qD1ZKav9C5NMPFjdpwb33LvU",
+        "economyProgram": "GySVDr1omr3GTodgWFH7qD1ZKav9C5NMPFjdpwb33LvU"
+      },
+      "eventId": "00000000-0000-4000-8000-000000000001",
+      "wallet": "GySVDr1omr3GTodgWFH7qD1ZKav9C5NMPFjdpwb33LvU",
+      "site": "divine-individual-001",
+      "weekStart": "2026-09-24T00:00:00.000Z",
+      "earnedAt": "2026-09-28T00:00:00.000Z",
+      "sourceHash": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "termId": "00000000-0000-4000-8000-000000000020",
+      "termHash": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+      "winnerCount": 2,
+      "poolDisposition": "original_winning_spots",
+      "gross": "14",
+      "net": "12",
+      "tax": "2",
+      "carryBefore": "0",
+      "carryAfter": "8000",
+      "settledAt": "2026-09-28T00:00:00.000Z"
+    }
+  },
+  "claimConsent": {
+    "version": 1,
+    "wallet": "GySVDr1omr3GTodgWFH7qD1ZKav9C5NMPFjdpwb33LvU",
+    "request": {
+      "idempotencyKey": "00000000-0000-4000-8000-000000000003",
+      "baseId": "00000000-0000-4000-8000-000000000004",
+      "termId": "00000000-0000-4000-8000-000000000020",
+      "spotId": 0
+    }
+  }
+}

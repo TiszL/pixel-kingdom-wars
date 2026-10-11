@@ -1,0 +1,2617 @@
+{
+  "sourceCommit": "6d69d675d48654dd7ce196212fafafa4a561c373",
+  "sourceHashes": {
+    "battleAudio.ts": "84fb18c00c0f8885b4105da30d715aa1d2afad0bb161c4c974c110cf953fff2e",
+    "audio.ts": "862ec588e8cda4c745596bdbc3ec714f84a9e579513b4961a7a055685a18c9fa",
+    "replay.ts": "b249b68cb878902a0cc1da98b74c41f8e6c5f784dd213369c32d507382230311"
+  },
+  "catalogue": {
+    "presentation": {
+      "tickMs": 100
+    },
+    "constants": {
+      "AUDIO_RUNTIME": {
+        "maxDecodedBytes": 16777216,
+        "preloadConcurrency": 4,
+        "maxOneShotVoices": 24,
+        "maxOneShotVoicesPerCue": 3,
+        "duplicateCoalesceMs": 24,
+        "battleBankWindowMs": 6000,
+        "battleBankPreloadLeadMs": 3000,
+        "manifestRequestTimeoutMs": 1500,
+        "manifestRetryDelayMs": 5000,
+        "assetRequestTimeoutMs": 3500,
+        "bankReadyDeadlineMs": 3500,
+        "initialBattleAudioBudgetMs": 120,
+        "ambienceVolume": 0.16
+      },
+      "RAID_REPLAY_LIMITS": {
+        "maxDirectDeploys": 720,
+        "maxActors": 2500,
+        "maxEvents": 50000,
+        "simulationLeaseSec": 30,
+        "simulationWorkerTimeoutSec": 20,
+        "simulationWalletCooldownSec": 15,
+        "submitRateLimitPerMin": 6,
+        "heavySimulationAboveActors": 100,
+        "postBattleDrainTicks": 60,
+        "maxAttackRunCycles": 900,
+        "maxAttackContactsPerCycle": 3
+      }
+    }
+  },
+  "hashes": [
+    {
+      "value": "",
+      "hash": 2166136261
+    },
+    {
+      "value": "hello",
+      "hash": 1335831723
+    },
+    {
+      "value": "sfx_troop_dragon_breath:2:5:release",
+      "hash": 3863228108
+    },
+    {
+      "value": "astral:🐉",
+      "hash": 2040676022
+    },
+    {
+      "value": "საქართველო",
+      "hash": 4293428304
+    }
+  ],
+  "cases": [
+    {
+      "name": "troop highlander",
+      "buildings": [],
+      "events": [
+        {
+          "t": 0,
+          "e": "deploy",
+          "id": 0,
+          "troop": "highlander"
+        },
+        {
+          "t": 5,
+          "e": "attackRun",
+          "id": 0,
+          "troop": "highlander",
+          "mode": "melee",
+          "targetKind": "building",
+          "technique": "strike",
+          "count": 2,
+          "cycleTicks": 6,
+          "cadenceTicks": 7,
+          "releaseOffsetTicks": 1,
+          "cycleMs": 550,
+          "releaseOffsetMs": 135,
+          "impactOffsetsTicks": [
+            3,
+            5
+          ]
+        },
+        {
+          "t": 5,
+          "e": "troopAttack",
+          "id": 0
+        },
+        {
+          "t": 12,
+          "e": "troopAttack",
+          "id": 0
+        },
+        {
+          "t": 19,
+          "e": "troopAttack",
+          "id": 0
+        },
+        {
+          "t": 23,
+          "e": "troopDeath",
+          "id": 0
+        }
+      ],
+      "expected": [
+        {
+          "atMs": 0,
+          "family": "sfx_troop_highlander_deploy",
+          "variantKey": "0:0:deploy",
+          "fallback": "sfx_deploy_pop"
+        },
+        {
+          "atMs": 635,
+          "family": "sfx_troop_highlander_attack",
+          "variantKey": "0:5:release",
+          "fallback": "sfx_sword_hit"
+        },
+        {
+          "atMs": 1335,
+          "family": "sfx_troop_highlander_attack",
+          "variantKey": "0:12:release",
+          "fallback": "sfx_sword_hit"
+        },
+        {
+          "atMs": 1900,
+          "family": "sfx_troop_highlander_attack",
+          "variantKey": "0:19:release",
+          "fallback": "sfx_sword_hit"
+        },
+        {
+          "atMs": 2300,
+          "family": "sfx_troop_highlander_death",
+          "variantKey": "0:23:troopDeath"
+        }
+      ]
+    },
+    {
+      "name": "troop bowman",
+      "buildings": [],
+      "events": [
+        {
+          "t": 0,
+          "e": "deploy",
+          "id": 1,
+          "troop": "bowman"
+        },
+        {
+          "t": 5,
+          "e": "attackRun",
+          "id": 1,
+          "troop": "bowman",
+          "mode": "melee",
+          "targetKind": "building",
+          "technique": "strike",
+          "count": 2,
+          "cycleTicks": 6,
+          "cadenceTicks": 7,
+          "releaseOffsetTicks": 1,
+          "cycleMs": 550,
+          "releaseOffsetMs": 135,
+          "impactOffsetsTicks": [
+            3,
+            5
+          ]
+        },
+        {
+          "t": 5,
+          "e": "troopAttack",
+          "id": 1
+        },
+        {
+          "t": 12,
+          "e": "troopAttack",
+          "id": 1
+        },
+        {
+          "t": 19,
+          "e": "troopAttack",
+          "id": 1
+        },
+        {
+          "t": 23,
+          "e": "troopDeath",
+          "id": 1
+        }
+      ],
+      "expected": [
+        {
+          "atMs": 0,
+          "family": "sfx_troop_bowman_deploy",
+          "variantKey": "1:0:deploy",
+          "fallback": "sfx_deploy_pop"
+        },
+        {
+          "atMs": 635,
+          "family": "sfx_troop_bowman_release",
+          "variantKey": "1:5:release",
+          "fallback": "sfx_bow_shot"
+        },
+        {
+          "atMs": 800,
+          "family": "sfx_troop_bowman_impact",
+          "variantKey": "1:5:impact:0",
+          "fallback": "sfx_arrow_hit"
+        },
+        {
+          "atMs": 1000,
+          "family": "sfx_troop_bowman_impact",
+          "variantKey": "1:5:impact:1",
+          "fallback": "sfx_arrow_hit"
+        },
+        {
+          "atMs": 1335,
+          "family": "sfx_troop_bowman_release",
+          "variantKey": "1:12:release",
+          "fallback": "sfx_bow_shot"
+        },
+        {
+          "atMs": 1500,
+          "family": "sfx_troop_bowman_impact",
+          "variantKey": "1:12:impact:0",
+          "fallback": "sfx_arrow_hit"
+        },
+        {
+          "atMs": 1700,
+          "family": "sfx_troop_bowman_impact",
+          "variantKey": "1:12:impact:1",
+          "fallback": "sfx_arrow_hit"
+        },
+        {
+          "atMs": 1900,
+          "family": "sfx_troop_bowman_impact",
+          "variantKey": "1:19:impact:0",
+          "fallback": "sfx_arrow_hit"
+        },
+        {
+          "atMs": 1900,
+          "family": "sfx_troop_bowman_release",
+          "variantKey": "1:19:release",
+          "fallback": "sfx_bow_shot"
+        },
+        {
+          "atMs": 2300,
+          "family": "sfx_troop_bowman_death",
+          "variantKey": "1:23:troopDeath"
+        }
+      ]
+    },
+    {
+      "name": "troop kegrunner",
+      "buildings": [],
+      "events": [
+        {
+          "t": 0,
+          "e": "deploy",
+          "id": 2,
+          "troop": "kegrunner"
+        },
+        {
+          "t": 5,
+          "e": "attackRun",
+          "id": 2,
+          "troop": "kegrunner",
+          "mode": "melee",
+          "targetKind": "building",
+          "technique": "strike",
+          "count": 2,
+          "cycleTicks": 6,
+          "cadenceTicks": 7,
+          "releaseOffsetTicks": 1,
+          "cycleMs": 550,
+          "releaseOffsetMs": 135,
+          "impactOffsetsTicks": [
+            3,
+            5
+          ]
+        },
+        {
+          "t": 5,
+          "e": "troopAttack",
+          "id": 2
+        },
+        {
+          "t": 12,
+          "e": "troopAttack",
+          "id": 2
+        },
+        {
+          "t": 19,
+          "e": "troopAttack",
+          "id": 2
+        },
+        {
+          "t": 23,
+          "e": "troopDeath",
+          "id": 2
+        }
+      ],
+      "expected": [
+        {
+          "atMs": 0,
+          "family": "sfx_troop_kegrunner_deploy_ignite",
+          "variantKey": "2:0:deploy",
+          "fallback": "sfx_deploy_pop"
+        },
+        {
+          "atMs": 0,
+          "family": "sfx_troop_kegrunner_fuse_loop",
+          "variantKey": "2:0:deploy:fuse",
+          "fallback": "sfx_keg_fuse",
+          "opts": {
+            "loop": true,
+            "volume": 0.6
+          },
+          "dispatch": "actorLoop"
+        },
+        {
+          "atMs": 2300,
+          "family": "sfx_troop_kegrunner_death",
+          "variantKey": "2:23:troopDeath"
+        }
+      ]
+    },
+    {
+      "name": "troop tunneler",
+      "buildings": [],
+      "events": [
+        {
+          "t": 0,
+          "e": "deploy",
+          "id": 3,
+          "troop": "tunneler"
+        },
+        {
+          "t": 5,
+          "e": "attackRun",
+          "id": 3,
+          "troop": "tunneler",
+          "mode": "melee",
+          "targetKind": "building",
+          "technique": "strike",
+          "count": 2,
+          "cycleTicks": 6,
+          "cadenceTicks": 7,
+          "releaseOffsetTicks": 1,
+          "cycleMs": 550,
+          "releaseOffsetMs": 135,
+          "impactOffsetsTicks": [
+            3,
+            5
+          ]
+        },
+        {
+          "t": 5,
+          "e": "troopAttack",
+          "id": 3
+        },
+        {
+          "t": 12,
+          "e": "troopAttack",
+          "id": 3
+        },
+        {
+          "t": 19,
+          "e": "troopAttack",
+          "id": 3
+        },
+        {
+          "t": 23,
+          "e": "troopDeath",
+          "id": 3
+        }
+      ],
+      "expected": [
+        {
+          "atMs": 0,
+          "family": "sfx_troop_tunneler_deploy",
+          "variantKey": "3:0:deploy",
+          "fallback": "sfx_deploy_pop"
+        },
+        {
+          "atMs": 635,
+          "family": "sfx_troop_tunneler_pick_contact",
+          "variantKey": "3:5:release",
+          "fallback": "sfx_sword_hit"
+        },
+        {
+          "atMs": 1335,
+          "family": "sfx_troop_tunneler_pick_contact",
+          "variantKey": "3:12:release",
+          "fallback": "sfx_sword_hit"
+        },
+        {
+          "atMs": 1900,
+          "family": "sfx_troop_tunneler_pick_contact",
+          "variantKey": "3:19:release",
+          "fallback": "sfx_sword_hit"
+        },
+        {
+          "atMs": 2300,
+          "family": "sfx_troop_tunneler_death",
+          "variantKey": "3:23:troopDeath"
+        }
+      ]
+    },
+    {
+      "name": "troop turrider",
+      "buildings": [],
+      "events": [
+        {
+          "t": 0,
+          "e": "deploy",
+          "id": 4,
+          "troop": "turrider"
+        },
+        {
+          "t": 5,
+          "e": "attackRun",
+          "id": 4,
+          "troop": "turrider",
+          "mode": "melee",
+          "targetKind": "building",
+          "technique": "strike",
+          "count": 2,
+          "cycleTicks": 6,
+          "cadenceTicks": 7,
+          "releaseOffsetTicks": 1,
+          "cycleMs": 550,
+          "releaseOffsetMs": 135,
+          "impactOffsetsTicks": [
+            3,
+            5
+          ]
+        },
+        {
+          "t": 5,
+          "e": "troopAttack",
+          "id": 4
+        },
+        {
+          "t": 12,
+          "e": "troopAttack",
+          "id": 4
+        },
+        {
+          "t": 19,
+          "e": "troopAttack",
+          "id": 4
+        },
+        {
+          "t": 23,
+          "e": "troopDeath",
+          "id": 4
+        }
+      ],
+      "expected": [
+        {
+          "atMs": 0,
+          "family": "sfx_troop_turrider_deploy",
+          "variantKey": "4:0:deploy",
+          "fallback": "sfx_deploy_pop"
+        },
+        {
+          "atMs": 635,
+          "family": "sfx_troop_turrider_horn_gore",
+          "variantKey": "4:5:release",
+          "fallback": "sfx_sword_hit"
+        },
+        {
+          "atMs": 1335,
+          "family": "sfx_troop_turrider_horn_gore",
+          "variantKey": "4:12:release",
+          "fallback": "sfx_sword_hit"
+        },
+        {
+          "atMs": 1900,
+          "family": "sfx_troop_turrider_horn_gore",
+          "variantKey": "4:19:release",
+          "fallback": "sfx_sword_hit"
+        },
+        {
+          "atMs": 2300,
+          "family": "sfx_troop_turrider_death",
+          "variantKey": "4:23:troopDeath"
+        }
+      ]
+    },
+    {
+      "name": "troop plunderer",
+      "buildings": [],
+      "events": [
+        {
+          "t": 0,
+          "e": "deploy",
+          "id": 5,
+          "troop": "plunderer"
+        },
+        {
+          "t": 5,
+          "e": "attackRun",
+          "id": 5,
+          "troop": "plunderer",
+          "mode": "melee",
+          "targetKind": "building",
+          "technique": "strike",
+          "count": 2,
+          "cycleTicks": 6,
+          "cadenceTicks": 7,
+          "releaseOffsetTicks": 1,
+          "cycleMs": 550,
+          "releaseOffsetMs": 135,
+          "impactOffsetsTicks": [
+            3,
+            5
+          ]
+        },
+        {
+          "t": 5,
+          "e": "troopAttack",
+          "id": 5
+        },
+        {
+          "t": 12,
+          "e": "troopAttack",
+          "id": 5
+        },
+        {
+          "t": 19,
+          "e": "troopAttack",
+          "id": 5
+        },
+        {
+          "t": 23,
+          "e": "troopDeath",
+          "id": 5
+        }
+      ],
+      "expected": [
+        {
+          "atMs": 0,
+          "family": "sfx_troop_plunderer_deploy",
+          "variantKey": "5:0:deploy",
+          "fallback": "sfx_deploy_pop"
+        },
+        {
+          "atMs": 635,
+          "family": "sfx_troop_plunderer_sack_attack",
+          "variantKey": "5:5:release",
+          "fallback": "sfx_sword_hit"
+        },
+        {
+          "atMs": 1335,
+          "family": "sfx_troop_plunderer_sack_attack",
+          "variantKey": "5:12:release",
+          "fallback": "sfx_sword_hit"
+        },
+        {
+          "atMs": 1900,
+          "family": "sfx_troop_plunderer_sack_attack",
+          "variantKey": "5:19:release",
+          "fallback": "sfx_sword_hit"
+        },
+        {
+          "atMs": 2300,
+          "family": "sfx_troop_plunderer_death",
+          "variantKey": "5:23:troopDeath"
+        }
+      ]
+    },
+    {
+      "name": "troop giant",
+      "buildings": [],
+      "events": [
+        {
+          "t": 0,
+          "e": "deploy",
+          "id": 6,
+          "troop": "giant"
+        },
+        {
+          "t": 5,
+          "e": "attackRun",
+          "id": 6,
+          "troop": "giant",
+          "mode": "melee",
+          "targetKind": "building",
+          "technique": "strike",
+          "count": 2,
+          "cycleTicks": 6,
+          "cadenceTicks": 7,
+          "releaseOffsetTicks": 1,
+          "cycleMs": 550,
+          "releaseOffsetMs": 135,
+          "impactOffsetsTicks": [
+            3,
+            5
+          ]
+        },
+        {
+          "t": 5,
+          "e": "troopAttack",
+          "id": 6
+        },
+        {
+          "t": 12,
+          "e": "troopAttack",
+          "id": 6
+        },
+        {
+          "t": 19,
+          "e": "troopAttack",
+          "id": 6
+        },
+        {
+          "t": 23,
+          "e": "troopDeath",
+          "id": 6
+        }
+      ],
+      "expected": [
+        {
+          "atMs": 0,
+          "family": "sfx_troop_giant_deploy",
+          "variantKey": "6:0:deploy",
+          "fallback": "sfx_deploy_pop"
+        },
+        {
+          "atMs": 635,
+          "family": "sfx_troop_giant_melee",
+          "variantKey": "6:5:release",
+          "fallback": "sfx_sword_hit"
+        },
+        {
+          "atMs": 1335,
+          "family": "sfx_troop_giant_melee",
+          "variantKey": "6:12:release",
+          "fallback": "sfx_sword_hit"
+        },
+        {
+          "atMs": 1900,
+          "family": "sfx_troop_giant_melee",
+          "variantKey": "6:19:release",
+          "fallback": "sfx_sword_hit"
+        },
+        {
+          "atMs": 2300,
+          "family": "sfx_troop_giant_death",
+          "variantKey": "6:23:troopDeath"
+        }
+      ]
+    },
+    {
+      "name": "troop troll",
+      "buildings": [],
+      "events": [
+        {
+          "t": 0,
+          "e": "deploy",
+          "id": 7,
+          "troop": "troll"
+        },
+        {
+          "t": 5,
+          "e": "attackRun",
+          "id": 7,
+          "troop": "troll",
+          "mode": "melee",
+          "targetKind": "building",
+          "technique": "strike",
+          "count": 2,
+          "cycleTicks": 6,
+          "cadenceTicks": 7,
+          "releaseOffsetTicks": 1,
+          "cycleMs": 550,
+          "releaseOffsetMs": 135,
+          "impactOffsetsTicks": [
+            3,
+            5
+          ]
+        },
+        {
+          "t": 5,
+          "e": "troopAttack",
+          "id": 7
+        },
+        {
+          "t": 12,
+          "e": "troopAttack",
+          "id": 7
+        },
+        {
+          "t": 19,
+          "e": "troopAttack",
+          "id": 7
+        },
+        {
+          "t": 23,
+          "e": "troopDeath",
+          "id": 7
+        }
+      ],
+      "expected": [
+        {
+          "atMs": 0,
+          "family": "sfx_troop_troll_deploy",
+          "variantKey": "7:0:deploy",
+          "fallback": "sfx_deploy_pop"
+        },
+        {
+          "atMs": 635,
+          "family": "sfx_troop_troll_building_pound",
+          "variantKey": "7:5:release",
+          "fallback": "sfx_sword_hit"
+        },
+        {
+          "atMs": 1335,
+          "family": "sfx_troop_troll_building_pound",
+          "variantKey": "7:12:release",
+          "fallback": "sfx_sword_hit"
+        },
+        {
+          "atMs": 1900,
+          "family": "sfx_troop_troll_building_pound",
+          "variantKey": "7:19:release",
+          "fallback": "sfx_sword_hit"
+        },
+        {
+          "atMs": 2300,
+          "family": "sfx_troop_troll_death",
+          "variantKey": "7:23:troopDeath"
+        }
+      ]
+    },
+    {
+      "name": "troop dragon",
+      "buildings": [],
+      "events": [
+        {
+          "t": 0,
+          "e": "deploy",
+          "id": 8,
+          "troop": "dragon"
+        },
+        {
+          "t": 5,
+          "e": "attackRun",
+          "id": 8,
+          "troop": "dragon",
+          "mode": "melee",
+          "targetKind": "building",
+          "technique": "strike",
+          "count": 2,
+          "cycleTicks": 6,
+          "cadenceTicks": 7,
+          "releaseOffsetTicks": 1,
+          "cycleMs": 550,
+          "releaseOffsetMs": 135,
+          "impactOffsetsTicks": [
+            3,
+            5
+          ]
+        },
+        {
+          "t": 5,
+          "e": "troopAttack",
+          "id": 8
+        },
+        {
+          "t": 12,
+          "e": "troopAttack",
+          "id": 8
+        },
+        {
+          "t": 19,
+          "e": "troopAttack",
+          "id": 8
+        },
+        {
+          "t": 23,
+          "e": "troopDeath",
+          "id": 8
+        }
+      ],
+      "expected": [
+        {
+          "atMs": 0,
+          "family": "sfx_troop_dragon_deploy",
+          "variantKey": "8:0:deploy",
+          "fallback": "sfx_deploy_pop"
+        },
+        {
+          "atMs": 635,
+          "family": "sfx_troop_dragon_breath",
+          "variantKey": "8:5:release",
+          "fallback": "sfx_bow_shot"
+        },
+        {
+          "atMs": 800,
+          "family": "sfx_troop_dragon_breath_contact",
+          "variantKey": "8:5:impact:0",
+          "fallback": "sfx_arrow_hit"
+        },
+        {
+          "atMs": 1000,
+          "family": "sfx_troop_dragon_breath_contact",
+          "variantKey": "8:5:impact:1",
+          "fallback": "sfx_arrow_hit"
+        },
+        {
+          "atMs": 1335,
+          "family": "sfx_troop_dragon_breath",
+          "variantKey": "8:12:release",
+          "fallback": "sfx_bow_shot"
+        },
+        {
+          "atMs": 1500,
+          "family": "sfx_troop_dragon_breath_contact",
+          "variantKey": "8:12:impact:0",
+          "fallback": "sfx_arrow_hit"
+        },
+        {
+          "atMs": 1700,
+          "family": "sfx_troop_dragon_breath_contact",
+          "variantKey": "8:12:impact:1",
+          "fallback": "sfx_arrow_hit"
+        },
+        {
+          "atMs": 1900,
+          "family": "sfx_troop_dragon_breath",
+          "variantKey": "8:19:release",
+          "fallback": "sfx_bow_shot"
+        },
+        {
+          "atMs": 1900,
+          "family": "sfx_troop_dragon_breath_contact",
+          "variantKey": "8:19:impact:0",
+          "fallback": "sfx_arrow_hit"
+        },
+        {
+          "atMs": 2300,
+          "family": "sfx_troop_dragon_death",
+          "variantKey": "8:23:troopDeath"
+        }
+      ]
+    },
+    {
+      "name": "troop mage",
+      "buildings": [],
+      "events": [
+        {
+          "t": 0,
+          "e": "deploy",
+          "id": 9,
+          "troop": "mage"
+        },
+        {
+          "t": 5,
+          "e": "attackRun",
+          "id": 9,
+          "troop": "mage",
+          "mode": "melee",
+          "targetKind": "building",
+          "technique": "strike",
+          "count": 2,
+          "cycleTicks": 6,
+          "cadenceTicks": 7,
+          "releaseOffsetTicks": 1,
+          "cycleMs": 550,
+          "releaseOffsetMs": 135,
+          "impactOffsetsTicks": [
+            3,
+            5
+          ]
+        },
+        {
+          "t": 5,
+          "e": "troopAttack",
+          "id": 9
+        },
+        {
+          "t": 12,
+          "e": "troopAttack",
+          "id": 9
+        },
+        {
+          "t": 19,
+          "e": "troopAttack",
+          "id": 9
+        },
+        {
+          "t": 23,
+          "e": "troopDeath",
+          "id": 9
+        }
+      ],
+      "expected": [
+        {
+          "atMs": 0,
+          "family": "sfx_troop_mage_deploy",
+          "variantKey": "9:0:deploy",
+          "fallback": "sfx_deploy_pop"
+        },
+        {
+          "atMs": 635,
+          "family": "sfx_troop_mage_release",
+          "variantKey": "9:5:release",
+          "fallback": "sfx_bow_shot"
+        },
+        {
+          "atMs": 800,
+          "family": "sfx_troop_mage_impact",
+          "variantKey": "9:5:impact:0",
+          "fallback": "sfx_arrow_hit"
+        },
+        {
+          "atMs": 1000,
+          "family": "sfx_troop_mage_impact",
+          "variantKey": "9:5:impact:1",
+          "fallback": "sfx_arrow_hit"
+        },
+        {
+          "atMs": 1335,
+          "family": "sfx_troop_mage_release",
+          "variantKey": "9:12:release",
+          "fallback": "sfx_bow_shot"
+        },
+        {
+          "atMs": 1500,
+          "family": "sfx_troop_mage_impact",
+          "variantKey": "9:12:impact:0",
+          "fallback": "sfx_arrow_hit"
+        },
+        {
+          "atMs": 1700,
+          "family": "sfx_troop_mage_impact",
+          "variantKey": "9:12:impact:1",
+          "fallback": "sfx_arrow_hit"
+        },
+        {
+          "atMs": 1900,
+          "family": "sfx_troop_mage_impact",
+          "variantKey": "9:19:impact:0",
+          "fallback": "sfx_arrow_hit"
+        },
+        {
+          "atMs": 1900,
+          "family": "sfx_troop_mage_release",
+          "variantKey": "9:19:release",
+          "fallback": "sfx_bow_shot"
+        },
+        {
+          "atMs": 2300,
+          "family": "sfx_troop_mage_death",
+          "variantKey": "9:23:troopDeath"
+        }
+      ]
+    },
+    {
+      "name": "troop bilgewraith",
+      "buildings": [],
+      "events": [
+        {
+          "t": 0,
+          "e": "deploy",
+          "id": 10,
+          "troop": "bilgewraith"
+        },
+        {
+          "t": 5,
+          "e": "attackRun",
+          "id": 10,
+          "troop": "bilgewraith",
+          "mode": "melee",
+          "targetKind": "building",
+          "technique": "strike",
+          "count": 2,
+          "cycleTicks": 6,
+          "cadenceTicks": 7,
+          "releaseOffsetTicks": 1,
+          "cycleMs": 550,
+          "releaseOffsetMs": 135,
+          "impactOffsetsTicks": [
+            3,
+            5
+          ]
+        },
+        {
+          "t": 5,
+          "e": "troopAttack",
+          "id": 10
+        },
+        {
+          "t": 12,
+          "e": "troopAttack",
+          "id": 10
+        },
+        {
+          "t": 19,
+          "e": "troopAttack",
+          "id": 10
+        },
+        {
+          "t": 23,
+          "e": "troopDeath",
+          "id": 10
+        }
+      ],
+      "expected": [
+        {
+          "atMs": 0,
+          "family": "sfx_troop_bilgewraith_deploy",
+          "variantKey": "10:0:deploy",
+          "fallback": "sfx_deploy_pop"
+        },
+        {
+          "atMs": 635,
+          "family": "sfx_troop_bilgewraith_chain_attack",
+          "variantKey": "10:5:release",
+          "fallback": "sfx_sword_hit"
+        },
+        {
+          "atMs": 1335,
+          "family": "sfx_troop_bilgewraith_chain_attack",
+          "variantKey": "10:12:release",
+          "fallback": "sfx_sword_hit"
+        },
+        {
+          "atMs": 1900,
+          "family": "sfx_troop_bilgewraith_chain_attack",
+          "variantKey": "10:19:release",
+          "fallback": "sfx_sword_hit"
+        },
+        {
+          "atMs": 2300,
+          "family": "sfx_troop_bilgewraith_death",
+          "variantKey": "10:23:troopDeath"
+        }
+      ]
+    },
+    {
+      "name": "troop gloamfang",
+      "buildings": [],
+      "events": [
+        {
+          "t": 0,
+          "e": "deploy",
+          "id": 11,
+          "troop": "gloamfang"
+        },
+        {
+          "t": 5,
+          "e": "attackRun",
+          "id": 11,
+          "troop": "gloamfang",
+          "mode": "melee",
+          "targetKind": "building",
+          "technique": "strike",
+          "count": 2,
+          "cycleTicks": 6,
+          "cadenceTicks": 7,
+          "releaseOffsetTicks": 1,
+          "cycleMs": 550,
+          "releaseOffsetMs": 135,
+          "impactOffsetsTicks": [
+            3,
+            5
+          ]
+        },
+        {
+          "t": 5,
+          "e": "troopAttack",
+          "id": 11
+        },
+        {
+          "t": 12,
+          "e": "troopAttack",
+          "id": 11
+        },
+        {
+          "t": 19,
+          "e": "troopAttack",
+          "id": 11
+        },
+        {
+          "t": 23,
+          "e": "troopDeath",
+          "id": 11
+        }
+      ],
+      "expected": [
+        {
+          "atMs": 0,
+          "family": "sfx_troop_gloamfang_deploy",
+          "variantKey": "11:0:deploy",
+          "fallback": "sfx_deploy_pop"
+        },
+        {
+          "atMs": 635,
+          "family": "sfx_troop_gloamfang_rend",
+          "variantKey": "11:5:release",
+          "fallback": "sfx_sword_hit"
+        },
+        {
+          "atMs": 800,
+          "family": "sfx_troop_gloamfang_contact",
+          "variantKey": "11:5:impact:0"
+        },
+        {
+          "atMs": 1000,
+          "family": "sfx_troop_gloamfang_contact",
+          "variantKey": "11:5:impact:1"
+        },
+        {
+          "atMs": 1335,
+          "family": "sfx_troop_gloamfang_rend",
+          "variantKey": "11:12:release",
+          "fallback": "sfx_sword_hit"
+        },
+        {
+          "atMs": 1500,
+          "family": "sfx_troop_gloamfang_contact",
+          "variantKey": "11:12:impact:0"
+        },
+        {
+          "atMs": 1700,
+          "family": "sfx_troop_gloamfang_contact",
+          "variantKey": "11:12:impact:1"
+        },
+        {
+          "atMs": 1900,
+          "family": "sfx_troop_gloamfang_contact",
+          "variantKey": "11:19:impact:0"
+        },
+        {
+          "atMs": 1900,
+          "family": "sfx_troop_gloamfang_rend",
+          "variantKey": "11:19:release",
+          "fallback": "sfx_sword_hit"
+        },
+        {
+          "atMs": 2300,
+          "family": "sfx_troop_gloamfang_death",
+          "variantKey": "11:23:troopDeath"
+        }
+      ]
+    },
+    {
+      "name": "troop direwyvern",
+      "buildings": [],
+      "events": [
+        {
+          "t": 0,
+          "e": "deploy",
+          "id": 12,
+          "troop": "direwyvern"
+        },
+        {
+          "t": 5,
+          "e": "attackRun",
+          "id": 12,
+          "troop": "direwyvern",
+          "mode": "melee",
+          "targetKind": "building",
+          "technique": "maul",
+          "count": 2,
+          "cycleTicks": 6,
+          "cadenceTicks": 7,
+          "releaseOffsetTicks": 1,
+          "cycleMs": 550,
+          "releaseOffsetMs": 135,
+          "impactOffsetsTicks": [
+            3,
+            5
+          ]
+        },
+        {
+          "t": 5,
+          "e": "troopAttack",
+          "id": 12
+        },
+        {
+          "t": 12,
+          "e": "troopAttack",
+          "id": 12
+        },
+        {
+          "t": 19,
+          "e": "troopAttack",
+          "id": 12
+        },
+        {
+          "t": 23,
+          "e": "troopDeath",
+          "id": 12
+        }
+      ],
+      "expected": [
+        {
+          "atMs": 0,
+          "family": "sfx_troop_direwyvern_deploy",
+          "variantKey": "12:0:deploy",
+          "fallback": "sfx_deploy_pop"
+        },
+        {
+          "atMs": 800,
+          "family": "sfx_troop_direwyvern_contact",
+          "variantKey": "12:5:impact:0",
+          "fallback": "sfx_sword_hit"
+        },
+        {
+          "atMs": 1000,
+          "family": "sfx_troop_direwyvern_contact",
+          "variantKey": "12:5:impact:1",
+          "fallback": "sfx_sword_hit"
+        },
+        {
+          "atMs": 1500,
+          "family": "sfx_troop_direwyvern_contact",
+          "variantKey": "12:12:impact:0",
+          "fallback": "sfx_sword_hit"
+        },
+        {
+          "atMs": 1700,
+          "family": "sfx_troop_direwyvern_contact",
+          "variantKey": "12:12:impact:1",
+          "fallback": "sfx_sword_hit"
+        },
+        {
+          "atMs": 2300,
+          "family": "sfx_troop_direwyvern_death",
+          "variantKey": "12:23:troopDeath"
+        }
+      ]
+    },
+    {
+      "name": "troop hexbarrow",
+      "buildings": [],
+      "events": [
+        {
+          "t": 0,
+          "e": "deploy",
+          "id": 13,
+          "troop": "hexbarrow"
+        },
+        {
+          "t": 5,
+          "e": "attackRun",
+          "id": 13,
+          "troop": "hexbarrow",
+          "mode": "melee",
+          "targetKind": "building",
+          "technique": "strike",
+          "count": 2,
+          "cycleTicks": 6,
+          "cadenceTicks": 7,
+          "releaseOffsetTicks": 1,
+          "cycleMs": 550,
+          "releaseOffsetMs": 135,
+          "impactOffsetsTicks": [
+            3,
+            5
+          ]
+        },
+        {
+          "t": 5,
+          "e": "troopAttack",
+          "id": 13
+        },
+        {
+          "t": 12,
+          "e": "troopAttack",
+          "id": 13
+        },
+        {
+          "t": 19,
+          "e": "troopAttack",
+          "id": 13
+        },
+        {
+          "t": 23,
+          "e": "troopDeath",
+          "id": 13
+        }
+      ],
+      "expected": [
+        {
+          "atMs": 0,
+          "family": "sfx_troop_hexbarrow_deploy",
+          "variantKey": "13:0:deploy",
+          "fallback": "sfx_deploy_pop"
+        },
+        {
+          "atMs": 635,
+          "family": "sfx_troop_hexbarrow_hexshot_release",
+          "variantKey": "13:5:release",
+          "fallback": "sfx_bow_shot"
+        },
+        {
+          "atMs": 800,
+          "family": "sfx_troop_hexbarrow_hex_impact",
+          "variantKey": "13:5:impact:0",
+          "fallback": "sfx_arrow_hit"
+        },
+        {
+          "atMs": 1000,
+          "family": "sfx_troop_hexbarrow_hex_impact",
+          "variantKey": "13:5:impact:1",
+          "fallback": "sfx_arrow_hit"
+        },
+        {
+          "atMs": 1335,
+          "family": "sfx_troop_hexbarrow_hexshot_release",
+          "variantKey": "13:12:release",
+          "fallback": "sfx_bow_shot"
+        },
+        {
+          "atMs": 1500,
+          "family": "sfx_troop_hexbarrow_hex_impact",
+          "variantKey": "13:12:impact:0",
+          "fallback": "sfx_arrow_hit"
+        },
+        {
+          "atMs": 1700,
+          "family": "sfx_troop_hexbarrow_hex_impact",
+          "variantKey": "13:12:impact:1",
+          "fallback": "sfx_arrow_hit"
+        },
+        {
+          "atMs": 1900,
+          "family": "sfx_troop_hexbarrow_hex_impact",
+          "variantKey": "13:19:impact:0",
+          "fallback": "sfx_arrow_hit"
+        },
+        {
+          "atMs": 1900,
+          "family": "sfx_troop_hexbarrow_hexshot_release",
+          "variantKey": "13:19:release",
+          "fallback": "sfx_bow_shot"
+        },
+        {
+          "atMs": 2300,
+          "family": "sfx_troop_hexbarrow_death",
+          "variantKey": "13:23:troopDeath"
+        }
+      ]
+    },
+    {
+      "name": "troop barrowling",
+      "buildings": [],
+      "events": [
+        {
+          "t": 0,
+          "e": "deploy",
+          "id": 14,
+          "troop": "barrowling"
+        },
+        {
+          "t": 5,
+          "e": "attackRun",
+          "id": 14,
+          "troop": "barrowling",
+          "mode": "melee",
+          "targetKind": "building",
+          "technique": "strike",
+          "count": 2,
+          "cycleTicks": 6,
+          "cadenceTicks": 7,
+          "releaseOffsetTicks": 1,
+          "cycleMs": 550,
+          "releaseOffsetMs": 135,
+          "impactOffsetsTicks": [
+            3,
+            5
+          ]
+        },
+        {
+          "t": 5,
+          "e": "troopAttack",
+          "id": 14
+        },
+        {
+          "t": 12,
+          "e": "troopAttack",
+          "id": 14
+        },
+        {
+          "t": 19,
+          "e": "troopAttack",
+          "id": 14
+        },
+        {
+          "t": 23,
+          "e": "troopDeath",
+          "id": 14
+        }
+      ],
+      "expected": [
+        {
+          "atMs": 0,
+          "family": "sfx_troop_barrowling_spawn",
+          "variantKey": "14:0:deploy",
+          "fallback": "sfx_deploy_pop"
+        },
+        {
+          "atMs": 635,
+          "family": "sfx_troop_barrowling_attack",
+          "variantKey": "14:5:release",
+          "fallback": "sfx_sword_hit"
+        },
+        {
+          "atMs": 1335,
+          "family": "sfx_troop_barrowling_attack",
+          "variantKey": "14:12:release",
+          "fallback": "sfx_sword_hit"
+        },
+        {
+          "atMs": 1900,
+          "family": "sfx_troop_barrowling_attack",
+          "variantKey": "14:19:release",
+          "fallback": "sfx_sword_hit"
+        },
+        {
+          "atMs": 2300,
+          "family": "sfx_troop_barrowling_death",
+          "variantKey": "14:23:troopDeath"
+        }
+      ]
+    },
+    {
+      "name": "troop wyrmling",
+      "buildings": [],
+      "events": [
+        {
+          "t": 0,
+          "e": "deploy",
+          "id": 15,
+          "troop": "wyrmling"
+        },
+        {
+          "t": 5,
+          "e": "attackRun",
+          "id": 15,
+          "troop": "wyrmling",
+          "mode": "melee",
+          "targetKind": "building",
+          "technique": "strike",
+          "count": 2,
+          "cycleTicks": 6,
+          "cadenceTicks": 7,
+          "releaseOffsetTicks": 1,
+          "cycleMs": 550,
+          "releaseOffsetMs": 135,
+          "impactOffsetsTicks": [
+            3,
+            5
+          ]
+        },
+        {
+          "t": 5,
+          "e": "troopAttack",
+          "id": 15
+        },
+        {
+          "t": 12,
+          "e": "troopAttack",
+          "id": 15
+        },
+        {
+          "t": 19,
+          "e": "troopAttack",
+          "id": 15
+        },
+        {
+          "t": 23,
+          "e": "troopDeath",
+          "id": 15
+        }
+      ],
+      "expected": [
+        {
+          "atMs": 0,
+          "family": "sfx_troop_wyrmling_spawn",
+          "variantKey": "15:0:deploy",
+          "fallback": "sfx_deploy_pop"
+        },
+        {
+          "atMs": 635,
+          "family": "sfx_troop_wyrmling_breath",
+          "variantKey": "15:5:release",
+          "fallback": "sfx_bow_shot"
+        },
+        {
+          "atMs": 800,
+          "family": "sfx_troop_wyrmling_flame_contact",
+          "variantKey": "15:5:impact:0",
+          "fallback": "sfx_arrow_hit"
+        },
+        {
+          "atMs": 1000,
+          "family": "sfx_troop_wyrmling_flame_contact",
+          "variantKey": "15:5:impact:1",
+          "fallback": "sfx_arrow_hit"
+        },
+        {
+          "atMs": 1335,
+          "family": "sfx_troop_wyrmling_breath",
+          "variantKey": "15:12:release",
+          "fallback": "sfx_bow_shot"
+        },
+        {
+          "atMs": 1500,
+          "family": "sfx_troop_wyrmling_flame_contact",
+          "variantKey": "15:12:impact:0",
+          "fallback": "sfx_arrow_hit"
+        },
+        {
+          "atMs": 1700,
+          "family": "sfx_troop_wyrmling_flame_contact",
+          "variantKey": "15:12:impact:1",
+          "fallback": "sfx_arrow_hit"
+        },
+        {
+          "atMs": 1900,
+          "family": "sfx_troop_wyrmling_breath",
+          "variantKey": "15:19:release",
+          "fallback": "sfx_bow_shot"
+        },
+        {
+          "atMs": 1900,
+          "family": "sfx_troop_wyrmling_flame_contact",
+          "variantKey": "15:19:impact:0",
+          "fallback": "sfx_arrow_hit"
+        },
+        {
+          "atMs": 2300,
+          "family": "sfx_troop_wyrmling_death",
+          "variantKey": "15:23:troopDeath"
+        }
+      ]
+    },
+    {
+      "name": "boulder and authored stream",
+      "buildings": [],
+      "events": [
+        {
+          "t": 5,
+          "e": "attackRun",
+          "id": 1,
+          "troop": "giant",
+          "mode": "projectile",
+          "targetKind": "building",
+          "technique": "boulder",
+          "count": 2,
+          "cycleTicks": 6,
+          "cadenceTicks": 7,
+          "releaseOffsetTicks": 1,
+          "cycleMs": 550,
+          "releaseOffsetMs": 135,
+          "impactOffsetsTicks": [
+            3,
+            5
+          ]
+        },
+        {
+          "t": 5,
+          "e": "attackRun",
+          "id": 2,
+          "troop": "dragon",
+          "mode": "stream",
+          "targetKind": "building",
+          "technique": "strike",
+          "count": 2,
+          "cycleTicks": 6,
+          "cadenceTicks": 7,
+          "releaseOffsetTicks": 1,
+          "cycleMs": 550,
+          "releaseOffsetMs": 135,
+          "impactOffsetsTicks": [
+            3,
+            5
+          ]
+        }
+      ],
+      "expected": [
+        {
+          "atMs": 635,
+          "family": "sfx_troop_dragon_breath",
+          "variantKey": "2:5:release",
+          "fallback": "sfx_bow_shot"
+        },
+        {
+          "atMs": 635,
+          "family": "sfx_troop_giant_boulder_release",
+          "variantKey": "1:5:release",
+          "fallback": "sfx_mortar_thunk"
+        },
+        {
+          "atMs": 800,
+          "family": "sfx_troop_dragon_breath_contact",
+          "variantKey": "2:5:impact:0",
+          "fallback": "sfx_arrow_hit"
+        },
+        {
+          "atMs": 800,
+          "family": "sfx_troop_giant_boulder_impact",
+          "variantKey": "1:5:impact:0",
+          "fallback": "sfx_explosion_big"
+        },
+        {
+          "atMs": 1000,
+          "family": "sfx_troop_dragon_breath_contact",
+          "variantKey": "2:5:impact:1",
+          "fallback": "sfx_arrow_hit"
+        },
+        {
+          "atMs": 1000,
+          "family": "sfx_troop_giant_boulder_impact",
+          "variantKey": "1:5:impact:1",
+          "fallback": "sfx_explosion_big"
+        },
+        {
+          "atMs": 1335,
+          "family": "sfx_troop_dragon_breath",
+          "variantKey": "2:12:release",
+          "fallback": "sfx_bow_shot"
+        },
+        {
+          "atMs": 1335,
+          "family": "sfx_troop_giant_boulder_release",
+          "variantKey": "1:12:release",
+          "fallback": "sfx_mortar_thunk"
+        },
+        {
+          "atMs": 1500,
+          "family": "sfx_troop_dragon_breath_contact",
+          "variantKey": "2:12:impact:0",
+          "fallback": "sfx_arrow_hit"
+        },
+        {
+          "atMs": 1500,
+          "family": "sfx_troop_giant_boulder_impact",
+          "variantKey": "1:12:impact:0",
+          "fallback": "sfx_explosion_big"
+        },
+        {
+          "atMs": 1700,
+          "family": "sfx_troop_dragon_breath_contact",
+          "variantKey": "2:12:impact:1",
+          "fallback": "sfx_arrow_hit"
+        },
+        {
+          "atMs": 1700,
+          "family": "sfx_troop_giant_boulder_impact",
+          "variantKey": "1:12:impact:1",
+          "fallback": "sfx_explosion_big"
+        }
+      ]
+    },
+    {
+      "name": "hero phases",
+      "buildings": [],
+      "events": [
+        {
+          "t": 0,
+          "e": "deploy",
+          "id": 0,
+          "troop": "highlander",
+          "hero": "vex"
+        },
+        {
+          "t": 2,
+          "e": "heroAttack",
+          "id": 0,
+          "hero": "vex"
+        },
+        {
+          "t": 3,
+          "e": "troopAttack",
+          "id": 0
+        },
+        {
+          "t": 4,
+          "e": "troopDeath",
+          "id": 0
+        },
+        {
+          "t": 0,
+          "e": "deploy",
+          "id": 1,
+          "troop": "highlander",
+          "hero": "theodor"
+        },
+        {
+          "t": 2,
+          "e": "heroAttack",
+          "id": 1,
+          "hero": "theodor"
+        },
+        {
+          "t": 3,
+          "e": "troopAttack",
+          "id": 1
+        },
+        {
+          "t": 4,
+          "e": "troopDeath",
+          "id": 1
+        },
+        {
+          "t": 10,
+          "e": "heroSkill",
+          "id": 0,
+          "skill": "crimsonDash",
+          "phase": "cast"
+        },
+        {
+          "t": 11,
+          "e": "heroSkill",
+          "id": 0,
+          "skill": "crimsonDash",
+          "phase": "impact"
+        },
+        {
+          "t": 12,
+          "e": "heroSkill",
+          "id": 1,
+          "skill": "moonsunderWave",
+          "phase": "cast"
+        },
+        {
+          "t": 13,
+          "e": "heroSkill",
+          "id": 1,
+          "skill": "moonsunderWave",
+          "phase": "impact"
+        },
+        {
+          "t": 14,
+          "e": "heroSkill",
+          "id": 2,
+          "skill": "degenAwakening",
+          "phase": "cast"
+        },
+        {
+          "t": 15,
+          "e": "heroSkill",
+          "id": 2,
+          "skill": "degenAwakening",
+          "phase": "impact"
+        },
+        {
+          "t": 16,
+          "e": "heroSkill",
+          "id": 3,
+          "skill": "doubleOrNothingHeads",
+          "phase": "cast"
+        },
+        {
+          "t": 17,
+          "e": "heroSkill",
+          "id": 3,
+          "skill": "doubleOrNothingHeads",
+          "phase": "impact"
+        },
+        {
+          "t": 18,
+          "e": "heroSkill",
+          "id": 4,
+          "skill": "doubleOrNothingTails",
+          "phase": "cast"
+        },
+        {
+          "t": 19,
+          "e": "heroSkill",
+          "id": 4,
+          "skill": "doubleOrNothingTails",
+          "phase": "impact"
+        },
+        {
+          "t": 20,
+          "e": "heroSkill",
+          "id": 5,
+          "skill": "omegaShardstorm",
+          "phase": "cast"
+        },
+        {
+          "t": 21,
+          "e": "heroSkill",
+          "id": 5,
+          "skill": "omegaShardstorm",
+          "phase": "impact"
+        },
+        {
+          "t": 22,
+          "e": "heroSkill",
+          "id": 6,
+          "skill": "cheekQuake",
+          "phase": "cast"
+        },
+        {
+          "t": 23,
+          "e": "heroSkill",
+          "id": 6,
+          "skill": "cheekQuake",
+          "phase": "impact"
+        },
+        {
+          "t": 24,
+          "e": "heroSkill",
+          "id": 7,
+          "skill": "snotRocket",
+          "phase": "cast"
+        },
+        {
+          "t": 25,
+          "e": "heroSkill",
+          "id": 7,
+          "skill": "snotRocket",
+          "phase": "impact"
+        },
+        {
+          "t": 26,
+          "e": "heroSkill",
+          "id": 8,
+          "skill": "cannonball",
+          "phase": "cast"
+        },
+        {
+          "t": 27,
+          "e": "heroSkill",
+          "id": 8,
+          "skill": "cannonball",
+          "phase": "impact"
+        },
+        {
+          "t": 28,
+          "e": "heroSkill",
+          "id": 9,
+          "skill": "skillIssue",
+          "phase": "cast"
+        },
+        {
+          "t": 29,
+          "e": "heroSkill",
+          "id": 9,
+          "skill": "skillIssue",
+          "phase": "impact"
+        },
+        {
+          "t": 30,
+          "e": "heroSkill",
+          "id": 10,
+          "skill": "bellyBounce",
+          "phase": "cast"
+        },
+        {
+          "t": 31,
+          "e": "heroSkill",
+          "id": 10,
+          "skill": "bellyBounce",
+          "phase": "impact"
+        },
+        {
+          "t": 32,
+          "e": "heroSkill",
+          "id": 11,
+          "skill": "brownNote",
+          "phase": "cast"
+        },
+        {
+          "t": 33,
+          "e": "heroSkill",
+          "id": 11,
+          "skill": "brownNote",
+          "phase": "impact"
+        },
+        {
+          "t": 34,
+          "e": "heroSkill",
+          "id": 12,
+          "skill": "rageQuit",
+          "phase": "cast"
+        },
+        {
+          "t": 35,
+          "e": "heroSkill",
+          "id": 12,
+          "skill": "rageQuit",
+          "phase": "impact"
+        },
+        {
+          "t": 36,
+          "e": "heroSkill",
+          "id": 13,
+          "skill": "rageQuitWake",
+          "phase": "cast"
+        },
+        {
+          "t": 37,
+          "e": "heroSkill",
+          "id": 13,
+          "skill": "rageQuitWake",
+          "phase": "impact"
+        },
+        {
+          "t": 38,
+          "e": "heroSkill",
+          "id": 14,
+          "skill": "silentButDeadly",
+          "phase": "cast"
+        },
+        {
+          "t": 39,
+          "e": "heroSkill",
+          "id": 14,
+          "skill": "silentButDeadly",
+          "phase": "impact"
+        },
+        {
+          "t": 40,
+          "e": "heroSkill",
+          "id": 15,
+          "skill": "futureSkill",
+          "phase": "cast"
+        },
+        {
+          "t": 41,
+          "e": "heroSkill",
+          "id": 15,
+          "skill": "futureSkill",
+          "phase": "impact"
+        }
+      ],
+      "expected": [
+        {
+          "atMs": 0,
+          "family": "sfx_hero_theodor_deploy",
+          "variantKey": "1:0:deploy",
+          "fallback": "sfx_hero_deploy_theo"
+        },
+        {
+          "atMs": 0,
+          "family": "sfx_hero_vex_deploy",
+          "variantKey": "0:0:deploy",
+          "fallback": "sfx_hero_deploy_vex"
+        },
+        {
+          "atMs": 200,
+          "family": "sfx_hero_theodor_primary",
+          "variantKey": "1:2:heroAttack",
+          "fallback": "sfx_sword_hit"
+        },
+        {
+          "atMs": 200,
+          "family": "sfx_hero_vex_primary",
+          "variantKey": "0:2:heroAttack",
+          "fallback": "sfx_sword_hit"
+        },
+        {
+          "atMs": 300,
+          "family": "sfx_hero_theodor_primary",
+          "variantKey": "1:3:legacy",
+          "fallback": "sfx_sword_hit"
+        },
+        {
+          "atMs": 300,
+          "family": "sfx_hero_vex_primary",
+          "variantKey": "0:3:legacy",
+          "fallback": "sfx_sword_hit"
+        },
+        {
+          "atMs": 400,
+          "family": "sfx_hero_theodor_death",
+          "variantKey": "1:4:troopDeath"
+        },
+        {
+          "atMs": 400,
+          "family": "sfx_hero_vex_death",
+          "variantKey": "0:4:troopDeath"
+        },
+        {
+          "atMs": 1000,
+          "family": "sfx_hero_vex_crimson_dash",
+          "variantKey": "0:10:heroSkill",
+          "fallback": "sfx_hero_dash"
+        },
+        {
+          "atMs": 1100,
+          "family": "sfx_hero_vex_crimson_dash",
+          "variantKey": "0:11:heroSkill",
+          "fallback": "sfx_hero_dash"
+        },
+        {
+          "atMs": 1200,
+          "family": "sfx_hero_vex_moonsunder_wave",
+          "variantKey": "1:12:heroSkill"
+        },
+        {
+          "atMs": 1300,
+          "family": "sfx_hero_vex_moonsunder_wave",
+          "variantKey": "1:13:heroSkill"
+        },
+        {
+          "atMs": 1400,
+          "family": "sfx_hero_vex_degen_awakening",
+          "variantKey": "2:14:heroSkill"
+        },
+        {
+          "atMs": 1500,
+          "family": "sfx_hero_vex_degen_awakening",
+          "variantKey": "2:15:heroSkill"
+        },
+        {
+          "atMs": 1600,
+          "family": "sfx_hero_vex_double_or_nothing_heads",
+          "variantKey": "3:16:heroSkill"
+        },
+        {
+          "atMs": 1700,
+          "family": "sfx_hero_vex_double_or_nothing_heads",
+          "variantKey": "3:17:heroSkill"
+        },
+        {
+          "atMs": 1800,
+          "family": "sfx_hero_vex_double_or_nothing_tails",
+          "variantKey": "4:18:heroSkill"
+        },
+        {
+          "atMs": 1900,
+          "family": "sfx_hero_vex_double_or_nothing_tails",
+          "variantKey": "4:19:heroSkill"
+        },
+        {
+          "atMs": 2000,
+          "family": "sfx_hero_vex_omega_shardstorm",
+          "variantKey": "5:20:heroSkill"
+        },
+        {
+          "atMs": 2100,
+          "family": "sfx_hero_vex_omega_shardstorm",
+          "variantKey": "5:21:heroSkill"
+        },
+        {
+          "atMs": 2200,
+          "family": "sfx_hero_theodor_cheek_quake",
+          "variantKey": "6:22:heroSkill",
+          "fallback": "sfx_hero_quake"
+        },
+        {
+          "atMs": 2300,
+          "family": "sfx_hero_theodor_cheek_quake",
+          "variantKey": "6:23:heroSkill",
+          "fallback": "sfx_hero_quake"
+        },
+        {
+          "atMs": 2400,
+          "family": "sfx_hero_theodor_snot_rocket",
+          "variantKey": "7:24:heroSkill"
+        },
+        {
+          "atMs": 2500,
+          "family": "sfx_hero_theodor_snot_rocket",
+          "variantKey": "7:25:heroSkill"
+        },
+        {
+          "atMs": 2700,
+          "family": "sfx_hero_theodor_cannonball",
+          "variantKey": "8:27:heroSkill"
+        },
+        {
+          "atMs": 2800,
+          "family": "sfx_hero_theodor_skill_issue",
+          "variantKey": "9:28:heroSkill"
+        },
+        {
+          "atMs": 2900,
+          "family": "sfx_hero_theodor_skill_issue",
+          "variantKey": "9:29:heroSkill"
+        },
+        {
+          "atMs": 3000,
+          "family": "sfx_hero_theodor_belly_bounce",
+          "variantKey": "10:30:heroSkill"
+        },
+        {
+          "atMs": 3100,
+          "family": "sfx_hero_theodor_belly_bounce",
+          "variantKey": "10:31:heroSkill"
+        },
+        {
+          "atMs": 3200,
+          "family": "sfx_hero_theodor_brown_note",
+          "variantKey": "11:32:heroSkill"
+        },
+        {
+          "atMs": 3300,
+          "family": "sfx_hero_theodor_brown_note",
+          "variantKey": "11:33:heroSkill"
+        },
+        {
+          "atMs": 3400,
+          "family": "sfx_hero_theodor_rage_quit",
+          "variantKey": "12:34:heroSkill"
+        },
+        {
+          "atMs": 3500,
+          "family": "sfx_hero_theodor_rage_quit",
+          "variantKey": "12:35:heroSkill"
+        },
+        {
+          "atMs": 3600,
+          "family": "sfx_hero_theodor_rage_quit_wake",
+          "variantKey": "13:36:heroSkill"
+        },
+        {
+          "atMs": 3700,
+          "family": "sfx_hero_theodor_rage_quit_wake",
+          "variantKey": "13:37:heroSkill"
+        },
+        {
+          "atMs": 3900,
+          "family": "sfx_hero_theodor_silent_but_deadly",
+          "variantKey": "14:39:heroSkill"
+        }
+      ]
+    },
+    {
+      "name": "defense release and contacts",
+      "buildings": [
+        {
+          "id": "b0",
+          "type": "cannon"
+        },
+        {
+          "id": "b1",
+          "type": "archertower"
+        },
+        {
+          "id": "b2",
+          "type": "mortar"
+        },
+        {
+          "id": "b3",
+          "type": "electrictower"
+        },
+        {
+          "id": "b4",
+          "type": "magetower"
+        },
+        {
+          "id": "b5",
+          "type": "lasertower"
+        },
+        {
+          "id": "b6",
+          "type": "keep"
+        }
+      ],
+      "events": [
+        {
+          "t": 0,
+          "e": "fire",
+          "id": "b0",
+          "releaseOffsetMs": 123,
+          "impactOffsetTicks": 7
+        },
+        {
+          "t": 1,
+          "e": "fire",
+          "id": "b1",
+          "releaseOffsetMs": 123,
+          "impactOffsetTicks": 7
+        },
+        {
+          "t": 2,
+          "e": "fire",
+          "id": "b2",
+          "releaseOffsetMs": 123,
+          "impactOffsetTicks": 7
+        },
+        {
+          "t": 3,
+          "e": "fire",
+          "id": "b3",
+          "releaseOffsetMs": 123,
+          "impactOffsetTicks": 7
+        },
+        {
+          "t": 4,
+          "e": "fire",
+          "id": "b4",
+          "releaseOffsetMs": 123,
+          "impactOffsetTicks": 7
+        },
+        {
+          "t": 5,
+          "e": "fire",
+          "id": "b5",
+          "releaseOffsetMs": 123,
+          "impactOffsetTicks": 7
+        },
+        {
+          "t": 6,
+          "e": "fire",
+          "id": "b6",
+          "releaseOffsetMs": 123,
+          "impactOffsetTicks": 7
+        }
+      ],
+      "expected": [
+        {
+          "atMs": 123,
+          "family": "sfx_defense_cannon_fire",
+          "variantKey": "b0:0:fire:fire",
+          "fallback": "sfx_cannon_fire"
+        },
+        {
+          "atMs": 200,
+          "family": "sfx_defense_mortar_whistle",
+          "variantKey": "b2:2:fire:whistle",
+          "fallback": "sfx_shell_whistle"
+        },
+        {
+          "atMs": 223,
+          "family": "sfx_defense_archertower_fire",
+          "variantKey": "b1:1:fire:fire",
+          "fallback": "sfx_bow_shot"
+        },
+        {
+          "atMs": 323,
+          "family": "sfx_defense_mortar_launch",
+          "variantKey": "b2:2:fire:fire",
+          "fallback": "sfx_mortar_thunk"
+        },
+        {
+          "atMs": 423,
+          "family": "sfx_defense_electrictower_fire",
+          "variantKey": "b3:3:fire:fire"
+        },
+        {
+          "atMs": 523,
+          "family": "sfx_defense_magetower_fire",
+          "variantKey": "b4:4:fire:fire"
+        },
+        {
+          "atMs": 623,
+          "family": "sfx_defense_lasertower_fire",
+          "variantKey": "b5:5:fire:fire"
+        },
+        {
+          "atMs": 700,
+          "family": "sfx_defense_cannon_impact",
+          "variantKey": "b0:0:fire:impact",
+          "fallback": "sfx_explosion_big"
+        },
+        {
+          "atMs": 800,
+          "family": "sfx_defense_archertower_impact",
+          "variantKey": "b1:1:fire:impact",
+          "fallback": "sfx_arrow_hit"
+        },
+        {
+          "atMs": 900,
+          "family": "sfx_defense_mortar_impact",
+          "variantKey": "b2:2:fire:impact"
+        },
+        {
+          "atMs": 1000,
+          "family": "sfx_defense_electrictower_impact",
+          "variantKey": "b3:3:fire:impact"
+        },
+        {
+          "atMs": 1100,
+          "family": "sfx_defense_magetower_impact",
+          "variantKey": "b4:4:fire:impact"
+        },
+        {
+          "atMs": 1200,
+          "family": "sfx_defense_lasertower_impact",
+          "variantKey": "b5:5:fire:impact"
+        }
+      ]
+    },
+    {
+      "name": "actor-owned loops and event cues",
+      "buildings": [],
+      "events": [
+        {
+          "t": 0,
+          "e": "deploy",
+          "id": 1,
+          "troop": "kegrunner"
+        },
+        {
+          "t": 1,
+          "e": "detonate",
+          "id": 1
+        },
+        {
+          "t": 2,
+          "e": "deploy",
+          "id": 2,
+          "troop": "tunneler"
+        },
+        {
+          "t": 3,
+          "e": "burrow",
+          "id": 2
+        },
+        {
+          "t": 5,
+          "e": "emerge",
+          "id": 2
+        },
+        {
+          "t": 2,
+          "e": "spawn",
+          "id": 3,
+          "troop": "wyrmling"
+        },
+        {
+          "t": 3,
+          "e": "troopSpawn",
+          "id": 4
+        },
+        {
+          "t": 7,
+          "e": "troopAbility",
+          "id": 0,
+          "ability": "howl"
+        },
+        {
+          "t": 8,
+          "e": "troopAbility",
+          "id": 1,
+          "ability": "leap"
+        },
+        {
+          "t": 9,
+          "e": "troopAbility",
+          "id": 2,
+          "ability": "lunge"
+        },
+        {
+          "t": 10,
+          "e": "troopAbility",
+          "id": 3,
+          "ability": "firestorm"
+        },
+        {
+          "t": 11,
+          "e": "troopAbility",
+          "id": 4,
+          "ability": "maul"
+        },
+        {
+          "t": 12,
+          "e": "troopAbility",
+          "id": 5,
+          "ability": "disgorge"
+        },
+        {
+          "t": 13,
+          "e": "troopAbility",
+          "id": 6,
+          "ability": "future"
+        },
+        {
+          "t": 17,
+          "e": "destroyed",
+          "id": 0
+        },
+        {
+          "t": 18,
+          "e": "trap",
+          "id": 1
+        },
+        {
+          "t": 19,
+          "e": "rally",
+          "id": 2
+        },
+        {
+          "t": 21,
+          "e": "star",
+          "n": 1
+        },
+        {
+          "t": 22,
+          "e": "star",
+          "n": 2
+        },
+        {
+          "t": 23,
+          "e": "star",
+          "n": 3
+        }
+      ],
+      "expected": [
+        {
+          "atMs": 0,
+          "family": "sfx_troop_kegrunner_deploy_ignite",
+          "variantKey": "1:0:deploy",
+          "fallback": "sfx_deploy_pop"
+        },
+        {
+          "atMs": 0,
+          "family": "sfx_troop_kegrunner_fuse_loop",
+          "variantKey": "1:0:deploy:fuse",
+          "fallback": "sfx_keg_fuse",
+          "opts": {
+            "loop": true,
+            "volume": 0.6
+          },
+          "dispatch": "actorLoop"
+        },
+        {
+          "atMs": 100,
+          "family": "sfx_troop_kegrunner_detonation",
+          "variantKey": "1:1:detonate",
+          "fallback": "sfx_explosion_big"
+        },
+        {
+          "atMs": 100,
+          "family": "sfx_troop_kegrunner_plant_brace",
+          "variantKey": "1:1:detonate:prime",
+          "dispatch": "kegPrime"
+        },
+        {
+          "atMs": 200,
+          "family": "sfx_defense_dragonnest_launch",
+          "variantKey": "3:2:spawn:nest"
+        },
+        {
+          "atMs": 200,
+          "family": "sfx_troop_tunneler_deploy",
+          "variantKey": "2:2:deploy",
+          "fallback": "sfx_deploy_pop"
+        },
+        {
+          "atMs": 200,
+          "family": "sfx_troop_wyrmling_spawn",
+          "variantKey": "3:2:spawn",
+          "fallback": "sfx_deploy_pop"
+        },
+        {
+          "atMs": 300,
+          "family": "sfx_troop_barrowling_spawn",
+          "variantKey": "4:3:troopSpawn",
+          "fallback": "sfx_deploy_pop"
+        },
+        {
+          "atMs": 300,
+          "family": "sfx_troop_tunneler_burrow_loop",
+          "variantKey": "2:3:burrow",
+          "fallback": "sfx_burrow_loop",
+          "opts": {
+            "loop": true,
+            "volume": 0.5
+          },
+          "dispatch": "actorLoop"
+        },
+        {
+          "atMs": 500,
+          "family": "sfx_troop_tunneler_emerge",
+          "variantKey": "2:5:emerge",
+          "fallback": "sfx_emerge_pop"
+        },
+        {
+          "atMs": 700,
+          "family": "sfx_troop_gloamfang_howl",
+          "variantKey": "0:7:troopAbility"
+        },
+        {
+          "atMs": 800,
+          "family": "sfx_troop_gloamfang_lunge",
+          "variantKey": "1:8:troopAbility"
+        },
+        {
+          "atMs": 900,
+          "family": "sfx_troop_gloamfang_lunge",
+          "variantKey": "2:9:troopAbility"
+        },
+        {
+          "atMs": 1000,
+          "family": "sfx_troop_direwyvern_firestorm",
+          "variantKey": "3:10:troopAbility"
+        },
+        {
+          "atMs": 1100,
+          "family": "sfx_troop_direwyvern_maul",
+          "variantKey": "4:11:troopAbility"
+        },
+        {
+          "atMs": 1200,
+          "family": "sfx_troop_hexbarrow_disgorge",
+          "variantKey": "5:12:troopAbility"
+        },
+        {
+          "atMs": 1700,
+          "family": "sfx_base_rubble_collapse",
+          "variantKey": "0:17:destroyed",
+          "fallback": "sfx_rubble_crash"
+        },
+        {
+          "atMs": 1800,
+          "family": "sfx_defense_spiketrap_snap",
+          "variantKey": "1:18:trap",
+          "fallback": "sfx_trap_snap"
+        },
+        {
+          "atMs": 1900,
+          "family": "sfx_battle_rally",
+          "variantKey": "2:19:rally",
+          "fallback": "sfx_rally_horn",
+          "opts": {
+            "priority": "critical"
+          }
+        },
+        {
+          "atMs": 2100,
+          "family": "sfx_battle_star_1",
+          "variantKey": "star:21:star",
+          "fallback": "sfx_star_1",
+          "opts": {
+            "priority": "critical"
+          }
+        },
+        {
+          "atMs": 2200,
+          "family": "sfx_battle_star_2",
+          "variantKey": "star:22:star",
+          "fallback": "sfx_star_2",
+          "opts": {
+            "priority": "critical"
+          }
+        },
+        {
+          "atMs": 2300,
+          "family": "sfx_battle_star_3",
+          "variantKey": "star:23:star",
+          "fallback": "sfx_star_3",
+          "opts": {
+            "priority": "critical"
+          }
+        }
+      ]
+    },
+    {
+      "name": "malformed run never suppresses legacy attacks",
+      "buildings": [],
+      "events": [
+        {
+          "t": 0,
+          "e": "deploy",
+          "id": 1,
+          "troop": "bowman"
+        },
+        {
+          "t": 5,
+          "e": "attackRun",
+          "id": 1,
+          "troop": "bowman",
+          "mode": "melee",
+          "targetKind": "building",
+          "technique": "strike",
+          "count": 0,
+          "cycleTicks": 6,
+          "cadenceTicks": 7,
+          "releaseOffsetTicks": 1,
+          "cycleMs": 550,
+          "releaseOffsetMs": 135,
+          "impactOffsetsTicks": [
+            3,
+            5
+          ]
+        },
+        {
+          "t": 5,
+          "e": "troopFire",
+          "id": 1
+        }
+      ],
+      "expected": [
+        {
+          "atMs": 0,
+          "family": "sfx_troop_bowman_deploy",
+          "variantKey": "1:0:deploy",
+          "fallback": "sfx_deploy_pop"
+        },
+        {
+          "atMs": 500,
+          "family": "sfx_troop_bowman_impact",
+          "variantKey": "1:5:impact:0",
+          "fallback": "sfx_arrow_hit"
+        },
+        {
+          "atMs": 500,
+          "family": "sfx_troop_bowman_release",
+          "variantKey": "1:5:release",
+          "fallback": "sfx_bow_shot"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+/* PriceChip.css — the CostPill. Ink S rim 2, cream (or short) body, icon 24 + caption. Only --pk-* values. */
+.pk-price {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: var(--pk-s4);
+  box-sizing: border-box;
+  height: var(--pk-size-cost-pill-h);
+  padding: 0 var(--pk-k-7) 0 var(--pk-outline-button);
+  background: var(--pk-ink);
+  clip-path: var(--pk-clip-s);
+  white-space: nowrap;
+  flex: none;
+}
+/* the body is a stepped inner layer 2 px inside the rim */
+.pk-price::before {
+  content: '';
+  position: absolute;
+  inset: var(--pk-outline-chip);
+  clip-path: var(--pk-clip-s);
+  background: var(--pk-cream);
+}
+.pk-price > * { position: relative; }
+.pk-price__text { color: var(--pk-ink-text); }
+.pk-price--short::before { background: var(--pk-short-bg); }
+.pk-price--short .pk-price__text { color: var(--pk-short-text); }
+.pk-price--unavailable .pk-price__text { color: var(--pk-ink-text-2); }
+.pk-price--checking .pk-price__text { color: var(--pk-ink-text-2); }
+
+/* The door: a >= 48 px target around the 26 px pill (the pill stays its design size). */
+.pk-price-door {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: var(--pk-min-tap);
+  min-height: var(--pk-min-tap);
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: none;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+}
+.pk-price-door:active .pk-price { transform: translateY(var(--pk-text-outline-1)); }
+:root[data-pk-vp="desktop"] .pk-price-door:hover:not(:active) .pk-price { transform: translateY(var(--pk-text-outline-1)); }

@@ -1,0 +1,1 @@
+ALTER TABLE "outbox" ADD COLUMN "tx_signature" text;

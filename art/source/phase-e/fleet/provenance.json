@@ -1,0 +1,82 @@
+{
+  "schemaVersion": 1,
+  "sourceZipSha256": "7a381d75251b280459dda151dba7d2ad7f3d1b8945d01af0f847528436e05aa3",
+  "docsCommit": "11504e2316bd33a6d092f87b8d114f159aa0249c",
+  "sourceIndexSha256": "04f96c922ca04d93f1bf760e6385713908b971ce82c3aa022602f1fa199e2181",
+  "scope": "starter source packing only; no application or art acceptance",
+  "files": [
+    {
+      "path": "fleet/idle/starter-idle.png",
+      "sha256": "51f7cec3ac48bf9ab336d05699cee4a0075d6ebc1372961e548a12a70332c131",
+      "bytes": 1167,
+      "size": [
+        112,
+        112
+      ]
+    },
+    {
+      "path": "fleet/animations/starter-motion-docked.png",
+      "sha256": "670c923d9fac73ddc0f42463c96fef3e534b4ef22f34bbcc0c003d217999f565",
+      "bytes": 3463,
+      "size": [
+        448,
+        112
+      ]
+    },
+    {
+      "path": "fleet/animations/starter-motion-travel.png",
+      "sha256": "7c1c1490f99a9e0e1ae714902a4483374cc660e86e4c310519af84019a1875c2",
+      "bytes": 5442,
+      "size": [
+        896,
+        112
+      ]
+    },
+    {
+      "path": "fleet/berths/starter-berth-intact.png",
+      "sha256": "370b9458cf4c1919818adb654c8146216d421d41e39a652cb19034ee3650dfdc",
+      "bytes": 3627,
+      "size": [
+        112,
+        112
+      ]
+    },
+    {
+      "path": "fleet/berths/starter-berth-damaged.png",
+      "sha256": "1ac4cb48603b86701152df0821de3d81bf88d8c87fb512cda7088fdaf17ec4bc",
+      "bytes": 5228,
+      "size": [
+        112,
+        112
+      ]
+    },
+    {
+      "path": "fleet/berths/starter-berth-destroyed.png",
+      "sha256": "3c4de29fd0367d5708ff9c39cc3e41b6767ec1861dd6127d88459336752eb306",
+      "bytes": 6770,
+      "size": [
+        112,
+        112
+      ]
+    },
+    {
+      "path": "fleet/animations/starter-berth-ambient-ambient.png",
+      "sha256": "aee0540c2b9493cf9d4a3e7d004765f55840572b2b60e82cfffce442dc94db73",
+      "bytes": 9168,
+      "size": [
+        896,
+        112
+      ]
+    },
+    {
+      "path": "fleet/manifest.json",
+      "sha256": "c2de5bfaf3c6d9e5700c613ae6aea0eeb9a57f9a8f055dde08db38402c80a329",
+      "bytes": 309058
+    },
+    {
+      "path": "fleet/composition-tracks.json",
+      "sha256": "33576b7a8c0d6c62658b3c88ef3accb204babe1e21207dc5a2c62234da327b4d",
+      "bytes": 13528
+    }
+  ]
+}

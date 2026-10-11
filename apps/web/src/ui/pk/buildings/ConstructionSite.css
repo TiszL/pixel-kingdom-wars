@@ -1,0 +1,38 @@
+/* ConstructionSite.kt: 114×34 paint inside a 48px target, 4px above sprite, 7px transparent hit margins.
+ * These dimensions and the 8px/160ms enter motion are presentation values from the native component. */
+.pk-construction-layer { position: absolute; inset: 0; pointer-events: none; }
+.pk-construction-builder { position: absolute; transform: translateY(-100%); pointer-events: none; z-index: var(--z-anchor); }
+.pk-construction-plate {
+  --pk-construction-hit-margin: calc((var(--pk-min-tap) - var(--pk-size-timer-plate-h)) / 2);
+  --pk-construction-offset: calc(-100% + var(--pk-construction-hit-margin) - var(--pk-s4));
+  position: absolute;
+  z-index: var(--z-anchor);
+  display: block;
+  appearance: none;
+  box-sizing: border-box;
+  width: var(--pk-size-timer-plate-w);
+  height: var(--pk-min-tap);
+  padding: var(--pk-construction-hit-margin) 0;
+  border: 0;
+  margin: 0;
+  background: transparent;
+  color: var(--pk-text);
+  font: inherit;
+  cursor: pointer;
+  pointer-events: auto;
+  transform: translate(-50%, var(--pk-construction-offset));
+  animation: pk-construction-in var(--pk-dur-plate-in) var(--pk-ease-out);
+}
+.pk-construction-plate__face { width: 100%; height: var(--pk-size-timer-plate-h); pointer-events: none; }
+.pk-construction-plate__face > .pk-plate__face { padding: 0 var(--pk-outline-button) 0 0; justify-content: center; }
+.pk-construction-plate__row { display: flex; align-items: center; gap: var(--pk-s2); min-width: 0; }
+.pk-construction-plate__column { display: flex; flex: 1 1 auto; flex-direction: column; min-width: 0; }
+@keyframes pk-construction-in {
+  from { opacity: 0; transform: translate(-50%, calc(var(--pk-construction-offset) - var(--pk-s8))); }
+  to { opacity: 1; transform: translate(-50%, var(--pk-construction-offset)); }
+}
+/* Native reduced/inspection mode initializes at the final pose; the builder has no fabricated hammer loop. */
+@media (prefers-reduced-motion: reduce) {
+  .pk-construction-plate { animation: none; }
+}
+html[data-motion='reduce'] .pk-construction-plate { animation: none; }

@@ -1,0 +1,18 @@
+{
+  "_provenance": {
+    "source": "FIXTURE-DERIVED, not a live capture (night 2026-10-06, K-night-A1)",
+    "what": "The fixture test player's signature over api vectors prepare.unsignedTransaction; accepted by the service submit (assertPlayerSignedFaucetTransfer).",
+    "server": "TiszL server night/server ca7fe4d7d: apps/api/test/skr-faucet-fixtures.ts through apps/api/src/devnet-only/skrFaucet.ts; checked by apps/api/test/skr-faucet-native-decoder.ts",
+    "generator": "tools/skr-faucet-fixture-vectors.mts",
+    "recapture": "Re-capture from a live chain lane with scripts/candidate/capture-skr-faucet-vectors.mjs (server repo) and the tester phone; newerPage cannot come from a live server and stays fixture-derived.",
+    "pin": {
+      "mint": "Bincuik5v411CXzJaptVZu2xsMwQrcfc4D5epovrRa3R",
+      "decimals": 6,
+      "grantSkr": 1000,
+      "grantReadPageSize": 20
+    }
+  },
+  "wallet": "DwiiKAQ7MXWDnCQiZcH81bF1pMyf6mYBLSKNKAxSEWzd",
+  "attemptId": "a1172e23-3397-4c9f-8e4a-d2996c1e013d",
+  "signedTransaction": "AuhJLRuzI4LX54zWmMHz/nFnsZGiFR+Nc6vCj0uXAU5pTviYJS7uhmW4ZHTL6mIim7byl3OV2gNPSjUsc85WdQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgEFCcBQxWN6RPqGKf/zzMziMAyzYqY9mdlfxUFFJm9DMkRaIBLLkMpg6OXY2vZuInLSIz4EhtVX6MZhQe2JIBd9frc62MU9dxVUz6e+bLDoPQNTHNDaVcEvt59c8YUfdAad9Pl5FMjPVi8nvAayDKFgeGiJ6iDVNwP/nMHa7s/90EDSjJclj04kifG7PRApFI4NgwtaE5na/xCEBI572Nvp+FmfSUOenbCVvEER7SXTV5XYMbxVoEf0sdf2ruN3e7QSIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABt324ddloZPZy+FGzut5rBy0he1fWzeROoz1hX7/AKlrc0qO/yRv5zSzjUBGwUju5fBP6Hs6CkI5Vad5Vt4Ga8aCJjfH0xDsV2J74AuiWdJTdJ9Kr2REcM/75To19zJCAgQGAAIABQYHAQEHBQMFAgEICgwAypo7AAAAAAY="
+}

@@ -1,0 +1,43 @@
+[toolchain]
+anchor_version = "0.32.1"
+
+[features]
+resolution = true
+skip-lint = false
+
+[programs.localnet]
+shardkeep_league = "2x3PP9GeyvcwvrBCwAjYacTaaLRMhXbzBnRLDAWtninE"
+# Accepted C2 public identity; every deployment requires the owner's per-row go.
+shardkeep_craft = "4FnNXB9FFSnDmGnwyML28XBugxgzdHqJfXZ1vxXjye59"
+# Disposable adversarial wrapper, never a public deployment target.
+seeker_cpi_probe = "GGRZUzCunNTqAkny7sLZW6ZkCcj918nDJuzt7SQUYNbK"
+# Accepted E2 public identity; every deployment requires the owner's per-row go.
+shardkeep_economy = "5qyN1Xbe2L16t7MPwwcD5QGmLYAnGF4VjN9BXtazvzkr"
+shardkeep_core = "mYYQFnpyGofG31y5oJkiKVmNwifbSXBMnQ5aUgQkL6b"
+shardkeep_distributor = "6Tgc32nfuEDwvVQii47eLKZXeu39evzG5142UheuxpKU"
+
+[programs.devnet]
+shardkeep_economy = "5qyN1Xbe2L16t7MPwwcD5QGmLYAnGF4VjN9BXtazvzkr"
+shardkeep_craft = "4FnNXB9FFSnDmGnwyML28XBugxgzdHqJfXZ1vxXjye59"
+shardkeep_core = "mYYQFnpyGofG31y5oJkiKVmNwifbSXBMnQ5aUgQkL6b"
+shardkeep_distributor = "6Tgc32nfuEDwvVQii47eLKZXeu39evzG5142UheuxpKU"
+
+[registry]
+url = "https://api.apr.dev"
+
+[provider]
+cluster = "localnet"
+wallet = "~/.config/solana/id.json"
+
+[workspace]
+members = ["shardkeep-core", "shardkeep-distributor", "shardkeep-economy", "shardkeep-craft", "test-fixtures/seeker-cpi-probe", "shardkeep-league"]
+
+[test]
+# The distributor initializer authenticates against ProgramData. Keep local
+# workspace deployments upgradeable so tests use provider.wallet as authority.
+upgradeable = true
+
+[scripts]
+# Production protocol helpers are ESM TypeScript. Use the existing pinned workspace
+# tsx loader so validator tests exercise the real encoder across package boundaries.
+test = "../scripts/node_modules/.bin/tsx node_modules/mocha/bin/mocha.js --timeout 1000000 tests/**/*.ts"

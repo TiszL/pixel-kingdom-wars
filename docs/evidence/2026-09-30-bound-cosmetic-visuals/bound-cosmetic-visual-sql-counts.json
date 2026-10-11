@@ -1,0 +1,36 @@
+{
+  "final": {
+    "log": "/tmp/bound-cosmetic-visual-sql4.log",
+    "discovered": 11,
+    "passed": 11,
+    "failed": 0,
+    "skipped": 0,
+    "durationSec": 26.85
+  },
+  "types": {
+    "log": "/tmp/bound-cosmetic-visual-sql-types2.log",
+    "exit": 0
+  },
+  "retained": [
+    {
+      "log": "/tmp/bound-cosmetic-visual-sql-diagnostic1.log",
+      "result": "suite setup failed BOUND_COSMETIC_VISUAL_PREDECESSOR before assertions; 10 discovered/skipped"
+    },
+    {
+      "log": "/tmp/bound-cosmetic-visual-sql-diagnostic2.log",
+      "result": "1 selected assertion failed: expected top-level PostgreSQL text rather than Drizzle cause.message; 10 name-filtered"
+    },
+    {
+      "log": "/tmp/bound-cosmetic-visual-sql3.log",
+      "result": "interrupted exit130 before cases after preceding assertion-edit path typo; not accepted evidence"
+    }
+  ],
+  "journal285Integration": {
+    "log": "/tmp/bound-cosmetic-visual-sql5.log",
+    "discovered": 11,
+    "passed": 11,
+    "failed": 0,
+    "skipped": 0,
+    "durationSec": 21.69
+  }
+}

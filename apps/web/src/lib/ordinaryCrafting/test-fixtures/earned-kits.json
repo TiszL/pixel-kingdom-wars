@@ -1,0 +1,707 @@
+{
+  "scope": "actual earned common-route raw, real refining, untaxed cache ledger, kit conversion and authenticated HTTP; fixture facilities/deed/term authority",
+  "view": {
+    "wallet": "umoc9YyR1ErF4ArJzZUADt6zhFscxB6hhogEsGQtDu8",
+    "baseId": "0b83c7bb-057b-451d-9811-a709c705fc7d",
+    "features": {
+      "ordinaryCrafting": {
+        "version": 1,
+        "receipts": 1
+      }
+    },
+    "acceptingJobs": true,
+    "recipeVersion": 2,
+    "maxBatch": 10,
+    "recipes": [
+      {
+        "recipeVersion": 2,
+        "recipeId": "refine_frostglass",
+        "quantity": 1,
+        "durationSec": 60,
+        "inputs": [
+          {
+            "kind": "raw",
+            "itemId": "frost_quartz",
+            "quantity": "10"
+          }
+        ],
+        "output": {
+          "itemId": "frostglass",
+          "quantity": "1"
+        }
+      },
+      {
+        "recipeVersion": 2,
+        "recipeId": "refine_heartwood_beams",
+        "quantity": 1,
+        "durationSec": 60,
+        "inputs": [
+          {
+            "kind": "raw",
+            "itemId": "heartwood_logs",
+            "quantity": "10"
+          }
+        ],
+        "output": {
+          "itemId": "heartwood_beams",
+          "quantity": "1"
+        }
+      },
+      {
+        "recipeVersion": 2,
+        "recipeId": "refine_sunstone_blocks",
+        "quantity": 1,
+        "durationSec": 60,
+        "inputs": [
+          {
+            "kind": "raw",
+            "itemId": "sunstone_rubble",
+            "quantity": "10"
+          }
+        ],
+        "output": {
+          "itemId": "sunstone_blocks",
+          "quantity": "1"
+        }
+      },
+      {
+        "recipeVersion": 2,
+        "recipeId": "refine_crownsteel",
+        "quantity": 1,
+        "durationSec": 60,
+        "inputs": [
+          {
+            "kind": "raw",
+            "itemId": "crown_iron_ore",
+            "quantity": "10"
+          }
+        ],
+        "output": {
+          "itemId": "crownsteel",
+          "quantity": "1"
+        }
+      },
+      {
+        "recipeVersion": 2,
+        "recipeId": "refine_prismstone_lens",
+        "quantity": 1,
+        "durationSec": 60,
+        "inputs": [
+          {
+            "kind": "raw",
+            "itemId": "rough_prism",
+            "quantity": "10"
+          }
+        ],
+        "output": {
+          "itemId": "prismstone_lens",
+          "quantity": "1"
+        }
+      },
+      {
+        "recipeVersion": 2,
+        "recipeId": "refine_stormalloy",
+        "quantity": 1,
+        "durationSec": 60,
+        "inputs": [
+          {
+            "kind": "raw",
+            "itemId": "storm_ore",
+            "quantity": "10"
+          }
+        ],
+        "output": {
+          "itemId": "stormalloy",
+          "quantity": "1"
+        }
+      },
+      {
+        "recipeVersion": 2,
+        "recipeId": "refine_thornsilk",
+        "quantity": 1,
+        "durationSec": 60,
+        "inputs": [
+          {
+            "kind": "raw",
+            "itemId": "thorn_fibre",
+            "quantity": "10"
+          }
+        ],
+        "output": {
+          "itemId": "thornsilk",
+          "quantity": "1"
+        }
+      },
+      {
+        "recipeVersion": 2,
+        "recipeId": "refine_embercore",
+        "quantity": 1,
+        "durationSec": 60,
+        "inputs": [
+          {
+            "kind": "raw",
+            "itemId": "ember_nodules",
+            "quantity": "10"
+          }
+        ],
+        "output": {
+          "itemId": "embercore",
+          "quantity": "1"
+        }
+      },
+      {
+        "recipeVersion": 2,
+        "recipeId": "craft_navigation_kit",
+        "quantity": 1,
+        "durationSec": 120,
+        "inputs": [
+          {
+            "kind": "crafting",
+            "itemId": "prismstone_lens",
+            "quantity": "1"
+          },
+          {
+            "kind": "crafting",
+            "itemId": "frostglass",
+            "quantity": "1"
+          }
+        ],
+        "output": {
+          "itemId": "navigation_kit",
+          "quantity": "1"
+        }
+      },
+      {
+        "recipeVersion": 2,
+        "recipeId": "craft_climate_kit",
+        "quantity": 1,
+        "durationSec": 120,
+        "inputs": [
+          {
+            "kind": "crafting",
+            "itemId": "sunstone_blocks",
+            "quantity": "1"
+          },
+          {
+            "kind": "crafting",
+            "itemId": "embercore",
+            "quantity": "1"
+          }
+        ],
+        "output": {
+          "itemId": "climate_kit",
+          "quantity": "1"
+        }
+      },
+      {
+        "recipeVersion": 2,
+        "recipeId": "craft_expedition_kit",
+        "quantity": 1,
+        "durationSec": 180,
+        "inputs": [
+          {
+            "kind": "crafting",
+            "itemId": "heartwood_beams",
+            "quantity": "1"
+          },
+          {
+            "kind": "crafting",
+            "itemId": "thornsilk",
+            "quantity": "1"
+          },
+          {
+            "kind": "shards",
+            "itemId": "shards",
+            "quantity": "25"
+          }
+        ],
+        "output": {
+          "itemId": "expedition_kit",
+          "quantity": "1"
+        }
+      }
+    ],
+    "rawStock": [
+      {
+        "resourceId": "frost_quartz",
+        "available": "0",
+        "reserved": "0",
+        "total": "0"
+      },
+      {
+        "resourceId": "heartwood_logs",
+        "available": "0",
+        "reserved": "0",
+        "total": "0"
+      },
+      {
+        "resourceId": "sunstone_rubble",
+        "available": "0",
+        "reserved": "0",
+        "total": "0"
+      },
+      {
+        "resourceId": "crown_iron_ore",
+        "available": "0",
+        "reserved": "0",
+        "total": "0"
+      },
+      {
+        "resourceId": "rough_prism",
+        "available": "0",
+        "reserved": "0",
+        "total": "0"
+      },
+      {
+        "resourceId": "storm_ore",
+        "available": "0",
+        "reserved": "0",
+        "total": "0"
+      },
+      {
+        "resourceId": "thorn_fibre",
+        "available": "0",
+        "reserved": "0",
+        "total": "0"
+      },
+      {
+        "resourceId": "ember_nodules",
+        "available": "0",
+        "reserved": "0",
+        "total": "0"
+      }
+    ],
+    "craftingStock": [
+      {
+        "itemId": "frostglass",
+        "available": "0",
+        "pendingOutput": "0"
+      },
+      {
+        "itemId": "heartwood_beams",
+        "available": "0",
+        "pendingOutput": "0"
+      },
+      {
+        "itemId": "sunstone_blocks",
+        "available": "0",
+        "pendingOutput": "0"
+      },
+      {
+        "itemId": "crownsteel",
+        "available": "0",
+        "pendingOutput": "0"
+      },
+      {
+        "itemId": "prismstone_lens",
+        "available": "0",
+        "pendingOutput": "0"
+      },
+      {
+        "itemId": "stormalloy",
+        "available": "0",
+        "pendingOutput": "0"
+      },
+      {
+        "itemId": "thornsilk",
+        "available": "0",
+        "pendingOutput": "0"
+      },
+      {
+        "itemId": "embercore",
+        "available": "0",
+        "pendingOutput": "0"
+      },
+      {
+        "itemId": "navigation_kit",
+        "available": "0",
+        "pendingOutput": "0"
+      },
+      {
+        "itemId": "climate_kit",
+        "available": "2",
+        "pendingOutput": "0"
+      },
+      {
+        "itemId": "expedition_kit",
+        "available": "2",
+        "pendingOutput": "0"
+      }
+    ],
+    "pendingJobs": [],
+    "serverNow": "2026-09-28T20:13:32.430Z",
+    "catalogueVersion": 2,
+    "shardsAvailable": "50"
+  },
+  "legacy": {
+    "wallet": "umoc9YyR1ErF4ArJzZUADt6zhFscxB6hhogEsGQtDu8",
+    "baseId": "0b83c7bb-057b-451d-9811-a709c705fc7d",
+    "features": {
+      "ordinaryCrafting": {
+        "version": 1,
+        "receipts": 1
+      }
+    },
+    "acceptingJobs": true,
+    "recipeVersion": 1,
+    "maxBatch": 10,
+    "recipes": [
+      {
+        "recipeVersion": 1,
+        "recipeId": "refine_frostglass",
+        "quantity": 1,
+        "durationSec": 60,
+        "inputs": [
+          {
+            "kind": "raw",
+            "itemId": "frost_quartz",
+            "quantity": "10"
+          }
+        ],
+        "output": {
+          "itemId": "frostglass",
+          "quantity": "1"
+        }
+      },
+      {
+        "recipeVersion": 1,
+        "recipeId": "refine_heartwood_beams",
+        "quantity": 1,
+        "durationSec": 60,
+        "inputs": [
+          {
+            "kind": "raw",
+            "itemId": "heartwood_logs",
+            "quantity": "10"
+          }
+        ],
+        "output": {
+          "itemId": "heartwood_beams",
+          "quantity": "1"
+        }
+      },
+      {
+        "recipeVersion": 1,
+        "recipeId": "refine_sunstone_blocks",
+        "quantity": 1,
+        "durationSec": 60,
+        "inputs": [
+          {
+            "kind": "raw",
+            "itemId": "sunstone_rubble",
+            "quantity": "10"
+          }
+        ],
+        "output": {
+          "itemId": "sunstone_blocks",
+          "quantity": "1"
+        }
+      },
+      {
+        "recipeVersion": 1,
+        "recipeId": "refine_crownsteel",
+        "quantity": 1,
+        "durationSec": 60,
+        "inputs": [
+          {
+            "kind": "raw",
+            "itemId": "crown_iron_ore",
+            "quantity": "10"
+          }
+        ],
+        "output": {
+          "itemId": "crownsteel",
+          "quantity": "1"
+        }
+      },
+      {
+        "recipeVersion": 1,
+        "recipeId": "refine_prismstone_lens",
+        "quantity": 1,
+        "durationSec": 60,
+        "inputs": [
+          {
+            "kind": "raw",
+            "itemId": "rough_prism",
+            "quantity": "10"
+          }
+        ],
+        "output": {
+          "itemId": "prismstone_lens",
+          "quantity": "1"
+        }
+      },
+      {
+        "recipeVersion": 1,
+        "recipeId": "refine_stormalloy",
+        "quantity": 1,
+        "durationSec": 60,
+        "inputs": [
+          {
+            "kind": "raw",
+            "itemId": "storm_ore",
+            "quantity": "10"
+          }
+        ],
+        "output": {
+          "itemId": "stormalloy",
+          "quantity": "1"
+        }
+      },
+      {
+        "recipeVersion": 1,
+        "recipeId": "refine_thornsilk",
+        "quantity": 1,
+        "durationSec": 60,
+        "inputs": [
+          {
+            "kind": "raw",
+            "itemId": "thorn_fibre",
+            "quantity": "10"
+          }
+        ],
+        "output": {
+          "itemId": "thornsilk",
+          "quantity": "1"
+        }
+      },
+      {
+        "recipeVersion": 1,
+        "recipeId": "refine_embercore",
+        "quantity": 1,
+        "durationSec": 60,
+        "inputs": [
+          {
+            "kind": "raw",
+            "itemId": "ember_nodules",
+            "quantity": "10"
+          }
+        ],
+        "output": {
+          "itemId": "embercore",
+          "quantity": "1"
+        }
+      },
+      {
+        "recipeVersion": 1,
+        "recipeId": "craft_navigation_kit",
+        "quantity": 1,
+        "durationSec": 120,
+        "inputs": [
+          {
+            "kind": "crafting",
+            "itemId": "prismstone_lens",
+            "quantity": "1"
+          },
+          {
+            "kind": "crafting",
+            "itemId": "frostglass",
+            "quantity": "1"
+          }
+        ],
+        "output": {
+          "itemId": "navigation_kit",
+          "quantity": "1"
+        }
+      }
+    ],
+    "rawStock": [
+      {
+        "resourceId": "frost_quartz",
+        "available": "0",
+        "reserved": "0",
+        "total": "0"
+      },
+      {
+        "resourceId": "heartwood_logs",
+        "available": "0",
+        "reserved": "0",
+        "total": "0"
+      },
+      {
+        "resourceId": "sunstone_rubble",
+        "available": "0",
+        "reserved": "0",
+        "total": "0"
+      },
+      {
+        "resourceId": "crown_iron_ore",
+        "available": "0",
+        "reserved": "0",
+        "total": "0"
+      },
+      {
+        "resourceId": "rough_prism",
+        "available": "0",
+        "reserved": "0",
+        "total": "0"
+      },
+      {
+        "resourceId": "storm_ore",
+        "available": "0",
+        "reserved": "0",
+        "total": "0"
+      },
+      {
+        "resourceId": "thorn_fibre",
+        "available": "0",
+        "reserved": "0",
+        "total": "0"
+      },
+      {
+        "resourceId": "ember_nodules",
+        "available": "0",
+        "reserved": "0",
+        "total": "0"
+      }
+    ],
+    "craftingStock": [
+      {
+        "itemId": "frostglass",
+        "available": "0",
+        "pendingOutput": "0"
+      },
+      {
+        "itemId": "heartwood_beams",
+        "available": "0",
+        "pendingOutput": "0"
+      },
+      {
+        "itemId": "sunstone_blocks",
+        "available": "0",
+        "pendingOutput": "0"
+      },
+      {
+        "itemId": "crownsteel",
+        "available": "0",
+        "pendingOutput": "0"
+      },
+      {
+        "itemId": "prismstone_lens",
+        "available": "0",
+        "pendingOutput": "0"
+      },
+      {
+        "itemId": "stormalloy",
+        "available": "0",
+        "pendingOutput": "0"
+      },
+      {
+        "itemId": "thornsilk",
+        "available": "0",
+        "pendingOutput": "0"
+      },
+      {
+        "itemId": "embercore",
+        "available": "0",
+        "pendingOutput": "0"
+      },
+      {
+        "itemId": "navigation_kit",
+        "available": "0",
+        "pendingOutput": "0"
+      }
+    ],
+    "pendingJobs": [],
+    "serverNow": "2026-09-28T20:13:32.430Z"
+  },
+  "receipts": [
+    {
+      "wallet": "umoc9YyR1ErF4ArJzZUADt6zhFscxB6hhogEsGQtDu8",
+      "idempotencyKey": "db25fafd-979b-45d1-8cc7-dbb7cf4090a5",
+      "serverNow": "2026-09-28T20:13:32.430Z",
+      "status": "accepted",
+      "receipt": {
+        "jobId": "db25fafd-979b-45d1-8cc7-dbb7cf4090a5",
+        "recipe": {
+          "recipeVersion": 2,
+          "recipeId": "craft_climate_kit",
+          "quantity": 2,
+          "durationSec": 240,
+          "inputs": [
+            {
+              "kind": "crafting",
+              "itemId": "sunstone_blocks",
+              "quantity": "2"
+            },
+            {
+              "kind": "crafting",
+              "itemId": "embercore",
+              "quantity": "2"
+            }
+          ],
+          "output": {
+            "itemId": "climate_kit",
+            "quantity": "2"
+          }
+        },
+        "startedAt": "2026-09-28T20:03:32.430Z",
+        "readyAt": "2026-09-28T20:07:32.430Z",
+        "wallet": "umoc9YyR1ErF4ArJzZUADt6zhFscxB6hhogEsGQtDu8",
+        "request": {
+          "idempotencyKey": "db25fafd-979b-45d1-8cc7-dbb7cf4090a5",
+          "baseId": "0b83c7bb-057b-451d-9811-a709c705fc7d",
+          "recipeId": "craft_climate_kit",
+          "recipeVersion": 2,
+          "quantity": 2
+        }
+      },
+      "completion": {
+        "completedAt": "2026-09-28T20:07:32.430Z"
+      }
+    },
+    {
+      "wallet": "umoc9YyR1ErF4ArJzZUADt6zhFscxB6hhogEsGQtDu8",
+      "idempotencyKey": "7a8c0573-3dac-4bb2-b54f-3c664abebe8a",
+      "serverNow": "2026-09-28T20:13:32.430Z",
+      "status": "accepted",
+      "receipt": {
+        "jobId": "7a8c0573-3dac-4bb2-b54f-3c664abebe8a",
+        "recipe": {
+          "recipeVersion": 2,
+          "recipeId": "craft_expedition_kit",
+          "quantity": 2,
+          "durationSec": 360,
+          "inputs": [
+            {
+              "kind": "crafting",
+              "itemId": "heartwood_beams",
+              "quantity": "2"
+            },
+            {
+              "kind": "crafting",
+              "itemId": "thornsilk",
+              "quantity": "2"
+            },
+            {
+              "kind": "shards",
+              "itemId": "shards",
+              "quantity": "50"
+            }
+          ],
+          "output": {
+            "itemId": "expedition_kit",
+            "quantity": "2"
+          }
+        },
+        "startedAt": "2026-09-28T20:07:32.430Z",
+        "readyAt": "2026-09-28T20:13:32.430Z",
+        "wallet": "umoc9YyR1ErF4ArJzZUADt6zhFscxB6hhogEsGQtDu8",
+        "request": {
+          "idempotencyKey": "7a8c0573-3dac-4bb2-b54f-3c664abebe8a",
+          "baseId": "0b83c7bb-057b-451d-9811-a709c705fc7d",
+          "recipeId": "craft_expedition_kit",
+          "recipeVersion": 2,
+          "quantity": 2
+        }
+      },
+      "completion": {
+        "completedAt": "2026-09-28T20:13:32.430Z"
+      }
+    }
+  ],
+  "cache": {
+    "amount": "100"
+  },
+  "shardsBefore": "100"
+}

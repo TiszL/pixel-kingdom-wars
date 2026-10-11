@@ -1,0 +1,729 @@
+{
+  "schemaVersion": 1,
+  "sourceZipSha256": "7a381d75251b280459dda151dba7d2ad7f3d1b8945d01af0f847528436e05aa3",
+  "docsCommit": "11504e2316bd33a6d092f87b8d114f159aa0249c",
+  "sourceIndexSha256": "04f96c922ca04d93f1bf760e6385713908b971ce82c3aa022602f1fa199e2181",
+  "scope": "advanced fleet source packing only; no application or art acceptance",
+  "files": [
+    {
+      "path": "fleet/berths/survey-balloon-berth-intact.png",
+      "sha256": "66588b8f47839c2fc4e1597289d0a99e391db3b91185dc145be84fa34cf3d89c",
+      "bytes": 3504,
+      "size": [
+        112,
+        112
+      ]
+    },
+    {
+      "path": "fleet/berths/survey-balloon-berth-damaged.png",
+      "sha256": "7cee321d7de95bf5e0cdfa0f53f36ac24b0e81b0f15d1541e42fbafa09cd1004",
+      "bytes": 7180,
+      "size": [
+        112,
+        112
+      ]
+    },
+    {
+      "path": "fleet/berths/survey-balloon-berth-destroyed.png",
+      "sha256": "f8a6c0087191cdbb93c96f4a4dc905a4c48830c9babfa92f54585ebe8eae1276",
+      "bytes": 6454,
+      "size": [
+        112,
+        112
+      ]
+    },
+    {
+      "path": "fleet/animations/survey-balloon-berth-ambient-ambient.png",
+      "sha256": "d2952b33dd587dba2e34724eab90b42d47d42e84b64558b79b6040150a1079ec",
+      "bytes": 7095,
+      "size": [
+        896,
+        112
+      ]
+    },
+    {
+      "path": "fleet/berths/cargo-cutter-berth-intact.png",
+      "sha256": "152b173fc31fff950622f52f8e9d81a0f02263ac5fc68fac483760a80986b2a6",
+      "bytes": 5735,
+      "size": [
+        112,
+        112
+      ]
+    },
+    {
+      "path": "fleet/berths/cargo-cutter-berth-damaged.png",
+      "sha256": "fb78c4c055bbea3737dbf86ddd51b937abac9c3dcf985ec4aa1b013d0c797aff",
+      "bytes": 4050,
+      "size": [
+        112,
+        112
+      ]
+    },
+    {
+      "path": "fleet/berths/cargo-cutter-berth-destroyed.png",
+      "sha256": "140ca5516261a5bb6c17d591df01fd9dad01ad3d7078dd9e7b882d858913ff31",
+      "bytes": 7476,
+      "size": [
+        112,
+        112
+      ]
+    },
+    {
+      "path": "fleet/animations/cargo-cutter-berth-ambient-ambient.png",
+      "sha256": "ff628aa9f05d9ff5dae86b2a7a0d29cb98e8131892784cb7105592af074e8de4",
+      "bytes": 16856,
+      "size": [
+        896,
+        112
+      ]
+    },
+    {
+      "path": "fleet/berths/courier-airship-berth-intact.png",
+      "sha256": "1d5ad5262cfc3572ad5eab933644f4ff1751dbf5e10df8cad93379e299a4025e",
+      "bytes": 3933,
+      "size": [
+        112,
+        112
+      ]
+    },
+    {
+      "path": "fleet/berths/courier-airship-berth-damaged.png",
+      "sha256": "70ebe5b05eeb01185e76e4ee59d4f6a68fde54919f3cc46816498006c213a5a6",
+      "bytes": 4236,
+      "size": [
+        112,
+        112
+      ]
+    },
+    {
+      "path": "fleet/berths/courier-airship-berth-destroyed.png",
+      "sha256": "c633e1a025efed89100f87b3e14e7adf059a3eb857cfffb383af302a27fbd1b3",
+      "bytes": 4912,
+      "size": [
+        112,
+        112
+      ]
+    },
+    {
+      "path": "fleet/animations/courier-airship-berth-ambient-ambient.png",
+      "sha256": "a7efa2698f21b75adc62563d3ae71e3e2f9e23d069dd67932a416e4e1ac9e7d1",
+      "bytes": 7229,
+      "size": [
+        896,
+        112
+      ]
+    },
+    {
+      "path": "fleet/berths/expedition-barge-berth-intact.png",
+      "sha256": "9adda50d4c6ce360fa123dd8807dca77f01a2ac04b4d44f5892673b175bac09b",
+      "bytes": 4739,
+      "size": [
+        112,
+        112
+      ]
+    },
+    {
+      "path": "fleet/berths/expedition-barge-berth-damaged.png",
+      "sha256": "5358cb47cd51e1cf1e373e7d7815ac3bf56765bafdce434d64db90d0c520c5c3",
+      "bytes": 6200,
+      "size": [
+        112,
+        112
+      ]
+    },
+    {
+      "path": "fleet/berths/expedition-barge-berth-destroyed.png",
+      "sha256": "31f6f763e0841eb7703af53df7263ed04352b37aa0bda593f41b9af1d8153e75",
+      "bytes": 5775,
+      "size": [
+        112,
+        112
+      ]
+    },
+    {
+      "path": "fleet/animations/expedition-barge-berth-ambient-ambient.png",
+      "sha256": "3e8e7a7cc370dc9be48a14a48b5b24d3fc3aa474a45b0c7bfc65f7c8efa3a4b5",
+      "bytes": 10411,
+      "size": [
+        896,
+        112
+      ]
+    },
+    {
+      "path": "fleet/idle/survey-balloon-t1-idle.png",
+      "sha256": "3a51992ca7ba2b5dd965220619eb217d1c4ee173efbe79eeb9542e349f4e9945",
+      "bytes": 3690,
+      "size": [
+        112,
+        112
+      ]
+    },
+    {
+      "path": "fleet/animations/survey-balloon-t1-motion-docked.png",
+      "sha256": "2b23dc77c8e9de7cc86eaec4d8c336346b1b3695b1d741b4e237cf17f87ce5e5",
+      "bytes": 8593,
+      "size": [
+        448,
+        112
+      ]
+    },
+    {
+      "path": "fleet/animations/survey-balloon-t1-motion-travel.png",
+      "sha256": "ac37c2a5fd0809c521df0f0f4232229501335aef55d3a4585e90662eab5e737a",
+      "bytes": 11478,
+      "size": [
+        896,
+        112
+      ]
+    },
+    {
+      "path": "fleet/exhausted/survey-balloon-t1-exhausted.png",
+      "sha256": "02e743beaef57667ac48f78e32cc2e037ec5df3d9a2185d4e2d85bdfd63afdfc",
+      "bytes": 3930,
+      "size": [
+        112,
+        112
+      ]
+    },
+    {
+      "path": "fleet/idle/survey-balloon-t2-idle.png",
+      "sha256": "8eed70823c89e78a1f3a7b85a0b986e213ec576c6714e2347ba88c1b11229c6e",
+      "bytes": 3820,
+      "size": [
+        112,
+        112
+      ]
+    },
+    {
+      "path": "fleet/animations/survey-balloon-t2-motion-docked.png",
+      "sha256": "3ffbc854b4e8af3abfbf39d23a6a8eaf3fa34bf916f265969c3b7b4a6d2e5d18",
+      "bytes": 9245,
+      "size": [
+        448,
+        112
+      ]
+    },
+    {
+      "path": "fleet/animations/survey-balloon-t2-motion-travel.png",
+      "sha256": "57eb8a00520a911f11d60351679243a8d7febfe489065ecd971cfde7b0200f35",
+      "bytes": 13515,
+      "size": [
+        896,
+        112
+      ]
+    },
+    {
+      "path": "fleet/exhausted/survey-balloon-t2-exhausted.png",
+      "sha256": "b28ac13ce1ae48fb14f080a1b44b1212f0a95333983bad12c7ce8bc13e30538e",
+      "bytes": 3263,
+      "size": [
+        112,
+        112
+      ]
+    },
+    {
+      "path": "fleet/idle/survey-balloon-t3-idle.png",
+      "sha256": "5c770f75e01cb8a77340daff31ad8f930c44b07ea8cd4cec8ac37966937fad37",
+      "bytes": 3573,
+      "size": [
+        112,
+        112
+      ]
+    },
+    {
+      "path": "fleet/animations/survey-balloon-t3-motion-docked.png",
+      "sha256": "39ecf965a2aef67413786ac6e837ed512e8ba7871d82cce9d7cfebf22af97cf8",
+      "bytes": 8380,
+      "size": [
+        448,
+        112
+      ]
+    },
+    {
+      "path": "fleet/animations/survey-balloon-t3-motion-travel.png",
+      "sha256": "37bc656d643093a8373ca917b64fba7c591854c2b806d8991524fc5fe3f473e2",
+      "bytes": 11074,
+      "size": [
+        896,
+        112
+      ]
+    },
+    {
+      "path": "fleet/exhausted/survey-balloon-t3-exhausted.png",
+      "sha256": "bd5d5dc2b65643d1ad2cb0e1a2a0ef587c0dc92d0f8719dfad6f637539f3f953",
+      "bytes": 3216,
+      "size": [
+        112,
+        112
+      ]
+    },
+    {
+      "path": "fleet/idle/survey-balloon-t4-idle.png",
+      "sha256": "8800cd98c1f319b12c849b0ae9cbc79489cc4d1ef943adb48053495a4b973fdc",
+      "bytes": 3725,
+      "size": [
+        112,
+        112
+      ]
+    },
+    {
+      "path": "fleet/animations/survey-balloon-t4-motion-docked.png",
+      "sha256": "37e1f213cfe3e290be88a890389e41c9e43ef4eff332d500a983001b3bf0751e",
+      "bytes": 9634,
+      "size": [
+        448,
+        112
+      ]
+    },
+    {
+      "path": "fleet/animations/survey-balloon-t4-motion-travel.png",
+      "sha256": "43d11af1dbd79fec7ac0dd44a07be382dfe997251dc2adf8b7f8f03b8ec46374",
+      "bytes": 14121,
+      "size": [
+        896,
+        112
+      ]
+    },
+    {
+      "path": "fleet/exhausted/survey-balloon-t4-exhausted.png",
+      "sha256": "579f0ecc678944c527ee6aee8161656ae8c6346436ab7219f8de48b5d0dfe71b",
+      "bytes": 3651,
+      "size": [
+        112,
+        112
+      ]
+    },
+    {
+      "path": "fleet/idle/cargo-cutter-t1-idle.png",
+      "sha256": "305c2c0b4a030670f36d0da4d4e47c35dfd77ca2e1c589b3326f52aeacfb0875",
+      "bytes": 2387,
+      "size": [
+        112,
+        112
+      ]
+    },
+    {
+      "path": "fleet/animations/cargo-cutter-t1-motion-docked.png",
+      "sha256": "600ab795af9a80902c460ea0a943122c8eff9870ab1be55f5e675a418756fcdf",
+      "bytes": 3877,
+      "size": [
+        448,
+        112
+      ]
+    },
+    {
+      "path": "fleet/animations/cargo-cutter-t1-motion-travel.png",
+      "sha256": "ece346a8fec14d32801fbc68420c2c4472c3a86ae593548e732b0aabed1be890",
+      "bytes": 5257,
+      "size": [
+        896,
+        112
+      ]
+    },
+    {
+      "path": "fleet/exhausted/cargo-cutter-t1-exhausted.png",
+      "sha256": "479ea8349f574deb7eb0c3aca2b4e90e466880cb10000d5c83e172888c72b53a",
+      "bytes": 1723,
+      "size": [
+        112,
+        112
+      ]
+    },
+    {
+      "path": "fleet/idle/cargo-cutter-t2-idle.png",
+      "sha256": "4c7c8ea6f778b9dda486b8ef672c66fd5b5a71430a9ca6a05ab141079cd9f723",
+      "bytes": 2146,
+      "size": [
+        112,
+        112
+      ]
+    },
+    {
+      "path": "fleet/animations/cargo-cutter-t2-motion-docked.png",
+      "sha256": "e72ec33316aa3e9449947cfd8a7fe9d67c680c61028a9a8fbc7402a263e73cf3",
+      "bytes": 3506,
+      "size": [
+        448,
+        112
+      ]
+    },
+    {
+      "path": "fleet/animations/cargo-cutter-t2-motion-travel.png",
+      "sha256": "df3435643a6b1cefa5189874d6f070b617ef504e2207eade6b989697e112e539",
+      "bytes": 4826,
+      "size": [
+        896,
+        112
+      ]
+    },
+    {
+      "path": "fleet/exhausted/cargo-cutter-t2-exhausted.png",
+      "sha256": "da55d2ce851274f7c3dd89b98e0935963d2fb8648cce41186d892e99b8c14182",
+      "bytes": 2280,
+      "size": [
+        112,
+        112
+      ]
+    },
+    {
+      "path": "fleet/idle/cargo-cutter-t3-idle.png",
+      "sha256": "36f819af52f5e23a442fcc3602d4b4fd43afe689ec000711af3fcafc9ca07e6c",
+      "bytes": 1818,
+      "size": [
+        112,
+        112
+      ]
+    },
+    {
+      "path": "fleet/animations/cargo-cutter-t3-motion-docked.png",
+      "sha256": "39e50eab16b910f3d146eaddd95c1fcd6d916704d450f4629e4ab8e6893e5a03",
+      "bytes": 2900,
+      "size": [
+        448,
+        112
+      ]
+    },
+    {
+      "path": "fleet/animations/cargo-cutter-t3-motion-travel.png",
+      "sha256": "13e81e6b62a5c7d72215e74ef0bab914c978050f088cf26c04b625882c9505a8",
+      "bytes": 3961,
+      "size": [
+        896,
+        112
+      ]
+    },
+    {
+      "path": "fleet/exhausted/cargo-cutter-t3-exhausted.png",
+      "sha256": "3567200a4104e712eba3d0efe731c6a5ba64667f4ad95be2e0d60f17dfe1d60d",
+      "bytes": 1985,
+      "size": [
+        112,
+        112
+      ]
+    },
+    {
+      "path": "fleet/idle/cargo-cutter-t4-idle.png",
+      "sha256": "ae5e29edb43932dd7ed587fd30960e2cafa6a8e31708b0561045b45e460360ea",
+      "bytes": 1735,
+      "size": [
+        112,
+        112
+      ]
+    },
+    {
+      "path": "fleet/animations/cargo-cutter-t4-motion-docked.png",
+      "sha256": "d381e1fea3615cee947d41066a2b80a2ffa5d2f819f5aa4c02dbd32d3f1dc3b7",
+      "bytes": 2653,
+      "size": [
+        448,
+        112
+      ]
+    },
+    {
+      "path": "fleet/animations/cargo-cutter-t4-motion-travel.png",
+      "sha256": "6673da9a93e6daeaf85f2dff24aaed6a30743128ba79c7e2018585a35689b6f9",
+      "bytes": 3681,
+      "size": [
+        896,
+        112
+      ]
+    },
+    {
+      "path": "fleet/exhausted/cargo-cutter-t4-exhausted.png",
+      "sha256": "bcfdd342e72c64dd9339a5805dd0870c834b9da12a58bc16f6c1382b78da7ac0",
+      "bytes": 1657,
+      "size": [
+        112,
+        112
+      ]
+    },
+    {
+      "path": "fleet/idle/courier-airship-t1-idle.png",
+      "sha256": "459363b5f18b86ca984796de2835cbf89316a22f6e4c2d352f4aa90631693c43",
+      "bytes": 3141,
+      "size": [
+        112,
+        112
+      ]
+    },
+    {
+      "path": "fleet/animations/courier-airship-t1-motion-docked.png",
+      "sha256": "d44207acc4a433e994934eb8b1cbaa304fec16479079cc0f7858e3acad74fd2d",
+      "bytes": 9299,
+      "size": [
+        448,
+        112
+      ]
+    },
+    {
+      "path": "fleet/animations/courier-airship-t1-motion-travel.png",
+      "sha256": "8b04dd3ad2f050bf420009cb6b4d48e88640c3afa7997caca0ad1bbdae8a3c72",
+      "bytes": 12731,
+      "size": [
+        896,
+        112
+      ]
+    },
+    {
+      "path": "fleet/exhausted/courier-airship-t1-exhausted.png",
+      "sha256": "a859c7f8058239448294a3100074c2f98e0a9b14d6a9fc5ef88fd8d02aa60161",
+      "bytes": 2563,
+      "size": [
+        112,
+        112
+      ]
+    },
+    {
+      "path": "fleet/idle/courier-airship-t2-idle.png",
+      "sha256": "3c2a88e05328ac39d454e8e64361e312ae4897a0f00f91f291bb6114666dad3a",
+      "bytes": 2678,
+      "size": [
+        112,
+        112
+      ]
+    },
+    {
+      "path": "fleet/animations/courier-airship-t2-motion-docked.png",
+      "sha256": "cbd172d0a1635ffb5528be7368a14b58fbf35ad2116dd870a1eba4cdeca11946",
+      "bytes": 5071,
+      "size": [
+        448,
+        112
+      ]
+    },
+    {
+      "path": "fleet/animations/courier-airship-t2-motion-travel.png",
+      "sha256": "e4c54530c57adafcb0cdd7d43c275027ebdf2feda5cc04899dc7b00ac63eafb5",
+      "bytes": 6565,
+      "size": [
+        896,
+        112
+      ]
+    },
+    {
+      "path": "fleet/exhausted/courier-airship-t2-exhausted.png",
+      "sha256": "4238040f48a0de72dd124b4b92f67689966fc409a6c8fcd1febd6105e670c0ad",
+      "bytes": 3492,
+      "size": [
+        112,
+        112
+      ]
+    },
+    {
+      "path": "fleet/idle/courier-airship-t3-idle.png",
+      "sha256": "c2f98e807cab6508ea81db2b6a2453c25b9f937b1185e6d0a35088e524562ba6",
+      "bytes": 3174,
+      "size": [
+        112,
+        112
+      ]
+    },
+    {
+      "path": "fleet/animations/courier-airship-t3-motion-docked.png",
+      "sha256": "16d98e2d607c7fcdcdaef4125ac87ac26d69a46e9ce7f730ac250c090b6eae24",
+      "bytes": 7318,
+      "size": [
+        448,
+        112
+      ]
+    },
+    {
+      "path": "fleet/animations/courier-airship-t3-motion-travel.png",
+      "sha256": "0701f2093bf7614513eea910a01c1a401df9b7199eba574afd8e78966cfe6bfa",
+      "bytes": 10314,
+      "size": [
+        896,
+        112
+      ]
+    },
+    {
+      "path": "fleet/exhausted/courier-airship-t3-exhausted.png",
+      "sha256": "ddedcbddb274ffe7f7b79560e195f475c1ded30c4b231760c5199d6f3a8beec0",
+      "bytes": 3695,
+      "size": [
+        112,
+        112
+      ]
+    },
+    {
+      "path": "fleet/idle/courier-airship-t4-idle.png",
+      "sha256": "d3f1d3f28400239d1b039a5f5f79ed02e2db4a716ae283f7cb7e0e382b5918cc",
+      "bytes": 3349,
+      "size": [
+        112,
+        112
+      ]
+    },
+    {
+      "path": "fleet/animations/courier-airship-t4-motion-docked.png",
+      "sha256": "47b607d4bc60b3b686ad3115752b1c95de91100b7422b4b8acead4c3d3963240",
+      "bytes": 6038,
+      "size": [
+        448,
+        112
+      ]
+    },
+    {
+      "path": "fleet/animations/courier-airship-t4-motion-travel.png",
+      "sha256": "d3c40bfb647d948aa9f70c5f270e508f5d27a6e7a167c91ad90fb5ce3020352e",
+      "bytes": 8280,
+      "size": [
+        896,
+        112
+      ]
+    },
+    {
+      "path": "fleet/exhausted/courier-airship-t4-exhausted.png",
+      "sha256": "79c0b1a006f62cce8b6c3a4e610020cae4dda4c998749d8a61e3be724067d66a",
+      "bytes": 3581,
+      "size": [
+        112,
+        112
+      ]
+    },
+    {
+      "path": "fleet/idle/expedition-barge-t1-idle.png",
+      "sha256": "9a01c7af92926b402edc7a3c3ecae771c0872f809e6e1929e94fd38dfe0daf4e",
+      "bytes": 3181,
+      "size": [
+        112,
+        112
+      ]
+    },
+    {
+      "path": "fleet/animations/expedition-barge-t1-motion-docked.png",
+      "sha256": "ceab56f877faffb5b855f59a02e89775e3a9069c5d6d41ade40e236a6c1215f9",
+      "bytes": 6792,
+      "size": [
+        448,
+        112
+      ]
+    },
+    {
+      "path": "fleet/animations/expedition-barge-t1-motion-travel.png",
+      "sha256": "4c3c331f7117ace0ee49da298ffb3498032635897310bb5272ec011b2837f3de",
+      "bytes": 8673,
+      "size": [
+        896,
+        112
+      ]
+    },
+    {
+      "path": "fleet/exhausted/expedition-barge-t1-exhausted.png",
+      "sha256": "aba7be5866f75ff27777f8ffc6d2316f40d240746c6ec72f18e7e94e074e9b1d",
+      "bytes": 2706,
+      "size": [
+        112,
+        112
+      ]
+    },
+    {
+      "path": "fleet/idle/expedition-barge-t2-idle.png",
+      "sha256": "c9bb216f2b8f9088cedb4797a48aa403f204c4a660062087ae538d6558cbd563",
+      "bytes": 2779,
+      "size": [
+        112,
+        112
+      ]
+    },
+    {
+      "path": "fleet/animations/expedition-barge-t2-motion-docked.png",
+      "sha256": "e186efff6acab20a4a68b346ff397dbd9895acce8a0537661e46d97e12584064",
+      "bytes": 5081,
+      "size": [
+        448,
+        112
+      ]
+    },
+    {
+      "path": "fleet/animations/expedition-barge-t2-motion-travel.png",
+      "sha256": "33e8eb8202f36bee253e49009eb3102fa6f43531f7f7d1a0a26f3d903937625b",
+      "bytes": 6897,
+      "size": [
+        896,
+        112
+      ]
+    },
+    {
+      "path": "fleet/exhausted/expedition-barge-t2-exhausted.png",
+      "sha256": "21ce735d43e1b737aa14e4aef2e1e2e725f7dca6d294eda38fd3394b7dcfaf10",
+      "bytes": 2564,
+      "size": [
+        112,
+        112
+      ]
+    },
+    {
+      "path": "fleet/idle/expedition-barge-t3-idle.png",
+      "sha256": "6871e412124895b1327dbd6a27dfc47da31f0f81589cab39bea1c3394b7d356f",
+      "bytes": 2146,
+      "size": [
+        112,
+        112
+      ]
+    },
+    {
+      "path": "fleet/animations/expedition-barge-t3-motion-docked.png",
+      "sha256": "cf356a640b24ef06c157545e908b7575b235bb8f9b49e99518ba38d173915524",
+      "bytes": 3644,
+      "size": [
+        448,
+        112
+      ]
+    },
+    {
+      "path": "fleet/animations/expedition-barge-t3-motion-travel.png",
+      "sha256": "cbd8b25009cf665205ce2ea078b83552b95500a62239818a60aa1787f8eddf34",
+      "bytes": 4723,
+      "size": [
+        896,
+        112
+      ]
+    },
+    {
+      "path": "fleet/exhausted/expedition-barge-t3-exhausted.png",
+      "sha256": "6578fbcb9c4bb5253a5c12dbd119f683df7f0b83808bbb396ddfa7b62991db79",
+      "bytes": 1325,
+      "size": [
+        112,
+        112
+      ]
+    },
+    {
+      "path": "fleet/idle/expedition-barge-t4-idle.png",
+      "sha256": "fc6a5a66094d42aa36d46ef51259bdcf2c47a935fdd99cb7e344544449938d28",
+      "bytes": 2292,
+      "size": [
+        112,
+        112
+      ]
+    },
+    {
+      "path": "fleet/animations/expedition-barge-t4-motion-docked.png",
+      "sha256": "df7bf728e54bf265a567365cef05cee295f380ed9c6004675587e0c6b973f030",
+      "bytes": 4340,
+      "size": [
+        448,
+        112
+      ]
+    },
+    {
+      "path": "fleet/animations/expedition-barge-t4-motion-travel.png",
+      "sha256": "0e91264578400b3fa61ae88293ca7e766f04db852d4595ea03a0126046003621",
+      "bytes": 5844,
+      "size": [
+        896,
+        112
+      ]
+    },
+    {
+      "path": "fleet/exhausted/expedition-barge-t4-exhausted.png",
+      "sha256": "5a3cc900262f0c068fc4a2380089922231673c4fe36fcbd0383272841a5cb15d",
+      "bytes": 2768,
+      "size": [
+        112,
+        112
+      ]
+    }
+  ]
+}

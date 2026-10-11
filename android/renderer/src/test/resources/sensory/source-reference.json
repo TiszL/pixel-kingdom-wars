@@ -1,0 +1,4339 @@
+{
+  "policy": {
+    "version": 1,
+    "concurrentShakeCap": 2,
+    "mediumHapticMs": 25,
+    "eventHaptics": {
+      "patterns": {
+        "light": [
+          10
+        ],
+        "medium": [
+          25
+        ],
+        "heavy": [
+          35,
+          30,
+          45
+        ]
+      },
+      "star": {
+        "heavyAt": 3,
+        "mediumAt": 2
+      },
+      "fixed": {
+        "rally": "medium",
+        "destroyed": "light",
+        "trap": "light"
+      },
+      "overlap": "replace",
+      "budget": "none",
+      "deployment": {
+        "haptic": "light",
+        "matching": "troopHeroTile",
+        "echo": "firstActor",
+        "lifetime": "scene"
+      }
+    },
+    "deploymentPreview": {
+      "version": 1,
+      "lifetime": "scene",
+      "directions": [
+        [
+          -1,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          -1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          -1,
+          -1
+        ],
+        [
+          1,
+          -1
+        ],
+        [
+          -1,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "firstRadius": 10,
+      "radiusStep": 5,
+      "maxRadius": 26,
+      "depthStep": 0.009999999999990905,
+      "badge": {
+        "rightInset": 4,
+        "topInset": 4,
+        "fontSize": 22,
+        "color": "#f4d77b",
+        "background": "#14121a",
+        "paddingX": 4,
+        "paddingY": 1,
+        "fontFamily": "VT323",
+        "stroke": "#1a171e",
+        "strokeThickness": 3
+      }
+    },
+    "mortarLanding": {
+      "effects": [
+        {
+          "kind": "shake",
+          "duration": 150,
+          "intensity": 0.004
+        },
+        {
+          "kind": "haptic",
+          "strength": "medium"
+        }
+      ],
+      "clock": "sceneTimeScale",
+      "owner": "releasedFlight",
+      "requiresTravel": true,
+      "requiresImpact": false
+    },
+    "giantLanding": {
+      "effects": [
+        {
+          "kind": "shake",
+          "duration": 150,
+          "intensity": 0.004
+        },
+        {
+          "kind": "haptic",
+          "strength": "medium"
+        }
+      ],
+      "clock": "sceneTimeScale",
+      "owner": "releasedFlight",
+      "requiresTravel": true,
+      "requiresImpact": false,
+      "requiresRichThrow": true,
+      "aim": {
+        "minimumDeltaSquared": 0.25,
+        "retainWithinDegrees": 32.5
+      }
+    },
+    "kegDetonation": {
+      "effects": [
+        {
+          "kind": "shake",
+          "duration": 150,
+          "intensity": 0.004
+        },
+        {
+          "kind": "haptic",
+          "strength": "medium"
+        }
+      ],
+      "clock": "sceneTimeScale",
+      "owner": "detonateBody",
+      "fallbackFrame": 2,
+      "unenteredCue": "completion",
+      "missingBody": "immediate",
+      "missingEffect": "callback"
+    },
+    "camera": {
+      "overlap": "ignore",
+      "offset": "uniformViewportZoom",
+      "roundPixels": true,
+      "clock": "frameDelta"
+    },
+    "sourceHashes": {
+      "apps/web/src/lib/juice.ts": "c6734e05040297272e4780319d73bb7e93979819017f5e6e494dd8531113404b",
+      "phaser/Shake.js": "97ee0a2638e39d84680fb1100fb12887b17d31d6c44bdf3afbac49dfd53722f0",
+      "phaser/Config.js": "df9efffa2c380862a2dd4712cac7a64acb3da11f061f63435fe9435733b45bd1",
+      "apps/web/src/game/PhaserGame.tsx": "468a24d45eb29030c86f80d471568e839ab5c05f33cb16bd920e44e19a0b26b8",
+      "apps/web/src/game/scenes/BattleScene.ts": "caa08a270b3a16950ed5eac7c0de3f86a3b7f47e154d8fd30c096b25d168ae7d",
+      "apps/web/src/game/world/marketArt.ts": "7533ad9879f6c051b1de534ec4331d83980ede9eb641e458fb089bae9f6d9edb",
+      "apps/web/src/game/world/harvesterArt.ts": "7b9bb8f8e674713cdd15c20cb50d5f8624186a7778cdc8e6ab556a69644f8aeb",
+      "apps/web/src/game/v2/defense.ts": "29ad9228c46e99a9f9330ecef67ee0a607cbc16b1d778ff0fdaeef2e0b5e4d50",
+      "apps/web/src/game/v2/projectiles.ts": "b66711c7b15b6c9d189a8a51409d3821a9f4c65c63b26373922c0a702bc17d1e",
+      "apps/web/src/game/v2/clips.ts": "b11eedf2d8fd11adff8901c9316e27f466c57b391d105f9edcf0353d0938d5ca",
+      "apps/web/src/game/v2/effects.ts": "3eb108c919a0aad7ae7954994963a7c7e5238d4c307b02ca2880989866b1d3e7",
+      "apps/web/src/game/v2/troop.ts": "a0412bbd11e587cfeacfc9b1d407ffb2b9116e61c228bda5cd290f48e60471f6",
+      "apps/web/src/game/v2/ticker.ts": "a267d0be6f56e03667fb89db1d4321f1e2a420685945cc7940be9f4d2305c545",
+      "packages/shared/src/constants.ts": "d289876ff1f02ca5a6ca917123b4cca956f7da15386447eeb0ab31c4cbbb9ba8",
+      "apps/web/public/atlas/meta.json": "39701ef784bd4f861750468a62545fe1613dec0c29593a794df36365a5ef3a67",
+      "apps/web/src/game/fx/troop.ts": "33dc658ad94ae6b6a828c72d12947d5175d2d66c3731e171b87a3abac275b972",
+      "apps/web/src/game/fx/projectiles.ts": "00802efffdf6c09d76850a3aaf47b86607aa5add9c5622e539ddda3f2c2f0112",
+      "apps/web/src/ui/RaidUI.tsx": "7ec3ea66ed1fde73b23a312f1cfa8b2d19d0b318a29d603a4e4ef73af3ab0ebd"
+    }
+  },
+  "samples": [
+    {
+      "zoom": 0.5,
+      "random": 0,
+      "x": -2,
+      "y": -1
+    },
+    {
+      "zoom": 0.5,
+      "random": 0.25,
+      "x": -1,
+      "y": -1
+    },
+    {
+      "zoom": 0.5,
+      "random": 0.5,
+      "x": 0,
+      "y": 0
+    },
+    {
+      "zoom": 0.5,
+      "random": 0.75,
+      "x": 1,
+      "y": 1
+    },
+    {
+      "zoom": 0.5,
+      "random": 0.999,
+      "x": 2,
+      "y": 1
+    },
+    {
+      "zoom": 1,
+      "random": 0,
+      "x": -3,
+      "y": -2
+    },
+    {
+      "zoom": 1,
+      "random": 0.25,
+      "x": -2,
+      "y": -1
+    },
+    {
+      "zoom": 1,
+      "random": 0.5,
+      "x": 0,
+      "y": 0
+    },
+    {
+      "zoom": 1,
+      "random": 0.75,
+      "x": 2,
+      "y": 1
+    },
+    {
+      "zoom": 1,
+      "random": 0.999,
+      "x": 3,
+      "y": 2
+    },
+    {
+      "zoom": 2,
+      "random": 0,
+      "x": -6,
+      "y": -5
+    },
+    {
+      "zoom": 2,
+      "random": 0.25,
+      "x": -3,
+      "y": -2
+    },
+    {
+      "zoom": 2,
+      "random": 0.5,
+      "x": 0,
+      "y": 0
+    },
+    {
+      "zoom": 2,
+      "random": 0.75,
+      "x": 3,
+      "y": 2
+    },
+    {
+      "zoom": 2,
+      "random": 0.999,
+      "x": 6,
+      "y": 5
+    }
+  ],
+  "eventCases": [
+    {
+      "name": "star-missing",
+      "events": [
+        {
+          "e": "star",
+          "t": 1
+        }
+      ],
+      "present": true,
+      "jumping": false,
+      "calls": [
+        "light"
+      ]
+    },
+    {
+      "name": "star-0",
+      "events": [
+        {
+          "e": "star",
+          "t": 1,
+          "n": 0
+        }
+      ],
+      "present": true,
+      "jumping": false,
+      "calls": [
+        "light"
+      ]
+    },
+    {
+      "name": "star-2",
+      "events": [
+        {
+          "e": "star",
+          "t": 1,
+          "n": 2
+        }
+      ],
+      "present": true,
+      "jumping": false,
+      "calls": [
+        "medium"
+      ]
+    },
+    {
+      "name": "star-2.5",
+      "events": [
+        {
+          "e": "star",
+          "t": 1,
+          "n": 2.5
+        }
+      ],
+      "present": true,
+      "jumping": false,
+      "calls": [
+        "light"
+      ]
+    },
+    {
+      "name": "star-3",
+      "events": [
+        {
+          "e": "star",
+          "t": 1,
+          "n": 3
+        }
+      ],
+      "present": true,
+      "jumping": false,
+      "calls": [
+        "heavy"
+      ]
+    },
+    {
+      "name": "star-4",
+      "events": [
+        {
+          "e": "star",
+          "t": 1,
+          "n": 4
+        }
+      ],
+      "present": true,
+      "jumping": false,
+      "calls": [
+        "heavy"
+      ]
+    },
+    {
+      "name": "rally",
+      "events": [
+        {
+          "e": "rally",
+          "t": 1
+        }
+      ],
+      "present": true,
+      "jumping": false,
+      "calls": [
+        "medium"
+      ]
+    },
+    {
+      "name": "destroyed",
+      "events": [
+        {
+          "e": "destroyed",
+          "t": 1,
+          "id": "base"
+        }
+      ],
+      "present": true,
+      "jumping": false,
+      "calls": [
+        "light"
+      ]
+    },
+    {
+      "name": "trap",
+      "events": [
+        {
+          "e": "trap",
+          "t": 1,
+          "id": "base"
+        }
+      ],
+      "present": true,
+      "jumping": false,
+      "calls": [
+        "light"
+      ]
+    },
+    {
+      "name": "destroyed-missing",
+      "events": [
+        {
+          "e": "destroyed",
+          "t": 1,
+          "id": "base"
+        }
+      ],
+      "present": false,
+      "jumping": false,
+      "calls": []
+    },
+    {
+      "name": "destroyed-cold",
+      "events": [
+        {
+          "e": "destroyed",
+          "t": 1,
+          "id": "base"
+        }
+      ],
+      "present": true,
+      "jumping": true,
+      "calls": []
+    },
+    {
+      "name": "destroyed-repeated",
+      "events": [
+        {
+          "e": "destroyed",
+          "t": 1,
+          "id": "base"
+        },
+        {
+          "e": "destroyed",
+          "t": 1,
+          "id": "base"
+        }
+      ],
+      "present": true,
+      "jumping": false,
+      "calls": [
+        "light",
+        "light"
+      ]
+    },
+    {
+      "name": "trap-missing",
+      "events": [
+        {
+          "e": "trap",
+          "t": 1,
+          "id": "base"
+        }
+      ],
+      "present": false,
+      "jumping": false,
+      "calls": []
+    },
+    {
+      "name": "trap-cold",
+      "events": [
+        {
+          "e": "trap",
+          "t": 1,
+          "id": "base"
+        }
+      ],
+      "present": true,
+      "jumping": true,
+      "calls": []
+    },
+    {
+      "name": "trap-repeated",
+      "events": [
+        {
+          "e": "trap",
+          "t": 1,
+          "id": "base"
+        },
+        {
+          "e": "trap",
+          "t": 1,
+          "id": "base"
+        }
+      ],
+      "present": true,
+      "jumping": false,
+      "calls": [
+        "light",
+        "light"
+      ]
+    },
+    {
+      "name": "star-cold",
+      "events": [
+        {
+          "e": "star",
+          "t": 1,
+          "n": 3
+        }
+      ],
+      "present": true,
+      "jumping": true,
+      "calls": []
+    },
+    {
+      "name": "rally-cold",
+      "events": [
+        {
+          "e": "rally",
+          "t": 1
+        }
+      ],
+      "present": true,
+      "jumping": true,
+      "calls": []
+    },
+    {
+      "name": "same-time-source-order",
+      "events": [
+        {
+          "e": "star",
+          "t": 1,
+          "n": 3
+        },
+        {
+          "e": "rally",
+          "t": 1
+        },
+        {
+          "e": "trap",
+          "t": 1,
+          "id": "base"
+        },
+        {
+          "e": "star",
+          "t": 1,
+          "n": 0
+        }
+      ],
+      "present": true,
+      "jumping": false,
+      "calls": [
+        "heavy",
+        "medium",
+        "light",
+        "light"
+      ]
+    },
+    {
+      "name": "service-workshop-controller-live",
+      "events": [
+        {
+          "e": "destroyed",
+          "t": 1,
+          "id": "base"
+        }
+      ],
+      "present": true,
+      "jumping": false,
+      "calls": [
+        "light"
+      ],
+      "type": "workshop",
+      "variant": "controller",
+      "routes": [
+        [
+          "market",
+          "collapse"
+        ]
+      ]
+    },
+    {
+      "name": "service-workshop-controller-cold",
+      "events": [
+        {
+          "e": "destroyed",
+          "t": 1,
+          "id": "base"
+        }
+      ],
+      "present": true,
+      "jumping": true,
+      "calls": [],
+      "type": "workshop",
+      "variant": "controller",
+      "routes": [
+        [
+          "damage",
+          "destroy"
+        ],
+        [
+          "market",
+          "destroy"
+        ],
+        [
+          "marketFallback",
+          "destroyed"
+        ]
+      ]
+    },
+    {
+      "name": "service-workshop-pending-live",
+      "events": [
+        {
+          "e": "destroyed",
+          "t": 1,
+          "id": "base"
+        }
+      ],
+      "present": true,
+      "jumping": false,
+      "calls": [
+        "light"
+      ],
+      "type": "workshop",
+      "variant": "pending",
+      "routes": [
+        [
+          "marketFallback",
+          "destroyed"
+        ]
+      ]
+    },
+    {
+      "name": "service-workshop-pending-cold",
+      "events": [
+        {
+          "e": "destroyed",
+          "t": 1,
+          "id": "base"
+        }
+      ],
+      "present": true,
+      "jumping": true,
+      "calls": [],
+      "type": "workshop",
+      "variant": "pending",
+      "routes": [
+        [
+          "damage",
+          "destroy"
+        ],
+        [
+          "marketFallback",
+          "destroyed"
+        ]
+      ]
+    },
+    {
+      "name": "service-workshop-ordinary-live",
+      "events": [
+        {
+          "e": "destroyed",
+          "t": 1,
+          "id": "base"
+        }
+      ],
+      "present": true,
+      "jumping": false,
+      "calls": [
+        "light"
+      ],
+      "type": "workshop",
+      "variant": "ordinary",
+      "routes": [
+        [
+          "damage",
+          "collapse"
+        ]
+      ]
+    },
+    {
+      "name": "service-workshop-ordinary-cold",
+      "events": [
+        {
+          "e": "destroyed",
+          "t": 1,
+          "id": "base"
+        }
+      ],
+      "present": true,
+      "jumping": true,
+      "calls": [],
+      "type": "workshop",
+      "variant": "ordinary",
+      "routes": [
+        [
+          "damage",
+          "destroy"
+        ]
+      ]
+    },
+    {
+      "name": "service-lodge-controller-live",
+      "events": [
+        {
+          "e": "destroyed",
+          "t": 1,
+          "id": "base"
+        }
+      ],
+      "present": true,
+      "jumping": false,
+      "calls": [
+        "light"
+      ],
+      "type": "lodge",
+      "variant": "controller",
+      "routes": [
+        [
+          "market",
+          "collapse"
+        ]
+      ]
+    },
+    {
+      "name": "service-lodge-controller-cold",
+      "events": [
+        {
+          "e": "destroyed",
+          "t": 1,
+          "id": "base"
+        }
+      ],
+      "present": true,
+      "jumping": true,
+      "calls": [],
+      "type": "lodge",
+      "variant": "controller",
+      "routes": [
+        [
+          "damage",
+          "destroy"
+        ],
+        [
+          "market",
+          "destroy"
+        ],
+        [
+          "marketFallback",
+          "destroyed"
+        ]
+      ]
+    },
+    {
+      "name": "service-lodge-pending-live",
+      "events": [
+        {
+          "e": "destroyed",
+          "t": 1,
+          "id": "base"
+        }
+      ],
+      "present": true,
+      "jumping": false,
+      "calls": [
+        "light"
+      ],
+      "type": "lodge",
+      "variant": "pending",
+      "routes": [
+        [
+          "marketFallback",
+          "destroyed"
+        ]
+      ]
+    },
+    {
+      "name": "service-lodge-pending-cold",
+      "events": [
+        {
+          "e": "destroyed",
+          "t": 1,
+          "id": "base"
+        }
+      ],
+      "present": true,
+      "jumping": true,
+      "calls": [],
+      "type": "lodge",
+      "variant": "pending",
+      "routes": [
+        [
+          "damage",
+          "destroy"
+        ],
+        [
+          "marketFallback",
+          "destroyed"
+        ]
+      ]
+    },
+    {
+      "name": "service-lodge-ordinary-live",
+      "events": [
+        {
+          "e": "destroyed",
+          "t": 1,
+          "id": "base"
+        }
+      ],
+      "present": true,
+      "jumping": false,
+      "calls": [
+        "light"
+      ],
+      "type": "lodge",
+      "variant": "ordinary",
+      "routes": [
+        [
+          "damage",
+          "collapse"
+        ]
+      ]
+    },
+    {
+      "name": "service-lodge-ordinary-cold",
+      "events": [
+        {
+          "e": "destroyed",
+          "t": 1,
+          "id": "base"
+        }
+      ],
+      "present": true,
+      "jumping": true,
+      "calls": [],
+      "type": "lodge",
+      "variant": "ordinary",
+      "routes": [
+        [
+          "damage",
+          "destroy"
+        ]
+      ]
+    },
+    {
+      "name": "service-market-controller-live",
+      "events": [
+        {
+          "e": "destroyed",
+          "t": 1,
+          "id": "base"
+        }
+      ],
+      "present": true,
+      "jumping": false,
+      "calls": [
+        "light"
+      ],
+      "type": "market",
+      "variant": "controller",
+      "routes": [
+        [
+          "market",
+          "collapse"
+        ]
+      ]
+    },
+    {
+      "name": "service-market-controller-cold",
+      "events": [
+        {
+          "e": "destroyed",
+          "t": 1,
+          "id": "base"
+        }
+      ],
+      "present": true,
+      "jumping": true,
+      "calls": [],
+      "type": "market",
+      "variant": "controller",
+      "routes": [
+        [
+          "damage",
+          "destroy"
+        ],
+        [
+          "market",
+          "destroy"
+        ],
+        [
+          "marketFallback",
+          "destroyed"
+        ]
+      ]
+    },
+    {
+      "name": "service-market-pending-live",
+      "events": [
+        {
+          "e": "destroyed",
+          "t": 1,
+          "id": "base"
+        }
+      ],
+      "present": true,
+      "jumping": false,
+      "calls": [
+        "light"
+      ],
+      "type": "market",
+      "variant": "pending",
+      "routes": [
+        [
+          "marketFallback",
+          "destroyed"
+        ]
+      ]
+    },
+    {
+      "name": "service-market-pending-cold",
+      "events": [
+        {
+          "e": "destroyed",
+          "t": 1,
+          "id": "base"
+        }
+      ],
+      "present": true,
+      "jumping": true,
+      "calls": [],
+      "type": "market",
+      "variant": "pending",
+      "routes": [
+        [
+          "damage",
+          "destroy"
+        ],
+        [
+          "marketFallback",
+          "destroyed"
+        ]
+      ]
+    },
+    {
+      "name": "service-market-ordinary-live",
+      "events": [
+        {
+          "e": "destroyed",
+          "t": 1,
+          "id": "base"
+        }
+      ],
+      "present": true,
+      "jumping": false,
+      "calls": [
+        "light"
+      ],
+      "type": "market",
+      "variant": "ordinary",
+      "routes": [
+        [
+          "damage",
+          "collapse"
+        ]
+      ]
+    },
+    {
+      "name": "service-market-ordinary-cold",
+      "events": [
+        {
+          "e": "destroyed",
+          "t": 1,
+          "id": "base"
+        }
+      ],
+      "present": true,
+      "jumping": true,
+      "calls": [],
+      "type": "market",
+      "variant": "ordinary",
+      "routes": [
+        [
+          "damage",
+          "destroy"
+        ]
+      ]
+    },
+    {
+      "name": "service-harvester-controller-live",
+      "events": [
+        {
+          "e": "destroyed",
+          "t": 1,
+          "id": "base"
+        }
+      ],
+      "present": true,
+      "jumping": false,
+      "calls": [
+        "light"
+      ],
+      "type": "harvester",
+      "variant": "controller",
+      "routes": [
+        [
+          "market",
+          "collapse"
+        ]
+      ]
+    },
+    {
+      "name": "service-harvester-controller-cold",
+      "events": [
+        {
+          "e": "destroyed",
+          "t": 1,
+          "id": "base"
+        }
+      ],
+      "present": true,
+      "jumping": true,
+      "calls": [],
+      "type": "harvester",
+      "variant": "controller",
+      "routes": [
+        [
+          "damage",
+          "destroy"
+        ],
+        [
+          "market",
+          "destroy"
+        ],
+        [
+          "marketFallback",
+          "destroyed"
+        ]
+      ]
+    },
+    {
+      "name": "service-harvester-pending-live",
+      "events": [
+        {
+          "e": "destroyed",
+          "t": 1,
+          "id": "base"
+        }
+      ],
+      "present": true,
+      "jumping": false,
+      "calls": [
+        "light"
+      ],
+      "type": "harvester",
+      "variant": "pending",
+      "routes": [
+        [
+          "marketFallback",
+          "destroyed"
+        ]
+      ]
+    },
+    {
+      "name": "service-harvester-pending-cold",
+      "events": [
+        {
+          "e": "destroyed",
+          "t": 1,
+          "id": "base"
+        }
+      ],
+      "present": true,
+      "jumping": true,
+      "calls": [],
+      "type": "harvester",
+      "variant": "pending",
+      "routes": [
+        [
+          "damage",
+          "destroy"
+        ],
+        [
+          "marketFallback",
+          "destroyed"
+        ]
+      ]
+    },
+    {
+      "name": "service-harvester-unpresented-live",
+      "events": [
+        {
+          "e": "destroyed",
+          "t": 1,
+          "id": "base"
+        }
+      ],
+      "present": true,
+      "jumping": false,
+      "calls": [
+        "light"
+      ],
+      "type": "harvester",
+      "variant": "unpresented",
+      "routes": [
+        [
+          "marketFallback",
+          "destroyed"
+        ]
+      ]
+    },
+    {
+      "name": "service-harvester-unpresented-cold",
+      "events": [
+        {
+          "e": "destroyed",
+          "t": 1,
+          "id": "base"
+        }
+      ],
+      "present": true,
+      "jumping": true,
+      "calls": [],
+      "type": "harvester",
+      "variant": "unpresented",
+      "routes": [
+        [
+          "damage",
+          "destroy"
+        ],
+        [
+          "marketFallback",
+          "destroyed"
+        ]
+      ]
+    },
+    {
+      "name": "service-berth-controller-live",
+      "events": [
+        {
+          "e": "destroyed",
+          "t": 1,
+          "id": "base"
+        }
+      ],
+      "present": true,
+      "jumping": false,
+      "calls": [
+        "light"
+      ],
+      "type": "berth",
+      "variant": "controller",
+      "routes": [
+        [
+          "berth",
+          "collapse"
+        ]
+      ]
+    },
+    {
+      "name": "service-berth-controller-cold",
+      "events": [
+        {
+          "e": "destroyed",
+          "t": 1,
+          "id": "base"
+        }
+      ],
+      "present": true,
+      "jumping": true,
+      "calls": [],
+      "type": "berth",
+      "variant": "controller",
+      "routes": [
+        [
+          "damage",
+          "destroy"
+        ],
+        [
+          "berth",
+          "destroy"
+        ],
+        [
+          "berthFallback",
+          "destroyed"
+        ]
+      ]
+    },
+    {
+      "name": "service-berth-pending-live",
+      "events": [
+        {
+          "e": "destroyed",
+          "t": 1,
+          "id": "base"
+        }
+      ],
+      "present": true,
+      "jumping": false,
+      "calls": [
+        "light"
+      ],
+      "type": "berth",
+      "variant": "pending",
+      "routes": [
+        [
+          "berthFallback",
+          "destroyed"
+        ]
+      ]
+    },
+    {
+      "name": "service-berth-pending-cold",
+      "events": [
+        {
+          "e": "destroyed",
+          "t": 1,
+          "id": "base"
+        }
+      ],
+      "present": true,
+      "jumping": true,
+      "calls": [],
+      "type": "berth",
+      "variant": "pending",
+      "routes": [
+        [
+          "damage",
+          "destroy"
+        ],
+        [
+          "berthFallback",
+          "destroyed"
+        ]
+      ]
+    }
+  ],
+  "serviceSourceHashes": {
+    "packages/shared/src/constants.ts": "d289876ff1f02ca5a6ca917123b4cca956f7da15386447eeb0ab31c4cbbb9ba8"
+  },
+  "mortarCases": [
+    {
+      "name": "mortar-landing",
+      "kind": "shell",
+      "missing": "",
+      "collapse": "",
+      "clear": false,
+      "rate": 1,
+      "launches": 1,
+      "before": [],
+      "early": [],
+      "calls": [
+        {
+          "at": 1235,
+          "kind": "shake",
+          "duration": 150,
+          "intensity": 0.004
+        },
+        {
+          "at": 1235,
+          "kind": "haptic",
+          "strength": "medium"
+        }
+      ]
+    },
+    {
+      "name": "missing-fire",
+      "kind": "shell",
+      "missing": "fire",
+      "collapse": "",
+      "clear": false,
+      "rate": 1,
+      "launches": 0,
+      "before": [],
+      "early": [],
+      "calls": []
+    },
+    {
+      "name": "missing-travel",
+      "kind": "shell",
+      "missing": "travel",
+      "collapse": "",
+      "clear": false,
+      "rate": 1,
+      "launches": 0,
+      "before": [],
+      "early": [],
+      "calls": []
+    },
+    {
+      "name": "missing-texture",
+      "kind": "shell",
+      "missing": "texture",
+      "collapse": "",
+      "clear": false,
+      "rate": 1,
+      "launches": 0,
+      "before": [],
+      "early": [],
+      "calls": []
+    },
+    {
+      "name": "cannon-has-no-heavy-callback",
+      "kind": "cannonball",
+      "missing": "",
+      "collapse": "",
+      "clear": false,
+      "rate": 1,
+      "launches": 1,
+      "before": [],
+      "early": [],
+      "calls": []
+    },
+    {
+      "name": "collapse-before-release",
+      "kind": "shell",
+      "missing": "",
+      "collapse": "before",
+      "clear": false,
+      "rate": 1,
+      "launches": 0,
+      "before": [],
+      "early": [],
+      "calls": []
+    },
+    {
+      "name": "collapse-after-release",
+      "kind": "shell",
+      "missing": "",
+      "collapse": "after",
+      "clear": false,
+      "rate": 1,
+      "launches": 1,
+      "before": [],
+      "early": [],
+      "calls": [
+        {
+          "at": 1235,
+          "kind": "shake",
+          "duration": 150,
+          "intensity": 0.004
+        },
+        {
+          "at": 1235,
+          "kind": "haptic",
+          "strength": "medium"
+        }
+      ]
+    },
+    {
+      "name": "cleared-flight-never-completes",
+      "kind": "shell",
+      "missing": "",
+      "collapse": "",
+      "clear": true,
+      "rate": 1,
+      "launches": 1,
+      "before": [],
+      "early": [],
+      "calls": []
+    },
+    {
+      "name": "double-rate-landing",
+      "kind": "shell",
+      "missing": "",
+      "collapse": "",
+      "clear": false,
+      "rate": 2,
+      "launches": 1,
+      "before": [],
+      "early": [],
+      "calls": [
+        {
+          "at": 617.5,
+          "kind": "shake",
+          "duration": 150,
+          "intensity": 0.004
+        },
+        {
+          "at": 617.5,
+          "kind": "haptic",
+          "strength": "medium"
+        }
+      ]
+    }
+  ],
+  "mortarRevisions": [
+    {
+      "name": "append-before-release",
+      "changed": [],
+      "clears": 0
+    },
+    {
+      "name": "append-after-release",
+      "changed": [],
+      "clears": 0
+    },
+    {
+      "name": "corrected-fire",
+      "changed": [
+        "mortar"
+      ],
+      "clears": 1
+    },
+    {
+      "name": "inserted-rendered-hit",
+      "changed": [
+        "mortar"
+      ],
+      "clears": 1
+    },
+    {
+      "name": "reordered-rendered-actor",
+      "changed": [
+        "mortar"
+      ],
+      "clears": 1
+    },
+    {
+      "name": "future-correction",
+      "changed": [],
+      "clears": 0
+    }
+  ],
+  "giantCases": [
+    {
+      "name": "giant-landing",
+      "missing": "",
+      "mode": "rich",
+      "death": "",
+      "clear": false,
+      "rate": 1,
+      "cold": false,
+      "flinch": false,
+      "replace": "",
+      "replaceAt": 100,
+      "wakeAt": 0,
+      "wakeRow": false,
+      "launches": 1,
+      "legacy": 0,
+      "impacts": [
+        {
+          "x": 100,
+          "y": 200
+        }
+      ],
+      "facings": [],
+      "before": [],
+      "early": [],
+      "calls": [
+        {
+          "at": 1295,
+          "kind": "shake",
+          "duration": 150,
+          "intensity": 0.004
+        },
+        {
+          "at": 1295,
+          "kind": "haptic",
+          "strength": "medium"
+        }
+      ]
+    },
+    {
+      "name": "giant-missing-actor",
+      "missing": "actor",
+      "mode": "rich",
+      "death": "",
+      "clear": false,
+      "rate": 1,
+      "cold": false,
+      "flinch": false,
+      "replace": "",
+      "replaceAt": 100,
+      "wakeAt": 0,
+      "wakeRow": false,
+      "launches": 0,
+      "legacy": 0,
+      "impacts": [],
+      "facings": [],
+      "before": [],
+      "early": [],
+      "calls": []
+    },
+    {
+      "name": "giant-missing-throw",
+      "missing": "throw",
+      "mode": "rich",
+      "death": "",
+      "clear": false,
+      "rate": 1,
+      "cold": false,
+      "flinch": false,
+      "replace": "",
+      "replaceAt": 100,
+      "wakeAt": 0,
+      "wakeRow": false,
+      "launches": 0,
+      "legacy": 0,
+      "impacts": [],
+      "facings": [],
+      "before": [],
+      "early": [],
+      "calls": []
+    },
+    {
+      "name": "giant-missing-travel",
+      "missing": "travel",
+      "mode": "rich",
+      "death": "",
+      "clear": false,
+      "rate": 1,
+      "cold": false,
+      "flinch": false,
+      "replace": "",
+      "replaceAt": 100,
+      "wakeAt": 0,
+      "wakeRow": false,
+      "launches": 0,
+      "legacy": 0,
+      "impacts": [],
+      "facings": [],
+      "before": [],
+      "early": [],
+      "calls": []
+    },
+    {
+      "name": "giant-missing-texture",
+      "missing": "texture",
+      "mode": "rich",
+      "death": "",
+      "clear": false,
+      "rate": 1,
+      "cold": false,
+      "flinch": false,
+      "replace": "",
+      "replaceAt": 100,
+      "wakeAt": 0,
+      "wakeRow": false,
+      "launches": 0,
+      "legacy": 0,
+      "impacts": [],
+      "facings": [],
+      "before": [],
+      "early": [],
+      "calls": []
+    },
+    {
+      "name": "giant-already",
+      "missing": "",
+      "mode": "rich",
+      "death": "already",
+      "clear": false,
+      "rate": 1,
+      "cold": false,
+      "flinch": false,
+      "replace": "",
+      "replaceAt": 100,
+      "wakeAt": 0,
+      "wakeRow": false,
+      "launches": 0,
+      "legacy": 0,
+      "impacts": [],
+      "facings": [],
+      "before": [],
+      "early": [],
+      "calls": []
+    },
+    {
+      "name": "giant-before",
+      "missing": "",
+      "mode": "rich",
+      "death": "before",
+      "clear": false,
+      "rate": 1,
+      "cold": false,
+      "flinch": false,
+      "replace": "",
+      "replaceAt": 100,
+      "wakeAt": 0,
+      "wakeRow": false,
+      "launches": 0,
+      "legacy": 0,
+      "impacts": [],
+      "facings": [],
+      "before": [],
+      "early": [],
+      "calls": []
+    },
+    {
+      "name": "giant-after",
+      "missing": "",
+      "mode": "rich",
+      "death": "after",
+      "clear": false,
+      "rate": 1,
+      "cold": false,
+      "flinch": false,
+      "replace": "",
+      "replaceAt": 100,
+      "wakeAt": 0,
+      "wakeRow": false,
+      "launches": 1,
+      "legacy": 0,
+      "impacts": [
+        {
+          "x": 100,
+          "y": 200
+        }
+      ],
+      "facings": [],
+      "before": [],
+      "early": [],
+      "calls": [
+        {
+          "at": 1295,
+          "kind": "shake",
+          "duration": 150,
+          "intensity": 0.004
+        },
+        {
+          "at": 1295,
+          "kind": "haptic",
+          "strength": "medium"
+        }
+      ]
+    },
+    {
+      "name": "giant-destroy-before",
+      "missing": "",
+      "mode": "rich",
+      "death": "destroy-before",
+      "clear": false,
+      "rate": 1,
+      "cold": false,
+      "flinch": false,
+      "replace": "",
+      "replaceAt": 100,
+      "wakeAt": 0,
+      "wakeRow": false,
+      "launches": 0,
+      "legacy": 0,
+      "impacts": [],
+      "facings": [],
+      "before": [],
+      "early": [],
+      "calls": []
+    },
+    {
+      "name": "giant-destroy-after",
+      "missing": "",
+      "mode": "rich",
+      "death": "destroy-after",
+      "clear": false,
+      "rate": 1,
+      "cold": false,
+      "flinch": false,
+      "replace": "",
+      "replaceAt": 100,
+      "wakeAt": 0,
+      "wakeRow": false,
+      "launches": 1,
+      "legacy": 0,
+      "impacts": [
+        {
+          "x": 100,
+          "y": 200
+        }
+      ],
+      "facings": [],
+      "before": [],
+      "early": [],
+      "calls": [
+        {
+          "at": 1295,
+          "kind": "shake",
+          "duration": 150,
+          "intensity": 0.004
+        },
+        {
+          "at": 1295,
+          "kind": "haptic",
+          "strength": "medium"
+        }
+      ]
+    },
+    {
+      "name": "giant-compact-no-feedback",
+      "missing": "",
+      "mode": "compact",
+      "death": "",
+      "clear": false,
+      "rate": 1,
+      "cold": false,
+      "flinch": false,
+      "replace": "",
+      "replaceAt": 100,
+      "wakeAt": 0,
+      "wakeRow": false,
+      "launches": 1,
+      "legacy": 0,
+      "impacts": [
+        {
+          "x": 100,
+          "y": 200
+        }
+      ],
+      "facings": [],
+      "before": [],
+      "early": [],
+      "calls": []
+    },
+    {
+      "name": "giant-hero-no-feedback",
+      "missing": "",
+      "mode": "hero",
+      "death": "",
+      "clear": false,
+      "rate": 1,
+      "cold": false,
+      "flinch": false,
+      "replace": "",
+      "replaceAt": 100,
+      "wakeAt": 0,
+      "wakeRow": false,
+      "launches": 0,
+      "legacy": 1,
+      "impacts": [],
+      "facings": [],
+      "before": [],
+      "early": [],
+      "calls": []
+    },
+    {
+      "name": "giant-hit-keeps-throw",
+      "missing": "",
+      "mode": "rich",
+      "death": "",
+      "clear": false,
+      "rate": 1,
+      "cold": false,
+      "flinch": true,
+      "replace": "",
+      "replaceAt": 100,
+      "wakeAt": 0,
+      "wakeRow": false,
+      "launches": 1,
+      "legacy": 0,
+      "impacts": [
+        {
+          "x": 100,
+          "y": 200
+        }
+      ],
+      "facings": [],
+      "before": [],
+      "early": [],
+      "calls": [
+        {
+          "at": 1295,
+          "kind": "shake",
+          "duration": 150,
+          "intensity": 0.004
+        },
+        {
+          "at": 1295,
+          "kind": "haptic",
+          "strength": "medium"
+        }
+      ]
+    },
+    {
+      "name": "giant-cleared-pool",
+      "missing": "",
+      "mode": "rich",
+      "death": "",
+      "clear": true,
+      "rate": 1,
+      "cold": false,
+      "flinch": false,
+      "replace": "",
+      "replaceAt": 100,
+      "wakeAt": 0,
+      "wakeRow": false,
+      "launches": 1,
+      "legacy": 0,
+      "impacts": [],
+      "facings": [],
+      "before": [],
+      "early": [],
+      "calls": []
+    },
+    {
+      "name": "giant-cold-dispatch",
+      "missing": "",
+      "mode": "rich",
+      "death": "",
+      "clear": false,
+      "rate": 1,
+      "cold": true,
+      "flinch": false,
+      "replace": "",
+      "replaceAt": 100,
+      "wakeAt": 0,
+      "wakeRow": false,
+      "launches": 0,
+      "legacy": 0,
+      "impacts": [],
+      "facings": [],
+      "before": [],
+      "early": [],
+      "calls": []
+    },
+    {
+      "name": "giant-double-rate",
+      "missing": "",
+      "mode": "rich",
+      "death": "",
+      "clear": false,
+      "rate": 2,
+      "cold": false,
+      "flinch": false,
+      "replace": "",
+      "replaceAt": 100,
+      "wakeAt": 0,
+      "wakeRow": false,
+      "launches": 1,
+      "legacy": 0,
+      "impacts": [
+        {
+          "x": 100,
+          "y": 200
+        }
+      ],
+      "facings": [],
+      "before": [],
+      "early": [],
+      "calls": [
+        {
+          "at": 647.5,
+          "kind": "shake",
+          "duration": 150,
+          "intensity": 0.004
+        },
+        {
+          "at": 647.5,
+          "kind": "haptic",
+          "strength": "medium"
+        }
+      ]
+    },
+    {
+      "name": "giant-melee-before-release",
+      "missing": "",
+      "mode": "rich",
+      "death": "",
+      "clear": false,
+      "rate": 1,
+      "cold": false,
+      "flinch": false,
+      "replace": "melee",
+      "replaceAt": 100,
+      "wakeAt": 0,
+      "wakeRow": false,
+      "launches": 0,
+      "legacy": 0,
+      "impacts": [],
+      "facings": [],
+      "before": [],
+      "early": [],
+      "calls": []
+    },
+    {
+      "name": "giant-identical-throw-keeps-first",
+      "missing": "",
+      "mode": "rich",
+      "death": "",
+      "clear": false,
+      "rate": 1,
+      "cold": false,
+      "flinch": false,
+      "replace": "same",
+      "replaceAt": 100,
+      "wakeAt": 0,
+      "wakeRow": false,
+      "launches": 1,
+      "legacy": 0,
+      "impacts": [
+        {
+          "x": 100,
+          "y": 200
+        }
+      ],
+      "facings": [],
+      "before": [],
+      "early": [],
+      "calls": [
+        {
+          "at": 1295,
+          "kind": "shake",
+          "duration": 150,
+          "intensity": 0.004
+        },
+        {
+          "at": 1295,
+          "kind": "haptic",
+          "strength": "medium"
+        }
+      ]
+    },
+    {
+      "name": "giant-row-throw-keeps-phase",
+      "missing": "",
+      "mode": "rich",
+      "death": "",
+      "clear": false,
+      "rate": 1,
+      "cold": false,
+      "flinch": false,
+      "replace": "row",
+      "replaceAt": 100,
+      "wakeAt": 0,
+      "wakeRow": false,
+      "launches": 1,
+      "legacy": 0,
+      "impacts": [
+        {
+          "x": -300,
+          "y": 200
+        }
+      ],
+      "facings": [],
+      "before": [],
+      "early": [],
+      "calls": [
+        {
+          "at": 1295,
+          "kind": "shake",
+          "duration": 150,
+          "intensity": 0.004
+        },
+        {
+          "at": 1295,
+          "kind": "haptic",
+          "strength": "medium"
+        }
+      ]
+    },
+    {
+      "name": "giant-hysteresis-keeps-callback",
+      "missing": "",
+      "mode": "rich",
+      "death": "",
+      "clear": false,
+      "rate": 1,
+      "cold": false,
+      "flinch": false,
+      "replace": "near",
+      "replaceAt": 100,
+      "wakeAt": 0,
+      "wakeRow": false,
+      "launches": 1,
+      "legacy": 0,
+      "impacts": [
+        {
+          "x": 100,
+          "y": 200
+        }
+      ],
+      "facings": [],
+      "before": [],
+      "early": [],
+      "calls": [
+        {
+          "at": 1295,
+          "kind": "shake",
+          "duration": 150,
+          "intensity": 0.004
+        },
+        {
+          "at": 1295,
+          "kind": "haptic",
+          "strength": "medium"
+        }
+      ]
+    },
+    {
+      "name": "giant-same-after-release",
+      "missing": "",
+      "mode": "rich",
+      "death": "",
+      "clear": false,
+      "rate": 1,
+      "cold": false,
+      "flinch": false,
+      "replace": "same",
+      "replaceAt": 300,
+      "wakeAt": 0,
+      "wakeRow": false,
+      "launches": 1,
+      "legacy": 0,
+      "impacts": [
+        {
+          "x": 100,
+          "y": 200
+        }
+      ],
+      "facings": [],
+      "before": [],
+      "early": [],
+      "calls": [
+        {
+          "at": 1295,
+          "kind": "shake",
+          "duration": 150,
+          "intensity": 0.004
+        },
+        {
+          "at": 1295,
+          "kind": "haptic",
+          "strength": "medium"
+        }
+      ]
+    },
+    {
+      "name": "giant-row-after-release",
+      "missing": "",
+      "mode": "rich",
+      "death": "",
+      "clear": false,
+      "rate": 1,
+      "cold": false,
+      "flinch": false,
+      "replace": "row",
+      "replaceAt": 300,
+      "wakeAt": 0,
+      "wakeRow": false,
+      "launches": 1,
+      "legacy": 0,
+      "impacts": [
+        {
+          "x": 100,
+          "y": 200
+        }
+      ],
+      "facings": [],
+      "before": [],
+      "early": [],
+      "calls": [
+        {
+          "at": 1295,
+          "kind": "shake",
+          "duration": 150,
+          "intensity": 0.004
+        },
+        {
+          "at": 1295,
+          "kind": "haptic",
+          "strength": "medium"
+        }
+      ]
+    },
+    {
+      "name": "giant-melee-after-release",
+      "missing": "",
+      "mode": "rich",
+      "death": "",
+      "clear": false,
+      "rate": 1,
+      "cold": false,
+      "flinch": false,
+      "replace": "melee",
+      "replaceAt": 300,
+      "wakeAt": 0,
+      "wakeRow": false,
+      "launches": 1,
+      "legacy": 0,
+      "impacts": [
+        {
+          "x": 100,
+          "y": 200
+        }
+      ],
+      "facings": [],
+      "before": [],
+      "early": [],
+      "calls": [
+        {
+          "at": 1295,
+          "kind": "shake",
+          "duration": 150,
+          "intensity": 0.004
+        },
+        {
+          "at": 1295,
+          "kind": "haptic",
+          "strength": "medium"
+        }
+      ]
+    },
+    {
+      "name": "giant-cold-then-live-throw",
+      "missing": "",
+      "mode": "rich",
+      "death": "",
+      "clear": false,
+      "rate": 1,
+      "cold": true,
+      "flinch": false,
+      "replace": "",
+      "replaceAt": 100,
+      "wakeAt": 100,
+      "wakeRow": false,
+      "launches": 1,
+      "legacy": 0,
+      "impacts": [
+        {
+          "x": 100,
+          "y": 200
+        }
+      ],
+      "facings": [],
+      "before": [],
+      "early": [],
+      "calls": [
+        {
+          "at": 1395,
+          "kind": "shake",
+          "duration": 150,
+          "intensity": 0.004
+        },
+        {
+          "at": 1395,
+          "kind": "haptic",
+          "strength": "medium"
+        }
+      ]
+    },
+    {
+      "name": "giant-cold-then-live-row",
+      "missing": "",
+      "mode": "rich",
+      "death": "",
+      "clear": false,
+      "rate": 1,
+      "cold": true,
+      "flinch": false,
+      "replace": "",
+      "replaceAt": 100,
+      "wakeAt": 100,
+      "wakeRow": true,
+      "launches": 1,
+      "legacy": 0,
+      "impacts": [
+        {
+          "x": -300,
+          "y": 200
+        }
+      ],
+      "facings": [],
+      "before": [],
+      "early": [],
+      "calls": [
+        {
+          "at": 1395,
+          "kind": "shake",
+          "duration": 150,
+          "intensity": 0.004
+        },
+        {
+          "at": 1395,
+          "kind": "haptic",
+          "strength": "medium"
+        }
+      ]
+    },
+    {
+      "name": "giant-completed-throw-walk-facing",
+      "missing": "",
+      "mode": "rich",
+      "death": "",
+      "clear": false,
+      "rate": 1,
+      "cold": false,
+      "flinch": false,
+      "replace": "walk",
+      "replaceAt": 600,
+      "wakeAt": 0,
+      "wakeRow": false,
+      "launches": 2,
+      "legacy": 0,
+      "impacts": [
+        {
+          "x": 100,
+          "y": 200
+        },
+        {
+          "x": -90,
+          "y": 80
+        }
+      ],
+      "facings": [
+        "s",
+        "w",
+        "w"
+      ],
+      "before": [],
+      "early": [],
+      "calls": [
+        {
+          "at": 1295,
+          "kind": "shake",
+          "duration": 150,
+          "intensity": 0.004
+        },
+        {
+          "at": 1295,
+          "kind": "haptic",
+          "strength": "medium"
+        },
+        {
+          "at": 2340,
+          "kind": "shake",
+          "duration": 150,
+          "intensity": 0.004
+        },
+        {
+          "at": 2340,
+          "kind": "haptic",
+          "strength": "medium"
+        }
+      ]
+    }
+  ],
+  "kegCases": [
+    {
+      "name": "keg-rich",
+      "mode": "rich",
+      "missing": "",
+      "death": "",
+      "cold": false,
+      "duplicate": false,
+      "onlyDeath": false,
+      "rate": 1,
+      "cue": "source",
+      "wakeAt": 0,
+      "release": 76.92307692307692,
+      "immediate": [],
+      "early": [],
+      "atRelease": [
+        {
+          "at": 76.92307692307692,
+          "kind": "shake",
+          "duration": 150,
+          "intensity": 0.004
+        },
+        {
+          "at": 76.92307692307692,
+          "kind": "haptic",
+          "strength": "medium"
+        }
+      ],
+      "calls": [
+        {
+          "at": 76.92307692307692,
+          "kind": "shake",
+          "duration": 150,
+          "intensity": 0.004
+        },
+        {
+          "at": 76.92307692307692,
+          "kind": "haptic",
+          "strength": "medium"
+        }
+      ],
+      "effects": [
+        [
+          "v2_fx_keg_blast_t1",
+          300,
+          400
+        ]
+      ],
+      "positions": [
+        {
+          "x": 300,
+          "y": 400
+        }
+      ],
+      "finished": 1
+    },
+    {
+      "name": "keg-compact",
+      "mode": "compact",
+      "missing": "",
+      "death": "",
+      "cold": false,
+      "duplicate": false,
+      "onlyDeath": false,
+      "rate": 1,
+      "cue": "source",
+      "wakeAt": 0,
+      "release": 76.92307692307692,
+      "immediate": [
+        {
+          "at": 0,
+          "kind": "shake",
+          "duration": 150,
+          "intensity": 0.004
+        },
+        {
+          "at": 0,
+          "kind": "haptic",
+          "strength": "medium"
+        }
+      ],
+      "early": [
+        {
+          "at": 0,
+          "kind": "shake",
+          "duration": 150,
+          "intensity": 0.004
+        },
+        {
+          "at": 0,
+          "kind": "haptic",
+          "strength": "medium"
+        }
+      ],
+      "atRelease": [
+        {
+          "at": 0,
+          "kind": "shake",
+          "duration": 150,
+          "intensity": 0.004
+        },
+        {
+          "at": 0,
+          "kind": "haptic",
+          "strength": "medium"
+        }
+      ],
+      "calls": [
+        {
+          "at": 0,
+          "kind": "shake",
+          "duration": 150,
+          "intensity": 0.004
+        },
+        {
+          "at": 0,
+          "kind": "haptic",
+          "strength": "medium"
+        }
+      ],
+      "effects": [],
+      "positions": [
+        {
+          "x": 300,
+          "y": 400
+        }
+      ],
+      "finished": 0
+    },
+    {
+      "name": "keg-legacy",
+      "mode": "legacy",
+      "missing": "",
+      "death": "",
+      "cold": false,
+      "duplicate": false,
+      "onlyDeath": false,
+      "rate": 1,
+      "cue": "source",
+      "wakeAt": 0,
+      "release": 76.92307692307692,
+      "immediate": [
+        {
+          "at": 0,
+          "kind": "shake",
+          "duration": 150,
+          "intensity": 0.004
+        },
+        {
+          "at": 0,
+          "kind": "haptic",
+          "strength": "medium"
+        }
+      ],
+      "early": [
+        {
+          "at": 0,
+          "kind": "shake",
+          "duration": 150,
+          "intensity": 0.004
+        },
+        {
+          "at": 0,
+          "kind": "haptic",
+          "strength": "medium"
+        }
+      ],
+      "atRelease": [
+        {
+          "at": 0,
+          "kind": "shake",
+          "duration": 150,
+          "intensity": 0.004
+        },
+        {
+          "at": 0,
+          "kind": "haptic",
+          "strength": "medium"
+        }
+      ],
+      "calls": [
+        {
+          "at": 0,
+          "kind": "shake",
+          "duration": 150,
+          "intensity": 0.004
+        },
+        {
+          "at": 0,
+          "kind": "haptic",
+          "strength": "medium"
+        }
+      ],
+      "effects": [],
+      "positions": [
+        {
+          "x": 300,
+          "y": 400
+        }
+      ],
+      "finished": 0
+    },
+    {
+      "name": "keg-missing-actor",
+      "mode": "rich",
+      "missing": "actor",
+      "death": "",
+      "cold": false,
+      "duplicate": false,
+      "onlyDeath": false,
+      "rate": 1,
+      "cue": "source",
+      "wakeAt": 0,
+      "release": 76.92307692307692,
+      "immediate": [
+        {
+          "at": 0,
+          "kind": "shake",
+          "duration": 150,
+          "intensity": 0.004
+        },
+        {
+          "at": 0,
+          "kind": "haptic",
+          "strength": "medium"
+        }
+      ],
+      "early": [
+        {
+          "at": 0,
+          "kind": "shake",
+          "duration": 150,
+          "intensity": 0.004
+        },
+        {
+          "at": 0,
+          "kind": "haptic",
+          "strength": "medium"
+        }
+      ],
+      "atRelease": [
+        {
+          "at": 0,
+          "kind": "shake",
+          "duration": 150,
+          "intensity": 0.004
+        },
+        {
+          "at": 0,
+          "kind": "haptic",
+          "strength": "medium"
+        }
+      ],
+      "calls": [
+        {
+          "at": 0,
+          "kind": "shake",
+          "duration": 150,
+          "intensity": 0.004
+        },
+        {
+          "at": 0,
+          "kind": "haptic",
+          "strength": "medium"
+        }
+      ],
+      "effects": [],
+      "positions": [],
+      "finished": 0
+    },
+    {
+      "name": "keg-missing-profile",
+      "mode": "rich",
+      "missing": "profile",
+      "death": "",
+      "cold": false,
+      "duplicate": false,
+      "onlyDeath": false,
+      "rate": 1,
+      "cue": "source",
+      "wakeAt": 0,
+      "release": 76.92307692307692,
+      "immediate": [
+        {
+          "at": 0,
+          "kind": "shake",
+          "duration": 150,
+          "intensity": 0.004
+        },
+        {
+          "at": 0,
+          "kind": "haptic",
+          "strength": "medium"
+        }
+      ],
+      "early": [
+        {
+          "at": 0,
+          "kind": "shake",
+          "duration": 150,
+          "intensity": 0.004
+        },
+        {
+          "at": 0,
+          "kind": "haptic",
+          "strength": "medium"
+        }
+      ],
+      "atRelease": [
+        {
+          "at": 0,
+          "kind": "shake",
+          "duration": 150,
+          "intensity": 0.004
+        },
+        {
+          "at": 0,
+          "kind": "haptic",
+          "strength": "medium"
+        }
+      ],
+      "calls": [
+        {
+          "at": 0,
+          "kind": "shake",
+          "duration": 150,
+          "intensity": 0.004
+        },
+        {
+          "at": 0,
+          "kind": "haptic",
+          "strength": "medium"
+        }
+      ],
+      "effects": [],
+      "positions": [
+        {
+          "x": 300,
+          "y": 400
+        }
+      ],
+      "finished": 0
+    },
+    {
+      "name": "keg-missing-clip",
+      "mode": "rich",
+      "missing": "clip",
+      "death": "",
+      "cold": false,
+      "duplicate": false,
+      "onlyDeath": false,
+      "rate": 1,
+      "cue": "source",
+      "wakeAt": 0,
+      "release": 76.92307692307692,
+      "immediate": [
+        {
+          "at": 0,
+          "kind": "shake",
+          "duration": 150,
+          "intensity": 0.004
+        },
+        {
+          "at": 0,
+          "kind": "haptic",
+          "strength": "medium"
+        }
+      ],
+      "early": [
+        {
+          "at": 0,
+          "kind": "shake",
+          "duration": 150,
+          "intensity": 0.004
+        },
+        {
+          "at": 0,
+          "kind": "haptic",
+          "strength": "medium"
+        }
+      ],
+      "atRelease": [
+        {
+          "at": 0,
+          "kind": "shake",
+          "duration": 150,
+          "intensity": 0.004
+        },
+        {
+          "at": 0,
+          "kind": "haptic",
+          "strength": "medium"
+        }
+      ],
+      "calls": [
+        {
+          "at": 0,
+          "kind": "shake",
+          "duration": 150,
+          "intensity": 0.004
+        },
+        {
+          "at": 0,
+          "kind": "haptic",
+          "strength": "medium"
+        }
+      ],
+      "effects": [],
+      "positions": [
+        {
+          "x": 300,
+          "y": 400
+        }
+      ],
+      "finished": 1
+    },
+    {
+      "name": "keg-missing-effect",
+      "mode": "rich",
+      "missing": "effect",
+      "death": "",
+      "cold": false,
+      "duplicate": false,
+      "onlyDeath": false,
+      "rate": 1,
+      "cue": "source",
+      "wakeAt": 0,
+      "release": 76.92307692307692,
+      "immediate": [],
+      "early": [],
+      "atRelease": [
+        {
+          "at": 76.92307692307692,
+          "kind": "shake",
+          "duration": 150,
+          "intensity": 0.004
+        },
+        {
+          "at": 76.92307692307692,
+          "kind": "haptic",
+          "strength": "medium"
+        }
+      ],
+      "calls": [
+        {
+          "at": 76.92307692307692,
+          "kind": "shake",
+          "duration": 150,
+          "intensity": 0.004
+        },
+        {
+          "at": 76.92307692307692,
+          "kind": "haptic",
+          "strength": "medium"
+        }
+      ],
+      "effects": [],
+      "positions": [
+        {
+          "x": 300,
+          "y": 400
+        }
+      ],
+      "finished": 1
+    },
+    {
+      "name": "keg-death-before",
+      "mode": "rich",
+      "missing": "",
+      "death": "before",
+      "cold": false,
+      "duplicate": false,
+      "onlyDeath": false,
+      "rate": 1,
+      "cue": "source",
+      "wakeAt": 0,
+      "release": 76.92307692307692,
+      "immediate": [
+        {
+          "at": 0,
+          "kind": "shake",
+          "duration": 150,
+          "intensity": 0.004
+        },
+        {
+          "at": 0,
+          "kind": "haptic",
+          "strength": "medium"
+        }
+      ],
+      "early": [
+        {
+          "at": 0,
+          "kind": "shake",
+          "duration": 150,
+          "intensity": 0.004
+        },
+        {
+          "at": 0,
+          "kind": "haptic",
+          "strength": "medium"
+        }
+      ],
+      "atRelease": [
+        {
+          "at": 0,
+          "kind": "shake",
+          "duration": 150,
+          "intensity": 0.004
+        },
+        {
+          "at": 0,
+          "kind": "haptic",
+          "strength": "medium"
+        }
+      ],
+      "calls": [
+        {
+          "at": 0,
+          "kind": "shake",
+          "duration": 150,
+          "intensity": 0.004
+        },
+        {
+          "at": 0,
+          "kind": "haptic",
+          "strength": "medium"
+        }
+      ],
+      "effects": [],
+      "positions": [
+        {
+          "x": 300,
+          "y": 400
+        }
+      ],
+      "finished": 1
+    },
+    {
+      "name": "keg-death-after",
+      "mode": "rich",
+      "missing": "",
+      "death": "after",
+      "cold": false,
+      "duplicate": false,
+      "onlyDeath": false,
+      "rate": 1,
+      "cue": "source",
+      "wakeAt": 0,
+      "release": 76.92307692307692,
+      "immediate": [],
+      "early": [],
+      "atRelease": [
+        {
+          "at": 76.92307692307692,
+          "kind": "shake",
+          "duration": 150,
+          "intensity": 0.004
+        },
+        {
+          "at": 76.92307692307692,
+          "kind": "haptic",
+          "strength": "medium"
+        }
+      ],
+      "calls": [
+        {
+          "at": 76.92307692307692,
+          "kind": "shake",
+          "duration": 150,
+          "intensity": 0.004
+        },
+        {
+          "at": 76.92307692307692,
+          "kind": "haptic",
+          "strength": "medium"
+        }
+      ],
+      "effects": [
+        [
+          "v2_fx_keg_blast_t1",
+          300,
+          400
+        ]
+      ],
+      "positions": [
+        {
+          "x": 300,
+          "y": 400
+        }
+      ],
+      "finished": 1
+    },
+    {
+      "name": "keg-death-destroy",
+      "mode": "rich",
+      "missing": "",
+      "death": "destroy",
+      "cold": false,
+      "duplicate": false,
+      "onlyDeath": false,
+      "rate": 1,
+      "cue": "source",
+      "wakeAt": 0,
+      "release": 76.92307692307692,
+      "immediate": [],
+      "early": [],
+      "atRelease": [],
+      "calls": [],
+      "effects": [],
+      "positions": [
+        {
+          "x": 300,
+          "y": 400
+        }
+      ],
+      "finished": 0
+    },
+    {
+      "name": "keg-cold-then-live",
+      "mode": "rich",
+      "missing": "",
+      "death": "",
+      "cold": true,
+      "duplicate": false,
+      "onlyDeath": false,
+      "rate": 1,
+      "cue": "source",
+      "wakeAt": 40,
+      "release": 116.92307692307692,
+      "immediate": [],
+      "early": [],
+      "atRelease": [
+        {
+          "at": 116.92307692307692,
+          "kind": "shake",
+          "duration": 150,
+          "intensity": 0.004
+        },
+        {
+          "at": 116.92307692307692,
+          "kind": "haptic",
+          "strength": "medium"
+        }
+      ],
+      "calls": [
+        {
+          "at": 116.92307692307692,
+          "kind": "shake",
+          "duration": 150,
+          "intensity": 0.004
+        },
+        {
+          "at": 116.92307692307692,
+          "kind": "haptic",
+          "strength": "medium"
+        }
+      ],
+      "effects": [
+        [
+          "v2_fx_keg_blast_t1",
+          300,
+          400
+        ]
+      ],
+      "positions": [
+        {
+          "x": 300,
+          "y": 400
+        }
+      ],
+      "finished": 1
+    },
+    {
+      "name": "keg-ordinary-death",
+      "mode": "rich",
+      "missing": "",
+      "death": "",
+      "cold": false,
+      "duplicate": false,
+      "onlyDeath": true,
+      "rate": 1,
+      "cue": "source",
+      "wakeAt": 0,
+      "release": 76.92307692307692,
+      "immediate": [],
+      "early": [],
+      "atRelease": [],
+      "calls": [],
+      "effects": [],
+      "positions": [],
+      "finished": 1
+    },
+    {
+      "name": "keg-duplicate",
+      "mode": "rich",
+      "missing": "",
+      "death": "",
+      "cold": false,
+      "duplicate": true,
+      "onlyDeath": false,
+      "rate": 1,
+      "cue": "source",
+      "wakeAt": 0,
+      "release": 76.92307692307692,
+      "immediate": [
+        {
+          "at": 0,
+          "kind": "shake",
+          "duration": 150,
+          "intensity": 0.004
+        },
+        {
+          "at": 0,
+          "kind": "haptic",
+          "strength": "medium"
+        }
+      ],
+      "early": [
+        {
+          "at": 0,
+          "kind": "shake",
+          "duration": 150,
+          "intensity": 0.004
+        },
+        {
+          "at": 0,
+          "kind": "haptic",
+          "strength": "medium"
+        }
+      ],
+      "atRelease": [
+        {
+          "at": 0,
+          "kind": "shake",
+          "duration": 150,
+          "intensity": 0.004
+        },
+        {
+          "at": 0,
+          "kind": "haptic",
+          "strength": "medium"
+        },
+        {
+          "at": 76.92307692307692,
+          "kind": "shake",
+          "duration": 150,
+          "intensity": 0.004
+        },
+        {
+          "at": 76.92307692307692,
+          "kind": "haptic",
+          "strength": "medium"
+        }
+      ],
+      "calls": [
+        {
+          "at": 0,
+          "kind": "shake",
+          "duration": 150,
+          "intensity": 0.004
+        },
+        {
+          "at": 0,
+          "kind": "haptic",
+          "strength": "medium"
+        },
+        {
+          "at": 76.92307692307692,
+          "kind": "shake",
+          "duration": 150,
+          "intensity": 0.004
+        },
+        {
+          "at": 76.92307692307692,
+          "kind": "haptic",
+          "strength": "medium"
+        }
+      ],
+      "effects": [
+        [
+          "v2_fx_keg_blast_t1",
+          300,
+          400
+        ]
+      ],
+      "positions": [
+        {
+          "x": 300,
+          "y": 400
+        },
+        {
+          "x": 300,
+          "y": 400
+        }
+      ],
+      "finished": 1
+    },
+    {
+      "name": "keg-cold",
+      "mode": "rich",
+      "missing": "",
+      "death": "",
+      "cold": true,
+      "duplicate": false,
+      "onlyDeath": false,
+      "rate": 1,
+      "cue": "source",
+      "wakeAt": 0,
+      "release": 76.92307692307692,
+      "immediate": [],
+      "early": [],
+      "atRelease": [],
+      "calls": [],
+      "effects": [],
+      "positions": [],
+      "finished": 0
+    },
+    {
+      "name": "keg-double-rate",
+      "mode": "rich",
+      "missing": "",
+      "death": "",
+      "cold": false,
+      "duplicate": false,
+      "onlyDeath": false,
+      "rate": 2,
+      "cue": "source",
+      "wakeAt": 0,
+      "release": 38.46153846153846,
+      "immediate": [],
+      "early": [],
+      "atRelease": [
+        {
+          "at": 38.46153846153846,
+          "kind": "shake",
+          "duration": 150,
+          "intensity": 0.004
+        },
+        {
+          "at": 38.46153846153846,
+          "kind": "haptic",
+          "strength": "medium"
+        }
+      ],
+      "calls": [
+        {
+          "at": 38.46153846153846,
+          "kind": "shake",
+          "duration": 150,
+          "intensity": 0.004
+        },
+        {
+          "at": 38.46153846153846,
+          "kind": "haptic",
+          "strength": "medium"
+        }
+      ],
+      "effects": [
+        [
+          "v2_fx_keg_blast_t1",
+          300,
+          400
+        ]
+      ],
+      "positions": [
+        {
+          "x": 300,
+          "y": 400
+        }
+      ],
+      "finished": 1
+    },
+    {
+      "name": "keg-cue-missing",
+      "mode": "rich",
+      "missing": "",
+      "death": "",
+      "cold": false,
+      "duplicate": false,
+      "onlyDeath": false,
+      "rate": 1,
+      "cue": "missing",
+      "wakeAt": 0,
+      "release": 76.92307692307692,
+      "immediate": [],
+      "early": [],
+      "atRelease": [
+        {
+          "at": 76.92307692307692,
+          "kind": "shake",
+          "duration": 150,
+          "intensity": 0.004
+        },
+        {
+          "at": 76.92307692307692,
+          "kind": "haptic",
+          "strength": "medium"
+        }
+      ],
+      "calls": [
+        {
+          "at": 76.92307692307692,
+          "kind": "shake",
+          "duration": 150,
+          "intensity": 0.004
+        },
+        {
+          "at": 76.92307692307692,
+          "kind": "haptic",
+          "strength": "medium"
+        }
+      ],
+      "effects": [
+        [
+          "v2_fx_keg_blast_t1",
+          300,
+          400
+        ]
+      ],
+      "positions": [
+        {
+          "x": 300,
+          "y": 400
+        }
+      ],
+      "finished": 1
+    },
+    {
+      "name": "keg-cue-outside",
+      "mode": "rich",
+      "missing": "",
+      "death": "",
+      "cold": false,
+      "duplicate": false,
+      "onlyDeath": false,
+      "rate": 1,
+      "cue": "outside",
+      "wakeAt": 0,
+      "release": 461.53846153846155,
+      "immediate": [],
+      "early": [],
+      "atRelease": [
+        {
+          "at": 461.53846153846155,
+          "kind": "shake",
+          "duration": 150,
+          "intensity": 0.004
+        },
+        {
+          "at": 461.53846153846155,
+          "kind": "haptic",
+          "strength": "medium"
+        }
+      ],
+      "calls": [
+        {
+          "at": 461.53846153846155,
+          "kind": "shake",
+          "duration": 150,
+          "intensity": 0.004
+        },
+        {
+          "at": 461.53846153846155,
+          "kind": "haptic",
+          "strength": "medium"
+        }
+      ],
+      "effects": [],
+      "positions": [
+        {
+          "x": 300,
+          "y": 400
+        }
+      ],
+      "finished": 1
+    }
+  ],
+  "deployment": {
+    "cases": [
+      {
+        "name": "unmarked",
+        "steps": [
+          {
+            "kind": "deploy",
+            "event": {
+              "e": "deploy",
+              "t": 1,
+              "id": 1,
+              "troop": "giant",
+              "x": 384,
+              "y": 640
+            }
+          }
+        ],
+        "calls": [
+          "light"
+        ],
+        "remaining": [],
+        "destroyed": [],
+        "actors": [
+          1
+        ]
+      },
+      {
+        "name": "matched",
+        "steps": [
+          {
+            "kind": "mark",
+            "spec": {
+              "ticket": "a",
+              "troop": "giant",
+              "tx": 1,
+              "ty": 2
+            }
+          },
+          {
+            "kind": "deploy",
+            "event": {
+              "e": "deploy",
+              "t": 1,
+              "id": 1,
+              "troop": "giant",
+              "x": 384,
+              "y": 640
+            }
+          }
+        ],
+        "calls": [
+          "light"
+        ],
+        "remaining": [],
+        "destroyed": [],
+        "actors": [
+          1
+        ]
+      },
+      {
+        "name": "stack-fifo",
+        "steps": [
+          {
+            "kind": "mark",
+            "spec": {
+              "ticket": "a",
+              "troop": "giant",
+              "tx": 1,
+              "ty": 2
+            }
+          },
+          {
+            "kind": "mark",
+            "spec": {
+              "ticket": "b",
+              "troop": "giant",
+              "tx": 1,
+              "ty": 2
+            }
+          },
+          {
+            "kind": "deploy",
+            "event": {
+              "e": "deploy",
+              "t": 1,
+              "id": 1,
+              "troop": "giant",
+              "x": 384,
+              "y": 640
+            }
+          }
+        ],
+        "calls": [
+          "light",
+          "light"
+        ],
+        "remaining": [
+          "b"
+        ],
+        "destroyed": [],
+        "actors": [
+          1
+        ]
+      },
+      {
+        "name": "refusal-newest",
+        "steps": [
+          {
+            "kind": "mark",
+            "spec": {
+              "ticket": "a",
+              "troop": "giant",
+              "tx": 1,
+              "ty": 2
+            }
+          },
+          {
+            "kind": "mark",
+            "spec": {
+              "ticket": "b",
+              "troop": "giant",
+              "tx": 1,
+              "ty": 2
+            }
+          },
+          {
+            "kind": "unmark",
+            "spec": {
+              "ticket": "unused",
+              "troop": "giant",
+              "tx": 1,
+              "ty": 2
+            }
+          }
+        ],
+        "calls": [
+          "light",
+          "light"
+        ],
+        "remaining": [
+          "a"
+        ],
+        "destroyed": [
+          "b"
+        ],
+        "actors": []
+      },
+      {
+        "name": "duplicate-does-not-consume-next",
+        "steps": [
+          {
+            "kind": "mark",
+            "spec": {
+              "ticket": "a",
+              "troop": "giant",
+              "tx": 1,
+              "ty": 2
+            }
+          },
+          {
+            "kind": "deploy",
+            "event": {
+              "e": "deploy",
+              "t": 1,
+              "id": 1,
+              "troop": "giant",
+              "x": 384,
+              "y": 640
+            }
+          },
+          {
+            "kind": "mark",
+            "spec": {
+              "ticket": "b",
+              "troop": "giant",
+              "tx": 1,
+              "ty": 2
+            }
+          },
+          {
+            "kind": "deploy",
+            "event": {
+              "e": "deploy",
+              "t": 1,
+              "id": 1,
+              "troop": "giant",
+              "x": 384,
+              "y": 640
+            }
+          }
+        ],
+        "calls": [
+          "light",
+          "light"
+        ],
+        "remaining": [
+          "b"
+        ],
+        "destroyed": [],
+        "actors": [
+          1
+        ]
+      },
+      {
+        "name": "hero-distinct",
+        "steps": [
+          {
+            "kind": "mark",
+            "spec": {
+              "ticket": "a",
+              "troop": "giant",
+              "hero": "theodor",
+              "tx": 1,
+              "ty": 2
+            }
+          },
+          {
+            "kind": "deploy",
+            "event": {
+              "e": "deploy",
+              "t": 1,
+              "id": 1,
+              "troop": "giant",
+              "x": 384,
+              "y": 640
+            }
+          },
+          {
+            "kind": "deploy",
+            "event": {
+              "e": "deploy",
+              "t": 1,
+              "id": 2,
+              "troop": "giant",
+              "hero": "theodor",
+              "x": 384,
+              "y": 640
+            }
+          }
+        ],
+        "calls": [
+          "light",
+          "light"
+        ],
+        "remaining": [],
+        "destroyed": [],
+        "actors": [
+          1,
+          2
+        ]
+      },
+      {
+        "name": "wrong-troop",
+        "steps": [
+          {
+            "kind": "mark",
+            "spec": {
+              "ticket": "a",
+              "troop": "giant",
+              "tx": 1,
+              "ty": 2
+            }
+          },
+          {
+            "kind": "deploy",
+            "event": {
+              "e": "deploy",
+              "t": 1,
+              "id": 1,
+              "troop": "archer",
+              "x": 384,
+              "y": 640
+            }
+          }
+        ],
+        "calls": [
+          "light",
+          "light"
+        ],
+        "remaining": [
+          "a"
+        ],
+        "destroyed": [],
+        "actors": [
+          1
+        ]
+      },
+      {
+        "name": "wrong-tile",
+        "steps": [
+          {
+            "kind": "mark",
+            "spec": {
+              "ticket": "a",
+              "troop": "giant",
+              "tx": 1,
+              "ty": 2
+            }
+          },
+          {
+            "kind": "deploy",
+            "event": {
+              "e": "deploy",
+              "t": 1,
+              "id": 1,
+              "troop": "giant",
+              "x": 640,
+              "y": 640
+            }
+          }
+        ],
+        "calls": [
+          "light",
+          "light"
+        ],
+        "remaining": [
+          "a"
+        ],
+        "destroyed": [],
+        "actors": [
+          1
+        ]
+      },
+      {
+        "name": "negative-tile",
+        "steps": [
+          {
+            "kind": "mark",
+            "spec": {
+              "ticket": "a",
+              "troop": "giant",
+              "tx": -1,
+              "ty": -2
+            }
+          },
+          {
+            "kind": "deploy",
+            "event": {
+              "e": "deploy",
+              "t": 1,
+              "id": 1,
+              "troop": "giant",
+              "x": -1,
+              "y": -257
+            }
+          }
+        ],
+        "calls": [
+          "light"
+        ],
+        "remaining": [],
+        "destroyed": [],
+        "actors": [
+          1
+        ]
+      },
+      {
+        "name": "cold-matched",
+        "steps": [
+          {
+            "kind": "mark",
+            "spec": {
+              "ticket": "a",
+              "troop": "giant",
+              "tx": 1,
+              "ty": 2
+            }
+          },
+          {
+            "kind": "cold",
+            "value": true
+          },
+          {
+            "kind": "deploy",
+            "event": {
+              "e": "deploy",
+              "t": 1,
+              "id": 1,
+              "troop": "giant",
+              "x": 384,
+              "y": 640
+            }
+          }
+        ],
+        "calls": [
+          "light"
+        ],
+        "remaining": [],
+        "destroyed": [],
+        "actors": [
+          1
+        ]
+      },
+      {
+        "name": "cold-unmarked",
+        "steps": [
+          {
+            "kind": "cold",
+            "value": true
+          },
+          {
+            "kind": "deploy",
+            "event": {
+              "e": "deploy",
+              "t": 1,
+              "id": 1,
+              "troop": "giant",
+              "x": 384,
+              "y": 640
+            }
+          }
+        ],
+        "calls": [],
+        "remaining": [],
+        "destroyed": [],
+        "actors": [
+          1
+        ]
+      },
+      {
+        "name": "same-id-after-death",
+        "steps": [
+          {
+            "kind": "deploy",
+            "event": {
+              "e": "deploy",
+              "t": 1,
+              "id": 1,
+              "troop": "giant",
+              "x": 384,
+              "y": 640
+            }
+          },
+          {
+            "event": {
+              "e": "troopDeath",
+              "t": 2,
+              "id": 1
+            }
+          },
+          {
+            "event": {
+              "e": "deploy",
+              "t": 3,
+              "id": 1,
+              "troop": "giant",
+              "x": 384,
+              "y": 640
+            }
+          }
+        ],
+        "calls": [
+          "light",
+          "light"
+        ],
+        "remaining": [],
+        "destroyed": [],
+        "actors": [
+          1
+        ]
+      },
+      {
+        "name": "spawn-is-not-deploy",
+        "steps": [
+          {
+            "event": {
+              "e": "spawn",
+              "t": 0,
+              "id": 1,
+              "troop": "wyrmling",
+              "x": 384,
+              "y": 640
+            }
+          },
+          {
+            "kind": "deploy",
+            "event": {
+              "e": "deploy",
+              "t": 1,
+              "id": 1,
+              "troop": "giant",
+              "x": 384,
+              "y": 640
+            }
+          }
+        ],
+        "calls": [],
+        "remaining": [],
+        "destroyed": [],
+        "actors": [
+          1
+        ]
+      },
+      {
+        "name": "brood-is-not-deploy",
+        "steps": [
+          {
+            "event": {
+              "e": "troopSpawn",
+              "t": 0,
+              "id": 1,
+              "troop": "barrowling",
+              "x": 384,
+              "y": 640
+            }
+          },
+          {
+            "kind": "deploy",
+            "event": {
+              "e": "deploy",
+              "t": 1,
+              "id": 1,
+              "troop": "giant",
+              "x": 384,
+              "y": 640
+            }
+          }
+        ],
+        "calls": [],
+        "remaining": [],
+        "destroyed": [],
+        "actors": [
+          1
+        ]
+      },
+      {
+        "name": "ignored-brood-does-not-own-actor",
+        "steps": [
+          {
+            "event": {
+              "e": "troopSpawn",
+              "t": 0,
+              "id": 1,
+              "troop": "archer",
+              "x": 384,
+              "y": 640
+            }
+          },
+          {
+            "kind": "deploy",
+            "event": {
+              "e": "deploy",
+              "t": 1,
+              "id": 1,
+              "troop": "giant",
+              "x": 384,
+              "y": 640
+            }
+          }
+        ],
+        "calls": [
+          "light"
+        ],
+        "remaining": [],
+        "destroyed": [],
+        "actors": [
+          1
+        ]
+      }
+    ],
+    "cleanup": {
+      "destroyed": [
+        "a",
+        "b"
+      ],
+      "remaining": [],
+      "writeOwners": [
+        "addDeployMark",
+        "cleanupBattle",
+        "onDeploy",
+        "rebuildDeployMarks",
+        "removeDeployMark"
+      ]
+    },
+    "queues": [
+      {
+        "name": "accepted",
+        "posts": 1,
+        "reads": 0,
+        "waits": [],
+        "done": [
+          true
+        ],
+        "marked": [
+          "id"
+        ]
+      },
+      {
+        "name": "refused",
+        "posts": 1,
+        "reads": 0,
+        "waits": [],
+        "done": [
+          false
+        ],
+        "marked": [
+          "id"
+        ]
+      },
+      {
+        "name": "unknown-retained",
+        "posts": 2,
+        "reads": 1,
+        "waits": [
+          1000
+        ],
+        "done": [],
+        "marked": [
+          "id"
+        ]
+      },
+      {
+        "name": "unknown-recovered",
+        "posts": 2,
+        "reads": 0,
+        "waits": [],
+        "done": [
+          true
+        ],
+        "marked": [
+          "id"
+        ]
+      },
+      {
+        "name": "unknown-refused",
+        "posts": 2,
+        "reads": 1,
+        "waits": [],
+        "done": [
+          false
+        ],
+        "marked": [
+          "id"
+        ]
+      },
+      {
+        "name": "replaced-session",
+        "posts": 1,
+        "reads": 0,
+        "waits": [],
+        "done": [],
+        "marked": [
+          "id"
+        ]
+      }
+    ],
+    "previewSamples": [
+      {
+        "index": 0,
+        "total": 80,
+        "x": -10,
+        "y": 0
+      },
+      {
+        "index": 1,
+        "total": 80,
+        "x": 10,
+        "y": 0
+      },
+      {
+        "index": 2,
+        "total": 80,
+        "x": 0,
+        "y": -10
+      },
+      {
+        "index": 3,
+        "total": 80,
+        "x": 0,
+        "y": 10
+      },
+      {
+        "index": 4,
+        "total": 80,
+        "x": -10,
+        "y": -10
+      },
+      {
+        "index": 5,
+        "total": 80,
+        "x": 10,
+        "y": -10
+      },
+      {
+        "index": 6,
+        "total": 80,
+        "x": -10,
+        "y": 10
+      },
+      {
+        "index": 7,
+        "total": 80,
+        "x": 10,
+        "y": 10
+      },
+      {
+        "index": 8,
+        "total": 80,
+        "x": -15,
+        "y": 0
+      },
+      {
+        "index": 9,
+        "total": 80,
+        "x": 15,
+        "y": 0
+      },
+      {
+        "index": 10,
+        "total": 80,
+        "x": 0,
+        "y": -15
+      },
+      {
+        "index": 11,
+        "total": 80,
+        "x": 0,
+        "y": 15
+      },
+      {
+        "index": 12,
+        "total": 80,
+        "x": -15,
+        "y": -15
+      },
+      {
+        "index": 13,
+        "total": 80,
+        "x": 15,
+        "y": -15
+      },
+      {
+        "index": 14,
+        "total": 80,
+        "x": -15,
+        "y": 15
+      },
+      {
+        "index": 15,
+        "total": 80,
+        "x": 15,
+        "y": 15
+      },
+      {
+        "index": 16,
+        "total": 80,
+        "x": -20,
+        "y": 0
+      },
+      {
+        "index": 17,
+        "total": 80,
+        "x": 20,
+        "y": 0
+      },
+      {
+        "index": 18,
+        "total": 80,
+        "x": 0,
+        "y": -20
+      },
+      {
+        "index": 19,
+        "total": 80,
+        "x": 0,
+        "y": 20
+      },
+      {
+        "index": 20,
+        "total": 80,
+        "x": -20,
+        "y": -20
+      },
+      {
+        "index": 21,
+        "total": 80,
+        "x": 20,
+        "y": -20
+      },
+      {
+        "index": 22,
+        "total": 80,
+        "x": -20,
+        "y": 20
+      },
+      {
+        "index": 23,
+        "total": 80,
+        "x": 20,
+        "y": 20
+      },
+      {
+        "index": 24,
+        "total": 80,
+        "x": -25,
+        "y": 0
+      },
+      {
+        "index": 25,
+        "total": 80,
+        "x": 25,
+        "y": 0
+      },
+      {
+        "index": 26,
+        "total": 80,
+        "x": 0,
+        "y": -25
+      },
+      {
+        "index": 27,
+        "total": 80,
+        "x": 0,
+        "y": 25
+      },
+      {
+        "index": 28,
+        "total": 80,
+        "x": -25,
+        "y": -25
+      },
+      {
+        "index": 29,
+        "total": 80,
+        "x": 25,
+        "y": -25
+      },
+      {
+        "index": 30,
+        "total": 80,
+        "x": -25,
+        "y": 25
+      },
+      {
+        "index": 31,
+        "total": 80,
+        "x": 25,
+        "y": 25
+      },
+      {
+        "index": 32,
+        "total": 80,
+        "x": -26,
+        "y": 0
+      },
+      {
+        "index": 33,
+        "total": 80,
+        "x": 26,
+        "y": 0
+      },
+      {
+        "index": 34,
+        "total": 80,
+        "x": 0,
+        "y": -26
+      },
+      {
+        "index": 35,
+        "total": 80,
+        "x": 0,
+        "y": 26
+      },
+      {
+        "index": 36,
+        "total": 80,
+        "x": -26,
+        "y": -26
+      },
+      {
+        "index": 37,
+        "total": 80,
+        "x": 26,
+        "y": -26
+      },
+      {
+        "index": 38,
+        "total": 80,
+        "x": -26,
+        "y": 26
+      },
+      {
+        "index": 39,
+        "total": 80,
+        "x": 26,
+        "y": 26
+      },
+      {
+        "index": 40,
+        "total": 80,
+        "x": -26,
+        "y": 0
+      },
+      {
+        "index": 41,
+        "total": 80,
+        "x": 26,
+        "y": 0
+      },
+      {
+        "index": 42,
+        "total": 80,
+        "x": 0,
+        "y": -26
+      },
+      {
+        "index": 43,
+        "total": 80,
+        "x": 0,
+        "y": 26
+      },
+      {
+        "index": 44,
+        "total": 80,
+        "x": -26,
+        "y": -26
+      },
+      {
+        "index": 45,
+        "total": 80,
+        "x": 26,
+        "y": -26
+      },
+      {
+        "index": 46,
+        "total": 80,
+        "x": -26,
+        "y": 26
+      },
+      {
+        "index": 47,
+        "total": 80,
+        "x": 26,
+        "y": 26
+      },
+      {
+        "index": 48,
+        "total": 80,
+        "x": -26,
+        "y": 0
+      },
+      {
+        "index": 49,
+        "total": 80,
+        "x": 26,
+        "y": 0
+      },
+      {
+        "index": 50,
+        "total": 80,
+        "x": 0,
+        "y": -26
+      },
+      {
+        "index": 51,
+        "total": 80,
+        "x": 0,
+        "y": 26
+      },
+      {
+        "index": 52,
+        "total": 80,
+        "x": -26,
+        "y": -26
+      },
+      {
+        "index": 53,
+        "total": 80,
+        "x": 26,
+        "y": -26
+      },
+      {
+        "index": 54,
+        "total": 80,
+        "x": -26,
+        "y": 26
+      },
+      {
+        "index": 55,
+        "total": 80,
+        "x": 26,
+        "y": 26
+      },
+      {
+        "index": 56,
+        "total": 80,
+        "x": -26,
+        "y": 0
+      },
+      {
+        "index": 57,
+        "total": 80,
+        "x": 26,
+        "y": 0
+      },
+      {
+        "index": 58,
+        "total": 80,
+        "x": 0,
+        "y": -26
+      },
+      {
+        "index": 59,
+        "total": 80,
+        "x": 0,
+        "y": 26
+      },
+      {
+        "index": 60,
+        "total": 80,
+        "x": -26,
+        "y": -26
+      },
+      {
+        "index": 61,
+        "total": 80,
+        "x": 26,
+        "y": -26
+      },
+      {
+        "index": 62,
+        "total": 80,
+        "x": -26,
+        "y": 26
+      },
+      {
+        "index": 63,
+        "total": 80,
+        "x": 26,
+        "y": 26
+      },
+      {
+        "index": 64,
+        "total": 80,
+        "x": -26,
+        "y": 0
+      },
+      {
+        "index": 65,
+        "total": 80,
+        "x": 26,
+        "y": 0
+      },
+      {
+        "index": 66,
+        "total": 80,
+        "x": 0,
+        "y": -26
+      },
+      {
+        "index": 67,
+        "total": 80,
+        "x": 0,
+        "y": 26
+      },
+      {
+        "index": 68,
+        "total": 80,
+        "x": -26,
+        "y": -26
+      },
+      {
+        "index": 69,
+        "total": 80,
+        "x": 26,
+        "y": -26
+      },
+      {
+        "index": 70,
+        "total": 80,
+        "x": -26,
+        "y": 26
+      },
+      {
+        "index": 71,
+        "total": 80,
+        "x": 26,
+        "y": 26
+      },
+      {
+        "index": 72,
+        "total": 80,
+        "x": -26,
+        "y": 0
+      },
+      {
+        "index": 73,
+        "total": 80,
+        "x": 26,
+        "y": 0
+      },
+      {
+        "index": 74,
+        "total": 80,
+        "x": 0,
+        "y": -26
+      },
+      {
+        "index": 75,
+        "total": 80,
+        "x": 0,
+        "y": 26
+      },
+      {
+        "index": 76,
+        "total": 80,
+        "x": -26,
+        "y": -26
+      },
+      {
+        "index": 77,
+        "total": 80,
+        "x": 26,
+        "y": -26
+      },
+      {
+        "index": 78,
+        "total": 80,
+        "x": -26,
+        "y": 26
+      },
+      {
+        "index": 79,
+        "total": 80,
+        "x": 26,
+        "y": 26
+      }
+    ]
+  }
+}

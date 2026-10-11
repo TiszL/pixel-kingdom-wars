@@ -1,0 +1,1 @@
+ALTER TYPE "public"."deposit_kind" ADD VALUE 'warzone_shield';

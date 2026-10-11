@@ -1,0 +1,403 @@
+{
+  "version": 1,
+  "constants": {
+    "client": {
+      "version": 1,
+      "reviewMaxAgeMs": 30000,
+      "rpcTimeoutMs": 10000,
+      "maxPendingRpc": 8,
+      "maxNetworkFeeLamports": 100000,
+      "discoveryPageSize": 20,
+      "localPendingLimit": 128,
+      "localArchiveLimit": 128
+    },
+    "vehicles": {
+      "advancedFamilyCount": 4,
+      "tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "installationsPerFamilyPerBase": 1,
+      "installationsPerBaseMax": 5,
+      "completedUsesPerInstall": 100
+    },
+    "advanced": {
+      "currentPolicyVersion": 1,
+      "v1": {
+        "policyVersion": 1,
+        "maxConcurrentPerBase": 1,
+        "basisPoints": 10000,
+        "islandPoolBps": 2000,
+        "balloonAlternateHome": {
+          "introduction": {
+            "durationSec": 300,
+            "grossRaw": 5
+          },
+          "long_survey": {
+            "durationSec": 7200,
+            "grossRaw": 80
+          }
+        },
+        "families": {
+          "survey_balloon": {
+            "homeRoutes": [
+              "introduction",
+              "coastal_survey",
+              "long_survey"
+            ],
+            "durationSecByTier": [
+              1800,
+              1800,
+              1800,
+              1800
+            ],
+            "grossRawByTier": [
+              30,
+              35,
+              40,
+              45
+            ],
+            "supplies": [
+              {
+                "resourceId": "rough_prism",
+                "quantity": 1
+              }
+            ]
+          },
+          "cargo_cutter": {
+            "homeRoutes": [
+              "coastal_survey"
+            ],
+            "durationSecByTier": [
+              1800,
+              1800,
+              1800,
+              1800
+            ],
+            "grossRawByTier": [
+              40,
+              45,
+              50,
+              55
+            ],
+            "supplies": [
+              {
+                "resourceId": "heartwood_logs",
+                "quantity": 2
+              }
+            ]
+          },
+          "courier_airship": {
+            "homeRoutes": [
+              "coastal_survey"
+            ],
+            "durationSecByTier": [
+              1200,
+              960,
+              720,
+              600
+            ],
+            "grossRawByTier": [
+              20,
+              20,
+              20,
+              20
+            ],
+            "supplies": [
+              {
+                "resourceId": "ember_nodules",
+                "quantity": 1
+              }
+            ]
+          },
+          "expedition_barge": {
+            "homeRoutes": [
+              "long_survey"
+            ],
+            "durationSecByTier": [
+              7200,
+              7200,
+              7200,
+              7200
+            ],
+            "grossRawByTier": [
+              120,
+              135,
+              150,
+              165
+            ],
+            "supplies": [
+              {
+                "resourceId": "heartwood_logs",
+                "quantity": 2
+              },
+              {
+                "resourceId": "crown_iron_ore",
+                "quantity": 1
+              }
+            ]
+          }
+        }
+      }
+    },
+    "paidRoutes": {
+      "routeCatalogueVersion": 3,
+      "rewardTableVersion": 2,
+      "accessPolicyVersion": 1,
+      "durationSec": 1800,
+      "grossRaw": 25,
+      "routes": {
+        "paid_frostveil": "frostveil",
+        "paid_elderwood": "elderwood",
+        "paid_sunscar": "sunscar",
+        "paid_crownlands": "crownlands",
+        "paid_seeker_reach": "seeker-reach",
+        "paid_stormcairn": "stormcairn",
+        "paid_thornwake": "thornwake",
+        "paid_cinderfall": "cinderfall"
+      }
+    }
+  },
+  "vectors": [
+    {
+      "kind": "installation",
+      "client": {
+        "version": 1,
+        "consentSource": {
+          "genesisHash": "GpAZXThLyUpYEAKCJ4ZtCBv2HazQtUUBgZXPzCEePe1X",
+          "anchorSlot": 20,
+          "reviewedDeploymentSlot": 10,
+          "reviewedProgramDataSha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "burnReceipt": null,
+        "kind": "installation",
+        "record": {
+          "version": 1,
+          "purpose": "vehicle_installation",
+          "wallet": "GySVDr1omr3GTodgWFH7qD1ZKav9C5NMPFjdpwb33LvU",
+          "idempotencyKey": "original/key?",
+          "serverNow": "2035-01-01T00:00:00.000Z",
+          "reservation": {
+            "reservationId": "10000000-0000-4000-8000-000000000001",
+            "wallet": "GySVDr1omr3GTodgWFH7qD1ZKav9C5NMPFjdpwb33LvU",
+            "request": {
+              "baseId": "10000000-0000-4000-8000-000000000003",
+              "berthId": "10000000-0000-4000-8000-000000000004",
+              "assetId": "EQgzvwSqvuzFkBUuSrRRdWuA2KFUpeUkgHekupAGFDPQ",
+              "idempotencyKey": "original/key?"
+            },
+            "identity": {
+              "assetId": "EQgzvwSqvuzFkBUuSrRRdWuA2KFUpeUkgHekupAGFDPQ",
+              "collection": "FCr3mFAtdqrkk3auc2mkze1dqxanJWYHXKd8oedi11dx",
+              "family": "survey_balloon",
+              "tier": 1
+            },
+            "completedBuildJobId": "10000000-0000-4000-8000-000000000004",
+            "berthCompletedAt": "2035-01-01T00:00:00.000001Z",
+            "reservedAt": "2035-01-01T00:00:00.000001Z"
+          },
+          "signingAuthorized": false,
+          "broadcastAuthorized": false,
+          "reservationReleaseAuthorized": false,
+          "installationAuthorized": false,
+          "status": "prepared",
+          "preparation": {
+            "messageHex": "01000306ed54a59fb1ac3a51239351362941b868e85a60e3d7b2485d828821dc7a69c279c73983f33f89f2a80273a5eabeb5bc1daa0ec1ae20d49fdd2ff8a35daf6c5443d30c76d63d038afa444ffb16b41a0889022993726ab6c2252c3b253bf9f75bafaf54ab10bd97a542a09ef7b39889dd0cd394a4cce9dfa6cdc97ebe2d235ba7480000000000000000000000000000000000000000000000000000000000000000054a535a992921064d24e87160da387c7c35b5ddbc92bb81e41fa8404105448d56d7b4d79a5140d69284ca37f884f089ef0f42d99aa99d4466d0f3294e4d3f88020306010200000403020c000501005273686172646b6565703a76656869636c652d696e7374616c6c3a76313a31303030303030302d303030302d343030302d383030302d3030303030303030303030313a7375727665795f62616c6c6f6f6e3a31",
+            "messageSha256": "0416f568d9fed17c1067f7d4c952bcad8323caf0c71f093c5e7e9f3c239a7a6a",
+            "blockhash": "6qzqN5yFuawyDyZFL1PABb6LCwRZNPPW23iDVYPN4ioH",
+            "blockhashContextSlot": 20,
+            "lastValidBlockHeight": 1000,
+            "recordedAt": "2035-01-01T00:00:00.000001Z"
+          },
+          "signed": null,
+          "installation": null
+        }
+      },
+      "trust": {
+        "version": 1,
+        "revision": "d182-test-v1",
+        "core": {
+          "expectedGenesisHash": "GpAZXThLyUpYEAKCJ4ZtCBv2HazQtUUBgZXPzCEePe1X",
+          "reviewedDeploymentSlot": 10,
+          "reviewedProgramDataSha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "upgradeAuthority": null
+        },
+        "operationalPolicyVersion": 1
+      },
+      "wire": {
+        "signedTransactionHex": "0160b1d67f7e2d5cd08c1b2009fd9071db3209bc873ffd60e7199d38b6f203d115eb080601bd580f03c54cf4c342b0e446c676c75857e25be21c21ad2ff20f920b01000306ed54a59fb1ac3a51239351362941b868e85a60e3d7b2485d828821dc7a69c279c73983f33f89f2a80273a5eabeb5bc1daa0ec1ae20d49fdd2ff8a35daf6c5443d30c76d63d038afa444ffb16b41a0889022993726ab6c2252c3b253bf9f75bafaf54ab10bd97a542a09ef7b39889dd0cd394a4cce9dfa6cdc97ebe2d235ba7480000000000000000000000000000000000000000000000000000000000000000054a535a992921064d24e87160da387c7c35b5ddbc92bb81e41fa8404105448d56d7b4d79a5140d69284ca37f884f089ef0f42d99aa99d4466d0f3294e4d3f88020306010200000403020c000501005273686172646b6565703a76656869636c652d696e7374616c6c3a76313a31303030303030302d303030302d343030302d383030302d3030303030303030303030313a7375727665795f62616c6c6f6f6e3a31",
+        "signature": "2w8QcPKowWauoyJnXH5qhHn2DvtFpgzVinDZf3AXFJ3aiy9YDPuNT9LNz6eP4JF6y31VdN4kpm569wRf4C9MYexA",
+        "wireSha256": "2afa12d2166e1cce07bc75c1cd394b1abe9389150e1d78cf7b9be9503b13d020",
+        "messageSha256": "0416f568d9fed17c1067f7d4c952bcad8323caf0c71f093c5e7e9f3c239a7a6a"
+      }
+    },
+    {
+      "kind": "upgrade",
+      "client": {
+        "version": 1,
+        "consentSource": {
+          "genesisHash": "GpAZXThLyUpYEAKCJ4ZtCBv2HazQtUUBgZXPzCEePe1X",
+          "anchorSlot": 20,
+          "reviewedDeploymentSlot": 10,
+          "reviewedProgramDataSha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "burnReceipt": null,
+        "kind": "service",
+        "record": {
+          "version": 1,
+          "purpose": "vehicle_service",
+          "wallet": "GySVDr1omr3GTodgWFH7qD1ZKav9C5NMPFjdpwb33LvU",
+          "idempotencyKey": "original/key?",
+          "serverNow": "2035-01-01T00:00:00.000Z",
+          "intent": {
+            "intentId": "10000000-0000-4000-8000-000000000001",
+            "wallet": "GySVDr1omr3GTodgWFH7qD1ZKav9C5NMPFjdpwb33LvU",
+            "request": {
+              "installationId": "10000000-0000-4000-8000-000000000002",
+              "assetId": "EQgzvwSqvuzFkBUuSrRRdWuA2KFUpeUkgHekupAGFDPQ",
+              "operation": "upgrade",
+              "idempotencyKey": "original/key?"
+            },
+            "identity": {
+              "assetId": "EQgzvwSqvuzFkBUuSrRRdWuA2KFUpeUkgHekupAGFDPQ",
+              "collection": "FCr3mFAtdqrkk3auc2mkze1dqxanJWYHXKd8oedi11dx",
+              "family": "survey_balloon",
+              "tier": 1
+            },
+            "state": {
+              "operation": "upgrade",
+              "installationId": "10000000-0000-4000-8000-000000000002",
+              "baseId": "10000000-0000-4000-8000-000000000003",
+              "berthId": "10000000-0000-4000-8000-000000000004",
+              "revision": 0,
+              "family": "survey_balloon",
+              "tier": 1,
+              "completedTotal": "3",
+              "allowanceStart": "0"
+            },
+            "reservedAt": "2035-01-01T00:00:00.000001Z"
+          },
+          "signingAuthorized": false,
+          "broadcastAuthorized": false,
+          "reservationReleaseAuthorized": false,
+          "serviceAuthorized": false,
+          "status": "prepared",
+          "preparation": {
+            "messageHex": "01000306ed54a59fb1ac3a51239351362941b868e85a60e3d7b2485d828821dc7a69c279c73983f33f89f2a80273a5eabeb5bc1daa0ec1ae20d49fdd2ff8a35daf6c5443d30c76d63d038afa444ffb16b41a0889022993726ab6c2252c3b253bf9f75bafaf54ab10bd97a542a09ef7b39889dd0cd394a4cce9dfa6cdc97ebe2d235ba7480000000000000000000000000000000000000000000000000000000000000000054a535a992921064d24e87160da387c7c35b5ddbc92bb81e41fa8404105448d56d7b4d79a5140d69284ca37f884f089ef0f42d99aa99d4466d0f3294e4d3f88020306010200000403020c00050100820173686172646b6565703a76656869636c652d736572766963653a76313a31303030303030302d303030302d343030302d383030302d3030303030303030303030313a33373933306330646464373036626136636233333030616264333437323634663064613133336166353337353131376661346537386631373735326561653730",
+            "messageSha256": "818fcc47a6c0de889a9e937f3394d00ab38a582086397f04386939c317ea4cac",
+            "serviceSha256": "37930c0ddd706ba6cb3300abd347264f0da133af5375117fa4e78f17752eae70",
+            "blockhash": "6qzqN5yFuawyDyZFL1PABb6LCwRZNPPW23iDVYPN4ioH",
+            "blockhashContextSlot": 20,
+            "lastValidBlockHeight": 1000,
+            "recordedAt": "2035-01-01T00:00:00.000001Z"
+          },
+          "signed": null,
+          "application": null
+        }
+      },
+      "trust": {
+        "version": 1,
+        "revision": "d182-test-v1",
+        "core": {
+          "expectedGenesisHash": "GpAZXThLyUpYEAKCJ4ZtCBv2HazQtUUBgZXPzCEePe1X",
+          "reviewedDeploymentSlot": 10,
+          "reviewedProgramDataSha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "upgradeAuthority": null
+        },
+        "operationalPolicyVersion": 1
+      },
+      "wire": {
+        "signedTransactionHex": "0166ad03ffdc2c5970f18c3bfa7500c5c601836058b360c6cf8304ee33303fc7c17524022db7c5ff3068da99a8804e11eb5cbe216b1f9e0704b57d4343a860f70d01000306ed54a59fb1ac3a51239351362941b868e85a60e3d7b2485d828821dc7a69c279c73983f33f89f2a80273a5eabeb5bc1daa0ec1ae20d49fdd2ff8a35daf6c5443d30c76d63d038afa444ffb16b41a0889022993726ab6c2252c3b253bf9f75bafaf54ab10bd97a542a09ef7b39889dd0cd394a4cce9dfa6cdc97ebe2d235ba7480000000000000000000000000000000000000000000000000000000000000000054a535a992921064d24e87160da387c7c35b5ddbc92bb81e41fa8404105448d56d7b4d79a5140d69284ca37f884f089ef0f42d99aa99d4466d0f3294e4d3f88020306010200000403020c00050100820173686172646b6565703a76656869636c652d736572766963653a76313a31303030303030302d303030302d343030302d383030302d3030303030303030303030313a33373933306330646464373036626136636233333030616264333437323634663064613133336166353337353131376661346537386631373735326561653730",
+        "signature": "344gcUaTWpUZPmGWG1mWC2ZwsFX9LdbwjR7BSyCtCgGwW6tH1gFNdTz294bzNF33EWHRqsEyziewBXuwCQSXv3Mv",
+        "wireSha256": "cde87456b903896b1fa1d53e2aa1380f709040fee74664bdd7308edd419b43eb",
+        "messageSha256": "818fcc47a6c0de889a9e937f3394d00ab38a582086397f04386939c317ea4cac"
+      },
+      "serviceJson": "{\"version\":1,\"operation\":\"upgrade\",\"installationId\":\"10000000-0000-4000-8000-000000000002\",\"baseId\":\"10000000-0000-4000-8000-000000000003\",\"berthId\":\"10000000-0000-4000-8000-000000000004\",\"revision\":0,\"family\":\"survey_balloon\",\"tier\":1,\"completedTotal\":\"3\",\"allowanceStart\":\"0\",\"tierAfter\":2,\"revisionAfter\":1,\"allowanceStartAfter\":\"0\",\"remainingUses\":97}"
+    },
+    {
+      "kind": "restore_uses",
+      "client": {
+        "version": 1,
+        "consentSource": {
+          "genesisHash": "GpAZXThLyUpYEAKCJ4ZtCBv2HazQtUUBgZXPzCEePe1X",
+          "anchorSlot": 20,
+          "reviewedDeploymentSlot": 10,
+          "reviewedProgramDataSha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "burnReceipt": null,
+        "kind": "service",
+        "record": {
+          "version": 1,
+          "purpose": "vehicle_service",
+          "wallet": "GySVDr1omr3GTodgWFH7qD1ZKav9C5NMPFjdpwb33LvU",
+          "idempotencyKey": "original/key?",
+          "serverNow": "2035-01-01T00:00:00.000Z",
+          "intent": {
+            "intentId": "10000000-0000-4000-8000-000000000001",
+            "wallet": "GySVDr1omr3GTodgWFH7qD1ZKav9C5NMPFjdpwb33LvU",
+            "request": {
+              "installationId": "10000000-0000-4000-8000-000000000002",
+              "assetId": "EQgzvwSqvuzFkBUuSrRRdWuA2KFUpeUkgHekupAGFDPQ",
+              "operation": "restore_uses",
+              "idempotencyKey": "original/key?"
+            },
+            "identity": {
+              "assetId": "EQgzvwSqvuzFkBUuSrRRdWuA2KFUpeUkgHekupAGFDPQ",
+              "collection": "FCr3mFAtdqrkk3auc2mkze1dqxanJWYHXKd8oedi11dx",
+              "family": "survey_balloon",
+              "tier": 1
+            },
+            "state": {
+              "operation": "restore_uses",
+              "installationId": "10000000-0000-4000-8000-000000000002",
+              "baseId": "10000000-0000-4000-8000-000000000003",
+              "berthId": "10000000-0000-4000-8000-000000000004",
+              "revision": 0,
+              "family": "survey_balloon",
+              "tier": 1,
+              "completedTotal": "100",
+              "allowanceStart": "0"
+            },
+            "reservedAt": "2035-01-01T00:00:00.000001Z"
+          },
+          "signingAuthorized": false,
+          "broadcastAuthorized": false,
+          "reservationReleaseAuthorized": false,
+          "serviceAuthorized": false,
+          "status": "prepared",
+          "preparation": {
+            "messageHex": "01000306ed54a59fb1ac3a51239351362941b868e85a60e3d7b2485d828821dc7a69c279c73983f33f89f2a80273a5eabeb5bc1daa0ec1ae20d49fdd2ff8a35daf6c5443d30c76d63d038afa444ffb16b41a0889022993726ab6c2252c3b253bf9f75bafaf54ab10bd97a542a09ef7b39889dd0cd394a4cce9dfa6cdc97ebe2d235ba7480000000000000000000000000000000000000000000000000000000000000000054a535a992921064d24e87160da387c7c35b5ddbc92bb81e41fa8404105448d56d7b4d79a5140d69284ca37f884f089ef0f42d99aa99d4466d0f3294e4d3f88020306010200000403020c00050100820173686172646b6565703a76656869636c652d736572766963653a76313a31303030303030302d303030302d343030302d383030302d3030303030303030303030313a65613666663737656162303733653332616138346261343031616262336532303661626262343137376561303233663964326337333137383933346164336633",
+            "messageSha256": "0d6453a6e0565415ce26694818d7ed1660415c65a1525b7bfa609c0bb5264175",
+            "serviceSha256": "ea6ff77eab073e32aa84ba401abb3e206abbb4177ea023f9d2c73178934ad3f3",
+            "blockhash": "6qzqN5yFuawyDyZFL1PABb6LCwRZNPPW23iDVYPN4ioH",
+            "blockhashContextSlot": 20,
+            "lastValidBlockHeight": 1000,
+            "recordedAt": "2035-01-01T00:00:00.000001Z"
+          },
+          "signed": null,
+          "application": null
+        }
+      },
+      "trust": {
+        "version": 1,
+        "revision": "d182-test-v1",
+        "core": {
+          "expectedGenesisHash": "GpAZXThLyUpYEAKCJ4ZtCBv2HazQtUUBgZXPzCEePe1X",
+          "reviewedDeploymentSlot": 10,
+          "reviewedProgramDataSha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "upgradeAuthority": null
+        },
+        "operationalPolicyVersion": 1
+      },
+      "wire": {
+        "signedTransactionHex": "01154e3417127ad9f4dad3bca7daf73296a62d5bd17c9f01d55ef70b03511e7d7af028b55579d951a0e66b82f574374b82a6aabc23ede9ad8006f0365942d5430101000306ed54a59fb1ac3a51239351362941b868e85a60e3d7b2485d828821dc7a69c279c73983f33f89f2a80273a5eabeb5bc1daa0ec1ae20d49fdd2ff8a35daf6c5443d30c76d63d038afa444ffb16b41a0889022993726ab6c2252c3b253bf9f75bafaf54ab10bd97a542a09ef7b39889dd0cd394a4cce9dfa6cdc97ebe2d235ba7480000000000000000000000000000000000000000000000000000000000000000054a535a992921064d24e87160da387c7c35b5ddbc92bb81e41fa8404105448d56d7b4d79a5140d69284ca37f884f089ef0f42d99aa99d4466d0f3294e4d3f88020306010200000403020c00050100820173686172646b6565703a76656869636c652d736572766963653a76313a31303030303030302d303030302d343030302d383030302d3030303030303030303030313a65613666663737656162303733653332616138346261343031616262336532303661626262343137376561303233663964326337333137383933346164336633",
+        "signature": "RhwrKf7VcHgQHB8rctnzNghWwGNSTrQvTwHcQDdR7kR9pvyjzVvGU9CjFrR3fjLwFgCY7CKLFf8Joa9CBUubT52",
+        "wireSha256": "90b1582da85d8f64f0d986d02eff68c815f4cd1b33ca69407e988662df48f026",
+        "messageSha256": "0d6453a6e0565415ce26694818d7ed1660415c65a1525b7bfa609c0bb5264175"
+      },
+      "serviceJson": "{\"version\":1,\"operation\":\"restore_uses\",\"installationId\":\"10000000-0000-4000-8000-000000000002\",\"baseId\":\"10000000-0000-4000-8000-000000000003\",\"berthId\":\"10000000-0000-4000-8000-000000000004\",\"revision\":0,\"family\":\"survey_balloon\",\"tier\":1,\"completedTotal\":\"100\",\"allowanceStart\":\"0\",\"tierAfter\":1,\"revisionAfter\":1,\"allowanceStartAfter\":\"100\",\"remainingUses\":100}"
+    }
+  ]
+}

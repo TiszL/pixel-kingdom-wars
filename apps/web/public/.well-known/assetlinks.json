@@ -1,0 +1,15 @@
+[
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "gg.pixelkingdomwars.twa",
+      "sha256_cert_fingerprints": [
+        "04:6A:A8:65:B3:50:6E:15:F5:F4:D3:43:73:8D:C1:AC:04:95:6D:6D:E1:9D:DE:52:97:4F:CD:2A:94:AB:B1:F9",
+        "FC:A0:A8:57:47:0F:F9:B9:EE:A3:43:48:FA:5D:41:9E:79:34:08:68:3B:6C:DF:BF:15:55:F5:79:2B:E1:23:29"
+      ]
+    }
+  }
+]

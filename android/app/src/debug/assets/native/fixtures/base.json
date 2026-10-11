@@ -1,0 +1,126 @@
+{
+  "keepLevel": 1,
+  "buildings": [
+    {
+      "id": "keep",
+      "type": "keep",
+      "level": 2,
+      "tx": 8,
+      "ty": 8,
+      "underConstruction": false
+    },
+    {
+      "id": "vault",
+      "type": "vault",
+      "level": 2,
+      "tx": 11,
+      "ty": 8,
+      "underConstruction": false
+    },
+    {
+      "id": "mine",
+      "type": "mine",
+      "level": 2,
+      "tx": 5,
+      "ty": 8,
+      "underConstruction": false
+    },
+    {
+      "id": "cannon",
+      "type": "cannon",
+      "level": 2,
+      "tx": 8,
+      "ty": 5,
+      "underConstruction": false
+    },
+    {
+      "id": "tower",
+      "type": "archertower",
+      "level": 2,
+      "tx": 8,
+      "ty": 12,
+      "underConstruction": false
+    },
+    {
+      "id": "mortar",
+      "type": "mortar",
+      "level": 1,
+      "tx": 12,
+      "ty": 12,
+      "underConstruction": false
+    },
+    {
+      "id": "wall_0",
+      "type": "wall",
+      "level": 2,
+      "tx": 4,
+      "ty": 4,
+      "underConstruction": false
+    },
+    {
+      "id": "wall_1",
+      "type": "wall",
+      "level": 2,
+      "tx": 4,
+      "ty": 5,
+      "underConstruction": false
+    },
+    {
+      "id": "wall_2",
+      "type": "wall",
+      "level": 2,
+      "tx": 4,
+      "ty": 6,
+      "underConstruction": false
+    },
+    {
+      "id": "wall_3",
+      "type": "wall",
+      "level": 2,
+      "tx": 4,
+      "ty": 7,
+      "underConstruction": false
+    },
+    {
+      "id": "wall_4",
+      "type": "wall",
+      "level": 2,
+      "tx": 4,
+      "ty": 8,
+      "underConstruction": false
+    },
+    {
+      "id": "wall_5",
+      "type": "wall",
+      "level": 2,
+      "tx": 4,
+      "ty": 9,
+      "underConstruction": false
+    },
+    {
+      "id": "wall_6",
+      "type": "wall",
+      "level": 2,
+      "tx": 4,
+      "ty": 10,
+      "underConstruction": false
+    },
+    {
+      "id": "wall_7",
+      "type": "wall",
+      "level": 2,
+      "tx": 4,
+      "ty": 11,
+      "underConstruction": false
+    },
+    {
+      "id": "wall_8",
+      "type": "wall",
+      "level": 2,
+      "tx": 4,
+      "ty": 12,
+      "underConstruction": false
+    }
+  ],
+  "surplusShards": 1000
+}

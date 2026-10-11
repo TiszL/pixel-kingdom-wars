@@ -1,0 +1,33 @@
+/* Phase E treasury uses the existing game chrome, parchment and stone palette.
+ * Receipt controls remain separate from the live kingdom balance. */
+.sk-shards-panel { color:var(--sk-text); background:var(--sk-panel); outline:none; }
+.sk-shards-banner { display:flex; align-items:center; gap:12px; padding:14px 10px; }
+.sk-shards-banner h2 { font-size:30px; line-height:1; color:var(--sk-goldHi); margin:4px 0; font-weight:normal; }
+.sk-shards-banner p { margin:0; color:var(--sk-textDim); }
+.sk-shards-eyebrow { font-size:13px; letter-spacing:3px; color:var(--sk-gold); }
+.sk-shards-emblem { padding:8px; display:flex; flex-shrink:0; }
+.sk-shards-close { margin-left:auto; align-self:flex-start; display:grid; place-items:center; background:transparent; border:0; min-width:44px; min-height:44px; cursor:pointer; }
+.sk-shards-content { padding:16px; display:grid; gap:16px; }
+.sk-shards-intro { margin:0; color:var(--sk-text); font-size:18px; }
+.sk-shards-balance { display:flex; align-items:center; gap:10px; padding:10px; }
+.sk-shards-balance span { font-size:13px; color:var(--sk-textDim); }
+.sk-shards-balance strong { display:block; font-size:30px; line-height:1.1; font-weight:normal; }
+.sk-shards-balance strong small { font-size:16px; }
+.sk-shards-balance-note { margin-left:auto; max-width:80px; text-align:right; }
+.sk-shards-section-title { display:flex; gap:8px; align-items:center; font-size:18px; color:var(--sk-goldHi); letter-spacing:1px; margin:0 0 10px; font-weight:normal; }
+.sk-shards-spots { display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,230px),1fr)); gap:12px; }
+.sk-shards-card { background:var(--sk-text); color:var(--sk-ink); padding:12px; border:2px solid var(--sk-borderLt); box-shadow:inset 0 2px var(--sk-text),0 3px var(--sk-ink); }
+.sk-shards-card-heading { display:flex; flex-wrap:wrap; gap:4px 12px; align-items:center; justify-content:space-between; border-bottom:1px solid var(--sk-textFaint); padding-bottom:8px; }
+.sk-shards-card-heading span { font-size:20px; }.sk-shards-card-heading small { font-size:14px; }
+.sk-shards-amount { display:flex; align-items:center; gap:8px; padding-top:12px; }.sk-shards-amount strong { font-size:36px; line-height:1; font-weight:normal; }.sk-shards-amount small { color:var(--sk-panel); }
+.sk-shards-card p { margin:8px 0 12px; }.sk-shards-card p strong { float:right; }
+.sk-shards-panel button { white-space:normal; overflow-wrap:anywhere; }.sk-shards-card button { width:100%;  }
+.sk-shards-saved { background:var(--sk-slate); border:2px solid var(--sk-sky); box-shadow:inset 0 2px var(--sk-sky),0 3px var(--sk-ink); padding:12px; display:grid; gap:10px; }
+.sk-shards-saved h3 { display:flex; gap:8px; align-items:center; font-size:22px; font-weight:normal; margin:0; }.sk-shards-saved p { margin:0; }
+.sk-shards-delivered { font-size:26px; color:var(--sk-text); }.sk-shards-reference { font-size:14px; overflow-wrap:anywhere; }.sk-shards-reference summary { cursor:pointer; min-height:32px; display:flex; align-items:center; text-decoration:underline; }
+.sk-shards-confirm { display:grid; gap:10px; }.sk-shards-confirm p { font-size:20px; }
+.sk-shards-notice { margin:0; border-left:4px solid var(--sk-gold); padding:10px 12px; background:var(--sk-borderLt); }.sk-shards-notice[role=alert] { border-color:var(--sk-danger); }
+.sk-shards-empty { margin:0; padding:20px 12px; border:1px dashed var(--sk-textFaint); text-align:center; color:var(--sk-textDim); }
+.sk-shards-history { border-top:1px solid var(--sk-textFaint); }.sk-shards-history summary { padding:12px 0; min-height:44px; cursor:pointer; color:var(--sk-goldHi); }.sk-shards-history section { padding:8px 0; }
+.sk-shards-footer { display:grid; gap:8px; }.sk-shards-panel :focus-visible { outline:3px solid var(--sk-goldHi); outline-offset:2px; }.sk-shards-card :focus-visible { outline-color:var(--sk-slate); }
+@media(max-width:380px) { .sk-shards-banner { gap:8px; padding:10px 6px; }.sk-shards-banner h2 { font-size:25px; }.sk-shards-emblem { padding:3px; }.sk-shards-content { padding:12px; }.sk-shards-panel button {  } }

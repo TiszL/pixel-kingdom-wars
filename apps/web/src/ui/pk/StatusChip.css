@@ -1,0 +1,74 @@
+/* StatusChip.css — <PkStatusChip>. The 48 px touch row wraps a 30 px VEIL chip (238 max). Only --pk-* values.
+ *
+ * HUD budget share (this chip is permanent HUD; whole-HUD totals per class are in kitBase.css):
+ *   full chip 238 x 30 = 7,140 px2   -> phone-portrait 412x915 1.9% | tablet 768x1024 0.9% | desktop 1440x900 0.55%
+ *   icon-only 3 x 48 x 30 = 4,320 px2 -> phone-landscape 844x390 1.3% | 844x311 1.6% | floor 320x640 2.1%
+ * (the 48 px row is a touch band, not paint: the budget counts painted chrome, as the Android HudBudget does). */
+
+.pk-status {
+  --pk-k-status-inset: calc((var(--pk-min-tap) - var(--pk-size-status-chip-h)) / 2);
+  position: relative;
+  display: inline-flex;
+  align-items: stretch;
+  box-sizing: border-box;
+  height: var(--pk-min-tap);
+  max-width: var(--pk-size-status-chip-w);
+  padding: 0 var(--pk-s4);
+  pointer-events: none; /* the row is layout; each segment button is the target */
+}
+/* VEIL plate: ink S rim 2 -> veil face + 2 px veil-hi band, drawn 9 px inside the touch row */
+.pk-status__veil {
+  position: absolute;
+  inset: var(--pk-k-status-inset) 0;
+  background: var(--pk-ink);
+  clip-path: var(--pk-clip-s);
+}
+.pk-status__veil::after {
+  content: '';
+  position: absolute;
+  inset: var(--pk-outline-chip);
+  clip-path: var(--pk-clip-s);
+  background: var(--pk-veil);
+  box-shadow: inset 0 var(--pk-s2) 0 var(--pk-veil-hi);
+}
+.pk-status__cell { position: relative; display: inline-flex; align-items: center; min-width: 0; }
+.pk-status__sep { width: var(--pk-s2); height: var(--pk-s16); margin: 0 var(--pk-text-outline-1); background: var(--pk-border); flex: none; }
+.pk-status__seg {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--pk-s4);
+  min-width: var(--pk-min-tap);
+  height: var(--pk-min-tap);
+  margin: 0;
+  padding: 0 var(--pk-s4);
+  border: 0;
+  background: none;
+  color: var(--pk-text);
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+}
+/* press: a veil-hi wash inside the veil band (HomeHud.kt StatusSegment, 70%) */
+.pk-status__seg::before {
+  content: '';
+  position: absolute;
+  inset: calc(var(--pk-k-status-inset) + var(--pk-s2)) 0;
+  background: var(--pk-veil-hi);
+  opacity: 0;
+  transition: opacity var(--pk-dur-release) var(--pk-ease-out);
+}
+.pk-status__seg:active::before { opacity: .7; transition-duration: var(--pk-dur-press); }
+:root[data-pk-vp="desktop"] .pk-status__seg:hover > * { transform: translateY(var(--pk-k-hover-travel, var(--pk-text-outline-1))); }
+.pk-status__seg > * { position: relative; }
+.pk-status__icon { position: relative; display: inline-flex; flex: none; }
+.pk-status__dot { position: absolute; top: 0; right: 0; width: var(--pk-s6); height: var(--pk-s6); background: var(--pk-gold); }
+.pk-status__value { color: var(--pk-text); min-width: 0; }
+.pk-status__seg--gold .pk-status__value { color: var(--pk-gold-hi); }
+.pk-status__seg--alert .pk-status__value { color: var(--pk-gold-hi); }
+.pk-status__seg--danger .pk-status__value { color: var(--pk-danger); }
+
+/* Icon-only: the phone-landscape class (844x390, 844x311) and the forced compact floor. */
+:root[data-pk-vp="phone-landscape"] .pk-status__value,
+.pk-status--compact .pk-status__value { display: none; }

@@ -1,0 +1,749 @@
+{
+  "schemaVersion": 1,
+  "timingUnit": "milliseconds",
+  "fps": 8,
+  "generatedMotionRequired": true,
+  "note": "Presentation tracks only. No vehicle durability, travel-time, raid or inventory rules.",
+  "families": {
+    "starter": {
+      "mode": "tidal-gate",
+      "departure": [
+        {
+          "frame": 0,
+          "offsetPx": [
+            0,
+            0
+          ],
+          "opacity": 1
+        },
+        {
+          "frame": 1,
+          "offsetPx": [
+            0,
+            -4
+          ],
+          "opacity": 1
+        },
+        {
+          "frame": 2,
+          "offsetPx": [
+            0,
+            -10
+          ],
+          "opacity": 1
+        },
+        {
+          "frame": 3,
+          "offsetPx": [
+            0,
+            -16
+          ],
+          "opacity": 1
+        },
+        {
+          "frame": 4,
+          "offsetPx": [
+            0,
+            -22
+          ],
+          "opacity": 0.85
+        },
+        {
+          "frame": 5,
+          "offsetPx": [
+            0,
+            -28
+          ],
+          "opacity": 0.5
+        },
+        {
+          "frame": 6,
+          "offsetPx": [
+            0,
+            -34
+          ],
+          "opacity": 0.15
+        },
+        {
+          "frame": 7,
+          "offsetPx": [
+            0,
+            -40
+          ],
+          "opacity": 0
+        }
+      ],
+      "return": [
+        {
+          "frame": 0,
+          "offsetPx": [
+            0,
+            -40
+          ],
+          "opacity": 0
+        },
+        {
+          "frame": 1,
+          "offsetPx": [
+            0,
+            -34
+          ],
+          "opacity": 0.15
+        },
+        {
+          "frame": 2,
+          "offsetPx": [
+            0,
+            -28
+          ],
+          "opacity": 0.5
+        },
+        {
+          "frame": 3,
+          "offsetPx": [
+            0,
+            -22
+          ],
+          "opacity": 0.85
+        },
+        {
+          "frame": 4,
+          "offsetPx": [
+            0,
+            -16
+          ],
+          "opacity": 1
+        },
+        {
+          "frame": 5,
+          "offsetPx": [
+            0,
+            -10
+          ],
+          "opacity": 1
+        },
+        {
+          "frame": 6,
+          "offsetPx": [
+            0,
+            -4
+          ],
+          "opacity": 1
+        },
+        {
+          "frame": 7,
+          "offsetPx": [
+            0,
+            0
+          ],
+          "opacity": 1
+        }
+      ],
+      "berthPersists": true,
+      "footprint": [
+        2,
+        2
+      ],
+      "sharedFxRef": "departure",
+      "effectAttachmentPx": [
+        56,
+        28
+      ],
+      "contactRemainsOnWater": true,
+      "travelScene": "route view; loop centered independently of base terrain",
+      "reducedMotion": "Immediate scene transition between occupied and away; no movement required."
+    },
+    "survey-balloon": {
+      "mode": "vertical-liftoff",
+      "departure": [
+        {
+          "frame": 0,
+          "offsetPx": [
+            0,
+            0
+          ],
+          "opacity": 1
+        },
+        {
+          "frame": 1,
+          "offsetPx": [
+            0,
+            -4
+          ],
+          "opacity": 1
+        },
+        {
+          "frame": 2,
+          "offsetPx": [
+            0,
+            -10
+          ],
+          "opacity": 1
+        },
+        {
+          "frame": 3,
+          "offsetPx": [
+            0,
+            -18
+          ],
+          "opacity": 1
+        },
+        {
+          "frame": 4,
+          "offsetPx": [
+            0,
+            -28
+          ],
+          "opacity": 0.85
+        },
+        {
+          "frame": 5,
+          "offsetPx": [
+            0,
+            -42
+          ],
+          "opacity": 0.5
+        },
+        {
+          "frame": 6,
+          "offsetPx": [
+            0,
+            -58
+          ],
+          "opacity": 0.15
+        },
+        {
+          "frame": 7,
+          "offsetPx": [
+            0,
+            -78
+          ],
+          "opacity": 0
+        }
+      ],
+      "return": [
+        {
+          "frame": 0,
+          "offsetPx": [
+            0,
+            -78
+          ],
+          "opacity": 0
+        },
+        {
+          "frame": 1,
+          "offsetPx": [
+            0,
+            -58
+          ],
+          "opacity": 0.15
+        },
+        {
+          "frame": 2,
+          "offsetPx": [
+            0,
+            -42
+          ],
+          "opacity": 0.5
+        },
+        {
+          "frame": 3,
+          "offsetPx": [
+            0,
+            -28
+          ],
+          "opacity": 0.85
+        },
+        {
+          "frame": 4,
+          "offsetPx": [
+            0,
+            -18
+          ],
+          "opacity": 1
+        },
+        {
+          "frame": 5,
+          "offsetPx": [
+            0,
+            -10
+          ],
+          "opacity": 1
+        },
+        {
+          "frame": 6,
+          "offsetPx": [
+            0,
+            -4
+          ],
+          "opacity": 1
+        },
+        {
+          "frame": 7,
+          "offsetPx": [
+            0,
+            0
+          ],
+          "opacity": 1
+        }
+      ],
+      "berthPersists": true,
+      "footprint": [
+        2,
+        2
+      ],
+      "sharedFxRef": null,
+      "effectAttachmentPx": [
+        56,
+        40
+      ],
+      "contactRemainsOnWater": false,
+      "travelScene": "route view; loop centered independently of base terrain",
+      "reducedMotion": "Immediate scene transition between occupied and away; no movement required."
+    },
+    "cargo-cutter": {
+      "mode": "tidal-gate",
+      "departure": [
+        {
+          "frame": 0,
+          "offsetPx": [
+            0,
+            0
+          ],
+          "opacity": 1
+        },
+        {
+          "frame": 1,
+          "offsetPx": [
+            0,
+            -4
+          ],
+          "opacity": 1
+        },
+        {
+          "frame": 2,
+          "offsetPx": [
+            0,
+            -10
+          ],
+          "opacity": 1
+        },
+        {
+          "frame": 3,
+          "offsetPx": [
+            0,
+            -16
+          ],
+          "opacity": 1
+        },
+        {
+          "frame": 4,
+          "offsetPx": [
+            0,
+            -22
+          ],
+          "opacity": 0.85
+        },
+        {
+          "frame": 5,
+          "offsetPx": [
+            0,
+            -28
+          ],
+          "opacity": 0.5
+        },
+        {
+          "frame": 6,
+          "offsetPx": [
+            0,
+            -34
+          ],
+          "opacity": 0.15
+        },
+        {
+          "frame": 7,
+          "offsetPx": [
+            0,
+            -40
+          ],
+          "opacity": 0
+        }
+      ],
+      "return": [
+        {
+          "frame": 0,
+          "offsetPx": [
+            0,
+            -40
+          ],
+          "opacity": 0
+        },
+        {
+          "frame": 1,
+          "offsetPx": [
+            0,
+            -34
+          ],
+          "opacity": 0.15
+        },
+        {
+          "frame": 2,
+          "offsetPx": [
+            0,
+            -28
+          ],
+          "opacity": 0.5
+        },
+        {
+          "frame": 3,
+          "offsetPx": [
+            0,
+            -22
+          ],
+          "opacity": 0.85
+        },
+        {
+          "frame": 4,
+          "offsetPx": [
+            0,
+            -16
+          ],
+          "opacity": 1
+        },
+        {
+          "frame": 5,
+          "offsetPx": [
+            0,
+            -10
+          ],
+          "opacity": 1
+        },
+        {
+          "frame": 6,
+          "offsetPx": [
+            0,
+            -4
+          ],
+          "opacity": 1
+        },
+        {
+          "frame": 7,
+          "offsetPx": [
+            0,
+            0
+          ],
+          "opacity": 1
+        }
+      ],
+      "berthPersists": true,
+      "footprint": [
+        2,
+        2
+      ],
+      "sharedFxRef": "departure",
+      "effectAttachmentPx": [
+        56,
+        28
+      ],
+      "contactRemainsOnWater": true,
+      "travelScene": "route view; loop centered independently of base terrain",
+      "reducedMotion": "Immediate scene transition between occupied and away; no movement required."
+    },
+    "courier-airship": {
+      "mode": "vertical-liftoff",
+      "departure": [
+        {
+          "frame": 0,
+          "offsetPx": [
+            0,
+            0
+          ],
+          "opacity": 1
+        },
+        {
+          "frame": 1,
+          "offsetPx": [
+            0,
+            -4
+          ],
+          "opacity": 1
+        },
+        {
+          "frame": 2,
+          "offsetPx": [
+            0,
+            -10
+          ],
+          "opacity": 1
+        },
+        {
+          "frame": 3,
+          "offsetPx": [
+            0,
+            -18
+          ],
+          "opacity": 1
+        },
+        {
+          "frame": 4,
+          "offsetPx": [
+            0,
+            -28
+          ],
+          "opacity": 0.85
+        },
+        {
+          "frame": 5,
+          "offsetPx": [
+            0,
+            -42
+          ],
+          "opacity": 0.5
+        },
+        {
+          "frame": 6,
+          "offsetPx": [
+            0,
+            -58
+          ],
+          "opacity": 0.15
+        },
+        {
+          "frame": 7,
+          "offsetPx": [
+            0,
+            -78
+          ],
+          "opacity": 0
+        }
+      ],
+      "return": [
+        {
+          "frame": 0,
+          "offsetPx": [
+            0,
+            -78
+          ],
+          "opacity": 0
+        },
+        {
+          "frame": 1,
+          "offsetPx": [
+            0,
+            -58
+          ],
+          "opacity": 0.15
+        },
+        {
+          "frame": 2,
+          "offsetPx": [
+            0,
+            -42
+          ],
+          "opacity": 0.5
+        },
+        {
+          "frame": 3,
+          "offsetPx": [
+            0,
+            -28
+          ],
+          "opacity": 0.85
+        },
+        {
+          "frame": 4,
+          "offsetPx": [
+            0,
+            -18
+          ],
+          "opacity": 1
+        },
+        {
+          "frame": 5,
+          "offsetPx": [
+            0,
+            -10
+          ],
+          "opacity": 1
+        },
+        {
+          "frame": 6,
+          "offsetPx": [
+            0,
+            -4
+          ],
+          "opacity": 1
+        },
+        {
+          "frame": 7,
+          "offsetPx": [
+            0,
+            0
+          ],
+          "opacity": 1
+        }
+      ],
+      "berthPersists": true,
+      "footprint": [
+        2,
+        2
+      ],
+      "sharedFxRef": null,
+      "effectAttachmentPx": [
+        56,
+        40
+      ],
+      "contactRemainsOnWater": false,
+      "travelScene": "route view; loop centered independently of base terrain",
+      "reducedMotion": "Immediate scene transition between occupied and away; no movement required."
+    },
+    "expedition-barge": {
+      "mode": "tidal-gate",
+      "departure": [
+        {
+          "frame": 0,
+          "offsetPx": [
+            0,
+            0
+          ],
+          "opacity": 1
+        },
+        {
+          "frame": 1,
+          "offsetPx": [
+            0,
+            -4
+          ],
+          "opacity": 1
+        },
+        {
+          "frame": 2,
+          "offsetPx": [
+            0,
+            -10
+          ],
+          "opacity": 1
+        },
+        {
+          "frame": 3,
+          "offsetPx": [
+            0,
+            -16
+          ],
+          "opacity": 1
+        },
+        {
+          "frame": 4,
+          "offsetPx": [
+            0,
+            -22
+          ],
+          "opacity": 0.85
+        },
+        {
+          "frame": 5,
+          "offsetPx": [
+            0,
+            -28
+          ],
+          "opacity": 0.5
+        },
+        {
+          "frame": 6,
+          "offsetPx": [
+            0,
+            -34
+          ],
+          "opacity": 0.15
+        },
+        {
+          "frame": 7,
+          "offsetPx": [
+            0,
+            -40
+          ],
+          "opacity": 0
+        }
+      ],
+      "return": [
+        {
+          "frame": 0,
+          "offsetPx": [
+            0,
+            -40
+          ],
+          "opacity": 0
+        },
+        {
+          "frame": 1,
+          "offsetPx": [
+            0,
+            -34
+          ],
+          "opacity": 0.15
+        },
+        {
+          "frame": 2,
+          "offsetPx": [
+            0,
+            -28
+          ],
+          "opacity": 0.5
+        },
+        {
+          "frame": 3,
+          "offsetPx": [
+            0,
+            -22
+          ],
+          "opacity": 0.85
+        },
+        {
+          "frame": 4,
+          "offsetPx": [
+            0,
+            -16
+          ],
+          "opacity": 1
+        },
+        {
+          "frame": 5,
+          "offsetPx": [
+            0,
+            -10
+          ],
+          "opacity": 1
+        },
+        {
+          "frame": 6,
+          "offsetPx": [
+            0,
+            -4
+          ],
+          "opacity": 1
+        },
+        {
+          "frame": 7,
+          "offsetPx": [
+            0,
+            0
+          ],
+          "opacity": 1
+        }
+      ],
+      "berthPersists": true,
+      "footprint": [
+        2,
+        2
+      ],
+      "sharedFxRef": "departure",
+      "effectAttachmentPx": [
+        56,
+        28
+      ],
+      "contactRemainsOnWater": true,
+      "travelScene": "route view; loop centered independently of base terrain",
+      "reducedMotion": "Immediate scene transition between occupied and away; no movement required."
+    }
+  }
+}

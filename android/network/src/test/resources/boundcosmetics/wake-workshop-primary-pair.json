@@ -1,0 +1,922 @@
+{
+  "provenance": "Actual primary provider/HTTP on isolated PG16 full journal287; historical local facility/raw stock fixtures and explicitly synthetic readiness. No C5 consumer, renderer or production admission.",
+  "before": {
+    "version": 1,
+    "wallet": "2ocaFuJySRdbx7SXK5ad2HKCbwPCnJFkvT3EwUmtPmaa",
+    "serverNow": "2026-09-29T20:48:47.569Z",
+    "applicationReady": true,
+    "acceptingJobs": true,
+    "blueprint": {
+      "state": "eligible",
+      "proof": {
+        "blueprintId": "architect_blueprint_artisan_finishes_v1",
+        "jobId": "fe9372ea-8125-4a9b-943b-1aacad652477",
+        "baseId": "73cfbe07-4f63-4c97-9afb-008740dd0978",
+        "actorWallet": "2ocaFuJySRdbx7SXK5ad2HKCbwPCnJFkvT3EwUmtPmaa",
+        "completedAt": "2026-09-29T20:48:47.569Z"
+      }
+    },
+    "recipe": {
+      "recipe": {
+        "recipeId": "craft_aurora_wake_v1",
+        "recipeVersion": 1,
+        "outputId": "aurora_wake",
+        "quantity": "1",
+        "durationSec": 600,
+        "inputs": [
+          {
+            "itemId": "prismstone_lens",
+            "quantity": "4"
+          },
+          {
+            "itemId": "frostglass",
+            "quantity": "4"
+          },
+          {
+            "itemId": "thornsilk",
+            "quantity": "4"
+          }
+        ],
+        "requiredFacility": {
+          "type": "lodge",
+          "level": 1
+        },
+        "blueprintId": "architect_blueprint_artisan_finishes_v1"
+      },
+      "appearance": {
+        "version": 1,
+        "outputId": "aurora_wake",
+        "sourceId": "auroraWake",
+        "sourceManifestSha256": "b4b67f78efd4d74fa416e78822af9f0e037ad6d3bc30f3fc77127cd169292394",
+        "sourceIndexSha256": "04f96c922ca04d93f1bf760e6385713908b971ce82c3aa022602f1fa199e2181",
+        "bindingSha256": "f061211842f342a719bbf1ebe09ac2e085043c43f64f85bbc55582ec82d2a094"
+      }
+    },
+    "original": null,
+    "preference": {
+      "enabled": false,
+      "revision": "0",
+      "visual": {
+        "state": "available",
+        "visual": {
+          "version": 1,
+          "wake": null
+        }
+      }
+    },
+    "selectedBase": {
+      "state": "available",
+      "baseId": "73cfbe07-4f63-4c97-9afb-008740dd0978",
+      "craftingStock": [
+        {
+          "itemId": "frostglass",
+          "available": "5",
+          "pendingOutput": "0"
+        },
+        {
+          "itemId": "heartwood_beams",
+          "available": "0",
+          "pendingOutput": "0"
+        },
+        {
+          "itemId": "sunstone_blocks",
+          "available": "0",
+          "pendingOutput": "0"
+        },
+        {
+          "itemId": "crownsteel",
+          "available": "0",
+          "pendingOutput": "0"
+        },
+        {
+          "itemId": "prismstone_lens",
+          "available": "4",
+          "pendingOutput": "0"
+        },
+        {
+          "itemId": "stormalloy",
+          "available": "0",
+          "pendingOutput": "0"
+        },
+        {
+          "itemId": "thornsilk",
+          "available": "4",
+          "pendingOutput": "0"
+        },
+        {
+          "itemId": "embercore",
+          "available": "0",
+          "pendingOutput": "0"
+        },
+        {
+          "itemId": "navigation_kit",
+          "available": "0",
+          "pendingOutput": "0"
+        },
+        {
+          "itemId": "climate_kit",
+          "available": "0",
+          "pendingOutput": "0"
+        },
+        {
+          "itemId": "expedition_kit",
+          "available": "0",
+          "pendingOutput": "0"
+        }
+      ],
+      "workshops": [
+        {
+          "buildingId": "9c4fd4ee-1f80-4393-bcf6-c0698b19e207",
+          "level": 1,
+          "completedAt": "2026-09-29T20:47:46.569Z"
+        }
+      ],
+      "queue": [],
+      "lodges": [
+        {
+          "buildingId": "dcd59897-a206-451a-8db4-88e9154fd91a",
+          "level": 1,
+          "completedAt": "2026-09-29T20:47:46.569Z"
+        }
+      ]
+    }
+  },
+  "pending": {
+    "version": 1,
+    "wallet": "2ocaFuJySRdbx7SXK5ad2HKCbwPCnJFkvT3EwUmtPmaa",
+    "serverNow": "2026-09-29T20:48:47.569Z",
+    "applicationReady": true,
+    "acceptingJobs": true,
+    "blueprint": {
+      "state": "eligible",
+      "proof": {
+        "blueprintId": "architect_blueprint_artisan_finishes_v1",
+        "jobId": "fe9372ea-8125-4a9b-943b-1aacad652477",
+        "baseId": "73cfbe07-4f63-4c97-9afb-008740dd0978",
+        "actorWallet": "2ocaFuJySRdbx7SXK5ad2HKCbwPCnJFkvT3EwUmtPmaa",
+        "completedAt": "2026-09-29T20:48:47.569Z"
+      }
+    },
+    "recipe": {
+      "recipe": {
+        "recipeId": "craft_aurora_wake_v1",
+        "recipeVersion": 1,
+        "outputId": "aurora_wake",
+        "quantity": "1",
+        "durationSec": 600,
+        "inputs": [
+          {
+            "itemId": "prismstone_lens",
+            "quantity": "4"
+          },
+          {
+            "itemId": "frostglass",
+            "quantity": "4"
+          },
+          {
+            "itemId": "thornsilk",
+            "quantity": "4"
+          }
+        ],
+        "requiredFacility": {
+          "type": "lodge",
+          "level": 1
+        },
+        "blueprintId": "architect_blueprint_artisan_finishes_v1"
+      },
+      "appearance": {
+        "version": 1,
+        "outputId": "aurora_wake",
+        "sourceId": "auroraWake",
+        "sourceManifestSha256": "b4b67f78efd4d74fa416e78822af9f0e037ad6d3bc30f3fc77127cd169292394",
+        "sourceIndexSha256": "04f96c922ca04d93f1bf760e6385713908b971ce82c3aa022602f1fa199e2181",
+        "bindingSha256": "f061211842f342a719bbf1ebe09ac2e085043c43f64f85bbc55582ec82d2a094"
+      }
+    },
+    "original": {
+      "version": 1,
+      "wallet": "2ocaFuJySRdbx7SXK5ad2HKCbwPCnJFkvT3EwUmtPmaa",
+      "idempotencyKey": "74945cd3-dee1-407c-b2a6-55d6e7dafb81",
+      "serverNow": "2026-09-29T20:48:47.569Z",
+      "status": "accepted",
+      "receipt": {
+        "wallet": "2ocaFuJySRdbx7SXK5ad2HKCbwPCnJFkvT3EwUmtPmaa",
+        "jobId": "74945cd3-dee1-407c-b2a6-55d6e7dafb81",
+        "request": {
+          "idempotencyKey": "74945cd3-dee1-407c-b2a6-55d6e7dafb81",
+          "baseId": "73cfbe07-4f63-4c97-9afb-008740dd0978",
+          "recipeId": "craft_aurora_wake_v1",
+          "recipeVersion": 1,
+          "appearanceBindingSha256": "f061211842f342a719bbf1ebe09ac2e085043c43f64f85bbc55582ec82d2a094"
+        },
+        "recipe": {
+          "recipeId": "craft_aurora_wake_v1",
+          "recipeVersion": 1,
+          "outputId": "aurora_wake",
+          "quantity": "1",
+          "durationSec": 600,
+          "inputs": [
+            {
+              "itemId": "prismstone_lens",
+              "quantity": "4"
+            },
+            {
+              "itemId": "frostglass",
+              "quantity": "4"
+            },
+            {
+              "itemId": "thornsilk",
+              "quantity": "4"
+            }
+          ],
+          "requiredFacility": {
+            "type": "lodge",
+            "level": 1
+          },
+          "blueprintId": "architect_blueprint_artisan_finishes_v1"
+        },
+        "appearance": {
+          "version": 1,
+          "outputId": "aurora_wake",
+          "sourceId": "auroraWake",
+          "sourceManifestSha256": "b4b67f78efd4d74fa416e78822af9f0e037ad6d3bc30f3fc77127cd169292394",
+          "sourceIndexSha256": "04f96c922ca04d93f1bf760e6385713908b971ce82c3aa022602f1fa199e2181",
+          "bindingSha256": "f061211842f342a719bbf1ebe09ac2e085043c43f64f85bbc55582ec82d2a094"
+        },
+        "blueprint": {
+          "blueprintId": "architect_blueprint_artisan_finishes_v1",
+          "jobId": "fe9372ea-8125-4a9b-943b-1aacad652477",
+          "baseId": "73cfbe07-4f63-4c97-9afb-008740dd0978",
+          "actorWallet": "2ocaFuJySRdbx7SXK5ad2HKCbwPCnJFkvT3EwUmtPmaa",
+          "completedAt": "2026-09-29T20:48:47.569Z"
+        },
+        "startedAt": "2026-09-29T20:48:47.569Z",
+        "readyAt": "2026-09-29T20:58:47.569Z"
+      },
+      "completion": null
+    },
+    "preference": {
+      "enabled": false,
+      "revision": "0",
+      "visual": {
+        "state": "available",
+        "visual": {
+          "version": 1,
+          "wake": null
+        }
+      }
+    },
+    "selectedBase": {
+      "state": "available",
+      "baseId": "73cfbe07-4f63-4c97-9afb-008740dd0978",
+      "craftingStock": [
+        {
+          "itemId": "frostglass",
+          "available": "1",
+          "pendingOutput": "0"
+        },
+        {
+          "itemId": "heartwood_beams",
+          "available": "0",
+          "pendingOutput": "0"
+        },
+        {
+          "itemId": "sunstone_blocks",
+          "available": "0",
+          "pendingOutput": "0"
+        },
+        {
+          "itemId": "crownsteel",
+          "available": "0",
+          "pendingOutput": "0"
+        },
+        {
+          "itemId": "prismstone_lens",
+          "available": "0",
+          "pendingOutput": "0"
+        },
+        {
+          "itemId": "stormalloy",
+          "available": "0",
+          "pendingOutput": "0"
+        },
+        {
+          "itemId": "thornsilk",
+          "available": "0",
+          "pendingOutput": "0"
+        },
+        {
+          "itemId": "embercore",
+          "available": "0",
+          "pendingOutput": "0"
+        },
+        {
+          "itemId": "navigation_kit",
+          "available": "0",
+          "pendingOutput": "0"
+        },
+        {
+          "itemId": "climate_kit",
+          "available": "0",
+          "pendingOutput": "0"
+        },
+        {
+          "itemId": "expedition_kit",
+          "available": "0",
+          "pendingOutput": "0"
+        }
+      ],
+      "workshops": [
+        {
+          "buildingId": "9c4fd4ee-1f80-4393-bcf6-c0698b19e207",
+          "level": 1,
+          "completedAt": "2026-09-29T20:47:46.569Z"
+        }
+      ],
+      "queue": [
+        {
+          "jobId": "74945cd3-dee1-407c-b2a6-55d6e7dafb81",
+          "startedAt": "2026-09-29T20:48:47.569Z",
+          "readyAt": "2026-09-29T20:58:47.569Z",
+          "kind": "cosmetic",
+          "recipe": {
+            "recipeId": "craft_aurora_wake_v1",
+            "recipeVersion": 1,
+            "outputId": "aurora_wake",
+            "quantity": "1",
+            "durationSec": 600,
+            "inputs": [
+              {
+                "itemId": "prismstone_lens",
+                "quantity": "4"
+              },
+              {
+                "itemId": "frostglass",
+                "quantity": "4"
+              },
+              {
+                "itemId": "thornsilk",
+                "quantity": "4"
+              }
+            ],
+            "requiredFacility": {
+              "type": "lodge",
+              "level": 1
+            },
+            "blueprintId": "architect_blueprint_artisan_finishes_v1"
+          }
+        }
+      ],
+      "lodges": [
+        {
+          "buildingId": "dcd59897-a206-451a-8db4-88e9154fd91a",
+          "level": 1,
+          "completedAt": "2026-09-29T20:47:46.569Z"
+        }
+      ]
+    }
+  },
+  "completed": {
+    "version": 1,
+    "wallet": "2ocaFuJySRdbx7SXK5ad2HKCbwPCnJFkvT3EwUmtPmaa",
+    "serverNow": "2026-09-29T20:58:47.569Z",
+    "applicationReady": true,
+    "acceptingJobs": true,
+    "blueprint": {
+      "state": "eligible",
+      "proof": {
+        "blueprintId": "architect_blueprint_artisan_finishes_v1",
+        "jobId": "fe9372ea-8125-4a9b-943b-1aacad652477",
+        "baseId": "73cfbe07-4f63-4c97-9afb-008740dd0978",
+        "actorWallet": "2ocaFuJySRdbx7SXK5ad2HKCbwPCnJFkvT3EwUmtPmaa",
+        "completedAt": "2026-09-29T20:48:47.569Z"
+      }
+    },
+    "recipe": {
+      "recipe": {
+        "recipeId": "craft_aurora_wake_v1",
+        "recipeVersion": 1,
+        "outputId": "aurora_wake",
+        "quantity": "1",
+        "durationSec": 600,
+        "inputs": [
+          {
+            "itemId": "prismstone_lens",
+            "quantity": "4"
+          },
+          {
+            "itemId": "frostglass",
+            "quantity": "4"
+          },
+          {
+            "itemId": "thornsilk",
+            "quantity": "4"
+          }
+        ],
+        "requiredFacility": {
+          "type": "lodge",
+          "level": 1
+        },
+        "blueprintId": "architect_blueprint_artisan_finishes_v1"
+      },
+      "appearance": {
+        "version": 1,
+        "outputId": "aurora_wake",
+        "sourceId": "auroraWake",
+        "sourceManifestSha256": "b4b67f78efd4d74fa416e78822af9f0e037ad6d3bc30f3fc77127cd169292394",
+        "sourceIndexSha256": "04f96c922ca04d93f1bf760e6385713908b971ce82c3aa022602f1fa199e2181",
+        "bindingSha256": "f061211842f342a719bbf1ebe09ac2e085043c43f64f85bbc55582ec82d2a094"
+      }
+    },
+    "original": {
+      "version": 1,
+      "wallet": "2ocaFuJySRdbx7SXK5ad2HKCbwPCnJFkvT3EwUmtPmaa",
+      "idempotencyKey": "74945cd3-dee1-407c-b2a6-55d6e7dafb81",
+      "serverNow": "2026-09-29T20:58:47.569Z",
+      "status": "accepted",
+      "receipt": {
+        "wallet": "2ocaFuJySRdbx7SXK5ad2HKCbwPCnJFkvT3EwUmtPmaa",
+        "jobId": "74945cd3-dee1-407c-b2a6-55d6e7dafb81",
+        "request": {
+          "idempotencyKey": "74945cd3-dee1-407c-b2a6-55d6e7dafb81",
+          "baseId": "73cfbe07-4f63-4c97-9afb-008740dd0978",
+          "recipeId": "craft_aurora_wake_v1",
+          "recipeVersion": 1,
+          "appearanceBindingSha256": "f061211842f342a719bbf1ebe09ac2e085043c43f64f85bbc55582ec82d2a094"
+        },
+        "recipe": {
+          "recipeId": "craft_aurora_wake_v1",
+          "recipeVersion": 1,
+          "outputId": "aurora_wake",
+          "quantity": "1",
+          "durationSec": 600,
+          "inputs": [
+            {
+              "itemId": "prismstone_lens",
+              "quantity": "4"
+            },
+            {
+              "itemId": "frostglass",
+              "quantity": "4"
+            },
+            {
+              "itemId": "thornsilk",
+              "quantity": "4"
+            }
+          ],
+          "requiredFacility": {
+            "type": "lodge",
+            "level": 1
+          },
+          "blueprintId": "architect_blueprint_artisan_finishes_v1"
+        },
+        "appearance": {
+          "version": 1,
+          "outputId": "aurora_wake",
+          "sourceId": "auroraWake",
+          "sourceManifestSha256": "b4b67f78efd4d74fa416e78822af9f0e037ad6d3bc30f3fc77127cd169292394",
+          "sourceIndexSha256": "04f96c922ca04d93f1bf760e6385713908b971ce82c3aa022602f1fa199e2181",
+          "bindingSha256": "f061211842f342a719bbf1ebe09ac2e085043c43f64f85bbc55582ec82d2a094"
+        },
+        "blueprint": {
+          "blueprintId": "architect_blueprint_artisan_finishes_v1",
+          "jobId": "fe9372ea-8125-4a9b-943b-1aacad652477",
+          "baseId": "73cfbe07-4f63-4c97-9afb-008740dd0978",
+          "actorWallet": "2ocaFuJySRdbx7SXK5ad2HKCbwPCnJFkvT3EwUmtPmaa",
+          "completedAt": "2026-09-29T20:48:47.569Z"
+        },
+        "startedAt": "2026-09-29T20:48:47.569Z",
+        "readyAt": "2026-09-29T20:58:47.569Z"
+      },
+      "completion": {
+        "completedAt": "2026-09-29T20:58:47.569Z"
+      }
+    },
+    "preference": {
+      "enabled": false,
+      "revision": "0",
+      "visual": {
+        "state": "available",
+        "visual": {
+          "version": 1,
+          "wake": null
+        }
+      }
+    },
+    "selectedBase": {
+      "state": "available",
+      "baseId": "73cfbe07-4f63-4c97-9afb-008740dd0978",
+      "craftingStock": [
+        {
+          "itemId": "frostglass",
+          "available": "1",
+          "pendingOutput": "0"
+        },
+        {
+          "itemId": "heartwood_beams",
+          "available": "0",
+          "pendingOutput": "0"
+        },
+        {
+          "itemId": "sunstone_blocks",
+          "available": "0",
+          "pendingOutput": "0"
+        },
+        {
+          "itemId": "crownsteel",
+          "available": "0",
+          "pendingOutput": "0"
+        },
+        {
+          "itemId": "prismstone_lens",
+          "available": "0",
+          "pendingOutput": "0"
+        },
+        {
+          "itemId": "stormalloy",
+          "available": "0",
+          "pendingOutput": "0"
+        },
+        {
+          "itemId": "thornsilk",
+          "available": "0",
+          "pendingOutput": "0"
+        },
+        {
+          "itemId": "embercore",
+          "available": "0",
+          "pendingOutput": "0"
+        },
+        {
+          "itemId": "navigation_kit",
+          "available": "0",
+          "pendingOutput": "0"
+        },
+        {
+          "itemId": "climate_kit",
+          "available": "0",
+          "pendingOutput": "0"
+        },
+        {
+          "itemId": "expedition_kit",
+          "available": "0",
+          "pendingOutput": "0"
+        }
+      ],
+      "workshops": [
+        {
+          "buildingId": "9c4fd4ee-1f80-4393-bcf6-c0698b19e207",
+          "level": 1,
+          "completedAt": "2026-09-29T20:47:46.569Z"
+        }
+      ],
+      "queue": [],
+      "lodges": [
+        {
+          "buildingId": "dcd59897-a206-451a-8db4-88e9154fd91a",
+          "level": 1,
+          "completedAt": "2026-09-29T20:47:46.569Z"
+        }
+      ]
+    }
+  },
+  "original": {
+    "version": 1,
+    "wallet": "2ocaFuJySRdbx7SXK5ad2HKCbwPCnJFkvT3EwUmtPmaa",
+    "idempotencyKey": "74945cd3-dee1-407c-b2a6-55d6e7dafb81",
+    "serverNow": "2026-09-29T20:48:47.569Z",
+    "status": "accepted",
+    "receipt": {
+      "wallet": "2ocaFuJySRdbx7SXK5ad2HKCbwPCnJFkvT3EwUmtPmaa",
+      "jobId": "74945cd3-dee1-407c-b2a6-55d6e7dafb81",
+      "request": {
+        "idempotencyKey": "74945cd3-dee1-407c-b2a6-55d6e7dafb81",
+        "baseId": "73cfbe07-4f63-4c97-9afb-008740dd0978",
+        "recipeId": "craft_aurora_wake_v1",
+        "recipeVersion": 1,
+        "appearanceBindingSha256": "f061211842f342a719bbf1ebe09ac2e085043c43f64f85bbc55582ec82d2a094"
+      },
+      "recipe": {
+        "recipeId": "craft_aurora_wake_v1",
+        "recipeVersion": 1,
+        "outputId": "aurora_wake",
+        "quantity": "1",
+        "durationSec": 600,
+        "inputs": [
+          {
+            "itemId": "prismstone_lens",
+            "quantity": "4"
+          },
+          {
+            "itemId": "frostglass",
+            "quantity": "4"
+          },
+          {
+            "itemId": "thornsilk",
+            "quantity": "4"
+          }
+        ],
+        "requiredFacility": {
+          "type": "lodge",
+          "level": 1
+        },
+        "blueprintId": "architect_blueprint_artisan_finishes_v1"
+      },
+      "appearance": {
+        "version": 1,
+        "outputId": "aurora_wake",
+        "sourceId": "auroraWake",
+        "sourceManifestSha256": "b4b67f78efd4d74fa416e78822af9f0e037ad6d3bc30f3fc77127cd169292394",
+        "sourceIndexSha256": "04f96c922ca04d93f1bf760e6385713908b971ce82c3aa022602f1fa199e2181",
+        "bindingSha256": "f061211842f342a719bbf1ebe09ac2e085043c43f64f85bbc55582ec82d2a094"
+      },
+      "blueprint": {
+        "blueprintId": "architect_blueprint_artisan_finishes_v1",
+        "jobId": "fe9372ea-8125-4a9b-943b-1aacad652477",
+        "baseId": "73cfbe07-4f63-4c97-9afb-008740dd0978",
+        "actorWallet": "2ocaFuJySRdbx7SXK5ad2HKCbwPCnJFkvT3EwUmtPmaa",
+        "completedAt": "2026-09-29T20:48:47.569Z"
+      },
+      "startedAt": "2026-09-29T20:48:47.569Z",
+      "readyAt": "2026-09-29T20:58:47.569Z"
+    },
+    "completion": null
+  },
+  "on": {
+    "version": 1,
+    "wallet": "2KkRFX2uatupPXvWGkdBQ73CbhoZYjRuowzpvesuZkh7",
+    "serverNow": "2026-09-29T20:58:54.651Z",
+    "applicationReady": true,
+    "acceptingJobs": true,
+    "blueprint": {
+      "state": "eligible",
+      "proof": {
+        "blueprintId": "architect_blueprint_artisan_finishes_v1",
+        "jobId": "858d4b64-fb8c-4cbc-938f-3d4d4f7a929a",
+        "baseId": "9e6fe5db-b5df-4835-bfa0-ff19ccb686da",
+        "actorWallet": "2KkRFX2uatupPXvWGkdBQ73CbhoZYjRuowzpvesuZkh7",
+        "completedAt": "2026-09-29T20:48:54.651Z"
+      }
+    },
+    "recipe": {
+      "recipe": {
+        "recipeId": "craft_aurora_wake_v1",
+        "recipeVersion": 1,
+        "outputId": "aurora_wake",
+        "quantity": "1",
+        "durationSec": 600,
+        "inputs": [
+          {
+            "itemId": "prismstone_lens",
+            "quantity": "4"
+          },
+          {
+            "itemId": "frostglass",
+            "quantity": "4"
+          },
+          {
+            "itemId": "thornsilk",
+            "quantity": "4"
+          }
+        ],
+        "requiredFacility": {
+          "type": "lodge",
+          "level": 1
+        },
+        "blueprintId": "architect_blueprint_artisan_finishes_v1"
+      },
+      "appearance": {
+        "version": 1,
+        "outputId": "aurora_wake",
+        "sourceId": "auroraWake",
+        "sourceManifestSha256": "b4b67f78efd4d74fa416e78822af9f0e037ad6d3bc30f3fc77127cd169292394",
+        "sourceIndexSha256": "04f96c922ca04d93f1bf760e6385713908b971ce82c3aa022602f1fa199e2181",
+        "bindingSha256": "f061211842f342a719bbf1ebe09ac2e085043c43f64f85bbc55582ec82d2a094"
+      }
+    },
+    "original": {
+      "version": 1,
+      "wallet": "2KkRFX2uatupPXvWGkdBQ73CbhoZYjRuowzpvesuZkh7",
+      "idempotencyKey": "cfc08706-d750-4bb6-8ddd-00463d89cdf7",
+      "serverNow": "2026-09-29T20:58:54.651Z",
+      "status": "accepted",
+      "receipt": {
+        "wallet": "2KkRFX2uatupPXvWGkdBQ73CbhoZYjRuowzpvesuZkh7",
+        "jobId": "cfc08706-d750-4bb6-8ddd-00463d89cdf7",
+        "request": {
+          "idempotencyKey": "cfc08706-d750-4bb6-8ddd-00463d89cdf7",
+          "baseId": "9e6fe5db-b5df-4835-bfa0-ff19ccb686da",
+          "recipeId": "craft_aurora_wake_v1",
+          "recipeVersion": 1,
+          "appearanceBindingSha256": "f061211842f342a719bbf1ebe09ac2e085043c43f64f85bbc55582ec82d2a094"
+        },
+        "recipe": {
+          "recipeId": "craft_aurora_wake_v1",
+          "recipeVersion": 1,
+          "outputId": "aurora_wake",
+          "quantity": "1",
+          "durationSec": 600,
+          "inputs": [
+            {
+              "itemId": "prismstone_lens",
+              "quantity": "4"
+            },
+            {
+              "itemId": "frostglass",
+              "quantity": "4"
+            },
+            {
+              "itemId": "thornsilk",
+              "quantity": "4"
+            }
+          ],
+          "requiredFacility": {
+            "type": "lodge",
+            "level": 1
+          },
+          "blueprintId": "architect_blueprint_artisan_finishes_v1"
+        },
+        "appearance": {
+          "version": 1,
+          "outputId": "aurora_wake",
+          "sourceId": "auroraWake",
+          "sourceManifestSha256": "b4b67f78efd4d74fa416e78822af9f0e037ad6d3bc30f3fc77127cd169292394",
+          "sourceIndexSha256": "04f96c922ca04d93f1bf760e6385713908b971ce82c3aa022602f1fa199e2181",
+          "bindingSha256": "f061211842f342a719bbf1ebe09ac2e085043c43f64f85bbc55582ec82d2a094"
+        },
+        "blueprint": {
+          "blueprintId": "architect_blueprint_artisan_finishes_v1",
+          "jobId": "858d4b64-fb8c-4cbc-938f-3d4d4f7a929a",
+          "baseId": "9e6fe5db-b5df-4835-bfa0-ff19ccb686da",
+          "actorWallet": "2KkRFX2uatupPXvWGkdBQ73CbhoZYjRuowzpvesuZkh7",
+          "completedAt": "2026-09-29T20:48:54.651Z"
+        },
+        "startedAt": "2026-09-29T20:48:54.651Z",
+        "readyAt": "2026-09-29T20:58:54.651Z"
+      },
+      "completion": {
+        "completedAt": "2026-09-29T20:58:54.651Z"
+      }
+    },
+    "preference": {
+      "enabled": true,
+      "revision": "1",
+      "visual": {
+        "state": "available",
+        "visual": {
+          "version": 1,
+          "wake": {
+            "version": 1,
+            "outputId": "aurora_wake",
+            "sourceId": "auroraWake",
+            "sourceManifestSha256": "b4b67f78efd4d74fa416e78822af9f0e037ad6d3bc30f3fc77127cd169292394",
+            "sourceIndexSha256": "04f96c922ca04d93f1bf760e6385713908b971ce82c3aa022602f1fa199e2181",
+            "bindingSha256": "f061211842f342a719bbf1ebe09ac2e085043c43f64f85bbc55582ec82d2a094"
+          }
+        }
+      }
+    },
+    "selectedBase": null
+  },
+  "runtime": {
+    "version": 1,
+    "wallet": "9YcH8Ffv5p9A7Pj3TNU9qKro4y8H6CcNDSUEvnaGdGWd",
+    "serverNow": "2026-09-30T20:48:00.978Z",
+    "applicationReady": false,
+    "acceptingJobs": false,
+    "blueprint": {
+      "state": "eligible",
+      "proof": {
+        "blueprintId": "architect_blueprint_artisan_finishes_v1",
+        "jobId": "965aa9e4-1f9a-4797-98ac-134ae3287247",
+        "baseId": "d96ba777-cb9a-4e77-abc8-3fdfdce93b56",
+        "actorWallet": "9YcH8Ffv5p9A7Pj3TNU9qKro4y8H6CcNDSUEvnaGdGWd",
+        "completedAt": "2026-09-29T20:48:59.127Z"
+      }
+    },
+    "recipe": {
+      "recipe": {
+        "recipeId": "craft_aurora_wake_v1",
+        "recipeVersion": 1,
+        "outputId": "aurora_wake",
+        "quantity": "1",
+        "durationSec": 600,
+        "inputs": [
+          {
+            "itemId": "prismstone_lens",
+            "quantity": "4"
+          },
+          {
+            "itemId": "frostglass",
+            "quantity": "4"
+          },
+          {
+            "itemId": "thornsilk",
+            "quantity": "4"
+          }
+        ],
+        "requiredFacility": {
+          "type": "lodge",
+          "level": 1
+        },
+        "blueprintId": "architect_blueprint_artisan_finishes_v1"
+      },
+      "appearance": {
+        "version": 1,
+        "outputId": "aurora_wake",
+        "sourceId": "auroraWake",
+        "sourceManifestSha256": "b4b67f78efd4d74fa416e78822af9f0e037ad6d3bc30f3fc77127cd169292394",
+        "sourceIndexSha256": "04f96c922ca04d93f1bf760e6385713908b971ce82c3aa022602f1fa199e2181",
+        "bindingSha256": "f061211842f342a719bbf1ebe09ac2e085043c43f64f85bbc55582ec82d2a094"
+      }
+    },
+    "original": null,
+    "preference": {
+      "enabled": false,
+      "revision": "0",
+      "visual": {
+        "state": "available",
+        "visual": {
+          "version": 1,
+          "wake": null
+        }
+      }
+    },
+    "selectedBase": {
+      "state": "available",
+      "baseId": "d96ba777-cb9a-4e77-abc8-3fdfdce93b56",
+      "craftingStock": [
+        {
+          "itemId": "frostglass",
+          "available": "4",
+          "pendingOutput": "0"
+        },
+        {
+          "itemId": "heartwood_beams",
+          "available": "0",
+          "pendingOutput": "0"
+        },
+        {
+          "itemId": "sunstone_blocks",
+          "available": "0",
+          "pendingOutput": "0"
+        },
+        {
+          "itemId": "crownsteel",
+          "available": "0",
+          "pendingOutput": "0"
+        },
+        {
+          "itemId": "prismstone_lens",
+          "available": "4",
+          "pendingOutput": "0"
+        },
+        {
+          "itemId": "stormalloy",
+          "available": "0",
+          "pendingOutput": "0"
+        },
+        {
+          "itemId": "thornsilk",
+          "available": "4",
+          "pendingOutput": "0"
+        },
+        {
+          "itemId": "embercore",
+          "available": "0",
+          "pendingOutput": "0"
+        },
+        {
+          "itemId": "navigation_kit",
+          "available": "0",
+          "pendingOutput": "0"
+        },
+        {
+          "itemId": "climate_kit",
+          "available": "0",
+          "pendingOutput": "0"
+        },
+        {
+          "itemId": "expedition_kit",
+          "available": "0",
+          "pendingOutput": "0"
+        }
+      ],
+      "workshops": [
+        {
+          "buildingId": "ba5ce520-b9c1-48fb-84ee-dd01015f6695",
+          "level": 1,
+          "completedAt": "2026-09-29T20:47:58.127Z"
+        }
+      ],
+      "queue": [],
+      "lodges": [
+        {
+          "buildingId": "29913fd3-6eb9-420c-96b4-be77a8c1a58b",
+          "level": 1,
+          "completedAt": "2026-09-29T20:47:58.127Z"
+        }
+      ]
+    }
+  }
+}

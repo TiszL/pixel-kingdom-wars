@@ -1,0 +1,13 @@
+.pk-rewards { display:grid; gap:var(--pk-s16); min-width:0; }
+.pk-rewards h2 { font:inherit; margin:0 0 var(--pk-s8); overflow-wrap:anywhere; }
+.pk-rewards__quest > .pk-plate__face { align-items:center; }
+.pk-rewards__quest--ready > .pk-plate__face { background:var(--pk-gold-hi); }
+.pk-rewards__progress { display:flex; align-items:center; gap:var(--pk-s8); margin-top:var(--pk-s8); }
+.pk-rewards__progress progress { min-width:0; flex:1; accent-color:var(--pk-gold); height:var(--pk-s8); }
+.pk-rewards__body { white-space:pre-wrap; overflow-wrap:anywhere; }
+.pk-rewards__mail-nav { display:flex; justify-content:flex-end; margin-bottom:var(--pk-s8); }
+html[data-pk-vp="phone-portrait"] .pk-rewards { gap:var(--pk-s12); }
+html[data-pk-vp="phone-landscape"] .pk-rewards { gap:var(--pk-s8); }
+html[data-pk-vp="tablet-portrait"] .pk-rewards { gap:var(--pk-s16); }
+html[data-pk-vp="tablet-landscape"] .pk-rewards { gap:var(--pk-s16); }
+html[data-pk-vp="desktop"] .pk-rewards { gap:var(--pk-s16); }

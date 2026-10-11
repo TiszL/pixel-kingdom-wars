@@ -1,0 +1,879 @@
+{
+  "version": 1,
+  "fixtureOnly": true,
+  "rows": [
+    {
+      "action": "set",
+      "leader": "CPRu2siU6U4d3LWWc7CeqKraWxBSLhXfrL3jGpxEzWpV",
+      "trust": {
+        "version": 1,
+        "revision": "owned-fixture",
+        "deployment": {
+          "expectedGenesisHash": "k7FaK87WHGVXzkaoHb7CdVPgkKDQhZ29VLDeBVbDfYn",
+          "economy": {
+            "programId": "YMN9Qj5jPNp7j14VPcML1B6xGgcPWVZUGLFU3Mnyfaf",
+            "reviewedDeploymentSlot": 90,
+            "reviewedProgramDataSha256": "f5a0b160e4f5a449677561ea8650e46b18d84b698fff6375a13d250d81eb25b0",
+            "upgradeAuthority": "p2Yicb86aZig616Eav2VWG9vuXR5mEqhtzshZYBxzsV"
+          },
+          "craft": {
+            "programId": "cGfHiC6Kgg3FpFZvgwGcswsCRtp4aBP2fzuXRQPizuN",
+            "reviewedDeploymentSlot": 90,
+            "reviewedProgramDataSha256": "938c89fe46328aed9e477639354a925840713200a40d1d0ee3a83e238b383deb",
+            "upgradeAuthority": "p2Yicb86aZig616Eav2VWG9vuXR5mEqhtzshZYBxzsV"
+          },
+          "core": {
+            "programId": "CoREENxT6tW1HoK8ypY1SxRMZTcVPm7R94rH4PZNhX7d",
+            "reviewedDeploymentSlot": 90,
+            "reviewedProgramDataSha256": "1e3539aa2e2420ee5dd5a2a9ab5c2bdf44af1110b01669d82f6013cfdc33f0bd",
+            "upgradeAuthority": "p2Yicb86aZig616Eav2VWG9vuXR5mEqhtzshZYBxzsV"
+          },
+          "stateProvenance": "fresh-reviewed-deployment"
+        },
+        "policySigner": "E1LJv6bmhTBVv3G4Xx8Z8MWMHeZ44Vqy7NHrunYTC7SW",
+        "treasury": "HjMsHzCsHM1MFT1dGDt24WNXu2rGSGzVBbxT4jVFZbSU",
+        "royaltyBps": 500,
+        "lookupTables": [
+          {
+            "address": "8oKVL6HGWQJCHEUxPxwoGKR5oke3FrBRngyTcQbhGfKe",
+            "dataSha256": "2e1620b3424ac67bc4bb324236874c5d491e79f3162b96b0b259bd3e8cf19fa5"
+          }
+        ]
+      },
+      "operation": {
+        "version": 1,
+        "original": {
+          "creation": {
+            "creationIntentId": "87654321-4321-4321-8abc-def012345678",
+            "clanId": "12345678-1234-5678-9abc-def012345678",
+            "payer": "gBxS1f6uyyGPuW5MzGBukidSb71jdsCb5fZaoSzULE5",
+            "metadata": {
+              "name": "First Charter",
+              "uri": "https://invalid.example/charter.json",
+              "hash": "4f0392a0285564b4bf94c613c212cd787723ea89e80aa5dfd818366af2fa1180"
+            },
+            "chain": {
+              "genesisHash": "k7FaK87WHGVXzkaoHb7CdVPgkKDQhZ29VLDeBVbDfYn",
+              "economyProgram": "YMN9Qj5jPNp7j14VPcML1B6xGgcPWVZUGLFU3Mnyfaf",
+              "craftProgram": "cGfHiC6Kgg3FpFZvgwGcswsCRtp4aBP2fzuXRQPizuN",
+              "config": "9CNAWDPg4zcpyAvkm4DGSWDeoekVT1YC9Nycw3HfmFyL",
+              "craftControl": "4r1UBxBzT1fXfi9ktj6wJGo3F63DsFXvyKMrNoHPf4CQ",
+              "collection": "6k1xZbVr1duH2FcWnMjPAwbAiyTL94ke8ZcaAdqhzkWS",
+              "collectionAuthority": "5dkxi2XeXHSfMoxdgSMiM82Qod8xcHxG9bx5gL6Gih4v",
+              "charter": "3VmX1RNUnQBQnPrtAuDyGz9ARqHAQ85hAtf9xKwRd4CC",
+              "asset": "2c5mZ1BWswRT5HkYQQLd12G1EtJsEs3edEVN5tQ5cYNC",
+              "assetBinding": "9NXtzuRtjWcVesRPCgfeJoR7KB7KRXfvEVoe4GEJtK2Q",
+              "freezeAuthority": "7VoXQLmhjbm3BRPutq4pd1m5yASUBKCqf5tfxFpAeXp5",
+              "executor": "8BHXbSSKHcEzMg9nJS4FXRJFWJc7TaB32dWEMw4kZnFA",
+              "creationReceipt": "eAMjMW9ioBZuhATXJQ81evXBayNnesTFk4iRPHDrCER"
+            },
+            "admissionCommitment": "abababababababababababababababababababababababababababababababab",
+            "issuedPermitIds": [
+              "00000000000000000000000000000000",
+              "cdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcd"
+            ]
+          },
+          "operation": {
+            "id": "12345678-1234-4678-9abc-def012345680",
+            "fenceId": "12345678-1234-4678-9abc-def012345681",
+            "eventId": "12345678-1234-4678-9abc-def012345682",
+            "leader": "CPRu2siU6U4d3LWWc7CeqKraWxBSLhXfrL3jGpxEzWpV",
+            "lockId": "12345678-1234-4678-9abc-def012345683",
+            "expectedRevision": 0,
+            "action": "set",
+            "termsHash": "4e7b1d22650271fcf68a56571d62fffcbe0766295925302de35b4f2178870dc5"
+          }
+        },
+        "operationTerms": {
+          "version": 1,
+          "epochId": "12345678-1234-4678-9abc-def012345684",
+          "entryId": "12345678-1234-4678-9abc-def012345681",
+          "eventId": "12345678-1234-4678-9abc-def012345682",
+          "clanId": "12345678-1234-5678-9abc-def012345678",
+          "leader": "CPRu2siU6U4d3LWWc7CeqKraWxBSLhXfrL3jGpxEzWpV",
+          "lockId": "12345678-1234-4678-9abc-def012345683",
+          "fenceId": "12345678-1234-4678-9abc-def012345681",
+          "operationId": "12345678-1234-4678-9abc-def012345680",
+          "action": "set",
+          "expectedRevision": 0,
+          "domain": {
+            "genesisHash": "k7FaK87WHGVXzkaoHb7CdVPgkKDQhZ29VLDeBVbDfYn",
+            "economyProgram": "YMN9Qj5jPNp7j14VPcML1B6xGgcPWVZUGLFU3Mnyfaf",
+            "craftProgram": "cGfHiC6Kgg3FpFZvgwGcswsCRtp4aBP2fzuXRQPizuN",
+            "treasury": "HjMsHzCsHM1MFT1dGDt24WNXu2rGSGzVBbxT4jVFZbSU"
+          },
+          "event": {
+            "version": 1,
+            "id": "12345678-1234-4678-9abc-def012345682",
+            "domain": {
+              "genesisHash": "k7FaK87WHGVXzkaoHb7CdVPgkKDQhZ29VLDeBVbDfYn",
+              "economyProgram": "YMN9Qj5jPNp7j14VPcML1B6xGgcPWVZUGLFU3Mnyfaf",
+              "craftProgram": "cGfHiC6Kgg3FpFZvgwGcswsCRtp4aBP2fzuXRQPizuN",
+              "treasury": "HjMsHzCsHM1MFT1dGDt24WNXu2rGSGzVBbxT4jVFZbSU"
+            },
+            "sponsorWallet": "CPRu2siU6U4d3LWWc7CeqKraWxBSLhXfrL3jGpxEzWpV",
+            "entryStartsAt": "2026-10-03T00:00:00.000Z",
+            "playStartsAt": "2026-10-04T00:00:00.000Z",
+            "playEndsAt": "2026-10-05T00:00:00.000Z",
+            "occupationEndsAt": "2026-10-12T00:00:00.000Z",
+            "policy": {
+              "version": 1,
+              "entryWeekdayUtc": 6,
+              "entryDurationDays": 1,
+              "playDurationDays": 1,
+              "occupationDurationDays": 7,
+              "raidsPerWallet": 3,
+              "maxPendingRequestsPerWallet": 1,
+              "maxRequestIdentitiesPerWallet": 16,
+              "divineSites": 50,
+              "maxStarsPerRaid": 3,
+              "maxDestructionPerRaid": 100,
+              "maxReplayInputBytes": 16777216,
+              "rosterCap": 20,
+              "freeRaidsPerBaseDay": 6,
+              "prizeItems": [
+                "frostglass",
+                "heartwood_beams",
+                "sunstone_blocks",
+                "crownsteel",
+                "prismstone_lens",
+                "stormalloy",
+                "thornsilk",
+                "embercore"
+              ],
+              "fragments": "held",
+              "prizeSource": "funded-existing-refined-stock"
+            },
+            "budget": {
+              "frostglass": "100",
+              "heartwood_beams": "100",
+              "sunstone_blocks": "100",
+              "crownsteel": "100",
+              "prismstone_lens": "100",
+              "stormalloy": "100",
+              "thornsilk": "100",
+              "embercore": "100"
+            }
+          },
+          "roster": [
+            "CPRu2siU6U4d3LWWc7CeqKraWxBSLhXfrL3jGpxEzWpV"
+          ],
+          "clearance": null
+        },
+        "status": "prepared",
+        "entryId": "12345678-1234-4678-9abc-def012345681",
+        "attempt": {
+          "id": "12345678-1234-4678-9abc-def012345685",
+          "candidateHex": "534b5045524d54320b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0808080808080808080808080808080808080808080808080808080808080808062c2c2c2c2c2c2c2c2c2c2c2c2c2c2c2ca92f7c38b5c638340ebc0702bac693cd9a9b71bbe87bf0bacac89d9fdfa65f2e26d4496b0000000043a149edc3bbce0388a7e4efa49f199e2fba6ab9f0016c14342b04ffce4c8e3d",
+          "policySigner": "E1LJv6bmhTBVv3G4Xx8Z8MWMHeZ44Vqy7NHrunYTC7SW",
+          "quote": {
+            "version": 1,
+            "packetInput": {
+              "original": {
+                "creation": {
+                  "creationIntentId": "87654321-4321-4321-8abc-def012345678",
+                  "clanId": "12345678-1234-5678-9abc-def012345678",
+                  "payer": "gBxS1f6uyyGPuW5MzGBukidSb71jdsCb5fZaoSzULE5",
+                  "metadata": {
+                    "name": "First Charter",
+                    "uri": "https://invalid.example/charter.json",
+                    "hash": "4f0392a0285564b4bf94c613c212cd787723ea89e80aa5dfd818366af2fa1180"
+                  },
+                  "chain": {
+                    "genesisHash": "k7FaK87WHGVXzkaoHb7CdVPgkKDQhZ29VLDeBVbDfYn",
+                    "economyProgram": "YMN9Qj5jPNp7j14VPcML1B6xGgcPWVZUGLFU3Mnyfaf",
+                    "craftProgram": "cGfHiC6Kgg3FpFZvgwGcswsCRtp4aBP2fzuXRQPizuN",
+                    "config": "9CNAWDPg4zcpyAvkm4DGSWDeoekVT1YC9Nycw3HfmFyL",
+                    "craftControl": "4r1UBxBzT1fXfi9ktj6wJGo3F63DsFXvyKMrNoHPf4CQ",
+                    "collection": "6k1xZbVr1duH2FcWnMjPAwbAiyTL94ke8ZcaAdqhzkWS",
+                    "collectionAuthority": "5dkxi2XeXHSfMoxdgSMiM82Qod8xcHxG9bx5gL6Gih4v",
+                    "charter": "3VmX1RNUnQBQnPrtAuDyGz9ARqHAQ85hAtf9xKwRd4CC",
+                    "asset": "2c5mZ1BWswRT5HkYQQLd12G1EtJsEs3edEVN5tQ5cYNC",
+                    "assetBinding": "9NXtzuRtjWcVesRPCgfeJoR7KB7KRXfvEVoe4GEJtK2Q",
+                    "freezeAuthority": "7VoXQLmhjbm3BRPutq4pd1m5yASUBKCqf5tfxFpAeXp5",
+                    "executor": "8BHXbSSKHcEzMg9nJS4FXRJFWJc7TaB32dWEMw4kZnFA",
+                    "creationReceipt": "eAMjMW9ioBZuhATXJQ81evXBayNnesTFk4iRPHDrCER"
+                  },
+                  "admissionCommitment": "abababababababababababababababababababababababababababababababab",
+                  "issuedPermitIds": [
+                    "00000000000000000000000000000000",
+                    "cdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcd"
+                  ]
+                },
+                "operation": {
+                  "id": "12345678-1234-4678-9abc-def012345680",
+                  "fenceId": "12345678-1234-4678-9abc-def012345681",
+                  "eventId": "12345678-1234-4678-9abc-def012345682",
+                  "leader": "CPRu2siU6U4d3LWWc7CeqKraWxBSLhXfrL3jGpxEzWpV",
+                  "lockId": "12345678-1234-4678-9abc-def012345683",
+                  "expectedRevision": 0,
+                  "action": "set",
+                  "termsHash": "4e7b1d22650271fcf68a56571d62fffcbe0766295925302de35b4f2178870dc5"
+                }
+              },
+              "candidateHex": "534b5045524d54320b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0808080808080808080808080808080808080808080808080808080808080808062c2c2c2c2c2c2c2c2c2c2c2c2c2c2c2ca92f7c38b5c638340ebc0702bac693cd9a9b71bbe87bf0bacac89d9fdfa65f2e26d4496b0000000043a149edc3bbce0388a7e4efa49f199e2fba6ab9f0016c14342b04ffce4c8e3d",
+              "policySigner": "E1LJv6bmhTBVv3G4Xx8Z8MWMHeZ44Vqy7NHrunYTC7SW",
+              "lookupTable": {
+                "address": "8oKVL6HGWQJCHEUxPxwoGKR5oke3FrBRngyTcQbhGfKe",
+                "owner": "AddressLookupTab1e1111111111111111111111111",
+                "executable": false,
+                "dataHex": "01000000ffffffffffffffff6400000000000000000000000000000000000000000000000000000000000000000000000000000000000000438ec835567903a075f2da87a5de6da4ded9c19b8702a28554c83a336104a6cb79c6d079def99d819c8945785161e84e6631d2347ce3cd61a71811c765c8887bb8d7e58651ea55302ad72de4033e6ebba1ea93f71bbaf6f211091d12e7de88f4090909090909090909090909090909090909090909090909090909090909090939210ceb640218a9a290e1c1a80d348edd1a14f92944f7ea2ef89c79cb209251554f7e1ad0464be7d8aefea57b6186c6280ea4afcef521c522fada21703f5d9f44d95cf3d84bf8609893707210c028876d5c0d8510a7ef41559162a09432b13baf54ab10bd97a542a09ef7b39889dd0cd394a4cce9dfa6cdc97ebe2d235ba74806a7d517187bd16635dad40455fdc2c0c124c68f215675a5dbbacb5f0800000000000000000000000000000000000000000000000000000000000000000000000808080808080808080808080808080808080808080808080808080808080808f894fab54a800d99242f10627eae371a774ecdddacec4da0868a975106722bed",
+                "slot": 150
+              },
+              "expectedLookupTable": {
+                "address": "8oKVL6HGWQJCHEUxPxwoGKR5oke3FrBRngyTcQbhGfKe",
+                "dataSha256": "2e1620b3424ac67bc4bb324236874c5d491e79f3162b96b0b259bd3e8cf19fa5"
+              },
+              "blockhash": "4v7BzAwGrByXjC8996wbAtsKiiy7ZX7VNcE7eh8Djq4U",
+              "blockhashSlot": 150,
+              "lastValidBlockHeight": 300,
+              "currentBlockHeight": 200
+            },
+            "observation": {
+              "slot": 150,
+              "unixTimestamp": "1800000010",
+              "registryRevision": 0,
+              "registryLeader": "CPRu2siU6U4d3LWWc7CeqKraWxBSLhXfrL3jGpxEzWpV",
+              "lockKind": 0,
+              "lockId": "00000000000000000000000000000000",
+              "policySigner": "E1LJv6bmhTBVv3G4Xx8Z8MWMHeZ44Vqy7NHrunYTC7SW",
+              "admissionPaused": false,
+              "craftPaused": false,
+              "source": {
+                "genesisHash": "k7FaK87WHGVXzkaoHb7CdVPgkKDQhZ29VLDeBVbDfYn",
+                "programs": {
+                  "expectedGenesisHash": "k7FaK87WHGVXzkaoHb7CdVPgkKDQhZ29VLDeBVbDfYn",
+                  "economy": {
+                    "programId": "YMN9Qj5jPNp7j14VPcML1B6xGgcPWVZUGLFU3Mnyfaf",
+                    "reviewedDeploymentSlot": 90,
+                    "reviewedProgramDataSha256": "f5a0b160e4f5a449677561ea8650e46b18d84b698fff6375a13d250d81eb25b0",
+                    "upgradeAuthority": "p2Yicb86aZig616Eav2VWG9vuXR5mEqhtzshZYBxzsV"
+                  },
+                  "craft": {
+                    "programId": "cGfHiC6Kgg3FpFZvgwGcswsCRtp4aBP2fzuXRQPizuN",
+                    "reviewedDeploymentSlot": 90,
+                    "reviewedProgramDataSha256": "938c89fe46328aed9e477639354a925840713200a40d1d0ee3a83e238b383deb",
+                    "upgradeAuthority": "p2Yicb86aZig616Eav2VWG9vuXR5mEqhtzshZYBxzsV"
+                  },
+                  "core": {
+                    "programId": "CoREENxT6tW1HoK8ypY1SxRMZTcVPm7R94rH4PZNhX7d",
+                    "reviewedDeploymentSlot": 90,
+                    "reviewedProgramDataSha256": "1e3539aa2e2420ee5dd5a2a9ab5c2bdf44af1110b01669d82f6013cfdc33f0bd",
+                    "upgradeAuthority": "p2Yicb86aZig616Eav2VWG9vuXR5mEqhtzshZYBxzsV"
+                  },
+                  "stateProvenance": "fresh-reviewed-deployment"
+                },
+                "accounts": [
+                  {
+                    "address": "YMN9Qj5jPNp7j14VPcML1B6xGgcPWVZUGLFU3Mnyfaf",
+                    "owner": "BPFLoaderUpgradeab1e11111111111111111111111",
+                    "executable": true,
+                    "dataSha256": "157021154ded7538415af4c777ef1e49c31aac895c88a25d8cd7c8107c3b25e8"
+                  },
+                  {
+                    "address": "DZpoFMtx11Jv1yKM3L37iYBM7KPNXEMrWxqfhC5U1jfT",
+                    "owner": "BPFLoaderUpgradeab1e11111111111111111111111",
+                    "executable": false,
+                    "dataSha256": "f5a0b160e4f5a449677561ea8650e46b18d84b698fff6375a13d250d81eb25b0"
+                  },
+                  {
+                    "address": "cGfHiC6Kgg3FpFZvgwGcswsCRtp4aBP2fzuXRQPizuN",
+                    "owner": "BPFLoaderUpgradeab1e11111111111111111111111",
+                    "executable": true,
+                    "dataSha256": "038656d2f591744ce69fa10413f522fc28b60b55b7fc35c5328c6574664dd725"
+                  },
+                  {
+                    "address": "Hibe1esmNpASGJBynhevaMybmY2gcGcPDrfz8zMZyw1J",
+                    "owner": "BPFLoaderUpgradeab1e11111111111111111111111",
+                    "executable": false,
+                    "dataSha256": "938c89fe46328aed9e477639354a925840713200a40d1d0ee3a83e238b383deb"
+                  },
+                  {
+                    "address": "CoREENxT6tW1HoK8ypY1SxRMZTcVPm7R94rH4PZNhX7d",
+                    "owner": "BPFLoaderUpgradeab1e11111111111111111111111",
+                    "executable": true,
+                    "dataSha256": "d1cba9d33b57f2e5af22d5b07ef88662aa6189b55969d1c928610f1c295cb21d"
+                  },
+                  {
+                    "address": "9ZC25KLUrfgSoFVgjE1rrydZBbZns58UXi8A8ZhTdGfr",
+                    "owner": "BPFLoaderUpgradeab1e11111111111111111111111",
+                    "executable": false,
+                    "dataSha256": "1e3539aa2e2420ee5dd5a2a9ab5c2bdf44af1110b01669d82f6013cfdc33f0bd"
+                  },
+                  {
+                    "address": "5YibPcyVtfbvXvsYCKMSGauQ65ufH9wiUhCgMCx4Jsfp",
+                    "owner": "YMN9Qj5jPNp7j14VPcML1B6xGgcPWVZUGLFU3Mnyfaf",
+                    "executable": false,
+                    "dataSha256": "fa0a7143568be63dfda58dd2809dbb357d06b8871b28dd2bb812d1a81ea98b5c"
+                  },
+                  {
+                    "address": "9CNAWDPg4zcpyAvkm4DGSWDeoekVT1YC9Nycw3HfmFyL",
+                    "owner": "YMN9Qj5jPNp7j14VPcML1B6xGgcPWVZUGLFU3Mnyfaf",
+                    "executable": false,
+                    "dataSha256": "1d9d1ee94a6c797492997871eec77d01dcaf0301dba18db038ef506b4594a02d"
+                  },
+                  {
+                    "address": "4r1UBxBzT1fXfi9ktj6wJGo3F63DsFXvyKMrNoHPf4CQ",
+                    "owner": "cGfHiC6Kgg3FpFZvgwGcswsCRtp4aBP2fzuXRQPizuN",
+                    "executable": false,
+                    "dataSha256": "acf62051f791914514261ecb7ec5184aa577db6df8e37942d94ce1422af4f948"
+                  },
+                  {
+                    "address": "3VmX1RNUnQBQnPrtAuDyGz9ARqHAQ85hAtf9xKwRd4CC",
+                    "owner": "YMN9Qj5jPNp7j14VPcML1B6xGgcPWVZUGLFU3Mnyfaf",
+                    "executable": false,
+                    "dataSha256": "11e73e62da4d7b579331abcb8826143bc05a0cb9b8dbcd615ebef9a34e2e5432"
+                  },
+                  {
+                    "address": "eAMjMW9ioBZuhATXJQ81evXBayNnesTFk4iRPHDrCER",
+                    "owner": "YMN9Qj5jPNp7j14VPcML1B6xGgcPWVZUGLFU3Mnyfaf",
+                    "executable": false,
+                    "dataSha256": "6dc645fdeb34e598ac4da277421a960555c63a11ef8525a218f553b51c1fd6fc"
+                  },
+                  {
+                    "address": "9NXtzuRtjWcVesRPCgfeJoR7KB7KRXfvEVoe4GEJtK2Q",
+                    "owner": "YMN9Qj5jPNp7j14VPcML1B6xGgcPWVZUGLFU3Mnyfaf",
+                    "executable": false,
+                    "dataSha256": "9fd0c6c46505b686d1eb50e34f5be30a9d01130550b681587e8738ce176444ec"
+                  },
+                  {
+                    "address": "2c5mZ1BWswRT5HkYQQLd12G1EtJsEs3edEVN5tQ5cYNC",
+                    "owner": "CoREENxT6tW1HoK8ypY1SxRMZTcVPm7R94rH4PZNhX7d",
+                    "executable": false,
+                    "dataSha256": "782c5ae9a7c5e3b5dee3606361c57714492f8dd7898f29627f1c7830e2dac86f"
+                  },
+                  {
+                    "address": "6k1xZbVr1duH2FcWnMjPAwbAiyTL94ke8ZcaAdqhzkWS",
+                    "owner": "CoREENxT6tW1HoK8ypY1SxRMZTcVPm7R94rH4PZNhX7d",
+                    "executable": false,
+                    "dataSha256": "23631b5f9db876d5f079f6fc68507f3cb002546e1a48fd6dafef558ec66ecb1f"
+                  },
+                  {
+                    "address": "SysvarC1ock11111111111111111111111111111111",
+                    "owner": "Sysvar1111111111111111111111111111111111111",
+                    "executable": false,
+                    "dataSha256": "333d11c13a5392bdb046301f919fb52792a43d1660f7f498ce166216b4d2d60a"
+                  },
+                  {
+                    "address": "k8uXgVAHghRxk7djZWsvq2WCioLMjCTM8W6SihQ4ZWB",
+                    "owner": null,
+                    "executable": null,
+                    "dataSha256": null
+                  }
+                ]
+              }
+            },
+            "template": {
+              "version": 1,
+              "messageHex": "8001000306a92f7c38b5c638340ebc0702bac693cd9a9b71bbe87bf0bacac89d9fdfa65f2e2515f8f2b3acba8258c66a1af97ea0aca7027792abbbb86c2587fd2b7f64aad50b0ce9ec505e1c7f705658b20ac044df899bfd4239098f7f93c6a04e0a1fe0c40306466fe5211732ffecadba72c39be7bc8ce5bbc5f7126b2c439b3a40000000037d46d67c93fbbe12f9428f838d40ff0570744927f48a64fcca70448000000008080808080808080808080808080808080808080808080808080808080808083a2dd79062e517fde401066fe3e9eb15750b42c05a245609355d176b3ae160b90303000502801a06000400910201003000ffff1000ffff7000a100ffffc13dc33e6722767e4c514b24ee7286002adb1abc144987b625267931ee20569700000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000534b5045524d54320b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0808080808080808080808080808080808080808080808080808080808080808062c2c2c2c2c2c2c2c2c2c2c2c2c2c2c2ca92f7c38b5c638340ebc0702bac693cd9a9b71bbe87bf0bacac89d9fdfa65f2e26d4496b0000000043a149edc3bbce0388a7e4efa49f199e2fba6ab9f0016c14342b04ffce4c8e3d0508000607010802090a662c2e20cb1d1f106e12345678123456789abcdef01234567812345678123446789abcdef012345683000000004e7b1d22650271fcf68a56571d62fffcbe0766295925302de35b4f2178870dc52c2c2c2c2c2c2c2c2c2c2c2c2c2c2c2c26d4496b0000000001000173df6e3e75f0577513245eaaea8e61b1f4151a6000d5a00472ad1aaca96d96e900050001040809",
+              "unsignedTransactionHex": "01000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000008001000306a92f7c38b5c638340ebc0702bac693cd9a9b71bbe87bf0bacac89d9fdfa65f2e2515f8f2b3acba8258c66a1af97ea0aca7027792abbbb86c2587fd2b7f64aad50b0ce9ec505e1c7f705658b20ac044df899bfd4239098f7f93c6a04e0a1fe0c40306466fe5211732ffecadba72c39be7bc8ce5bbc5f7126b2c439b3a40000000037d46d67c93fbbe12f9428f838d40ff0570744927f48a64fcca70448000000008080808080808080808080808080808080808080808080808080808080808083a2dd79062e517fde401066fe3e9eb15750b42c05a245609355d176b3ae160b90303000502801a06000400910201003000ffff1000ffff7000a100ffffc13dc33e6722767e4c514b24ee7286002adb1abc144987b625267931ee20569700000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000534b5045524d54320b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0808080808080808080808080808080808080808080808080808080808080808062c2c2c2c2c2c2c2c2c2c2c2c2c2c2c2ca92f7c38b5c638340ebc0702bac693cd9a9b71bbe87bf0bacac89d9fdfa65f2e26d4496b0000000043a149edc3bbce0388a7e4efa49f199e2fba6ab9f0016c14342b04ffce4c8e3d0508000607010802090a662c2e20cb1d1f106e12345678123456789abcdef01234567812345678123446789abcdef012345683000000004e7b1d22650271fcf68a56571d62fffcbe0766295925302de35b4f2178870dc52c2c2c2c2c2c2c2c2c2c2c2c2c2c2c2c26d4496b0000000001000173df6e3e75f0577513245eaaea8e61b1f4151a6000d5a00472ad1aaca96d96e900050001040809",
+              "messageSha256": "1c91738e40a383ef0522af69873c07736ae3dee9438cfe4b17fc257f66090989",
+              "packetBytes": 733,
+              "nativeInstructionIndex": 1,
+              "signingAuthorized": false,
+              "relayAuthorized": false
+            },
+            "costs": {
+              "networkFeeLamports": "10000",
+              "rentLamports": "1535",
+              "totalLamports": "11535",
+              "allocations": [
+                {
+                  "kind": "permit-receipt",
+                  "address": "k8uXgVAHghRxk7djZWsvq2WCioLMjCTM8W6SihQ4ZWB",
+                  "bytes": 107,
+                  "minimumBalanceLamports": "1535"
+                }
+              ]
+            },
+            "costLimits": {
+              "maxNetworkFeeLamports": "100000",
+              "maxRentLamports": "100000",
+              "maxAdditionalLamports": "200000"
+            },
+            "context": {
+              "feeSlot": 150,
+              "closingSlot": 150,
+              "closingGenesisHash": "k7FaK87WHGVXzkaoHb7CdVPgkKDQhZ29VLDeBVbDfYn"
+            },
+            "signingAuthorized": false,
+            "entryAuthorized": false,
+            "fenceReleaseAuthorized": false
+          }
+        },
+        "preparation": {
+          "policySignatureHex": "ee8e515c6b4ee3c207a7b1a8a5e35a06fc466690a4dfc55e0113ea6608133c9b96c7564a563d17a7ba1929845bfd9e777cfc1f23495d38e023e0b70f9b53550e",
+          "packet": {
+            "version": 1,
+            "messageHex": "8001000306a92f7c38b5c638340ebc0702bac693cd9a9b71bbe87bf0bacac89d9fdfa65f2e2515f8f2b3acba8258c66a1af97ea0aca7027792abbbb86c2587fd2b7f64aad50b0ce9ec505e1c7f705658b20ac044df899bfd4239098f7f93c6a04e0a1fe0c40306466fe5211732ffecadba72c39be7bc8ce5bbc5f7126b2c439b3a40000000037d46d67c93fbbe12f9428f838d40ff0570744927f48a64fcca70448000000008080808080808080808080808080808080808080808080808080808080808083a2dd79062e517fde401066fe3e9eb15750b42c05a245609355d176b3ae160b90303000502801a06000400910201003000ffff1000ffff7000a100ffffc13dc33e6722767e4c514b24ee7286002adb1abc144987b625267931ee205697ee8e515c6b4ee3c207a7b1a8a5e35a06fc466690a4dfc55e0113ea6608133c9b96c7564a563d17a7ba1929845bfd9e777cfc1f23495d38e023e0b70f9b53550e534b5045524d54320b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0808080808080808080808080808080808080808080808080808080808080808062c2c2c2c2c2c2c2c2c2c2c2c2c2c2c2ca92f7c38b5c638340ebc0702bac693cd9a9b71bbe87bf0bacac89d9fdfa65f2e26d4496b0000000043a149edc3bbce0388a7e4efa49f199e2fba6ab9f0016c14342b04ffce4c8e3d0508000607010802090a662c2e20cb1d1f106e12345678123456789abcdef01234567812345678123446789abcdef012345683000000004e7b1d22650271fcf68a56571d62fffcbe0766295925302de35b4f2178870dc52c2c2c2c2c2c2c2c2c2c2c2c2c2c2c2c26d4496b0000000001000173df6e3e75f0577513245eaaea8e61b1f4151a6000d5a00472ad1aaca96d96e900050001040809",
+            "unsignedTransactionHex": "01000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000008001000306a92f7c38b5c638340ebc0702bac693cd9a9b71bbe87bf0bacac89d9fdfa65f2e2515f8f2b3acba8258c66a1af97ea0aca7027792abbbb86c2587fd2b7f64aad50b0ce9ec505e1c7f705658b20ac044df899bfd4239098f7f93c6a04e0a1fe0c40306466fe5211732ffecadba72c39be7bc8ce5bbc5f7126b2c439b3a40000000037d46d67c93fbbe12f9428f838d40ff0570744927f48a64fcca70448000000008080808080808080808080808080808080808080808080808080808080808083a2dd79062e517fde401066fe3e9eb15750b42c05a245609355d176b3ae160b90303000502801a06000400910201003000ffff1000ffff7000a100ffffc13dc33e6722767e4c514b24ee7286002adb1abc144987b625267931ee205697ee8e515c6b4ee3c207a7b1a8a5e35a06fc466690a4dfc55e0113ea6608133c9b96c7564a563d17a7ba1929845bfd9e777cfc1f23495d38e023e0b70f9b53550e534b5045524d54320b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0808080808080808080808080808080808080808080808080808080808080808062c2c2c2c2c2c2c2c2c2c2c2c2c2c2c2ca92f7c38b5c638340ebc0702bac693cd9a9b71bbe87bf0bacac89d9fdfa65f2e26d4496b0000000043a149edc3bbce0388a7e4efa49f199e2fba6ab9f0016c14342b04ffce4c8e3d0508000607010802090a662c2e20cb1d1f106e12345678123456789abcdef01234567812345678123446789abcdef012345683000000004e7b1d22650271fcf68a56571d62fffcbe0766295925302de35b4f2178870dc52c2c2c2c2c2c2c2c2c2c2c2c2c2c2c2c26d4496b0000000001000173df6e3e75f0577513245eaaea8e61b1f4151a6000d5a00472ad1aaca96d96e900050001040809",
+            "messageSha256": "eaf664a6db1e88b3c9f68b2a06f4deddc587efa946cbfd10b147bd25a760e52e",
+            "packetBytes": 733,
+            "nativeInstructionIndex": 1,
+            "signingAuthorized": false,
+            "relayAuthorized": false
+          }
+        },
+        "signed": null,
+        "terminal": null,
+        "inventory": {
+          "version": 1,
+          "revision": "1",
+          "count": 1,
+          "messages": [
+            "534b5045524d54320b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0808080808080808080808080808080808080808080808080808080808080808062c2c2c2c2c2c2c2c2c2c2c2c2c2c2c2ca92f7c38b5c638340ebc0702bac693cd9a9b71bbe87bf0bacac89d9fdfa65f2e26d4496b0000000043a149edc3bbce0388a7e4efa49f199e2fba6ab9f0016c14342b04ffce4c8e3d"
+          ]
+        }
+      },
+      "wire": {
+        "signedTransactionHex": "01d9b8eaed2cd692c1000a92c340903b118e14631191c9c1deca85f8123b2c10386ffd2a86cbe2fa31672eee2c00f48f67aa81ad498953497a336a04ab9f5747048001000306a92f7c38b5c638340ebc0702bac693cd9a9b71bbe87bf0bacac89d9fdfa65f2e2515f8f2b3acba8258c66a1af97ea0aca7027792abbbb86c2587fd2b7f64aad50b0ce9ec505e1c7f705658b20ac044df899bfd4239098f7f93c6a04e0a1fe0c40306466fe5211732ffecadba72c39be7bc8ce5bbc5f7126b2c439b3a40000000037d46d67c93fbbe12f9428f838d40ff0570744927f48a64fcca70448000000008080808080808080808080808080808080808080808080808080808080808083a2dd79062e517fde401066fe3e9eb15750b42c05a245609355d176b3ae160b90303000502801a06000400910201003000ffff1000ffff7000a100ffffc13dc33e6722767e4c514b24ee7286002adb1abc144987b625267931ee205697ee8e515c6b4ee3c207a7b1a8a5e35a06fc466690a4dfc55e0113ea6608133c9b96c7564a563d17a7ba1929845bfd9e777cfc1f23495d38e023e0b70f9b53550e534b5045524d54320b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0808080808080808080808080808080808080808080808080808080808080808062c2c2c2c2c2c2c2c2c2c2c2c2c2c2c2ca92f7c38b5c638340ebc0702bac693cd9a9b71bbe87bf0bacac89d9fdfa65f2e26d4496b0000000043a149edc3bbce0388a7e4efa49f199e2fba6ab9f0016c14342b04ffce4c8e3d0508000607010802090a662c2e20cb1d1f106e12345678123456789abcdef01234567812345678123446789abcdef012345683000000004e7b1d22650271fcf68a56571d62fffcbe0766295925302de35b4f2178870dc52c2c2c2c2c2c2c2c2c2c2c2c2c2c2c2c26d4496b0000000001000173df6e3e75f0577513245eaaea8e61b1f4151a6000d5a00472ad1aaca96d96e900050001040809",
+        "signature": "5MUP4g2xafNa9ZZbCmXLwnoX9NaZwFD62No3wsqEu2jhUH1quxANSBSBrbUQMSnY3ghKQtRXizP41bPxWw36mrpB",
+        "wireSha256": "7d50a654ee9de9571ebda22396ce06046b58fe13860d11979b9c592718a9781f",
+        "messageSha256": "eaf664a6db1e88b3c9f68b2a06f4deddc587efa946cbfd10b147bd25a760e52e"
+      },
+      "termsText": "{\"event\": {\"id\": \"12345678-1234-4678-9abc-def012345682\", \"budget\": {\"embercore\": \"100\", \"thornsilk\": \"100\", \"crownsteel\": \"100\", \"frostglass\": \"100\", \"stormalloy\": \"100\", \"heartwood_beams\": \"100\", \"prismstone_lens\": \"100\", \"sunstone_blocks\": \"100\"}, \"domain\": {\"treasury\": \"HjMsHzCsHM1MFT1dGDt24WNXu2rGSGzVBbxT4jVFZbSU\", \"genesisHash\": \"k7FaK87WHGVXzkaoHb7CdVPgkKDQhZ29VLDeBVbDfYn\", \"craftProgram\": \"cGfHiC6Kgg3FpFZvgwGcswsCRtp4aBP2fzuXRQPizuN\", \"economyProgram\": \"YMN9Qj5jPNp7j14VPcML1B6xGgcPWVZUGLFU3Mnyfaf\"}, \"policy\": {\"version\": 1, \"fragments\": \"held\", \"rosterCap\": 20, \"prizeItems\": [\"frostglass\", \"heartwood_beams\", \"sunstone_blocks\", \"crownsteel\", \"prismstone_lens\", \"stormalloy\", \"thornsilk\", \"embercore\"], \"divineSites\": 50, \"prizeSource\": \"funded-existing-refined-stock\", \"raidsPerWallet\": 3, \"entryWeekdayUtc\": 6, \"maxStarsPerRaid\": 3, \"playDurationDays\": 1, \"entryDurationDays\": 1, \"freeRaidsPerBaseDay\": 6, \"maxReplayInputBytes\": 16777216, \"maxDestructionPerRaid\": 100, \"occupationDurationDays\": 7, \"maxPendingRequestsPerWallet\": 1, \"maxRequestIdentitiesPerWallet\": 16}, \"version\": 1, \"playEndsAt\": \"2026-10-05T00:00:00.000Z\", \"playStartsAt\": \"2026-10-04T00:00:00.000Z\", \"entryStartsAt\": \"2026-10-03T00:00:00.000Z\", \"sponsorWallet\": \"CPRu2siU6U4d3LWWc7CeqKraWxBSLhXfrL3jGpxEzWpV\", \"occupationEndsAt\": \"2026-10-12T00:00:00.000Z\"}, \"action\": \"set\", \"clanId\": \"12345678-1234-5678-9abc-def012345678\", \"domain\": {\"treasury\": \"HjMsHzCsHM1MFT1dGDt24WNXu2rGSGzVBbxT4jVFZbSU\", \"genesisHash\": \"k7FaK87WHGVXzkaoHb7CdVPgkKDQhZ29VLDeBVbDfYn\", \"craftProgram\": \"cGfHiC6Kgg3FpFZvgwGcswsCRtp4aBP2fzuXRQPizuN\", \"economyProgram\": \"YMN9Qj5jPNp7j14VPcML1B6xGgcPWVZUGLFU3Mnyfaf\"}, \"leader\": \"CPRu2siU6U4d3LWWc7CeqKraWxBSLhXfrL3jGpxEzWpV\", \"lockId\": \"12345678-1234-4678-9abc-def012345683\", \"roster\": [\"CPRu2siU6U4d3LWWc7CeqKraWxBSLhXfrL3jGpxEzWpV\"], \"entryId\": \"12345678-1234-4678-9abc-def012345681\", \"epochId\": \"12345678-1234-4678-9abc-def012345684\", \"eventId\": \"12345678-1234-4678-9abc-def012345682\", \"fenceId\": \"12345678-1234-4678-9abc-def012345681\", \"version\": 1, \"clearance\": null, \"operationId\": \"12345678-1234-4678-9abc-def012345680\", \"expectedRevision\": 0}",
+      "termsUtf8Hex": "7b226576656e74223a207b226964223a202231323334353637382d313233342d343637382d396162632d646566303132333435363832222c2022627564676574223a207b22656d626572636f7265223a2022313030222c202274686f726e73696c6b223a2022313030222c202263726f776e737465656c223a2022313030222c202266726f7374676c617373223a2022313030222c202273746f726d616c6c6f79223a2022313030222c20226865617274776f6f645f6265616d73223a2022313030222c2022707269736d73746f6e655f6c656e73223a2022313030222c202273756e73746f6e655f626c6f636b73223a2022313030227d2c2022646f6d61696e223a207b227472656173757279223a2022486a4d73487a4373484d314d465431644744743234574e587532724753477a5642627854346a56465a625355222c202267656e6573697348617368223a20226b3746614b383757484756587a6b616f48623743645650676b4b4451685a3239564c44654256624466596e222c2022637261667450726f6772616d223a2022634766486943364b6767334670465a7667774763737773435274703461425032667a7558525150697a754e222c202265636f6e6f6d7950726f6772616d223a2022594d4e39516a356a504e70376a31345650634d4c314236784767635057565a55474c4655334d6e79666166227d2c2022706f6c696379223a207b2276657273696f6e223a20312c2022667261676d656e7473223a202268656c64222c2022726f73746572436170223a2032302c20227072697a654974656d73223a205b2266726f7374676c617373222c20226865617274776f6f645f6265616d73222c202273756e73746f6e655f626c6f636b73222c202263726f776e737465656c222c2022707269736d73746f6e655f6c656e73222c202273746f726d616c6c6f79222c202274686f726e73696c6b222c2022656d626572636f7265225d2c2022646976696e655369746573223a2035302c20227072697a65536f75726365223a202266756e6465642d6578697374696e672d726566696e65642d73746f636b222c2022726169647350657257616c6c6574223a20332c2022656e7472795765656b646179557463223a20362c20226d6178537461727350657252616964223a20332c2022706c61794475726174696f6e44617973223a20312c2022656e7472794475726174696f6e44617973223a20312c202266726565526169647350657242617365446179223a20362c20226d61785265706c6179496e7075744279746573223a2031363737373231362c20226d61784465737472756374696f6e50657252616964223a203130302c20226f636375706174696f6e4475726174696f6e44617973223a20372c20226d617850656e64696e67526571756573747350657257616c6c6574223a20312c20226d6178526571756573744964656e74697469657350657257616c6c6574223a2031367d2c202276657273696f6e223a20312c2022706c6179456e64734174223a2022323032362d31302d30355430303a30303a30302e3030305a222c2022706c61795374617274734174223a2022323032362d31302d30345430303a30303a30302e3030305a222c2022656e7472795374617274734174223a2022323032362d31302d30335430303a30303a30302e3030305a222c202273706f6e736f7257616c6c6574223a2022435052753273695536553464334c575763374365714b7261577842534c685866724c336a477078457a577056222c20226f636375706174696f6e456e64734174223a2022323032362d31302d31325430303a30303a30302e3030305a227d2c2022616374696f6e223a2022736574222c2022636c616e4964223a202231323334353637382d313233342d353637382d396162632d646566303132333435363738222c2022646f6d61696e223a207b227472656173757279223a2022486a4d73487a4373484d314d465431644744743234574e587532724753477a5642627854346a56465a625355222c202267656e6573697348617368223a20226b3746614b383757484756587a6b616f48623743645650676b4b4451685a3239564c44654256624466596e222c2022637261667450726f6772616d223a2022634766486943364b6767334670465a7667774763737773435274703461425032667a7558525150697a754e222c202265636f6e6f6d7950726f6772616d223a2022594d4e39516a356a504e70376a31345650634d4c314236784767635057565a55474c4655334d6e79666166227d2c20226c6561646572223a2022435052753273695536553464334c575763374365714b7261577842534c685866724c336a477078457a577056222c20226c6f636b4964223a202231323334353637382d313233342d343637382d396162632d646566303132333435363833222c2022726f73746572223a205b22435052753273695536553464334c575763374365714b7261577842534c685866724c336a477078457a577056225d2c2022656e7472794964223a202231323334353637382d313233342d343637382d396162632d646566303132333435363831222c202265706f63684964223a202231323334353637382d313233342d343637382d396162632d646566303132333435363834222c20226576656e744964223a202231323334353637382d313233342d343637382d396162632d646566303132333435363832222c202266656e63654964223a202231323334353637382d313233342d343637382d396162632d646566303132333435363831222c202276657273696f6e223a20312c2022636c656172616e6365223a206e756c6c2c20226f7065726174696f6e4964223a202231323334353637382d313233342d343637382d396162632d646566303132333435363830222c202265787065637465645265766973696f6e223a20307d",
+      "termsHash": "4e7b1d22650271fcf68a56571d62fffcbe0766295925302de35b4f2178870dc5"
+    },
+    {
+      "action": "clear",
+      "leader": "5GrVM7vW8JcnCjcR6iz1iaj1rS5sj76eCSMpENjDAKBz",
+      "trust": {
+        "version": 1,
+        "revision": "owned-fixture",
+        "deployment": {
+          "expectedGenesisHash": "k7FaK87WHGVXzkaoHb7CdVPgkKDQhZ29VLDeBVbDfYn",
+          "economy": {
+            "programId": "YMN9Qj5jPNp7j14VPcML1B6xGgcPWVZUGLFU3Mnyfaf",
+            "reviewedDeploymentSlot": 90,
+            "reviewedProgramDataSha256": "f5a0b160e4f5a449677561ea8650e46b18d84b698fff6375a13d250d81eb25b0",
+            "upgradeAuthority": "p2Yicb86aZig616Eav2VWG9vuXR5mEqhtzshZYBxzsV"
+          },
+          "craft": {
+            "programId": "cGfHiC6Kgg3FpFZvgwGcswsCRtp4aBP2fzuXRQPizuN",
+            "reviewedDeploymentSlot": 90,
+            "reviewedProgramDataSha256": "938c89fe46328aed9e477639354a925840713200a40d1d0ee3a83e238b383deb",
+            "upgradeAuthority": "p2Yicb86aZig616Eav2VWG9vuXR5mEqhtzshZYBxzsV"
+          },
+          "core": {
+            "programId": "CoREENxT6tW1HoK8ypY1SxRMZTcVPm7R94rH4PZNhX7d",
+            "reviewedDeploymentSlot": 90,
+            "reviewedProgramDataSha256": "1e3539aa2e2420ee5dd5a2a9ab5c2bdf44af1110b01669d82f6013cfdc33f0bd",
+            "upgradeAuthority": "p2Yicb86aZig616Eav2VWG9vuXR5mEqhtzshZYBxzsV"
+          },
+          "stateProvenance": "fresh-reviewed-deployment"
+        },
+        "policySigner": "8tNm1BNL6C7zRZcY821h5aUgQHa8m7v368iwM44GMMpG",
+        "treasury": "AGYf17TQoxEFYeaJsXDg99azAcHLyAoEkZazcXNJuxGu",
+        "royaltyBps": 500,
+        "lookupTables": [
+          {
+            "address": "J5AVekjZdBjZX8Kca9qtbGmsuHoHf16ty6cauRFqjN4F",
+            "dataSha256": "3920375c23f31ad315827db82b48cf7cec8180b7ecee2a6885f1157fc4fd50fd"
+          }
+        ]
+      },
+      "operation": {
+        "version": 1,
+        "original": {
+          "creation": {
+            "creationIntentId": "87654321-4321-4321-8abc-def012345678",
+            "clanId": "12345678-1234-5678-9abc-def012345678",
+            "payer": "gBxS1f6uyyGPuW5MzGBukidSb71jdsCb5fZaoSzULE5",
+            "metadata": {
+              "name": "First Charter",
+              "uri": "https://invalid.example/charter.json",
+              "hash": "4f0392a0285564b4bf94c613c212cd787723ea89e80aa5dfd818366af2fa1180"
+            },
+            "chain": {
+              "genesisHash": "k7FaK87WHGVXzkaoHb7CdVPgkKDQhZ29VLDeBVbDfYn",
+              "economyProgram": "YMN9Qj5jPNp7j14VPcML1B6xGgcPWVZUGLFU3Mnyfaf",
+              "craftProgram": "cGfHiC6Kgg3FpFZvgwGcswsCRtp4aBP2fzuXRQPizuN",
+              "config": "9CNAWDPg4zcpyAvkm4DGSWDeoekVT1YC9Nycw3HfmFyL",
+              "craftControl": "4r1UBxBzT1fXfi9ktj6wJGo3F63DsFXvyKMrNoHPf4CQ",
+              "collection": "6k1xZbVr1duH2FcWnMjPAwbAiyTL94ke8ZcaAdqhzkWS",
+              "collectionAuthority": "5dkxi2XeXHSfMoxdgSMiM82Qod8xcHxG9bx5gL6Gih4v",
+              "charter": "3VmX1RNUnQBQnPrtAuDyGz9ARqHAQ85hAtf9xKwRd4CC",
+              "asset": "2c5mZ1BWswRT5HkYQQLd12G1EtJsEs3edEVN5tQ5cYNC",
+              "assetBinding": "9NXtzuRtjWcVesRPCgfeJoR7KB7KRXfvEVoe4GEJtK2Q",
+              "freezeAuthority": "7VoXQLmhjbm3BRPutq4pd1m5yASUBKCqf5tfxFpAeXp5",
+              "executor": "8BHXbSSKHcEzMg9nJS4FXRJFWJc7TaB32dWEMw4kZnFA",
+              "creationReceipt": "eAMjMW9ioBZuhATXJQ81evXBayNnesTFk4iRPHDrCER"
+            },
+            "admissionCommitment": "abababababababababababababababababababababababababababababababab",
+            "issuedPermitIds": [
+              "00000000000000000000000000000000",
+              "cdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcd"
+            ]
+          },
+          "operation": {
+            "id": "12345678-1234-4678-9abc-def012345680",
+            "fenceId": "12345678-1234-4678-9abc-def012345681",
+            "eventId": "12345678-1234-4678-9abc-def012345682",
+            "leader": "5GrVM7vW8JcnCjcR6iz1iaj1rS5sj76eCSMpENjDAKBz",
+            "lockId": "12345678-1234-4678-9abc-def012345683",
+            "expectedRevision": 1,
+            "action": "clear",
+            "termsHash": "d12978ad7da9a7f8fedfc74317cb5723427403e8e63624591113c72360c6d8e6"
+          }
+        },
+        "operationTerms": {
+          "version": 1,
+          "epochId": "12345678-1234-4678-9abc-def012345684",
+          "entryId": "12345678-1234-4678-9abc-def012345681",
+          "eventId": "12345678-1234-4678-9abc-def012345682",
+          "clanId": "12345678-1234-5678-9abc-def012345678",
+          "leader": "5GrVM7vW8JcnCjcR6iz1iaj1rS5sj76eCSMpENjDAKBz",
+          "lockId": "12345678-1234-4678-9abc-def012345683",
+          "fenceId": "12345678-1234-4678-9abc-def012345681",
+          "operationId": "12345678-1234-4678-9abc-def012345680",
+          "action": "clear",
+          "expectedRevision": 1,
+          "domain": {
+            "genesisHash": "k7FaK87WHGVXzkaoHb7CdVPgkKDQhZ29VLDeBVbDfYn",
+            "economyProgram": "YMN9Qj5jPNp7j14VPcML1B6xGgcPWVZUGLFU3Mnyfaf",
+            "craftProgram": "cGfHiC6Kgg3FpFZvgwGcswsCRtp4aBP2fzuXRQPizuN",
+            "treasury": "AGYf17TQoxEFYeaJsXDg99azAcHLyAoEkZazcXNJuxGu"
+          },
+          "event": {
+            "version": 1,
+            "id": "12345678-1234-4678-9abc-def012345682",
+            "domain": {
+              "genesisHash": "k7FaK87WHGVXzkaoHb7CdVPgkKDQhZ29VLDeBVbDfYn",
+              "economyProgram": "YMN9Qj5jPNp7j14VPcML1B6xGgcPWVZUGLFU3Mnyfaf",
+              "craftProgram": "cGfHiC6Kgg3FpFZvgwGcswsCRtp4aBP2fzuXRQPizuN",
+              "treasury": "AGYf17TQoxEFYeaJsXDg99azAcHLyAoEkZazcXNJuxGu"
+            },
+            "sponsorWallet": "5GrVM7vW8JcnCjcR6iz1iaj1rS5sj76eCSMpENjDAKBz",
+            "entryStartsAt": "2026-10-03T00:00:00.000Z",
+            "playStartsAt": "2026-10-04T00:00:00.000Z",
+            "playEndsAt": "2026-10-05T00:00:00.000Z",
+            "occupationEndsAt": "2026-10-12T00:00:00.000Z",
+            "policy": {
+              "version": 1,
+              "entryWeekdayUtc": 6,
+              "entryDurationDays": 1,
+              "playDurationDays": 1,
+              "occupationDurationDays": 7,
+              "raidsPerWallet": 3,
+              "maxPendingRequestsPerWallet": 1,
+              "maxRequestIdentitiesPerWallet": 16,
+              "divineSites": 50,
+              "maxStarsPerRaid": 3,
+              "maxDestructionPerRaid": 100,
+              "maxReplayInputBytes": 16777216,
+              "rosterCap": 20,
+              "freeRaidsPerBaseDay": 6,
+              "prizeItems": [
+                "frostglass",
+                "heartwood_beams",
+                "sunstone_blocks",
+                "crownsteel",
+                "prismstone_lens",
+                "stormalloy",
+                "thornsilk",
+                "embercore"
+              ],
+              "fragments": "held",
+              "prizeSource": "funded-existing-refined-stock"
+            },
+            "budget": {
+              "frostglass": "100",
+              "heartwood_beams": "100",
+              "sunstone_blocks": "100",
+              "crownsteel": "100",
+              "prismstone_lens": "100",
+              "stormalloy": "100",
+              "thornsilk": "100",
+              "embercore": "100"
+            }
+          },
+          "roster": [
+            "5GrVM7vW8JcnCjcR6iz1iaj1rS5sj76eCSMpENjDAKBz"
+          ],
+          "clearance": {
+            "version": 1,
+            "eventId": "12345678-1234-4678-9abc-def012345682",
+            "completedAt": "2026-10-05T00:00:00.000Z",
+            "rankings": [],
+            "occupations": [],
+            "entitlements": []
+          }
+        },
+        "status": "prepared",
+        "entryId": "12345678-1234-4678-9abc-def012345681",
+        "attempt": {
+          "id": "12345678-1234-4678-9abc-def012345685",
+          "candidateHex": "534b5045524d54320b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0808080808080808080808080808080808080808080808080808080808080808062c2c2c2c2c2c2c2c2c2c2c2c2c2c2c2c3f7e6abc6bb68810c8943442ee9234e8af7cba8954ec1f1657724154298d322d26d4496b00000000ec12fff804c78f31cfc0672b5573ee30db21e1bd68ed628b7a10aa00041c12ba",
+          "policySigner": "8tNm1BNL6C7zRZcY821h5aUgQHa8m7v368iwM44GMMpG",
+          "quote": {
+            "version": 1,
+            "packetInput": {
+              "original": {
+                "creation": {
+                  "creationIntentId": "87654321-4321-4321-8abc-def012345678",
+                  "clanId": "12345678-1234-5678-9abc-def012345678",
+                  "payer": "gBxS1f6uyyGPuW5MzGBukidSb71jdsCb5fZaoSzULE5",
+                  "metadata": {
+                    "name": "First Charter",
+                    "uri": "https://invalid.example/charter.json",
+                    "hash": "4f0392a0285564b4bf94c613c212cd787723ea89e80aa5dfd818366af2fa1180"
+                  },
+                  "chain": {
+                    "genesisHash": "k7FaK87WHGVXzkaoHb7CdVPgkKDQhZ29VLDeBVbDfYn",
+                    "economyProgram": "YMN9Qj5jPNp7j14VPcML1B6xGgcPWVZUGLFU3Mnyfaf",
+                    "craftProgram": "cGfHiC6Kgg3FpFZvgwGcswsCRtp4aBP2fzuXRQPizuN",
+                    "config": "9CNAWDPg4zcpyAvkm4DGSWDeoekVT1YC9Nycw3HfmFyL",
+                    "craftControl": "4r1UBxBzT1fXfi9ktj6wJGo3F63DsFXvyKMrNoHPf4CQ",
+                    "collection": "6k1xZbVr1duH2FcWnMjPAwbAiyTL94ke8ZcaAdqhzkWS",
+                    "collectionAuthority": "5dkxi2XeXHSfMoxdgSMiM82Qod8xcHxG9bx5gL6Gih4v",
+                    "charter": "3VmX1RNUnQBQnPrtAuDyGz9ARqHAQ85hAtf9xKwRd4CC",
+                    "asset": "2c5mZ1BWswRT5HkYQQLd12G1EtJsEs3edEVN5tQ5cYNC",
+                    "assetBinding": "9NXtzuRtjWcVesRPCgfeJoR7KB7KRXfvEVoe4GEJtK2Q",
+                    "freezeAuthority": "7VoXQLmhjbm3BRPutq4pd1m5yASUBKCqf5tfxFpAeXp5",
+                    "executor": "8BHXbSSKHcEzMg9nJS4FXRJFWJc7TaB32dWEMw4kZnFA",
+                    "creationReceipt": "eAMjMW9ioBZuhATXJQ81evXBayNnesTFk4iRPHDrCER"
+                  },
+                  "admissionCommitment": "abababababababababababababababababababababababababababababababab",
+                  "issuedPermitIds": [
+                    "00000000000000000000000000000000",
+                    "cdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcd"
+                  ]
+                },
+                "operation": {
+                  "id": "12345678-1234-4678-9abc-def012345680",
+                  "fenceId": "12345678-1234-4678-9abc-def012345681",
+                  "eventId": "12345678-1234-4678-9abc-def012345682",
+                  "leader": "5GrVM7vW8JcnCjcR6iz1iaj1rS5sj76eCSMpENjDAKBz",
+                  "lockId": "12345678-1234-4678-9abc-def012345683",
+                  "expectedRevision": 1,
+                  "action": "clear",
+                  "termsHash": "d12978ad7da9a7f8fedfc74317cb5723427403e8e63624591113c72360c6d8e6"
+                }
+              },
+              "candidateHex": "534b5045524d54320b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0808080808080808080808080808080808080808080808080808080808080808062c2c2c2c2c2c2c2c2c2c2c2c2c2c2c2c3f7e6abc6bb68810c8943442ee9234e8af7cba8954ec1f1657724154298d322d26d4496b00000000ec12fff804c78f31cfc0672b5573ee30db21e1bd68ed628b7a10aa00041c12ba",
+              "policySigner": "8tNm1BNL6C7zRZcY821h5aUgQHa8m7v368iwM44GMMpG",
+              "lookupTable": {
+                "address": "J5AVekjZdBjZX8Kca9qtbGmsuHoHf16ty6cauRFqjN4F",
+                "owner": "AddressLookupTab1e1111111111111111111111111",
+                "executable": false,
+                "dataHex": "01000000ffffffffffffffff6400000000000000000000000000000000000000000000000000000000000000000000000000000000000000438ec835567903a075f2da87a5de6da4ded9c19b8702a28554c83a336104a6cb79c6d079def99d819c8945785161e84e6631d2347ce3cd61a71811c765c8887bb8d7e58651ea55302ad72de4033e6ebba1ea93f71bbaf6f211091d12e7de88f4090909090909090909090909090909090909090909090909090909090909090939210ceb640218a9a290e1c1a80d348edd1a14f92944f7ea2ef89c79cb209251554f7e1ad0464be7d8aefea57b6186c6280ea4afcef521c522fada21703f5d9f44d95cf3d84bf8609893707210c028876d5c0d8510a7ef41559162a09432b13baf54ab10bd97a542a09ef7b39889dd0cd394a4cce9dfa6cdc97ebe2d235ba74806a7d517187bd16635dad40455fdc2c0c124c68f215675a5dbbacb5f080000000000000000000000000000000000000000000000000000000000000000000000080808080808080808080808080808080808080808080808080808080808080889b4afe7a34cffc147aacc040da977a79284627ab1127d35970364b7b287f0a6",
+                "slot": 150
+              },
+              "expectedLookupTable": {
+                "address": "J5AVekjZdBjZX8Kca9qtbGmsuHoHf16ty6cauRFqjN4F",
+                "dataSha256": "3920375c23f31ad315827db82b48cf7cec8180b7ecee2a6885f1157fc4fd50fd"
+              },
+              "blockhash": "GXMtH27ykRKLDH5EQweMXZNqXqpEw6ffzrpeKs6AenLt",
+              "blockhashSlot": 150,
+              "lastValidBlockHeight": 300,
+              "currentBlockHeight": 200
+            },
+            "observation": {
+              "slot": 150,
+              "unixTimestamp": "1800000010",
+              "registryRevision": 1,
+              "registryLeader": "5GrVM7vW8JcnCjcR6iz1iaj1rS5sj76eCSMpENjDAKBz",
+              "lockKind": 1,
+              "lockId": "12345678-1234-4678-9abc-def012345683",
+              "policySigner": "8tNm1BNL6C7zRZcY821h5aUgQHa8m7v368iwM44GMMpG",
+              "admissionPaused": false,
+              "craftPaused": false,
+              "source": {
+                "genesisHash": "k7FaK87WHGVXzkaoHb7CdVPgkKDQhZ29VLDeBVbDfYn",
+                "programs": {
+                  "expectedGenesisHash": "k7FaK87WHGVXzkaoHb7CdVPgkKDQhZ29VLDeBVbDfYn",
+                  "economy": {
+                    "programId": "YMN9Qj5jPNp7j14VPcML1B6xGgcPWVZUGLFU3Mnyfaf",
+                    "reviewedDeploymentSlot": 90,
+                    "reviewedProgramDataSha256": "f5a0b160e4f5a449677561ea8650e46b18d84b698fff6375a13d250d81eb25b0",
+                    "upgradeAuthority": "p2Yicb86aZig616Eav2VWG9vuXR5mEqhtzshZYBxzsV"
+                  },
+                  "craft": {
+                    "programId": "cGfHiC6Kgg3FpFZvgwGcswsCRtp4aBP2fzuXRQPizuN",
+                    "reviewedDeploymentSlot": 90,
+                    "reviewedProgramDataSha256": "938c89fe46328aed9e477639354a925840713200a40d1d0ee3a83e238b383deb",
+                    "upgradeAuthority": "p2Yicb86aZig616Eav2VWG9vuXR5mEqhtzshZYBxzsV"
+                  },
+                  "core": {
+                    "programId": "CoREENxT6tW1HoK8ypY1SxRMZTcVPm7R94rH4PZNhX7d",
+                    "reviewedDeploymentSlot": 90,
+                    "reviewedProgramDataSha256": "1e3539aa2e2420ee5dd5a2a9ab5c2bdf44af1110b01669d82f6013cfdc33f0bd",
+                    "upgradeAuthority": "p2Yicb86aZig616Eav2VWG9vuXR5mEqhtzshZYBxzsV"
+                  },
+                  "stateProvenance": "fresh-reviewed-deployment"
+                },
+                "accounts": [
+                  {
+                    "address": "YMN9Qj5jPNp7j14VPcML1B6xGgcPWVZUGLFU3Mnyfaf",
+                    "owner": "BPFLoaderUpgradeab1e11111111111111111111111",
+                    "executable": true,
+                    "dataSha256": "157021154ded7538415af4c777ef1e49c31aac895c88a25d8cd7c8107c3b25e8"
+                  },
+                  {
+                    "address": "DZpoFMtx11Jv1yKM3L37iYBM7KPNXEMrWxqfhC5U1jfT",
+                    "owner": "BPFLoaderUpgradeab1e11111111111111111111111",
+                    "executable": false,
+                    "dataSha256": "f5a0b160e4f5a449677561ea8650e46b18d84b698fff6375a13d250d81eb25b0"
+                  },
+                  {
+                    "address": "cGfHiC6Kgg3FpFZvgwGcswsCRtp4aBP2fzuXRQPizuN",
+                    "owner": "BPFLoaderUpgradeab1e11111111111111111111111",
+                    "executable": true,
+                    "dataSha256": "038656d2f591744ce69fa10413f522fc28b60b55b7fc35c5328c6574664dd725"
+                  },
+                  {
+                    "address": "Hibe1esmNpASGJBynhevaMybmY2gcGcPDrfz8zMZyw1J",
+                    "owner": "BPFLoaderUpgradeab1e11111111111111111111111",
+                    "executable": false,
+                    "dataSha256": "938c89fe46328aed9e477639354a925840713200a40d1d0ee3a83e238b383deb"
+                  },
+                  {
+                    "address": "CoREENxT6tW1HoK8ypY1SxRMZTcVPm7R94rH4PZNhX7d",
+                    "owner": "BPFLoaderUpgradeab1e11111111111111111111111",
+                    "executable": true,
+                    "dataSha256": "d1cba9d33b57f2e5af22d5b07ef88662aa6189b55969d1c928610f1c295cb21d"
+                  },
+                  {
+                    "address": "9ZC25KLUrfgSoFVgjE1rrydZBbZns58UXi8A8ZhTdGfr",
+                    "owner": "BPFLoaderUpgradeab1e11111111111111111111111",
+                    "executable": false,
+                    "dataSha256": "1e3539aa2e2420ee5dd5a2a9ab5c2bdf44af1110b01669d82f6013cfdc33f0bd"
+                  },
+                  {
+                    "address": "5YibPcyVtfbvXvsYCKMSGauQ65ufH9wiUhCgMCx4Jsfp",
+                    "owner": "YMN9Qj5jPNp7j14VPcML1B6xGgcPWVZUGLFU3Mnyfaf",
+                    "executable": false,
+                    "dataSha256": "54f9b2a99ac45f036657f442ac2a57dcdffd2fa7a9b12a94fe4a69b2c71fd178"
+                  },
+                  {
+                    "address": "9CNAWDPg4zcpyAvkm4DGSWDeoekVT1YC9Nycw3HfmFyL",
+                    "owner": "YMN9Qj5jPNp7j14VPcML1B6xGgcPWVZUGLFU3Mnyfaf",
+                    "executable": false,
+                    "dataSha256": "1d9d1ee94a6c797492997871eec77d01dcaf0301dba18db038ef506b4594a02d"
+                  },
+                  {
+                    "address": "4r1UBxBzT1fXfi9ktj6wJGo3F63DsFXvyKMrNoHPf4CQ",
+                    "owner": "cGfHiC6Kgg3FpFZvgwGcswsCRtp4aBP2fzuXRQPizuN",
+                    "executable": false,
+                    "dataSha256": "acf62051f791914514261ecb7ec5184aa577db6df8e37942d94ce1422af4f948"
+                  },
+                  {
+                    "address": "3VmX1RNUnQBQnPrtAuDyGz9ARqHAQ85hAtf9xKwRd4CC",
+                    "owner": "YMN9Qj5jPNp7j14VPcML1B6xGgcPWVZUGLFU3Mnyfaf",
+                    "executable": false,
+                    "dataSha256": "acd25563134fe1dd74ba14c064448cc46e0083d21bd3285bcf7e51f1d94e2920"
+                  },
+                  {
+                    "address": "eAMjMW9ioBZuhATXJQ81evXBayNnesTFk4iRPHDrCER",
+                    "owner": "YMN9Qj5jPNp7j14VPcML1B6xGgcPWVZUGLFU3Mnyfaf",
+                    "executable": false,
+                    "dataSha256": "6dc645fdeb34e598ac4da277421a960555c63a11ef8525a218f553b51c1fd6fc"
+                  },
+                  {
+                    "address": "9NXtzuRtjWcVesRPCgfeJoR7KB7KRXfvEVoe4GEJtK2Q",
+                    "owner": "YMN9Qj5jPNp7j14VPcML1B6xGgcPWVZUGLFU3Mnyfaf",
+                    "executable": false,
+                    "dataSha256": "9fd0c6c46505b686d1eb50e34f5be30a9d01130550b681587e8738ce176444ec"
+                  },
+                  {
+                    "address": "2c5mZ1BWswRT5HkYQQLd12G1EtJsEs3edEVN5tQ5cYNC",
+                    "owner": "CoREENxT6tW1HoK8ypY1SxRMZTcVPm7R94rH4PZNhX7d",
+                    "executable": false,
+                    "dataSha256": "3316c76891d62eb1481547a7bf8addc82035c87c8f9c9cee0b23ff0576a2fc78"
+                  },
+                  {
+                    "address": "6k1xZbVr1duH2FcWnMjPAwbAiyTL94ke8ZcaAdqhzkWS",
+                    "owner": "CoREENxT6tW1HoK8ypY1SxRMZTcVPm7R94rH4PZNhX7d",
+                    "executable": false,
+                    "dataSha256": "23631b5f9db876d5f079f6fc68507f3cb002546e1a48fd6dafef558ec66ecb1f"
+                  },
+                  {
+                    "address": "SysvarC1ock11111111111111111111111111111111",
+                    "owner": "Sysvar1111111111111111111111111111111111111",
+                    "executable": false,
+                    "dataSha256": "333d11c13a5392bdb046301f919fb52792a43d1660f7f498ce166216b4d2d60a"
+                  },
+                  {
+                    "address": "k8uXgVAHghRxk7djZWsvq2WCioLMjCTM8W6SihQ4ZWB",
+                    "owner": null,
+                    "executable": null,
+                    "dataSha256": null
+                  }
+                ]
+              }
+            },
+            "template": {
+              "version": 1,
+              "messageHex": "80010003063f7e6abc6bb68810c8943442ee9234e8af7cba8954ec1f1657724154298d322d2515f8f2b3acba8258c66a1af97ea0aca7027792abbbb86c2587fd2b7f64aad50b0ce9ec505e1c7f705658b20ac044df899bfd4239098f7f93c6a04e0a1fe0c40306466fe5211732ffecadba72c39be7bc8ce5bbc5f7126b2c439b3a40000000037d46d67c93fbbe12f9428f838d40ff0570744927f48a64fcca7044800000000808080808080808080808080808080808080808080808080808080808080808e6a657845c205f6a2607733760352c8efe13ea509b7c2f785743c1b5c49b69cd0303000502801a06000400910201003000ffff1000ffff7000a100ffff752b0848a0eb7245c9c4d87b6236e11e9da0b77b5e6ac8b5b29a7904723faa3500000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000534b5045524d54320b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0808080808080808080808080808080808080808080808080808080808080808062c2c2c2c2c2c2c2c2c2c2c2c2c2c2c2c3f7e6abc6bb68810c8943442ee9234e8af7cba8954ec1f1657724154298d322d26d4496b00000000ec12fff804c78f31cfc0672b5573ee30db21e1bd68ed628b7a10aa00041c12ba0508000607010802090a66951cf8afa830bc2212345678123456789abcdef01234567812345678123446789abcdef01234568301000000d12978ad7da9a7f8fedfc74317cb5723427403e8e63624591113c72360c6d8e62c2c2c2c2c2c2c2c2c2c2c2c2c2c2c2c26d4496b00000000010001fda7bc618ca3789a24951ba39e008aea0e3f50394c8f793c31ad676897eb6c0000050001040809",
+              "unsignedTransactionHex": "010000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000080010003063f7e6abc6bb68810c8943442ee9234e8af7cba8954ec1f1657724154298d322d2515f8f2b3acba8258c66a1af97ea0aca7027792abbbb86c2587fd2b7f64aad50b0ce9ec505e1c7f705658b20ac044df899bfd4239098f7f93c6a04e0a1fe0c40306466fe5211732ffecadba72c39be7bc8ce5bbc5f7126b2c439b3a40000000037d46d67c93fbbe12f9428f838d40ff0570744927f48a64fcca7044800000000808080808080808080808080808080808080808080808080808080808080808e6a657845c205f6a2607733760352c8efe13ea509b7c2f785743c1b5c49b69cd0303000502801a06000400910201003000ffff1000ffff7000a100ffff752b0848a0eb7245c9c4d87b6236e11e9da0b77b5e6ac8b5b29a7904723faa3500000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000534b5045524d54320b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0808080808080808080808080808080808080808080808080808080808080808062c2c2c2c2c2c2c2c2c2c2c2c2c2c2c2c3f7e6abc6bb68810c8943442ee9234e8af7cba8954ec1f1657724154298d322d26d4496b00000000ec12fff804c78f31cfc0672b5573ee30db21e1bd68ed628b7a10aa00041c12ba0508000607010802090a66951cf8afa830bc2212345678123456789abcdef01234567812345678123446789abcdef01234568301000000d12978ad7da9a7f8fedfc74317cb5723427403e8e63624591113c72360c6d8e62c2c2c2c2c2c2c2c2c2c2c2c2c2c2c2c26d4496b00000000010001fda7bc618ca3789a24951ba39e008aea0e3f50394c8f793c31ad676897eb6c0000050001040809",
+              "messageSha256": "07fb06c8e2170dd294c417133f23f2233195fdca485043e113e0c0318a0aea40",
+              "packetBytes": 733,
+              "nativeInstructionIndex": 1,
+              "signingAuthorized": false,
+              "relayAuthorized": false
+            },
+            "costs": {
+              "networkFeeLamports": "10000",
+              "rentLamports": "1535",
+              "totalLamports": "11535",
+              "allocations": [
+                {
+                  "kind": "permit-receipt",
+                  "address": "k8uXgVAHghRxk7djZWsvq2WCioLMjCTM8W6SihQ4ZWB",
+                  "bytes": 107,
+                  "minimumBalanceLamports": "1535"
+                }
+              ]
+            },
+            "costLimits": {
+              "maxNetworkFeeLamports": "100000",
+              "maxRentLamports": "100000",
+              "maxAdditionalLamports": "200000"
+            },
+            "context": {
+              "feeSlot": 150,
+              "closingSlot": 150,
+              "closingGenesisHash": "k7FaK87WHGVXzkaoHb7CdVPgkKDQhZ29VLDeBVbDfYn"
+            },
+            "signingAuthorized": false,
+            "entryAuthorized": false,
+            "fenceReleaseAuthorized": false
+          }
+        },
+        "preparation": {
+          "policySignatureHex": "d3d5d7710d082cec0a3e22cb7d2902e135fe2e8f3637e9a13e06ff44f583f411d0d651d65bb82b0181b9e4693fa862d2b6d9b90dd0364aff834f32a7b9257b0a",
+          "packet": {
+            "version": 1,
+            "messageHex": "80010003063f7e6abc6bb68810c8943442ee9234e8af7cba8954ec1f1657724154298d322d2515f8f2b3acba8258c66a1af97ea0aca7027792abbbb86c2587fd2b7f64aad50b0ce9ec505e1c7f705658b20ac044df899bfd4239098f7f93c6a04e0a1fe0c40306466fe5211732ffecadba72c39be7bc8ce5bbc5f7126b2c439b3a40000000037d46d67c93fbbe12f9428f838d40ff0570744927f48a64fcca7044800000000808080808080808080808080808080808080808080808080808080808080808e6a657845c205f6a2607733760352c8efe13ea509b7c2f785743c1b5c49b69cd0303000502801a06000400910201003000ffff1000ffff7000a100ffff752b0848a0eb7245c9c4d87b6236e11e9da0b77b5e6ac8b5b29a7904723faa35d3d5d7710d082cec0a3e22cb7d2902e135fe2e8f3637e9a13e06ff44f583f411d0d651d65bb82b0181b9e4693fa862d2b6d9b90dd0364aff834f32a7b9257b0a534b5045524d54320b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0808080808080808080808080808080808080808080808080808080808080808062c2c2c2c2c2c2c2c2c2c2c2c2c2c2c2c3f7e6abc6bb68810c8943442ee9234e8af7cba8954ec1f1657724154298d322d26d4496b00000000ec12fff804c78f31cfc0672b5573ee30db21e1bd68ed628b7a10aa00041c12ba0508000607010802090a66951cf8afa830bc2212345678123456789abcdef01234567812345678123446789abcdef01234568301000000d12978ad7da9a7f8fedfc74317cb5723427403e8e63624591113c72360c6d8e62c2c2c2c2c2c2c2c2c2c2c2c2c2c2c2c26d4496b00000000010001fda7bc618ca3789a24951ba39e008aea0e3f50394c8f793c31ad676897eb6c0000050001040809",
+            "unsignedTransactionHex": "010000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000080010003063f7e6abc6bb68810c8943442ee9234e8af7cba8954ec1f1657724154298d322d2515f8f2b3acba8258c66a1af97ea0aca7027792abbbb86c2587fd2b7f64aad50b0ce9ec505e1c7f705658b20ac044df899bfd4239098f7f93c6a04e0a1fe0c40306466fe5211732ffecadba72c39be7bc8ce5bbc5f7126b2c439b3a40000000037d46d67c93fbbe12f9428f838d40ff0570744927f48a64fcca7044800000000808080808080808080808080808080808080808080808080808080808080808e6a657845c205f6a2607733760352c8efe13ea509b7c2f785743c1b5c49b69cd0303000502801a06000400910201003000ffff1000ffff7000a100ffff752b0848a0eb7245c9c4d87b6236e11e9da0b77b5e6ac8b5b29a7904723faa35d3d5d7710d082cec0a3e22cb7d2902e135fe2e8f3637e9a13e06ff44f583f411d0d651d65bb82b0181b9e4693fa862d2b6d9b90dd0364aff834f32a7b9257b0a534b5045524d54320b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0808080808080808080808080808080808080808080808080808080808080808062c2c2c2c2c2c2c2c2c2c2c2c2c2c2c2c3f7e6abc6bb68810c8943442ee9234e8af7cba8954ec1f1657724154298d322d26d4496b00000000ec12fff804c78f31cfc0672b5573ee30db21e1bd68ed628b7a10aa00041c12ba0508000607010802090a66951cf8afa830bc2212345678123456789abcdef01234567812345678123446789abcdef01234568301000000d12978ad7da9a7f8fedfc74317cb5723427403e8e63624591113c72360c6d8e62c2c2c2c2c2c2c2c2c2c2c2c2c2c2c2c26d4496b00000000010001fda7bc618ca3789a24951ba39e008aea0e3f50394c8f793c31ad676897eb6c0000050001040809",
+            "messageSha256": "53c1a65478222494fdd8fa479d2a42fec811ab72139ed56c14a2ad25f0db987f",
+            "packetBytes": 733,
+            "nativeInstructionIndex": 1,
+            "signingAuthorized": false,
+            "relayAuthorized": false
+          }
+        },
+        "signed": null,
+        "terminal": null,
+        "inventory": {
+          "version": 1,
+          "revision": "1",
+          "count": 1,
+          "messages": [
+            "534b5045524d54320b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0808080808080808080808080808080808080808080808080808080808080808062c2c2c2c2c2c2c2c2c2c2c2c2c2c2c2c3f7e6abc6bb68810c8943442ee9234e8af7cba8954ec1f1657724154298d322d26d4496b00000000ec12fff804c78f31cfc0672b5573ee30db21e1bd68ed628b7a10aa00041c12ba"
+          ]
+        }
+      },
+      "wire": {
+        "signedTransactionHex": "01db0977663763c482598060caea21ad1dd400005d8ea0ece1dd98dc6f0bc0778ba8f9a6ea464a552f6228b5c008ff2cdbd62a72c84dc701cf09fb2e9b48cffb0180010003063f7e6abc6bb68810c8943442ee9234e8af7cba8954ec1f1657724154298d322d2515f8f2b3acba8258c66a1af97ea0aca7027792abbbb86c2587fd2b7f64aad50b0ce9ec505e1c7f705658b20ac044df899bfd4239098f7f93c6a04e0a1fe0c40306466fe5211732ffecadba72c39be7bc8ce5bbc5f7126b2c439b3a40000000037d46d67c93fbbe12f9428f838d40ff0570744927f48a64fcca7044800000000808080808080808080808080808080808080808080808080808080808080808e6a657845c205f6a2607733760352c8efe13ea509b7c2f785743c1b5c49b69cd0303000502801a06000400910201003000ffff1000ffff7000a100ffff752b0848a0eb7245c9c4d87b6236e11e9da0b77b5e6ac8b5b29a7904723faa35d3d5d7710d082cec0a3e22cb7d2902e135fe2e8f3637e9a13e06ff44f583f411d0d651d65bb82b0181b9e4693fa862d2b6d9b90dd0364aff834f32a7b9257b0a534b5045524d54320b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0808080808080808080808080808080808080808080808080808080808080808062c2c2c2c2c2c2c2c2c2c2c2c2c2c2c2c3f7e6abc6bb68810c8943442ee9234e8af7cba8954ec1f1657724154298d322d26d4496b00000000ec12fff804c78f31cfc0672b5573ee30db21e1bd68ed628b7a10aa00041c12ba0508000607010802090a66951cf8afa830bc2212345678123456789abcdef01234567812345678123446789abcdef01234568301000000d12978ad7da9a7f8fedfc74317cb5723427403e8e63624591113c72360c6d8e62c2c2c2c2c2c2c2c2c2c2c2c2c2c2c2c26d4496b00000000010001fda7bc618ca3789a24951ba39e008aea0e3f50394c8f793c31ad676897eb6c0000050001040809",
+        "signature": "5NzoNhVLLufVF8rJiP6ayZw5spLPiExtkpQywcWT8GQZpddnTxLeumrYGu1QRk72PvT772hbzBUHd7VrjC1FkTqa",
+        "wireSha256": "4ab3ac9a58b814fcf008605b56bb8a6796a02d0119186bc656834e5acc31630d",
+        "messageSha256": "53c1a65478222494fdd8fa479d2a42fec811ab72139ed56c14a2ad25f0db987f"
+      },
+      "termsText": "{\"event\": {\"id\": \"12345678-1234-4678-9abc-def012345682\", \"budget\": {\"embercore\": \"100\", \"thornsilk\": \"100\", \"crownsteel\": \"100\", \"frostglass\": \"100\", \"stormalloy\": \"100\", \"heartwood_beams\": \"100\", \"prismstone_lens\": \"100\", \"sunstone_blocks\": \"100\"}, \"domain\": {\"treasury\": \"AGYf17TQoxEFYeaJsXDg99azAcHLyAoEkZazcXNJuxGu\", \"genesisHash\": \"k7FaK87WHGVXzkaoHb7CdVPgkKDQhZ29VLDeBVbDfYn\", \"craftProgram\": \"cGfHiC6Kgg3FpFZvgwGcswsCRtp4aBP2fzuXRQPizuN\", \"economyProgram\": \"YMN9Qj5jPNp7j14VPcML1B6xGgcPWVZUGLFU3Mnyfaf\"}, \"policy\": {\"version\": 1, \"fragments\": \"held\", \"rosterCap\": 20, \"prizeItems\": [\"frostglass\", \"heartwood_beams\", \"sunstone_blocks\", \"crownsteel\", \"prismstone_lens\", \"stormalloy\", \"thornsilk\", \"embercore\"], \"divineSites\": 50, \"prizeSource\": \"funded-existing-refined-stock\", \"raidsPerWallet\": 3, \"entryWeekdayUtc\": 6, \"maxStarsPerRaid\": 3, \"playDurationDays\": 1, \"entryDurationDays\": 1, \"freeRaidsPerBaseDay\": 6, \"maxReplayInputBytes\": 16777216, \"maxDestructionPerRaid\": 100, \"occupationDurationDays\": 7, \"maxPendingRequestsPerWallet\": 1, \"maxRequestIdentitiesPerWallet\": 16}, \"version\": 1, \"playEndsAt\": \"2026-10-05T00:00:00.000Z\", \"playStartsAt\": \"2026-10-04T00:00:00.000Z\", \"entryStartsAt\": \"2026-10-03T00:00:00.000Z\", \"sponsorWallet\": \"5GrVM7vW8JcnCjcR6iz1iaj1rS5sj76eCSMpENjDAKBz\", \"occupationEndsAt\": \"2026-10-12T00:00:00.000Z\"}, \"action\": \"clear\", \"clanId\": \"12345678-1234-5678-9abc-def012345678\", \"domain\": {\"treasury\": \"AGYf17TQoxEFYeaJsXDg99azAcHLyAoEkZazcXNJuxGu\", \"genesisHash\": \"k7FaK87WHGVXzkaoHb7CdVPgkKDQhZ29VLDeBVbDfYn\", \"craftProgram\": \"cGfHiC6Kgg3FpFZvgwGcswsCRtp4aBP2fzuXRQPizuN\", \"economyProgram\": \"YMN9Qj5jPNp7j14VPcML1B6xGgcPWVZUGLFU3Mnyfaf\"}, \"leader\": \"5GrVM7vW8JcnCjcR6iz1iaj1rS5sj76eCSMpENjDAKBz\", \"lockId\": \"12345678-1234-4678-9abc-def012345683\", \"roster\": [\"5GrVM7vW8JcnCjcR6iz1iaj1rS5sj76eCSMpENjDAKBz\"], \"entryId\": \"12345678-1234-4678-9abc-def012345681\", \"epochId\": \"12345678-1234-4678-9abc-def012345684\", \"eventId\": \"12345678-1234-4678-9abc-def012345682\", \"fenceId\": \"12345678-1234-4678-9abc-def012345681\", \"version\": 1, \"clearance\": {\"eventId\": \"12345678-1234-4678-9abc-def012345682\", \"version\": 1, \"rankings\": [], \"completedAt\": \"2026-10-05T00:00:00.000Z\", \"occupations\": [], \"entitlements\": []}, \"operationId\": \"12345678-1234-4678-9abc-def012345680\", \"expectedRevision\": 1}",
+      "termsUtf8Hex": "7b226576656e74223a207b226964223a202231323334353637382d313233342d343637382d396162632d646566303132333435363832222c2022627564676574223a207b22656d626572636f7265223a2022313030222c202274686f726e73696c6b223a2022313030222c202263726f776e737465656c223a2022313030222c202266726f7374676c617373223a2022313030222c202273746f726d616c6c6f79223a2022313030222c20226865617274776f6f645f6265616d73223a2022313030222c2022707269736d73746f6e655f6c656e73223a2022313030222c202273756e73746f6e655f626c6f636b73223a2022313030227d2c2022646f6d61696e223a207b227472656173757279223a202241475966313754516f7845465965614a735844673939617a4163484c79416f456b5a617a63584e4a75784775222c202267656e6573697348617368223a20226b3746614b383757484756587a6b616f48623743645650676b4b4451685a3239564c44654256624466596e222c2022637261667450726f6772616d223a2022634766486943364b6767334670465a7667774763737773435274703461425032667a7558525150697a754e222c202265636f6e6f6d7950726f6772616d223a2022594d4e39516a356a504e70376a31345650634d4c314236784767635057565a55474c4655334d6e79666166227d2c2022706f6c696379223a207b2276657273696f6e223a20312c2022667261676d656e7473223a202268656c64222c2022726f73746572436170223a2032302c20227072697a654974656d73223a205b2266726f7374676c617373222c20226865617274776f6f645f6265616d73222c202273756e73746f6e655f626c6f636b73222c202263726f776e737465656c222c2022707269736d73746f6e655f6c656e73222c202273746f726d616c6c6f79222c202274686f726e73696c6b222c2022656d626572636f7265225d2c2022646976696e655369746573223a2035302c20227072697a65536f75726365223a202266756e6465642d6578697374696e672d726566696e65642d73746f636b222c2022726169647350657257616c6c6574223a20332c2022656e7472795765656b646179557463223a20362c20226d6178537461727350657252616964223a20332c2022706c61794475726174696f6e44617973223a20312c2022656e7472794475726174696f6e44617973223a20312c202266726565526169647350657242617365446179223a20362c20226d61785265706c6179496e7075744279746573223a2031363737373231362c20226d61784465737472756374696f6e50657252616964223a203130302c20226f636375706174696f6e4475726174696f6e44617973223a20372c20226d617850656e64696e67526571756573747350657257616c6c6574223a20312c20226d6178526571756573744964656e74697469657350657257616c6c6574223a2031367d2c202276657273696f6e223a20312c2022706c6179456e64734174223a2022323032362d31302d30355430303a30303a30302e3030305a222c2022706c61795374617274734174223a2022323032362d31302d30345430303a30303a30302e3030305a222c2022656e7472795374617274734174223a2022323032362d31302d30335430303a30303a30302e3030305a222c202273706f6e736f7257616c6c6574223a2022354772564d377657384a636e436a635236697a3169616a31725335736a37366543534d70454e6a44414b427a222c20226f636375706174696f6e456e64734174223a2022323032362d31302d31325430303a30303a30302e3030305a227d2c2022616374696f6e223a2022636c656172222c2022636c616e4964223a202231323334353637382d313233342d353637382d396162632d646566303132333435363738222c2022646f6d61696e223a207b227472656173757279223a202241475966313754516f7845465965614a735844673939617a4163484c79416f456b5a617a63584e4a75784775222c202267656e6573697348617368223a20226b3746614b383757484756587a6b616f48623743645650676b4b4451685a3239564c44654256624466596e222c2022637261667450726f6772616d223a2022634766486943364b6767334670465a7667774763737773435274703461425032667a7558525150697a754e222c202265636f6e6f6d7950726f6772616d223a2022594d4e39516a356a504e70376a31345650634d4c314236784767635057565a55474c4655334d6e79666166227d2c20226c6561646572223a2022354772564d377657384a636e436a635236697a3169616a31725335736a37366543534d70454e6a44414b427a222c20226c6f636b4964223a202231323334353637382d313233342d343637382d396162632d646566303132333435363833222c2022726f73746572223a205b22354772564d377657384a636e436a635236697a3169616a31725335736a37366543534d70454e6a44414b427a225d2c2022656e7472794964223a202231323334353637382d313233342d343637382d396162632d646566303132333435363831222c202265706f63684964223a202231323334353637382d313233342d343637382d396162632d646566303132333435363834222c20226576656e744964223a202231323334353637382d313233342d343637382d396162632d646566303132333435363832222c202266656e63654964223a202231323334353637382d313233342d343637382d396162632d646566303132333435363831222c202276657273696f6e223a20312c2022636c656172616e6365223a207b226576656e744964223a202231323334353637382d313233342d343637382d396162632d646566303132333435363832222c202276657273696f6e223a20312c202272616e6b696e6773223a205b5d2c2022636f6d706c657465644174223a2022323032362d31302d30355430303a30303a30302e3030305a222c20226f636375706174696f6e73223a205b5d2c2022656e7469746c656d656e7473223a205b5d7d2c20226f7065726174696f6e4964223a202231323334353637382d313233342d343637382d396162632d646566303132333435363830222c202265787065637465645265766973696f6e223a20317d",
+      "termsHash": "d12978ad7da9a7f8fedfc74317cb5723427403e8e63624591113c72360c6d8e6"
+    }
+  ]
+}

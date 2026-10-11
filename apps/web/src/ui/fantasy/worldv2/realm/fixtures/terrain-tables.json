@@ -1,0 +1,857 @@
+{
+ "schema": 1,
+ "about": "PACK T0 deliverable (REALM-MAP-PLAN §5.1.1, confirmed against each kit manifest at fc5c6ad1). Class ids: DEEP 0, SEA 1, WATER 2, SHORE 3, WILD 4, GROUND2 5, FIELD 6, ROCK 7, SNOW 8, SPECIAL 9, ROAD 10, TURF 11, RING 12, FOREST 13. MAP: 'WILD' = drawn as WILD ground under an overlay; M1..M5 = the §5.3 map families (lower = the realm's WILD map terrain for all five, M4 included: a ROCK-lower M4 collapsed where snow/glacier/lava met open ground, PACK 2026-09-24). TRUE: kit terrain ids as in kit.json; names marked extra are ART's TRUE extra terrains (§5.3); 'decals' names a realm-map decal group made only of that kit's own decal ids; 'scatter' names kit props scattered by LIFE. layer = composite order where >= 3 terrains meet (kit terrains keep kit.json's layer). decalByClass: the ONE decal group GROUND applies per class at TRUE (kit layout group id or a realm-map rm_* group); decals only on single-terrain, non-kingdom tiles, the kit's hash rule.",
+ "classes": ["DEEP", "SEA", "WATER", "SHORE", "WILD", "GROUND2", "FIELD", "ROCK", "SNOW", "SPECIAL", "ROAD", "TURF", "RING", "FOREST"],
+ "realms": {
+  "sunscar": {
+   "map": {
+    "wild": "sand",
+    "families": {
+     "M1": {
+      "lower": "sand",
+      "upper": "grove",
+      "brief": "sand <-> date-palm/acacia grove"
+     },
+     "M2": {
+      "lower": "sand",
+      "upper": "gardens",
+      "brief": "sand <-> irrigated green gardens"
+     },
+     "M3": {
+      "lower": "sand",
+      "upper": "canyon",
+      "brief": "sand <-> red sandstone canyon/mesa"
+     },
+     "M4": {
+      "lower": "sand",
+      "upper": "dunes",
+      "brief": "sand <-> high dune ridges (on WILD, not ROCK)"
+     },
+     "M5": {
+      "lower": "sand",
+      "upper": "hardpan",
+      "brief": "sand <-> cracked hardpan"
+     }
+    },
+    "classToTerrain": {
+     "DEEP": "WILD",
+     "SEA": "WILD",
+     "WATER": "WILD",
+     "SHORE": "WILD",
+     "ROAD": "WILD",
+     "TURF": "WILD",
+     "RING": "WILD",
+     "WILD": "sand",
+     "GROUND2": "M5",
+     "FIELD": "M2",
+     "ROCK": "M3",
+     "SNOW": "M3",
+     "SPECIAL": "M4",
+     "FOREST": "M1"
+    },
+    "layerOrder": ["M5", "M2", "M4", "M1", "M3"]
+   },
+   "true": {
+    "classToTerrain": {
+     "DEEP": "water",
+     "SEA": "water",
+     "WATER": "water",
+     "SHORE": null,
+     "WILD": "sand",
+     "GROUND2": "hardpan",
+     "FIELD": "sand",
+     "ROCK": "sand",
+     "SNOW": "sand",
+     "SPECIAL": "sand",
+     "FOREST": "sand",
+     "ROAD": "road",
+     "TURF": "sandturf",
+     "RING": "sand"
+    },
+    "notes": {
+     "DEEP": "kit water + depth tint by coast SDF",
+     "SHORE": "none: the kit's sand-water is the beach",
+     "SPECIAL": "sand + decal group rm_dunes (kit sand_crescent/sand_tail/grass_tussock at 3x sand_decals density)",
+     "FOREST": "trees are LIFE scatter",
+     "RING": "boundary family sandturf-sand at the claim edge",
+     "ROCK": "fix iteration 2 (critic #3/#4): the kit's own sand + LIFE rock clusters (rock_l_sand, boulders, mesa_rock) and features (sand_mesa); the red slickrock extra read as a flat terracotta plain that does not exist in the game",
+     "FIELD": "fix iteration 2 (critic #3): the kit's sand + LIFE crop beds (millet, melons) and date palms; the furrows extra (green millet rows) was dark-green corduroy at TRUE and the kit has no grass or oasis terrain (hardpan tried: brown mud blobs at d 300). ART's FIELD parcel varieties (sand-alfalfa/wheat/melons/sorghum) can layer on this once GROUND draws parcels"
+    },
+    "extras": [],
+    "extrasRetired": "fix iteration 2: sand-slickrock (ROCK) and sand-furrows (FIELD) left TRUE for the kit's sand and hardpan (critic #3); ART's masters stay in mapkit/sunscar/true for a later FIELD-varieties pass",
+    "decalGroups": {
+     "rm_dunes": {
+      "class": "SPECIAL",
+      "terrain": "sand",
+      "density": 0.14, "densityWas": "0.09 until fix iteration 2 (critic #3: TRUE dunes sparse polka-dots)",
+      "decals": ["sand_crescent", "sand_tail", "grass_tussock", "pebble_pale"]
+     }
+    },
+    "decalByClass": {
+     "WILD": "sand_decals",
+     "FOREST": "grove_decals",
+     "GROUND2": "hardpan_decals",
+     "ROAD": "road_decals",
+     "FIELD": "farm_decals",
+     "SPECIAL": "rm_dunes"
+    }
+   }
+  },
+  "frostveil": {
+   "map": {
+    "wild": "snow",
+    "families": {
+     "M1": {
+      "lower": "snow",
+      "upper": "spruce",
+      "brief": "snow <-> snow-laden spruce"
+     },
+     "M2": {
+      "lower": "snow",
+      "upper": "tundraplots",
+      "brief": "snow <-> frost tundra with cabbage plots"
+     },
+     "M3": {
+      "lower": "snow",
+      "upper": "crags",
+      "brief": "snow <-> blue-grey crags"
+     },
+     "M4": {
+      "lower": "snow",
+      "upper": "glacier",
+      "brief": "snow <-> turquoise glacier ice with crevasses (on WILD snow, not ROCK: PACK deviation 2026-09-24 — the painted glacier lake and ice cliffs border snow and water, so an M4 on ROCK collapsed 0.6 % of the lattice)"
+     },
+     "M5": {
+      "lower": "snow",
+      "upper": "frost",
+      "brief": "snow <-> frost (worn)"
+     }
+    },
+    "classToTerrain": {
+     "DEEP": "WILD",
+     "SEA": "WILD",
+     "WATER": "WILD",
+     "SHORE": "WILD",
+     "ROAD": "WILD",
+     "TURF": "WILD",
+     "RING": "WILD",
+     "WILD": "snow",
+     "GROUND2": "M5",
+     "FIELD": "M2",
+     "ROCK": "M3",
+     "SNOW": "WILD",
+     "SPECIAL": "M4",
+     "FOREST": "M1"
+    },
+    "layerOrder": ["M5", "M2", "M4", "M1", "M3"]
+   },
+   "true": {
+    "classToTerrain": {
+     "DEEP": "water",
+     "SEA": "water",
+     "WATER": "water",
+     "SHORE": null,
+     "WILD": "snow",
+     "GROUND2": "frost",
+     "FIELD": "frost",
+     "ROCK": "rock",
+     "SNOW": "snow",
+     "SPECIAL": "snow",
+     "FOREST": "snow",
+     "ROAD": "road",
+     "TURF": "snowturf",
+     "RING": "snow"
+    },
+    "notes": {
+     "SHORE": "none: snow-water is the coast",
+     "FIELD": "frost + kit crop scatter (cabbage_bed_snow, turnip_clamp) by LIFE",
+     "SNOW": "the wild ground is snow",
+     "SPECIAL": "fix iteration 2 (critic #3): glacier = the kit's pale snow (+ LIFE ice props and MAP seracs/floes); the ice extra was a saturated cyan hex texture"
+    },
+    "extras": [
+     {
+      "id": "snow-rock",
+      "lower": "snow",
+      "upper": "rock",
+      "chainOn": "snow",
+      "layer": 2.5,
+      "brief": "snow <-> rock crag"
+     }
+    ],
+    "extrasRetired": "fix iteration 2: snow-ice (SPECIAL) left TRUE for the kit's pale snow (critic #3: saturated cyan hex ice)",
+    "decalGroups": {},
+    "decalByClass": {
+     "WILD": "snow_decals",
+     "FOREST": "woods_decals",
+     "GROUND2": "frost_decals",
+     "ROAD": "road_decals",
+     "FIELD": "farm_decals",
+     "WATER": "water_decals"
+    }
+   }
+  },
+  "cinderfall": {
+   "map": {
+    "wild": "ash",
+    "families": {
+     "M1": {
+      "lower": "ash",
+      "upper": "embercanopy",
+      "brief": "ash <-> ember-maple/burnt-pine canopy (red/black)"
+     },
+     "M2": {
+      "lower": "ash",
+      "upper": "emberscrub",
+      "brief": "ash <-> ember scrub (the painting's red patches)"
+     },
+     "M3": {
+      "lower": "ash",
+      "upper": "basaltmass",
+      "brief": "ash <-> black basalt mountain"
+     },
+     "M4": {
+      "lower": "ash",
+      "upper": "lavacrust",
+      "brief": "ash <-> cooling lava-crust field with glowing cracks (on WILD ash, not ROCK: PACK deviation 2026-09-24 — the crust fringes the painted lava flows, which run through ash, so an M4 on ROCK would collapse wherever it meets ash or lava)"
+     },
+     "M5": {
+      "lower": "ash",
+      "upper": "cinder",
+      "brief": "ash <-> cinder"
+     }
+    },
+    "classToTerrain": {
+     "DEEP": "WILD",
+     "SEA": "WILD",
+     "WATER": "WILD",
+     "SHORE": "WILD",
+     "ROAD": "WILD",
+     "TURF": "WILD",
+     "RING": "WILD",
+     "WILD": "ash",
+     "GROUND2": "M5",
+     "FIELD": "M2",
+     "ROCK": "M3",
+     "SNOW": "M3",
+     "SPECIAL": "M4",
+     "FOREST": "M1"
+    },
+    "layerOrder": ["M5", "M2", "M4", "M1", "M3"]
+   },
+   "true": {
+    "classToTerrain": {
+     "DEEP": "sea",
+     "SEA": "sea",
+     "WATER": "lava",
+     "SHORE": "blacksand",
+     "WILD": "ash",
+     "GROUND2": "cinder",
+     "FIELD": "cinder",
+     "ROCK": "basalt",
+     "SNOW": "basalt",
+     "SPECIAL": "cinder",
+     "FOREST": "ash",
+     "ROAD": "road",
+     "TURF": "ashturf",
+     "RING": "ash"
+    },
+    "notes": {
+     "SEA": "derived sea loop: Frostveil's 8-frame kit water loop palette-mapped to the sea canonical (zero gens)",
+     "WATER": "kit lava loop (inland water is lava in Cinderfall)",
+     "FIELD": "cinder + decal group rm_ember_field",
+     "SPECIAL": "cinder + decal group rm_lava_crust (kit lava_plates/lava_web)"
+    },
+    "extras": [
+     {
+      "id": "sea-blacksand",
+      "lower": "sea",
+      "upper": "blacksand",
+      "chainOn": "new sea canonical (its lower drives the derived sea loop)",
+      "layer": 0.5,
+      "brief": "sea <-> black-sand beach"
+     },
+     {
+      "id": "blacksand-ash",
+      "lower": "blacksand",
+      "upper": "ash",
+      "chainOn": "ash (kit base id)",
+      "layer": 0.5,
+      "brief": "black sand <-> ash"
+     },
+     {
+      "id": "ash-basalt",
+      "lower": "ash",
+      "upper": "basalt",
+      "chainOn": "ash",
+      "layer": 2.5,
+      "brief": "ash <-> basalt rock"
+     }
+    ],
+    "decalGroups": {
+     "rm_ember_field": {
+      "class": "FIELD",
+      "terrain": "cinder",
+      "density": 0.24,
+      "decals": ["ember_specks", "ember_specks_t", "ember_crack_x", "ember_crack_l", "mushroom_caps_ember", "mushroom_cluster_small", "charcoal_chunks"]
+     },
+     "rm_lava_crust": {
+      "class": "SPECIAL",
+      "terrain": "cinder",
+      "density": 0.2,
+      "decals": ["ember_crack_x", "ember_crack_l", "ember_specks", "ember_specks_t", "charcoal_chunks"],
+      "why": "fix round 1 (critic #4: the ember ground read as a tile-grid checker of orange-speckled squares): the kit's lava_plates/lava_web decals fill their whole tile, so at density 0.5 every other fringe tile was an orange square. The lava-crust fringe is sparse small cracks, ember specks and charcoal over cinder: scatter, not per-tile class flips"
+     },
+     "rm_lava": {
+      "class": "WATER",
+      "terrain": "lava",
+      "density": 0.95,
+      "decals": ["lava_rift_01", "lava_rift_02", "lava_rift_03", "lava_rift_04", "lava_rift_05", "lava_rift_06", "lava_rift_07", "lava_rift_08", "lava_web_01", "lava_web_02", "lava_web_03", "lava_web_04", "lava_web_05", "lava_web_06", "lava_web_07", "lava_web_08", "lava_plates_01", "lava_plates_02", "lava_plates_03", "lava_plates_04", "lava_plates_05", "lava_plates_06", "lava_plates_07", "lava_plates_08", "lava_plates_09", "lava_plates_10", "lava_plates_11", "lava_plates_12"]
+     }
+    },
+    "fallbacks": [{"a": "lava", "b": "sea", "to": "blacksand", "why": "plan 5.1.1: sea-lava falls back to black sand (a lava mouth meets the sea through a beach)"}],
+    "classFallback": {"WATER": "SHORE"},
+    "decalByClass": {
+     "WILD": "ash_grit",
+     "FOREST": "ember_leaves",
+     "GROUND2": "cinder_yard",
+     "ROAD": "road_flags",
+     "FIELD": "rm_ember_field",
+     "SPECIAL": "rm_lava_crust",
+     "WATER": "rm_lava"
+    }
+   }
+  },
+  "crownlands": {
+   "map": {
+    "wild": "meadow",
+    "families": {
+     "M1": {
+      "lower": "meadow",
+      "upper": "oakwood",
+      "brief": "meadow <-> oak/beech canopy"
+     },
+     "M2": {
+      "lower": "meadow",
+      "upper": "patchwork",
+      "brief": "meadow <-> wheat/barley patchwork with hedgerows"
+     },
+     "M3": {
+      "lower": "meadow",
+      "upper": "hills",
+      "brief": "meadow <-> brown rocky hills"
+     },
+     "M4": {
+      "lower": "meadow",
+      "upper": "snowpeaks",
+      "brief": "rock <-> snow peaks, ONLY if the SNOW class share >= 0.5 % (fields.mjs report), else skipped",
+      "conditional": "snowShare>=0.005"
+     },
+     "M5": {
+      "lower": "meadow",
+      "upper": "heath",
+      "brief": "meadow <-> dirt heath with wildflowers"
+     }
+    },
+    "classToTerrain": {
+     "DEEP": "WILD",
+     "SEA": "WILD",
+     "WATER": "WILD",
+     "SHORE": "WILD",
+     "ROAD": "WILD",
+     "TURF": "WILD",
+     "RING": "WILD",
+     "WILD": "meadow",
+     "GROUND2": "M5",
+     "FIELD": "M2",
+     "ROCK": "M3",
+     "SNOW": "M4|M3",
+     "SPECIAL": "M5",
+     "FOREST": "M1"
+    },
+    "layerOrder": ["M5", "M2", "M1", "M3", "M4"]
+   },
+   "true": {
+    "classToTerrain": {
+     "DEEP": "water",
+     "SEA": "water",
+     "WATER": "water",
+     "SHORE": "sand",
+     "WILD": "meadow",
+     "GROUND2": "dirt",
+     "FIELD": "wheat",
+     "ROCK": "scree",
+     "SNOW": "scree",
+     "SPECIAL": "meadow",
+     "FOREST": "meadow",
+     "ROAD": "road",
+     "TURF": "turf",
+     "RING": "meadow"
+    },
+    "notes": {
+     "SNOW": "no kit snow: scree",
+     "SPECIAL": "meadow + decal group rm_flowers (kit flower decals at 3x)",
+     "RING": "boundary family turf-meadow",
+     "FIELD": "fix iteration 2 re-run (critic #7, qc TRUE furrows pinstripes 0.754): ART's FIELD variety meadow-wheat (P1-r1 + tonefix, stripes 0.056, mean 203,158,70) replaces the brown furrows extra (78,42,22, pinstripes): the painting's crop clusters are golden (187,160,75 / 204,186,76) and the rework kit's home/farm views show ripe wheat on meadow. The other varieties (barley, stubble, furrows) wait for GROUND's per-parcel pick (ART contract masters.json fieldVarieties)"
+    },
+    "extras": [
+     {
+      "id": "water-sand",
+      "lower": "water",
+      "upper": "sand",
+      "chainOn": "water (kit base id)",
+      "layer": 0.5,
+      "brief": "water <-> sand beach"
+     },
+     {
+      "id": "sand-meadow",
+      "lower": "sand",
+      "upper": "meadow",
+      "chainOn": "meadow",
+      "layer": 0.5,
+      "brief": "beach <-> meadow"
+     },
+     {
+      "id": "meadow-scree",
+      "lower": "meadow",
+      "upper": "scree",
+      "chainOn": "meadow",
+      "layer": 2.5,
+      "brief": "meadow <-> scree/rock"
+     },
+     {
+      "id": "meadow-wheat",
+      "lower": "meadow",
+      "upper": "wheat",
+      "chainOn": "meadow",
+      "layer": 1.5,
+      "brief": "meadow <-> ripe wheat field (ART FIELD variety; was meadow-furrows until fix iteration 2 re-run)"
+     }
+    ],
+    "decalGroups": {
+     "rm_flowers": {
+      "class": "SPECIAL",
+      "terrain": "meadow",
+      "density": 0.3,
+      "decals": ["daisy", "dandelion", "flowers_blue", "flowers_white", "flowers_yellow", "flowers_pink", "clover_flower", "crocus", "petals"]
+     }
+    },
+    "decalByClass": {
+     "WILD": "meadow_decals",
+     "FOREST": "forest_decals",
+     "GROUND2": "dirt_decals",
+     "ROAD": "road_decals",
+     "FIELD": "farm_decals",
+     "SPECIAL": "rm_flowers"
+    }
+   }
+  },
+  "stormcairn": {
+   "map": {
+    "wild": "moor",
+    "families": {
+     "M1": {
+      "lower": "moor",
+      "upper": "pinewood",
+      "brief": "moor <-> Scots pine"
+     },
+     "M2": {
+      "lower": "moor",
+      "upper": "oatrigs",
+      "brief": "moor <-> oat rigs/lazybeds with drystone dykes"
+     },
+     "M3": {
+      "lower": "moor",
+      "upper": "granite",
+      "brief": "moor <-> grey granite crags"
+     },
+     "M4": {
+      "lower": "moor",
+      "upper": "snowpeaks",
+      "brief": "moor <-> snow peaks (on WILD moor, not ROCK: PACK deviation 2026-09-24 — plots on snowy deeds put RING next to SNOW and the painted snowfields reach the coast, so an M4 on ROCK collapsed 3,988 lattice pairs under the demo bases; drawn after M3, the caps still sit over the rock)"
+     },
+     "M5": {
+      "lower": "moor",
+      "upper": "peatheather",
+      "brief": "moor <-> purple heather / peat bog"
+     }
+    },
+    "classToTerrain": {
+     "DEEP": "WILD",
+     "SEA": "WILD",
+     "WATER": "WILD",
+     "SHORE": "WILD",
+     "ROAD": "WILD",
+     "TURF": "WILD",
+     "RING": "WILD",
+     "WILD": "moor",
+     "GROUND2": "M5",
+     "FIELD": "M2",
+     "ROCK": "M3",
+     "SNOW": "M4",
+     "SPECIAL": "M5",
+     "FOREST": "M1"
+    },
+    "layerOrder": ["M5", "M2", "M1", "M3", "M4"]
+   },
+   "true": {
+    "classToTerrain": {
+     "DEEP": "sea",
+     "SEA": "sea",
+     "WATER": "sea",
+     "SHORE": null,
+     "WILD": "moor",
+     "GROUND2": "peat",
+     "FIELD": "furrows",
+     "ROCK": "scree",
+     "SNOW": "snow",
+     "SPECIAL": "heather",
+     "FOREST": "moor",
+     "ROAD": "road",
+     "TURF": "moorturf",
+     "RING": "moor"
+    },
+    "notes": {
+     "SHORE": "none: moor-sea is the coast (surf baked)",
+     "WATER": "lochs use the kit sea loop",
+     "SPECIAL": "kit tone family moor-heather"
+    },
+    "extras": [
+     {
+      "id": "moor-scree",
+      "lower": "moor",
+      "upper": "scree",
+      "chainOn": "moor",
+      "layer": 2.5,
+      "brief": "moor <-> granite scree"
+     },
+     {
+      "id": "scree-snow",
+      "lower": "scree",
+      "upper": "snow",
+      "chainOn": "scree (the moor-scree upper id)",
+      "layer": 2.6,
+      "brief": "scree <-> snow"
+     },
+     {
+      "id": "moor-furrows",
+      "lower": "moor",
+      "upper": "furrows",
+      "chainOn": "moor",
+      "layer": 1.5,
+      "brief": "moor <-> oat furrows"
+     }
+    ],
+    "decalGroups": {},
+    "decalByClass": {
+     "WILD": "moor_decals",
+     "FOREST": "heath_beds",
+     "GROUND2": "peat_decals",
+     "ROAD": "road_decals",
+     "FIELD": "oat_decals",
+     "SPECIAL": "heather_decals",
+     "SEA": "water_decals"
+    }
+   }
+  },
+  "elderwood": {
+    "map": {
+      "wild": "glade",
+      "families": {
+        "M1": {
+          "lower": "glade",
+          "upper": "deepwood",
+          "brief": "glade <-> ancient deep forest (elder oak, yew, moss beech canopy)"
+        },
+        "M2": {
+          "lower": "glade",
+          "upper": "orchard",
+          "brief": "glade <-> apple/plum orchard and herb gardens (FIELD; not painted in the surface, kept for plots and parity)"
+        },
+        "M3": {
+          "lower": "glade",
+          "upper": "mossrock",
+          "brief": "glade <-> mossy cliffs and crags (the canyon walls, the rocky coast)"
+        },
+        "M4": {
+          "lower": "glade",
+          "upper": "fernbrake",
+          "brief": "glade <-> fern, bramble and bluebell understory (SPECIAL; not painted in the surface)"
+        },
+        "M5": {
+          "lower": "glade",
+          "upper": "loam",
+          "brief": "glade <-> worn root-earth loam (GROUND2)"
+        }
+      },
+      "classToTerrain": {
+        "DEEP": "WILD",
+        "SEA": "WILD",
+        "WATER": "WILD",
+        "SHORE": "WILD",
+        "ROAD": "WILD",
+        "TURF": "WILD",
+        "RING": "WILD",
+        "WILD": "glade",
+        "GROUND2": "M5",
+        "FIELD": "M2",
+        "ROCK": "M3",
+        "SNOW": "M3",
+        "SPECIAL": "M4",
+        "FOREST": "M1"
+      },
+      "layerOrder": [
+        "M5",
+        "M2",
+        "M4",
+        "M1",
+        "M3"
+      ]
+    },
+    "true": {
+      "classToTerrain": {
+        "DEEP": "water",
+        "SEA": "water",
+        "WATER": "water",
+        "SHORE": null,
+        "WILD": "glade",
+        "GROUND2": "loam",
+        "FIELD": "glade",
+        "ROCK": "loam",
+        "SNOW": "loam",
+        "SPECIAL": "glade",
+        "FOREST": "glade",
+        "ROAD": "road",
+        "TURF": "elderturf",
+        "RING": "glade"
+      },
+      "notes": {
+        "SHORE": "none: the kit's glade-water and water-loam are the banks",
+        "FOREST": "the kit's own glade + LIFE's stands (canopy_elder_oak, yews, moss beeches), as in game",
+        "ROCK": "no kit rock terrain: loam + LIFE's moss rocks and boulders (rock_l_moss*, boulder_moss)",
+        "FIELD": "glade + orchard fruit decals (the kit's orchards are apple/plum props on glade)",
+        "SPECIAL": "glade + the kit's bank flowers",
+        "RING": "boundary family elderturf-glade",
+        "extras": "none in catch-up A (no ART TRUE extras; D-170 budget goes to D' map art)"
+      },
+      "extras": [],
+      "decalGroups": {},
+      "decalByClass": {
+        "WILD": "glade_floor",
+        "FOREST": "woods_floor",
+        "GROUND2": "loam_floor",
+        "ROAD": "road_litter",
+        "FIELD": "orchard_fruit_0",
+        "SPECIAL": "bank_flowers",
+        "WATER": "water_overlay"
+      }
+    }
+  },
+  "thornwake": {
+    "map": {
+      "wild": "junglefloor",
+      "families": {
+        "M1": {
+          "lower": "junglefloor",
+          "upper": "jungle",
+          "brief": "jungle floor <-> dense rainforest canopy (kapok, banyan, strangler fig)"
+        },
+        "M2": {
+          "lower": "junglefloor",
+          "upper": "paddies",
+          "brief": "jungle floor <-> rice terraces and paddies (FIELD; not painted in the surface)"
+        },
+        "M3": {
+          "lower": "junglefloor",
+          "upper": "junglehills",
+          "brief": "jungle floor <-> rocky jungle hills and laterite crags"
+        },
+        "M4": {
+          "lower": "junglefloor",
+          "upper": "fernbrake",
+          "brief": "jungle floor <-> giant fern, cycad and heliconia brakes (SPECIAL; not painted in the surface)"
+        },
+        "M5": {
+          "lower": "junglefloor",
+          "upper": "mud",
+          "brief": "jungle floor <-> wet red mud (GROUND2)"
+        }
+      },
+      "classToTerrain": {
+        "DEEP": "WILD",
+        "SEA": "WILD",
+        "WATER": "WILD",
+        "SHORE": "WILD",
+        "ROAD": "WILD",
+        "TURF": "WILD",
+        "RING": "WILD",
+        "WILD": "junglefloor",
+        "GROUND2": "M5",
+        "FIELD": "M2",
+        "ROCK": "M3",
+        "SNOW": "M3",
+        "SPECIAL": "M4",
+        "FOREST": "M1"
+      },
+      "layerOrder": [
+        "M5",
+        "M2",
+        "M4",
+        "M1",
+        "M3"
+      ]
+    },
+    "true": {
+      "classToTerrain": {
+        "DEEP": "water",
+        "SEA": "water",
+        "WATER": "water",
+        "SHORE": null,
+        "WILD": "junglefloor",
+        "GROUND2": "mud",
+        "FIELD": "junglefloor",
+        "ROCK": "mud",
+        "SNOW": "mud",
+        "SPECIAL": "junglefloor",
+        "FOREST": "junglefloor",
+        "ROAD": "road",
+        "TURF": "mossturf",
+        "RING": "junglefloor"
+      },
+      "notes": {
+        "SHORE": "none: junglefloor-water and water-mud are the kit's banks (no sand terrain; the painted beaches draw as jungle floor)",
+        "FOREST": "junglefloor + LIFE's stands (kapok, banyan, liana hardwood, rubber tree, strangler fig)",
+        "ROCK": "no kit rock terrain: red mud + LIFE's jungle rocks and ledges (rock_l_jungle, boulder_jungle*, ledge_moss_*)",
+        "FIELD": "junglefloor + farm decals (the kit's paddies are water zones with rice props)",
+        "RING": "boundary family mossturf-junglefloor",
+        "WATER": "river_currents decals on rivers (the kit's current strokes; its water drift is 2-D [-4,-4])",
+        "extras": "none in catch-up A"
+      },
+      "extras": [],
+      "decalGroups": {},
+      "decalByClass": {
+        "WILD": "floor_decals",
+        "FOREST": "woods_decals",
+        "GROUND2": "mud_decals",
+        "ROAD": "road_decals",
+        "FIELD": "farm_decals",
+        "SPECIAL": "rare_flowers",
+        "WATER": "river_currents"
+      }
+    }
+  },
+  "seeker-reach": {
+    "map": {
+      "wild": "reachstone",
+      "families": {
+        "M1": {
+          "lower": "reachstone",
+          "upper": "crystalwood",
+          "brief": "violet slate <-> teal/amethyst crystal woods (the painting's teal forests)"
+        },
+        "M2": {
+          "lower": "reachstone",
+          "upper": "crystalgarden",
+          "brief": "violet slate <-> crystal-dust garden beds (FIELD)"
+        },
+        "M3": {
+          "lower": "reachstone",
+          "upper": "shardcrag",
+          "brief": "violet slate <-> violet peaks, Shard Ridge and the capped slate terraces (ROCK)"
+        },
+        "M4": {
+          "lower": "reachstone",
+          "upper": "quartzsnow",
+          "brief": "violet slate <-> pale lilac quartz snow on the peaks (SNOW), ONLY if the SNOW share >= 0.2 % (overrides snowPeaksMinShare), else SNOW draws M3",
+          "conditional": "snowShare>=0.005"
+        },
+        "M5": {
+          "lower": "reachstone",
+          "upper": "lumengrove",
+          "brief": "violet slate <-> mint-white glowcap / lumen blossom groves (SPECIAL; GROUND2 too)"
+        }
+      },
+      "classToTerrain": {
+        "DEEP": "WILD",
+        "SEA": "WILD",
+        "WATER": "WILD",
+        "SHORE": "WILD",
+        "ROAD": "WILD",
+        "TURF": "WILD",
+        "RING": "WILD",
+        "WILD": "reachstone",
+        "GROUND2": "M5",
+        "FIELD": "M2",
+        "ROCK": "M3",
+        "SNOW": "M4|M3",
+        "SPECIAL": "M5",
+        "FOREST": "M1"
+      },
+      "layerOrder": [
+        "M5",
+        "M2",
+        "M1",
+        "M3",
+        "M4"
+      ],
+      "familiesWhy": "catch-up A (Rule 7): ART-SOLANA's D' masters were generated as M4 SNOW quartz snow and M5 SPECIAL lumen grove (the Crownlands/Stormcairn convention), before PACK's first table (M4 SPECIAL, M5 GROUND2) was committed; the table follows the art"
+    },
+    "true": {
+      "classToTerrain": {
+        "DEEP": "water",
+        "SEA": "water",
+        "WATER": "water",
+        "SHORE": null,
+        "WILD": "reachstone",
+        "GROUND2": "crystaldust",
+        "FIELD": "crystaldust",
+        "ROCK": "violetdrift",
+        "SNOW": "violetdrift",
+        "SPECIAL": "reachstone",
+        "FOREST": "reachstone",
+        "ROAD": "road",
+        "TURF": "slateturf",
+        "RING": "reachstone"
+      },
+      "notes": {
+        "WATER": "the kit's gem water: 16-frame loop at 110 ms, drift [2,-2] (2-D, b46f4b9a) - the realm's signature, never x-only/y-only",
+        "SHORE": "none: reachstone-water and water-crystaldust are the kit's banks",
+        "ROCK": "violetdrift (the kit's tone twin of reachstone, family reachstone-violetdrift) + LIFE's slate rocks, shard clusters and ridges",
+        "FOREST": "reachstone + LIFE's crystal stands (amethyst/teal crystal trees, silver birch, petrified oak)",
+        "SPECIAL": "reachstone + rm_shards (kit shard/sprout/glitter decals) under the glowcap groves",
+        "RING": "boundary family slateturf-reachstone",
+        "extras": "none in catch-up A",
+        "SNOW": "violetdrift (no kit snow): the quartz caps are a MAP feature over the kit's slate"
+      },
+      "extras": [],
+      "decalGroups": {
+        "rm_shards": {
+          "class": "SPECIAL",
+          "terrain": "reachstone",
+          "density": 0.25,
+          "decals": [
+            "shard_chip_violet",
+            "shard_chip_teal",
+            "crystal_sprouts",
+            "crystal_sprouts_b",
+            "crystal_sprouts_c",
+            "glitter_a",
+            "glitter_b",
+            "lens_slivers",
+            "glowcap_spores",
+            "star_moss"
+          ]
+        }
+      },
+      "decalByClass": {
+        "WILD": "field_decals",
+        "FOREST": "grove_litter",
+        "GROUND2": "dust_decals",
+        "ROAD": "road_decals",
+        "FIELD": "garden_decals",
+        "SPECIAL": "rm_shards",
+        "ROCK": "field_rare"
+      }
+    }
+  }
+ }
+}

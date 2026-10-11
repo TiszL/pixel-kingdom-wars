@@ -1,0 +1,1443 @@
+[
+  {
+    "file": "bld_heroaltar_work_f1.svg",
+    "w": 64,
+    "h": 80,
+    "frames": 1,
+    "anchor": [
+      0.5,
+      1
+    ],
+    "footprint": [
+      2,
+      2
+    ],
+    "batch": 6,
+    "tags": [
+      "building",
+      "heroaltar"
+    ],
+    "palette_swap": null
+  },
+  {
+    "file": "bld_heroaltar.svg",
+    "w": 64,
+    "h": 80,
+    "frames": 1,
+    "anchor": [
+      0.5,
+      1
+    ],
+    "footprint": [
+      2,
+      2
+    ],
+    "batch": 6,
+    "tags": [
+      "building",
+      "heroaltar"
+    ],
+    "palette_swap": null
+  },
+  {
+    "file": "fx_vex_aura_f1.svg",
+    "w": 48,
+    "h": 56,
+    "frames": 1,
+    "anchor": [
+      0.5,
+      0.5
+    ],
+    "footprint": null,
+    "batch": 6,
+    "tags": [
+      "fx",
+      "hero",
+      "vex"
+    ],
+    "palette_swap": null
+  },
+  {
+    "file": "fx_vex_aura_f2.svg",
+    "w": 48,
+    "h": 56,
+    "frames": 1,
+    "anchor": [
+      0.5,
+      0.5
+    ],
+    "footprint": null,
+    "batch": 6,
+    "tags": [
+      "fx",
+      "hero",
+      "vex"
+    ],
+    "palette_swap": null
+  },
+  {
+    "file": "fx_vex_aura_f3.svg",
+    "w": 48,
+    "h": 56,
+    "frames": 1,
+    "anchor": [
+      0.5,
+      0.5
+    ],
+    "footprint": null,
+    "batch": 6,
+    "tags": [
+      "fx",
+      "hero",
+      "vex"
+    ],
+    "palette_swap": null
+  },
+  {
+    "file": "fx_vex_bleed_f1.svg",
+    "w": 12,
+    "h": 12,
+    "frames": 1,
+    "anchor": [
+      0.5,
+      0.5
+    ],
+    "footprint": null,
+    "batch": 6,
+    "tags": [
+      "fx",
+      "hero",
+      "vex"
+    ],
+    "palette_swap": null
+  },
+  {
+    "file": "fx_vex_bleed_f2.svg",
+    "w": 12,
+    "h": 12,
+    "frames": 1,
+    "anchor": [
+      0.5,
+      0.5
+    ],
+    "footprint": null,
+    "batch": 6,
+    "tags": [
+      "fx",
+      "hero",
+      "vex"
+    ],
+    "palette_swap": null
+  },
+  {
+    "file": "fx_vex_coinflip_f1.svg",
+    "w": 16,
+    "h": 16,
+    "frames": 1,
+    "anchor": [
+      0.5,
+      0.5
+    ],
+    "footprint": null,
+    "batch": 6,
+    "tags": [
+      "fx",
+      "hero",
+      "vex"
+    ],
+    "palette_swap": null
+  },
+  {
+    "file": "fx_vex_coinflip_f2.svg",
+    "w": 16,
+    "h": 16,
+    "frames": 1,
+    "anchor": [
+      0.5,
+      0.5
+    ],
+    "footprint": null,
+    "batch": 6,
+    "tags": [
+      "fx",
+      "hero",
+      "vex"
+    ],
+    "palette_swap": null
+  },
+  {
+    "file": "fx_vex_coinflip_f3.svg",
+    "w": 16,
+    "h": 16,
+    "frames": 1,
+    "anchor": [
+      0.5,
+      0.5
+    ],
+    "footprint": null,
+    "batch": 6,
+    "tags": [
+      "fx",
+      "hero",
+      "vex"
+    ],
+    "palette_swap": null
+  },
+  {
+    "file": "fx_vex_coinflip_f4.svg",
+    "w": 16,
+    "h": 16,
+    "frames": 1,
+    "anchor": [
+      0.5,
+      0.5
+    ],
+    "footprint": null,
+    "batch": 6,
+    "tags": [
+      "fx",
+      "hero",
+      "vex"
+    ],
+    "palette_swap": null
+  },
+  {
+    "file": "fx_vex_crescent_f1.svg",
+    "w": 24,
+    "h": 24,
+    "frames": 1,
+    "anchor": [
+      0.5,
+      0.5
+    ],
+    "footprint": null,
+    "batch": 6,
+    "tags": [
+      "fx",
+      "hero",
+      "vex"
+    ],
+    "palette_swap": null
+  },
+  {
+    "file": "fx_vex_crescent_f2.svg",
+    "w": 24,
+    "h": 24,
+    "frames": 1,
+    "anchor": [
+      0.5,
+      0.5
+    ],
+    "footprint": null,
+    "batch": 6,
+    "tags": [
+      "fx",
+      "hero",
+      "vex"
+    ],
+    "palette_swap": null
+  },
+  {
+    "file": "fx_vex_crescent_f3.svg",
+    "w": 24,
+    "h": 24,
+    "frames": 1,
+    "anchor": [
+      0.5,
+      0.5
+    ],
+    "footprint": null,
+    "batch": 6,
+    "tags": [
+      "fx",
+      "hero",
+      "vex"
+    ],
+    "palette_swap": null
+  },
+  {
+    "file": "fx_vex_dashtrail_f1.svg",
+    "w": 48,
+    "h": 24,
+    "frames": 1,
+    "anchor": [
+      0.5,
+      0.5
+    ],
+    "footprint": null,
+    "batch": 6,
+    "tags": [
+      "fx",
+      "hero",
+      "vex"
+    ],
+    "palette_swap": null
+  },
+  {
+    "file": "fx_vex_dashtrail_f2.svg",
+    "w": 48,
+    "h": 24,
+    "frames": 1,
+    "anchor": [
+      0.5,
+      0.5
+    ],
+    "footprint": null,
+    "batch": 6,
+    "tags": [
+      "fx",
+      "hero",
+      "vex"
+    ],
+    "palette_swap": null
+  },
+  {
+    "file": "fx_vex_dashtrail_f3.svg",
+    "w": 48,
+    "h": 24,
+    "frames": 1,
+    "anchor": [
+      0.5,
+      0.5
+    ],
+    "footprint": null,
+    "batch": 6,
+    "tags": [
+      "fx",
+      "hero",
+      "vex"
+    ],
+    "palette_swap": null
+  },
+  {
+    "file": "fx_vex_shardnova_f1.svg",
+    "w": 64,
+    "h": 64,
+    "frames": 1,
+    "anchor": [
+      0.5,
+      0.5
+    ],
+    "footprint": null,
+    "batch": 6,
+    "tags": [
+      "fx",
+      "hero",
+      "vex"
+    ],
+    "palette_swap": null
+  },
+  {
+    "file": "fx_vex_shardnova_f2.svg",
+    "w": 64,
+    "h": 64,
+    "frames": 1,
+    "anchor": [
+      0.5,
+      0.5
+    ],
+    "footprint": null,
+    "batch": 6,
+    "tags": [
+      "fx",
+      "hero",
+      "vex"
+    ],
+    "palette_swap": null
+  },
+  {
+    "file": "fx_vex_shardnova_f3.svg",
+    "w": 64,
+    "h": 64,
+    "frames": 1,
+    "anchor": [
+      0.5,
+      0.5
+    ],
+    "footprint": null,
+    "batch": 6,
+    "tags": [
+      "fx",
+      "hero",
+      "vex"
+    ],
+    "palette_swap": null
+  },
+  {
+    "file": "fx_vex_shardnova_f4.svg",
+    "w": 64,
+    "h": 64,
+    "frames": 1,
+    "anchor": [
+      0.5,
+      0.5
+    ],
+    "footprint": null,
+    "batch": 6,
+    "tags": [
+      "fx",
+      "hero",
+      "vex"
+    ],
+    "palette_swap": null
+  },
+  {
+    "file": "fx_vex_slashhit_f1.svg",
+    "w": 24,
+    "h": 24,
+    "frames": 1,
+    "anchor": [
+      0.5,
+      0.5
+    ],
+    "footprint": null,
+    "batch": 6,
+    "tags": [
+      "fx",
+      "hero",
+      "vex"
+    ],
+    "palette_swap": null
+  },
+  {
+    "file": "fx_vex_slashhit_f2.svg",
+    "w": 24,
+    "h": 24,
+    "frames": 1,
+    "anchor": [
+      0.5,
+      0.5
+    ],
+    "footprint": null,
+    "batch": 6,
+    "tags": [
+      "fx",
+      "hero",
+      "vex"
+    ],
+    "palette_swap": null
+  },
+  {
+    "file": "hero_vex_attack_e_f1.svg",
+    "w": 40,
+    "h": 48,
+    "frames": 1,
+    "anchor": [
+      0.5,
+      1
+    ],
+    "footprint": null,
+    "batch": 6,
+    "tags": [
+      "hero",
+      "vex",
+      "attack"
+    ],
+    "palette_swap": null
+  },
+  {
+    "file": "hero_vex_attack_e_f2.svg",
+    "w": 40,
+    "h": 48,
+    "frames": 1,
+    "anchor": [
+      0.5,
+      1
+    ],
+    "footprint": null,
+    "batch": 6,
+    "tags": [
+      "hero",
+      "vex",
+      "attack"
+    ],
+    "palette_swap": null
+  },
+  {
+    "file": "hero_vex_attack_e_f3.svg",
+    "w": 40,
+    "h": 48,
+    "frames": 1,
+    "anchor": [
+      0.5,
+      1
+    ],
+    "footprint": null,
+    "batch": 6,
+    "tags": [
+      "hero",
+      "vex",
+      "attack"
+    ],
+    "palette_swap": null
+  },
+  {
+    "file": "hero_vex_attack_e_f4.svg",
+    "w": 40,
+    "h": 48,
+    "frames": 1,
+    "anchor": [
+      0.5,
+      1
+    ],
+    "footprint": null,
+    "batch": 6,
+    "tags": [
+      "hero",
+      "vex",
+      "attack"
+    ],
+    "palette_swap": null
+  },
+  {
+    "file": "hero_vex_attack_e_f5.svg",
+    "w": 40,
+    "h": 48,
+    "frames": 1,
+    "anchor": [
+      0.5,
+      1
+    ],
+    "footprint": null,
+    "batch": 6,
+    "tags": [
+      "hero",
+      "vex",
+      "attack"
+    ],
+    "palette_swap": null
+  },
+  {
+    "file": "hero_vex_attack_e_f6.svg",
+    "w": 40,
+    "h": 48,
+    "frames": 1,
+    "anchor": [
+      0.5,
+      1
+    ],
+    "footprint": null,
+    "batch": 6,
+    "tags": [
+      "hero",
+      "vex",
+      "attack"
+    ],
+    "palette_swap": null
+  },
+  {
+    "file": "hero_vex_awaken_f1.svg",
+    "w": 40,
+    "h": 48,
+    "frames": 1,
+    "anchor": [
+      0.5,
+      1
+    ],
+    "footprint": null,
+    "batch": 6,
+    "tags": [
+      "hero",
+      "vex",
+      "awaken"
+    ],
+    "palette_swap": null
+  },
+  {
+    "file": "hero_vex_awaken_f2.svg",
+    "w": 40,
+    "h": 48,
+    "frames": 1,
+    "anchor": [
+      0.5,
+      1
+    ],
+    "footprint": null,
+    "batch": 6,
+    "tags": [
+      "hero",
+      "vex",
+      "awaken"
+    ],
+    "palette_swap": null
+  },
+  {
+    "file": "hero_vex_awaken_f3.svg",
+    "w": 40,
+    "h": 48,
+    "frames": 1,
+    "anchor": [
+      0.5,
+      1
+    ],
+    "footprint": null,
+    "batch": 6,
+    "tags": [
+      "hero",
+      "vex",
+      "awaken"
+    ],
+    "palette_swap": null
+  },
+  {
+    "file": "hero_vex_awakened_attack_e_f1.svg",
+    "w": 40,
+    "h": 48,
+    "frames": 1,
+    "anchor": [
+      0.5,
+      1
+    ],
+    "footprint": null,
+    "batch": 6,
+    "tags": [
+      "hero",
+      "vex",
+      "awakened_attack"
+    ],
+    "palette_swap": {
+      "#EFE8D6": "#F4D77B",
+      "#C4BBA4": "#E3AE3C",
+      "#54677A": "#8F2C2C",
+      "#BBD0D6": "#EFE8D6"
+    }
+  },
+  {
+    "file": "hero_vex_awakened_idle_f1.svg",
+    "w": 40,
+    "h": 48,
+    "frames": 1,
+    "anchor": [
+      0.5,
+      1
+    ],
+    "footprint": null,
+    "batch": 6,
+    "tags": [
+      "hero",
+      "vex",
+      "awakened_idle"
+    ],
+    "palette_swap": {
+      "#EFE8D6": "#F4D77B",
+      "#C4BBA4": "#E3AE3C",
+      "#54677A": "#8F2C2C",
+      "#BBD0D6": "#EFE8D6"
+    }
+  },
+  {
+    "file": "hero_vex_awakened_idle_f2.svg",
+    "w": 40,
+    "h": 48,
+    "frames": 1,
+    "anchor": [
+      0.5,
+      1
+    ],
+    "footprint": null,
+    "batch": 6,
+    "tags": [
+      "hero",
+      "vex",
+      "awakened_idle"
+    ],
+    "palette_swap": {
+      "#EFE8D6": "#F4D77B",
+      "#C4BBA4": "#E3AE3C",
+      "#54677A": "#8F2C2C",
+      "#BBD0D6": "#EFE8D6"
+    }
+  },
+  {
+    "file": "hero_vex_awakened_walk_e_f1.svg",
+    "w": 40,
+    "h": 48,
+    "frames": 1,
+    "anchor": [
+      0.5,
+      1
+    ],
+    "footprint": null,
+    "batch": 6,
+    "tags": [
+      "hero",
+      "vex",
+      "awakened_walk"
+    ],
+    "palette_swap": {
+      "#EFE8D6": "#F4D77B",
+      "#C4BBA4": "#E3AE3C",
+      "#54677A": "#8F2C2C",
+      "#BBD0D6": "#EFE8D6"
+    }
+  },
+  {
+    "file": "hero_vex_cast_e_f1.svg",
+    "w": 40,
+    "h": 48,
+    "frames": 1,
+    "anchor": [
+      0.5,
+      1
+    ],
+    "footprint": null,
+    "batch": 6,
+    "tags": [
+      "hero",
+      "vex",
+      "cast"
+    ],
+    "palette_swap": null
+  },
+  {
+    "file": "hero_vex_cast_e_f2.svg",
+    "w": 40,
+    "h": 48,
+    "frames": 1,
+    "anchor": [
+      0.5,
+      1
+    ],
+    "footprint": null,
+    "batch": 6,
+    "tags": [
+      "hero",
+      "vex",
+      "cast"
+    ],
+    "palette_swap": null
+  },
+  {
+    "file": "hero_vex_cast_e_f3.svg",
+    "w": 40,
+    "h": 48,
+    "frames": 1,
+    "anchor": [
+      0.5,
+      1
+    ],
+    "footprint": null,
+    "batch": 6,
+    "tags": [
+      "hero",
+      "vex",
+      "cast"
+    ],
+    "palette_swap": null
+  },
+  {
+    "file": "hero_vex_dash_e_f1.svg",
+    "w": 40,
+    "h": 48,
+    "frames": 1,
+    "anchor": [
+      0.5,
+      1
+    ],
+    "footprint": null,
+    "batch": 6,
+    "tags": [
+      "hero",
+      "vex",
+      "dash"
+    ],
+    "palette_swap": null
+  },
+  {
+    "file": "hero_vex_dash_e_f2.svg",
+    "w": 40,
+    "h": 48,
+    "frames": 1,
+    "anchor": [
+      0.5,
+      1
+    ],
+    "footprint": null,
+    "batch": 6,
+    "tags": [
+      "hero",
+      "vex",
+      "dash"
+    ],
+    "palette_swap": null
+  },
+  {
+    "file": "hero_vex_dash_e_f3.svg",
+    "w": 40,
+    "h": 48,
+    "frames": 1,
+    "anchor": [
+      0.5,
+      1
+    ],
+    "footprint": null,
+    "batch": 6,
+    "tags": [
+      "hero",
+      "vex",
+      "dash"
+    ],
+    "palette_swap": null
+  },
+  {
+    "file": "hero_vex_defeat_f1.svg",
+    "w": 40,
+    "h": 48,
+    "frames": 1,
+    "anchor": [
+      0.5,
+      1
+    ],
+    "footprint": null,
+    "batch": 6,
+    "tags": [
+      "hero",
+      "vex",
+      "defeat"
+    ],
+    "palette_swap": null
+  },
+  {
+    "file": "hero_vex_defeat_f2.svg",
+    "w": 40,
+    "h": 48,
+    "frames": 1,
+    "anchor": [
+      0.5,
+      1
+    ],
+    "footprint": null,
+    "batch": 6,
+    "tags": [
+      "hero",
+      "vex",
+      "defeat"
+    ],
+    "palette_swap": null
+  },
+  {
+    "file": "hero_vex_defeat_f3.svg",
+    "w": 40,
+    "h": 48,
+    "frames": 1,
+    "anchor": [
+      0.5,
+      1
+    ],
+    "footprint": null,
+    "batch": 6,
+    "tags": [
+      "hero",
+      "vex",
+      "defeat"
+    ],
+    "palette_swap": null
+  },
+  {
+    "file": "hero_vex_idle_f1.svg",
+    "w": 40,
+    "h": 48,
+    "frames": 1,
+    "anchor": [
+      0.5,
+      1
+    ],
+    "footprint": null,
+    "batch": 6,
+    "tags": [
+      "hero",
+      "vex",
+      "idle"
+    ],
+    "palette_swap": null
+  },
+  {
+    "file": "hero_vex_idle_f2.svg",
+    "w": 40,
+    "h": 48,
+    "frames": 1,
+    "anchor": [
+      0.5,
+      1
+    ],
+    "footprint": null,
+    "batch": 6,
+    "tags": [
+      "hero",
+      "vex",
+      "idle"
+    ],
+    "palette_swap": null
+  },
+  {
+    "file": "hero_vex_idle_f3.svg",
+    "w": 40,
+    "h": 48,
+    "frames": 1,
+    "anchor": [
+      0.5,
+      1
+    ],
+    "footprint": null,
+    "batch": 6,
+    "tags": [
+      "hero",
+      "vex",
+      "idle"
+    ],
+    "palette_swap": null
+  },
+  {
+    "file": "hero_vex_idle_f4.svg",
+    "w": 40,
+    "h": 48,
+    "frames": 1,
+    "anchor": [
+      0.5,
+      1
+    ],
+    "footprint": null,
+    "batch": 6,
+    "tags": [
+      "hero",
+      "vex",
+      "idle"
+    ],
+    "palette_swap": null
+  },
+  {
+    "file": "hero_vex_portrait_t4.svg",
+    "w": 48,
+    "h": 48,
+    "frames": 1,
+    "anchor": [
+      0,
+      0
+    ],
+    "footprint": null,
+    "batch": 6,
+    "tags": [
+      "hero",
+      "vex",
+      "portrait_t4",
+      "portrait"
+    ],
+    "palette_swap": {
+      "#54677A": "#8F2C2C"
+    }
+  },
+  {
+    "file": "hero_vex_portrait.svg",
+    "w": 48,
+    "h": 48,
+    "frames": 1,
+    "anchor": [
+      0,
+      0
+    ],
+    "footprint": null,
+    "batch": 6,
+    "tags": [
+      "hero",
+      "vex",
+      "portrait",
+      "portrait"
+    ],
+    "palette_swap": null
+  },
+  {
+    "file": "hero_vex_regen_f1.svg",
+    "w": 40,
+    "h": 48,
+    "frames": 1,
+    "anchor": [
+      0.5,
+      1
+    ],
+    "footprint": null,
+    "batch": 6,
+    "tags": [
+      "hero",
+      "vex",
+      "regen"
+    ],
+    "palette_swap": null
+  },
+  {
+    "file": "hero_vex_regen_f2.svg",
+    "w": 40,
+    "h": 48,
+    "frames": 1,
+    "anchor": [
+      0.5,
+      1
+    ],
+    "footprint": null,
+    "batch": 6,
+    "tags": [
+      "hero",
+      "vex",
+      "regen"
+    ],
+    "palette_swap": null
+  },
+  {
+    "file": "hero_vex_revive_f1.svg",
+    "w": 40,
+    "h": 48,
+    "frames": 1,
+    "anchor": [
+      0.5,
+      1
+    ],
+    "footprint": null,
+    "batch": 6,
+    "tags": [
+      "hero",
+      "vex",
+      "revive"
+    ],
+    "palette_swap": null
+  },
+  {
+    "file": "hero_vex_revive_f2.svg",
+    "w": 40,
+    "h": 48,
+    "frames": 1,
+    "anchor": [
+      0.5,
+      1
+    ],
+    "footprint": null,
+    "batch": 6,
+    "tags": [
+      "hero",
+      "vex",
+      "revive"
+    ],
+    "palette_swap": null
+  },
+  {
+    "file": "hero_vex_t2_idle_f1.svg",
+    "w": 40,
+    "h": 48,
+    "frames": 1,
+    "anchor": [
+      0.5,
+      1
+    ],
+    "footprint": null,
+    "batch": 6,
+    "tags": [
+      "hero",
+      "vex",
+      "t2_idle"
+    ],
+    "palette_swap": {
+      "#54677A": "#8F2C2C"
+    }
+  },
+  {
+    "file": "hero_vex_t3_idle_f1.svg",
+    "w": 40,
+    "h": 48,
+    "frames": 1,
+    "anchor": [
+      0.5,
+      1
+    ],
+    "footprint": null,
+    "batch": 6,
+    "tags": [
+      "hero",
+      "vex",
+      "t3_idle"
+    ],
+    "palette_swap": {
+      "#54677A": "#9C6F1E",
+      "#6B6354": "#9C6F1E"
+    }
+  },
+  {
+    "file": "hero_vex_t4_idle_f1.svg",
+    "w": 40,
+    "h": 48,
+    "frames": 1,
+    "anchor": [
+      0.5,
+      1
+    ],
+    "footprint": null,
+    "batch": 6,
+    "tags": [
+      "hero",
+      "vex",
+      "t4_idle"
+    ],
+    "palette_swap": {
+      "#54677A": "#8F2C2C",
+      "#6B6354": "#E3AE3C",
+      "#3D3833": "#1A171E"
+    }
+  },
+  {
+    "file": "hero_vex_taunt_f1.svg",
+    "w": 40,
+    "h": 48,
+    "frames": 1,
+    "anchor": [
+      0.5,
+      1
+    ],
+    "footprint": null,
+    "batch": 6,
+    "tags": [
+      "hero",
+      "vex",
+      "taunt"
+    ],
+    "palette_swap": null
+  },
+  {
+    "file": "hero_vex_taunt_f2.svg",
+    "w": 40,
+    "h": 48,
+    "frames": 1,
+    "anchor": [
+      0.5,
+      1
+    ],
+    "footprint": null,
+    "batch": 6,
+    "tags": [
+      "hero",
+      "vex",
+      "taunt"
+    ],
+    "palette_swap": null
+  },
+  {
+    "file": "hero_vex_taunt_f3.svg",
+    "w": 40,
+    "h": 48,
+    "frames": 1,
+    "anchor": [
+      0.5,
+      1
+    ],
+    "footprint": null,
+    "batch": 6,
+    "tags": [
+      "hero",
+      "vex",
+      "taunt"
+    ],
+    "palette_swap": null
+  },
+  {
+    "file": "hero_vex_walk_e_f1.svg",
+    "w": 40,
+    "h": 48,
+    "frames": 1,
+    "anchor": [
+      0.5,
+      1
+    ],
+    "footprint": null,
+    "batch": 6,
+    "tags": [
+      "hero",
+      "vex",
+      "walk"
+    ],
+    "palette_swap": null
+  },
+  {
+    "file": "hero_vex_walk_e_f2.svg",
+    "w": 40,
+    "h": 48,
+    "frames": 1,
+    "anchor": [
+      0.5,
+      1
+    ],
+    "footprint": null,
+    "batch": 6,
+    "tags": [
+      "hero",
+      "vex",
+      "walk"
+    ],
+    "palette_swap": null
+  },
+  {
+    "file": "hero_vex_walk_e_f3.svg",
+    "w": 40,
+    "h": 48,
+    "frames": 1,
+    "anchor": [
+      0.5,
+      1
+    ],
+    "footprint": null,
+    "batch": 6,
+    "tags": [
+      "hero",
+      "vex",
+      "walk"
+    ],
+    "palette_swap": null
+  },
+  {
+    "file": "hero_vex_walk_e_f4.svg",
+    "w": 40,
+    "h": 48,
+    "frames": 1,
+    "anchor": [
+      0.5,
+      1
+    ],
+    "footprint": null,
+    "batch": 6,
+    "tags": [
+      "hero",
+      "vex",
+      "walk"
+    ],
+    "palette_swap": null
+  },
+  {
+    "file": "hero_vex_walk_n_f1.svg",
+    "w": 40,
+    "h": 48,
+    "frames": 1,
+    "anchor": [
+      0.5,
+      1
+    ],
+    "footprint": null,
+    "batch": 6,
+    "tags": [
+      "hero",
+      "vex",
+      "walk"
+    ],
+    "palette_swap": null
+  },
+  {
+    "file": "hero_vex_walk_n_f2.svg",
+    "w": 40,
+    "h": 48,
+    "frames": 1,
+    "anchor": [
+      0.5,
+      1
+    ],
+    "footprint": null,
+    "batch": 6,
+    "tags": [
+      "hero",
+      "vex",
+      "walk"
+    ],
+    "palette_swap": null
+  },
+  {
+    "file": "hero_vex_walk_n_f3.svg",
+    "w": 40,
+    "h": 48,
+    "frames": 1,
+    "anchor": [
+      0.5,
+      1
+    ],
+    "footprint": null,
+    "batch": 6,
+    "tags": [
+      "hero",
+      "vex",
+      "walk"
+    ],
+    "palette_swap": null
+  },
+  {
+    "file": "hero_vex_walk_n_f4.svg",
+    "w": 40,
+    "h": 48,
+    "frames": 1,
+    "anchor": [
+      0.5,
+      1
+    ],
+    "footprint": null,
+    "batch": 6,
+    "tags": [
+      "hero",
+      "vex",
+      "walk"
+    ],
+    "palette_swap": null
+  },
+  {
+    "file": "hero_vex_walk_s_f1.svg",
+    "w": 40,
+    "h": 48,
+    "frames": 1,
+    "anchor": [
+      0.5,
+      1
+    ],
+    "footprint": null,
+    "batch": 6,
+    "tags": [
+      "hero",
+      "vex",
+      "walk"
+    ],
+    "palette_swap": null
+  },
+  {
+    "file": "hero_vex_walk_s_f2.svg",
+    "w": 40,
+    "h": 48,
+    "frames": 1,
+    "anchor": [
+      0.5,
+      1
+    ],
+    "footprint": null,
+    "batch": 6,
+    "tags": [
+      "hero",
+      "vex",
+      "walk"
+    ],
+    "palette_swap": null
+  },
+  {
+    "file": "hero_vex_walk_s_f3.svg",
+    "w": 40,
+    "h": 48,
+    "frames": 1,
+    "anchor": [
+      0.5,
+      1
+    ],
+    "footprint": null,
+    "batch": 6,
+    "tags": [
+      "hero",
+      "vex",
+      "walk"
+    ],
+    "palette_swap": null
+  },
+  {
+    "file": "hero_vex_walk_s_f4.svg",
+    "w": 40,
+    "h": 48,
+    "frames": 1,
+    "anchor": [
+      0.5,
+      1
+    ],
+    "footprint": null,
+    "batch": 6,
+    "tags": [
+      "hero",
+      "vex",
+      "walk"
+    ],
+    "palette_swap": null
+  },
+  {
+    "file": "ui_skill_crimsondash.svg",
+    "w": 32,
+    "h": 32,
+    "frames": 1,
+    "anchor": [
+      0,
+      0
+    ],
+    "footprint": null,
+    "batch": 6,
+    "tags": [
+      "ui",
+      "skill",
+      "hero"
+    ],
+    "palette_swap": null
+  },
+  {
+    "file": "ui_skill_degenmode.svg",
+    "w": 32,
+    "h": 32,
+    "frames": 1,
+    "anchor": [
+      0,
+      0
+    ],
+    "footprint": null,
+    "batch": 6,
+    "tags": [
+      "ui",
+      "skill",
+      "hero"
+    ],
+    "palette_swap": null
+  },
+  {
+    "file": "ui_skill_doubleornothing.svg",
+    "w": 32,
+    "h": 32,
+    "frames": 1,
+    "anchor": [
+      0,
+      0
+    ],
+    "footprint": null,
+    "batch": 6,
+    "tags": [
+      "ui",
+      "skill",
+      "hero"
+    ],
+    "palette_swap": null
+  },
+  {
+    "file": "ui_skill_moonwave.svg",
+    "w": 32,
+    "h": 32,
+    "frames": 1,
+    "anchor": [
+      0,
+      0
+    ],
+    "footprint": null,
+    "batch": 6,
+    "tags": [
+      "ui",
+      "skill",
+      "hero"
+    ],
+    "palette_swap": null
+  },
+  {
+    "file": "ui_skill_shardstorm.svg",
+    "w": 32,
+    "h": 32,
+    "frames": 1,
+    "anchor": [
+      0,
+      0
+    ],
+    "footprint": null,
+    "batch": 6,
+    "tags": [
+      "ui",
+      "skill",
+      "hero"
+    ],
+    "palette_swap": null
+  }
+]

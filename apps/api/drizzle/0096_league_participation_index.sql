@@ -1,0 +1,1 @@
+CREATE INDEX "raids_attacker_base_resolved_idx" ON "raids" USING btree ("attacker_base_id","resolved_at");

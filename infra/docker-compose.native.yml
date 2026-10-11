@@ -1,0 +1,60 @@
+# Separate project: never pass this file to the ordinary production compose up.
+# Runtime inputs are an external, mode-0600 minimal native service environment.
+name: shardkeep-native
+services:
+  presentation:
+    image: ${NATIVE_IMAGE:?reviewed image digest required}
+    user: '1000:1000'
+    command: ['node', '--max-old-space-size=256', '--import', 'tsx', 'src/native/server.ts']
+    env_file:
+      - path: ${NATIVE_ENV_FILE:?external minimal native environment required}
+        required: true
+    environment:
+      NODE_ENV: production
+      HOST: 0.0.0.0
+      PORT: 3004
+      NATIVE_PRESENTATION_SERVICE: 'true'
+      NATIVE_DB_POOL_MAX: '2'
+      NATIVE_PRESENTATION_WORKERS: '1'
+      NATIVE_PRESENTATION_MAX_RAIDS: '2'
+      NATIVE_PRESENTATION_MAX_STREAMS: '4'
+      NATIVE_PRESENTATION_CACHE_MIB: '32'
+      NATIVE_MIN_VERSION_CODE: '0'
+    restart: unless-stopped
+    read_only: true
+    cap_drop: [ALL]
+    security_opt: [no-new-privileges:true]
+    tmpfs: ['/tmp:rw,noexec,nosuid,nodev,size=64m']
+    cpus: 1
+    mem_limit: 1g
+    pids_limit: 64
+    stop_grace_period: 60s
+    networks:
+      game: { aliases: [native-presentation] }
+    healthcheck:
+      test: ['CMD', 'node', '-e', "fetch('http://127.0.0.1:3004/health').then(r=>process.exit(r.ok?0:1)).catch(()=>process.exit(1))"]
+      interval: 15s
+      timeout: 5s
+      retries: 3
+      start_period: 20s
+  content:
+    image: caddy:2.11.4-alpine
+    user: '1000:1000'
+    command: ['caddy', 'run', '--config', '/etc/caddy/native-content.caddyfile', '--adapter', 'caddyfile']
+    restart: unless-stopped
+    read_only: true
+    cap_drop: [ALL]
+    security_opt: [no-new-privileges:true]
+    tmpfs: ['/tmp:rw,noexec,nosuid,nodev,size=16m']
+    cpus: 0.25
+    mem_limit: 128m
+    pids_limit: 32
+    volumes:
+      - ./Caddyfile.native-content:/etc/caddy/native-content.caddyfile:ro
+      - ${NATIVE_CONTENT_ROOT:?verified immutable content directory required}:/srv/content:ro
+    networks:
+      game: { aliases: [native-content] }
+networks:
+  game:
+    external: true
+    name: ${NATIVE_GAME_NETWORK:-shardkeep_default}

@@ -1,0 +1,549 @@
+{
+  "sourceCommit": "427381a2adf934bbcc902baefc207a655b185eb6",
+  "sourceHashes": {
+    "apps/web/src/game/scenes/BattleScene.ts": "caa08a270b3a16950ed5eac7c0de3f86a3b7f47e154d8fd30c096b25d168ae7d",
+    "apps/web/src/game/v2/troop.ts": "a0412bbd11e587cfeacfc9b1d407ffb2b9116e61c228bda5cd290f48e60471f6",
+    "apps/web/src/game/v2/clips.ts": "b11eedf2d8fd11adff8901c9316e27f466c57b391d105f9edcf0353d0938d5ca",
+    "apps/web/public/atlas/meta.json": "39701ef784bd4f861750468a62545fe1613dec0c29593a794df36365a5ef3a67"
+  },
+  "simVersion": 18,
+  "tickMs": 100,
+  "tiers": [
+    {
+      "tier": 1,
+      "key": "v2_trp_kegrunner_t1_prime",
+      "frames": 6,
+      "fps": 14,
+      "lead": 5
+    },
+    {
+      "tier": 2,
+      "key": "v2_trp_kegrunner_t2_prime",
+      "frames": 6,
+      "fps": 14,
+      "lead": 5
+    },
+    {
+      "tier": 3,
+      "key": "v2_trp_kegrunner_t3_prime",
+      "frames": 6,
+      "fps": 14,
+      "lead": 5
+    },
+    {
+      "tier": 4,
+      "key": "v2_trp_kegrunner_t4_prime",
+      "frames": 6,
+      "fps": 14,
+      "lead": 5
+    }
+  ],
+  "cases": [
+    {
+      "name": "ordinary",
+      "fromTick": 0,
+      "deployTick": 0,
+      "detonateTick": 10,
+      "deathTick": null,
+      "startTick": 5,
+      "ticks": [
+        {
+          "tick": 0,
+          "priming": false,
+          "frame1": 1
+        },
+        {
+          "tick": 4.99,
+          "priming": false,
+          "frame1": 1
+        },
+        {
+          "tick": 5,
+          "priming": true,
+          "frame1": 1
+        },
+        {
+          "tick": 5.5,
+          "priming": true,
+          "frame1": 1
+        },
+        {
+          "tick": 9.5,
+          "priming": true,
+          "frame1": 1
+        },
+        {
+          "tick": 10,
+          "priming": false,
+          "frame1": 2
+        }
+      ]
+    },
+    {
+      "name": "cold-inside",
+      "fromTick": 8,
+      "deployTick": 0,
+      "detonateTick": 10,
+      "deathTick": null,
+      "startTick": 8,
+      "ticks": [
+        {
+          "tick": 8,
+          "priming": true,
+          "frame1": 1
+        },
+        {
+          "tick": 8.5,
+          "priming": true,
+          "frame1": 1
+        },
+        {
+          "tick": 10,
+          "priming": false,
+          "frame1": 3
+        }
+      ]
+    },
+    {
+      "name": "fractional-cold",
+      "fromTick": 8.5,
+      "deployTick": 0,
+      "detonateTick": 10,
+      "deathTick": null,
+      "startTick": 8.5,
+      "ticks": [
+        {
+          "tick": 8.5,
+          "priming": true,
+          "frame1": 1
+        },
+        {
+          "tick": 9,
+          "priming": true,
+          "frame1": 1
+        },
+        {
+          "tick": 10,
+          "priming": false,
+          "frame1": 3
+        }
+      ]
+    },
+    {
+      "name": "late-deploy",
+      "fromTick": 0,
+      "deployTick": 8,
+      "detonateTick": 10,
+      "deathTick": null,
+      "startTick": 8,
+      "ticks": [
+        {
+          "tick": 0,
+          "priming": false,
+          "frame1": 1
+        },
+        {
+          "tick": 7.99,
+          "priming": false,
+          "frame1": 1
+        },
+        {
+          "tick": 8,
+          "priming": true,
+          "frame1": 1
+        },
+        {
+          "tick": 8.5,
+          "priming": true,
+          "frame1": 1
+        },
+        {
+          "tick": 10,
+          "priming": false,
+          "frame1": 3
+        }
+      ]
+    },
+    {
+      "name": "born-at-blast",
+      "fromTick": 0,
+      "deployTick": 10,
+      "detonateTick": 10,
+      "deathTick": null,
+      "startTick": null,
+      "ticks": [
+        {
+          "tick": 0,
+          "priming": false,
+          "frame1": null
+        },
+        {
+          "tick": 9.99,
+          "priming": false,
+          "frame1": null
+        },
+        {
+          "tick": 10,
+          "priming": false,
+          "frame1": null
+        }
+      ]
+    },
+    {
+      "name": "cold-at-blast",
+      "fromTick": 10,
+      "deployTick": 0,
+      "detonateTick": 10,
+      "deathTick": null,
+      "startTick": null,
+      "ticks": [
+        {
+          "tick": 10,
+          "priming": false,
+          "frame1": null
+        }
+      ]
+    },
+    {
+      "name": "dead-before-prime",
+      "fromTick": 0,
+      "deployTick": 0,
+      "detonateTick": 10,
+      "deathTick": 4,
+      "startTick": 5,
+      "ticks": [
+        {
+          "tick": 0,
+          "priming": false,
+          "frame1": 1
+        },
+        {
+          "tick": 4,
+          "priming": false,
+          "frame1": 1
+        },
+        {
+          "tick": 4.99,
+          "priming": false,
+          "frame1": 1
+        },
+        {
+          "tick": 5,
+          "priming": false,
+          "frame1": 1
+        },
+        {
+          "tick": 5.5,
+          "priming": false,
+          "frame1": 1
+        },
+        {
+          "tick": 9.5,
+          "priming": false,
+          "frame1": 1
+        },
+        {
+          "tick": 10,
+          "priming": false,
+          "frame1": 2
+        }
+      ]
+    },
+    {
+      "name": "dead-during-prime",
+      "fromTick": 0,
+      "deployTick": 0,
+      "detonateTick": 10,
+      "deathTick": 7,
+      "startTick": 5,
+      "ticks": [
+        {
+          "tick": 0,
+          "priming": false,
+          "frame1": 1
+        },
+        {
+          "tick": 4.99,
+          "priming": false,
+          "frame1": 1
+        },
+        {
+          "tick": 5,
+          "priming": true,
+          "frame1": 1
+        },
+        {
+          "tick": 5.5,
+          "priming": true,
+          "frame1": 1
+        },
+        {
+          "tick": 7,
+          "priming": false,
+          "frame1": 3
+        },
+        {
+          "tick": 9.5,
+          "priming": false,
+          "frame1": 1
+        },
+        {
+          "tick": 10,
+          "priming": false,
+          "frame1": 2
+        }
+      ]
+    },
+    {
+      "name": "dead-at-prime",
+      "fromTick": 0,
+      "deployTick": 0,
+      "detonateTick": 10,
+      "deathTick": 5,
+      "startTick": 5,
+      "ticks": [
+        {
+          "tick": 0,
+          "priming": false,
+          "frame1": 1
+        },
+        {
+          "tick": 4.99,
+          "priming": false,
+          "frame1": 1
+        },
+        {
+          "tick": 5,
+          "priming": false,
+          "frame1": 1
+        },
+        {
+          "tick": 5.5,
+          "priming": false,
+          "frame1": 1
+        },
+        {
+          "tick": 9.5,
+          "priming": false,
+          "frame1": 1
+        },
+        {
+          "tick": 10,
+          "priming": false,
+          "frame1": 2
+        }
+      ]
+    },
+    {
+      "name": "fresh-zero",
+      "fromTick": 0,
+      "deployTick": 0,
+      "detonateTick": 3,
+      "deathTick": null,
+      "startTick": 0,
+      "ticks": [
+        {
+          "tick": 0,
+          "priming": true,
+          "frame1": 1
+        },
+        {
+          "tick": 0.5,
+          "priming": true,
+          "frame1": 1
+        },
+        {
+          "tick": 3,
+          "priming": false,
+          "frame1": 5
+        }
+      ]
+    },
+    {
+      "name": "replacement-inside",
+      "fromTick": 7,
+      "deployTick": 0,
+      "detonateTick": 10,
+      "deathTick": null,
+      "startTick": 7,
+      "ticks": [
+        {
+          "tick": 7,
+          "priming": true,
+          "frame1": 1
+        },
+        {
+          "tick": 7.5,
+          "priming": true,
+          "frame1": 1
+        },
+        {
+          "tick": 10,
+          "priming": false,
+          "frame1": 5
+        }
+      ]
+    }
+  ],
+  "bodies": [
+    {
+      "name": "nearest-standing",
+      "current": "s",
+      "point": {
+        "x": 100,
+        "y": 0
+      },
+      "first": {
+        "state": "priming",
+        "facing": "e",
+        "clip": "prime"
+      },
+      "continued": {
+        "state": "priming",
+        "facing": "e",
+        "clip": "prime",
+        "ease": "Linear"
+      },
+      "cancelled": {
+        "state": "walking",
+        "clip": "run"
+      }
+    },
+    {
+      "name": "hysteresis",
+      "current": "e",
+      "point": {
+        "x": 100,
+        "y": 50
+      },
+      "first": {
+        "state": "priming",
+        "facing": "e",
+        "clip": "prime"
+      },
+      "continued": {
+        "state": "priming",
+        "facing": "e",
+        "clip": "prime",
+        "ease": "Linear"
+      },
+      "cancelled": {
+        "state": "walking",
+        "clip": "run"
+      }
+    },
+    {
+      "name": "near-zero",
+      "current": "w",
+      "point": {
+        "x": 0.1,
+        "y": 0.1
+      },
+      "first": {
+        "state": "priming",
+        "facing": "w",
+        "clip": "prime"
+      },
+      "continued": {
+        "state": "priming",
+        "facing": "w",
+        "clip": "prime",
+        "ease": "Linear"
+      },
+      "cancelled": {
+        "state": "walking",
+        "clip": "run"
+      }
+    },
+    {
+      "name": "no-standing",
+      "current": "nw",
+      "point": null,
+      "first": {
+        "state": "priming",
+        "facing": "nw",
+        "clip": "prime"
+      },
+      "continued": {
+        "state": "priming",
+        "facing": "nw",
+        "clip": "prime",
+        "ease": "Linear"
+      },
+      "cancelled": {
+        "state": "walking",
+        "clip": "run"
+      }
+    },
+    {
+      "name": "native-hysteresis",
+      "current": "s",
+      "point": {
+        "x": 100,
+        "y": 173
+      },
+      "first": {
+        "state": "priming",
+        "facing": "s",
+        "clip": "prime"
+      },
+      "continued": {
+        "state": "priming",
+        "facing": "s",
+        "clip": "prime",
+        "ease": "Linear"
+      },
+      "cancelled": {
+        "state": "walking",
+        "clip": "run"
+      }
+    },
+    {
+      "name": "native-near-zero",
+      "current": "s",
+      "point": {
+        "x": 0.1,
+        "y": 0.1
+      },
+      "first": {
+        "state": "priming",
+        "facing": "s",
+        "clip": "prime"
+      },
+      "continued": {
+        "state": "priming",
+        "facing": "s",
+        "clip": "prime",
+        "ease": "Linear"
+      },
+      "cancelled": {
+        "state": "walking",
+        "clip": "run"
+      }
+    }
+  ],
+  "nearest": {
+    "buildings": [
+      {
+        "id": "dead",
+        "tx": 0,
+        "ty": 0,
+        "fw": 2,
+        "fh": 2,
+        "destroyed": true
+      },
+      {
+        "id": "standing",
+        "tx": 10,
+        "ty": 2,
+        "fw": 2,
+        "fh": 2,
+        "destroyed": false
+      }
+    ],
+    "point": {
+      "x": 11,
+      "y": 4
+    }
+  }
+}

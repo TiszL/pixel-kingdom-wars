@@ -1,0 +1,4 @@
+/* Compatibility import for the delivered P2 kit. The accepted W10 height sub-class now lives in
+ * pk-tokens.generated.css under html[data-pk-vp-height="short"]. The host must classify dimensions
+ * in JS and set that attribute only for landscape height <= 359px before activating the kit.
+ * No layout media query or second viewport classification belongs in this stylesheet. */

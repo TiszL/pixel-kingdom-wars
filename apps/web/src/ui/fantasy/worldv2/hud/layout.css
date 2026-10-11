@@ -1,0 +1,62 @@
+/* World v2 HUD layout on the web. hud.css is the style contract (concept src/hud.js HUD_CSS at 8acdf059, minus the
+   --sk-* palette and the VT323 face, which styles.css already declares); this file only places things. The host
+   stage is position:relative; every surface here is absolute inside it, safe-area aware, and never wider than the
+   viewport. Silkscreen is not shipped on the web: .hud-display falls back to VT323 through --hud-font-display. */
+.wv2-header{position:absolute;z-index:4;left:0;right:0;top:0;display:flex;align-items:center;gap:var(--hud-gap);
+  padding:calc(env(safe-area-inset-top) + 8px) calc(env(safe-area-inset-right) + 12px) 18px calc(env(safe-area-inset-left) + 12px);pointer-events:none}
+.wv2-header>*{pointer-events:auto}
+.wv2-title{flex:1 1 auto;min-width:0;margin:0;justify-content:center;gap:10px;font:inherit;letter-spacing:2px}
+.wv2-title small{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.wv2-hint{position:absolute;left:50%;top:calc(100% + 64px);transform:translateX(-50%);max-width:calc(100vw - 32px);margin:0;text-align:center;white-space:normal}
+
+.wv2-rail{position:absolute;z-index:3;left:0;right:0;top:calc(env(safe-area-inset-top) + 64px);display:flex;align-items:flex-start;gap:var(--hud-gap);
+  padding:0 calc(env(safe-area-inset-right) + 12px) 0 calc(env(safe-area-inset-left) + 12px);pointer-events:none}
+.wv2-rail>*{pointer-events:auto}
+.wv2-rail-row{display:flex;gap:var(--hud-gap);flex:1 1 auto;min-width:0;overflow-x:auto;scrollbar-width:none;padding:2px 2px 6px}
+.wv2-rail-row::-webkit-scrollbar{display:none}
+.wv2-rail .hud-dest.is-mine{box-shadow:var(--hud-bevel-keep)}
+
+.wv2-search{position:relative;display:flex;align-items:center;gap:4px;flex:0 1 280px;min-width:0}
+.wv2-search .hud-input{flex:1 1 auto;min-width:0;width:100%}
+.wv2-results{position:absolute;right:0;top:calc(100% + 6px);width:min(320px,calc(100vw - 32px));max-height:50vh;overflow-y:auto;display:flex;flex-direction:column;gap:4px;padding:10px 8px 8px}
+.wv2-row{width:100%;text-align:left;font:inherit;color:var(--sk-text);cursor:pointer}
+.wv2-row-name{flex:1 1 auto;min-width:0;display:flex;flex-direction:column;overflow:hidden;text-overflow:ellipsis}
+
+.wv2-panel{position:absolute;z-index:5;display:flex;flex-direction:column;overflow:hidden;box-sizing:border-box}
+.wv2-panel[data-layout=side]{right:calc(env(safe-area-inset-right) + 12px);top:calc(env(safe-area-inset-top) + 124px);bottom:12px;width:min(380px,calc(100vw - 32px))}
+.wv2-panel[data-layout=sheet]{left:0;right:0;bottom:0;max-height:62vh;padding-bottom:env(safe-area-inset-bottom)}
+.wv2-scroll{flex:1 1 auto;min-height:0;overflow-y:auto;display:flex;flex-direction:column;gap:10px;padding:18px var(--hud-pad) 14px}
+.wv2-panel[data-layout=side] .wv2-scroll{padding-right:56px}
+.wv2-x{position:absolute;z-index:2;top:10px;right:8px}
+.wv2-grip{display:block;width:100%;height:24px;padding:10px 0;margin:0;background:none;border:0;cursor:pointer}
+.wv2-foot{flex:none}
+.wv2-panel[data-layout=sheet] .wv2-foot{border-top:0;border-bottom:2px solid var(--sk-border);padding-right:56px}
+.wv2-cta{display:flex;flex-direction:column;gap:var(--hud-gap);width:100%}
+.wv2-cta-row{display:flex;flex-wrap:wrap;gap:var(--hud-gap);width:100%}
+.wv2-cta-row>.hud-btn{flex:1 1 0;min-width:0}
+.wv2-stats{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:0}
+.wv2-stats dd{margin:0}
+@media (orientation:landscape) and (max-height:520px){.wv2-stats{grid-template-columns:repeat(4,1fr)}}
+.wv2-panel .hud-note b{display:block;margin-bottom:4px}
+
+.wv2-card-head{display:flex;flex-direction:column;gap:6px}
+.wv2-card-title{overflow-wrap:anywhere;color:var(--sk-gold-hi)}
+.wv2-tags{display:flex;flex-wrap:wrap;gap:4px}
+.wv2-facts{display:flex;flex-direction:column;gap:4px;margin:0}
+.wv2-facts>div{display:flex;gap:12px;align-items:baseline}
+.wv2-facts dt{width:88px;flex:none}
+.wv2-facts dd{margin:0}
+.wv2-danger{color:#e8875e}
+
+.wv2-realm-chrome{position:absolute;z-index:3;left:0;right:0;top:0;padding:calc(env(safe-area-inset-top) + 8px) calc(env(safe-area-inset-right) + 12px) 0 calc(env(safe-area-inset-left) + 12px);pointer-events:none}
+.wv2-realm-chrome>*{pointer-events:auto}
+.wv2-realm-top{display:flex;align-items:center;gap:var(--hud-gap)}
+.wv2-realm-top .wv2-search{flex:1 1 280px}
+.wv2-warzone{margin-left:auto}
+.wv2-chips{display:flex;gap:6px;margin-top:8px;overflow-x:auto;scrollbar-width:none;padding:2px 2px 6px}
+.wv2-chips::-webkit-scrollbar{display:none}
+.wv2-sm{display:none}
+@media (orientation:portrait){.wv2-lg{display:none}.wv2-sm{display:inline}.wv2-chips{gap:3px}.wv2-chips .hud-filter{padding-left:7px;padding-right:7px}}
+.wv2-level{display:flex;flex-direction:column;gap:4px;width:min(320px,calc(100vw - 32px));margin-top:4px;padding:8px 12px}
+.wv2-warzone-panel{width:min(360px,calc(100vw - 32px));margin:6px 0 0 auto;padding:12px;max-height:50vh;overflow-y:auto}
+.wv2-explore-list{display:flex;flex-direction:column;gap:4px}

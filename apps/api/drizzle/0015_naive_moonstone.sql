@@ -1,0 +1,1 @@
+ALTER TYPE "public"."account_kind" ADD VALUE 'onchain_inflow' BEFORE 'keep_genesis';

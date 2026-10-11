@@ -1,0 +1,141 @@
+{
+  "schemaVersion": 1,
+  "sourceCommit": "427381a2adf934bbcc902baefc207a655b185eb6",
+  "simVersion": 18,
+  "snapshot": {
+    "keepLevel": 1,
+    "buildings": [
+      {
+        "id": "keep",
+        "type": "keep",
+        "level": 1,
+        "tx": 8,
+        "ty": 8
+      },
+      {
+        "id": "laser",
+        "type": "lasertower",
+        "level": 3,
+        "tx": 8,
+        "ty": 6
+      }
+    ],
+    "surplusShards": 1000,
+    "claimMin": 2,
+    "claimMax": 16
+  },
+  "orders": {
+    "deploys": [
+      {
+        "troop": "highlander",
+        "tx": 8,
+        "ty": 0,
+        "tMs": 0
+      }
+    ]
+  },
+  "seed": 108007,
+  "options": {},
+  "stars": 0,
+  "destructionPct": 0,
+  "keepDestroyed": false,
+  "vaultDestroyed": false,
+  "mineDestroyed": false,
+  "victory": false,
+  "buildings": [
+    {
+      "id": "keep",
+      "type": "keep",
+      "hp": 1200,
+      "maxHp": 1200,
+      "destroyed": false
+    },
+    {
+      "id": "laser",
+      "type": "lasertower",
+      "hp": 500,
+      "maxHp": 500,
+      "destroyed": false
+    }
+  ],
+  "ticks": 17,
+  "events": [
+    {
+      "t": 0,
+      "e": "deploy",
+      "id": 0,
+      "troop": "highlander",
+      "x": 2176,
+      "y": 128
+    },
+    {
+      "t": 0,
+      "e": "pos",
+      "id": 0,
+      "x": 2176,
+      "y": 158
+    },
+    {
+      "t": 0,
+      "e": "fire",
+      "id": "laser",
+      "target": 0,
+      "proj": "beam",
+      "ix": 2176,
+      "iy": 158,
+      "releaseOffsetMs": 0,
+      "flightMs": 100,
+      "impactOffsetTicks": 1
+    },
+    {
+      "t": 1,
+      "e": "hit",
+      "target": 0,
+      "dmg": 72
+    },
+    {
+      "t": 5,
+      "e": "pos",
+      "id": 0,
+      "x": 2176,
+      "y": 308
+    },
+    {
+      "t": 10,
+      "e": "pos",
+      "id": 0,
+      "x": 2176,
+      "y": 458
+    },
+    {
+      "t": 15,
+      "e": "pos",
+      "id": 0,
+      "x": 2176,
+      "y": 608
+    },
+    {
+      "t": 15,
+      "e": "fire",
+      "id": "laser",
+      "target": 0,
+      "proj": "beam",
+      "ix": 2176,
+      "iy": 608,
+      "releaseOffsetMs": 0,
+      "flightMs": 100,
+      "impactOffsetTicks": 1
+    },
+    {
+      "t": 16,
+      "e": "hit",
+      "target": 0,
+      "dmg": 70
+    },
+    {
+      "t": 16,
+      "e": "troopDeath",
+      "id": 0
+    }
+  ]
+}

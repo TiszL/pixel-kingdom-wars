@@ -1,0 +1,1 @@
+CREATE UNIQUE INDEX "item_listings_tx_sig_uq" ON "item_listings" USING btree ("tx_signature");

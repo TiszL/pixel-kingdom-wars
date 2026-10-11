@@ -1,0 +1,250 @@
+{
+  "preparation": {
+    "version": 1,
+    "wallet": "3DN16jRYn2tMJwMEftC6EMCXHFSmF6kKsPBKFs27Tk7z",
+    "idempotencyKey": "12345678-1234-4234-8234-123456789abc",
+    "saleId": "07070707070707070707070707070707",
+    "spot": 0,
+    "realm": 0,
+    "terms": {
+      "round": "1",
+      "day": "10",
+      "seller": "8qbHbw2BbbTHBW1sbeqakYXVKRQM8Ne7pLK7m6CVfeR",
+      "developer": "CktRuQ2mttgRGkXJtyksdKHjUdc2C4TgDzyB98oEzy8",
+      "priorExpiry": "0",
+      "validAfter": "864000",
+      "validUntil": "864060"
+    },
+    "source": {
+      "revision": "browser-fixture",
+      "genesisHash": "GgBaCs3NCBuZN12kCJgAW63ydqohFkHEdfdEXBPzLHq",
+      "programId": "27bgnruDhviykKK12k5t2imTEgLUYfAgZRwGiD4zxWDf",
+      "programDataSha256": "a5db34c78ceae707e1c8369da96d8705dfbc4477842b1276915a9573d32391a4",
+      "reviewedDeploymentSlot": 90,
+      "termProofHash": "cdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcd",
+      "snapshotHash": "efefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefef",
+      "termSlot": 100,
+      "initialSlot": 100,
+      "blockhashSlot": 100,
+      "feeSlot": 100,
+      "costSlot": 100,
+      "admissionSlot": 100
+    },
+    "quote": {
+      "blockhash": "GgBaCs3NCBuZN12kCJgAW63ydqohFkHEdfdEXBPzLHq",
+      "lastValidBlockHeight": 99,
+      "unixTimestamp": "864000",
+      "needsAccess": true,
+      "needsQuota": true,
+      "quotaRemaining": 1,
+      "messageHex": "0100080e20e2171b86651cb472945bb4f93daf07c4a71f4bcfbd25aea4e042fe33f6ec31a3f0b6d39d56a05b874020af58fb959789c7bc1584297db75dd77155ec381272a92e6e6046b12f13188efd2d59f18eca2a442deec98407c6f76b5fdce3fcfccde7a7a1a62c18a63c01cb71dd8207e565ac92dc300c017c74c4e0f2477245b07602020202020202020202020202020202020202020202020202020202020202020303030303030303030303030303030303030303030303030303030303030303108c64340236fe0090b04fa2533d22f15bd6d9c816db6f877f161f1cbbf21c7abad4a265a76af3a9c791c4875254c315953b0cf3f7f0752a262d4de4655e2685000000000000000000000000000000000000000000000000000000000000000021b885242c164ff0665854ec335c9a07ae687cbc6b595dc5a52ee6322613843ebd672c48e29236435055735f87c59c87e2764773f7a62f975c7886f8392f1e0db1e50ced1bbfb5c2681cd594715f145c4eb962ec9a8679fb9e1cc2a1c97e880b82a56188ca232633e9a8c173a472541758e5a5c9906eb62fc99e0049522fd9731145048c9c452de6ce2958358e239de79b8b5954f2708c8922fa896e156f4a07040404040404040404040404040404040404040404040404040404040404040403060400070108290d40bdc8b5670c2d20e2171b86651cb472945bb4f93daf07c4a71f4bcfbd25aea4e042fe33f6ec3100060400070208113bf7b1c02d1c7a7b000a00000000000000060d0009070a0b0c0d0201030405089901a4abb085b5a951830107070707070707070707070707070707000001000000000000000a000000000000000202020202020202020202020202020202020202020202020202020202020202030303030303030303030303030303030303030303030303030303030303030301008096980000000000803a090000000000881388130000000000000000002f0d00000000003c2f0d0000000000",
+      "messageSha256": "18232e23e8d22c06f32c4b96a29075e2a24285df2509c088d3c54ebb35aa0b20",
+      "packetBytes": 792,
+      "rents": [
+        {
+          "address": "C2xLvkVoodGQJMjVkpR4N3MJchKR1vXFexFR5LcjMtXT",
+          "space": 83,
+          "minimumBalanceLamports": "2000000",
+          "existingLamports": "0",
+          "maxIncreaseLamports": "2000000"
+        },
+        {
+          "address": "CPQxxq5rZgxND3qbbuaW4JG7Qn7YQaifArd1dFAdt45a",
+          "space": 20,
+          "minimumBalanceLamports": "2000000",
+          "existingLamports": "0",
+          "maxIncreaseLamports": "2000000"
+        },
+        {
+          "address": "GbHS5BybFo4Lt6zhaDDyvgEYJGFwJAKT3fEViRzJa1cq",
+          "space": 294,
+          "minimumBalanceLamports": "2000000",
+          "existingLamports": "0",
+          "maxIncreaseLamports": "2000000"
+        }
+      ],
+      "feeLamports": "5000",
+      "rentLamports": "6000000",
+      "paymentDebitLamports": "10000000",
+      "requiredLamports": "16005000",
+      "payerLamports": "16005000"
+    },
+    "state": "prepared",
+    "currentSigningAuthorized": false,
+    "submissionAuthorized": false
+  },
+  "wire": {
+    "wallet": "3DN16jRYn2tMJwMEftC6EMCXHFSmF6kKsPBKFs27Tk7z",
+    "idempotencyKey": "12345678-1234-4234-8234-123456789abc",
+    "saleId": "07070707070707070707070707070707",
+    "signature": "2YtJYr4febiNLE3NpVG627hwGTPCaVDdafadb9aNAEmxnHYeVqrVPdJCiG3yjYpPVuLEiMNqapq1Ug11VGr1Cygz",
+    "signedTransactionHex": "014d83543ebf1c3d3e2d8846af3253e9415a35ba1dfb2f48cf9ad30dd5abb75a35f94493cf6ffda6b0d21e56ba520b475ef6895bf918d83273ca28c3413acb44070100080e20e2171b86651cb472945bb4f93daf07c4a71f4bcfbd25aea4e042fe33f6ec31a3f0b6d39d56a05b874020af58fb959789c7bc1584297db75dd77155ec381272a92e6e6046b12f13188efd2d59f18eca2a442deec98407c6f76b5fdce3fcfccde7a7a1a62c18a63c01cb71dd8207e565ac92dc300c017c74c4e0f2477245b07602020202020202020202020202020202020202020202020202020202020202020303030303030303030303030303030303030303030303030303030303030303108c64340236fe0090b04fa2533d22f15bd6d9c816db6f877f161f1cbbf21c7abad4a265a76af3a9c791c4875254c315953b0cf3f7f0752a262d4de4655e2685000000000000000000000000000000000000000000000000000000000000000021b885242c164ff0665854ec335c9a07ae687cbc6b595dc5a52ee6322613843ebd672c48e29236435055735f87c59c87e2764773f7a62f975c7886f8392f1e0db1e50ced1bbfb5c2681cd594715f145c4eb962ec9a8679fb9e1cc2a1c97e880b82a56188ca232633e9a8c173a472541758e5a5c9906eb62fc99e0049522fd9731145048c9c452de6ce2958358e239de79b8b5954f2708c8922fa896e156f4a07040404040404040404040404040404040404040404040404040404040404040403060400070108290d40bdc8b5670c2d20e2171b86651cb472945bb4f93daf07c4a71f4bcfbd25aea4e042fe33f6ec3100060400070208113bf7b1c02d1c7a7b000a00000000000000060d0009070a0b0c0d0201030405089901a4abb085b5a951830107070707070707070707070707070707000001000000000000000a000000000000000202020202020202020202020202020202020202020202020202020202020202030303030303030303030303030303030303030303030303030303030303030301008096980000000000803a090000000000881388130000000000000000002f0d00000000003c2f0d0000000000",
+    "wireSha256": "81900c1e4f7d9ee08f90230ee4501a7d4850bfe16abb8bc7540cc0fc59f32b1c",
+    "messageSha256": "18232e23e8d22c06f32c4b96a29075e2a24285df2509c088d3c54ebb35aa0b20",
+    "acceptedAt": "2026-09-25T12:34:56.123456Z",
+    "currentSigningAuthorized": false,
+    "relayAuthorized": false
+  },
+  "settlement": {
+    "wallet": "3DN16jRYn2tMJwMEftC6EMCXHFSmF6kKsPBKFs27Tk7z",
+    "idempotencyKey": "12345678-1234-4234-8234-123456789abc",
+    "saleId": "07070707070707070707070707070707",
+    "signature": "2YtJYr4febiNLE3NpVG627hwGTPCaVDdafadb9aNAEmxnHYeVqrVPdJCiG3yjYpPVuLEiMNqapq1Ug11VGr1Cygz",
+    "receipt": {
+      "version": 1,
+      "signature": "2YtJYr4febiNLE3NpVG627hwGTPCaVDdafadb9aNAEmxnHYeVqrVPdJCiG3yjYpPVuLEiMNqapq1Ug11VGr1Cygz",
+      "slot": 101,
+      "blockTime": 863997,
+      "originalMessageSha256": "18232e23e8d22c06f32c4b96a29075e2a24285df2509c088d3c54ebb35aa0b20",
+      "signedTransactionSha256": "81900c1e4f7d9ee08f90230ee4501a7d4850bfe16abb8bc7540cc0fc59f32b1c",
+      "receiptAccountHex": "96572e0568408b9301bad4a265a76af3a9c791c4875254c315953b0cf3f7f0752a262d4de4655e26850707070707070707070707070707070720e2171b86651cb472945bb4f93daf07c4a71f4bcfbd25aea4e042fe33f6ec310202020202020202020202020202020202020202020202020202020202020202030303030303030303030303030303030303030303030303030303030303030382a56188ca232633e9a8c173a472541758e5a5c9906eb62fc99e0049522fd97300000a0000000000000001000000000000000100a4aacd9f6dd5caa33c42b3163d9ad45b0efcb9a500520315792b2b677db9e2008096980000000000404b4c0000000000404b4c00000000000000000000000000002f0d00000000008069160000000000002f0d0000000000ff",
+      "feeLamports": "5000",
+      "actualRentLamports": "3000000",
+      "buyerNetPaymentLamports": "10000000",
+      "accountRentIncreases": [
+        {
+          "address": "C2xLvkVoodGQJMjVkpR4N3MJchKR1vXFexFR5LcjMtXT",
+          "lamports": "1000000"
+        },
+        {
+          "address": "CPQxxq5rZgxND3qbbuaW4JG7Qn7YQaifArd1dFAdt45a",
+          "lamports": "1000000"
+        },
+        {
+          "address": "GbHS5BybFo4Lt6zhaDDyvgEYJGFwJAKT3fEViRzJa1cq",
+          "lamports": "1000000"
+        }
+      ],
+      "observedAccountSlot": 150,
+      "proofClockUnixTimestamp": "864000",
+      "source": {
+        "trust": "trusted-finalized-rpc-reviewed-program",
+        "stateProvenance": "fresh-reviewed-deployment",
+        "genesisHash": "GgBaCs3NCBuZN12kCJgAW63ydqohFkHEdfdEXBPzLHq",
+        "programId": "27bgnruDhviykKK12k5t2imTEgLUYfAgZRwGiD4zxWDf",
+        "reviewedDeploymentSlot": 90,
+        "reviewedProgramDataSha256": "a5db34c78ceae707e1c8369da96d8705dfbc4477842b1276915a9573d32391a4",
+        "upgradeAuthority": "CktRuQ2mttgRGkXJtyksdKHjUdc2C4TgDzyB98oEzy8",
+        "accounts": [
+          {
+            "address": "27bgnruDhviykKK12k5t2imTEgLUYfAgZRwGiD4zxWDf",
+            "exists": true,
+            "owner": "BPFLoaderUpgradeab1e11111111111111111111111",
+            "executable": true,
+            "dataSha256": "6e3ccd238d321da8683ff67c89f5deb4f964c400c1124fc8c980d0e0d488bd28"
+          },
+          {
+            "address": "4hNHCop8CsMJ4jVMCpPnSEG4bS8fKRNmnRJWfVdWgMLv",
+            "exists": true,
+            "owner": "BPFLoaderUpgradeab1e11111111111111111111111",
+            "executable": false,
+            "dataSha256": "a5db34c78ceae707e1c8369da96d8705dfbc4477842b1276915a9573d32391a4"
+          },
+          {
+            "address": "DaJtRqPP9TvLspdaX9QLfN4cRWroNUdj4TxnrFRqgH6C",
+            "exists": true,
+            "owner": "27bgnruDhviykKK12k5t2imTEgLUYfAgZRwGiD4zxWDf",
+            "executable": false,
+            "dataSha256": "fb8e96d57e429b28061ab51d505009efbbc52edb1b8728477621ca3cd0913778"
+          },
+          {
+            "address": "C2xLvkVoodGQJMjVkpR4N3MJchKR1vXFexFR5LcjMtXT",
+            "exists": true,
+            "owner": "27bgnruDhviykKK12k5t2imTEgLUYfAgZRwGiD4zxWDf",
+            "executable": false,
+            "dataSha256": "24aa109d55b66cce35bb87fad60d5a9190280ee26b3dfea3ac91bf6437e68af4"
+          },
+          {
+            "address": "SysvarC1ock11111111111111111111111111111111",
+            "exists": true,
+            "owner": "Sysvar1111111111111111111111111111111111111",
+            "executable": false,
+            "dataSha256": "ae7651165dcfcc0df0549e7f8ecf28fe5737589dabd4a912240676615cdbcc5b"
+          },
+          {
+            "address": "GbHS5BybFo4Lt6zhaDDyvgEYJGFwJAKT3fEViRzJa1cq",
+            "exists": true,
+            "owner": "27bgnruDhviykKK12k5t2imTEgLUYfAgZRwGiD4zxWDf",
+            "executable": false,
+            "dataSha256": "235ae7c295187005de6fcb6b8c9c3e1f3070d3edf2ef665787af23003d6da60c"
+          }
+        ]
+      }
+    },
+    "purchase": {
+      "address": "GbHS5BybFo4Lt6zhaDDyvgEYJGFwJAKT3fEViRzJa1cq",
+      "buyer": "3DN16jRYn2tMJwMEftC6EMCXHFSmF6kKsPBKFs27Tk7z",
+      "seller": "8qbHbw2BbbTHBW1sbeqakYXVKRQM8Ne7pLK7m6CVfeR",
+      "developer": "CktRuQ2mttgRGkXJtyksdKHjUdc2C4TgDzyB98oEzy8",
+      "spot": 0,
+      "realm": 0,
+      "round": "1",
+      "day": "10",
+      "acceptedAt": "864000",
+      "priorExpiry": "0",
+      "coverageStart": "864000",
+      "expiresAt": "1468800",
+      "priceLamports": "10000000",
+      "sellerLamports": "5000000",
+      "developerLamports": "5000000"
+    },
+    "settledAt": "2026-09-25T12:34:56.123456Z",
+    "purchaseFinalized": true,
+    "admissionAuthorized": false,
+    "relayAuthorized": false,
+    "signingAuthorized": false
+  },
+  "policy": {
+    "version": 1,
+    "quoteTtlSec": 600,
+    "daySec": 86400,
+    "totalSpots": 100,
+    "realmCount": 8,
+    "quotaMax": 10,
+    "permitDurationSec": 604800,
+    "permitPriceLamports": 10000000,
+    "basisPoints": 10000,
+    "sellerBps": 5000,
+    "developerBps": 5000
+  },
+  "review": {
+    "version": 1,
+    "saleId": "07070707070707070707070707070707",
+    "wallet": "3DN16jRYn2tMJwMEftC6EMCXHFSmF6kKsPBKFs27Tk7z",
+    "idempotencyKey": "12345678-1234-4234-8234-123456789abc",
+    "messageSha256": "18232e23e8d22c06f32c4b96a29075e2a24285df2509c088d3c54ebb35aa0b20",
+    "sourceRevision": "browser-fixture",
+    "snapshotHash": "efefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefef",
+    "quoteSlot": 100,
+    "unixTimestamp": "864000",
+    "validUntil": "864060",
+    "feeSlot": 100,
+    "bracketSlot": 100,
+    "blockHeight": 99,
+    "feeLamports": "5000",
+    "rentLamports": "6000000",
+    "paymentDebitLamports": "10000000",
+    "requiredLamports": "16005000",
+    "payerLamports": "16005000",
+    "quotaRemaining": 1,
+    "rents": [
+      {
+        "address": "C2xLvkVoodGQJMjVkpR4N3MJchKR1vXFexFR5LcjMtXT",
+        "lamports": "2000000"
+      },
+      {
+        "address": "CPQxxq5rZgxND3qbbuaW4JG7Qn7YQaifArd1dFAdt45a",
+        "lamports": "2000000"
+      },
+      {
+        "address": "GbHS5BybFo4Lt6zhaDDyvgEYJGFwJAKT3fEViRzJa1cq",
+        "lamports": "2000000"
+      }
+    ],
+    "admissionEligible": true,
+    "signingAuthorized": false,
+    "paymentAuthorized": false,
+    "submissionAuthorized": false,
+    "reservation": false
+  }
+}

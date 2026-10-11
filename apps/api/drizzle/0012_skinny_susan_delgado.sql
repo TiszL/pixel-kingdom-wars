@@ -1,0 +1,1 @@
+ALTER TYPE "public"."deposit_status" ADD VALUE 'failed';

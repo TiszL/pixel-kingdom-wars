@@ -1,0 +1,55 @@
+# Keep the build context small and secrets out of images.
+node_modules
+**/node_modules
+**/dist
+**/build
+**/coverage
+**/.turbo
+**/*.tsbuildinfo
+*.log
+.DS_Store
+.idea
+.vscode
+.cache
+.pnpm-store
+.git
+.github
+.reports
+
+# Secrets — these must never reach an image layer, where they survive deletion.
+.env
+.env.*
+!.env.example
+infra/keys
+infra/backups
+infra/policy-signer-state
+*.keypair.json
+*-keypair.json
+*_keypair.json
+*.zip
+*.tar
+*.tar.gz
+*.tgz
+mobile
+**/*.keystore
+**/*.jks
+**/*.p12
+**/*.pfx
+
+# Rust/Anchor and local-validator output (the API image consumes only the
+# checked-in program addresses, copied explicitly by its Dockerfile).
+target
+.anchor
+test-ledger
+
+# Programs, the native client and art sources are not inputs to apps/api/Dockerfile.
+programs
+android
+art
+# apps/web/public/atlas is NOT excluded: the API's baseRender reads the @1x
+# atlases to render each player's Land Deed PNG (GET /deed/:wallet.png).
+apps/web/public/audio
+apps/web/public/brand
+# The world v2 pack (~32 MB) is client-only art: the API renders deeds
+# from the @1x atlases above, never from the globe or realm-map pack.
+apps/web/public/atlas/world-v2

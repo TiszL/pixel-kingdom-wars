@@ -1,0 +1,93 @@
+/* PlacementMode.kt PlacementStrip: presentation geometry only. The host supplies a sized, safely inset area.
+ * This transparent root neither owns the viewport nor catches scene input. No ghost/drag/rotation lives here. */
+.pk-placement-bar {
+  --pk-placement-info-left: calc(var(--pk-size-command) + var(--pk-s16) + var(--pk-s8) + var(--pk-s6)); /* 98 */
+  --pk-placement-primary-right: calc(var(--pk-size-command-primary-w) + var(--pk-s16)); /* 136 */
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-width: 0;
+  pointer-events: none;
+  color: var(--pk-text);
+}
+.pk-placement-bar .interactive { pointer-events: auto; }
+.pk-placement-bar__shelf {
+  position: absolute;
+  inset-inline: 0;
+  bottom: 0;
+  height: calc(5 * var(--pk-s32) + var(--pk-outline-plate)); /* 163 */
+  pointer-events: none;
+  background: linear-gradient(to bottom,
+    color-mix(in srgb, var(--pk-ink) 18%, transparent) 0 var(--pk-s16),
+    color-mix(in srgb, var(--pk-ink) 50%, transparent) var(--pk-s16) calc(var(--pk-s16) + var(--pk-s2)),
+    var(--pk-scrim-shelf) calc(var(--pk-s16) + var(--pk-s2)));
+}
+.pk-placement-bar__hint, .pk-placement-bar__reason {
+  position: absolute;
+  margin: 0;
+  padding: var(--pk-s4) var(--pk-s12);
+  box-sizing: border-box;
+  background: color-mix(in srgb, var(--pk-ink) 86%, transparent);
+  text-align: center;
+  pointer-events: none;
+  overflow-wrap: anywhere;
+}
+.pk-placement-bar__hint {
+  top: calc(3 * var(--pk-s32) + var(--pk-s16)); /* 112 under the safe top */
+  left: 50%;
+  transform: translateX(-50%);
+  width: max-content;
+  max-width: calc(100% - 2 * var(--pk-s12));
+}
+.pk-placement-bar__cancel {
+  position: absolute;
+  left: var(--pk-s16);
+  bottom: var(--pk-s12);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--pk-k-5);
+}
+.pk-placement-bar__cancel > .pk-btn { width: var(--pk-size-command); height: var(--pk-size-command); }
+.pk-placement-bar__cancel > span { color: var(--pk-k-label); }
+.pk-placement-bar__info {
+  position: absolute;
+  left: var(--pk-placement-info-left);
+  bottom: calc(var(--pk-s32) + var(--pk-k-5)); /* 37 */
+  width: calc(5 * var(--pk-s32) + var(--pk-s6)); /* 166 */
+  /* Preserve the native gap before PLACE. Very narrow hosts shrink the plate rather than cover a control. */
+  max-width: max(0px, calc(100% - var(--pk-placement-info-left) - var(--pk-placement-primary-right) - var(--pk-s6)));
+  min-width: 0;
+  height: calc(2 * var(--pk-s32) + var(--pk-s8)); /* 72 */
+}
+.pk-placement-bar__info > .pk-plate { width: 100%; height: 100%; }
+.pk-placement-bar__info-content { display: flex; flex-direction: column; gap: var(--pk-s2); min-width: 0; }
+.pk-placement-bar__name { color: var(--pk-gold-hi); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.pk-placement-bar__details { display: flex; align-items: center; flex-wrap: wrap; gap: var(--pk-s4); min-width: 0; }
+.pk-placement-bar__details > .pk-icon { flex: none; }
+.pk-placement-bar__details > span { overflow-wrap: anywhere; }
+.pk-placement-bar__place {
+  position: absolute;
+  right: var(--pk-s16);
+  bottom: calc(var(--pk-s32) + var(--pk-outline-plate)); /* 35 */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--pk-s4);
+}
+.pk-placement-bar__primary { width: var(--pk-size-command-primary-w); height: var(--pk-size-command-primary-h); }
+.pk-placement-bar__primary .pk-btn__content { flex-direction: column; gap: var(--pk-s2); }
+.pk-placement-bar__primary [data-off='true'] { color: var(--pk-text); }
+.pk-placement-bar__reason {
+  right: var(--pk-s8);
+  bottom: var(--pk-s4);
+  max-width: calc(100% - var(--pk-placement-info-left) - var(--pk-s8));
+  padding: var(--pk-s2) var(--pk-s8);
+  color: var(--pk-danger); /* Bridge counterpart of native GHOST_BLOCKED. */
+}
+.pk-placement-bar__report {
+  position: absolute;
+  left: 50%;
+  bottom: calc(4 * var(--pk-s32) + var(--pk-s12)); /* 140 */
+  transform: translateX(-50%);
+}

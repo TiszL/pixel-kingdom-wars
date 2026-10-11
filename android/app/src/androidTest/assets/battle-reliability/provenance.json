@@ -1,0 +1,64 @@
+{
+  "schemaVersion": 1,
+  "fixture": "stage100-dragons",
+  "sourceCommit": "1ddcd62a31e23b9907997229aab2cb59036c60e6",
+  "simVersion": 14,
+  "canonicalStage": 100,
+  "seed": 42,
+  "syntheticOnly": true,
+  "fixtures": [
+    {
+      "path": "stage100-dragons-2.json",
+      "bytes": 173598,
+      "sha256": "d3317026c04b28be00c693014cc080ebc788ffba19c81adb6f9891fbca6c20d4",
+      "revision": 2,
+      "events": 1271,
+      "buildings": 306,
+      "eventEndTick": 328,
+      "buildingHealthRows": 306
+    },
+    {
+      "path": "stage100-dragons-8.json",
+      "bytes": 273342,
+      "sha256": "81fe8b99847c8b3b38cf61877aa0e8e5c6b72ff632bd6c159563877c780e038d",
+      "revision": 8,
+      "events": 2210,
+      "buildings": 306,
+      "eventEndTick": 419,
+      "buildingHealthRows": 306
+    },
+    {
+      "path": "stage100-dragons-16.json",
+      "bytes": 482014,
+      "sha256": "c4e8da262c1e42735ba8a0fcbcdd5e703dde2f9bacdc505353ea909299c3aece",
+      "revision": 16,
+      "events": 4207,
+      "buildings": 306,
+      "eventEndTick": 898,
+      "buildingHealthRows": 306
+    },
+    {
+      "path": "stage100-dragons-90.json",
+      "bytes": 688301,
+      "sha256": "cc04566e7d25536476e2a0e72727320529d5bdc63744c0d15ee49ca2f1dbf1ea",
+      "revision": 90,
+      "events": 7176,
+      "buildings": 306,
+      "eventEndTick": 312,
+      "buildingHealthRows": 306
+    }
+  ],
+  "generator": {
+    "path": "generate-stage100.mts",
+    "sha256": "370e17a513d768e01a7cc701cc89d590b014cf3d78d5fb4b33d9d758bdb61868",
+    "runFrom": "Canonical source .reports/battle-reliability; imports intentionally remain source-relative"
+  },
+  "sourceInputSha256": {
+    "apps/api/src/game/world.ts": "f1846457bbc090d3f10ff405e11cc7a2e79e116329678d7ba4d13e6a29c6cd49",
+    "packages/sim/src/sim.ts": "f12e85ac154a2dbe0fbecffd7f8967770a9a51429279cad79616edc82cf7202d",
+    "packages/sim/src/version.ts": "cd7e05135957ac87b5e78b9a94a8723a02ff400413db124095873cb52b9789be",
+    "packages/shared/src/constants.ts": "9b11fb56394b56cfc82ca352f311933151f470d902a24b32ee0b97f042573936",
+    "packages/shared/src/baseVisual.ts": "94890ef3f31edfba1a1d7c9817a8eb2c007641fc790b8f42215f0cf3873e70f8",
+    "apps/api/src/native/health.ts": "03018b9a878c351aeca2b04e0a731e6ef385c99155b443d092222ea18ee51f18"
+  }
+}

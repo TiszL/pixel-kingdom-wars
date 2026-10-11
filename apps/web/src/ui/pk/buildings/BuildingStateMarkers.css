@@ -1,0 +1,42 @@
+/* BuildingStateMarkers.kt: geometry and motion are presentation values, never gameplay numbers. */
+.pk-building-markers { position: absolute; inset: 0; pointer-events: none; }
+.pk-building-bubble {
+  position: absolute;
+  z-index: var(--z-anchor);
+  transform: translate(-50%, calc(-100% - var(--pk-s4)));
+  pointer-events: none;
+}
+.pk-building-bubble__body { display: flex; flex-direction: column; align-items: center; }
+.pk-building-bubble__target {
+  appearance: none;
+  display: block;
+  width: var(--pk-size-world-bubble);
+  height: var(--pk-size-world-bubble);
+  min-width: var(--pk-min-tap);
+  min-height: var(--pk-min-tap);
+  padding: 0;
+  border: 0;
+  margin: 0;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+  pointer-events: auto;
+}
+.pk-building-bubble__plate { width: 100%; height: 100%; pointer-events: none; }
+.pk-building-bubble__plate > .pk-plate__face { justify-content: center; padding: 0; }
+.pk-building-bubble__content { display: flex; flex-direction: column; align-items: center; justify-content: center; }
+.pk-building-bubble__tail { display: block; width: var(--pk-s12); height: var(--pk-s8); background: var(--pk-ink); clip-path: polygon(0 0, 100% 0, 50% 100%); }
+.pk-building-bubble[data-ready='true'] > .pk-building-bubble__body {
+  animation: pk-building-ready calc(var(--pk-dur-ready-bounce-loop) + var(--pk-dur-ready-bounce-pause)) infinite;
+}
+/* Native bounce: rise 450 ms, fall 450 ms, rest 2000 ms. Fractions are 450/2900 and 900/2900. */
+@keyframes pk-building-ready {
+  0% { transform: translateY(0); animation-timing-function: var(--pk-ease-out); }
+  15.517241% { transform: translateY(calc(-1 * var(--pk-s6))); animation-timing-function: var(--pk-ease-in); }
+  31.034483%, 100% { transform: translateY(0); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .pk-building-bubble[data-ready='true'] > .pk-building-bubble__body { animation: none; }
+}
+html[data-motion='reduce'] .pk-building-bubble[data-ready='true'] > .pk-building-bubble__body { animation: none; }

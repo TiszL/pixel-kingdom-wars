@@ -1,0 +1,441 @@
+{
+  "schemaVersion": 1,
+  "sourceHashes": {
+    "packages/shared/src/constants.ts": "94dfd9e3b11d6980a8a2b517cb5b8dd3eda9970c4790cad55934bf458c3e3f47",
+    "packages/shared/src/plotGeometry.ts": "524a4b99d83fafcccd18e4ee174c5a5d16572db27fd80d426bd3dfc0a4fb45ca",
+    "apps/api/src/game/footprints.ts": "beedc08269143274548cdf02e84c602ea50edcb0904520ed3e094330b33e93d1",
+    "apps/api/src/money/expansion.ts": "555943eb5d7877de24f11fa8862242120d9678cc56d0f88ff037d979124e67df"
+  },
+  "catalogue": {
+    "constants": {
+      "CAPS": {
+        "wallSegments": [
+          20,
+          40,
+          60
+        ],
+        "trapsByKeepLevel": [
+          2,
+          4,
+          6,
+          8,
+          10,
+          12,
+          14,
+          16,
+          18,
+          20,
+          20,
+          20,
+          20,
+          20,
+          20,
+          20,
+          20,
+          20,
+          20,
+          20
+        ],
+        "buildersMax": 6,
+        "builderPricesSol": [
+          0.5,
+          0.75,
+          1,
+          1.5,
+          3
+        ],
+        "expansionsMax": 12,
+        "expansionPriceSol": 0.15,
+        "expansionPriceSolByIndex": [
+          0.15,
+          0.25,
+          0.4,
+          0.65,
+          1,
+          1.5,
+          1.75,
+          2,
+          2.25,
+          2.5,
+          2.75,
+          3
+        ],
+        "expansionReqKeepLevel": [
+          3,
+          6,
+          9,
+          12,
+          15,
+          18,
+          19,
+          20,
+          20,
+          20,
+          20,
+          20
+        ],
+        "claimTilesByExpansion": [
+          14,
+          16,
+          18,
+          20,
+          22,
+          24,
+          26,
+          30,
+          34,
+          38,
+          42,
+          46,
+          50
+        ]
+      },
+      "GRID": {
+        "claimTiles": 14,
+        "plotTiles": 30,
+        "deployRingTiles": 2,
+        "tilePx": 32
+      },
+      "PLOT_GEOMETRY": {
+        "legacyVersion": 1,
+        "currentVersion": 2,
+        "boundsByVersion": {
+          "1": {
+            "min": 0,
+            "max": 30
+          },
+          "2": {
+            "min": -10,
+            "max": 40
+          }
+        }
+      },
+      "STRUCTURES": {
+        "keep": {
+          "hp": 1200,
+          "maxLevel": 20,
+          "footprint": [
+            2,
+            2
+          ]
+        },
+        "wall": {
+          "hpByTier": [
+            300,
+            600,
+            1200,
+            1500,
+            1875,
+            2212,
+            2611,
+            3081,
+            3635,
+            4180,
+            4808,
+            5529,
+            6247,
+            7060,
+            7977,
+            8855,
+            9829,
+            10910,
+            12001,
+            13201
+          ],
+          "maxTier": 20,
+          "footprint": [
+            1,
+            1
+          ]
+        }
+      },
+      "BUILDING_GEOMETRY": {
+        "legacyVersion": 1,
+        "candidateVersion": 2,
+        "keepFootprintByVersion": {
+          "1": [
+            2,
+            2
+          ],
+          "2": [
+            4,
+            4
+          ]
+        }
+      },
+      "BUILD_COSTS": {
+        "wall": {
+          "costShards": 150,
+          "buildSec": 0
+        }
+      },
+      "BUILD_COUNT_CAP_BY_KEEP": {
+        "wall": [
+          40,
+          51,
+          62,
+          73,
+          84,
+          95,
+          106,
+          117,
+          128,
+          139,
+          151,
+          162,
+          173,
+          184,
+          195,
+          206,
+          217,
+          228,
+          239,
+          250
+        ]
+      }
+    }
+  },
+  "cases": [
+    {
+      "expansions": 0,
+      "claim": {
+        "min": 8,
+        "max": 22
+      },
+      "plotVersion": 1,
+      "plot": {
+        "min": 0,
+        "max": 30
+      },
+      "offer": {
+        "expectedExpansions": 0,
+        "fromClaimTiles": 14,
+        "toClaimTiles": 16,
+        "requiredKeepLevel": 3,
+        "amountLamports": 150000000
+      }
+    },
+    {
+      "expansions": 1,
+      "claim": {
+        "min": 7,
+        "max": 23
+      },
+      "plotVersion": 1,
+      "plot": {
+        "min": 0,
+        "max": 30
+      },
+      "offer": {
+        "expectedExpansions": 1,
+        "fromClaimTiles": 16,
+        "toClaimTiles": 18,
+        "requiredKeepLevel": 6,
+        "amountLamports": 250000000
+      }
+    },
+    {
+      "expansions": 2,
+      "claim": {
+        "min": 6,
+        "max": 24
+      },
+      "plotVersion": 1,
+      "plot": {
+        "min": 0,
+        "max": 30
+      },
+      "offer": {
+        "expectedExpansions": 2,
+        "fromClaimTiles": 18,
+        "toClaimTiles": 20,
+        "requiredKeepLevel": 9,
+        "amountLamports": 400000000
+      }
+    },
+    {
+      "expansions": 3,
+      "claim": {
+        "min": 5,
+        "max": 25
+      },
+      "plotVersion": 1,
+      "plot": {
+        "min": 0,
+        "max": 30
+      },
+      "offer": {
+        "expectedExpansions": 3,
+        "fromClaimTiles": 20,
+        "toClaimTiles": 22,
+        "requiredKeepLevel": 12,
+        "amountLamports": 650000000
+      }
+    },
+    {
+      "expansions": 4,
+      "claim": {
+        "min": 4,
+        "max": 26
+      },
+      "plotVersion": 1,
+      "plot": {
+        "min": 0,
+        "max": 30
+      },
+      "offer": {
+        "expectedExpansions": 4,
+        "fromClaimTiles": 22,
+        "toClaimTiles": 24,
+        "requiredKeepLevel": 15,
+        "amountLamports": 1000000000
+      }
+    },
+    {
+      "expansions": 5,
+      "claim": {
+        "min": 3,
+        "max": 27
+      },
+      "plotVersion": 1,
+      "plot": {
+        "min": 0,
+        "max": 30
+      },
+      "offer": {
+        "expectedExpansions": 5,
+        "fromClaimTiles": 24,
+        "toClaimTiles": 26,
+        "requiredKeepLevel": 18,
+        "amountLamports": 1500000000
+      }
+    },
+    {
+      "expansions": 6,
+      "claim": {
+        "min": 2,
+        "max": 28
+      },
+      "plotVersion": 1,
+      "plot": {
+        "min": 0,
+        "max": 30
+      },
+      "offer": {
+        "expectedExpansions": 6,
+        "fromClaimTiles": 26,
+        "toClaimTiles": 30,
+        "requiredKeepLevel": 19,
+        "amountLamports": 1750000000
+      }
+    },
+    {
+      "expansions": 7,
+      "claim": {
+        "min": 0,
+        "max": 30
+      },
+      "plotVersion": 1,
+      "plot": {
+        "min": 0,
+        "max": 30
+      },
+      "offer": {
+        "expectedExpansions": 7,
+        "fromClaimTiles": 30,
+        "toClaimTiles": 34,
+        "requiredKeepLevel": 20,
+        "amountLamports": 2000000000
+      }
+    },
+    {
+      "expansions": 8,
+      "claim": {
+        "min": -2,
+        "max": 32
+      },
+      "plotVersion": 2,
+      "plot": {
+        "min": -10,
+        "max": 40
+      },
+      "offer": {
+        "expectedExpansions": 8,
+        "fromClaimTiles": 34,
+        "toClaimTiles": 38,
+        "requiredKeepLevel": 20,
+        "amountLamports": 2250000000
+      }
+    },
+    {
+      "expansions": 9,
+      "claim": {
+        "min": -4,
+        "max": 34
+      },
+      "plotVersion": 2,
+      "plot": {
+        "min": -10,
+        "max": 40
+      },
+      "offer": {
+        "expectedExpansions": 9,
+        "fromClaimTiles": 38,
+        "toClaimTiles": 42,
+        "requiredKeepLevel": 20,
+        "amountLamports": 2500000000
+      }
+    },
+    {
+      "expansions": 10,
+      "claim": {
+        "min": -6,
+        "max": 36
+      },
+      "plotVersion": 2,
+      "plot": {
+        "min": -10,
+        "max": 40
+      },
+      "offer": {
+        "expectedExpansions": 10,
+        "fromClaimTiles": 42,
+        "toClaimTiles": 46,
+        "requiredKeepLevel": 20,
+        "amountLamports": 2750000000
+      }
+    },
+    {
+      "expansions": 11,
+      "claim": {
+        "min": -8,
+        "max": 38
+      },
+      "plotVersion": 2,
+      "plot": {
+        "min": -10,
+        "max": 40
+      },
+      "offer": {
+        "expectedExpansions": 11,
+        "fromClaimTiles": 46,
+        "toClaimTiles": 50,
+        "requiredKeepLevel": 20,
+        "amountLamports": 3000000000
+      }
+    },
+    {
+      "expansions": 12,
+      "claim": {
+        "min": -10,
+        "max": 40
+      },
+      "plotVersion": 2,
+      "plot": {
+        "min": -10,
+        "max": 40
+      },
+      "offer": null
+    }
+  ]
+}

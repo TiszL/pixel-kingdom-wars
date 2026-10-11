@@ -1,0 +1,27 @@
+[
+  {
+    "path": "apps/web/src/ui/phaseE/BoundCosmeticWakeWorkshop.test.tsx",
+    "scope": "owned test",
+    "sha256": "0e2ce874097776358c55bd9301d77234f5377510f5b219fdba496a9c62c587cb"
+  },
+  {
+    "path": "apps/web/src/ui/phaseE/BoundCosmeticWakeWorkshop.tsx",
+    "scope": "observed dependency only",
+    "sha256": "3453eb21b4b068a6b93f04a6960698e77cbc85b301928fd375033aae9a7b72fa"
+  },
+  {
+    "path": "apps/web/src/ui/phaseE/OrdinaryCraftingScreen.tsx",
+    "scope": "observed dependency only",
+    "sha256": "c4bbc802cb70ff0b9bbd1f1b86792a58b01df9b20f5d0d3e066ecbad7bcba6bd"
+  },
+  {
+    "path": "apps/web/src/ui/phaseE/BoundCosmeticWorkshop.tsx",
+    "scope": "observed dependency only",
+    "sha256": "731f187c62eb8487299285892815da34b63ee4ba612c526d96fe793444af933e"
+  },
+  {
+    "path": "docs/evidence/2026-10-01-bound-cosmetic-wake-workshop/bound-cosmetic-wake-workshop-pair.json",
+    "scope": "observed dependency only",
+    "sha256": "75259751b8d535b2af449ee7a0a752d29754dac21c61746a4fa26cb788181766"
+  }
+]

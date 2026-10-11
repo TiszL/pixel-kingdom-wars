@@ -1,0 +1,25 @@
+/* Market-only layout; inherits the accepted equipment game frame and palette. */
+.sk-market-panel .sk-equipment-body { padding-bottom:max(18px,env(safe-area-inset-bottom)); }
+.sk-market-field { display:grid; gap:6px; color:var(--sk-goldHi); }
+.sk-market-field input { box-sizing:border-box; width:100%; min-width:0; min-height:46px; border:1px solid var(--sk-borderLt); background:var(--sk-surface); color:var(--sk-text); font:22px 'VT323',monospace; padding:9px 12px; border-radius:0; }
+.sk-market-field input::placeholder { color:var(--sk-textDim); opacity:1; }
+.sk-market-fields { display:grid; grid-template-columns:1fr 2fr; gap:12px; }
+.sk-market-quantity { max-width:230px; }
+.sk-market-price { display:grid; gap:4px; padding-block:8px; }
+.sk-market-price strong { font-size:28px; color:var(--sk-goldHi); overflow-wrap:anywhere; }
+.sk-market-price span { font-size:18px; color:var(--sk-textDim); }
+.sk-market-stock { display:flex; flex-wrap:wrap; gap:8px 16px; padding:12px; background:var(--sk-panel); color:var(--sk-textDim); }
+.sk-market-stock span:first-child { color:var(--sk-goldHi); }
+.sk-market-breakdown { display:grid; gap:9px; margin:0; padding:12px 0; border-block:1px solid var(--sk-border); }
+.sk-market-breakdown > div { display:flex; flex-wrap:wrap; justify-content:space-between; gap:4px 16px; }
+.sk-market-breakdown dt { color:var(--sk-textDim); }
+.sk-market-breakdown dd { margin:0 0 0 auto; text-align:right; overflow-wrap:anywhere; }
+.sk-market-breakdown > div:first-child dd { color:var(--sk-goldHi); }
+.sk-market-link { min-height:44px; border:0; background:transparent; color:var(--sk-gold); font:20px 'VT323',monospace; text-decoration:underline; cursor:pointer; }
+.sk-market-steps { display:flex; list-style:none; margin:0; padding:12px 0; gap:8px; counter-reset:market-step; }
+.sk-market-steps li { flex:1; display:grid; gap:5px; align-content:start; text-align:center; font-size:17px; color:var(--sk-textDim); }
+.sk-market-steps li::before { counter-increment:market-step; content:counter(market-step); margin:auto; width:28px; height:28px; line-height:28px; border:1px solid var(--sk-border); color:var(--sk-textDim); }
+.sk-market-steps li[data-done=true]::before { background:var(--sk-gold); color:var(--sk-panel); border-color:var(--sk-gold); }
+.sk-market-item { font-size:26px; color:var(--sk-goldHi); }
+.sk-market-empty { padding:24px 16px; border:1px dashed var(--sk-border); text-align:center; color:var(--sk-textDim); }
+@media(max-width:380px) { .sk-market-fields { grid-template-columns:1fr; } .sk-market-panel .sk-equipment-header h2 { font-size:23px; } }

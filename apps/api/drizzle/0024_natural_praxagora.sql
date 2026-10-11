@@ -1,0 +1,1 @@
+ALTER TABLE "players" ADD COLUMN "deed_asset_id" text;

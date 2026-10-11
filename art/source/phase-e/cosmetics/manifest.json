@@ -1,0 +1,616 @@
+{
+  "schemaVersion": 1,
+  "product": "Pixel Kingdom Wars",
+  "marketSkins": [
+    {
+      "id": "artisan-market-t1",
+      "tier": 1,
+      "states": {
+        "idle": {
+          "path": "static/artisan-market-t1-idle.png",
+          "cell": [
+            112,
+            112
+          ],
+          "frameCount": 1,
+          "fps": 0,
+          "loop": false,
+          "sha256": "be46bcdafdc1bfa186693204937877be3e892a676f386d7c5ee2217e03a77612"
+        },
+        "working": {
+          "path": "animations/artisan-market-t1-working.png",
+          "cell": [
+            112,
+            112
+          ],
+          "frameCount": 8,
+          "fps": 8,
+          "loop": true,
+          "sha256": "e7ef5ba7a125f1ffb71beedf6780897bd430daf465ca3eace92e9b644224ffb5",
+          "provenance": "Authored1pixel cloth ripple from PixelLab skin; all architecture outside cloth polygon fixed"
+        },
+        "damaged": {
+          "path": "static/artisan-market-t1-damaged.png",
+          "cell": [
+            112,
+            112
+          ],
+          "frameCount": 1,
+          "fps": 0,
+          "loop": false,
+          "sha256": "e56757cffd47d58141c55623773a36cb9840231e9b5901484f713622bdd6dcff"
+        },
+        "ready": {
+          "path": "static/artisan-market-t1-idle.png",
+          "cell": [
+            112,
+            112
+          ],
+          "frameCount": 1,
+          "fps": 0,
+          "loop": false,
+          "sha256": "be46bcdafdc1bfa186693204937877be3e892a676f386d7c5ee2217e03a77612",
+          "overlay": {
+            "path": "../shared-fx/craft-success/atlas.png",
+            "cell": [
+              64,
+              64
+            ],
+            "frameCount": 8,
+            "fps": 8,
+            "offset": [
+              24,
+              0
+            ]
+          }
+        },
+        "destroyed": {
+          "path": "../workshop/derived/static/t1-rubble.png",
+          "cell": [
+            112,
+            112
+          ],
+          "frameCount": 1,
+          "fps": 0,
+          "loop": false
+        },
+        "construction": {
+          "path": "animations/artisan-market-t1-construction.png",
+          "cell": [
+            112,
+            112
+          ],
+          "frameCount": 9,
+          "fps": 8,
+          "loop": false,
+          "sha256": "423b7502a6c1af3e16af8737def458ef94125c44cd75be712ee61b86a8a209a9",
+          "sourceEndpoints": {
+            "start": "../workshop/derived/static/t1-construction.png",
+            "end": "static/artisan-market-t1-idle.png"
+          }
+        },
+        "collapse": {
+          "path": "animations/artisan-market-t1-collapse.png",
+          "cell": [
+            112,
+            112
+          ],
+          "frameCount": 9,
+          "fps": 8,
+          "loop": false,
+          "sha256": "d3235e5b4d722c1cb48d8c6e39f4b0cf6ca9e816b9172241c22a5931a57839a6",
+          "sourceEndpoints": {
+            "start": "static/artisan-market-t1-damaged.png",
+            "end": "../workshop/derived/static/t1-rubble.png"
+          }
+        }
+      },
+      "cell": [
+        112,
+        112
+      ],
+      "pivot": [
+        56,
+        104
+      ],
+      "footprint": [
+        2,
+        2
+      ],
+      "sourceClothPolygon": [
+        [
+          12,
+          21
+        ],
+        [
+          46,
+          6
+        ],
+        [
+          67,
+          25
+        ],
+        [
+          69,
+          29
+        ],
+        [
+          35,
+          43
+        ],
+        [
+          13,
+          25
+        ]
+      ],
+      "nonClothArchitecture": "unchanged original Market pixels",
+      "ownership": "player-bound cosmetic; no extra building/HP/market privilege"
+    },
+    {
+      "id": "artisan-market-t2",
+      "tier": 2,
+      "states": {
+        "idle": {
+          "path": "static/artisan-market-t2-idle.png",
+          "cell": [
+            112,
+            112
+          ],
+          "frameCount": 1,
+          "fps": 0,
+          "loop": false,
+          "sha256": "c787691dbfad005d80627ea01d4f1d99d70d2ac6a5266cce2c2fc0ac5b28a4b3"
+        },
+        "working": {
+          "path": "animations/artisan-market-t2-working.png",
+          "cell": [
+            112,
+            112
+          ],
+          "frameCount": 8,
+          "fps": 8,
+          "loop": true,
+          "sha256": "100e3fd88bdd274cfd6d6676f59ccb6ab9f14dba32021d81cfd36f41283afebf",
+          "provenance": "Authored1pixel cloth ripple from PixelLab skin; all architecture outside cloth polygon fixed"
+        },
+        "damaged": {
+          "path": "static/artisan-market-t2-damaged.png",
+          "cell": [
+            112,
+            112
+          ],
+          "frameCount": 1,
+          "fps": 0,
+          "loop": false,
+          "sha256": "0aae61a9279c54efdd71cb159f7ee317aa19f91df1b473b8257576c52faa4166"
+        },
+        "ready": {
+          "path": "static/artisan-market-t2-idle.png",
+          "cell": [
+            112,
+            112
+          ],
+          "frameCount": 1,
+          "fps": 0,
+          "loop": false,
+          "sha256": "c787691dbfad005d80627ea01d4f1d99d70d2ac6a5266cce2c2fc0ac5b28a4b3",
+          "overlay": {
+            "path": "../shared-fx/craft-success/atlas.png",
+            "cell": [
+              64,
+              64
+            ],
+            "frameCount": 8,
+            "fps": 8,
+            "offset": [
+              24,
+              0
+            ]
+          }
+        },
+        "destroyed": {
+          "path": "../workshop/derived/static/t2-rubble.png",
+          "cell": [
+            112,
+            112
+          ],
+          "frameCount": 1,
+          "fps": 0,
+          "loop": false
+        },
+        "construction": {
+          "path": "animations/artisan-market-t2-construction.png",
+          "cell": [
+            112,
+            112
+          ],
+          "frameCount": 9,
+          "fps": 8,
+          "loop": false,
+          "sha256": "390a8064039e5a47e36139cfab46ed6961afbda56f795d30c766db78dada46a6",
+          "sourceEndpoints": {
+            "start": "../workshop/derived/static/t2-construction.png",
+            "end": "static/artisan-market-t2-idle.png"
+          }
+        },
+        "collapse": {
+          "path": "animations/artisan-market-t2-collapse.png",
+          "cell": [
+            112,
+            112
+          ],
+          "frameCount": 9,
+          "fps": 8,
+          "loop": false,
+          "sha256": "01be02e5dce2e3e3c7539f928451ccbf7d682d088157b730ad325aa4c61254e4",
+          "sourceEndpoints": {
+            "start": "static/artisan-market-t2-damaged.png",
+            "end": "../workshop/derived/static/t2-rubble.png"
+          }
+        }
+      },
+      "cell": [
+        112,
+        112
+      ],
+      "pivot": [
+        56,
+        104
+      ],
+      "footprint": [
+        2,
+        2
+      ],
+      "sourceClothPolygon": [
+        [
+          20,
+          18
+        ],
+        [
+          55,
+          5
+        ],
+        [
+          74,
+          25
+        ],
+        [
+          40,
+          44
+        ],
+        [
+          33,
+          40
+        ]
+      ],
+      "nonClothArchitecture": "unchanged original Market pixels",
+      "ownership": "player-bound cosmetic; no extra building/HP/market privilege"
+    },
+    {
+      "id": "artisan-market-t3",
+      "tier": 3,
+      "states": {
+        "idle": {
+          "path": "static/artisan-market-t3-idle.png",
+          "cell": [
+            112,
+            112
+          ],
+          "frameCount": 1,
+          "fps": 0,
+          "loop": false,
+          "sha256": "08529d33d2c898e631407c897c03a481f795fa0c8be523876ca8eb14f80b513d"
+        },
+        "working": {
+          "path": "animations/artisan-market-t3-working.png",
+          "cell": [
+            112,
+            112
+          ],
+          "frameCount": 8,
+          "fps": 8,
+          "loop": true,
+          "sha256": "0e4d4f904c12208cc5ee936367603ebd0ffde32b038e3a73d24c2cc56952ca4c",
+          "provenance": "Authored1pixel cloth ripple from PixelLab skin; all architecture outside cloth polygon fixed"
+        },
+        "damaged": {
+          "path": "static/artisan-market-t3-damaged.png",
+          "cell": [
+            112,
+            112
+          ],
+          "frameCount": 1,
+          "fps": 0,
+          "loop": false,
+          "sha256": "02565fc0ab81b7f5406bac006163eceec62ead07f5fa945307e0c47d7470bb4b"
+        },
+        "ready": {
+          "path": "static/artisan-market-t3-idle.png",
+          "cell": [
+            112,
+            112
+          ],
+          "frameCount": 1,
+          "fps": 0,
+          "loop": false,
+          "sha256": "08529d33d2c898e631407c897c03a481f795fa0c8be523876ca8eb14f80b513d",
+          "overlay": {
+            "path": "../shared-fx/craft-success/atlas.png",
+            "cell": [
+              64,
+              64
+            ],
+            "frameCount": 8,
+            "fps": 8,
+            "offset": [
+              24,
+              0
+            ]
+          }
+        },
+        "destroyed": {
+          "path": "../workshop/derived/static/t3-rubble.png",
+          "cell": [
+            112,
+            112
+          ],
+          "frameCount": 1,
+          "fps": 0,
+          "loop": false
+        },
+        "construction": {
+          "path": "animations/artisan-market-t3-construction.png",
+          "cell": [
+            112,
+            112
+          ],
+          "frameCount": 9,
+          "fps": 8,
+          "loop": false,
+          "sha256": "9fb3c74bd9fc599930bc8dba68844b7153a90b46262a6acb744c5fbb35a0f8a0",
+          "sourceEndpoints": {
+            "start": "../workshop/derived/static/t3-construction.png",
+            "end": "static/artisan-market-t3-idle.png"
+          }
+        },
+        "collapse": {
+          "path": "animations/artisan-market-t3-collapse.png",
+          "cell": [
+            112,
+            112
+          ],
+          "frameCount": 9,
+          "fps": 8,
+          "loop": false,
+          "sha256": "e15f280143a47cf86050670f7814409c0ccaa9c45e331ea578259205e9451957",
+          "sourceEndpoints": {
+            "start": "static/artisan-market-t3-damaged.png",
+            "end": "../workshop/derived/static/t3-rubble.png"
+          }
+        }
+      },
+      "cell": [
+        112,
+        112
+      ],
+      "pivot": [
+        56,
+        104
+      ],
+      "footprint": [
+        2,
+        2
+      ],
+      "sourceClothPolygon": [
+        [
+          26,
+          28
+        ],
+        [
+          61,
+          16
+        ],
+        [
+          75,
+          29
+        ],
+        [
+          40,
+          46
+        ]
+      ],
+      "nonClothArchitecture": "unchanged original Market pixels",
+      "ownership": "player-bound cosmetic; no extra building/HP/market privilege"
+    },
+    {
+      "id": "artisan-market-t4",
+      "tier": 4,
+      "states": {
+        "idle": {
+          "path": "static/artisan-market-t4-idle.png",
+          "cell": [
+            112,
+            112
+          ],
+          "frameCount": 1,
+          "fps": 0,
+          "loop": false,
+          "sha256": "73425d7c9c011ecb44aa2eb3773d1e02ecc1bab15ea210160928ff8df0c5e7d0"
+        },
+        "working": {
+          "path": "animations/artisan-market-t4-working.png",
+          "cell": [
+            112,
+            112
+          ],
+          "frameCount": 8,
+          "fps": 8,
+          "loop": true,
+          "sha256": "afd5b960c388947045840f69a9aaa2bce30e04a35023f17cdfa96ab2080470ed",
+          "provenance": "Authored1pixel cloth ripple from PixelLab skin; all architecture outside cloth polygon fixed"
+        },
+        "damaged": {
+          "path": "static/artisan-market-t4-damaged.png",
+          "cell": [
+            112,
+            112
+          ],
+          "frameCount": 1,
+          "fps": 0,
+          "loop": false,
+          "sha256": "1e34c5d51ac05cad170d7172e839f86b1fe99ad11c8c842d8d65c7335ad1b430"
+        },
+        "ready": {
+          "path": "static/artisan-market-t4-idle.png",
+          "cell": [
+            112,
+            112
+          ],
+          "frameCount": 1,
+          "fps": 0,
+          "loop": false,
+          "sha256": "73425d7c9c011ecb44aa2eb3773d1e02ecc1bab15ea210160928ff8df0c5e7d0",
+          "overlay": {
+            "path": "../shared-fx/craft-success/atlas.png",
+            "cell": [
+              64,
+              64
+            ],
+            "frameCount": 8,
+            "fps": 8,
+            "offset": [
+              24,
+              0
+            ]
+          }
+        },
+        "destroyed": {
+          "path": "../workshop/derived/static/t4-rubble.png",
+          "cell": [
+            112,
+            112
+          ],
+          "frameCount": 1,
+          "fps": 0,
+          "loop": false
+        },
+        "construction": {
+          "path": "animations/artisan-market-t4-construction.png",
+          "cell": [
+            112,
+            112
+          ],
+          "frameCount": 9,
+          "fps": 8,
+          "loop": false,
+          "sha256": "8a0d91330b0fe8f477932cc83d8e5796782debbafb805a1c6a1bc84e8f4dde2f",
+          "sourceEndpoints": {
+            "start": "../workshop/derived/static/t4-construction.png",
+            "end": "static/artisan-market-t4-idle.png"
+          }
+        },
+        "collapse": {
+          "path": "animations/artisan-market-t4-collapse.png",
+          "cell": [
+            112,
+            112
+          ],
+          "frameCount": 9,
+          "fps": 8,
+          "loop": false,
+          "sha256": "32ec5346b61ba34bdad327ae1ae3f14b2fdaa8bf7d70cf35c0a8e007e67f93d9",
+          "sourceEndpoints": {
+            "start": "static/artisan-market-t4-damaged.png",
+            "end": "../workshop/derived/static/t4-rubble.png"
+          }
+        }
+      },
+      "cell": [
+        112,
+        112
+      ],
+      "pivot": [
+        56,
+        104
+      ],
+      "footprint": [
+        2,
+        2
+      ],
+      "sourceClothPolygon": [
+        [
+          36,
+          40
+        ],
+        [
+          69,
+          25
+        ],
+        [
+          78,
+          34
+        ],
+        [
+          44,
+          52
+        ]
+      ],
+      "nonClothArchitecture": "unchanged original Market pixels",
+      "ownership": "player-bound cosmetic; no extra building/HP/market privilege"
+    }
+  ],
+  "auroraWake": {
+    "path": "animations/aurora-wake.png",
+    "cell": [
+      64,
+      64
+    ],
+    "frameCount": 8,
+    "fps": 8,
+    "loop": true,
+    "sha256": "6acc6e80907c7c6e2a19d2c5580403cfeedb99cd79aabb750427b688eae74f33",
+    "reducedMotionFrame": 0,
+    "sourceFrameIndices": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "state": "decorative departure/return trail",
+    "changesGameplay": false,
+    "ownership": "permanent player-bound cosmetic",
+    "runtimeIntegrated": false
+  },
+  "profileCosmetics": [
+    {
+      "id": "stormwarden-relic",
+      "image": "../../missing-items/art/stormwarden-relic.png",
+      "attachment": "portrait-corner",
+      "nft": true,
+      "burnToEquip": false,
+      "combatSpriteAltered": false,
+      "ownership": "current verified wallet owner only; revoke future use on transfer",
+      "presentationOnly": true,
+      "itemClass": "expedition-utility-nft",
+      "gameplayRole": "See missing-items/catalogue.json; this record describes optional profile presentation only."
+    },
+    {
+      "id": "voyager-keepsake",
+      "image": "../../missing-items/art/voyager-keepsake.png",
+      "attachment": "collection-slot",
+      "nft": true,
+      "burnToEquip": false,
+      "combatSpriteAltered": false,
+      "ownership": "current verified wallet owner only; revoke future use on transfer",
+      "presentationOnly": true,
+      "itemClass": "expedition-utility-nft",
+      "gameplayRole": "See missing-items/catalogue.json; this record describes optional profile presentation only."
+    }
+  ],
+  "runtimeIntegrated": false,
+  "provenance": "jobs.json; cloth masks retain original non-cloth pixels; authored transitions explicitly declared"
+}

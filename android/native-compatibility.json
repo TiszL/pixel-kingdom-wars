@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "catalogueSchemaVersions": [
+    1
+  ],
+  "rendererContractVersions": [
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15
+  ],
+  "presentationProtocolVersions": [
+    1,
+    2
+  ],
+  "raidProtocolVersions": [
+    2
+  ],
+  "simVersions": [
+    18
+  ],
+  "contractCoverage": "curated-foundation-and-canonical-native-presentation",
+  "releaseReady": false
+}

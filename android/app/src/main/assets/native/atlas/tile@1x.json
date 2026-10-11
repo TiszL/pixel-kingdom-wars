@@ -1,0 +1,166 @@
+{
+	"textures": [
+		{
+			"image": "tile@1x.png",
+			"format": "RGBA8888",
+			"size": {
+				"w": 114,
+				"h": 114
+			},
+			"scale": 1,
+			"frames": [
+				{
+					"filename": "tile_dirt",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 32,
+						"h": 32
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 32,
+						"h": 32
+					},
+					"frame": {
+						"x": 3,
+						"y": 3,
+						"w": 32,
+						"h": 32
+					}
+				},
+				{
+					"filename": "tile_grass_1",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 32,
+						"h": 32
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 32,
+						"h": 32
+					},
+					"frame": {
+						"x": 41,
+						"y": 3,
+						"w": 32,
+						"h": 32
+					}
+				},
+				{
+					"filename": "tile_grass_2",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 32,
+						"h": 32
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 32,
+						"h": 32
+					},
+					"frame": {
+						"x": 3,
+						"y": 41,
+						"w": 32,
+						"h": 32
+					}
+				},
+				{
+					"filename": "tile_grass_3",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 32,
+						"h": 32
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 32,
+						"h": 32
+					},
+					"frame": {
+						"x": 41,
+						"y": 41,
+						"w": 32,
+						"h": 32
+					}
+				},
+				{
+					"filename": "tile_path",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 32,
+						"h": 32
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 32,
+						"h": 32
+					},
+					"frame": {
+						"x": 79,
+						"y": 3,
+						"w": 32,
+						"h": 32
+					}
+				},
+				{
+					"filename": "tile_shore",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 32,
+						"h": 32
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 32,
+						"h": 32
+					},
+					"frame": {
+						"x": 79,
+						"y": 41,
+						"w": 32,
+						"h": 32
+					}
+				},
+				{
+					"filename": "tile_water",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 32,
+						"h": 32
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 32,
+						"h": 32
+					},
+					"frame": {
+						"x": 3,
+						"y": 79,
+						"w": 32,
+						"h": 32
+					}
+				}
+			]
+		}
+	],
+	"meta": {
+		"app": "shardkeep/scripts/rasterize",
+		"version": "1"
+	}
+}

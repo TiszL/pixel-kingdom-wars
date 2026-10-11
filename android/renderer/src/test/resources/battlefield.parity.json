@@ -1,0 +1,811 @@
+{
+  "formatVersion": 1,
+  "policy": {
+    "legacyVersion": 1,
+    "currentVersion": 3,
+    "marginTilesByVersion": {
+      "1": 4,
+      "2": 34,
+      "3": 34
+    },
+    "snapRadiusTiles": 1,
+    "deploymentSquareTiles": 2
+  },
+  "occupiedRects": [
+    {
+      "tx": 14,
+      "ty": 14,
+      "fw": 2,
+      "fh": 2
+    },
+    {
+      "tx": 13,
+      "ty": 14,
+      "fw": 1,
+      "fh": 1
+    },
+    {
+      "tx": 18,
+      "ty": 18,
+      "fw": 1,
+      "fh": 1
+    }
+  ],
+  "cases": [
+    {
+      "name": "legacy-default-edge",
+      "context": {},
+      "tx": -4,
+      "ty": 15,
+      "legal": true
+    },
+    {
+      "name": "legacy-default-interior",
+      "context": {},
+      "tx": 10,
+      "ty": 10,
+      "legal": false
+    },
+    {
+      "name": "legacy-explicit-edge",
+      "context": {
+        "battlefieldVersion": 1,
+        "claimMin": 8,
+        "claimMax": 22
+      },
+      "tx": 8,
+      "ty": 15,
+      "legal": true
+    },
+    {
+      "name": "legacy-explicit-interior",
+      "context": {
+        "battlefieldVersion": 1,
+        "claimMin": 8,
+        "claimMax": 22
+      },
+      "tx": 17,
+      "ty": 17,
+      "legal": false
+    },
+    {
+      "name": "legacy-outer-rejected",
+      "context": {
+        "battlefieldVersion": 1,
+        "claimMin": 8,
+        "claimMax": 22
+      },
+      "tx": 15,
+      "ty": -7,
+      "legal": false
+    },
+    {
+      "name": "v2-empty--34--34",
+      "context": {
+        "battlefieldVersion": 2,
+        "claimMin": 2,
+        "claimMax": 28
+      },
+      "tx": -34,
+      "ty": -34,
+      "legal": true
+    },
+    {
+      "name": "v2-empty--34-63",
+      "context": {
+        "battlefieldVersion": 2,
+        "claimMin": 2,
+        "claimMax": 28
+      },
+      "tx": -34,
+      "ty": 63,
+      "legal": true
+    },
+    {
+      "name": "v2-empty-63--34",
+      "context": {
+        "battlefieldVersion": 2,
+        "claimMin": 2,
+        "claimMax": 28
+      },
+      "tx": 63,
+      "ty": -34,
+      "legal": true
+    },
+    {
+      "name": "v2-empty-63-63",
+      "context": {
+        "battlefieldVersion": 2,
+        "claimMin": 2,
+        "claimMax": 28
+      },
+      "tx": 63,
+      "ty": 63,
+      "legal": true
+    },
+    {
+      "name": "v2-empty-15--34",
+      "context": {
+        "battlefieldVersion": 2,
+        "claimMin": 2,
+        "claimMax": 28
+      },
+      "tx": 15,
+      "ty": -34,
+      "legal": true
+    },
+    {
+      "name": "v2-empty-15-63",
+      "context": {
+        "battlefieldVersion": 2,
+        "claimMin": 2,
+        "claimMax": 28
+      },
+      "tx": 15,
+      "ty": 63,
+      "legal": true
+    },
+    {
+      "name": "v2-empty--34-15",
+      "context": {
+        "battlefieldVersion": 2,
+        "claimMin": 2,
+        "claimMax": 28
+      },
+      "tx": -34,
+      "ty": 15,
+      "legal": true
+    },
+    {
+      "name": "v2-empty-63-15",
+      "context": {
+        "battlefieldVersion": 2,
+        "claimMin": 2,
+        "claimMax": 28
+      },
+      "tx": 63,
+      "ty": 15,
+      "legal": true
+    },
+    {
+      "name": "v2-empty-15--7",
+      "context": {
+        "battlefieldVersion": 2,
+        "claimMin": 2,
+        "claimMax": 28
+      },
+      "tx": 15,
+      "ty": -7,
+      "legal": true
+    },
+    {
+      "name": "v2-empty-17-17",
+      "context": {
+        "battlefieldVersion": 2,
+        "claimMin": 2,
+        "claimMax": 28
+      },
+      "tx": 17,
+      "ty": 17,
+      "legal": true
+    },
+    {
+      "name": "v2-empty-0-0",
+      "context": {
+        "battlefieldVersion": 2,
+        "claimMin": 2,
+        "claimMax": 28
+      },
+      "tx": 0,
+      "ty": 0,
+      "legal": true
+    },
+    {
+      "name": "v2-blocked--35-0",
+      "context": {
+        "battlefieldVersion": 2,
+        "claimMin": 2,
+        "claimMax": 28
+      },
+      "tx": -35,
+      "ty": 0,
+      "legal": false
+    },
+    {
+      "name": "v2-blocked-64-0",
+      "context": {
+        "battlefieldVersion": 2,
+        "claimMin": 2,
+        "claimMax": 28
+      },
+      "tx": 64,
+      "ty": 0,
+      "legal": false
+    },
+    {
+      "name": "v2-blocked-0--35",
+      "context": {
+        "battlefieldVersion": 2,
+        "claimMin": 2,
+        "claimMax": 28
+      },
+      "tx": 0,
+      "ty": -35,
+      "legal": false
+    },
+    {
+      "name": "v2-blocked-0-64",
+      "context": {
+        "battlefieldVersion": 2,
+        "claimMin": 2,
+        "claimMax": 28
+      },
+      "tx": 0,
+      "ty": 64,
+      "legal": false
+    },
+    {
+      "name": "v2-blocked-14-14",
+      "context": {
+        "battlefieldVersion": 2,
+        "claimMin": 2,
+        "claimMax": 28
+      },
+      "tx": 14,
+      "ty": 14,
+      "legal": false
+    },
+    {
+      "name": "v2-blocked-15-15",
+      "context": {
+        "battlefieldVersion": 2,
+        "claimMin": 2,
+        "claimMax": 28
+      },
+      "tx": 15,
+      "ty": 15,
+      "legal": false
+    },
+    {
+      "name": "v2-blocked-13-14",
+      "context": {
+        "battlefieldVersion": 2,
+        "claimMin": 2,
+        "claimMax": 28
+      },
+      "tx": 13,
+      "ty": 14,
+      "legal": false
+    },
+    {
+      "name": "v2-blocked-18-18",
+      "context": {
+        "battlefieldVersion": 2,
+        "claimMin": 2,
+        "claimMax": 28
+      },
+      "tx": 18,
+      "ty": 18,
+      "legal": false
+    },
+    {
+      "name": "v2-spent-trap-blocker",
+      "context": {
+        "battlefieldVersion": 2,
+        "deploymentBlockers": [
+          {
+            "tx": 20,
+            "ty": 20,
+            "fw": 1,
+            "fh": 1
+          }
+        ]
+      },
+      "tx": 20,
+      "ty": 20,
+      "legal": false
+    },
+    {
+      "name": "v2-construction-blocker",
+      "context": {
+        "battlefieldVersion": 2,
+        "deploymentBlockers": [
+          {
+            "tx": 22,
+            "ty": 24,
+            "fw": 2,
+            "fh": 2
+          }
+        ]
+      },
+      "tx": 23,
+      "ty": 25,
+      "legal": false
+    },
+    {
+      "name": "legacy-ignores-future-blocker-field",
+      "context": {
+        "battlefieldVersion": 1,
+        "deploymentBlockers": [
+          {
+            "tx": 0,
+            "ty": 0,
+            "fw": 1,
+            "fh": 1
+          }
+        ]
+      },
+      "tx": 0,
+      "ty": 0,
+      "legal": true
+    },
+    {
+      "name": "v3-single-cell-hole",
+      "context": {
+        "battlefieldVersion": 3,
+        "deploymentBlockers": [
+          {
+            "tx": -1,
+            "ty": -1,
+            "fw": 3,
+            "fh": 1
+          },
+          {
+            "tx": -1,
+            "ty": 1,
+            "fw": 3,
+            "fh": 1
+          },
+          {
+            "tx": -1,
+            "ty": 0,
+            "fw": 1,
+            "fh": 1
+          },
+          {
+            "tx": 1,
+            "ty": 0,
+            "fw": 1,
+            "fh": 1
+          }
+        ]
+      },
+      "tx": 0,
+      "ty": 0,
+      "legal": false
+    },
+    {
+      "name": "v3-one-wide-corridor",
+      "context": {
+        "battlefieldVersion": 3,
+        "deploymentBlockers": [
+          {
+            "tx": -1,
+            "ty": -3,
+            "fw": 1,
+            "fh": 7
+          },
+          {
+            "tx": 1,
+            "ty": -3,
+            "fw": 1,
+            "fh": 7
+          }
+        ]
+      },
+      "tx": 0,
+      "ty": 0,
+      "legal": false
+    },
+    {
+      "name": "v3-pocket-corner-5-5",
+      "context": {
+        "battlefieldVersion": 3,
+        "deploymentBlockers": [
+          {
+            "tx": 4,
+            "ty": 4,
+            "fw": 4,
+            "fh": 1
+          },
+          {
+            "tx": 4,
+            "ty": 7,
+            "fw": 4,
+            "fh": 1
+          },
+          {
+            "tx": 4,
+            "ty": 5,
+            "fw": 1,
+            "fh": 2
+          },
+          {
+            "tx": 7,
+            "ty": 5,
+            "fw": 1,
+            "fh": 2
+          }
+        ]
+      },
+      "tx": 5,
+      "ty": 5,
+      "legal": true
+    },
+    {
+      "name": "v3-pocket-missing-corner-5-5",
+      "context": {
+        "battlefieldVersion": 3,
+        "deploymentBlockers": [
+          {
+            "tx": 4,
+            "ty": 4,
+            "fw": 4,
+            "fh": 1
+          },
+          {
+            "tx": 4,
+            "ty": 7,
+            "fw": 4,
+            "fh": 1
+          },
+          {
+            "tx": 4,
+            "ty": 5,
+            "fw": 1,
+            "fh": 2
+          },
+          {
+            "tx": 7,
+            "ty": 5,
+            "fw": 1,
+            "fh": 2
+          },
+          {
+            "tx": 6,
+            "ty": 6,
+            "fw": 1,
+            "fh": 1
+          }
+        ]
+      },
+      "tx": 5,
+      "ty": 5,
+      "legal": false
+    },
+    {
+      "name": "v3-pocket-corner-6-5",
+      "context": {
+        "battlefieldVersion": 3,
+        "deploymentBlockers": [
+          {
+            "tx": 4,
+            "ty": 4,
+            "fw": 4,
+            "fh": 1
+          },
+          {
+            "tx": 4,
+            "ty": 7,
+            "fw": 4,
+            "fh": 1
+          },
+          {
+            "tx": 4,
+            "ty": 5,
+            "fw": 1,
+            "fh": 2
+          },
+          {
+            "tx": 7,
+            "ty": 5,
+            "fw": 1,
+            "fh": 2
+          }
+        ]
+      },
+      "tx": 6,
+      "ty": 5,
+      "legal": true
+    },
+    {
+      "name": "v3-pocket-missing-corner-6-5",
+      "context": {
+        "battlefieldVersion": 3,
+        "deploymentBlockers": [
+          {
+            "tx": 4,
+            "ty": 4,
+            "fw": 4,
+            "fh": 1
+          },
+          {
+            "tx": 4,
+            "ty": 7,
+            "fw": 4,
+            "fh": 1
+          },
+          {
+            "tx": 4,
+            "ty": 5,
+            "fw": 1,
+            "fh": 2
+          },
+          {
+            "tx": 7,
+            "ty": 5,
+            "fw": 1,
+            "fh": 2
+          },
+          {
+            "tx": 6,
+            "ty": 6,
+            "fw": 1,
+            "fh": 1
+          }
+        ]
+      },
+      "tx": 6,
+      "ty": 5,
+      "legal": false
+    },
+    {
+      "name": "v3-pocket-corner-5-6",
+      "context": {
+        "battlefieldVersion": 3,
+        "deploymentBlockers": [
+          {
+            "tx": 4,
+            "ty": 4,
+            "fw": 4,
+            "fh": 1
+          },
+          {
+            "tx": 4,
+            "ty": 7,
+            "fw": 4,
+            "fh": 1
+          },
+          {
+            "tx": 4,
+            "ty": 5,
+            "fw": 1,
+            "fh": 2
+          },
+          {
+            "tx": 7,
+            "ty": 5,
+            "fw": 1,
+            "fh": 2
+          }
+        ]
+      },
+      "tx": 5,
+      "ty": 6,
+      "legal": true
+    },
+    {
+      "name": "v3-pocket-missing-corner-5-6",
+      "context": {
+        "battlefieldVersion": 3,
+        "deploymentBlockers": [
+          {
+            "tx": 4,
+            "ty": 4,
+            "fw": 4,
+            "fh": 1
+          },
+          {
+            "tx": 4,
+            "ty": 7,
+            "fw": 4,
+            "fh": 1
+          },
+          {
+            "tx": 4,
+            "ty": 5,
+            "fw": 1,
+            "fh": 2
+          },
+          {
+            "tx": 7,
+            "ty": 5,
+            "fw": 1,
+            "fh": 2
+          },
+          {
+            "tx": 6,
+            "ty": 6,
+            "fw": 1,
+            "fh": 1
+          }
+        ]
+      },
+      "tx": 5,
+      "ty": 6,
+      "legal": false
+    },
+    {
+      "name": "v3-pocket-corner-6-6",
+      "context": {
+        "battlefieldVersion": 3,
+        "deploymentBlockers": [
+          {
+            "tx": 4,
+            "ty": 4,
+            "fw": 4,
+            "fh": 1
+          },
+          {
+            "tx": 4,
+            "ty": 7,
+            "fw": 4,
+            "fh": 1
+          },
+          {
+            "tx": 4,
+            "ty": 5,
+            "fw": 1,
+            "fh": 2
+          },
+          {
+            "tx": 7,
+            "ty": 5,
+            "fw": 1,
+            "fh": 2
+          }
+        ]
+      },
+      "tx": 6,
+      "ty": 6,
+      "legal": true
+    },
+    {
+      "name": "v3-pocket-missing-corner-6-6",
+      "context": {
+        "battlefieldVersion": 3,
+        "deploymentBlockers": [
+          {
+            "tx": 4,
+            "ty": 4,
+            "fw": 4,
+            "fh": 1
+          },
+          {
+            "tx": 4,
+            "ty": 7,
+            "fw": 4,
+            "fh": 1
+          },
+          {
+            "tx": 4,
+            "ty": 5,
+            "fw": 1,
+            "fh": 2
+          },
+          {
+            "tx": 7,
+            "ty": 5,
+            "fw": 1,
+            "fh": 2
+          },
+          {
+            "tx": 6,
+            "ty": 6,
+            "fw": 1,
+            "fh": 1
+          }
+        ]
+      },
+      "tx": 6,
+      "ty": 6,
+      "legal": false
+    },
+    {
+      "name": "v3-field-corner--34--34",
+      "context": {
+        "battlefieldVersion": 3
+      },
+      "tx": -34,
+      "ty": -34,
+      "legal": true
+    },
+    {
+      "name": "v3-field-corner--34-63",
+      "context": {
+        "battlefieldVersion": 3
+      },
+      "tx": -34,
+      "ty": 63,
+      "legal": true
+    },
+    {
+      "name": "v3-field-corner-63--34",
+      "context": {
+        "battlefieldVersion": 3
+      },
+      "tx": 63,
+      "ty": -34,
+      "legal": true
+    },
+    {
+      "name": "v3-field-corner-63-63",
+      "context": {
+        "battlefieldVersion": 3
+      },
+      "tx": 63,
+      "ty": 63,
+      "legal": true
+    },
+    {
+      "name": "v3-northwest-square-clipped",
+      "context": {
+        "battlefieldVersion": 3,
+        "deploymentBlockers": [
+          {
+            "tx": -33,
+            "ty": -33,
+            "fw": 1,
+            "fh": 1
+          }
+        ]
+      },
+      "tx": -34,
+      "ty": -34,
+      "legal": false
+    },
+    {
+      "name": "v3-southeast-square-clipped",
+      "context": {
+        "battlefieldVersion": 3,
+        "deploymentBlockers": [
+          {
+            "tx": 62,
+            "ty": 62,
+            "fw": 1,
+            "fh": 1
+          }
+        ]
+      },
+      "tx": 63,
+      "ty": 63,
+      "legal": false
+    },
+    {
+      "name": "v3-outside-west",
+      "context": {
+        "battlefieldVersion": 3
+      },
+      "tx": -35,
+      "ty": 0,
+      "legal": false
+    },
+    {
+      "name": "v3-outside-east",
+      "context": {
+        "battlefieldVersion": 3
+      },
+      "tx": 64,
+      "ty": 0,
+      "legal": false
+    },
+    {
+      "name": "v3-frozen-building",
+      "context": {
+        "battlefieldVersion": 3
+      },
+      "tx": 15,
+      "ty": 15,
+      "legal": false
+    },
+    {
+      "name": "v3-adjacent-open-square",
+      "context": {
+        "battlefieldVersion": 3
+      },
+      "tx": 16,
+      "ty": 16,
+      "legal": true
+    }
+  ]
+}

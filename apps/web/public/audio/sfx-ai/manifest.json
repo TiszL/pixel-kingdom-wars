@@ -1,0 +1,1260 @@
+{
+  "schemaVersion": 1,
+  "catalogSha256": "7aa5399da6747dc46426952c2d3d9787c89eedfb2437d4ed117f7b7781246b57",
+  "generationContractSha256": "de48881f5546dc66e625d3866c10862c68e2409a85ec8a655fd411884ce431b7",
+  "entries": [
+    {
+      "id": "sfx_troop_highlander_deploy_v1",
+      "file": "sfx_troop_highlander_deploy_v1.mp3",
+      "sha256": "cd5448c30b985e2e1d5c45f26e9ed27fae377fd2ee50d473b95b8f6d78310122"
+    },
+    {
+      "id": "sfx_troop_highlander_attack_v1",
+      "file": "sfx_troop_highlander_attack_v1.mp3",
+      "sha256": "015c47861e63f415f4e7dc460d0b728c03dfdee69c16e1207ff8b43b2eaace8d"
+    },
+    {
+      "id": "sfx_troop_highlander_death_v1",
+      "file": "sfx_troop_highlander_death_v1.mp3",
+      "sha256": "8a802e3f6ad6066fb4aba652620ee9958af160c22df8d14fa2a8e9944b3a1621"
+    },
+    {
+      "id": "sfx_troop_bowman_deploy_v1",
+      "file": "sfx_troop_bowman_deploy_v1.mp3",
+      "sha256": "e91863b6dc1dd87b16e2b54cf7e77426198a098504795ffbe87511b2512d4249"
+    },
+    {
+      "id": "sfx_troop_bowman_release_v1",
+      "file": "sfx_troop_bowman_release_v1.mp3",
+      "sha256": "a8c2cf92a359a6fcb8372aff1e5f1d0f9fa754b569d17423ba91338b7e71ec46"
+    },
+    {
+      "id": "sfx_troop_bowman_impact_v1",
+      "file": "sfx_troop_bowman_impact_v1.mp3",
+      "sha256": "82de1b75131e988f091cd7b6347a7911af8e387091f7a9503d50954b7effe0ff"
+    },
+    {
+      "id": "sfx_troop_bowman_death_v1",
+      "file": "sfx_troop_bowman_death_v1.mp3",
+      "sha256": "ca9c9ed4d07cc18f996434a01eb6a3c1cbc0f907e1a018c5826b2e8828e4a00c"
+    },
+    {
+      "id": "sfx_troop_kegrunner_deploy_ignite_v1",
+      "file": "sfx_troop_kegrunner_deploy_ignite_v1.mp3",
+      "sha256": "7f47d9c3291e4bd7ce4723918d00acbc2fd21dab7e582e5c1717525fe5d4fe0e"
+    },
+    {
+      "id": "sfx_troop_kegrunner_fuse_loop_v1",
+      "file": "sfx_troop_kegrunner_fuse_loop_v1.wav",
+      "sha256": "1e8c8498570615a85cc7d51a18cfb296ca6cc1bd456c45483023bffa9ff5520e",
+      "loopStart": 0.017007,
+      "loopEnd": 3.953447
+    },
+    {
+      "id": "sfx_troop_kegrunner_plant_brace_v1",
+      "file": "sfx_troop_kegrunner_plant_brace_v1.mp3",
+      "sha256": "16066545b26402ffa72f3e4d9107362641e995bd8855cc69f77a9f5c5e59b7a8"
+    },
+    {
+      "id": "sfx_troop_kegrunner_detonation_v1",
+      "file": "sfx_troop_kegrunner_detonation_v1.mp3",
+      "sha256": "34758f16f3b3f3e2d4b06273afba48f1d024961e71811cd76537ae6d52a79cb6"
+    },
+    {
+      "id": "sfx_troop_kegrunner_death_v1",
+      "file": "sfx_troop_kegrunner_death_v1.mp3",
+      "sha256": "067dfa7b2dd6dc2eb094b42d77a3fa58ee7066ac77eb3c67f1a0ba57cc417efc"
+    },
+    {
+      "id": "sfx_troop_tunneler_deploy_v1",
+      "file": "sfx_troop_tunneler_deploy_v1.mp3",
+      "sha256": "4940ba7102990993550ca4080d822eb9e1948da67a89b47dd8068722069a8765"
+    },
+    {
+      "id": "sfx_troop_tunneler_pick_contact_v1",
+      "file": "sfx_troop_tunneler_pick_contact_v1.mp3",
+      "sha256": "b98bba4d23320271e5a83a6b5ea7974599512f4deeaba61b63e6c9f993784779"
+    },
+    {
+      "id": "sfx_troop_tunneler_burrow_loop_v1",
+      "file": "sfx_troop_tunneler_burrow_loop_v1.wav",
+      "sha256": "405da5014b4c163a9e1001ca3f5f699428b7e4ca7a640ab4c2b87022335603ec",
+      "loopStart": 0.028458,
+      "loopEnd": 3.956508
+    },
+    {
+      "id": "sfx_troop_tunneler_emerge_v1",
+      "file": "sfx_troop_tunneler_emerge_v1.mp3",
+      "sha256": "16cc0a0b1794b7152cb582add730b38c83a62dc3a89a8111c582ef438ab59e96"
+    },
+    {
+      "id": "sfx_troop_tunneler_death_v1",
+      "file": "sfx_troop_tunneler_death_v1.mp3",
+      "sha256": "de645cfcfb296d9ae1b5c6755302a4b4a4358ba6b888e0cb4d4fed5464ff9a36"
+    },
+    {
+      "id": "sfx_troop_turrider_deploy_v1",
+      "file": "sfx_troop_turrider_deploy_v1.mp3",
+      "sha256": "0f8b5ba92c23a11f70e6b121bf40bde43c23852f339a88d2cb2a870b61da3a0c"
+    },
+    {
+      "id": "sfx_troop_turrider_horn_gore_v1",
+      "file": "sfx_troop_turrider_horn_gore_v1.mp3",
+      "sha256": "c7f7cedd299704496d982ca09ab4db3013a5b1946987bbed64b0c10ba268abf7"
+    },
+    {
+      "id": "sfx_troop_turrider_death_v1",
+      "file": "sfx_troop_turrider_death_v1.mp3",
+      "sha256": "1d3691b6b6701706261caa8bcca2307b88da132cef97e4deb8e9ffd549816b6b"
+    },
+    {
+      "id": "sfx_troop_plunderer_deploy_v1",
+      "file": "sfx_troop_plunderer_deploy_v1.mp3",
+      "sha256": "1ade9d9f7a71aee148b3646e3925bf52ae97b433ecba57e386c85d461ad527f5"
+    },
+    {
+      "id": "sfx_troop_plunderer_sack_attack_v1",
+      "file": "sfx_troop_plunderer_sack_attack_v1.mp3",
+      "sha256": "2c70bfd9c01f3fd60fe2739d81a17d714958248c93aee152d89d146bd189049a"
+    },
+    {
+      "id": "sfx_troop_plunderer_death_v1",
+      "file": "sfx_troop_plunderer_death_v1.mp3",
+      "sha256": "c7d17f1852306126cd8eeed3ce96eee96695256fdd262917d892033a09382c24"
+    },
+    {
+      "id": "sfx_troop_giant_deploy_v1",
+      "file": "sfx_troop_giant_deploy_v1.mp3",
+      "sha256": "36647f3acce89ee7c79fe1c5c132866d49da5521104f32145ad43d848451c0e0"
+    },
+    {
+      "id": "sfx_troop_giant_melee_v1",
+      "file": "sfx_troop_giant_melee_v1.mp3",
+      "sha256": "1e35470add9c36806712c2ae522b1c0b73264b31c51b69d747d2dea32f15c11b"
+    },
+    {
+      "id": "sfx_troop_giant_boulder_release_v1",
+      "file": "sfx_troop_giant_boulder_release_v1.mp3",
+      "sha256": "75a932ec8c89e98586eefc5a116d783426bdaca275e8a2f0d368890924f31d6f"
+    },
+    {
+      "id": "sfx_troop_giant_boulder_impact_v1",
+      "file": "sfx_troop_giant_boulder_impact_v1.mp3",
+      "sha256": "6230737572feff4254abc08f246cc98188992e3cbb3b8aa903373adb98e05236"
+    },
+    {
+      "id": "sfx_troop_giant_death_v1",
+      "file": "sfx_troop_giant_death_v1.mp3",
+      "sha256": "68f0cc8469a243ff782fb4906206e8e5baf5808f36102a8490d619fb9de59a4d"
+    },
+    {
+      "id": "sfx_troop_troll_deploy_v1",
+      "file": "sfx_troop_troll_deploy_v1.mp3",
+      "sha256": "8782ee0621fb48f54a573cf4037b60708aded2e4bd8e25ea3203353e38639929"
+    },
+    {
+      "id": "sfx_troop_troll_sweep_v1",
+      "file": "sfx_troop_troll_sweep_v1.mp3",
+      "sha256": "be37caa2ac4b3145c0377a456707b03db226e18056efb3a300d4f397acfcf241"
+    },
+    {
+      "id": "sfx_troop_troll_building_pound_v1",
+      "file": "sfx_troop_troll_building_pound_v1.mp3",
+      "sha256": "1132e82b836c03bcf888cffb06624ca236754b710276a5e33c35f8894b2db5f1"
+    },
+    {
+      "id": "sfx_troop_troll_death_v1",
+      "file": "sfx_troop_troll_death_v1.mp3",
+      "sha256": "4863dfb9290ae33f9f4490f5e5a3e29160bebf00a8f09f4d1c75b5ea45391164"
+    },
+    {
+      "id": "sfx_troop_dragon_deploy_v1",
+      "file": "sfx_troop_dragon_deploy_v1.mp3",
+      "sha256": "1eaf5874d9dcd75294e4118a9c66c89fe2a4150bce26f7ab8b1de2c6ddf78705"
+    },
+    {
+      "id": "sfx_troop_dragon_breath_v1",
+      "file": "sfx_troop_dragon_breath_v1.mp3",
+      "sha256": "9013732736c2450f9b2fb56f356e8eb7900c30deb00f11aa658d36e6af3a2436"
+    },
+    {
+      "id": "sfx_troop_dragon_breath_contact_v1",
+      "file": "sfx_troop_dragon_breath_contact_v1.mp3",
+      "sha256": "5746664e8301c15036d585be052c20ecf486b016bde47563c4a017f427979190"
+    },
+    {
+      "id": "sfx_troop_dragon_death_v1",
+      "file": "sfx_troop_dragon_death_v1.mp3",
+      "sha256": "61feadde233ac541e0b91199fac21fa19fa03ece56a97169bd474a3a27979d8b"
+    },
+    {
+      "id": "sfx_troop_mage_deploy_v1",
+      "file": "sfx_troop_mage_deploy_v1.mp3",
+      "sha256": "294fce8a2ffa280009f9cf7fa2dafefd27bf5e13172c6cdd1b6cd707a21cfa70"
+    },
+    {
+      "id": "sfx_troop_mage_release_v1",
+      "file": "sfx_troop_mage_release_v1.mp3",
+      "sha256": "5c026afd68884b6e5e88f20227fa39ab6bc28416044c8a1a2bb3970346cc7cce"
+    },
+    {
+      "id": "sfx_troop_mage_impact_v1",
+      "file": "sfx_troop_mage_impact_v1.mp3",
+      "sha256": "ced18d1c0b165b948eb65e8ffef3bae6d8e2daed4dd93eac050cd51aaad08565"
+    },
+    {
+      "id": "sfx_troop_mage_death_v1",
+      "file": "sfx_troop_mage_death_v1.mp3",
+      "sha256": "e95adb85f2e3a9f2d4466bb4d715caeb8cfad8d54415bfd745bd44a824580436"
+    },
+    {
+      "id": "sfx_troop_bilgewraith_deploy_v1",
+      "file": "sfx_troop_bilgewraith_deploy_v1.mp3",
+      "sha256": "617e15ed967c8277e213df4046bcab03aee24b5aca5a0020dfa2cbbdb69b9613"
+    },
+    {
+      "id": "sfx_troop_bilgewraith_chain_attack_v1",
+      "file": "sfx_troop_bilgewraith_chain_attack_v1.mp3",
+      "sha256": "79da2db6d9c78acf030b5854ac555fc99b2ae8c94d51d4b2b5ffb0effef772bf"
+    },
+    {
+      "id": "sfx_troop_bilgewraith_burrow_loop_v1",
+      "file": "sfx_troop_bilgewraith_burrow_loop_v1.wav",
+      "sha256": "e016c0898c49e14888842d4f1f4e94e4b53f92f9756657a2d5ddfd22aa96d6a2",
+      "loopStart": 0.001361,
+      "loopEnd": 3.922721
+    },
+    {
+      "id": "sfx_troop_bilgewraith_emerge_v1",
+      "file": "sfx_troop_bilgewraith_emerge_v1.mp3",
+      "sha256": "751bf33dc0ee1015d29a00e650345f6e53f82c6ccb4abe6532638cd4ad05b892"
+    },
+    {
+      "id": "sfx_troop_bilgewraith_death_v1",
+      "file": "sfx_troop_bilgewraith_death_v1.mp3",
+      "sha256": "6f675776645b524493c82ff81ad182c30af45a490ea36b46f5d35d5d03402f30"
+    },
+    {
+      "id": "sfx_troop_gloamfang_deploy_v1",
+      "file": "sfx_troop_gloamfang_deploy_v1.mp3",
+      "sha256": "da32b8c2cc0563ae489886f815b88830210722b50978505f8908d9dde0038332"
+    },
+    {
+      "id": "sfx_troop_gloamfang_rend_v1",
+      "file": "sfx_troop_gloamfang_rend_v1.mp3",
+      "sha256": "20aae7172662dcaa744684d3dc3f0c6a99c539046c09c16d5689b0b0d5014238"
+    },
+    {
+      "id": "sfx_troop_gloamfang_contact_v1",
+      "file": "sfx_troop_gloamfang_contact_v1.mp3",
+      "sha256": "c839bae9ce80fcbbf84c3305e1d4dba89e5c2f5dc9a2a920b06ca224cf66370e"
+    },
+    {
+      "id": "sfx_troop_gloamfang_howl_v1",
+      "file": "sfx_troop_gloamfang_howl_v1.mp3",
+      "sha256": "16e02972230c72307810ccf018978631f1681d0bb276e43c14bc6d8c3fd0e3fc"
+    },
+    {
+      "id": "sfx_troop_gloamfang_lunge_v1",
+      "file": "sfx_troop_gloamfang_lunge_v1.mp3",
+      "sha256": "a18b3d7ebb8cdc3c5cd4abda98ce980933b015a1089cd9c53f975ca889f5dd28"
+    },
+    {
+      "id": "sfx_troop_gloamfang_death_v1",
+      "file": "sfx_troop_gloamfang_death_v1.mp3",
+      "sha256": "a5a9cd51cc3189e9b65ed79f6bdc18efdd067add79e3b0e5ed3f558dce8c1711"
+    },
+    {
+      "id": "sfx_troop_direwyvern_deploy_v1",
+      "file": "sfx_troop_direwyvern_deploy_v1.mp3",
+      "sha256": "8f2aa4a01c23653d37ab609eec6ac60e22d7201d513f519766f67826bd84ec08"
+    },
+    {
+      "id": "sfx_troop_direwyvern_firestorm_v1",
+      "file": "sfx_troop_direwyvern_firestorm_v1.wav",
+      "sha256": "8f6978f3685f8a755be1d99634f02ac170d4515bb39f6060602d83edcbc8a429",
+      "loopStart": 0.041723,
+      "loopEnd": 4.991882
+    },
+    {
+      "id": "sfx_troop_direwyvern_maul_v1",
+      "file": "sfx_troop_direwyvern_maul_v1.mp3",
+      "sha256": "c5ec4c6e04ee325ea4af16e1d345d1d085ea3fec8a6099d54af78e719d04813d"
+    },
+    {
+      "id": "sfx_troop_direwyvern_contact_v1",
+      "file": "sfx_troop_direwyvern_contact_v1.mp3",
+      "sha256": "8312061c62fc094eb1f9d63e9e95e3d434b9fb3a5416ce2cad5b807c12886060"
+    },
+    {
+      "id": "sfx_troop_direwyvern_death_v1",
+      "file": "sfx_troop_direwyvern_death_v1.mp3",
+      "sha256": "ec6b3732426170e9829aa5bb5213ddb7b0dfd80da905e79ce05b13f355099fdf"
+    },
+    {
+      "id": "sfx_troop_hexbarrow_deploy_v1",
+      "file": "sfx_troop_hexbarrow_deploy_v1.mp3",
+      "sha256": "5c524b5e26105bd96ba2c780df6577bdabcc543101cc44c15ce7e5d2f212ae48"
+    },
+    {
+      "id": "sfx_troop_hexbarrow_hexshot_release_v1",
+      "file": "sfx_troop_hexbarrow_hexshot_release_v1.mp3",
+      "sha256": "3d8bbc82b568684da77cea4537904547b0f50e5a42cbab2c0262980de2ce73db"
+    },
+    {
+      "id": "sfx_troop_hexbarrow_hex_impact_v1",
+      "file": "sfx_troop_hexbarrow_hex_impact_v1.mp3",
+      "sha256": "52b29bf6a5153cb486204aedd7024d7db7680f961e6844d0c206e97d4a60ff4c"
+    },
+    {
+      "id": "sfx_troop_hexbarrow_disgorge_v1",
+      "file": "sfx_troop_hexbarrow_disgorge_v1.mp3",
+      "sha256": "ac716f27f4f6d9f5b636a08f6df8f22b90212a95f750fdd33afee305c540fe6e"
+    },
+    {
+      "id": "sfx_troop_hexbarrow_death_v1",
+      "file": "sfx_troop_hexbarrow_death_v1.mp3",
+      "sha256": "3f243592a8e5dc0deaa8f0faecfc05329a27086d66909320c79753b365d2069f"
+    },
+    {
+      "id": "sfx_troop_barrowling_spawn_v1",
+      "file": "sfx_troop_barrowling_spawn_v1.mp3",
+      "sha256": "5e5700de45d5b55977e35916d9ec922cfe74b2936d965ceeb29e1820b802818a"
+    },
+    {
+      "id": "sfx_troop_barrowling_attack_v1",
+      "file": "sfx_troop_barrowling_attack_v1.mp3",
+      "sha256": "9e5bab0c7593cdfd5eb5f003eee4e96df4d35d381fb106a6b8050bfcd6c6fe40"
+    },
+    {
+      "id": "sfx_troop_barrowling_death_v1",
+      "file": "sfx_troop_barrowling_death_v1.mp3",
+      "sha256": "79c142253db1a8fafa93ae0454c35f663bcdd89ce49fce8db4ec99cba0fa8a7b"
+    },
+    {
+      "id": "sfx_troop_wyrmling_spawn_v1",
+      "file": "sfx_troop_wyrmling_spawn_v1.mp3",
+      "sha256": "c94a4cba500c46600ef3e1a2762881bf4bb7a0d4e349583f62fb678dbfefbc8b"
+    },
+    {
+      "id": "sfx_troop_wyrmling_breath_v1",
+      "file": "sfx_troop_wyrmling_breath_v1.mp3",
+      "sha256": "8a3b8b9d61c6bcfa906a9cbd07f1c78ed8733a75683ed2718adc70e21e4b3ce7"
+    },
+    {
+      "id": "sfx_troop_wyrmling_flame_contact_v1",
+      "file": "sfx_troop_wyrmling_flame_contact_v1.mp3",
+      "sha256": "f108e45bc871bc04f2195d33531b520618132fa18bd915e31b3085e66d175ec2"
+    },
+    {
+      "id": "sfx_troop_wyrmling_death_v1",
+      "file": "sfx_troop_wyrmling_death_v1.mp3",
+      "sha256": "34beb6d6c231c83224c2bcc5f8d0d4b2f87b9cb4b3c1c489b63667449e55d2f5"
+    },
+    {
+      "id": "sfx_hero_vex_deploy_v1",
+      "file": "sfx_hero_vex_deploy_v1.mp3",
+      "sha256": "17a9999d3666876727544c22772ced19a17c8bb8e648af265a08d85a8a03d9e2"
+    },
+    {
+      "id": "sfx_hero_vex_primary_v1",
+      "file": "sfx_hero_vex_primary_v1.mp3",
+      "sha256": "1c38087952709870b0a2348aa1bd1382003a5626155340b7c1a67be04f7829af"
+    },
+    {
+      "id": "sfx_hero_vex_death_v1",
+      "file": "sfx_hero_vex_death_v1.mp3",
+      "sha256": "c9639e6c23fb7798a897bedce8da0b444c41ed8cb7eda3b80ca66630650ad104"
+    },
+    {
+      "id": "sfx_hero_vex_crimson_dash_v1",
+      "file": "sfx_hero_vex_crimson_dash_v1.mp3",
+      "sha256": "6e6a797348359c214bc976537aeb94fd654dc14bb70c3251ed166c312e277a4c"
+    },
+    {
+      "id": "sfx_hero_vex_moonsunder_wave_v1",
+      "file": "sfx_hero_vex_moonsunder_wave_v1.mp3",
+      "sha256": "38e66a65a10b214ca80dd798e928bc892433d59df5522012b2225bf21657d9f5"
+    },
+    {
+      "id": "sfx_hero_vex_degen_awakening_v1",
+      "file": "sfx_hero_vex_degen_awakening_v1.mp3",
+      "sha256": "a9d618c5d675358f7cbea82f1f70949ff885bc739e1533eb317b0087c81d11b9"
+    },
+    {
+      "id": "sfx_hero_vex_double_or_nothing_heads_v1",
+      "file": "sfx_hero_vex_double_or_nothing_heads_v1.mp3",
+      "sha256": "01b58d3e52cba21a725f8d1147b74a03c4a4c9e6518fa8270b382dfb77df2f8f"
+    },
+    {
+      "id": "sfx_hero_vex_double_or_nothing_tails_v1",
+      "file": "sfx_hero_vex_double_or_nothing_tails_v1.mp3",
+      "sha256": "a5c2ea6cf216710519dec35f7ad86ce95d30b80e96652fe909f6aaae88b7a5a7"
+    },
+    {
+      "id": "sfx_hero_vex_omega_shardstorm_v1",
+      "file": "sfx_hero_vex_omega_shardstorm_v1.mp3",
+      "sha256": "de18fff1dcd2ba6301e2abbd495af675605c087cf166c9b092790dd449c12d55"
+    },
+    {
+      "id": "sfx_hero_theodor_deploy_v1",
+      "file": "sfx_hero_theodor_deploy_v1.mp3",
+      "sha256": "f4cf31d8590617bd69ebe2183e30cabd7be140da4cc3ec9300efaeffe96f8a15"
+    },
+    {
+      "id": "sfx_hero_theodor_primary_v1",
+      "file": "sfx_hero_theodor_primary_v1.mp3",
+      "sha256": "720263e2651eb356d6f08c9c2979feb735522f96eb5497bedbc6272544927eff"
+    },
+    {
+      "id": "sfx_hero_theodor_death_v1",
+      "file": "sfx_hero_theodor_death_v1.mp3",
+      "sha256": "726df208301b8d170f2d6b57516d26a13d03e7bc5462573dacf77fe17514889c"
+    },
+    {
+      "id": "sfx_hero_theodor_cheek_quake_v1",
+      "file": "sfx_hero_theodor_cheek_quake_v1.mp3",
+      "sha256": "d33ab8f3495f7757bc8397b02eebdd0fbde57675904aebd4aad046ecc354f1b2"
+    },
+    {
+      "id": "sfx_hero_theodor_snot_rocket_v1",
+      "file": "sfx_hero_theodor_snot_rocket_v1.mp3",
+      "sha256": "4640266bcf23f88e51f1737a8705edceeecb98c1e00aa37f939f7c85996011d9"
+    },
+    {
+      "id": "sfx_hero_theodor_cannonball_v1",
+      "file": "sfx_hero_theodor_cannonball_v1.mp3",
+      "sha256": "7b232bd4c8668f2ab13205c3c23d66a0f6358657f3bd0921c613c96562aaf661"
+    },
+    {
+      "id": "sfx_hero_theodor_skill_issue_v1",
+      "file": "sfx_hero_theodor_skill_issue_v1.mp3",
+      "sha256": "5d9b0fa1f295156cec03bc3bc01297aff8bc18fa4d144677628a69ec870e1209"
+    },
+    {
+      "id": "sfx_hero_theodor_belly_bounce_v1",
+      "file": "sfx_hero_theodor_belly_bounce_v1.mp3",
+      "sha256": "3d3080c35f5e1a18663b58bda26e789883d5f4cc41ea8ee6cf582383166013e8"
+    },
+    {
+      "id": "sfx_hero_theodor_brown_note_v1",
+      "file": "sfx_hero_theodor_brown_note_v1.mp3",
+      "sha256": "9fae36986477968f5c129a8594c04ede287d6d1e4f0be1382ec6d5c7c5560331"
+    },
+    {
+      "id": "sfx_hero_theodor_rage_quit_v1",
+      "file": "sfx_hero_theodor_rage_quit_v1.mp3",
+      "sha256": "ba83149958b98c1d0f92e9ca41fec75075c874652c3bb5e33bf2ab5a38983fb8"
+    },
+    {
+      "id": "sfx_hero_theodor_rage_quit_wake_v1",
+      "file": "sfx_hero_theodor_rage_quit_wake_v1.mp3",
+      "sha256": "4f33b9bddd9c704a9cfdd9a7f5c9c97aa401931fafdf902e3d31fed65f89ae8a"
+    },
+    {
+      "id": "sfx_hero_theodor_silent_but_deadly_v1",
+      "file": "sfx_hero_theodor_silent_but_deadly_v1.mp3",
+      "sha256": "936478de24ab538a5c1efd2796a0be2fcca3b5612e9baeee26ad18b55eb4a09a"
+    },
+    {
+      "id": "sfx_defense_cannon_fire_v1",
+      "file": "sfx_defense_cannon_fire_v1.mp3",
+      "sha256": "42dd2beb976cf0e027ccc21cc66e814a2a10738c14a70863da28b0125dba67bf"
+    },
+    {
+      "id": "sfx_defense_cannon_impact_v1",
+      "file": "sfx_defense_cannon_impact_v1.mp3",
+      "sha256": "b5cd5666a48b5a0366cefa82315d4c7dc225b54b180d86513b8c0b0a5c67af8f"
+    },
+    {
+      "id": "sfx_defense_archertower_fire_v1",
+      "file": "sfx_defense_archertower_fire_v1.mp3",
+      "sha256": "c3c62ba4ed859154c5447477789feebde081cf827054380f6d41ee68f0d194b9"
+    },
+    {
+      "id": "sfx_defense_archertower_impact_v1",
+      "file": "sfx_defense_archertower_impact_v1.mp3",
+      "sha256": "c071825d8bc60f7629182938627638f2b2003e7b9e59a0e905894dbda90b9baf"
+    },
+    {
+      "id": "sfx_defense_mortar_launch_v1",
+      "file": "sfx_defense_mortar_launch_v1.mp3",
+      "sha256": "ae1159fb6d58954bf94376d9916db5897b8a1ada88e4ac53f98f4ebea9a9e820"
+    },
+    {
+      "id": "sfx_defense_mortar_whistle_v1",
+      "file": "sfx_defense_mortar_whistle_v1.mp3",
+      "sha256": "f1bfb5e2df3c510e871475c3b318b04cb4f22866378886ace25cbed8b94af6fb"
+    },
+    {
+      "id": "sfx_defense_mortar_impact_v1",
+      "file": "sfx_defense_mortar_impact_v1.mp3",
+      "sha256": "cbbbf2b8dc57fe799bc52691964873b66b0a6fc712859638780426099a988c07"
+    },
+    {
+      "id": "sfx_defense_electrictower_fire_v1",
+      "file": "sfx_defense_electrictower_fire_v1.mp3",
+      "sha256": "2ed526cebd381c4d7fe75573c2c17783fea093fa6be03477c83a9bfe1a9935b1"
+    },
+    {
+      "id": "sfx_defense_electrictower_impact_v1",
+      "file": "sfx_defense_electrictower_impact_v1.mp3",
+      "sha256": "5bec186242b25752ed525761a7ea331905d9c6aeffe1f4986f9cf13aea1a8eeb"
+    },
+    {
+      "id": "sfx_defense_magetower_fire_v1",
+      "file": "sfx_defense_magetower_fire_v1.mp3",
+      "sha256": "2a692650beac6af08732bcffb77b89f0b62ea0ca34f9b615135d190a7e51ac6d"
+    },
+    {
+      "id": "sfx_defense_magetower_impact_v1",
+      "file": "sfx_defense_magetower_impact_v1.mp3",
+      "sha256": "efc41c02e069bf11d028e0db3c6d72d56c1d3c45fdace199e12b461d6ccb60de"
+    },
+    {
+      "id": "sfx_defense_lasertower_fire_v1",
+      "file": "sfx_defense_lasertower_fire_v1.mp3",
+      "sha256": "e873fbb5a9de7dc075063c2bea3f17ab7d241c87354e893c3ce2c845a303638d"
+    },
+    {
+      "id": "sfx_defense_lasertower_impact_v1",
+      "file": "sfx_defense_lasertower_impact_v1.mp3",
+      "sha256": "93d66d543a9646f73e0948173ada34e9a1a3fd5bc22ca848ede128c6a9c49c9e"
+    },
+    {
+      "id": "sfx_defense_dragonnest_launch_v1",
+      "file": "sfx_defense_dragonnest_launch_v1.mp3",
+      "sha256": "1c2748eb4792ae08fdd388e0a98ce50a9f0b72194241415904419e4834efaad1"
+    },
+    {
+      "id": "sfx_defense_spiketrap_snap_v1",
+      "file": "sfx_defense_spiketrap_snap_v1.mp3",
+      "sha256": "6c90a9e72ebfe3e62c65d26b542eec486c9feb8df0d45eba71e2c4a362ba2907"
+    },
+    {
+      "id": "sfx_ui_tap_v1",
+      "file": "sfx_ui_tap_v1.mp3",
+      "sha256": "8dd0075078a22238fa1a37060e5ab89767815d916f5c04144c2ecd8ce8630b95"
+    },
+    {
+      "id": "sfx_ui_confirm_v1",
+      "file": "sfx_ui_confirm_v1.mp3",
+      "sha256": "a60d13540aa5fb08d882e849ee99920206a2d294694948aefab7af7fd01c99bc"
+    },
+    {
+      "id": "sfx_ui_error_v1",
+      "file": "sfx_ui_error_v1.mp3",
+      "sha256": "390e7d74ecb7e14acdba26df48b09040f321f97b4114b5189470dfa7f63c3ab9"
+    },
+    {
+      "id": "sfx_ui_claim_chime_v1",
+      "file": "sfx_ui_claim_chime_v1.mp3",
+      "sha256": "7ab6c416b3a4f98b0a265be280ed320c30d04029755547b970f9bf41fa017df4"
+    },
+    {
+      "id": "sfx_ui_coin_shower_v1",
+      "file": "sfx_ui_coin_shower_v1.mp3",
+      "sha256": "f4ee537f0bbf4f59d8c5c8290f34b9b239ece879251cdf92d17bc77e61f8ce74"
+    },
+    {
+      "id": "sfx_ui_quest_done_v1",
+      "file": "sfx_ui_quest_done_v1.mp3",
+      "sha256": "d02729727f717bccf4bc2d3bc8ccd0ed33470c40749f13dd4b36f80e6fd8f6e7"
+    },
+    {
+      "id": "sfx_ui_levelup_v1",
+      "file": "sfx_ui_levelup_v1.mp3",
+      "sha256": "f0e44e6fca250d5ae9210228eb31a5e3062c1dae05f837ab64ef7fb69c86ae83"
+    },
+    {
+      "id": "sfx_ui_streak_tick_v1",
+      "file": "sfx_ui_streak_tick_v1.mp3",
+      "sha256": "1cbf74178760f4d51088cb37b20e806bd34abf933dae994e3e2ac773fd9da9e2"
+    },
+    {
+      "id": "sfx_base_place_v1",
+      "file": "sfx_base_place_v1.mp3",
+      "sha256": "9100678d976681fa3c0b59dc532989f703e81bfc59e62f8a6a6658310a484d85"
+    },
+    {
+      "id": "sfx_base_build_complete_v1",
+      "file": "sfx_base_build_complete_v1.mp3",
+      "sha256": "43763844857255c98ab4633ac3bb38e2efb6508916dda4c2ff1eb373e5b2674b"
+    },
+    {
+      "id": "sfx_base_upgrade_hammer_v1",
+      "file": "sfx_base_upgrade_hammer_v1.mp3",
+      "sha256": "e3239c80045746d3ff23c140fcf5ff9418e271467a6f7e6f63af883e655e6ad3"
+    },
+    {
+      "id": "sfx_base_rubble_collapse_v1",
+      "file": "sfx_base_rubble_collapse_v1.mp3",
+      "sha256": "fd83b4de3bd487d08c12e46cd1a4a2e231fd8d9b8e4c485d707f5c5538045f0d"
+    },
+    {
+      "id": "sfx_base_wall_place_v1",
+      "file": "sfx_base_wall_place_v1.mp3",
+      "sha256": "bcf33db8256370bcfff248fef4f525374b895d700326c575fba395d0ef79615c"
+    },
+    {
+      "id": "sfx_battle_rally_v1",
+      "file": "sfx_battle_rally_v1.mp3",
+      "sha256": "2f6b6a0114f46ea34779c193d0217ba0f95fa65d64bb5db98bcbf4934921f115"
+    },
+    {
+      "id": "sfx_battle_shield_up_v1",
+      "file": "sfx_battle_shield_up_v1.mp3",
+      "sha256": "1138df3e021b8de9c426d05758d2c7726862cb9748a51458d7be48270508db4d"
+    },
+    {
+      "id": "sfx_battle_shield_shatter_v1",
+      "file": "sfx_battle_shield_shatter_v1.mp3",
+      "sha256": "a575a17aa2d699290f22977cd04f9786fe8b6aae8ec61014dd8b92cb4acfd393"
+    },
+    {
+      "id": "sfx_battle_star_1_v1",
+      "file": "sfx_battle_star_1_v1.mp3",
+      "sha256": "5c47e3f1776d5e3b123cef4d05cfc7fe52a63c5ae1a4667d4977353cf4e18ae1"
+    },
+    {
+      "id": "sfx_battle_star_2_v1",
+      "file": "sfx_battle_star_2_v1.mp3",
+      "sha256": "2fa3c9ede53183e9ebec2709ec4ffb38837c4025db53a010d3b881b40d91599b"
+    },
+    {
+      "id": "sfx_battle_star_3_v1",
+      "file": "sfx_battle_star_3_v1.mp3",
+      "sha256": "4df5cb3abd45c9a7239ea319e57695c76476b6cebf1f935662799d30504a0f17"
+    },
+    {
+      "id": "sfx_battle_defeat_timeout_v1",
+      "file": "sfx_battle_defeat_timeout_v1.mp3",
+      "sha256": "54325e58b864b225abb5b23b0011a260f1b4907d1fbcfc362a5da3a4ca04ca35"
+    },
+    {
+      "id": "sfx_ambience_base_day_v1",
+      "file": "sfx_ambience_base_day_v1.wav",
+      "sha256": "71c4520c4029b063897502feb07c74ae90b5637209207007f18940922c85c97e",
+      "loopStart": 0.031066,
+      "loopEnd": 19.950045
+    },
+    {
+      "id": "sfx_ambience_campaign_v1",
+      "file": "sfx_ambience_campaign_v1.wav",
+      "sha256": "f5cc864de30312b83ebbc1508806e4800f35dbdf6efe663cd955b37df95ab71b",
+      "loopStart": 0.045125,
+      "loopEnd": 19.937347
+    },
+    {
+      "id": "sfx_ambience_battle_v1",
+      "file": "sfx_ambience_battle_v1.wav",
+      "sha256": "37b022387845803d38d410ff8b9bdf2537bce63d8b37136a9a62486a4ac61e7b",
+      "loopStart": 0.077778,
+      "loopEnd": 19.964898
+    },
+    {
+      "id": "sfx_troop_highlander_attack_v2",
+      "file": "sfx_troop_highlander_attack_v2.mp3",
+      "sha256": "d3255faf63667a06cac9e09416b824a19b6c0d468acc322b1eb130f4f2d65325"
+    },
+    {
+      "id": "sfx_troop_highlander_attack_v3",
+      "file": "sfx_troop_highlander_attack_v3.mp3",
+      "sha256": "a8d2c63697baba90808ba2ccbe0140b6787152556f52af0eb89457daa01d9c8f"
+    },
+    {
+      "id": "sfx_troop_bowman_release_v2",
+      "file": "sfx_troop_bowman_release_v2.mp3",
+      "sha256": "eecba04a1ee72b7cc131d73a9045473f6c23675c7e99fb2878ef6e94580c51c1"
+    },
+    {
+      "id": "sfx_troop_bowman_release_v3",
+      "file": "sfx_troop_bowman_release_v3.mp3",
+      "sha256": "45793152dd8c08677cfdf82e1c3142cb0adef7ccb70e92c211949af3a252f45e"
+    },
+    {
+      "id": "sfx_troop_kegrunner_detonation_v2",
+      "file": "sfx_troop_kegrunner_detonation_v2.mp3",
+      "sha256": "744dec5fe81da5ad27d4d9362b4cdf6d91e5d3c31e6d77cf9c008e0aa8eb65a3"
+    },
+    {
+      "id": "sfx_troop_kegrunner_detonation_v3",
+      "file": "sfx_troop_kegrunner_detonation_v3.mp3",
+      "sha256": "2e95db6e7bb5b22f74c3e25919e2c0ac5009b3c9d9eba32b1259cad07e5f0caf"
+    },
+    {
+      "id": "sfx_troop_tunneler_pick_contact_v2",
+      "file": "sfx_troop_tunneler_pick_contact_v2.mp3",
+      "sha256": "c89cc27c352f559f8091ea2f1ef75e3021bfb680ed0cdc8460419161762875d5"
+    },
+    {
+      "id": "sfx_troop_tunneler_pick_contact_v3",
+      "file": "sfx_troop_tunneler_pick_contact_v3.mp3",
+      "sha256": "a8f408d9b68d860acdcb0acf22463c25890e5d103429bcc9f223d47cf12cbcdc"
+    },
+    {
+      "id": "sfx_troop_turrider_horn_gore_v2",
+      "file": "sfx_troop_turrider_horn_gore_v2.mp3",
+      "sha256": "880e53ff1a5d2456d40eee7396843ad2a06b6cc4ddd751d9039d39218db806c2"
+    },
+    {
+      "id": "sfx_troop_turrider_horn_gore_v3",
+      "file": "sfx_troop_turrider_horn_gore_v3.mp3",
+      "sha256": "612402b764a1a919b7fae1010c10ddc634e3288615b370b6cbdea1cea9a5433f"
+    },
+    {
+      "id": "sfx_troop_plunderer_sack_attack_v2",
+      "file": "sfx_troop_plunderer_sack_attack_v2.mp3",
+      "sha256": "65ce8651eadf3eba86f37ac06e6b389d8a7fa080b73d757b6b12fb48466a8701"
+    },
+    {
+      "id": "sfx_troop_plunderer_sack_attack_v3",
+      "file": "sfx_troop_plunderer_sack_attack_v3.mp3",
+      "sha256": "98ce05c0d706b92fd7caa6e2707ab7368f7ba4098d6644b4c90c54a478baa6f5"
+    },
+    {
+      "id": "sfx_troop_giant_melee_v2",
+      "file": "sfx_troop_giant_melee_v2.mp3",
+      "sha256": "c9a7581074b6c928669ee4b515d57b0cd89cfec94bae0ae570eac8f15e7dd874"
+    },
+    {
+      "id": "sfx_troop_giant_melee_v3",
+      "file": "sfx_troop_giant_melee_v3.mp3",
+      "sha256": "148acc7852df61c7e583a59ca50922156fb4af780dde4379c19ef06016397e30"
+    },
+    {
+      "id": "sfx_troop_troll_sweep_v2",
+      "file": "sfx_troop_troll_sweep_v2.mp3",
+      "sha256": "d9754e6a5e3f7061c54c0dd16d73dde2da6da66a8a457d274c88a61e321677f5"
+    },
+    {
+      "id": "sfx_troop_troll_sweep_v3",
+      "file": "sfx_troop_troll_sweep_v3.mp3",
+      "sha256": "0e515768e2aa853fb2f90c469b30a4e89d59b0903a8ef9fd801c3da0c9bdbbe8"
+    },
+    {
+      "id": "sfx_troop_dragon_breath_v2",
+      "file": "sfx_troop_dragon_breath_v2.mp3",
+      "sha256": "736f6bfbf5481a0c5694cba138e195fe2eebef9260bc4af261cc1f0ffe950bf6"
+    },
+    {
+      "id": "sfx_troop_dragon_breath_v3",
+      "file": "sfx_troop_dragon_breath_v3.mp3",
+      "sha256": "c438f60de478e940a29b461098ed9a9ba83d9242bd50ac57bdf8f8ee3fe51e07"
+    },
+    {
+      "id": "sfx_troop_mage_release_v2",
+      "file": "sfx_troop_mage_release_v2.mp3",
+      "sha256": "554b044e7874470a074e61bfd3fac36b3554efbdc1f68b0cbcd7b608dd8dd8fe"
+    },
+    {
+      "id": "sfx_troop_mage_release_v3",
+      "file": "sfx_troop_mage_release_v3.mp3",
+      "sha256": "b2eef10f15f80d952fd303890121b94bac83367f290d31ec0299b2999ebd0cd2"
+    },
+    {
+      "id": "sfx_troop_bilgewraith_chain_attack_v2",
+      "file": "sfx_troop_bilgewraith_chain_attack_v2.mp3",
+      "sha256": "8d3f230022a54ccd437074df47ec832e9c5a3c142217e4ca1a1c03e825d55746"
+    },
+    {
+      "id": "sfx_troop_bilgewraith_chain_attack_v3",
+      "file": "sfx_troop_bilgewraith_chain_attack_v3.mp3",
+      "sha256": "4af5ff4360530e4b230fec72ac10bcd4d47241b8f07c08b7906e3d4d22f69867"
+    },
+    {
+      "id": "sfx_troop_gloamfang_rend_v2",
+      "file": "sfx_troop_gloamfang_rend_v2.mp3",
+      "sha256": "77906aeb77bf7cca075cf12a62869a53c9cb2f718cfdabff36a26eff2c397f40"
+    },
+    {
+      "id": "sfx_troop_gloamfang_rend_v3",
+      "file": "sfx_troop_gloamfang_rend_v3.mp3",
+      "sha256": "0e93008717bc765cf5a4bea44782618d6f5faf70a5490e5bb7ecb36e6049e585"
+    },
+    {
+      "id": "sfx_troop_direwyvern_firestorm_v2",
+      "file": "sfx_troop_direwyvern_firestorm_v2.wav",
+      "sha256": "3d4b54050eecb0ab51d4d17f959ab740b7d87dcb465509eca299dcb5accc4a5c",
+      "loopStart": 0.00737,
+      "loopEnd": 4.930544
+    },
+    {
+      "id": "sfx_troop_direwyvern_firestorm_v3",
+      "file": "sfx_troop_direwyvern_firestorm_v3.wav",
+      "sha256": "345e0e89979e7c79c0b05601d1b0e7948bc417ee610b66a0db700bc692dcf1cb",
+      "loopStart": 0.064399,
+      "loopEnd": 4.986893
+    },
+    {
+      "id": "sfx_troop_hexbarrow_hexshot_release_v2",
+      "file": "sfx_troop_hexbarrow_hexshot_release_v2.mp3",
+      "sha256": "4daa6df468a876c931346cf63c55688925f6c206701f4eb2b371172b861a4f8a"
+    },
+    {
+      "id": "sfx_troop_hexbarrow_hexshot_release_v3",
+      "file": "sfx_troop_hexbarrow_hexshot_release_v3.mp3",
+      "sha256": "ed91ee45674bcdea28c4ceb862ec04babb5c09cf35c8e273ce7e2bc2f1ac622f"
+    },
+    {
+      "id": "sfx_troop_barrowling_attack_v2",
+      "file": "sfx_troop_barrowling_attack_v2.mp3",
+      "sha256": "e639b31b9a74508b89211e33f09924b768de8ccf7222a0f30cafbb05652cb1ac"
+    },
+    {
+      "id": "sfx_troop_barrowling_attack_v3",
+      "file": "sfx_troop_barrowling_attack_v3.mp3",
+      "sha256": "cdc8d2cd3f0deb5fa6ba1cd66f2291b283568794022782cc252a9d126728a352"
+    },
+    {
+      "id": "sfx_troop_wyrmling_breath_v2",
+      "file": "sfx_troop_wyrmling_breath_v2.mp3",
+      "sha256": "cd07777fd427c552f83acd9dde32125209dd12d325cd2236aeed7523315c0d61"
+    },
+    {
+      "id": "sfx_troop_wyrmling_breath_v3",
+      "file": "sfx_troop_wyrmling_breath_v3.mp3",
+      "sha256": "a5628276804523c90cee9c670bf08250378d195be8ec47dc55d3cb65a69fffa8"
+    },
+    {
+      "id": "sfx_troop_bowman_impact_v2",
+      "file": "sfx_troop_bowman_impact_v2.mp3",
+      "sha256": "3862a0bfec8e8b4002354d91f550246cf91a0a1c315bb942a8baf46ea320d773"
+    },
+    {
+      "id": "sfx_troop_bowman_impact_v3",
+      "file": "sfx_troop_bowman_impact_v3.mp3",
+      "sha256": "03193b12062161b68eda1f4ad222011ce65b147861929bf0488f7bdb93bcbfc3"
+    },
+    {
+      "id": "sfx_troop_giant_boulder_impact_v2",
+      "file": "sfx_troop_giant_boulder_impact_v2.mp3",
+      "sha256": "29e9775404d3663f1e197467030ac0553e7727bf1557f601f2062948f44ce0e1"
+    },
+    {
+      "id": "sfx_troop_giant_boulder_impact_v3",
+      "file": "sfx_troop_giant_boulder_impact_v3.mp3",
+      "sha256": "b05747bd03f2cb6bba4fb9e5711b792d33ebf01674fcdf5849208427e4740a52"
+    },
+    {
+      "id": "sfx_troop_dragon_breath_contact_v2",
+      "file": "sfx_troop_dragon_breath_contact_v2.mp3",
+      "sha256": "865d8d1740520de245cf61a6f2006caadf4a8a54ce73a2baa9d42be0f6c0ccf4"
+    },
+    {
+      "id": "sfx_troop_dragon_breath_contact_v3",
+      "file": "sfx_troop_dragon_breath_contact_v3.mp3",
+      "sha256": "10552c6e237c0f2225bd807f0d928f9659b420bc2579da3de35b7bae8f441ebe"
+    },
+    {
+      "id": "sfx_troop_highlander_death_v2",
+      "file": "sfx_troop_highlander_death_v2.mp3",
+      "sha256": "c257efd903012ded4c556b5d591040b59279223bbe412ff0f61f3c782616143b"
+    },
+    {
+      "id": "sfx_troop_highlander_death_v3",
+      "file": "sfx_troop_highlander_death_v3.mp3",
+      "sha256": "b0c215f953544cddae2e4217b6cfae2587fed990599cf497943439c78eb94a12"
+    },
+    {
+      "id": "sfx_troop_bowman_death_v2",
+      "file": "sfx_troop_bowman_death_v2.mp3",
+      "sha256": "04badeed7fcda2387e6272e4f9f9ae409fbb1297c3d7a015767189581e4eca2a"
+    },
+    {
+      "id": "sfx_troop_bowman_death_v3",
+      "file": "sfx_troop_bowman_death_v3.mp3",
+      "sha256": "2e5852e31df2faa9f796079ebbdef1847387ef178a24b7cdb240d5253717068a"
+    },
+    {
+      "id": "sfx_troop_kegrunner_death_v2",
+      "file": "sfx_troop_kegrunner_death_v2.mp3",
+      "sha256": "33db4a96d04f8f99b58d4cd5c41679e69596f5cb4fcf2e90411788daffbaddc2"
+    },
+    {
+      "id": "sfx_troop_kegrunner_death_v3",
+      "file": "sfx_troop_kegrunner_death_v3.mp3",
+      "sha256": "e39001208868fa50f16bc078fdd65617d4f8c3133be03d75a0e85898cae15b76"
+    },
+    {
+      "id": "sfx_troop_tunneler_death_v2",
+      "file": "sfx_troop_tunneler_death_v2.mp3",
+      "sha256": "750899d84efe0ca6ff3c7f4d72dcad49a4360d46aa83a4d308a59b3efb770c9e"
+    },
+    {
+      "id": "sfx_troop_tunneler_death_v3",
+      "file": "sfx_troop_tunneler_death_v3.mp3",
+      "sha256": "b15a169ce0042d862fbe5e0473514720a6a81198455e68d7cdf64d536af6f89d"
+    },
+    {
+      "id": "sfx_troop_turrider_death_v2",
+      "file": "sfx_troop_turrider_death_v2.mp3",
+      "sha256": "cba5e87f00fa8cbf1ed27a47a68d4f9c9e5495e740da019ecd7620909f0103cd"
+    },
+    {
+      "id": "sfx_troop_turrider_death_v3",
+      "file": "sfx_troop_turrider_death_v3.mp3",
+      "sha256": "81b67a481da64ff722890974048f7c01aa0f4a645b1d6af10d2f0e696738e541"
+    },
+    {
+      "id": "sfx_troop_plunderer_death_v2",
+      "file": "sfx_troop_plunderer_death_v2.mp3",
+      "sha256": "6dac9b91441c9d9f183cefbc65f271634e5416a67ad1d45f619119b6ed92da98"
+    },
+    {
+      "id": "sfx_troop_plunderer_death_v3",
+      "file": "sfx_troop_plunderer_death_v3.mp3",
+      "sha256": "fe7a90ffdd9ad40171a2c87c7d9dd4160019f3b4e6bfdac88c51f565e3eb9803"
+    },
+    {
+      "id": "sfx_troop_giant_death_v2",
+      "file": "sfx_troop_giant_death_v2.mp3",
+      "sha256": "6eb1662778d81b8028fbf0691e623abb9fd43f05fb4830a23ca6fe43d99ae2b4"
+    },
+    {
+      "id": "sfx_troop_giant_death_v3",
+      "file": "sfx_troop_giant_death_v3.mp3",
+      "sha256": "f5995c8d9025557ce2822aa894de704ce965bab26c4789ea31911075c67187ec"
+    },
+    {
+      "id": "sfx_troop_troll_death_v2",
+      "file": "sfx_troop_troll_death_v2.mp3",
+      "sha256": "c5430404c3d8b4401e61e7d7b0df801586f7848c7585fb9e227755fd75dffdee"
+    },
+    {
+      "id": "sfx_troop_troll_death_v3",
+      "file": "sfx_troop_troll_death_v3.mp3",
+      "sha256": "93e72663b7da44779dd7eba7116fdaa1e5fb1b27d7f66bcc65c6e69be3d9113c"
+    },
+    {
+      "id": "sfx_troop_dragon_death_v2",
+      "file": "sfx_troop_dragon_death_v2.mp3",
+      "sha256": "3581e9141329b864ae79d5a7c42d0df3a17b706ea425bf780ec3d5d2a683abad"
+    },
+    {
+      "id": "sfx_troop_dragon_death_v3",
+      "file": "sfx_troop_dragon_death_v3.mp3",
+      "sha256": "999d50edea46a52e68dd39ba46e82f89eac4dad77dca6a6306e1c3b0e2b303db"
+    },
+    {
+      "id": "sfx_troop_mage_death_v2",
+      "file": "sfx_troop_mage_death_v2.mp3",
+      "sha256": "e1710c1ca7f733283ca798a52c9850bb93868da93b3cd446b877589961083e61"
+    },
+    {
+      "id": "sfx_troop_mage_death_v3",
+      "file": "sfx_troop_mage_death_v3.mp3",
+      "sha256": "38cb8227516b9f432a41d7bd98437bdfd7b70c696c772d7c1baf72b45576f19e"
+    },
+    {
+      "id": "sfx_troop_bilgewraith_death_v2",
+      "file": "sfx_troop_bilgewraith_death_v2.mp3",
+      "sha256": "f833c0237f9c0572b25f7f736296c22d4cbb16e362d0f97ef81a4e7ccf9e2eec"
+    },
+    {
+      "id": "sfx_troop_bilgewraith_death_v3",
+      "file": "sfx_troop_bilgewraith_death_v3.mp3",
+      "sha256": "5365e663de9d4d27b522fbe3a2ffd2afbee65ba6c6daf924eea1fcaf34d977b4"
+    },
+    {
+      "id": "sfx_troop_gloamfang_death_v2",
+      "file": "sfx_troop_gloamfang_death_v2.mp3",
+      "sha256": "1dc76aa48c07aadf2595c8cb944b722a81de750f7255ece600649f5a4f190d46"
+    },
+    {
+      "id": "sfx_troop_gloamfang_death_v3",
+      "file": "sfx_troop_gloamfang_death_v3.mp3",
+      "sha256": "a3a3a95294f982ce4fe31dcf53b5667e7ba1d701f2ae06a630f68729f0ef135c"
+    },
+    {
+      "id": "sfx_troop_direwyvern_death_v2",
+      "file": "sfx_troop_direwyvern_death_v2.mp3",
+      "sha256": "1984d62f28c78f2a4b60dcafe36d8287fd9a5e21b17c2153c3792037afea85f6"
+    },
+    {
+      "id": "sfx_troop_direwyvern_death_v3",
+      "file": "sfx_troop_direwyvern_death_v3.mp3",
+      "sha256": "53430ebe6b7114f8be89c609af92362ba08af68923f624ddb4b2a2e238b6be7c"
+    },
+    {
+      "id": "sfx_troop_hexbarrow_death_v2",
+      "file": "sfx_troop_hexbarrow_death_v2.mp3",
+      "sha256": "292d4c4e0a4d9003739b0a9a34ec155a562960a01c3b2579fcd8bd43f84a315f"
+    },
+    {
+      "id": "sfx_troop_hexbarrow_death_v3",
+      "file": "sfx_troop_hexbarrow_death_v3.mp3",
+      "sha256": "0ca16ebffbe50644542230f65c6a220bcd02fae5d4edeb15ee93b851a63ff92b"
+    },
+    {
+      "id": "sfx_troop_barrowling_death_v2",
+      "file": "sfx_troop_barrowling_death_v2.mp3",
+      "sha256": "7c6ad8f4816f18487e3985a915fba255de029140ae2cd76752796967e7e5f305"
+    },
+    {
+      "id": "sfx_troop_barrowling_death_v3",
+      "file": "sfx_troop_barrowling_death_v3.mp3",
+      "sha256": "993fec71ccdbef6ec78a61d3639e7baa5dc45c02ae645f33e9857eb93ecbf1f2"
+    },
+    {
+      "id": "sfx_troop_wyrmling_death_v2",
+      "file": "sfx_troop_wyrmling_death_v2.mp3",
+      "sha256": "9d251a770752c556c5ae616632c5831407b868a14558d49702cbeaf82c071f05"
+    },
+    {
+      "id": "sfx_troop_wyrmling_death_v3",
+      "file": "sfx_troop_wyrmling_death_v3.mp3",
+      "sha256": "7fa6ca1dac61b98341ccb6cd628e4aebd820a69cb992961e236c8632d0877352"
+    },
+    {
+      "id": "sfx_troop_highlander_deploy_v2",
+      "file": "sfx_troop_highlander_deploy_v2.mp3",
+      "sha256": "09da701cd7de3d06fc50d73e3924f1d8affcaf74e126c6c4f1b9679d266f9281"
+    },
+    {
+      "id": "sfx_troop_bowman_deploy_v2",
+      "file": "sfx_troop_bowman_deploy_v2.mp3",
+      "sha256": "0807b7e92ce972d52f836fb2e6ce296c1ba9137bdce629980304871a6ca09469"
+    },
+    {
+      "id": "sfx_troop_kegrunner_deploy_ignite_v2",
+      "file": "sfx_troop_kegrunner_deploy_ignite_v2.mp3",
+      "sha256": "c27ccbd3262bca4f79754fff9bff734875340987514ba0c91f287d92f94c22d6"
+    },
+    {
+      "id": "sfx_troop_tunneler_deploy_v2",
+      "file": "sfx_troop_tunneler_deploy_v2.mp3",
+      "sha256": "0646774367e669c57331e8d8d573f31544eb682ad3de7a8792dd34a00bd466ea"
+    },
+    {
+      "id": "sfx_troop_turrider_deploy_v2",
+      "file": "sfx_troop_turrider_deploy_v2.mp3",
+      "sha256": "a6d9488592a6d7d3ccd8515c7778d1e6b866fcca3ba0f65869fe3d2eab9fcf78"
+    },
+    {
+      "id": "sfx_troop_plunderer_deploy_v2",
+      "file": "sfx_troop_plunderer_deploy_v2.mp3",
+      "sha256": "947f6fe36489f7f1d92335683a694baffac29deb1b71726b778538af75fd01fb"
+    },
+    {
+      "id": "sfx_troop_giant_deploy_v2",
+      "file": "sfx_troop_giant_deploy_v2.mp3",
+      "sha256": "7d28e00b060e11030675bfcd434dcde485003cb30dda78672b5bfe8587b4e39f"
+    },
+    {
+      "id": "sfx_troop_troll_deploy_v2",
+      "file": "sfx_troop_troll_deploy_v2.mp3",
+      "sha256": "6446962ce1cd6b065b81210cad3799bef91ad668ae4c8198d45cfde95e805db6"
+    },
+    {
+      "id": "sfx_troop_dragon_deploy_v2",
+      "file": "sfx_troop_dragon_deploy_v2.mp3",
+      "sha256": "423b519113da188e9d7b314a2bc749b2f5cba1aff064affdcdbfcf95efc05719"
+    },
+    {
+      "id": "sfx_troop_mage_deploy_v2",
+      "file": "sfx_troop_mage_deploy_v2.mp3",
+      "sha256": "0e796b8c536e76ea48d4da9cd3d134809ae7966bd51ef168040915bd55aa544b"
+    },
+    {
+      "id": "sfx_troop_bilgewraith_deploy_v2",
+      "file": "sfx_troop_bilgewraith_deploy_v2.mp3",
+      "sha256": "2d47d53b60cdbf5c131089db4a289d46332f06ac52efd79e6cbff02b8fde3a5e"
+    },
+    {
+      "id": "sfx_troop_gloamfang_deploy_v2",
+      "file": "sfx_troop_gloamfang_deploy_v2.mp3",
+      "sha256": "f2bd287eb8a22248f9e447a9cb776ffb1437e5d8c640e59b09f1df3ebac17e10"
+    },
+    {
+      "id": "sfx_troop_direwyvern_deploy_v2",
+      "file": "sfx_troop_direwyvern_deploy_v2.mp3",
+      "sha256": "209221b5c7bec6f37aaf8465bb1a772c6c35bc5ee79e5066195c2797393cc63a"
+    },
+    {
+      "id": "sfx_troop_hexbarrow_deploy_v2",
+      "file": "sfx_troop_hexbarrow_deploy_v2.mp3",
+      "sha256": "32903e0c15ea9ad3d4742a85e36dc413c1bda5133f4d55e2748d82116a31c00a"
+    },
+    {
+      "id": "sfx_troop_barrowling_spawn_v2",
+      "file": "sfx_troop_barrowling_spawn_v2.mp3",
+      "sha256": "0f7f1632499fdfcc5dc76ffb85ef171eb712b38299a86d8c9db58644bedf7c8f"
+    },
+    {
+      "id": "sfx_troop_wyrmling_spawn_v2",
+      "file": "sfx_troop_wyrmling_spawn_v2.mp3",
+      "sha256": "2594cb04517e9cce8f4aa1213a7ea5327555a05269d94e3d242be3a08506b59f"
+    },
+    {
+      "id": "sfx_defense_cannon_fire_v2",
+      "file": "sfx_defense_cannon_fire_v2.mp3",
+      "sha256": "5312e4ccb4e535e38e1840affe2777734368edea37424de430468144f77b04a7"
+    },
+    {
+      "id": "sfx_defense_cannon_fire_v3",
+      "file": "sfx_defense_cannon_fire_v3.mp3",
+      "sha256": "b07a5988cb345c839682c8ff2f30f079b9c7b8ab63da5daa0761f52b752bc7fc"
+    },
+    {
+      "id": "sfx_defense_cannon_impact_v2",
+      "file": "sfx_defense_cannon_impact_v2.mp3",
+      "sha256": "22834a2cc99e2070e80084e16d3e4815b8ced2963726adacdd8e5f32ae46f636"
+    },
+    {
+      "id": "sfx_defense_cannon_impact_v3",
+      "file": "sfx_defense_cannon_impact_v3.mp3",
+      "sha256": "2b40bde417302145ec436b22d1ea90b71a02ca52c36b7afb612529fce06c0a2b"
+    },
+    {
+      "id": "sfx_defense_archertower_fire_v2",
+      "file": "sfx_defense_archertower_fire_v2.mp3",
+      "sha256": "76d9aeb2172ce301dac9dbf1a819085d323794f54705e31a4311353d6122d832"
+    },
+    {
+      "id": "sfx_defense_archertower_fire_v3",
+      "file": "sfx_defense_archertower_fire_v3.mp3",
+      "sha256": "3bb2682e9fc6ed9fe6cd9bc6865b126ef6978561839c42d464956cc168e3e22e"
+    },
+    {
+      "id": "sfx_defense_archertower_impact_v2",
+      "file": "sfx_defense_archertower_impact_v2.mp3",
+      "sha256": "9b555183f6c60890e797d534ad45f08dbcfa0efbcf2b6b9bc30a16b15c0e912c"
+    },
+    {
+      "id": "sfx_defense_archertower_impact_v3",
+      "file": "sfx_defense_archertower_impact_v3.mp3",
+      "sha256": "e39e662b6685b216bc2857d45c70d837c1edb41a2a06c3f5c3a69ba3448bee47"
+    },
+    {
+      "id": "sfx_defense_mortar_launch_v2",
+      "file": "sfx_defense_mortar_launch_v2.mp3",
+      "sha256": "8ae02be473ffec701c39cdb15ba0a264b5fd561520446117ff264cd6b8843a91"
+    },
+    {
+      "id": "sfx_defense_mortar_launch_v3",
+      "file": "sfx_defense_mortar_launch_v3.mp3",
+      "sha256": "b7ba5124892cdf94f5d38b2f3035455144fb3fc5d183eb76c0f33ca93cb58eed"
+    },
+    {
+      "id": "sfx_defense_mortar_impact_v2",
+      "file": "sfx_defense_mortar_impact_v2.mp3",
+      "sha256": "392fd69d441de639aed7617b5de219c9bb1376d7e226e8f8f7f0767c4aa1dd92"
+    },
+    {
+      "id": "sfx_defense_mortar_impact_v3",
+      "file": "sfx_defense_mortar_impact_v3.wav",
+      "sha256": "44565bef800d4711d1f14e7121450dfee723a5c62d9a1a9c03e1165ce8485833"
+    },
+    {
+      "id": "sfx_defense_electrictower_fire_v2",
+      "file": "sfx_defense_electrictower_fire_v2.mp3",
+      "sha256": "01052a10992b6874029f62cff183af027798b909e526a8e5d26b2c0cd3725c5a"
+    },
+    {
+      "id": "sfx_defense_electrictower_fire_v3",
+      "file": "sfx_defense_electrictower_fire_v3.mp3",
+      "sha256": "729395a0c9544e91071c4fa3e27e94b9596fba2183ca8661336e4fb28cf676fb"
+    },
+    {
+      "id": "sfx_defense_electrictower_impact_v2",
+      "file": "sfx_defense_electrictower_impact_v2.mp3",
+      "sha256": "fd1e9219e1d4c9c20e58f677d5bf2fa16794b7e912711756512762d68a87728d"
+    },
+    {
+      "id": "sfx_defense_electrictower_impact_v3",
+      "file": "sfx_defense_electrictower_impact_v3.mp3",
+      "sha256": "ec1fd7603678cae634d4d1d660a99a35869012edc3c4afe9e490c34a8818e490"
+    },
+    {
+      "id": "sfx_defense_magetower_fire_v2",
+      "file": "sfx_defense_magetower_fire_v2.mp3",
+      "sha256": "f0d27f6e5d3359ed2f1dadb797afd2c3769d1d61246819c0b2ea48843222809b"
+    },
+    {
+      "id": "sfx_defense_magetower_fire_v3",
+      "file": "sfx_defense_magetower_fire_v3.mp3",
+      "sha256": "bbd4efb6b0b85663da27d27642a1e75bbcd81cf8b6a2a74f1d57dc9bb7d8f299"
+    },
+    {
+      "id": "sfx_defense_magetower_impact_v2",
+      "file": "sfx_defense_magetower_impact_v2.mp3",
+      "sha256": "e93ddee9a3ceee758857e35a084864afe3564ae134f7c4c1af9deed01d3671e7"
+    },
+    {
+      "id": "sfx_defense_magetower_impact_v3",
+      "file": "sfx_defense_magetower_impact_v3.mp3",
+      "sha256": "f3a6cdec2679d71b3fd02b902a3b06b6346d8a3e7c0b0d1db363223b22395da5"
+    },
+    {
+      "id": "sfx_defense_lasertower_fire_v2",
+      "file": "sfx_defense_lasertower_fire_v2.mp3",
+      "sha256": "272622913507ce50d0066d97a01d96cf691b9529f46aa5ea4985163469a98f73"
+    },
+    {
+      "id": "sfx_defense_lasertower_fire_v3",
+      "file": "sfx_defense_lasertower_fire_v3.mp3",
+      "sha256": "ab98230fc41446e5e34e6c7db01b1842dcd6de21430dae448343137bc24ede75"
+    },
+    {
+      "id": "sfx_defense_lasertower_impact_v2",
+      "file": "sfx_defense_lasertower_impact_v2.mp3",
+      "sha256": "1386466d36570aca766b8438fff51e6d666a5a09eb59d9263fe42db81e65425b"
+    },
+    {
+      "id": "sfx_defense_lasertower_impact_v3",
+      "file": "sfx_defense_lasertower_impact_v3.mp3",
+      "sha256": "9b0673feed40af1f2ec89ea9e960169dfc911a8b029fceec734d21e84354ccef"
+    },
+    {
+      "id": "sfx_hero_vex_primary_v2",
+      "file": "sfx_hero_vex_primary_v2.mp3",
+      "sha256": "83a051f06704679f99b547ffc4ee4ce5a48417c61272d9a0fd5faf52b90d1517"
+    },
+    {
+      "id": "sfx_hero_vex_primary_v3",
+      "file": "sfx_hero_vex_primary_v3.mp3",
+      "sha256": "3609c123b13223dee526b79f01b8301806dabda2de60b59072078556e60c3f60"
+    },
+    {
+      "id": "sfx_hero_theodor_primary_v2",
+      "file": "sfx_hero_theodor_primary_v2.mp3",
+      "sha256": "271af1e0706579047332030de77b15d1a4438915106de9cc7a39958edc04f097"
+    },
+    {
+      "id": "sfx_hero_theodor_primary_v3",
+      "file": "sfx_hero_theodor_primary_v3.mp3",
+      "sha256": "22a161a35486751b121c366e172fa42e12fba452ebb2b6be6bb8218282c7e58c"
+    },
+    {
+      "id": "sfx_ui_tap_v2",
+      "file": "sfx_ui_tap_v2.mp3",
+      "sha256": "0e1f81964d2d4bd588ad75487946afbde5666bdbbba4cb4dedf08c80e5e2c879"
+    },
+    {
+      "id": "sfx_ui_tap_v3",
+      "file": "sfx_ui_tap_v3.mp3",
+      "sha256": "73006394390b42fc3c03e8e00284049ef11260df124ef81e24c2f7153477aa60"
+    },
+    {
+      "id": "sfx_ui_confirm_v2",
+      "file": "sfx_ui_confirm_v2.mp3",
+      "sha256": "55ab03876d6a8de90dd208b6efc85f5b578ead34262a7071d760bfe13a1f2ff9"
+    },
+    {
+      "id": "sfx_ui_confirm_v3",
+      "file": "sfx_ui_confirm_v3.mp3",
+      "sha256": "7f3356b607acb4d5cb0cfa21456add5caca94dc7f2b41f7ce81a775ad1a743e9"
+    },
+    {
+      "id": "sfx_ui_error_v2",
+      "file": "sfx_ui_error_v2.mp3",
+      "sha256": "6903b5e43de944ed2350ee89b1508b5c8458c5eb1144519699c1365767b8740c"
+    },
+    {
+      "id": "sfx_ui_error_v3",
+      "file": "sfx_ui_error_v3.mp3",
+      "sha256": "0ea9849cdbc463b36c3b1f8bbe2db49473ca5bfb9be21114f4be8c0952ecb6e2"
+    }
+  ]
+}

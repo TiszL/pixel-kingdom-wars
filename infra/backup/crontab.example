@@ -1,0 +1,38 @@
+# Target cron entries after K-021 off-host provisioning — install for root
+# (backup.sh writes to
+# /var/backups/shardkeep, the BACKUP_DIR default in infra/.env.prod):
+# The audited devnet host currently differs: deploy-user 03:15 UTC daily backup,
+# Sunday 04:45 UTC local restore, no rclone. Do not mistake this example for an
+# inventory of installed production state.
+#
+#   sudo crontab -e     # paste the lines below, fix the repo path
+#
+# Why root and not a deploy user: BACKUP_DIR sits under /var/backups, and the
+# docker socket access the dump needs is root-equivalent anyway — a "less
+# privileged" cron user would be a fiction that just adds a failure mode.
+#
+# HOURLY, because restore cost is proportional to RPO in MONEY units: every
+# withdrawal that settled on chain inside a lost window would pay AGAIN after a
+# restore (backup.sh header has the full reasoning). Local retention is
+# BACKUP_KEEP_LOCAL_HOURS (48 by default); remote retention belongs to a bucket
+# lifecycle rule, not to this box.
+#
+# Redirect to a log file, not MAILTO: there is no mail daemon on the box, and a
+# silent cron is exactly the failure this file exists to prevent. Check it:
+#   tail /var/log/shardkeep-backup.log      # last line should say "done"
+#   ls -lt /var/backups/shardkeep | head    # dumps at most an hour old
+# Also alert externally on a non-zero cron exit or stale remote object. A log
+# file on the failed host is not disaster-recovery monitoring.
+
+0 * * * * /home/deploy/shardkeep/infra/backup/backup.sh >> /var/log/shardkeep-backup.log 2>&1
+
+# Weekly restore DRILL (Monday 04:20, off the hourly dump's minute) — an
+# untested backup is a hope, not a backup. Restores the newest dump into a
+# unique throwaway database and proves the ledger reconciles
+# (verify-restore.sh). Production's BACKUP_VERIFY_SOURCE=remote makes this
+# download the off-host object rather than merely retest the same-disk copy.
+# WEEKLY, matching the operations runbook — an earlier
+# draft of this file said monthly; weekly won because a broken dump must be
+# discovered inside the 48 h local retention window, not a month later.
+# Its own log file, so a drill failure is not buried in hourly backup noise.
+20 4 * * 1 /home/deploy/shardkeep/infra/backup/verify-restore.sh >> /var/log/shardkeep-verify.log 2>&1

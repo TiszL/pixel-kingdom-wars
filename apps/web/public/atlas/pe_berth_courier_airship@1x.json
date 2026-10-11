@@ -1,0 +1,250 @@
+{
+	"textures": [
+		{
+			"image": "pe_berth_courier_airship@1x.png",
+			"format": "RGBA8888",
+			"size": {
+				"w": 472,
+				"h": 354
+			},
+			"scale": 1,
+			"frames": [
+				{
+					"filename": "pe_berth_courier_airship_ambient_f1",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 112,
+						"h": 112
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 112,
+						"h": 112
+					},
+					"frame": {
+						"x": 3,
+						"y": 3,
+						"w": 112,
+						"h": 112
+					}
+				},
+				{
+					"filename": "pe_berth_courier_airship_ambient_f2",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 112,
+						"h": 112
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 112,
+						"h": 112
+					},
+					"frame": {
+						"x": 121,
+						"y": 3,
+						"w": 112,
+						"h": 112
+					}
+				},
+				{
+					"filename": "pe_berth_courier_airship_ambient_f3",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 112,
+						"h": 112
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 112,
+						"h": 112
+					},
+					"frame": {
+						"x": 3,
+						"y": 121,
+						"w": 112,
+						"h": 112
+					}
+				},
+				{
+					"filename": "pe_berth_courier_airship_ambient_f4",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 112,
+						"h": 112
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 112,
+						"h": 112
+					},
+					"frame": {
+						"x": 121,
+						"y": 121,
+						"w": 112,
+						"h": 112
+					}
+				},
+				{
+					"filename": "pe_berth_courier_airship_ambient_f5",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 112,
+						"h": 112
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 112,
+						"h": 112
+					},
+					"frame": {
+						"x": 239,
+						"y": 3,
+						"w": 112,
+						"h": 112
+					}
+				},
+				{
+					"filename": "pe_berth_courier_airship_ambient_f6",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 112,
+						"h": 112
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 112,
+						"h": 112
+					},
+					"frame": {
+						"x": 239,
+						"y": 121,
+						"w": 112,
+						"h": 112
+					}
+				},
+				{
+					"filename": "pe_berth_courier_airship_ambient_f7",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 112,
+						"h": 112
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 112,
+						"h": 112
+					},
+					"frame": {
+						"x": 3,
+						"y": 239,
+						"w": 112,
+						"h": 112
+					}
+				},
+				{
+					"filename": "pe_berth_courier_airship_ambient_f8",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 112,
+						"h": 112
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 112,
+						"h": 112
+					},
+					"frame": {
+						"x": 121,
+						"y": 239,
+						"w": 112,
+						"h": 112
+					}
+				},
+				{
+					"filename": "pe_berth_courier_airship_damaged_f1",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 112,
+						"h": 112
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 112,
+						"h": 112
+					},
+					"frame": {
+						"x": 239,
+						"y": 239,
+						"w": 112,
+						"h": 112
+					}
+				},
+				{
+					"filename": "pe_berth_courier_airship_destroyed_f1",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 112,
+						"h": 112
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 112,
+						"h": 112
+					},
+					"frame": {
+						"x": 357,
+						"y": 3,
+						"w": 112,
+						"h": 112
+					}
+				},
+				{
+					"filename": "pe_berth_courier_airship_intact_f1",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 112,
+						"h": 112
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 112,
+						"h": 112
+					},
+					"frame": {
+						"x": 357,
+						"y": 121,
+						"w": 112,
+						"h": 112
+					}
+				}
+			]
+		}
+	],
+	"meta": {
+		"app": "shardkeep/scripts/rasterize",
+		"version": "1"
+	}
+}

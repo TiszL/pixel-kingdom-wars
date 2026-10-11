@@ -1,0 +1,42 @@
+{
+  "purpose": "Pinned Core executable for disposable local behavior fixtures; no production activation authority",
+  "releaseTag": "release/core@0.15.2",
+  "sourceCommit": "e72d63e4118a0a95ac9b40221e81b19d49e1e102",
+  "metadataUrl": "https://api.github.com/repos/metaplex-foundation/mpl-core/releases/382147791",
+  "downloadUrl": "https://github.com/metaplex-foundation/mpl-core/releases/download/release/core%400.15.2/mpl_core_program.so",
+  "assetId": 542981306,
+  "sha256": "69be69672220f4b5b0813e53cc4e2f3042dcac991f088b174bc7907dab4b2dee",
+  "bytes": 809696,
+  "releaseImmutable": false,
+  "upstreamBuild": {
+    "solana": "3.1.14",
+    "platformTools": "1.52",
+    "workflowUrl": "https://github.com/metaplex-foundation/mpl-core/blob/e72d63e4118a0a95ac9b40221e81b19d49e1e102/.github/workflows/build-programs.yml"
+  },
+  "observedDevnetComparison": {
+    "contextSlot": 504576403,
+    "deploymentSlot": 492585604,
+    "programOwner": "BPFLoaderUpgradeab1e11111111111111111111111",
+    "programExecutable": true,
+    "dataOwner": "BPFLoaderUpgradeab1e11111111111111111111111",
+    "dataExecutable": false,
+    "programPointerHex": "7f1c8a3c8e16bf6ef90b59e3dab7ba51d87b6d91330ac64f0c724146b62364a9",
+    "dataHeaderHex": "0300000084425c1d0000000001dd11cd89ee4ac9275dec7b19e55930486a75e812cac270818d450896daa85e0c",
+    "programDataLength": 855933,
+    "programDataSha256": "72726e4b8fc837e9ee05d8a942903c5f10890d33cb4480344844211b30b03dcb",
+    "official0152ExactMatchWithZeroPadding": true,
+    "scope": "Single public-RPC finalized observation; read-only, no transaction submitted",
+    "genesis": "EtWTRABZaYq6iMfeYKouRu166VU2xqa1wcaWoxPkrZBG",
+    "rpc": "https://api.devnet.solana.com",
+    "program": "CoREENxT6tW1HoK8ypY1SxRMZTcVPm7R94rH4PZNhX7d",
+    "programData": "9ZC25KLUrfgSoFVgjE1rrydZBbZns58UXi8A8ZhTdGfr",
+    "releaseAssetId": 542981306,
+    "elfSha256": "69be69672220f4b5b0813e53cc4e2f3042dcac991f088b174bc7907dab4b2dee",
+    "elfBytes": 809696
+  },
+  "limits": [
+    "Official release association and digest; not an independently reproduced upstream build.",
+    "The one finalized public-RPC observation is not an independent consensus proof or a promise that future deployed bytes remain unchanged.",
+    "Project Anchor0.32.1 and Agave2.3.13 remain pinned; local execution must establish compatibility."
+  ]
+}

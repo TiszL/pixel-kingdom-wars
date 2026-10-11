@@ -1,0 +1,34 @@
+.sk-awning-workshop { display:grid; gap:18px; min-width:0; color:var(--sk-text,#f5e9d2); overflow-wrap:anywhere; }
+.sk-awning-workshop h3,.sk-awning-workshop h4,.sk-awning-workshop p { margin:0; }
+.sk-awning-workshop h3 { font-size:28px; line-height:1.15; }
+.sk-awning-workshop h4 { font-size:21px; line-height:1.2; }
+.sk-awning-workshop p { line-height:1.45; }
+.sk-awning-heading { display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px; }
+.sk-awning-heading>div { min-width:0; }
+.sk-awning-workshop .sk-awning-eyebrow { margin-bottom:6px; font-size:12px; letter-spacing:.08em; color:var(--sk-goldHi,#dbbb70); }
+.sk-awning-intro,.sk-awning-workshop details,.sk-awning-free { color:var(--sk-textDim,#c4bcae); }
+.sk-awning-badge { padding:7px 9px; border:1px solid var(--sk-borderLt,#615441); border-radius:4px; font-size:11px; letter-spacing:.08em; }
+.sk-awning-workshop .sk-equipment-card { display:grid; gap:14px; padding:18px; min-width:0; border:1px solid var(--sk-borderLt,#615441); border-radius:8px; background:var(--sk-bg2,#1d1a20); }
+.sk-awning-message { padding:14px; border-left:3px solid var(--sk-goldHi,#dbbb70); background:var(--sk-surface,#302933); }
+.sk-awning-facts dl { margin:0; display:grid; gap:10px; }
+.sk-awning-facts dl>div { display:grid; grid-template-columns:minmax(120px,1fr) minmax(0,1.3fr); gap:6px 16px; padding-bottom:10px; border-bottom:1px solid var(--sk-border,#403a32); }
+.sk-awning-facts dt { color:var(--sk-textDim,#c4bcae); }.sk-awning-facts dd { margin:0; }
+.sk-awning-queue { display:grid; gap:8px; padding:14px 18px; background:var(--sk-surface,#302933); border-radius:6px; }
+.sk-awning-queue>div { display:flex; justify-content:space-between; flex-wrap:wrap; gap:8px; }.sk-awning-queue span { color:var(--sk-goldHi,#dbbb70); font-size:12px; }
+.sk-awning-catalogue { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:14px; }
+.sk-awning-choice { min-width:0; overflow:hidden; border:2px solid transparent; border-radius:10px; background:var(--sk-bg2,#1d1a20); }
+.sk-awning-choice[data-selected=true] { border-color:var(--sk-goldHi,#dbbb70); box-shadow:0 0 0 1px #dbbb7022; }
+.sk-awning-choice .sk-bound-preview { border:0; border-radius:6px 6px 0 0; box-shadow:none; }.sk-awning-choice .sk-bound-preview-stage { min-height:240px; }
+.sk-awning-choice-footer { display:grid; gap:9px; padding:12px 14px; }.sk-awning-choice-footer>span { color:var(--sk-goldHi,#dbbb70); font-size:12px; }
+.sk-awning-materials { margin:0; display:grid; gap:10px; }.sk-awning-materials>div { padding:10px 0; border-bottom:1px solid var(--sk-border,#403a32); }
+.sk-awning-materials dt { font-weight:700; }.sk-awning-materials dd { margin:6px 0 0; display:flex; flex-wrap:wrap; gap:4px 16px; color:var(--sk-textDim,#c4bcae); }
+.sk-awning-materials dd>strong { margin-left:auto; color:var(--sk-goldHi,#dbbb70); }.sk-awning-materials [data-missing=true] dd>strong { color:var(--sk-text,#f5e9d2); }
+.sk-awning-application>div { display:grid; gap:8px; }.sk-awning-application strong { color:var(--sk-goldHi,#dbbb70); font-size:13px; }
+.sk-awning-free { font-size:13px; }.sk-awning-confirm { display:grid; gap:14px; padding:16px; border:2px solid var(--sk-goldHi,#dbbb70); border-radius:6px; }
+.sk-awning-actions { display:flex; flex-wrap:wrap; gap:10px; }.sk-awning-actions>button { flex:1 1 180px; }
+.sk-awning-workshop button { min-height:44px; min-width:44px; padding:10px 14px; border:1px solid var(--sk-borderLt,#615441); border-radius:5px; background:var(--sk-surface,#302933); color:var(--sk-text,#f5e9d2); font:inherit; line-height:1.3; font-weight:700; white-space:normal; cursor:pointer; }
+.sk-awning-workshop button.sk-awning-primary { border-color:var(--sk-goldHi,#dbbb70); background:#51422b; }.sk-awning-workshop button:disabled { opacity:.5; cursor:default; }
+.sk-awning-workshop button:focus-visible,.sk-awning-workshop summary:focus-visible,.sk-awning-workshop [tabindex="-1"]:focus-visible { outline:2px solid var(--sk-goldHi,#dbbb70); outline-offset:3px; }
+.sk-awning-workshop summary { min-height:44px; box-sizing:border-box; padding:12px 0; cursor:pointer; }.sk-awning-workshop details p { margin:8px 0; }
+.sk-awning-history-row { display:grid; gap:8px; padding:14px 0; border-top:1px solid var(--sk-border,#403a32); }.sk-awning-history-row>div { display:grid; gap:4px; }
+@media(max-width:520px) { .sk-awning-catalogue { grid-template-columns:1fr; }.sk-awning-workshop .sk-equipment-card { padding:14px; }.sk-awning-facts dl>div { grid-template-columns:1fr; }.sk-awning-materials dd>strong { flex-basis:100%; margin:0; }.sk-awning-confirm { padding:12px; } }

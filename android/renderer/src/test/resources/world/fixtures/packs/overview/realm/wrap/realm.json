@@ -1,0 +1,53 @@
+{
+  "schema": 1,
+  "id": "wrap",
+  "name": "Wrap",
+  "status": "preview",
+  "packVersion": "fixture-1",
+  "synthetic": true,
+  "grid": {
+    "x0": -3,
+    "y0": 250,
+    "cols": 10,
+    "rows": 6,
+    "deeds": 31
+  },
+  "frame": {
+    "id": "wrap",
+    "lon": 178.75,
+    "lat": -37.25,
+    "half": 3.5,
+    "projection": "gnomonic",
+    "size": 256
+  },
+  "first": [
+    "realm.json",
+    "chart8.png",
+    "deeds.png"
+  ],
+  "files": {
+    "chart8.png": {
+      "sha256": "77492fa01688cb920e9906f8e0aab6e3920a5e24eeeba453e7c427da7a4091b4",
+      "bytes": 11636,
+      "stage": "first"
+    },
+    "deeds.png": {
+      "sha256": "84cdb9d4e65b0f885efb9a8a1537ea024181514eaa20f06706a1132490af453e",
+      "bytes": 254,
+      "stage": "first"
+    }
+  },
+  "chart8": {
+    "file": "chart8.png",
+    "pxPerDeed": 8,
+    "w": 80,
+    "h": 48
+  },
+  "deeds": {
+    "file": "deeds.png",
+    "w": 10,
+    "h": 6,
+    "thisRealm": 255,
+    "otherRealm": 96
+  }
+}

@@ -1,0 +1,44 @@
+/* TimerPlate.css — world timer plate + TimerChip. Only --pk-* values.
+ * Not permanent HUD: world markers are transient (hidden while selected, max 3), so they do not count toward the
+ * 12% budget (DS §6 "world markers; not HUD"). Size per class is the DS size on every class (world-scaled art, not
+ * chrome); the plate never reflows the canvas because it is absolutely positioned in the overlay. */
+
+.pk-timer-plate {
+  position: absolute;
+  z-index: var(--z-anchor); /* world markers: bridge --z-anchor 900 (pk-tokens.generated.md §5) */
+  width: var(--pk-size-timer-plate-w);
+  height: var(--pk-size-timer-plate-h);
+  /* centred on the sprite, its bottom 6 px above the sprite top (BuildingStateMarkers.kt PLATE_GAP) */
+  transform: translate(-50%, calc(-100% - var(--pk-s6)));
+  pointer-events: none;
+}
+.pk-timer-plate__plate { width: 100%; height: 100%; }
+.pk-timer-plate__plate > .pk-plate__face { padding: 0 var(--pk-outline-button) 0 0; justify-content: center; }
+.pk-timer-plate__row { display: flex; align-items: center; gap: var(--pk-s2); min-width: 0; }
+.pk-timer-plate__col { flex: 1 1 auto; display: flex; flex-direction: column; gap: var(--pk-s2); min-width: 0; }
+.pk-timer-plate__time { color: var(--pk-text); text-align: right; }
+
+/* 8 px meter: ink S rim 1, track, green done part (stripes while under construction) */
+.pk-meter8 {
+  position: relative;
+  display: block;
+  height: var(--pk-s8);
+  box-sizing: border-box;
+  padding: var(--pk-text-outline-1);
+  background: var(--pk-ink);
+  clip-path: var(--pk-clip-s);
+}
+.pk-meter8::before { content: ''; position: absolute; inset: var(--pk-text-outline-1); background: var(--pk-k-track); }
+.pk-meter8__fill { position: relative; display: block; height: 100%; background: var(--pk-green); }
+.pk-meter8__fill--stripe {
+  background: repeating-linear-gradient(135deg, var(--pk-green-hi) 0 var(--pk-s4), var(--pk-green) var(--pk-s4) var(--pk-s8));
+}
+
+/* TimerChip: VEIL 30 tall, icon 24 + caption, optional 3 px meter */
+.pk-timer-chip { display: inline-flex; pointer-events: none; }
+.pk-timer-chip__plate { min-height: var(--pk-size-status-chip-h); }
+.pk-timer-chip__plate > .pk-plate__face { padding: 0 var(--pk-s6) 0 var(--pk-text-outline-1); justify-content: center; }
+.pk-timer-chip__row { display: flex; align-items: center; gap: var(--pk-s4); }
+.pk-timer-chip__text { color: var(--pk-text); }
+.pk-timer-chip__bar { display: block; height: var(--pk-hi-band); background: var(--pk-veil-hi); }
+.pk-timer-chip__bar > i { display: block; height: 100%; background: var(--pk-green); }

@@ -1,0 +1,29 @@
+{
+  "hash": "7b1bab05",
+  "outcome": {
+    "stars": 0,
+    "destructionPct": 2,
+    "keepDestroyed": false,
+    "vaultDestroyed": false,
+    "mineDestroyed": false,
+    "victory": false,
+    "buildings": [
+      {
+        "id": "keep",
+        "type": "keep",
+        "hp": 1200,
+        "maxHp": 1200,
+        "destroyed": false
+      },
+      {
+        "id": "electric",
+        "type": "electrictower",
+        "hp": 558,
+        "maxHp": 594,
+        "destroyed": false
+      }
+    ],
+    "ticks": 62,
+    "eventCount": 62
+  }
+}

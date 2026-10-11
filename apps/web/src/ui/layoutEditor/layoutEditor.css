@@ -1,0 +1,288 @@
+.layout-editor {
+  position: fixed;
+  inset: 0;
+  z-index: 1650;
+  pointer-events: none;
+  color: #efe8d6;
+  display: grid;
+  grid-template: auto minmax(0, 1fr) auto / minmax(0, 1fr);
+}
+.layout-editor * { box-sizing: border-box; }
+.layout-editor button { min-height: 44px; font-family: inherit; }
+
+/* The notice overlays the tools row; it must never create a second column. */
+.layout-editor-head,
+.layout-editor-side,
+.layout-editor-footer,
+.layout-editor-notice { grid-column: 1; }
+
+.layout-editor-head {
+  pointer-events: auto;
+  position: relative;
+  grid-row: 1;
+  min-height: 62px;
+  padding: max(6px, env(safe-area-inset-top)) max(8px, env(safe-area-inset-right)) 6px max(8px, env(safe-area-inset-left));
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(16,14,20,.96);
+  border-bottom: 2px solid #6b6354;
+  box-shadow: 0 4px 0 rgba(0,0,0,.35);
+  z-index: 3;
+}
+.layout-editor-title {
+  display: grid;
+  grid-template-columns: auto auto;
+  align-items: center;
+  column-gap: 7px;
+  min-width: 210px;
+  color: #f4d77b;
+  font-size: 23px;
+  letter-spacing: 2px;
+}
+.layout-editor-title small { grid-column: 2; color: #9c937f; font-size: 12px; letter-spacing: 1px; }
+.layout-editor-slots { flex: 1; display: flex; justify-content: center; gap: 6px; }
+.layout-editor-slots button,
+.layout-editor-icon,
+.layout-editor-import,
+.layout-editor-tray button,
+.layout-editor-nudge button,
+.layout-editor-side-toggle {
+  color: #c4bba4;
+  background: #1a171e;
+  border: 2px solid #3d3833;
+  cursor: pointer;
+}
+.layout-editor-slots button { min-width: 130px; padding-inline: 12px; font-size: 18px; letter-spacing: 1px; }
+.layout-editor-slots button.is-active,
+.layout-editor-tray button.is-selected {
+  color: #1a171e;
+  background: #e3ae3c;
+  border-color: #f4d77b;
+  box-shadow: inset 0 -4px 0 #9c6f1e;
+}
+.layout-editor-icon { flex: none; width: 46px; display: grid; place-items: center; }
+.layout-editor-icon:disabled { opacity: .45; }
+
+.layout-editor-side {
+  pointer-events: auto;
+  position: relative;
+  grid-row: 2;
+  align-self: stretch;
+  justify-self: start;
+  width: min(286px, calc(100vw - 16px));
+  min-height: 0;
+  margin: 8px 0 8px max(8px, env(safe-area-inset-left));
+  padding: 10px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background: rgba(20,18,26,.94);
+  border: 2px solid #6b6354;
+  box-shadow: 4px 4px 0 rgba(0,0,0,.4);
+  z-index: 2;
+}
+.layout-editor-side-toggle { display: none; }
+.layout-editor-side-content {
+  min-height: 0;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  -webkit-overflow-scrolling: touch;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.layout-editor-side section { display: flex; flex-direction: column; gap: 7px; padding-bottom: 9px; border-bottom: 1px solid #3d3833; }
+.layout-editor-side strong { color: #f4d77b; font-size: 20px; letter-spacing: 1px; }
+.layout-editor-side span,
+.layout-editor-side p { margin: 0; color: #c4bba4; font-size: 15px; line-height: 1.15; }
+.layout-editor-side .layout-editor-keep-required { color: #f4d77b; }
+.layout-editor-lock { text-align: center; padding: 12px 4px; }
+.layout-editor-nudge { display: grid; grid-template-columns: repeat(4, 1fr); gap: 4px; }
+.layout-editor-nudge button { min-width: 44px; font-size: 24px; }
+.layout-editor-tools button,
+.layout-editor-selected > button,
+.layout-editor-lock button { width: 100%; min-height: 44px !important; padding: 6px 8px !important; font-size: 17px !important; }
+.layout-editor-import { width: 100%; padding: 7px; color: #bbd0d6; border-color: #54677a; font-size: 15px; }
+.layout-editor-help { color: #c4bba4; font-size: 15px; }
+.layout-editor-help summary { min-height: 44px; display: flex; align-items: center; color: #e3ae3c; cursor: pointer; }
+.layout-editor-help p { margin: 4px 0 8px; }
+
+.layout-editor-footer {
+  pointer-events: auto;
+  position: relative;
+  grid-row: 3;
+  min-height: 100px;
+  padding: 8px max(8px, env(safe-area-inset-right)) max(8px, env(safe-area-inset-bottom)) max(8px, env(safe-area-inset-left));
+  display: flex;
+  align-items: stretch;
+  gap: 10px;
+  background: rgba(16,14,20,.97);
+  border-top: 2px solid #6b6354;
+  z-index: 3;
+}
+.layout-editor-tray {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  -webkit-overflow-scrolling: touch;
+}
+.layout-editor-tray > strong {
+  position: sticky;
+  left: 0;
+  align-self: stretch;
+  min-width: 56px;
+  display: grid;
+  place-items: center;
+  color: #f4d77b;
+  background: #100e14;
+  z-index: 1;
+}
+.layout-editor-tray > span { color: #6b6354; white-space: nowrap; }
+.layout-editor-tray button {
+  flex: none;
+  width: 82px;
+  min-height: 78px;
+  padding: 4px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1px;
+}
+.layout-editor-tray button > img { object-fit: contain; }
+.layout-editor-tray button > span {
+  max-width: 74px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 13px;
+  line-height: 1;
+}
+.layout-editor-tray small { color: inherit; opacity: .8; font-size: 11px; line-height: 1; }
+.layout-editor-actions { flex: none; display: flex; align-items: stretch; gap: 6px; }
+.layout-editor-actions button { min-height: 48px !important; padding: 8px 12px !important; font-size: 18px !important; }
+
+.layout-editor-notice {
+  pointer-events: auto;
+  position: relative;
+  grid-row: 2;
+  align-self: start;
+  justify-self: center;
+  max-width: min(620px, calc(100vw - 24px));
+  margin-top: 8px;
+  padding: 8px 14px;
+  color: #efe8d6;
+  background: rgba(20,18,26,.97);
+  border: 2px solid #e3ae3c;
+  text-align: center;
+  font-size: 17px;
+  letter-spacing: 1px;
+  z-index: 4;
+}
+.layout-editor-state {
+  pointer-events: auto;
+  position: fixed;
+  inset: 0;
+  z-index: 1700;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  color: #e3ae3c;
+  background: rgba(16,14,20,.9);
+}
+
+/* Portrait phones: the tools become a collapsed strip above the visual tray.
+   Expanding is deliberate and reversible, so the plot is not permanently
+   buried under an always-open sidebar. */
+.layout-editor[data-layout-mode='compact'] .layout-editor-head { flex-wrap: wrap; }
+.layout-editor[data-layout-mode='compact'] .layout-editor-title {
+  flex: 1;
+  min-width: 0;
+  font-size: 21px;
+}
+.layout-editor[data-layout-mode='compact'] .layout-editor-title small { display: none; }
+.layout-editor[data-layout-mode='compact'] .layout-editor-slots { order: 3; flex-basis: 100%; }
+.layout-editor[data-layout-mode='compact'] .layout-editor-slots button { flex: 1; min-width: 0; }
+.layout-editor[data-layout-mode='compact'] .layout-editor-side {
+  align-self: end;
+  justify-self: stretch;
+  width: auto;
+  max-height: min(44vh, calc(100% - 6px));
+  margin: 6px max(6px, env(safe-area-inset-right)) 6px max(6px, env(safe-area-inset-left));
+  padding: 0;
+  gap: 0;
+}
+.layout-editor[data-layout-mode='compact'] .layout-editor-side-toggle,
+.layout-editor[data-layout-mode='short-landscape'] .layout-editor-side-toggle {
+  flex: none;
+  min-height: 44px;
+  width: 100%;
+  padding: 5px 8px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 7px;
+  color: #f4d77b;
+}
+.layout-editor-side-toggle-text {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.layout-editor[data-layout-mode='compact'] .layout-editor-side-content,
+.layout-editor[data-layout-mode='short-landscape'] .layout-editor-side-content { padding: 10px; }
+.layout-editor[data-layout-mode='compact'][data-tools-open='false'] .layout-editor-side-content,
+.layout-editor[data-layout-mode='short-landscape'][data-tools-open='false'] .layout-editor-side-content { display: none; }
+.layout-editor[data-layout-mode='compact'] .layout-editor-footer {
+  min-height: 116px;
+  flex-direction: column;
+  gap: 5px;
+}
+.layout-editor[data-layout-mode='compact'] .layout-editor-actions { justify-content: flex-end; }
+.layout-editor[data-layout-mode='compact'] .layout-editor-actions button {
+  flex: 1;
+  padding-inline: 5px !important;
+  font-size: 16px !important;
+}
+
+/* A 915×412-class phone gets the same collapsed behavior as portrait, but the
+   tools consume a narrow left rail instead of scarce vertical space. */
+.layout-editor[data-layout-mode='short-landscape'] .layout-editor-head { min-height: 48px; padding-block: 3px; }
+.layout-editor[data-layout-mode='short-landscape'] .layout-editor-title { min-width: 160px; font-size: 21px; }
+.layout-editor[data-layout-mode='short-landscape'] .layout-editor-title small { display: none; }
+.layout-editor[data-layout-mode='short-landscape'] .layout-editor-side {
+  width: 230px;
+  margin: 6px 0 6px max(6px, env(safe-area-inset-left));
+  padding: 0;
+  gap: 0;
+}
+.layout-editor[data-layout-mode='short-landscape'][data-tools-open='false'] .layout-editor-side { width: 44px; }
+.layout-editor[data-layout-mode='short-landscape'][data-tools-open='false'] .layout-editor-side-toggle {
+  height: 100%;
+  padding: 10px 0 0;
+  justify-content: center;
+  align-items: flex-start;
+}
+.layout-editor[data-layout-mode='short-landscape'][data-tools-open='false'] .layout-editor-side-toggle-text,
+.layout-editor[data-layout-mode='short-landscape'][data-tools-open='false'] .layout-editor-side-toggle-state { display: none; }
+.layout-editor[data-layout-mode='short-landscape'] .layout-editor-footer { min-height: 66px; padding-block: 4px; }
+.layout-editor[data-layout-mode='short-landscape'] .layout-editor-tray > strong { min-width: 48px; }
+.layout-editor[data-layout-mode='short-landscape'] .layout-editor-tray button { width: 70px; min-height: 62px; }
+.layout-editor[data-layout-mode='short-landscape'] .layout-editor-tray button > img { width: 32px; height: 32px; }
+.layout-editor[data-layout-mode='short-landscape'] .layout-editor-actions button {
+  padding-inline: 7px !important;
+  font-size: 16px !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .layout-editor * { animation: none !important; transition: none !important; }
+}

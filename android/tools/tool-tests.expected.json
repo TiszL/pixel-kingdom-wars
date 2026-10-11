@@ -1,0 +1,4 @@
+{
+  "why": "Known red in the Node tool tests, read by tools/tool-tests.mjs. Every entry still runs on every gate run and is printed by name. The gate fails on any failure not listed here, on a listed test that passes or no longer runs, and on any skip. Delete an entry in the same commit that makes its test pass.",
+  "failures": []
+}

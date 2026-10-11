@@ -1,0 +1,99 @@
+{
+  "hash": "86c7d971",
+  "outcome": {
+    "stars": 3,
+    "destructionPct": 100,
+    "keepDestroyed": true,
+    "vaultDestroyed": false,
+    "mineDestroyed": false,
+    "victory": true,
+    "buildings": [
+      {
+        "id": "keep",
+        "type": "keep",
+        "hp": 0,
+        "maxHp": 1200,
+        "destroyed": true
+      },
+      {
+        "id": "cannon",
+        "type": "cannon",
+        "hp": 0,
+        "maxHp": 656,
+        "destroyed": true
+      },
+      {
+        "id": "archer",
+        "type": "archertower",
+        "hp": 0,
+        "maxHp": 563,
+        "destroyed": true
+      },
+      {
+        "id": "wall_0",
+        "type": "wall",
+        "hp": 600,
+        "maxHp": 600,
+        "destroyed": false
+      },
+      {
+        "id": "wall_1",
+        "type": "wall",
+        "hp": 600,
+        "maxHp": 600,
+        "destroyed": false
+      },
+      {
+        "id": "wall_2",
+        "type": "wall",
+        "hp": 600,
+        "maxHp": 600,
+        "destroyed": false
+      },
+      {
+        "id": "wall_3",
+        "type": "wall",
+        "hp": 600,
+        "maxHp": 600,
+        "destroyed": false
+      },
+      {
+        "id": "wall_4",
+        "type": "wall",
+        "hp": 600,
+        "maxHp": 600,
+        "destroyed": false
+      },
+      {
+        "id": "wall_5",
+        "type": "wall",
+        "hp": 600,
+        "maxHp": 600,
+        "destroyed": false
+      },
+      {
+        "id": "wall_6",
+        "type": "wall",
+        "hp": 600,
+        "maxHp": 600,
+        "destroyed": false
+      },
+      {
+        "id": "wall_7",
+        "type": "wall",
+        "hp": 600,
+        "maxHp": 600,
+        "destroyed": false
+      },
+      {
+        "id": "wall_8",
+        "type": "wall",
+        "hp": 600,
+        "maxHp": 600,
+        "destroyed": false
+      }
+    ],
+    "ticks": 397,
+    "eventCount": 254
+  }
+}

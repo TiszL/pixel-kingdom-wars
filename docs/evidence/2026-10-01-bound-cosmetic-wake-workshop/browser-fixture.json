@@ -1,0 +1,55 @@
+{
+  "pid": 74795,
+  "api": "http://127.0.0.1:63214",
+  "web": "http://127.0.0.1:63215",
+  "wallet": "29GaiYMchNJjiR1pCYre4n8mrgiaLLor74Bm8UKdmuX6",
+  "baseId": "00554d03-2ce6-4fac-a139-51fdac8487b7",
+  "marketId": "918bdfbc-d59c-4550-9b33-b9e608b357a5",
+  "workshopId": "f6f31e13-eb3d-4984-8694-6d1c7cc4b6fb",
+  "database": "cosmetic_wake_browser_1b8bfd3c6a684e9683e50bb9084ed18e_test",
+  "roles": [
+    "cn_api_1b8bfd3c6a684e9683e50bb9084ed18e",
+    "cn_worker_1b8bfd3c6a684e9683e50bb9084ed18e"
+  ],
+  "serverNow": "2026-09-29T21:09:04.556Z",
+  "sourceJobId": "f0c832bf-84d1-4f60-b7bf-1c330c592dc9",
+  "blueprint": {
+    "state": "eligible",
+    "proof": {
+      "blueprintId": "architect_blueprint_artisan_finishes_v1",
+      "jobId": "f0c832bf-84d1-4f60-b7bf-1c330c592dc9",
+      "baseId": "00554d03-2ce6-4fac-a139-51fdac8487b7",
+      "actorWallet": "29GaiYMchNJjiR1pCYre4n8mrgiaLLor74Bm8UKdmuX6",
+      "completedAt": "2026-09-29T20:59:02.455Z"
+    }
+  },
+  "source": "Normal buildApp/createPhaseEServices, restricted request LOGIN and normal Vite; local JWT bootstrap/facility/raw/refined fixtures. Private real source craft/completion/On were prepared with synthetic exact readiness solely for historical recovery UI. Normal public craft/On remain held; browser Off is actual normal HTTP.",
+  "recipe": {
+    "recipeId": "craft_aurora_wake_v1",
+    "recipeVersion": 1,
+    "outputId": "aurora_wake",
+    "quantity": "1",
+    "durationSec": 600,
+    "inputs": [
+      {
+        "itemId": "prismstone_lens",
+        "quantity": "4"
+      },
+      {
+        "itemId": "frostglass",
+        "quantity": "4"
+      },
+      {
+        "itemId": "thornsilk",
+        "quantity": "4"
+      }
+    ],
+    "requiredFacility": {
+      "type": "lodge",
+      "level": 1
+    },
+    "blueprintId": "architect_blueprint_artisan_finishes_v1"
+  },
+  "cleanup": "SIGINT this harness closes its own servers, DB and unique LOGINs only",
+  "authentication": "Ephemeral local session cookie bootstrap; secret values deliberately omitted."
+}

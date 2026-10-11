@@ -1,0 +1,90 @@
+<!doctype html>
+<!-- Served by Caddyfile.maintenance during the deploy drain window (M23 a18).
+     Self-contained on purpose: the web root is mid-publish while this page is
+     up, so it may reference NOTHING from the published web root. Every asset
+     below is an inline data: URI (guarded by scripts/src/maintenance-page.test.ts):
+     VT323 = apps/web/src/assets/fonts/VT323-latin-v18.woff2, wordmark = the
+     "PIXEL KINGDOM WARS" band of art/source/brand-wave2/brand_logo_main.png
+     (rows 405-588, trimmed; owner 2026-09-25: text logo only, moved up, so the
+     wallpaper's keep stays visible), backdrop = art/loading-v1/loading_bg_landscape.png
+     (800 px, 96 colours) with art/loading-v1/loading_bg_portrait.png (360x800) for
+     portrait screens, both nearest-neighbour and palette-quantized. -->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta http-equiv="refresh" content="30">
+<title>Pixel Kingdom Wars — Maintenance</title>
+<style>
+  @font-face {
+    font-family: 'VT323'; font-style: normal; font-weight: 400; font-display: block;
+    src: url(data:font/woff2;base64,@@FONT@@) format('woff2');
+  }
+  html, body {
+    margin: 0; min-height: 100%; background: #100e14; color: #efe8d6;
+    font-family: 'VT323', monospace; -webkit-font-smoothing: none;
+  }
+  .bg {
+    position: fixed; inset: 0; width: 100%; height: 100%;
+    object-fit: cover; object-position: 50% 40%; image-rendering: pixelated;
+  }
+  .wrap {
+    position: relative; min-height: 100vh; min-height: 100dvh; box-sizing: border-box;
+    display: flex; flex-direction: column; align-items: center; justify-content: space-between;
+    gap: 18px; padding: max(18px, 4vh) 16px max(18px, 6vh); text-align: center;
+  }
+  .logo {
+    display: block; width: min(78vw, 480px); height: auto; image-rendering: pixelated;
+    filter: drop-shadow(0 2px 0 #100e14) drop-shadow(0 0 5px rgba(16, 14, 20, .9))
+      drop-shadow(0 0 22px rgba(16, 14, 20, .6));
+  }
+  .plate {
+    box-sizing: border-box; width: min(100%, 460px); padding: 18px 20px 16px;
+    display: flex; flex-direction: column; align-items: center; gap: 12px;
+    background: linear-gradient(rgba(26, 23, 30, .84), rgba(16, 14, 20, .9));
+    border: 1px solid rgba(107, 99, 84, .7);
+    box-shadow: 0 0 32px 18px rgba(16, 14, 20, .55);
+  }
+  h1 {
+    margin: 0; font-weight: 400; font-size: clamp(28px, 8vw, 40px); line-height: 1;
+    letter-spacing: 2px; color: #f4d77b; text-shadow: 0 2px 0 #100e14;
+  }
+  p { margin: 0; font-size: 21px; line-height: 1.2; color: #efe8d6; }
+  .bar {
+    width: min(100%, 260px); height: 10px; box-sizing: content-box;
+    border: 2px solid #6b6354; background: #100e14; overflow: hidden;
+  }
+  .bar span {
+    display: block; height: 100%; width: 35%; background: #e3ae3c;
+    box-shadow: inset 0 2px 0 #f4d77b;
+    animation: sweep 1.8s linear infinite;
+  }
+  @keyframes sweep { from { transform: translateX(-100%); } to { transform: translateX(286%); } }
+  small { font-size: 17px; letter-spacing: 2px; color: #c4bba4; }
+  @media (prefers-reduced-motion: reduce) {
+    .bar span { width: 100%; animation: none; opacity: .6; }
+  }
+  @media (max-height: 560px) {
+    .wrap { gap: 8px; padding-block: 10px; }
+    .logo { width: min(70vw, 18vh * 5.1, 420px); }
+    .plate { padding-block: 10px; gap: 8px; }
+  }
+</style>
+</head>
+<body>
+  <picture>
+    <source media="(orientation: portrait)" srcset="data:image/png;base64,@@BG_PORTRAIT@@">
+    <img class="bg" alt="" src="data:image/png;base64,@@BG@@">
+  </picture>
+  <main class="wrap">
+    <img class="logo" alt="Pixel Kingdom Wars" width="836" height="164" src="data:image/png;base64,@@WORDMARK@@">
+    <div class="plate">
+      <h1>RAISING THE DRAWBRIDGE</h1>
+      <p>The kingdom is being upgraded. Your base, army and balances are safe —
+         we will be back in a few minutes.</p>
+      <div class="bar"><span></span></div>
+      <small>THIS PAGE RETRIES AUTOMATICALLY</small>
+    </div>
+  </main>
+</body>
+</html>

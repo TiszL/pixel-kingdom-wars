@@ -1,0 +1,8 @@
+// @vitest-environment happy-dom
+import {it,expect,vi,afterEach} from 'vitest';
+import {useApp} from '../../state/store';
+import {authCookies} from '../../auth/authCookieCoordinator';
+import {openTournamentBattle} from './navigation';
+import {tournamentFixture} from './testFixture';
+afterEach(()=>{vi.restoreAllMocks();useApp.getState().setAuth(null);});
+it('hands only the actual admitted private original to the existing battle flow',async()=>{const f=await tournamentFixture();vi.spyOn(authCookies,'assertSession').mockReturnValue('session');const baseId=f.entry.id;useApp.setState({authed:true,wallet:f.actor,selectedBaseId:baseId,screen:'bases'});const r={version:1 as const,eventId:f.event.id,requestId:f.entry.id,baseId,status:'admitted' as const,ordinal:1,raid:{id:f.original.operation.id,defenderWallet:f.original.creation.payer,attackerBaseId:baseId,defenderBaseId:f.original.operation.id,snapshot:{buildings:[]},visualContext:null,armySnapshot:{levels:{}},ordersDeadlineAt:'2035-01-07T01:00:30.000Z',seed:1,simVersion:17,raidProtocolVersion:2}};openTournamentBattle(r,f.actor,baseId);expect(useApp.getState().raidTarget).toEqual({kind:'pvp',raidId:r.raid.id});expect(useApp.getState().screen).toBe('battle');useApp.setState({screen:'bases'});expect(()=>openTournamentBattle(r,f.original.creation.payer,baseId)).toThrow();expect(()=>openTournamentBattle({...r,status:'requested',raid:null,ordinal:null},f.actor,baseId)).toThrow();expect(()=>openTournamentBattle({...r,raid:{...r.raid,attackerBaseId:f.original.operation.id}},f.actor,baseId)).toThrow();expect(useApp.getState().screen).toBe('bases');});

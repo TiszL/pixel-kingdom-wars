@@ -1,0 +1,1615 @@
+{
+	"textures": [
+		{
+			"image": "v2fallback@1x.png",
+			"format": "RGBA8888",
+			"size": {
+				"w": 1194,
+				"h": 1144
+			},
+			"scale": 1,
+			"frames": [
+				{
+					"filename": "v2_fallback_direwyvern_t1",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 304,
+						"h": 208
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 304,
+						"h": 208
+					},
+					"frame": {
+						"x": 3,
+						"y": 3,
+						"w": 304,
+						"h": 208
+					}
+				},
+				{
+					"filename": "v2_fallback_direwyvern_t2",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 304,
+						"h": 208
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 304,
+						"h": 208
+					},
+					"frame": {
+						"x": 3,
+						"y": 217,
+						"w": 304,
+						"h": 208
+					}
+				},
+				{
+					"filename": "v2_fallback_direwyvern_t3",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 304,
+						"h": 208
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 304,
+						"h": 208
+					},
+					"frame": {
+						"x": 313,
+						"y": 3,
+						"w": 304,
+						"h": 208
+					}
+				},
+				{
+					"filename": "v2_fallback_direwyvern_t4",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 304,
+						"h": 208
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 304,
+						"h": 208
+					},
+					"frame": {
+						"x": 313,
+						"y": 217,
+						"w": 304,
+						"h": 208
+					}
+				},
+				{
+					"filename": "v2_fallback_dragon_t1",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 160,
+						"h": 120
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 160,
+						"h": 120
+					},
+					"frame": {
+						"x": 3,
+						"y": 431,
+						"w": 160,
+						"h": 120
+					}
+				},
+				{
+					"filename": "v2_fallback_dragon_t2",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 160,
+						"h": 120
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 160,
+						"h": 120
+					},
+					"frame": {
+						"x": 169,
+						"y": 431,
+						"w": 160,
+						"h": 120
+					}
+				},
+				{
+					"filename": "v2_fallback_dragon_t3",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 160,
+						"h": 120
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 160,
+						"h": 120
+					},
+					"frame": {
+						"x": 335,
+						"y": 431,
+						"w": 160,
+						"h": 120
+					}
+				},
+				{
+					"filename": "v2_fallback_dragon_t4",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 160,
+						"h": 120
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 160,
+						"h": 120
+					},
+					"frame": {
+						"x": 3,
+						"y": 557,
+						"w": 160,
+						"h": 120
+					}
+				},
+				{
+					"filename": "v2_fallback_gloamfang_t1",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 160,
+						"h": 148
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 160,
+						"h": 148
+					},
+					"frame": {
+						"x": 623,
+						"y": 3,
+						"w": 160,
+						"h": 148
+					}
+				},
+				{
+					"filename": "v2_fallback_gloamfang_t2",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 160,
+						"h": 148
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 160,
+						"h": 148
+					},
+					"frame": {
+						"x": 623,
+						"y": 157,
+						"w": 160,
+						"h": 148
+					}
+				},
+				{
+					"filename": "v2_fallback_gloamfang_t3",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 160,
+						"h": 148
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 160,
+						"h": 148
+					},
+					"frame": {
+						"x": 623,
+						"y": 311,
+						"w": 160,
+						"h": 148
+					}
+				},
+				{
+					"filename": "v2_fallback_gloamfang_t4",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 160,
+						"h": 148
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 160,
+						"h": 148
+					},
+					"frame": {
+						"x": 501,
+						"y": 465,
+						"w": 160,
+						"h": 148
+					}
+				},
+				{
+					"filename": "v2_fallback_hexbarrow_t1",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 128,
+						"h": 112
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 128,
+						"h": 112
+					},
+					"frame": {
+						"x": 169,
+						"y": 557,
+						"w": 128,
+						"h": 112
+					}
+				},
+				{
+					"filename": "v2_fallback_hexbarrow_t2",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 128,
+						"h": 112
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 128,
+						"h": 112
+					},
+					"frame": {
+						"x": 303,
+						"y": 557,
+						"w": 128,
+						"h": 112
+					}
+				},
+				{
+					"filename": "v2_fallback_hexbarrow_t3",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 128,
+						"h": 112
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 128,
+						"h": 112
+					},
+					"frame": {
+						"x": 3,
+						"y": 683,
+						"w": 128,
+						"h": 112
+					}
+				},
+				{
+					"filename": "v2_fallback_hexbarrow_t4",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 128,
+						"h": 112
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 128,
+						"h": 112
+					},
+					"frame": {
+						"x": 137,
+						"y": 683,
+						"w": 128,
+						"h": 112
+					}
+				},
+				{
+					"filename": "v2_fallback_bld_cannon_t1_idle_d0_f1",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 112,
+						"h": 120
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 112,
+						"h": 120
+					},
+					"frame": {
+						"x": 271,
+						"y": 675,
+						"w": 112,
+						"h": 120
+					}
+				},
+				{
+					"filename": "v2_fallback_bld_cannon_t1_idle_d0_f2",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 112,
+						"h": 120
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 112,
+						"h": 120
+					},
+					"frame": {
+						"x": 389,
+						"y": 675,
+						"w": 112,
+						"h": 120
+					}
+				},
+				{
+					"filename": "v2_fallback_bld_cannon_t2_idle_d0_f1",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 112,
+						"h": 120
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 112,
+						"h": 120
+					},
+					"frame": {
+						"x": 667,
+						"y": 465,
+						"w": 112,
+						"h": 120
+					}
+				},
+				{
+					"filename": "v2_fallback_bld_cannon_t2_idle_d0_f2",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 112,
+						"h": 120
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 112,
+						"h": 120
+					},
+					"frame": {
+						"x": 667,
+						"y": 591,
+						"w": 112,
+						"h": 120
+					}
+				},
+				{
+					"filename": "v2_fallback_bld_cannon_t3_idle_d0_f1",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 112,
+						"h": 120
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 112,
+						"h": 120
+					},
+					"frame": {
+						"x": 507,
+						"y": 619,
+						"w": 112,
+						"h": 120
+					}
+				},
+				{
+					"filename": "v2_fallback_bld_cannon_t3_idle_d0_f2",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 112,
+						"h": 120
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 112,
+						"h": 120
+					},
+					"frame": {
+						"x": 789,
+						"y": 3,
+						"w": 112,
+						"h": 120
+					}
+				},
+				{
+					"filename": "v2_fallback_bld_cannon_t4_idle_d0_f1",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 112,
+						"h": 120
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 112,
+						"h": 120
+					},
+					"frame": {
+						"x": 789,
+						"y": 129,
+						"w": 112,
+						"h": 120
+					}
+				},
+				{
+					"filename": "v2_fallback_bld_cannon_t4_idle_d0_f2",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 112,
+						"h": 120
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 112,
+						"h": 120
+					},
+					"frame": {
+						"x": 789,
+						"y": 255,
+						"w": 112,
+						"h": 120
+					}
+				},
+				{
+					"filename": "v2_fallback_bld_mortar_t1_idle_d0_f1",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 112,
+						"h": 120
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 112,
+						"h": 120
+					},
+					"frame": {
+						"x": 789,
+						"y": 381,
+						"w": 112,
+						"h": 120
+					}
+				},
+				{
+					"filename": "v2_fallback_bld_mortar_t1_idle_d0_f2",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 112,
+						"h": 120
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 112,
+						"h": 120
+					},
+					"frame": {
+						"x": 785,
+						"y": 507,
+						"w": 112,
+						"h": 120
+					}
+				},
+				{
+					"filename": "v2_fallback_bld_mortar_t2_idle_d0_f1",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 112,
+						"h": 120
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 112,
+						"h": 120
+					},
+					"frame": {
+						"x": 785,
+						"y": 633,
+						"w": 112,
+						"h": 120
+					}
+				},
+				{
+					"filename": "v2_fallback_bld_mortar_t2_idle_d0_f2",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 112,
+						"h": 120
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 112,
+						"h": 120
+					},
+					"frame": {
+						"x": 3,
+						"y": 801,
+						"w": 112,
+						"h": 120
+					}
+				},
+				{
+					"filename": "v2_fallback_bld_mortar_t3_idle_d0_f1",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 112,
+						"h": 120
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 112,
+						"h": 120
+					},
+					"frame": {
+						"x": 121,
+						"y": 801,
+						"w": 112,
+						"h": 120
+					}
+				},
+				{
+					"filename": "v2_fallback_bld_mortar_t3_idle_d0_f2",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 112,
+						"h": 120
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 112,
+						"h": 120
+					},
+					"frame": {
+						"x": 239,
+						"y": 801,
+						"w": 112,
+						"h": 120
+					}
+				},
+				{
+					"filename": "v2_fallback_bld_mortar_t4_idle_d0_f1",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 112,
+						"h": 120
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 112,
+						"h": 120
+					},
+					"frame": {
+						"x": 357,
+						"y": 801,
+						"w": 112,
+						"h": 120
+					}
+				},
+				{
+					"filename": "v2_fallback_bld_mortar_t4_idle_d0_f2",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 112,
+						"h": 120
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 112,
+						"h": 120
+					},
+					"frame": {
+						"x": 475,
+						"y": 801,
+						"w": 112,
+						"h": 120
+					}
+				},
+				{
+					"filename": "v2_fallback_giant_t1",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 112,
+						"h": 112
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 112,
+						"h": 112
+					},
+					"frame": {
+						"x": 625,
+						"y": 717,
+						"w": 112,
+						"h": 112
+					}
+				},
+				{
+					"filename": "v2_fallback_giant_t2",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 112,
+						"h": 112
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 112,
+						"h": 112
+					},
+					"frame": {
+						"x": 743,
+						"y": 759,
+						"w": 112,
+						"h": 112
+					}
+				},
+				{
+					"filename": "v2_fallback_giant_t3",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 112,
+						"h": 112
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 112,
+						"h": 112
+					},
+					"frame": {
+						"x": 907,
+						"y": 3,
+						"w": 112,
+						"h": 112
+					}
+				},
+				{
+					"filename": "v2_fallback_giant_t4",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 112,
+						"h": 112
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 112,
+						"h": 112
+					},
+					"frame": {
+						"x": 907,
+						"y": 121,
+						"w": 112,
+						"h": 112
+					}
+				},
+				{
+					"filename": "v2_fallback_troll_t1",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 112,
+						"h": 112
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 112,
+						"h": 112
+					},
+					"frame": {
+						"x": 907,
+						"y": 239,
+						"w": 112,
+						"h": 112
+					}
+				},
+				{
+					"filename": "v2_fallback_troll_t2",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 112,
+						"h": 112
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 112,
+						"h": 112
+					},
+					"frame": {
+						"x": 907,
+						"y": 357,
+						"w": 112,
+						"h": 112
+					}
+				},
+				{
+					"filename": "v2_fallback_troll_t3",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 112,
+						"h": 112
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 112,
+						"h": 112
+					},
+					"frame": {
+						"x": 907,
+						"y": 475,
+						"w": 112,
+						"h": 112
+					}
+				},
+				{
+					"filename": "v2_fallback_troll_t4",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 112,
+						"h": 112
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 112,
+						"h": 112
+					},
+					"frame": {
+						"x": 903,
+						"y": 593,
+						"w": 112,
+						"h": 112
+					}
+				},
+				{
+					"filename": "v2_fallback_turrider_t1",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 112,
+						"h": 112
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 112,
+						"h": 112
+					},
+					"frame": {
+						"x": 903,
+						"y": 711,
+						"w": 112,
+						"h": 112
+					}
+				},
+				{
+					"filename": "v2_fallback_turrider_t2",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 112,
+						"h": 112
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 112,
+						"h": 112
+					},
+					"frame": {
+						"x": 3,
+						"y": 927,
+						"w": 112,
+						"h": 112
+					}
+				},
+				{
+					"filename": "v2_fallback_turrider_t3",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 112,
+						"h": 112
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 112,
+						"h": 112
+					},
+					"frame": {
+						"x": 121,
+						"y": 927,
+						"w": 112,
+						"h": 112
+					}
+				},
+				{
+					"filename": "v2_fallback_turrider_t4",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 112,
+						"h": 112
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 112,
+						"h": 112
+					},
+					"frame": {
+						"x": 239,
+						"y": 927,
+						"w": 112,
+						"h": 112
+					}
+				},
+				{
+					"filename": "v2_fallback_bilgewraith_t1",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 96,
+						"h": 96
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 96,
+						"h": 96
+					},
+					"frame": {
+						"x": 357,
+						"y": 927,
+						"w": 96,
+						"h": 96
+					}
+				},
+				{
+					"filename": "v2_fallback_bilgewraith_t2",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 96,
+						"h": 96
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 96,
+						"h": 96
+					},
+					"frame": {
+						"x": 459,
+						"y": 927,
+						"w": 96,
+						"h": 96
+					}
+				},
+				{
+					"filename": "v2_fallback_bilgewraith_t3",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 96,
+						"h": 96
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 96,
+						"h": 96
+					},
+					"frame": {
+						"x": 561,
+						"y": 927,
+						"w": 96,
+						"h": 96
+					}
+				},
+				{
+					"filename": "v2_fallback_bilgewraith_t4",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 96,
+						"h": 96
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 96,
+						"h": 96
+					},
+					"frame": {
+						"x": 861,
+						"y": 829,
+						"w": 96,
+						"h": 96
+					}
+				},
+				{
+					"filename": "v2_fallback_bowman_t1",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 96,
+						"h": 96
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 96,
+						"h": 96
+					},
+					"frame": {
+						"x": 663,
+						"y": 931,
+						"w": 96,
+						"h": 96
+					}
+				},
+				{
+					"filename": "v2_fallback_bowman_t2",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 96,
+						"h": 96
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 96,
+						"h": 96
+					},
+					"frame": {
+						"x": 765,
+						"y": 931,
+						"w": 96,
+						"h": 96
+					}
+				},
+				{
+					"filename": "v2_fallback_bowman_t3",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 96,
+						"h": 96
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 96,
+						"h": 96
+					},
+					"frame": {
+						"x": 867,
+						"y": 931,
+						"w": 96,
+						"h": 96
+					}
+				},
+				{
+					"filename": "v2_fallback_bowman_t4",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 96,
+						"h": 96
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 96,
+						"h": 96
+					},
+					"frame": {
+						"x": 963,
+						"y": 829,
+						"w": 96,
+						"h": 96
+					}
+				},
+				{
+					"filename": "v2_fallback_highlander_t1",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 96,
+						"h": 96
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 96,
+						"h": 96
+					},
+					"frame": {
+						"x": 1025,
+						"y": 3,
+						"w": 96,
+						"h": 96
+					}
+				},
+				{
+					"filename": "v2_fallback_highlander_t2",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 96,
+						"h": 96
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 96,
+						"h": 96
+					},
+					"frame": {
+						"x": 1025,
+						"y": 105,
+						"w": 96,
+						"h": 96
+					}
+				},
+				{
+					"filename": "v2_fallback_highlander_t3",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 96,
+						"h": 96
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 96,
+						"h": 96
+					},
+					"frame": {
+						"x": 1025,
+						"y": 207,
+						"w": 96,
+						"h": 96
+					}
+				},
+				{
+					"filename": "v2_fallback_highlander_t4",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 96,
+						"h": 96
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 96,
+						"h": 96
+					},
+					"frame": {
+						"x": 1025,
+						"y": 309,
+						"w": 96,
+						"h": 96
+					}
+				},
+				{
+					"filename": "v2_fallback_kegrunner_t1",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 96,
+						"h": 96
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 96,
+						"h": 96
+					},
+					"frame": {
+						"x": 1025,
+						"y": 411,
+						"w": 96,
+						"h": 96
+					}
+				},
+				{
+					"filename": "v2_fallback_kegrunner_t2",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 96,
+						"h": 96
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 96,
+						"h": 96
+					},
+					"frame": {
+						"x": 1025,
+						"y": 513,
+						"w": 96,
+						"h": 96
+					}
+				},
+				{
+					"filename": "v2_fallback_kegrunner_t3",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 96,
+						"h": 96
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 96,
+						"h": 96
+					},
+					"frame": {
+						"x": 1021,
+						"y": 615,
+						"w": 96,
+						"h": 96
+					}
+				},
+				{
+					"filename": "v2_fallback_kegrunner_t4",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 96,
+						"h": 96
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 96,
+						"h": 96
+					},
+					"frame": {
+						"x": 1021,
+						"y": 717,
+						"w": 96,
+						"h": 96
+					}
+				},
+				{
+					"filename": "v2_fallback_mage_t1",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 96,
+						"h": 96
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 96,
+						"h": 96
+					},
+					"frame": {
+						"x": 969,
+						"y": 931,
+						"w": 96,
+						"h": 96
+					}
+				},
+				{
+					"filename": "v2_fallback_mage_t2",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 96,
+						"h": 96
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 96,
+						"h": 96
+					},
+					"frame": {
+						"x": 3,
+						"y": 1045,
+						"w": 96,
+						"h": 96
+					}
+				},
+				{
+					"filename": "v2_fallback_mage_t3",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 96,
+						"h": 96
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 96,
+						"h": 96
+					},
+					"frame": {
+						"x": 105,
+						"y": 1045,
+						"w": 96,
+						"h": 96
+					}
+				},
+				{
+					"filename": "v2_fallback_mage_t4",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 96,
+						"h": 96
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 96,
+						"h": 96
+					},
+					"frame": {
+						"x": 207,
+						"y": 1045,
+						"w": 96,
+						"h": 96
+					}
+				},
+				{
+					"filename": "v2_fallback_plunderer_t1",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 96,
+						"h": 96
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 96,
+						"h": 96
+					},
+					"frame": {
+						"x": 309,
+						"y": 1045,
+						"w": 96,
+						"h": 96
+					}
+				},
+				{
+					"filename": "v2_fallback_plunderer_t2",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 96,
+						"h": 96
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 96,
+						"h": 96
+					},
+					"frame": {
+						"x": 411,
+						"y": 1033,
+						"w": 96,
+						"h": 96
+					}
+				},
+				{
+					"filename": "v2_fallback_plunderer_t3",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 96,
+						"h": 96
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 96,
+						"h": 96
+					},
+					"frame": {
+						"x": 513,
+						"y": 1033,
+						"w": 96,
+						"h": 96
+					}
+				},
+				{
+					"filename": "v2_fallback_plunderer_t4",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 96,
+						"h": 96
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 96,
+						"h": 96
+					},
+					"frame": {
+						"x": 615,
+						"y": 1033,
+						"w": 96,
+						"h": 96
+					}
+				},
+				{
+					"filename": "v2_fallback_tunneler_t1",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 96,
+						"h": 96
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 96,
+						"h": 96
+					},
+					"frame": {
+						"x": 717,
+						"y": 1033,
+						"w": 96,
+						"h": 96
+					}
+				},
+				{
+					"filename": "v2_fallback_tunneler_t2",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 96,
+						"h": 96
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 96,
+						"h": 96
+					},
+					"frame": {
+						"x": 819,
+						"y": 1033,
+						"w": 96,
+						"h": 96
+					}
+				},
+				{
+					"filename": "v2_fallback_tunneler_t3",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 96,
+						"h": 96
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 96,
+						"h": 96
+					},
+					"frame": {
+						"x": 921,
+						"y": 1033,
+						"w": 96,
+						"h": 96
+					}
+				},
+				{
+					"filename": "v2_fallback_tunneler_t4",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 96,
+						"h": 96
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 96,
+						"h": 96
+					},
+					"frame": {
+						"x": 1023,
+						"y": 1033,
+						"w": 96,
+						"h": 96
+					}
+				},
+				{
+					"filename": "v2_fallback_barrowling_t1",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 64,
+						"h": 64
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 64,
+						"h": 64
+					},
+					"frame": {
+						"x": 663,
+						"y": 835,
+						"w": 64,
+						"h": 64
+					}
+				},
+				{
+					"filename": "v2_fallback_barrowling_t2",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 64,
+						"h": 64
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 64,
+						"h": 64
+					},
+					"frame": {
+						"x": 593,
+						"y": 835,
+						"w": 64,
+						"h": 64
+					}
+				},
+				{
+					"filename": "v2_fallback_barrowling_t3",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 64,
+						"h": 64
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 64,
+						"h": 64
+					},
+					"frame": {
+						"x": 1127,
+						"y": 3,
+						"w": 64,
+						"h": 64
+					}
+				},
+				{
+					"filename": "v2_fallback_barrowling_t4",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 64,
+						"h": 64
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 64,
+						"h": 64
+					},
+					"frame": {
+						"x": 1127,
+						"y": 73,
+						"w": 64,
+						"h": 64
+					}
+				}
+			]
+		}
+	],
+	"meta": {
+		"app": "shardkeep/scripts/rasterize",
+		"version": "1"
+	}
+}

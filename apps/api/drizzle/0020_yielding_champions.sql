@@ -1,0 +1,1 @@
+ALTER TYPE "public"."shield_source" ADD VALUE 'warzone';

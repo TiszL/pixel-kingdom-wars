@@ -1,0 +1,100 @@
+{
+  "description": "Public synthetic clan transport vectors validated by shared D193 schemas. No tournament/source/finality proof; actual API pairing is separate.",
+  "award": {
+    "version": 1,
+    "resourceId": "crystal_fragment",
+    "economicLineage": "shardkeep",
+    "domain": {
+      "genesisHash": "GySVDr1omr3GTodgWFH7qD1ZKav9C5NMPFjdpwb33LvU",
+      "economyProgram": "GySVDr1omr3GTodgWFH7qD1ZKav9C5NMPFjdpwb33LvU"
+    },
+    "eventId": "00000000-0000-4000-8000-000000000002",
+    "wallet": "GySVDr1omr3GTodgWFH7qD1ZKav9C5NMPFjdpwb33LvU",
+    "site": "divine-clan-001",
+    "weekStart": "2026-09-24T00:00:00.000Z",
+    "earnedAt": "2026-09-28T00:00:00.000Z",
+    "sourceHash": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc",
+    "termId": "00000000-0000-4000-8000-000000000020",
+    "termHash": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+    "winnerCount": 2,
+    "poolDisposition": "original_winning_spots",
+    "gross": "13",
+    "net": "10",
+    "tax": "3",
+    "carryBefore": "8000",
+    "carryAfter": "4000",
+    "settledAt": "2026-09-28T00:00:00.000Z",
+    "clan": {
+      "clanId": "00000000-0000-4000-8000-000000000030",
+      "entryId": "00000000-0000-4000-8000-000000000031",
+      "rosterSize": 3,
+      "rosterHash": "dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd",
+      "siteGross": "40",
+      "tournamentDomain": {
+        "genesisHash": "GySVDr1omr3GTodgWFH7qD1ZKav9C5NMPFjdpwb33LvU",
+        "economyProgram": "GySVDr1omr3GTodgWFH7qD1ZKav9C5NMPFjdpwb33LvU",
+        "craftProgram": "GySVDr1omr3GTodgWFH7qD1ZKav9C5NMPFjdpwb33LvU",
+        "treasury": "GySVDr1omr3GTodgWFH7qD1ZKav9C5NMPFjdpwb33LvU"
+      }
+    }
+  },
+  "consent": {
+    "version": 1,
+    "wallet": "GySVDr1omr3GTodgWFH7qD1ZKav9C5NMPFjdpwb33LvU",
+    "eventId": "00000000-0000-4000-8000-000000000002",
+    "request": {
+      "idempotencyKey": "00000000-0000-4000-8000-000000000033",
+      "baseId": "00000000-0000-4000-8000-000000000004"
+    },
+    "award": {
+      "version": 1,
+      "resourceId": "crystal_fragment",
+      "economicLineage": "shardkeep",
+      "domain": {
+        "genesisHash": "GySVDr1omr3GTodgWFH7qD1ZKav9C5NMPFjdpwb33LvU",
+        "economyProgram": "GySVDr1omr3GTodgWFH7qD1ZKav9C5NMPFjdpwb33LvU"
+      },
+      "eventId": "00000000-0000-4000-8000-000000000002",
+      "wallet": "GySVDr1omr3GTodgWFH7qD1ZKav9C5NMPFjdpwb33LvU",
+      "site": "divine-clan-001",
+      "weekStart": "2026-09-24T00:00:00.000Z",
+      "earnedAt": "2026-09-28T00:00:00.000Z",
+      "sourceHash": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc",
+      "termId": "00000000-0000-4000-8000-000000000020",
+      "termHash": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+      "winnerCount": 2,
+      "poolDisposition": "original_winning_spots",
+      "gross": "13",
+      "net": "10",
+      "tax": "3",
+      "carryBefore": "8000",
+      "carryAfter": "4000",
+      "settledAt": "2026-09-28T00:00:00.000Z",
+      "clan": {
+        "clanId": "00000000-0000-4000-8000-000000000030",
+        "entryId": "00000000-0000-4000-8000-000000000031",
+        "rosterSize": 3,
+        "rosterHash": "dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd",
+        "siteGross": "40",
+        "tournamentDomain": {
+          "genesisHash": "GySVDr1omr3GTodgWFH7qD1ZKav9C5NMPFjdpwb33LvU",
+          "economyProgram": "GySVDr1omr3GTodgWFH7qD1ZKav9C5NMPFjdpwb33LvU",
+          "craftProgram": "GySVDr1omr3GTodgWFH7qD1ZKav9C5NMPFjdpwb33LvU",
+          "treasury": "GySVDr1omr3GTodgWFH7qD1ZKav9C5NMPFjdpwb33LvU"
+        }
+      }
+    }
+  },
+  "delivery": {
+    "idempotencyKey": "00000000-0000-4000-8000-000000000033",
+    "baseId": "00000000-0000-4000-8000-000000000004",
+    "version": 1,
+    "resourceId": "crystal_fragment",
+    "eventId": "00000000-0000-4000-8000-000000000002",
+    "wallet": "GySVDr1omr3GTodgWFH7qD1ZKav9C5NMPFjdpwb33LvU",
+    "quantity": "10",
+    "stockBefore": "12",
+    "stockAfter": "22",
+    "deliveredAt": "2026-09-28T00:00:00.000Z"
+  }
+}

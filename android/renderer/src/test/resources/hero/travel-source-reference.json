@@ -1,0 +1,3090 @@
+{
+  "sourceCommit": "427381a2adf934bbcc902baefc207a655b185eb6",
+  "sourceHashes": {
+    "apps/web/src/game/fx/troop.ts": "33dc658ad94ae6b6a828c72d12947d5175d2d66c3731e171b87a3abac275b972",
+    "apps/web/src/game/scenes/BattleScene.ts": "caa08a270b3a16950ed5eac7c0de3f86a3b7f47e154d8fd30c096b25d168ae7d",
+    "apps/web/src/game/anim.ts": "3696c28e2114a3a037f3651861fa63c125481d7b41a7d259a5560bb1ff8f95f2",
+    "phaser/src/math/easing/sine/InOut.js": "a9d8f45ead80f3384d64ae9354a3e7eccb3208e13f3041784d01df5d56de392b"
+  },
+  "simVersion": 18,
+  "tickMs": 100,
+  "positionCadenceTicks": 5,
+  "cases": [
+    {
+      "name": "vex-queued",
+      "hero": "vex",
+      "fromTick": 0,
+      "events": [
+        {
+          "t": 0,
+          "e": "deploy",
+          "id": 1,
+          "troop": "giant",
+          "hero": "vex",
+          "x": 0,
+          "y": 0
+        },
+        {
+          "t": 3,
+          "e": "heroSkill",
+          "id": 1,
+          "hero": "vex",
+          "skill": "crimsonDash",
+          "phase": "impact",
+          "x": 200,
+          "y": 100,
+          "fromX": -900,
+          "fromY": -800,
+          "toX": 200,
+          "toY": 100
+        },
+        {
+          "t": 5,
+          "e": "pos",
+          "id": 1,
+          "x": 100,
+          "y": 40
+        },
+        {
+          "t": 6,
+          "e": "pos",
+          "id": 1,
+          "x": 250,
+          "y": 120
+        },
+        {
+          "t": 7,
+          "e": "pos",
+          "id": 1,
+          "x": 300,
+          "y": 160
+        }
+      ],
+      "ticks": [
+        0,
+        2.5,
+        3,
+        3.25,
+        4,
+        4.25,
+        5,
+        6,
+        7,
+        8,
+        8.5,
+        9,
+        14
+      ],
+      "samples": [
+        {
+          "tick": 0,
+          "x": 0,
+          "y": 0,
+          "depth": 0,
+          "alive": true
+        },
+        {
+          "tick": 2.5,
+          "x": 50,
+          "y": 20,
+          "depth": 20,
+          "alive": true
+        },
+        {
+          "tick": 3,
+          "x": 60,
+          "y": 24,
+          "depth": 24,
+          "alive": true
+        },
+        {
+          "tick": 3.25,
+          "x": 60.86181615834035,
+          "y": 24.467843057384766,
+          "depth": 24.46784305741312,
+          "alive": true
+        },
+        {
+          "tick": 4,
+          "x": 73.36881039375368,
+          "y": 31.257354213751995,
+          "depth": 31.257354213739745,
+          "alive": true
+        },
+        {
+          "tick": 4.25,
+          "x": 80.50252531694167,
+          "y": 35.12994231491119,
+          "depth": 35.12994231493212,
+          "alive": true
+        },
+        {
+          "tick": 5,
+          "x": 108.36881039375368,
+          "y": 50.257354213751995,
+          "depth": 50.257354213739745,
+          "alive": true
+        },
+        {
+          "tick": 6,
+          "x": 151.63118960624632,
+          "y": 73.742645786248,
+          "depth": 73.74264578626025,
+          "alive": true
+        },
+        {
+          "tick": 7,
+          "x": 186.63118960624632,
+          "y": 92.742645786248,
+          "depth": 92.74264578626025,
+          "alive": true
+        },
+        {
+          "tick": 8,
+          "x": 200,
+          "y": 100,
+          "depth": 100,
+          "alive": true
+        },
+        {
+          "tick": 8.5,
+          "x": 250,
+          "y": 130,
+          "depth": 130,
+          "alive": true
+        },
+        {
+          "tick": 9,
+          "x": 300,
+          "y": 160,
+          "depth": 160,
+          "alive": true
+        },
+        {
+          "tick": 14,
+          "x": 300,
+          "y": 160,
+          "depth": 160,
+          "alive": true
+        }
+      ]
+    },
+    {
+      "name": "vex-replace",
+      "hero": "vex",
+      "fromTick": 0,
+      "events": [
+        {
+          "t": 0,
+          "e": "deploy",
+          "id": 1,
+          "troop": "giant",
+          "hero": "vex",
+          "x": 0,
+          "y": 0
+        },
+        {
+          "t": 3,
+          "e": "heroSkill",
+          "id": 1,
+          "hero": "vex",
+          "skill": "crimsonDash",
+          "phase": "impact",
+          "x": 200,
+          "y": 100,
+          "fromX": -900,
+          "fromY": -800,
+          "toX": 200,
+          "toY": 100
+        },
+        {
+          "t": 4,
+          "e": "heroSkill",
+          "id": 1,
+          "hero": "vex",
+          "skill": "crimsonDash",
+          "phase": "impact",
+          "x": -100,
+          "y": 200,
+          "fromX": -900,
+          "fromY": -800,
+          "toX": -100,
+          "toY": 200
+        },
+        {
+          "t": 5,
+          "e": "pos",
+          "id": 1,
+          "x": 100,
+          "y": 40
+        },
+        {
+          "t": 6,
+          "e": "pos",
+          "id": 1,
+          "x": 250,
+          "y": 120
+        },
+        {
+          "t": 7,
+          "e": "pos",
+          "id": 1,
+          "x": 300,
+          "y": 160
+        }
+      ],
+      "ticks": [
+        0,
+        2.5,
+        3,
+        3.25,
+        4,
+        4.25,
+        5,
+        6,
+        7,
+        8,
+        8.5,
+        9,
+        14
+      ],
+      "samples": [
+        {
+          "tick": 0,
+          "x": 0,
+          "y": 0,
+          "depth": 0,
+          "alive": true
+        },
+        {
+          "tick": 2.5,
+          "x": 50,
+          "y": 20,
+          "depth": 20,
+          "alive": true
+        },
+        {
+          "tick": 3,
+          "x": 60,
+          "y": 24,
+          "depth": 24,
+          "alive": true
+        },
+        {
+          "tick": 3.25,
+          "x": 60.86181615834035,
+          "y": 24.467843057384766,
+          "depth": 24.46784305741312,
+          "alive": true
+        },
+        {
+          "tick": 4,
+          "x": 73.36881039375368,
+          "y": 31.257354213751995,
+          "depth": 31.257354213739745,
+          "alive": true
+        },
+        {
+          "tick": 4.25,
+          "x": 72.30158152125667,
+          "y": 32.29610520474979,
+          "depth": 32.29610520473216,
+          "alive": true
+        },
+        {
+          "tick": 5,
+          "x": 56.813562148434215,
+          "y": 47.37084304844262,
+          "depth": 47.37084304844029,
+          "alive": true
+        },
+        {
+          "tick": 6,
+          "x": 13.471359549995796,
+          "y": 89.55650449500462,
+          "depth": 89.55650449497625,
+          "alive": true
+        },
+        {
+          "tick": 7,
+          "x": -40.10254915624212,
+          "y": 141.70084971874738,
+          "depth": 141.7008497187635,
+          "alive": true
+        },
+        {
+          "tick": 8,
+          "x": -83.44475175468054,
+          "y": 183.88651116530937,
+          "depth": 183.88651116529945,
+          "alive": true
+        },
+        {
+          "tick": 8.5,
+          "x": -95.75736322678236,
+          "y": 195.87057353282407,
+          "depth": 195.8705735328258,
+          "alive": true
+        },
+        {
+          "tick": 9,
+          "x": -100,
+          "y": 200,
+          "depth": 200,
+          "alive": true
+        },
+        {
+          "tick": 14,
+          "x": 300,
+          "y": 160,
+          "depth": 160,
+          "alive": true
+        }
+      ]
+    },
+    {
+      "name": "vex-death",
+      "hero": "vex",
+      "fromTick": 0,
+      "events": [
+        {
+          "t": 0,
+          "e": "deploy",
+          "id": 1,
+          "troop": "giant",
+          "hero": "vex",
+          "x": 0,
+          "y": 0
+        },
+        {
+          "t": 3,
+          "e": "heroSkill",
+          "id": 1,
+          "hero": "vex",
+          "skill": "crimsonDash",
+          "phase": "impact",
+          "x": 200,
+          "y": 100,
+          "fromX": -900,
+          "fromY": -800,
+          "toX": 200,
+          "toY": 100
+        },
+        {
+          "t": 5,
+          "e": "pos",
+          "id": 1,
+          "x": 100,
+          "y": 40
+        },
+        {
+          "t": 5,
+          "e": "troopDeath",
+          "id": 1
+        },
+        {
+          "t": 6,
+          "e": "pos",
+          "id": 1,
+          "x": 250,
+          "y": 120
+        },
+        {
+          "t": 7,
+          "e": "pos",
+          "id": 1,
+          "x": 300,
+          "y": 160
+        }
+      ],
+      "ticks": [
+        0,
+        2.5,
+        3,
+        3.25,
+        4,
+        4.25,
+        5,
+        6,
+        7,
+        8,
+        8.5,
+        9,
+        14
+      ],
+      "samples": [
+        {
+          "tick": 0,
+          "x": 0,
+          "y": 0,
+          "depth": 0,
+          "alive": true
+        },
+        {
+          "tick": 2.5,
+          "x": 50,
+          "y": 20,
+          "depth": 20,
+          "alive": true
+        },
+        {
+          "tick": 3,
+          "x": 60,
+          "y": 24,
+          "depth": 24,
+          "alive": true
+        },
+        {
+          "tick": 3.25,
+          "x": 60.86181615834035,
+          "y": 24.467843057384766,
+          "depth": 24.46784305741312,
+          "alive": true
+        },
+        {
+          "tick": 4,
+          "x": 73.36881039375368,
+          "y": 31.257354213751995,
+          "depth": 31.257354213739745,
+          "alive": true
+        },
+        {
+          "tick": 4.25,
+          "x": 80.50252531694167,
+          "y": 35.12994231491119,
+          "depth": 35.12994231493212,
+          "alive": true
+        },
+        {
+          "tick": 5,
+          "x": 108.36881039375368,
+          "y": 50.257354213751995,
+          "depth": 50.257354213739745,
+          "alive": false
+        },
+        {
+          "tick": 6,
+          "x": 108.36881039375368,
+          "y": 50.257354213751995,
+          "depth": 50.257354213739745,
+          "alive": false
+        },
+        {
+          "tick": 7,
+          "x": 108.36881039375368,
+          "y": 50.257354213751995,
+          "depth": 50.257354213739745,
+          "alive": false
+        },
+        {
+          "tick": 8,
+          "x": 108.36881039375368,
+          "y": 50.257354213751995,
+          "depth": 50.257354213739745,
+          "alive": false
+        },
+        {
+          "tick": 8.5,
+          "x": 108.36881039375368,
+          "y": 50.257354213751995,
+          "depth": 50.257354213739745,
+          "alive": false
+        },
+        {
+          "tick": 9,
+          "x": 108.36881039375368,
+          "y": 50.257354213751995,
+          "depth": 50.257354213739745,
+          "alive": false
+        },
+        {
+          "tick": 14,
+          "x": 108.36881039375368,
+          "y": 50.257354213751995,
+          "depth": 50.257354213739745,
+          "alive": false
+        }
+      ]
+    },
+    {
+      "name": "vex-sameTickDeath",
+      "hero": "vex",
+      "fromTick": 0,
+      "events": [
+        {
+          "t": 0,
+          "e": "deploy",
+          "id": 1,
+          "troop": "giant",
+          "hero": "vex",
+          "x": 0,
+          "y": 0
+        },
+        {
+          "t": 3,
+          "e": "heroSkill",
+          "id": 1,
+          "hero": "vex",
+          "skill": "crimsonDash",
+          "phase": "impact",
+          "x": 200,
+          "y": 100,
+          "fromX": -900,
+          "fromY": -800,
+          "toX": 200,
+          "toY": 100
+        },
+        {
+          "t": 3,
+          "e": "troopDeath",
+          "id": 1
+        },
+        {
+          "t": 5,
+          "e": "pos",
+          "id": 1,
+          "x": 100,
+          "y": 40
+        },
+        {
+          "t": 6,
+          "e": "pos",
+          "id": 1,
+          "x": 250,
+          "y": 120
+        },
+        {
+          "t": 7,
+          "e": "pos",
+          "id": 1,
+          "x": 300,
+          "y": 160
+        }
+      ],
+      "ticks": [
+        0,
+        2.5,
+        3,
+        3.25,
+        4,
+        4.25,
+        5,
+        6,
+        7,
+        8,
+        8.5,
+        9,
+        14
+      ],
+      "samples": [
+        {
+          "tick": 0,
+          "x": 0,
+          "y": 0,
+          "depth": 0,
+          "alive": true
+        },
+        {
+          "tick": 2.5,
+          "x": 50,
+          "y": 20,
+          "depth": 20,
+          "alive": true
+        },
+        {
+          "tick": 3,
+          "x": 60,
+          "y": 24,
+          "depth": 24,
+          "alive": false
+        },
+        {
+          "tick": 3.25,
+          "x": 60,
+          "y": 24,
+          "depth": 24,
+          "alive": false
+        },
+        {
+          "tick": 4,
+          "x": 60,
+          "y": 24,
+          "depth": 24,
+          "alive": false
+        },
+        {
+          "tick": 4.25,
+          "x": 60,
+          "y": 24,
+          "depth": 24,
+          "alive": false
+        },
+        {
+          "tick": 5,
+          "x": 60,
+          "y": 24,
+          "depth": 24,
+          "alive": false
+        },
+        {
+          "tick": 6,
+          "x": 60,
+          "y": 24,
+          "depth": 24,
+          "alive": false
+        },
+        {
+          "tick": 7,
+          "x": 60,
+          "y": 24,
+          "depth": 24,
+          "alive": false
+        },
+        {
+          "tick": 8,
+          "x": 60,
+          "y": 24,
+          "depth": 24,
+          "alive": false
+        },
+        {
+          "tick": 8.5,
+          "x": 60,
+          "y": 24,
+          "depth": 24,
+          "alive": false
+        },
+        {
+          "tick": 9,
+          "x": 60,
+          "y": 24,
+          "depth": 24,
+          "alive": false
+        },
+        {
+          "tick": 14,
+          "x": 60,
+          "y": 24,
+          "depth": 24,
+          "alive": false
+        }
+      ]
+    },
+    {
+      "name": "vex-nonTravel",
+      "hero": "vex",
+      "fromTick": 0,
+      "events": [
+        {
+          "t": 0,
+          "e": "deploy",
+          "id": 1,
+          "troop": "giant",
+          "hero": "vex",
+          "x": 0,
+          "y": 0
+        },
+        {
+          "t": 3,
+          "e": "heroSkill",
+          "id": 1,
+          "hero": "vex",
+          "skill": "crimsonDash",
+          "phase": "impact",
+          "x": 200,
+          "y": 100,
+          "fromX": -900,
+          "fromY": -800,
+          "toX": 200,
+          "toY": 100
+        },
+        {
+          "t": 4,
+          "e": "heroSkill",
+          "id": 1,
+          "hero": "vex",
+          "skill": "doubleOrNothingHeads",
+          "phase": "heads",
+          "until": 10,
+          "x": 200,
+          "y": 100
+        },
+        {
+          "t": 5,
+          "e": "pos",
+          "id": 1,
+          "x": 100,
+          "y": 40
+        },
+        {
+          "t": 6,
+          "e": "pos",
+          "id": 1,
+          "x": 250,
+          "y": 120
+        },
+        {
+          "t": 7,
+          "e": "pos",
+          "id": 1,
+          "x": 300,
+          "y": 160
+        }
+      ],
+      "ticks": [
+        0,
+        2.5,
+        3,
+        3.25,
+        4,
+        4.25,
+        5,
+        6,
+        7,
+        8,
+        8.5,
+        9,
+        14
+      ],
+      "samples": [
+        {
+          "tick": 0,
+          "x": 0,
+          "y": 0,
+          "depth": 0,
+          "alive": true
+        },
+        {
+          "tick": 2.5,
+          "x": 50,
+          "y": 20,
+          "depth": 20,
+          "alive": true
+        },
+        {
+          "tick": 3,
+          "x": 60,
+          "y": 24,
+          "depth": 24,
+          "alive": true
+        },
+        {
+          "tick": 3.25,
+          "x": 60.86181615834035,
+          "y": 24.467843057384766,
+          "depth": 24.46784305741312,
+          "alive": true
+        },
+        {
+          "tick": 4,
+          "x": 73.36881039375368,
+          "y": 31.257354213751995,
+          "depth": 31.257354213739745,
+          "alive": true
+        },
+        {
+          "tick": 4.25,
+          "x": 80.50252531694167,
+          "y": 35.12994231491119,
+          "depth": 35.12994231493212,
+          "alive": true
+        },
+        {
+          "tick": 5,
+          "x": 108.36881039375368,
+          "y": 50.257354213751995,
+          "depth": 50.257354213739745,
+          "alive": true
+        },
+        {
+          "tick": 6,
+          "x": 151.63118960624632,
+          "y": 73.742645786248,
+          "depth": 73.74264578626025,
+          "alive": true
+        },
+        {
+          "tick": 7,
+          "x": 186.63118960624632,
+          "y": 92.742645786248,
+          "depth": 92.74264578626025,
+          "alive": true
+        },
+        {
+          "tick": 8,
+          "x": 200,
+          "y": 100,
+          "depth": 100,
+          "alive": true
+        },
+        {
+          "tick": 8.5,
+          "x": 200,
+          "y": 100,
+          "depth": 100,
+          "alive": true
+        },
+        {
+          "tick": 9,
+          "x": 200,
+          "y": 100,
+          "depth": 100,
+          "alive": true
+        },
+        {
+          "tick": 14,
+          "x": 300,
+          "y": 160,
+          "depth": 160,
+          "alive": true
+        }
+      ]
+    },
+    {
+      "name": "vex-cold-4",
+      "hero": "vex",
+      "fromTick": 4,
+      "events": [
+        {
+          "t": 0,
+          "e": "deploy",
+          "id": 1,
+          "troop": "giant",
+          "hero": "vex",
+          "x": 0,
+          "y": 0
+        },
+        {
+          "t": 3,
+          "e": "heroSkill",
+          "id": 1,
+          "hero": "vex",
+          "skill": "crimsonDash",
+          "phase": "impact",
+          "x": 200,
+          "y": 100,
+          "fromX": -900,
+          "fromY": -800,
+          "toX": 200,
+          "toY": 100
+        },
+        {
+          "t": 5,
+          "e": "pos",
+          "id": 1,
+          "x": 100,
+          "y": 40
+        },
+        {
+          "t": 6,
+          "e": "pos",
+          "id": 1,
+          "x": 250,
+          "y": 120
+        },
+        {
+          "t": 7,
+          "e": "pos",
+          "id": 1,
+          "x": 300,
+          "y": 160
+        }
+      ],
+      "ticks": [
+        4,
+        4.25,
+        5,
+        14
+      ],
+      "samples": [
+        {
+          "tick": 4,
+          "x": 0,
+          "y": 0,
+          "depth": 0,
+          "alive": true
+        },
+        {
+          "tick": 4.25,
+          "x": 1.921471959676957,
+          "y": 0.9607359798384785,
+          "depth": 0.9607359798392281,
+          "alive": true
+        },
+        {
+          "tick": 5,
+          "x": 29.28932188134524,
+          "y": 14.64466094067262,
+          "depth": 14.644660940684844,
+          "alive": true
+        },
+        {
+          "tick": 14,
+          "x": 300,
+          "y": 160,
+          "depth": 160,
+          "alive": true
+        }
+      ]
+    },
+    {
+      "name": "vex-cold-8",
+      "hero": "vex",
+      "fromTick": 8,
+      "events": [
+        {
+          "t": 0,
+          "e": "deploy",
+          "id": 1,
+          "troop": "giant",
+          "hero": "vex",
+          "x": 0,
+          "y": 0
+        },
+        {
+          "t": 3,
+          "e": "heroSkill",
+          "id": 1,
+          "hero": "vex",
+          "skill": "crimsonDash",
+          "phase": "impact",
+          "x": 200,
+          "y": 100,
+          "fromX": -900,
+          "fromY": -800,
+          "toX": 200,
+          "toY": 100
+        },
+        {
+          "t": 5,
+          "e": "pos",
+          "id": 1,
+          "x": 100,
+          "y": 40
+        },
+        {
+          "t": 6,
+          "e": "pos",
+          "id": 1,
+          "x": 250,
+          "y": 120
+        },
+        {
+          "t": 7,
+          "e": "pos",
+          "id": 1,
+          "x": 300,
+          "y": 160
+        }
+      ],
+      "ticks": [
+        8,
+        8.25,
+        9,
+        14
+      ],
+      "samples": [
+        {
+          "tick": 8,
+          "x": 300,
+          "y": 160,
+          "depth": 160,
+          "alive": true
+        },
+        {
+          "tick": 8.25,
+          "x": 300,
+          "y": 160,
+          "depth": 160,
+          "alive": true
+        },
+        {
+          "tick": 9,
+          "x": 300,
+          "y": 160,
+          "depth": 160,
+          "alive": true
+        },
+        {
+          "tick": 14,
+          "x": 300,
+          "y": 160,
+          "depth": 160,
+          "alive": true
+        }
+      ]
+    },
+    {
+      "name": "vex-cold-12",
+      "hero": "vex",
+      "fromTick": 12,
+      "events": [
+        {
+          "t": 0,
+          "e": "deploy",
+          "id": 1,
+          "troop": "giant",
+          "hero": "vex",
+          "x": 0,
+          "y": 0
+        },
+        {
+          "t": 3,
+          "e": "heroSkill",
+          "id": 1,
+          "hero": "vex",
+          "skill": "crimsonDash",
+          "phase": "impact",
+          "x": 200,
+          "y": 100,
+          "fromX": -900,
+          "fromY": -800,
+          "toX": 200,
+          "toY": 100
+        },
+        {
+          "t": 5,
+          "e": "pos",
+          "id": 1,
+          "x": 100,
+          "y": 40
+        },
+        {
+          "t": 6,
+          "e": "pos",
+          "id": 1,
+          "x": 250,
+          "y": 120
+        },
+        {
+          "t": 7,
+          "e": "pos",
+          "id": 1,
+          "x": 300,
+          "y": 160
+        }
+      ],
+      "ticks": [
+        12,
+        12.25,
+        13,
+        14
+      ],
+      "samples": [
+        {
+          "tick": 12,
+          "x": 300,
+          "y": 160,
+          "depth": 160,
+          "alive": true
+        },
+        {
+          "tick": 12.25,
+          "x": 300,
+          "y": 160,
+          "depth": 160,
+          "alive": true
+        },
+        {
+          "tick": 13,
+          "x": 300,
+          "y": 160,
+          "depth": 160,
+          "alive": true
+        },
+        {
+          "tick": 14,
+          "x": 300,
+          "y": 160,
+          "depth": 160,
+          "alive": true
+        }
+      ]
+    },
+    {
+      "name": "vex-retainedTarget",
+      "hero": "vex",
+      "fromTick": 0,
+      "events": [
+        {
+          "t": 0,
+          "e": "deploy",
+          "id": 1,
+          "troop": "giant",
+          "hero": "vex",
+          "x": 0,
+          "y": 0
+        },
+        {
+          "t": 3,
+          "e": "heroSkill",
+          "id": 1,
+          "hero": "vex",
+          "skill": "crimsonDash",
+          "phase": "impact",
+          "x": 200,
+          "y": 100,
+          "fromX": -900,
+          "fromY": -800,
+          "toX": 200,
+          "toY": 100
+        }
+      ],
+      "ticks": [
+        3,
+        4,
+        8,
+        9,
+        14
+      ],
+      "samples": [
+        {
+          "tick": 3,
+          "x": 0,
+          "y": 0,
+          "depth": 0,
+          "alive": true
+        },
+        {
+          "tick": 4,
+          "x": 19.098300562505255,
+          "y": 9.549150281252627,
+          "depth": 9.549150281236507,
+          "alive": true
+        },
+        {
+          "tick": 8,
+          "x": 200,
+          "y": 100,
+          "depth": 100,
+          "alive": true
+        },
+        {
+          "tick": 9,
+          "x": 200,
+          "y": 100,
+          "depth": 100,
+          "alive": true
+        },
+        {
+          "tick": 14,
+          "x": 200,
+          "y": 100,
+          "depth": 100,
+          "alive": true
+        }
+      ]
+    },
+    {
+      "name": "vex-zeroTravel",
+      "hero": "vex",
+      "fromTick": 0,
+      "events": [
+        {
+          "t": 0,
+          "e": "deploy",
+          "id": 1,
+          "troop": "giant",
+          "hero": "vex",
+          "x": 0,
+          "y": 0
+        },
+        {
+          "t": 3,
+          "e": "heroSkill",
+          "id": 1,
+          "hero": "vex",
+          "skill": "crimsonDash",
+          "phase": "impact",
+          "x": 60,
+          "y": 24,
+          "fromX": -900,
+          "fromY": -800,
+          "toX": 60,
+          "toY": 24
+        },
+        {
+          "t": 5,
+          "e": "pos",
+          "id": 1,
+          "x": 100,
+          "y": 40
+        }
+      ],
+      "ticks": [
+        3,
+        4,
+        5,
+        8,
+        9,
+        14
+      ],
+      "samples": [
+        {
+          "tick": 3,
+          "x": 60,
+          "y": 24,
+          "depth": 24,
+          "alive": true
+        },
+        {
+          "tick": 4,
+          "x": 60,
+          "y": 24,
+          "depth": 24,
+          "alive": true
+        },
+        {
+          "tick": 5,
+          "x": 60,
+          "y": 24,
+          "depth": 24,
+          "alive": true
+        },
+        {
+          "tick": 8,
+          "x": 60,
+          "y": 24,
+          "depth": 24,
+          "alive": true
+        },
+        {
+          "tick": 9,
+          "x": 60,
+          "y": 24,
+          "depth": 24,
+          "alive": true
+        },
+        {
+          "tick": 14,
+          "x": 60,
+          "y": 24,
+          "depth": 24,
+          "alive": true
+        }
+      ]
+    },
+    {
+      "name": "vex-priorityGuard",
+      "hero": "vex",
+      "fromTick": 0,
+      "events": [
+        {
+          "t": 0,
+          "e": "deploy",
+          "id": 1,
+          "troop": "giant",
+          "hero": "vex",
+          "x": 0,
+          "y": 0
+        },
+        {
+          "t": 2,
+          "e": "heroSkill",
+          "id": 1,
+          "hero": "vex",
+          "skill": "doubleOrNothingHeads",
+          "phase": "heads",
+          "until": 10,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "t": 3,
+          "e": "heroSkill",
+          "id": 1,
+          "hero": "vex",
+          "skill": "crimsonDash",
+          "phase": "impact",
+          "x": 200,
+          "y": 100,
+          "fromX": -900,
+          "fromY": -800,
+          "toX": 200,
+          "toY": 100
+        },
+        {
+          "t": 5,
+          "e": "pos",
+          "id": 1,
+          "x": 100,
+          "y": 40
+        },
+        {
+          "t": 6,
+          "e": "pos",
+          "id": 1,
+          "x": 250,
+          "y": 120
+        },
+        {
+          "t": 7,
+          "e": "pos",
+          "id": 1,
+          "x": 300,
+          "y": 160
+        }
+      ],
+      "ticks": [
+        2,
+        3,
+        4,
+        5,
+        7,
+        8,
+        9,
+        10,
+        11,
+        14
+      ],
+      "samples": [
+        {
+          "tick": 2,
+          "x": 40,
+          "y": 16,
+          "depth": 16,
+          "alive": true
+        },
+        {
+          "tick": 3,
+          "x": 60,
+          "y": 24,
+          "depth": 24,
+          "alive": true
+        },
+        {
+          "tick": 4,
+          "x": 73.36881039375368,
+          "y": 31.257354213751995,
+          "depth": 31.257354213739745,
+          "alive": true
+        },
+        {
+          "tick": 5,
+          "x": 108.36881039375368,
+          "y": 50.257354213751995,
+          "depth": 50.257354213739745,
+          "alive": true
+        },
+        {
+          "tick": 7,
+          "x": 186.63118960624632,
+          "y": 92.742645786248,
+          "depth": 92.74264578626025,
+          "alive": true
+        },
+        {
+          "tick": 8,
+          "x": 300,
+          "y": 160,
+          "depth": 160,
+          "alive": true
+        },
+        {
+          "tick": 9,
+          "x": 300,
+          "y": 160,
+          "depth": 160,
+          "alive": true
+        },
+        {
+          "tick": 10,
+          "x": 300,
+          "y": 160,
+          "depth": 160,
+          "alive": true
+        },
+        {
+          "tick": 11,
+          "x": 300,
+          "y": 160,
+          "depth": 160,
+          "alive": true
+        },
+        {
+          "tick": 14,
+          "x": 300,
+          "y": 160,
+          "depth": 160,
+          "alive": true
+        }
+      ]
+    },
+    {
+      "name": "theodor-queued",
+      "hero": "theodor",
+      "fromTick": 0,
+      "events": [
+        {
+          "t": 0,
+          "e": "deploy",
+          "id": 1,
+          "troop": "giant",
+          "hero": "theodor",
+          "x": 0,
+          "y": 0
+        },
+        {
+          "t": 3,
+          "e": "heroSkill",
+          "id": 1,
+          "hero": "theodor",
+          "skill": "cannonball",
+          "phase": "impact",
+          "x": 200,
+          "y": 100,
+          "fromX": -900,
+          "fromY": -800,
+          "toX": 200,
+          "toY": 100
+        },
+        {
+          "t": 5,
+          "e": "pos",
+          "id": 1,
+          "x": 100,
+          "y": 40
+        },
+        {
+          "t": 6,
+          "e": "pos",
+          "id": 1,
+          "x": 250,
+          "y": 120
+        },
+        {
+          "t": 7,
+          "e": "pos",
+          "id": 1,
+          "x": 300,
+          "y": 160
+        }
+      ],
+      "ticks": [
+        0,
+        2.5,
+        3,
+        3.25,
+        4,
+        4.25,
+        5,
+        6,
+        7,
+        11,
+        11.5,
+        12,
+        14
+      ],
+      "samples": [
+        {
+          "tick": 0,
+          "x": 0,
+          "y": 0,
+          "depth": 0,
+          "alive": true
+        },
+        {
+          "tick": 2.5,
+          "x": 50,
+          "y": 20,
+          "depth": 20,
+          "alive": true
+        },
+        {
+          "tick": 3,
+          "x": 60,
+          "y": 24,
+          "depth": 24,
+          "alive": true
+        },
+        {
+          "tick": 3.25,
+          "x": 60.33706913294621,
+          "y": 24.182980386456517,
+          "depth": 24.182980386482086,
+          "alive": true
+        },
+        {
+          "tick": 4,
+          "x": 65.32843272420993,
+          "y": 26.892577764571104,
+          "depth": 26.892577764578164,
+          "alive": true
+        },
+        {
+          "tick": 4.25,
+          "x": 68.26551149561514,
+          "y": 28.48699195476251,
+          "depth": 28.48699195473455,
+          "alive": true
+        },
+        {
+          "tick": 5,
+          "x": 80.50252531694167,
+          "y": 35.12994231491119,
+          "depth": 35.12994231493212,
+          "alive": true
+        },
+        {
+          "tick": 6,
+          "x": 103.2121597344437,
+          "y": 47.458029570126584,
+          "depth": 47.458029570116196,
+          "alive": true
+        },
+        {
+          "tick": 7,
+          "x": 130,
+          "y": 61.99999999999999,
+          "depth": 62,
+          "alive": true
+        },
+        {
+          "tick": 11,
+          "x": 200,
+          "y": 100,
+          "depth": 100,
+          "alive": true
+        },
+        {
+          "tick": 11.5,
+          "x": 250,
+          "y": 130,
+          "depth": 130,
+          "alive": true
+        },
+        {
+          "tick": 12,
+          "x": 300,
+          "y": 160,
+          "depth": 160,
+          "alive": true
+        },
+        {
+          "tick": 14,
+          "x": 300,
+          "y": 160,
+          "depth": 160,
+          "alive": true
+        }
+      ]
+    },
+    {
+      "name": "theodor-replace",
+      "hero": "theodor",
+      "fromTick": 0,
+      "events": [
+        {
+          "t": 0,
+          "e": "deploy",
+          "id": 1,
+          "troop": "giant",
+          "hero": "theodor",
+          "x": 0,
+          "y": 0
+        },
+        {
+          "t": 3,
+          "e": "heroSkill",
+          "id": 1,
+          "hero": "theodor",
+          "skill": "cannonball",
+          "phase": "impact",
+          "x": 200,
+          "y": 100,
+          "fromX": -900,
+          "fromY": -800,
+          "toX": 200,
+          "toY": 100
+        },
+        {
+          "t": 4,
+          "e": "heroSkill",
+          "id": 1,
+          "hero": "theodor",
+          "skill": "cannonball",
+          "phase": "impact",
+          "x": -100,
+          "y": 200,
+          "fromX": -900,
+          "fromY": -800,
+          "toX": -100,
+          "toY": 200
+        },
+        {
+          "t": 5,
+          "e": "pos",
+          "id": 1,
+          "x": 100,
+          "y": 40
+        },
+        {
+          "t": 6,
+          "e": "pos",
+          "id": 1,
+          "x": 250,
+          "y": 120
+        },
+        {
+          "t": 7,
+          "e": "pos",
+          "id": 1,
+          "x": 300,
+          "y": 160
+        }
+      ],
+      "ticks": [
+        0,
+        2.5,
+        3,
+        3.25,
+        4,
+        4.25,
+        5,
+        6,
+        7,
+        11,
+        11.5,
+        12,
+        14
+      ],
+      "samples": [
+        {
+          "tick": 0,
+          "x": 0,
+          "y": 0,
+          "depth": 0,
+          "alive": true
+        },
+        {
+          "tick": 2.5,
+          "x": 50,
+          "y": 20,
+          "depth": 20,
+          "alive": true
+        },
+        {
+          "tick": 3,
+          "x": 60,
+          "y": 24,
+          "depth": 24,
+          "alive": true
+        },
+        {
+          "tick": 3.25,
+          "x": 60.33706913294621,
+          "y": 24.182980386456517,
+          "depth": 24.182980386482086,
+          "alive": true
+        },
+        {
+          "tick": 4,
+          "x": 65.32843272420993,
+          "y": 26.892577764571104,
+          "depth": 26.892577764578164,
+          "alive": true
+        },
+        {
+          "tick": 4.25,
+          "x": 64.93038192799774,
+          "y": 27.309357541138606,
+          "depth": 27.30935754114762,
+          "alive": true
+        },
+        {
+          "tick": 5,
+          "x": 59.03599393013836,
+          "y": 33.48108671773457,
+          "depth": 33.48108671774389,
+          "alive": true
+        },
+        {
+          "tick": 6,
+          "x": 41.11664431322134,
+          "y": 52.24357281408819,
+          "depth": 52.243572814099025,
+          "alive": true
+        },
+        {
+          "tick": 7,
+          "x": 14.298442413325716,
+          "y": 80.32361762782214,
+          "depth": 80.32361762784421,
+          "alive": true
+        },
+        {
+          "tick": 11,
+          "x": -93.70756120592844,
+          "y": 193.41149104683655,
+          "depth": 193.41149104683427,
+          "alive": true
+        },
+        {
+          "tick": 11.5,
+          "x": -98.41163026191546,
+          "y": 198.3368947108133,
+          "depth": 198.33689471083926,
+          "alive": true
+        },
+        {
+          "tick": 12,
+          "x": -100,
+          "y": 200,
+          "depth": 200,
+          "alive": true
+        },
+        {
+          "tick": 14,
+          "x": 300,
+          "y": 160,
+          "depth": 160,
+          "alive": true
+        }
+      ]
+    },
+    {
+      "name": "theodor-death",
+      "hero": "theodor",
+      "fromTick": 0,
+      "events": [
+        {
+          "t": 0,
+          "e": "deploy",
+          "id": 1,
+          "troop": "giant",
+          "hero": "theodor",
+          "x": 0,
+          "y": 0
+        },
+        {
+          "t": 3,
+          "e": "heroSkill",
+          "id": 1,
+          "hero": "theodor",
+          "skill": "cannonball",
+          "phase": "impact",
+          "x": 200,
+          "y": 100,
+          "fromX": -900,
+          "fromY": -800,
+          "toX": 200,
+          "toY": 100
+        },
+        {
+          "t": 5,
+          "e": "pos",
+          "id": 1,
+          "x": 100,
+          "y": 40
+        },
+        {
+          "t": 5,
+          "e": "troopDeath",
+          "id": 1
+        },
+        {
+          "t": 6,
+          "e": "pos",
+          "id": 1,
+          "x": 250,
+          "y": 120
+        },
+        {
+          "t": 7,
+          "e": "pos",
+          "id": 1,
+          "x": 300,
+          "y": 160
+        }
+      ],
+      "ticks": [
+        0,
+        2.5,
+        3,
+        3.25,
+        4,
+        4.25,
+        5,
+        6,
+        7,
+        11,
+        11.5,
+        12,
+        14
+      ],
+      "samples": [
+        {
+          "tick": 0,
+          "x": 0,
+          "y": 0,
+          "depth": 0,
+          "alive": true
+        },
+        {
+          "tick": 2.5,
+          "x": 50,
+          "y": 20,
+          "depth": 20,
+          "alive": true
+        },
+        {
+          "tick": 3,
+          "x": 60,
+          "y": 24,
+          "depth": 24,
+          "alive": true
+        },
+        {
+          "tick": 3.25,
+          "x": 60.33706913294621,
+          "y": 24.182980386456517,
+          "depth": 24.182980386482086,
+          "alive": true
+        },
+        {
+          "tick": 4,
+          "x": 65.32843272420993,
+          "y": 26.892577764571104,
+          "depth": 26.892577764578164,
+          "alive": true
+        },
+        {
+          "tick": 4.25,
+          "x": 68.26551149561514,
+          "y": 28.48699195476251,
+          "depth": 28.48699195473455,
+          "alive": true
+        },
+        {
+          "tick": 5,
+          "x": 80.50252531694167,
+          "y": 35.12994231491119,
+          "depth": 35.12994231493212,
+          "alive": false
+        },
+        {
+          "tick": 6,
+          "x": 80.50252531694167,
+          "y": 35.12994231491119,
+          "depth": 35.12994231493212,
+          "alive": false
+        },
+        {
+          "tick": 7,
+          "x": 80.50252531694167,
+          "y": 35.12994231491119,
+          "depth": 35.12994231493212,
+          "alive": false
+        },
+        {
+          "tick": 11,
+          "x": 80.50252531694167,
+          "y": 35.12994231491119,
+          "depth": 35.12994231493212,
+          "alive": false
+        },
+        {
+          "tick": 11.5,
+          "x": 80.50252531694167,
+          "y": 35.12994231491119,
+          "depth": 35.12994231493212,
+          "alive": false
+        },
+        {
+          "tick": 12,
+          "x": 80.50252531694167,
+          "y": 35.12994231491119,
+          "depth": 35.12994231493212,
+          "alive": false
+        },
+        {
+          "tick": 14,
+          "x": 80.50252531694167,
+          "y": 35.12994231491119,
+          "depth": 35.12994231493212,
+          "alive": false
+        }
+      ]
+    },
+    {
+      "name": "theodor-sameTickDeath",
+      "hero": "theodor",
+      "fromTick": 0,
+      "events": [
+        {
+          "t": 0,
+          "e": "deploy",
+          "id": 1,
+          "troop": "giant",
+          "hero": "theodor",
+          "x": 0,
+          "y": 0
+        },
+        {
+          "t": 3,
+          "e": "heroSkill",
+          "id": 1,
+          "hero": "theodor",
+          "skill": "cannonball",
+          "phase": "impact",
+          "x": 200,
+          "y": 100,
+          "fromX": -900,
+          "fromY": -800,
+          "toX": 200,
+          "toY": 100
+        },
+        {
+          "t": 3,
+          "e": "troopDeath",
+          "id": 1
+        },
+        {
+          "t": 5,
+          "e": "pos",
+          "id": 1,
+          "x": 100,
+          "y": 40
+        },
+        {
+          "t": 6,
+          "e": "pos",
+          "id": 1,
+          "x": 250,
+          "y": 120
+        },
+        {
+          "t": 7,
+          "e": "pos",
+          "id": 1,
+          "x": 300,
+          "y": 160
+        }
+      ],
+      "ticks": [
+        0,
+        2.5,
+        3,
+        3.25,
+        4,
+        4.25,
+        5,
+        6,
+        7,
+        11,
+        11.5,
+        12,
+        14
+      ],
+      "samples": [
+        {
+          "tick": 0,
+          "x": 0,
+          "y": 0,
+          "depth": 0,
+          "alive": true
+        },
+        {
+          "tick": 2.5,
+          "x": 50,
+          "y": 20,
+          "depth": 20,
+          "alive": true
+        },
+        {
+          "tick": 3,
+          "x": 60,
+          "y": 24,
+          "depth": 24,
+          "alive": false
+        },
+        {
+          "tick": 3.25,
+          "x": 60,
+          "y": 24,
+          "depth": 24,
+          "alive": false
+        },
+        {
+          "tick": 4,
+          "x": 60,
+          "y": 24,
+          "depth": 24,
+          "alive": false
+        },
+        {
+          "tick": 4.25,
+          "x": 60,
+          "y": 24,
+          "depth": 24,
+          "alive": false
+        },
+        {
+          "tick": 5,
+          "x": 60,
+          "y": 24,
+          "depth": 24,
+          "alive": false
+        },
+        {
+          "tick": 6,
+          "x": 60,
+          "y": 24,
+          "depth": 24,
+          "alive": false
+        },
+        {
+          "tick": 7,
+          "x": 60,
+          "y": 24,
+          "depth": 24,
+          "alive": false
+        },
+        {
+          "tick": 11,
+          "x": 60,
+          "y": 24,
+          "depth": 24,
+          "alive": false
+        },
+        {
+          "tick": 11.5,
+          "x": 60,
+          "y": 24,
+          "depth": 24,
+          "alive": false
+        },
+        {
+          "tick": 12,
+          "x": 60,
+          "y": 24,
+          "depth": 24,
+          "alive": false
+        },
+        {
+          "tick": 14,
+          "x": 60,
+          "y": 24,
+          "depth": 24,
+          "alive": false
+        }
+      ]
+    },
+    {
+      "name": "theodor-nonTravel",
+      "hero": "theodor",
+      "fromTick": 0,
+      "events": [
+        {
+          "t": 0,
+          "e": "deploy",
+          "id": 1,
+          "troop": "giant",
+          "hero": "theodor",
+          "x": 0,
+          "y": 0
+        },
+        {
+          "t": 3,
+          "e": "heroSkill",
+          "id": 1,
+          "hero": "theodor",
+          "skill": "cannonball",
+          "phase": "impact",
+          "x": 200,
+          "y": 100,
+          "fromX": -900,
+          "fromY": -800,
+          "toX": 200,
+          "toY": 100
+        },
+        {
+          "t": 4,
+          "e": "heroSkill",
+          "id": 1,
+          "hero": "theodor",
+          "skill": "rageQuit",
+          "phase": "fakeDeath",
+          "until": 10,
+          "x": 200,
+          "y": 100
+        },
+        {
+          "t": 5,
+          "e": "pos",
+          "id": 1,
+          "x": 100,
+          "y": 40
+        },
+        {
+          "t": 6,
+          "e": "pos",
+          "id": 1,
+          "x": 250,
+          "y": 120
+        },
+        {
+          "t": 7,
+          "e": "pos",
+          "id": 1,
+          "x": 300,
+          "y": 160
+        }
+      ],
+      "ticks": [
+        0,
+        2.5,
+        3,
+        3.25,
+        4,
+        4.25,
+        5,
+        6,
+        7,
+        11,
+        11.5,
+        12,
+        14
+      ],
+      "samples": [
+        {
+          "tick": 0,
+          "x": 0,
+          "y": 0,
+          "depth": 0,
+          "alive": true
+        },
+        {
+          "tick": 2.5,
+          "x": 50,
+          "y": 20,
+          "depth": 20,
+          "alive": true
+        },
+        {
+          "tick": 3,
+          "x": 60,
+          "y": 24,
+          "depth": 24,
+          "alive": true
+        },
+        {
+          "tick": 3.25,
+          "x": 60.33706913294621,
+          "y": 24.182980386456517,
+          "depth": 24.182980386482086,
+          "alive": true
+        },
+        {
+          "tick": 4,
+          "x": 65.32843272420993,
+          "y": 26.892577764571104,
+          "depth": 26.892577764578164,
+          "alive": true
+        },
+        {
+          "tick": 4.25,
+          "x": 68.26551149561514,
+          "y": 28.48699195476251,
+          "depth": 28.48699195473455,
+          "alive": true
+        },
+        {
+          "tick": 5,
+          "x": 80.50252531694167,
+          "y": 35.12994231491119,
+          "depth": 35.12994231493212,
+          "alive": true
+        },
+        {
+          "tick": 6,
+          "x": 103.2121597344437,
+          "y": 47.458029570126584,
+          "depth": 47.458029570116196,
+          "alive": true
+        },
+        {
+          "tick": 7,
+          "x": 130,
+          "y": 61.99999999999999,
+          "depth": 62,
+          "alive": true
+        },
+        {
+          "tick": 11,
+          "x": 300,
+          "y": 160,
+          "depth": 160,
+          "alive": true
+        },
+        {
+          "tick": 11.5,
+          "x": 300,
+          "y": 160,
+          "depth": 160,
+          "alive": true
+        },
+        {
+          "tick": 12,
+          "x": 300,
+          "y": 160,
+          "depth": 160,
+          "alive": true
+        },
+        {
+          "tick": 14,
+          "x": 300,
+          "y": 160,
+          "depth": 160,
+          "alive": true
+        }
+      ]
+    },
+    {
+      "name": "theodor-cold-4",
+      "hero": "theodor",
+      "fromTick": 4,
+      "events": [
+        {
+          "t": 0,
+          "e": "deploy",
+          "id": 1,
+          "troop": "giant",
+          "hero": "theodor",
+          "x": 0,
+          "y": 0
+        },
+        {
+          "t": 3,
+          "e": "heroSkill",
+          "id": 1,
+          "hero": "theodor",
+          "skill": "cannonball",
+          "phase": "impact",
+          "x": 200,
+          "y": 100,
+          "fromX": -900,
+          "fromY": -800,
+          "toX": 200,
+          "toY": 100
+        },
+        {
+          "t": 5,
+          "e": "pos",
+          "id": 1,
+          "x": 100,
+          "y": 40
+        },
+        {
+          "t": 6,
+          "e": "pos",
+          "id": 1,
+          "x": 250,
+          "y": 120
+        },
+        {
+          "t": 7,
+          "e": "pos",
+          "id": 1,
+          "x": 300,
+          "y": 160
+        }
+      ],
+      "ticks": [
+        4,
+        4.25,
+        5,
+        14
+      ],
+      "samples": [
+        {
+          "tick": 4,
+          "x": 0,
+          "y": 0,
+          "depth": 0,
+          "alive": true
+        },
+        {
+          "tick": 4.25,
+          "x": 0.6287790106757396,
+          "y": 0.3143895053378698,
+          "depth": 0.3143895053653978,
+          "alive": true
+        },
+        {
+          "tick": 5,
+          "x": 9.903113209758086,
+          "y": 4.951556604879043,
+          "depth": 4.951556604879443,
+          "alive": true
+        },
+        {
+          "tick": 14,
+          "x": 300,
+          "y": 160,
+          "depth": 160,
+          "alive": true
+        }
+      ]
+    },
+    {
+      "name": "theodor-cold-11",
+      "hero": "theodor",
+      "fromTick": 11,
+      "events": [
+        {
+          "t": 0,
+          "e": "deploy",
+          "id": 1,
+          "troop": "giant",
+          "hero": "theodor",
+          "x": 0,
+          "y": 0
+        },
+        {
+          "t": 3,
+          "e": "heroSkill",
+          "id": 1,
+          "hero": "theodor",
+          "skill": "cannonball",
+          "phase": "impact",
+          "x": 200,
+          "y": 100,
+          "fromX": -900,
+          "fromY": -800,
+          "toX": 200,
+          "toY": 100
+        },
+        {
+          "t": 5,
+          "e": "pos",
+          "id": 1,
+          "x": 100,
+          "y": 40
+        },
+        {
+          "t": 6,
+          "e": "pos",
+          "id": 1,
+          "x": 250,
+          "y": 120
+        },
+        {
+          "t": 7,
+          "e": "pos",
+          "id": 1,
+          "x": 300,
+          "y": 160
+        }
+      ],
+      "ticks": [
+        11,
+        11.25,
+        12,
+        14
+      ],
+      "samples": [
+        {
+          "tick": 11,
+          "x": 300,
+          "y": 160,
+          "depth": 160,
+          "alive": true
+        },
+        {
+          "tick": 11.25,
+          "x": 300,
+          "y": 160,
+          "depth": 160,
+          "alive": true
+        },
+        {
+          "tick": 12,
+          "x": 300,
+          "y": 160,
+          "depth": 160,
+          "alive": true
+        },
+        {
+          "tick": 14,
+          "x": 300,
+          "y": 160,
+          "depth": 160,
+          "alive": true
+        }
+      ]
+    },
+    {
+      "name": "theodor-cold-12",
+      "hero": "theodor",
+      "fromTick": 12,
+      "events": [
+        {
+          "t": 0,
+          "e": "deploy",
+          "id": 1,
+          "troop": "giant",
+          "hero": "theodor",
+          "x": 0,
+          "y": 0
+        },
+        {
+          "t": 3,
+          "e": "heroSkill",
+          "id": 1,
+          "hero": "theodor",
+          "skill": "cannonball",
+          "phase": "impact",
+          "x": 200,
+          "y": 100,
+          "fromX": -900,
+          "fromY": -800,
+          "toX": 200,
+          "toY": 100
+        },
+        {
+          "t": 5,
+          "e": "pos",
+          "id": 1,
+          "x": 100,
+          "y": 40
+        },
+        {
+          "t": 6,
+          "e": "pos",
+          "id": 1,
+          "x": 250,
+          "y": 120
+        },
+        {
+          "t": 7,
+          "e": "pos",
+          "id": 1,
+          "x": 300,
+          "y": 160
+        }
+      ],
+      "ticks": [
+        12,
+        12.25,
+        13,
+        14
+      ],
+      "samples": [
+        {
+          "tick": 12,
+          "x": 300,
+          "y": 160,
+          "depth": 160,
+          "alive": true
+        },
+        {
+          "tick": 12.25,
+          "x": 300,
+          "y": 160,
+          "depth": 160,
+          "alive": true
+        },
+        {
+          "tick": 13,
+          "x": 300,
+          "y": 160,
+          "depth": 160,
+          "alive": true
+        },
+        {
+          "tick": 14,
+          "x": 300,
+          "y": 160,
+          "depth": 160,
+          "alive": true
+        }
+      ]
+    },
+    {
+      "name": "theodor-retainedTarget",
+      "hero": "theodor",
+      "fromTick": 0,
+      "events": [
+        {
+          "t": 0,
+          "e": "deploy",
+          "id": 1,
+          "troop": "giant",
+          "hero": "theodor",
+          "x": 0,
+          "y": 0
+        },
+        {
+          "t": 3,
+          "e": "heroSkill",
+          "id": 1,
+          "hero": "theodor",
+          "skill": "cannonball",
+          "phase": "impact",
+          "x": 200,
+          "y": 100,
+          "fromX": -900,
+          "fromY": -800,
+          "toX": 200,
+          "toY": 100
+        }
+      ],
+      "ticks": [
+        3,
+        4,
+        11,
+        12,
+        14
+      ],
+      "samples": [
+        {
+          "tick": 3,
+          "x": 0,
+          "y": 0,
+          "depth": 0,
+          "alive": true
+        },
+        {
+          "tick": 4,
+          "x": 7.612046748871326,
+          "y": 3.806023374435663,
+          "depth": 3.806023374432698,
+          "alive": true
+        },
+        {
+          "tick": 11,
+          "x": 200,
+          "y": 100,
+          "depth": 100,
+          "alive": true
+        },
+        {
+          "tick": 12,
+          "x": 200,
+          "y": 100,
+          "depth": 100,
+          "alive": true
+        },
+        {
+          "tick": 14,
+          "x": 200,
+          "y": 100,
+          "depth": 100,
+          "alive": true
+        }
+      ]
+    },
+    {
+      "name": "theodor-zeroTravel",
+      "hero": "theodor",
+      "fromTick": 0,
+      "events": [
+        {
+          "t": 0,
+          "e": "deploy",
+          "id": 1,
+          "troop": "giant",
+          "hero": "theodor",
+          "x": 0,
+          "y": 0
+        },
+        {
+          "t": 3,
+          "e": "heroSkill",
+          "id": 1,
+          "hero": "theodor",
+          "skill": "cannonball",
+          "phase": "impact",
+          "x": 60,
+          "y": 24,
+          "fromX": -900,
+          "fromY": -800,
+          "toX": 60,
+          "toY": 24
+        },
+        {
+          "t": 5,
+          "e": "pos",
+          "id": 1,
+          "x": 100,
+          "y": 40
+        }
+      ],
+      "ticks": [
+        3,
+        4,
+        5,
+        11,
+        12,
+        14
+      ],
+      "samples": [
+        {
+          "tick": 3,
+          "x": 60,
+          "y": 24,
+          "depth": 24,
+          "alive": true
+        },
+        {
+          "tick": 4,
+          "x": 60,
+          "y": 24,
+          "depth": 24,
+          "alive": true
+        },
+        {
+          "tick": 5,
+          "x": 60,
+          "y": 24,
+          "depth": 24,
+          "alive": true
+        },
+        {
+          "tick": 11,
+          "x": 60,
+          "y": 24,
+          "depth": 24,
+          "alive": true
+        },
+        {
+          "tick": 12,
+          "x": 60,
+          "y": 24,
+          "depth": 24,
+          "alive": true
+        },
+        {
+          "tick": 14,
+          "x": 60,
+          "y": 24,
+          "depth": 24,
+          "alive": true
+        }
+      ]
+    },
+    {
+      "name": "theodor-priorityGuard",
+      "hero": "theodor",
+      "fromTick": 0,
+      "events": [
+        {
+          "t": 0,
+          "e": "deploy",
+          "id": 1,
+          "troop": "giant",
+          "hero": "theodor",
+          "x": 0,
+          "y": 0
+        },
+        {
+          "t": 2,
+          "e": "heroSkill",
+          "id": 1,
+          "hero": "theodor",
+          "skill": "rageQuit",
+          "phase": "fakeDeath",
+          "until": 10,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "t": 3,
+          "e": "heroSkill",
+          "id": 1,
+          "hero": "theodor",
+          "skill": "cannonball",
+          "phase": "impact",
+          "x": 200,
+          "y": 100,
+          "fromX": -900,
+          "fromY": -800,
+          "toX": 200,
+          "toY": 100
+        },
+        {
+          "t": 5,
+          "e": "pos",
+          "id": 1,
+          "x": 100,
+          "y": 40
+        },
+        {
+          "t": 6,
+          "e": "pos",
+          "id": 1,
+          "x": 250,
+          "y": 120
+        },
+        {
+          "t": 7,
+          "e": "pos",
+          "id": 1,
+          "x": 300,
+          "y": 160
+        }
+      ],
+      "ticks": [
+        2,
+        3,
+        4,
+        5,
+        7,
+        8,
+        9,
+        10,
+        11,
+        14
+      ],
+      "samples": [
+        {
+          "tick": 2,
+          "x": 40,
+          "y": 16,
+          "depth": 16,
+          "alive": true
+        },
+        {
+          "tick": 3,
+          "x": 60,
+          "y": 24,
+          "depth": 24,
+          "alive": true
+        },
+        {
+          "tick": 4,
+          "x": 65.32843272420993,
+          "y": 26.892577764571104,
+          "depth": 26.892577764578164,
+          "alive": true
+        },
+        {
+          "tick": 5,
+          "x": 80.50252531694167,
+          "y": 35.12994231491119,
+          "depth": 35.12994231493212,
+          "alive": true
+        },
+        {
+          "tick": 7,
+          "x": 130,
+          "y": 61.99999999999999,
+          "depth": 62,
+          "alive": true
+        },
+        {
+          "tick": 8,
+          "x": 156.78784026555627,
+          "y": 76.5419704298734,
+          "depth": 76.5419704298838,
+          "alive": true
+        },
+        {
+          "tick": 9,
+          "x": 179.49747468305833,
+          "y": 88.87005768508881,
+          "depth": 88.87005768506788,
+          "alive": true
+        },
+        {
+          "tick": 10,
+          "x": 194.67156727579007,
+          "y": 97.1074222354289,
+          "depth": 97.10742223542184,
+          "alive": true
+        },
+        {
+          "tick": 11,
+          "x": 300,
+          "y": 160,
+          "depth": 160,
+          "alive": true
+        },
+        {
+          "tick": 14,
+          "x": 300,
+          "y": 160,
+          "depth": 160,
+          "alive": true
+        }
+      ]
+    },
+    {
+      "name": "theodor-cold-body-eat",
+      "hero": "theodor",
+      "fromTick": 59,
+      "bodyCase": true,
+      "events": [
+        {
+          "t": 0,
+          "e": "deploy",
+          "id": 1,
+          "troop": "giant",
+          "hero": "theodor",
+          "x": 0,
+          "y": 0
+        },
+        {
+          "t": 1,
+          "e": "heroSkill",
+          "id": 1,
+          "hero": "theodor",
+          "skill": "cannonball",
+          "phase": "impact",
+          "x": 20,
+          "y": 10,
+          "fromX": -900,
+          "fromY": -800,
+          "toX": 20,
+          "toY": 10
+        },
+        {
+          "t": 10,
+          "e": "heroSkill",
+          "id": 1,
+          "hero": "theodor",
+          "skill": "silentButDeadly",
+          "phase": "windup",
+          "until": 100,
+          "x": 20,
+          "y": 10
+        },
+        {
+          "t": 20,
+          "e": "heroAttack",
+          "id": 1,
+          "hero": "theodor",
+          "ix": -100,
+          "iy": 30,
+          "recoveryUntil": 100
+        },
+        {
+          "t": 30,
+          "e": "pos",
+          "id": 1,
+          "x": 123,
+          "y": 87
+        }
+      ],
+      "ticks": [
+        59,
+        59.25,
+        61
+      ],
+      "boundaryBody": [
+        "hero_theo_eat_f1",
+        "hero_theo_eat_f2",
+        "hero_theo_eat_f3",
+        "hero_theo_eat_f4",
+        "hero_theo_eat_f5",
+        "hero_theo_eat_f6"
+      ],
+      "samples": [
+        {
+          "tick": 59,
+          "x": 123,
+          "y": 87,
+          "depth": 87,
+          "alive": true
+        },
+        {
+          "tick": 59.25,
+          "x": 123,
+          "y": 87,
+          "depth": 87,
+          "alive": true
+        },
+        {
+          "tick": 61,
+          "x": 123,
+          "y": 87,
+          "depth": 87,
+          "alive": true
+        }
+      ]
+    },
+    {
+      "name": "theodor-cold-body-bloat",
+      "hero": "theodor",
+      "fromTick": 61,
+      "bodyCase": true,
+      "events": [
+        {
+          "t": 0,
+          "e": "deploy",
+          "id": 1,
+          "troop": "giant",
+          "hero": "theodor",
+          "x": 0,
+          "y": 0
+        },
+        {
+          "t": 1,
+          "e": "heroSkill",
+          "id": 1,
+          "hero": "theodor",
+          "skill": "cannonball",
+          "phase": "impact",
+          "x": 20,
+          "y": 10,
+          "fromX": -900,
+          "fromY": -800,
+          "toX": 20,
+          "toY": 10
+        },
+        {
+          "t": 10,
+          "e": "heroSkill",
+          "id": 1,
+          "hero": "theodor",
+          "skill": "silentButDeadly",
+          "phase": "windup",
+          "until": 100,
+          "x": 20,
+          "y": 10
+        },
+        {
+          "t": 20,
+          "e": "heroAttack",
+          "id": 1,
+          "hero": "theodor",
+          "ix": -100,
+          "iy": 30,
+          "recoveryUntil": 100
+        },
+        {
+          "t": 30,
+          "e": "pos",
+          "id": 1,
+          "x": 123,
+          "y": 87
+        }
+      ],
+      "ticks": [
+        61,
+        61.25,
+        63
+      ],
+      "boundaryBody": [
+        "hero_theo_bloat_f1",
+        "hero_theo_bloat_f2",
+        "hero_theo_bloat_f3",
+        "hero_theo_bloat_f4",
+        "hero_theo_bloat_f5"
+      ],
+      "samples": [
+        {
+          "tick": 61,
+          "x": 123,
+          "y": 87,
+          "depth": 87,
+          "alive": true
+        },
+        {
+          "tick": 61.25,
+          "x": 123,
+          "y": 87,
+          "depth": 87,
+          "alive": true
+        },
+        {
+          "tick": 63,
+          "x": 123,
+          "y": 87,
+          "depth": 87,
+          "alive": true
+        }
+      ]
+    },
+    {
+      "name": "theodor-cold-body-fakeDeath",
+      "hero": "theodor",
+      "fromTick": 40,
+      "bodyCase": true,
+      "events": [
+        {
+          "t": 0,
+          "e": "deploy",
+          "id": 1,
+          "troop": "giant",
+          "hero": "theodor",
+          "x": 0,
+          "y": 0
+        },
+        {
+          "t": 1,
+          "e": "heroSkill",
+          "id": 1,
+          "hero": "theodor",
+          "skill": "cannonball",
+          "phase": "impact",
+          "x": 20,
+          "y": 10,
+          "fromX": -900,
+          "fromY": -800,
+          "toX": 20,
+          "toY": 10
+        },
+        {
+          "t": 10,
+          "e": "heroSkill",
+          "id": 1,
+          "hero": "theodor",
+          "skill": "rageQuit",
+          "phase": "fakeDeath",
+          "until": 100,
+          "x": 20,
+          "y": 10
+        },
+        {
+          "t": 20,
+          "e": "heroAttack",
+          "id": 1,
+          "hero": "theodor",
+          "ix": -100,
+          "iy": 30,
+          "recoveryUntil": 100
+        },
+        {
+          "t": 30,
+          "e": "pos",
+          "id": 1,
+          "x": 123,
+          "y": 87
+        }
+      ],
+      "ticks": [
+        40,
+        40.25,
+        42
+      ],
+      "boundaryBody": [
+        "hero_theo_playdead_f5"
+      ],
+      "samples": [
+        {
+          "tick": 40,
+          "x": 123,
+          "y": 87,
+          "depth": 87,
+          "alive": true
+        },
+        {
+          "tick": 40.25,
+          "x": 123,
+          "y": 87,
+          "depth": 87,
+          "alive": true
+        },
+        {
+          "tick": 42,
+          "x": 123,
+          "y": 87,
+          "depth": 87,
+          "alive": true
+        }
+      ]
+    }
+  ]
+}

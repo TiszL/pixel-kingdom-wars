@@ -1,0 +1,12 @@
+.pk-voyage-adapter section { margin-block: 12px; }
+.pk-voyage-adapter h3 { margin: 8px 0; }
+.pk-voyage-adapter select { width: 100%; min-height: 44px; font: inherit; color: inherit; background: var(--pk-wood-dark, #302019); border: 2px solid currentColor; }
+.pk-voyage-adapter dl { margin: 8px 0; }
+.pk-voyage-adapter dl > div { display: flex; justify-content: space-between; gap: 12px; }
+.pk-voyage-adapter dd { margin: 0; text-align: end; overflow-wrap: anywhere; }
+.pk-voyage-adapter__actions { display: flex; flex-wrap: wrap; gap: 8px; margin-block: 12px; }
+.pk-voyage-adapter__actions > * { flex: 1 1 160px; }
+.pk-voyage-adapter details > summary { min-height: 44px; padding-block: 10px; cursor: pointer; }
+.pk-voyage-adapter details p { overflow-wrap: anywhere; }
+.pk-voyage-adapter__review { border: 2px solid var(--pk-gold, #c6a253); padding: 12px; }
+@media (prefers-reduced-motion: reduce) { .pk-voyage-adapter { scroll-behavior: auto; } }

@@ -1,0 +1,355 @@
+{
+	"textures": [
+		{
+			"image": "v2trp_direwyvern_t1_fx@1x.png",
+			"format": "RGBA8888",
+			"size": {
+				"w": 546,
+				"h": 472
+			},
+			"scale": 1,
+			"frames": [
+				{
+					"filename": "v2_direwyvern_fx_firestorm_t1_f1",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 176,
+						"h": 128
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 176,
+						"h": 128
+					},
+					"frame": {
+						"x": 3,
+						"y": 3,
+						"w": 176,
+						"h": 128
+					}
+				},
+				{
+					"filename": "v2_direwyvern_fx_firestorm_t1_f2",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 176,
+						"h": 128
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 176,
+						"h": 128
+					},
+					"frame": {
+						"x": 3,
+						"y": 137,
+						"w": 176,
+						"h": 128
+					}
+				},
+				{
+					"filename": "v2_direwyvern_fx_firestorm_t1_f3",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 176,
+						"h": 128
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 176,
+						"h": 128
+					},
+					"frame": {
+						"x": 185,
+						"y": 3,
+						"w": 176,
+						"h": 128
+					}
+				},
+				{
+					"filename": "v2_direwyvern_fx_firestorm_t1_f4",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 176,
+						"h": 128
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 176,
+						"h": 128
+					},
+					"frame": {
+						"x": 185,
+						"y": 137,
+						"w": 176,
+						"h": 128
+					}
+				},
+				{
+					"filename": "v2_direwyvern_fx_firestorm_t1_f5",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 176,
+						"h": 128
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 176,
+						"h": 128
+					},
+					"frame": {
+						"x": 3,
+						"y": 271,
+						"w": 176,
+						"h": 128
+					}
+				},
+				{
+					"filename": "v2_direwyvern_fx_firestorm_t1_f6",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 176,
+						"h": 128
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 176,
+						"h": 128
+					},
+					"frame": {
+						"x": 185,
+						"y": 271,
+						"w": 176,
+						"h": 128
+					}
+				},
+				{
+					"filename": "v2_direwyvern_fx_firestorm_t1_f7",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 176,
+						"h": 128
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 176,
+						"h": 128
+					},
+					"frame": {
+						"x": 367,
+						"y": 3,
+						"w": 176,
+						"h": 128
+					}
+				},
+				{
+					"filename": "v2_direwyvern_fx_firestorm_t1_f8",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 176,
+						"h": 128
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 176,
+						"h": 128
+					},
+					"frame": {
+						"x": 367,
+						"y": 137,
+						"w": 176,
+						"h": 128
+					}
+				},
+				{
+					"filename": "v2_direwyvern_fx_burnfield_t1_f1",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 96,
+						"h": 64
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 96,
+						"h": 64
+					},
+					"frame": {
+						"x": 367,
+						"y": 271,
+						"w": 96,
+						"h": 64
+					}
+				},
+				{
+					"filename": "v2_direwyvern_fx_burnfield_t1_f2",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 96,
+						"h": 64
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 96,
+						"h": 64
+					},
+					"frame": {
+						"x": 3,
+						"y": 405,
+						"w": 96,
+						"h": 64
+					}
+				},
+				{
+					"filename": "v2_direwyvern_fx_burnfield_t1_f3",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 96,
+						"h": 64
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 96,
+						"h": 64
+					},
+					"frame": {
+						"x": 105,
+						"y": 405,
+						"w": 96,
+						"h": 64
+					}
+				},
+				{
+					"filename": "v2_direwyvern_fx_burnfield_t1_f4",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 96,
+						"h": 64
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 96,
+						"h": 64
+					},
+					"frame": {
+						"x": 207,
+						"y": 405,
+						"w": 96,
+						"h": 64
+					}
+				},
+				{
+					"filename": "v2_direwyvern_fx_impact_slam_t1_f1",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 48,
+						"h": 48
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 48,
+						"h": 48
+					},
+					"frame": {
+						"x": 309,
+						"y": 405,
+						"w": 48,
+						"h": 48
+					}
+				},
+				{
+					"filename": "v2_direwyvern_fx_impact_slam_t1_f2",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 48,
+						"h": 48
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 48,
+						"h": 48
+					},
+					"frame": {
+						"x": 363,
+						"y": 405,
+						"w": 48,
+						"h": 48
+					}
+				},
+				{
+					"filename": "v2_direwyvern_fx_impact_slam_t1_f3",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 48,
+						"h": 48
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 48,
+						"h": 48
+					},
+					"frame": {
+						"x": 367,
+						"y": 341,
+						"w": 48,
+						"h": 48
+					}
+				},
+				{
+					"filename": "v2_direwyvern_fx_impact_slam_t1_f4",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 48,
+						"h": 48
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 48,
+						"h": 48
+					},
+					"frame": {
+						"x": 469,
+						"y": 271,
+						"w": 48,
+						"h": 48
+					}
+				}
+			]
+		}
+	],
+	"meta": {
+		"app": "shardkeep/scripts/rasterize",
+		"version": "1"
+	}
+}

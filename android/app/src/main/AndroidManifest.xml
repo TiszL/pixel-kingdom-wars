@@ -1,0 +1,47 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <!-- In-app update channel (M45 §5): installs only a verified, same-signer APK through a PackageInstaller session the player confirms. -->
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+    <queries><intent><action android:name="android.intent.action.VIEW" /><category android:name="android.intent.category.BROWSABLE" /><data android:scheme="solana-wallet" /></intent>
+        <intent><action android:name="android.intent.action.MAIN" /><category android:name="android.intent.category.APP_BROWSER" /></intent>
+        <intent><action android:name="android.intent.action.VIEW" /><category android:name="android.intent.category.BROWSABLE" /><data android:scheme="https" /></intent>
+    </queries>
+    <application android:name=".PkwApplication" android:allowBackup="false" android:dataExtractionRules="@xml/data_extraction_rules" android:icon="@mipmap/ic_launcher" android:roundIcon="@mipmap/ic_launcher_round" android:fullBackupContent="false" android:label="${nativeAppLabel}" android:theme="@style/AppTheme" android:networkSecurityConfig="@xml/network_security_config" android:usesCleartextTraffic="false" android:supportsRtl="true">
+        <meta-data android:name="firebase_messaging_auto_init_enabled" android:value="false" />
+        <!-- Explicit token-mode contract with the server's Admin SDK; FID direct-send is a separate opt-in API. -->
+        <meta-data android:name="firebase_messaging_installation_id_enabled" android:value="false" />
+        <meta-data android:name="firebase_messaging_notification_delegation_enabled" android:value="false" />
+        <meta-data android:name="firebase_analytics_collection_enabled" android:value="false" />
+        <service android:name=".notifications.NativeMessagingService" android:exported="false">
+            <intent-filter><action android:name="com.google.firebase.MESSAGING_EVENT" /></intent-filter>
+        </service>
+        <!-- PackageInstaller session status; reached only through this app's own PendingIntent. -->
+        <receiver android:name=".update.UpdateInstallReceiver" android:exported="false" />
+        <!-- DECISION 2026-10-06: the game is PORTRAIT ONLY. Source: the owner's Seeker report on build 880a7e7a ("screenshot
+             current clan building screen why it's cut off"; the phone was in landscape) under his rules "nothing overlaps",
+             "Solana Mobile optimized", "every detail of the new interface finished". Every frame of the design authority is
+             portrait (design system: "Android-first (Seeker, portrait 412 x 915 dp)"); landscape was never
+             designed, and a rotated Seeker clipped the Clan sheet and crowded the Home HUD. userPortrait follows the phone's own
+             rotation setting between portrait and upside-down portrait only. This supersedes the 2026-09-13 web-parity
+             "Landscape lock" setting (follow rotation / force landscape): DeviceExperience.applyOrientation requests the same
+             orientation at runtime (a runtime request would otherwise override this attribute), and Settings no longer offers
+             the toggle. Android 16 may still ignore the lock on large screens (tablets, foldables); the landscape layouts stay. -->
+        <activity android:name=".MainActivity" android:exported="true" android:configChanges="keyboard|keyboardHidden|navigation|orientation|screenSize|screenLayout" android:launchMode="singleTop"
+            android:screenOrientation="fullUser" tools:ignore="LockedOrientationActivity">
+            <intent-filter><action android:name="android.intent.action.MAIN" /><category android:name="android.intent.category.LAUNCHER" /></intent-filter>
+            <!-- Fixed game origin only. Runtime also validates query allowlists; signing/DAL verification is a release gate. -->
+            <intent-filter android:autoVerify="true">
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="https" android:host="${nativeLinkHost}" android:path="/" />
+            </intent-filter>
+        </activity>
+        <!-- Privy OAuth callback (docs/PRIVY_ANDROID.md): the registered scheme returns the browser hand-off to the SDK. singleTask, as the SDK requires; the launcher above is unchanged. -->
+        <activity android:name="io.privy.sdk.oAuth.PrivyRedirectActivity" android:exported="true" android:launchMode="singleTask">
+            <intent-filter><action android:name="android.intent.action.VIEW" /><category android:name="android.intent.category.DEFAULT" /><category android:name="android.intent.category.BROWSABLE" /><data android:scheme="pixelkingdomwars" /></intent-filter>
+        </activity>
+    </application>
+</manifest>

@@ -1,0 +1,1 @@
+CREATE UNIQUE INDEX "deposits_builder_slot_pending_uq" ON "deposits" USING btree ("player_wallet",(("payload"->>'expectedBuilders')::integer)) WHERE "deposits"."kind" = 'builder' AND "deposits"."status" = 'pending' AND "deposits"."payload" ? 'expectedBuilders';

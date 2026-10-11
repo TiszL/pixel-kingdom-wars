@@ -1,0 +1,138 @@
+{
+ "schema": 1,
+ "atlas": "fx.png",
+ "anchor": "centre (air layer)",
+ "sprites": {
+  "leaf_drift_green": {
+   "x": 0,
+   "y": 0,
+   "w": 6,
+   "h": 6,
+   "dx": 7,
+   "ax": 3,
+   "ay": 3,
+   "frames": 6,
+   "frameMs": 150,
+   "source": "ART fx-r1 leaf_green_1 leaf_green_2 leaf_green_3 leaf_green_4 leaf_green_5 leaf_green_6 (small)"
+  },
+  "leaf_drift_gold": {
+   "x": 0,
+   "y": 7,
+   "w": 6,
+   "h": 6,
+   "dx": 7,
+   "ax": 3,
+   "ay": 3,
+   "frames": 6,
+   "frameMs": 150,
+   "source": "ART fx-r1 leaf_yellow_1 leaf_yellow_2 leaf_yellow_3 leaf_yellow_4 leaf_yellow_5 leaf_yellow_6 (small)"
+  },
+  "leaf_drift_orange": {
+   "x": 0,
+   "y": 14,
+   "w": 6,
+   "h": 6,
+   "dx": 7,
+   "ax": 3,
+   "ay": 3,
+   "frames": 6,
+   "frameMs": 150,
+   "source": "ART fx-r1 leaf_orange_1 leaf_orange_2 leaf_orange_3 leaf_orange_4 leaf_orange_5 leaf_orange_6 (small)"
+  },
+  "petals": {
+   "x": 0,
+   "y": 21,
+   "w": 5,
+   "h": 5,
+   "dx": 6,
+   "ax": 2.5,
+   "ay": 2.5,
+   "frames": 6,
+   "frameMs": 150,
+   "source": "ART fx-r1 petal_1 petal_2 petal_3 petal_4 petal_5 petal_6 (small)"
+  },
+  "pollen": {
+   "x": 0,
+   "y": 27,
+   "w": 3,
+   "h": 3,
+   "dx": 4,
+   "ax": 1.5,
+   "ay": 1.5,
+   "frames": 6,
+   "frameMs": 220,
+   "source": "ART fx-r1 pollen_1 pollen_2 pollen_3 pollen_4 pollen_5 pollen_6 (small)"
+  },
+  "heat_sparkle": {
+   "x": 0,
+   "y": 31,
+   "w": 5,
+   "h": 5,
+   "dx": 6,
+   "ax": 2.5,
+   "ay": 2.5,
+   "frames": 8,
+   "frameMs": 110,
+   "source": "ART fx-r1 heat_sparkle_1 heat_sparkle_2 heat_sparkle_3 heat_sparkle_4 heat_sparkle_5 heat_sparkle_6 heat_sparkle_7 heat_sparkle_8 (small)"
+  },
+  "ice_motes": {
+   "x": 0,
+   "y": 37,
+   "w": 5,
+   "h": 5,
+   "dx": 6,
+   "ax": 2.5,
+   "ay": 2.5,
+   "frames": 8,
+   "frameMs": 140,
+   "source": "ART fx-r1 ice_mote_1 ice_mote_2 ice_mote_3 ice_mote_4 ice_mote_5 ice_mote_6 ice_mote_7 ice_mote_8 (small)"
+  },
+  "sea_spray": {
+   "x": 0,
+   "y": 43,
+   "w": 10,
+   "h": 10,
+   "dx": 11,
+   "ax": 5,
+   "ay": 5,
+   "frames": 8,
+   "frameMs": 90,
+   "source": "ART fx-r1 sea_spray_1 sea_spray_2 sea_spray_3 sea_spray_4 sea_spray_5 sea_spray_6 sea_spray_7 sea_spray_8 (small)"
+  },
+  "dust_motes": {
+   "x": 0,
+   "y": 54,
+   "w": 3,
+   "h": 3,
+   "dx": 4,
+   "ax": 1.5,
+   "ay": 1.5,
+   "frames": 4,
+   "frameMs": 200,
+   "source": "ART fx-r1 dust_mote_1 dust_mote_2 dust_mote_3 dust_mote_4 (small)",
+   "droppedEmpty": [
+    "dust_mote_5.png"
+   ]
+  },
+  "fireflies": {
+   "x": 0,
+   "y": 58,
+   "w": 2,
+   "h": 2,
+   "dx": 3,
+   "ax": 1,
+   "ay": 1,
+   "frames": 5,
+   "frameMs": 260,
+   "source": "ART fx-r1 firefly_1 firefly_2 firefly_3 firefly_4 firefly_5 (small)"
+  }
+ },
+ "provenance": {
+  "lane": "PACK from ART",
+  "take": "fx-r1",
+  "jobId": "3da8be9f-907b-43c1-b7d8-b538622684b2",
+  "gens": 0,
+  "masters": "art-prep/realm/mapkit/shared/fx/small",
+  "sha256": "4db1e03e60f479d9efde876550627ad0420f39ffaccd1e8e64d23788c089c9e1"
+ }
+}

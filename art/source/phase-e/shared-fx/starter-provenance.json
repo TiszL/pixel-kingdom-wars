@@ -1,0 +1,50 @@
+{
+  "schemaVersion": 1,
+  "sourceZipSha256": "7a381d75251b280459dda151dba7d2ad7f3d1b8945d01af0f847528436e05aa3",
+  "docsCommit": "11504e2316bd33a6d092f87b8d114f159aa0249c",
+  "sourceIndexSha256": "04f96c922ca04d93f1bf760e6385713908b971ce82c3aa022602f1fa199e2181",
+  "scope": "starter source packing only; no application or art acceptance",
+  "files": [
+    {
+      "path": "shared-fx/departure/atlas.png",
+      "sha256": "1b7a3030ce036bf13808638668b5dc092e102467cf47bacc389e11049f5109e1",
+      "bytes": 20374,
+      "size": [
+        512,
+        64
+      ]
+    },
+    {
+      "path": "shared-fx/departure/frames/frame-00.png",
+      "sha256": "b55b20e604d6970a8d8ba262903d14fc83809180e89de9bb9714293d33e791e8",
+      "bytes": 3594,
+      "size": [
+        64,
+        64
+      ]
+    },
+    {
+      "path": "shared-fx/return/atlas.png",
+      "sha256": "16128aba5fd6e67a4c2c14322180063fa6882b5d33ebf30dad044069c6680ab5",
+      "bytes": 4066,
+      "size": [
+        512,
+        64
+      ]
+    },
+    {
+      "path": "shared-fx/return/frames/frame-00.png",
+      "sha256": "16811bab6d256c2a2d69290ba797e4de00ac96d86486d1555bad01c8dba3808c",
+      "bytes": 1030,
+      "size": [
+        64,
+        64
+      ]
+    },
+    {
+      "path": "shared-fx/manifest.json",
+      "sha256": "db6a01d7d55646b2e23f5fbe5d1cd976fc97e3386f91502f76a4253ffece4f34",
+      "bytes": 18650
+    }
+  ]
+}

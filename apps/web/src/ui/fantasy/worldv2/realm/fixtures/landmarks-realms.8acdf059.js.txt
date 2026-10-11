@@ -1,0 +1,12 @@
+// The realm lines of the concept globe's landmarks.js REALM_INFO at 8acdf059 (verbatim), read by ui.cases.mjs only
+// until the web globe (lane L3, worldv2/globe/) carries its own REALM_INFO; the test then reads that instead.
+export const REALM_INFO = {
+  frostveil: { numeral: 'I', nav: 'FROZEN NORTH', epithet: 'The sleeping north', lore: 'Beneath the blue ice, the bells of a buried kingdom still ring.', landscape: 'Ice shelves · frozen ridges · buried ruins', color: '#afdae1', accent: '#8fe3ff' },
+  elderwood: { numeral: 'II', nav: 'ANCIENT FOREST', epithet: 'Where the old roots remember', lore: 'Strongholds vanish beneath a canopy of silver-root trees.', landscape: 'Deep forest · ancient groves · green strongholds', color: '#8eb775', accent: '#86ec6c' },
+  sunscar: { numeral: 'III', nav: 'AMBER DESERT', epithet: 'Under the broken sun', lore: 'A sea of amber dunes surrounds the shattered observatories.', landscape: 'Amber dunes · sandstone ridges · lost observatories', color: '#dfb36d', accent: '#ffbf4d' },
+  crownlands: { numeral: 'IV', nav: 'TEMPERATE HEART', epithet: 'The roads between kingdoms', lore: 'Fields and ruined causeways bind the scattered crowns.', landscape: 'Rolling fields · river valleys · fallen watchtowers', color: '#c4b67f', accent: '#ffd65c' },
+  'seeker-reach': { numeral: 'V', nav: 'BEACON FRONTIER', epithet: 'Where the beacons awaken', lore: 'Violet terraces rise above sheltered mint-blue bays.', landscape: 'Violet terraces · crystal rivers · ancient beacons', color: '#b98ce9', accent: '#c99dff' },
+  stormcairn: { numeral: 'VI', nav: 'STORM HIGHLANDS', epithet: 'The thunder beyond the horizon', lore: 'Storm-worn cairns mark the passes between green coastal terraces and a snowy northern range.', landscape: 'Storm-weathered highlands · green coastal terraces · snowy northern range', color: '#99b6c2', accent: '#9dbcff' },
+  thornwake: { numeral: 'VII', nav: 'WESTERN JUNGLE', epithet: 'The jungle beyond the western sea', lore: 'Waterfalls disappear into layers of fern and towering jungle.', landscape: 'Layered jungle · fern clearings · waterfalls · overgrown ruins', color: '#9ca978', accent: '#c6e65a' },
+  cinderfall: { numeral: 'VIII', nav: 'OBSIDIAN ASHLANDS', epithet: 'Where the last embers sleep', lore: 'Ochre ash drifts through weathered ruins beneath ridges of black obsidian.', landscape: 'Ochre ashlands · obsidian ridges · weathered ruins · hardy vegetation', color: '#cf946d', accent: '#ff8a4c' },
+};

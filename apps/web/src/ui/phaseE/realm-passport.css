@@ -1,0 +1,40 @@
+/* Owned Passport layout only; game HUD and common dialog chrome are unchanged. */
+.sk-passport { min-width:0; color:var(--sk-text); }
+.sk-passport p { line-height:1.35; }
+.sk-passport-intro { margin:0 0 20px; color:var(--sk-textDim); }
+.sk-passport-filters { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:8px; }
+.sk-passport-filters button { min-width:0; min-height:48px; padding:10px 8px; border:1px solid var(--sk-borderLt); background:var(--sk-surface); color:var(--sk-text); font:inherit; cursor:pointer; }
+.sk-passport-filters button[aria-pressed=true] { border-color:var(--sk-goldHi); color:var(--sk-goldHi); box-shadow:inset 0 -3px var(--sk-goldHi); }
+.sk-passport button:focus-visible,.sk-passport summary:focus-visible { outline:2px solid var(--sk-goldHi); outline-offset:3px; }
+.sk-passport-toolbar { display:flex; align-items:center; justify-content:space-between; gap:14px; margin:14px 0 20px; }
+.sk-passport-toolbar p { color:var(--sk-textDim); margin:0; font-size:18px; }
+.sk-passport-toolbar button,.sk-passport-notice button { min-height:44px; flex-shrink:0; }
+.sk-passport-card,.sk-passport-current { padding:18px; margin:0 0 14px; border:1px solid var(--sk-borderLt); background:var(--sk-surface); min-width:0; }
+.sk-passport-card-heading { display:flex; gap:12px; align-items:flex-start; justify-content:space-between; }
+.sk-passport h3,.sk-passport h4 { margin:0; font-weight:400; color:var(--sk-goldHi); }
+.sk-passport h3 { font-size:28px; line-height:1.1; }
+.sk-passport h4 { font-size:23px; }
+.sk-passport-eyebrow { margin:0 0 6px; font-size:16px; color:var(--sk-textDim); }
+.sk-passport-badge { padding:4px 8px; border:1px solid var(--sk-borderLt); color:var(--sk-goldHi); font-size:17px; white-space:nowrap; }
+.sk-passport-route { margin:10px 0 16px; font-size:23px; }
+.sk-passport-facts { display:grid; gap:10px; margin:16px 0; }
+.sk-passport-facts > div { display:flex; flex-wrap:wrap; gap:4px 12px; align-items:baseline; justify-content:space-between; }
+.sk-passport dt { color:var(--sk-textDim); }
+.sk-passport dd { margin:0; overflow-wrap:anywhere; }
+.sk-passport summary { min-height:44px; padding:12px 0; box-sizing:border-box; cursor:pointer; color:var(--sk-goldHi); }
+.sk-passport details { border-top:1px solid var(--sk-borderLt); margin-top:14px; }
+.sk-passport-record { display:grid; gap:12px; margin:10px 0; font-size:17px; }
+.sk-passport-record > div { display:grid; gap:3px; }
+.sk-passport-record dd,.sk-passport-proof { overflow-wrap:anywhere; }
+.sk-passport-proof { padding-left:24px; font-size:17px; display:grid; gap:12px; }
+.sk-passport-totals { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:18px; margin-top:18px; }
+.sk-passport-totals > section { min-width:0; padding:12px; border:1px solid var(--sk-borderLt); }
+.sk-passport-totals dl { display:grid; gap:12px; margin:14px 0; }
+.sk-passport-totals dd { font-size:30px; color:var(--sk-goldHi); }
+.sk-passport-totals p,.sk-passport-muted { font-size:17px; color:var(--sk-textDim); }
+.sk-passport-notice,.sk-passport-empty { padding:22px 16px; border:1px solid var(--sk-borderLt); margin:14px 0; }
+.sk-passport-empty { text-align:center; }
+.sk-passport-empty h3 { margin-top:12px; }
+.sk-passport-footnote { padding-top:14px; border-top:1px solid var(--sk-borderLt); font-size:17px; color:var(--sk-textDim); }
+@media(max-width:520px) { .sk-passport-totals { grid-template-columns:1fr; gap:10px; } .sk-passport-card,.sk-passport-current { padding:14px; } .sk-passport-filters { gap:5px; } .sk-passport-filters button { padding:8px 4px; font-size:18px; } .sk-passport-toolbar { align-items:flex-start; } }
+@media(max-width:360px) { .sk-passport-toolbar { flex-direction:column; gap:10px; } .sk-passport-toolbar button { width:100%; } .sk-passport-card-heading { flex-wrap:wrap; } }

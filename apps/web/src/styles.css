@@ -1,0 +1,145 @@
+@import 'tailwindcss';
+
+/* The installed Solana-Mobile pack must retain the exact UI typography while
+   offline. Vite emits the original VT323 v18 Latin face as a content-hashed
+   /assets URL, which the verified pack downloads before Phaser mounts. */
+@font-face {
+  font-family: 'VT323';
+  src: url('./assets/fonts/VT323-latin-v18.woff2') format('woff2');
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+/* SHARDKEEP UI palette — the 16-color art palette + page chrome
+   (UI Screens.html spec; docs/research/read-ui-screens.md). */
+:root {
+  --sk-font-game: 'VT323', monospace;
+  /* One face everywhere (owner 2026-09-17: "font still not loaded" was the
+     deliberate system sans in body copy, not a missing download). VT323 at
+     16px is as legible as the sans was at 14px, so body sizes moved with it. */
+  --sk-font-body: 'VT323', monospace;
+  --sk-bg: #100e14;
+  --sk-surface: #1a171e;
+  --sk-card: #14121a;
+  --sk-border: #3d3833;
+  --sk-border-lt: #6b6354;
+  --sk-text: #efe8d6;
+  --sk-text-dim: #c4bba4;
+  --sk-text-faint: #9c937f;
+  --sk-gold: #e3ae3c;
+  --sk-gold-hi: #f4d77b;
+  --sk-gold-dp: #9c6f1e;
+  --sk-danger: #c75a2e;
+  --sk-blood: #8f2c2c;
+  --sk-success: #8cb36e;
+  --sk-pine: #567a4b;
+  --sk-link: #bbd0d6;
+}
+
+html,
+body,
+#root {
+  margin: 0;
+  height: 100%;
+  background: var(--sk-bg);
+  color: var(--sk-text);
+  font-family: 'VT323', monospace;
+  font-size: 20px;
+  overscroll-behavior: none;
+  -webkit-font-smoothing: none;
+}
+
+/* Only the game's own scroll panels scroll. A focus-induced document scroll
+   must not displace the entire canvas and leave a blank strip underneath it. */
+html,
+body {
+  width: 100%;
+  overflow: hidden;
+}
+
+#root {
+  position: fixed;
+  inset: 0;
+  height: 100%;
+  height: var(--game-viewport-frame-height, 100dvh);
+  overflow: hidden;
+}
+
+/* The Phaser canvas sits underneath; the React overlay must never eat its
+   input except on explicitly interactive elements (research: engine-pipeline §2). */
+#overlay-root {
+  position: absolute;
+  inset: 0;
+  bottom: var(--game-ui-bottom-clearance, 0px);
+  pointer-events: none;
+  z-index: 1000;
+}
+#overlay-root .interactive {
+  pointer-events: auto;
+}
+
+canvas {
+  image-rendering: pixelated;
+  touch-action: none;
+}
+
+/* Unknown work stays visibly active without inventing a percentage. Transform
+   animation avoids layout work and is removed for the game's/OS motion setting. */
+.sk-loading-meter[data-indeterminate] > div {
+  animation: sk-loading-travel 1.4s ease-in-out infinite alternate;
+}
+@keyframes sk-loading-travel {
+  from { transform: translateX(0); }
+  to { transform: translateX(310%); }
+}
+.sk-loading-meter[data-indeterminate][data-reduced-motion] > div { animation: none; transform: translateX(150%); }
+@media (prefers-reduced-motion: reduce) {
+  .sk-loading-meter[data-indeterminate] > div { animation: none; transform: translateX(150%); }
+}
+
+/* The game reads as an app, not a document: stray long-presses and drags must
+   not highlight HUD labels (owner 2026-08-15, M23 a3). Selection stays ON for
+   anything a player legitimately copies — form fields, and data marked
+   .copyable (wallet addresses, tx signatures, invite codes, chat text).
+   Form-field carve-out is load-bearing on Safari: inheriting
+   -webkit-user-select:none onto an <input> breaks in-field selection. */
+body {
+  -webkit-user-select: none;
+  user-select: none;
+  -webkit-touch-callout: none;
+}
+input,
+textarea,
+[contenteditable] {
+  -webkit-user-select: text;
+  user-select: text;
+}
+.copyable {
+  -webkit-user-select: text;
+  user-select: text;
+}
+/* One tap selects the whole value — the pattern the deposit address and admin
+   invite code already used inline; class form so new surfaces stay consistent. */
+.copyable-all {
+  -webkit-user-select: all;
+  user-select: all;
+}
+
+/* Map screens (maps visual pass): tile/marker sprites carry absolute world
+   coords inside a shrink-wrapped (0-width) camera-transform layer, where
+   Tailwind preflight's `img { max-width: 100% }` collapses every img to 0px.
+   The layer opts its imgs out — sizes come from the width/height attrs. */
+.map-world img {
+  max-width: none;
+}
+
+/* Landscape HUD strip: one fixed-height row that scrolls sideways when the
+   pills outgrow it. Flex items shrink by DEFAULT, so without this the row
+   never overflows — it compresses every pill below its content width and
+   clips the text inside. Observed live at 915px: the KEEP balance rendered
+   as "7,038,87", a currency value cut off mid-number, and BUILDERS/LAYOUT
+   ran into each other. Pills keep their intrinsic width; the row scrolls. */
+.hud-strip > * {
+  flex-shrink: 0;
+}

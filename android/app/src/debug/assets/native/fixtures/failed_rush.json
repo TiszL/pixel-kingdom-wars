@@ -1,0 +1,390 @@
+{
+  "schemaVersion": 1,
+  "sourceCommit": "427381a2adf934bbcc902baefc207a655b185eb6",
+  "simVersion": 18,
+  "snapshot": {
+    "keepLevel": 1,
+    "buildings": [
+      {
+        "id": "keep",
+        "type": "keep",
+        "level": 3,
+        "tx": 8,
+        "ty": 8
+      },
+      {
+        "id": "c1",
+        "type": "cannon",
+        "level": 3,
+        "tx": 6,
+        "ty": 7
+      },
+      {
+        "id": "c2",
+        "type": "cannon",
+        "level": 3,
+        "tx": 10,
+        "ty": 7
+      },
+      {
+        "id": "a1",
+        "type": "archertower",
+        "level": 3,
+        "tx": 8,
+        "ty": 10
+      },
+      {
+        "id": "mortar",
+        "type": "mortar",
+        "level": 3,
+        "tx": 5,
+        "ty": 11
+      },
+      {
+        "id": "trap",
+        "type": "spiketrap",
+        "level": 1,
+        "tx": 3,
+        "ty": 8
+      }
+    ],
+    "surplusShards": 1000
+  },
+  "orders": {
+    "deploys": [
+      {
+        "troop": "bowman",
+        "tx": 0,
+        "ty": 8,
+        "tMs": 0
+      },
+      {
+        "troop": "bowman",
+        "tx": 0,
+        "ty": 9,
+        "tMs": 100
+      },
+      {
+        "troop": "plunderer",
+        "tx": 0,
+        "ty": 7,
+        "tMs": 200
+      }
+    ]
+  },
+  "seed": 57005,
+  "options": {},
+  "stars": 0,
+  "destructionPct": 0,
+  "keepDestroyed": false,
+  "vaultDestroyed": false,
+  "mineDestroyed": false,
+  "victory": false,
+  "buildings": [
+    {
+      "id": "keep",
+      "type": "keep",
+      "hp": 1875,
+      "maxHp": 1875,
+      "destroyed": false
+    },
+    {
+      "id": "c1",
+      "type": "cannon",
+      "hp": 656,
+      "maxHp": 656,
+      "destroyed": false
+    },
+    {
+      "id": "c2",
+      "type": "cannon",
+      "hp": 656,
+      "maxHp": 656,
+      "destroyed": false
+    },
+    {
+      "id": "a1",
+      "type": "archertower",
+      "hp": 563,
+      "maxHp": 563,
+      "destroyed": false
+    },
+    {
+      "id": "mortar",
+      "type": "mortar",
+      "hp": 460,
+      "maxHp": 469,
+      "destroyed": false
+    },
+    {
+      "id": "trap",
+      "type": "spiketrap",
+      "hp": 0,
+      "maxHp": 0,
+      "destroyed": false
+    }
+  ],
+  "ticks": 29,
+  "events": [
+    {
+      "t": 0,
+      "e": "deploy",
+      "id": 0,
+      "troop": "bowman",
+      "x": 128,
+      "y": 2176
+    },
+    {
+      "t": 0,
+      "e": "pos",
+      "id": 0,
+      "x": 158,
+      "y": 2193
+    },
+    {
+      "t": 0,
+      "e": "fire",
+      "id": "c1",
+      "target": 0,
+      "proj": "cannonball",
+      "ix": 158,
+      "iy": 2193,
+      "releaseOffsetMs": 143,
+      "flightMs": 950,
+      "impactOffsetTicks": 11
+    },
+    {
+      "t": 0,
+      "e": "fire",
+      "id": "mortar",
+      "target": 0,
+      "proj": "shell",
+      "ix": 158,
+      "iy": 2193,
+      "releaseOffsetMs": 143,
+      "flightMs": 1235,
+      "impactOffsetTicks": 14
+    },
+    {
+      "t": 1,
+      "e": "deploy",
+      "id": 1,
+      "troop": "bowman",
+      "x": 128,
+      "y": 2432
+    },
+    {
+      "t": 2,
+      "e": "deploy",
+      "id": 2,
+      "troop": "plunderer",
+      "x": 128,
+      "y": 1920
+    },
+    {
+      "t": 5,
+      "e": "pos",
+      "id": 0,
+      "x": 308,
+      "y": 2276
+    },
+    {
+      "t": 5,
+      "e": "pos",
+      "id": 1,
+      "x": 293,
+      "y": 2487
+    },
+    {
+      "t": 5,
+      "e": "pos",
+      "id": 2,
+      "x": 312,
+      "y": 1920
+    },
+    {
+      "t": 8,
+      "e": "fire",
+      "id": "a1",
+      "target": 1,
+      "proj": "arrow",
+      "ix": 392,
+      "iy": 2520,
+      "releaseOffsetMs": 0,
+      "flightMs": 420,
+      "impactOffsetTicks": 5
+    },
+    {
+      "t": 10,
+      "e": "pos",
+      "id": 0,
+      "x": 458,
+      "y": 2359
+    },
+    {
+      "t": 10,
+      "e": "pos",
+      "id": 1,
+      "x": 458,
+      "y": 2542
+    },
+    {
+      "t": 10,
+      "e": "pos",
+      "id": 2,
+      "x": 542,
+      "y": 1920
+    },
+    {
+      "t": 11,
+      "e": "attackRun",
+      "id": 1,
+      "side": "attacker",
+      "troop": "bowman",
+      "targetKind": "building",
+      "target": "mortar",
+      "ix": 1280,
+      "iy": 2816,
+      "mode": "projectile",
+      "technique": "arrow",
+      "cycleMs": 629,
+      "releaseOffsetMs": 429,
+      "cycleTicks": 7,
+      "releaseOffsetTicks": 5,
+      "impactOffsetsTicks": [
+        14
+      ],
+      "cadenceTicks": 7,
+      "count": 1
+    },
+    {
+      "t": 11,
+      "e": "hit",
+      "target": 0,
+      "dmg": 99
+    },
+    {
+      "t": 11,
+      "e": "troopDeath",
+      "id": 0
+    },
+    {
+      "t": 12,
+      "e": "fire",
+      "id": "c1",
+      "target": 2,
+      "proj": "cannonball",
+      "ix": 634,
+      "iy": 1920,
+      "releaseOffsetMs": 143,
+      "flightMs": 950,
+      "impactOffsetTicks": 11
+    },
+    {
+      "t": 13,
+      "e": "fire",
+      "id": "a1",
+      "target": 1,
+      "proj": "arrow",
+      "ix": 458,
+      "iy": 2542,
+      "releaseOffsetMs": 0,
+      "flightMs": 420,
+      "impactOffsetTicks": 5
+    },
+    {
+      "t": 13,
+      "e": "hit",
+      "target": 1,
+      "dmg": 26
+    },
+    {
+      "t": 15,
+      "e": "pos",
+      "id": 2,
+      "x": 772,
+      "y": 1920
+    },
+    {
+      "t": 18,
+      "e": "attackRun",
+      "id": 1,
+      "side": "attacker",
+      "troop": "bowman",
+      "targetKind": "building",
+      "target": "mortar",
+      "ix": 1280,
+      "iy": 2816,
+      "mode": "projectile",
+      "technique": "arrow",
+      "cycleMs": 629,
+      "releaseOffsetMs": 429,
+      "cycleTicks": 7,
+      "releaseOffsetTicks": 5,
+      "impactOffsetsTicks": [
+        14
+      ],
+      "cadenceTicks": 7,
+      "count": 1
+    },
+    {
+      "t": 18,
+      "e": "fire",
+      "id": "a1",
+      "target": 1,
+      "proj": "arrow",
+      "ix": 458,
+      "iy": 2542,
+      "releaseOffsetMs": 0,
+      "flightMs": 420,
+      "impactOffsetTicks": 5
+    },
+    {
+      "t": 18,
+      "e": "hit",
+      "target": 1,
+      "dmg": 26
+    },
+    {
+      "t": 18,
+      "e": "troopDeath",
+      "id": 1
+    },
+    {
+      "t": 20,
+      "e": "pos",
+      "id": 2,
+      "x": 1002,
+      "y": 1920
+    },
+    {
+      "t": 23,
+      "e": "fire",
+      "id": "a1",
+      "target": 2,
+      "proj": "arrow",
+      "ix": 1140,
+      "iy": 1920,
+      "releaseOffsetMs": 0,
+      "flightMs": 420,
+      "impactOffsetTicks": 5
+    },
+    {
+      "t": 23,
+      "e": "hit",
+      "target": 2,
+      "dmg": 105
+    },
+    {
+      "t": 23,
+      "e": "troopDeath",
+      "id": 2
+    },
+    {
+      "t": 25,
+      "e": "hit",
+      "target": "mortar",
+      "dmg": 10
+    }
+  ]
+}

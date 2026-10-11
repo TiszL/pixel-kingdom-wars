@@ -1,0 +1,52 @@
+/* Owned equipment surface: existing game palette and typography, no global HUD overrides. */
+.sk-equipment-panel { display:flex; flex-direction:column; height:min(760px,85dvh); min-height:0; color:var(--sk-text); background:var(--sk-panel); font:20px/1.3 'VT323',monospace; }
+.sk-equipment-header { display:flex; align-items:center; gap:12px; flex:none; padding:14px 18px; }
+.sk-equipment-header h2 { margin:0; color:var(--sk-goldHi); font-size:30px; line-height:1.05; }
+.sk-equipment-header p { margin:0 0 3px; font-size:15px; letter-spacing:2px; color:var(--sk-textDim); }
+.sk-equipment-close { margin-left:auto; align-self:center; width:44px; height:44px; flex:none; border:1px solid var(--sk-border); background:var(--sk-surface); color:var(--sk-gold); font:32px 'VT323',monospace; cursor:pointer; }
+.sk-equipment-nav { display:flex; flex:none; padding:0 12px; gap:4px; border-bottom:2px solid var(--sk-border); background:var(--sk-surface); }
+.sk-equipment-nav button { flex:1; padding:10px 4px; border:0; border-bottom:3px solid transparent; background:transparent; font:21px 'VT323',monospace; color:var(--sk-textDim); min-height:44px; text-transform:capitalize; cursor:pointer; }
+.sk-equipment-nav button[aria-pressed=true] { color:var(--sk-goldHi); border-bottom-color:var(--sk-gold); background:rgba(208,169,79,.1); }
+.sk-equipment-body { min-height:0; overflow-y:auto; overscroll-behavior:contain; scrollbar-gutter:stable; padding:18px; display:flex; flex-direction:column; gap:18px; }
+.sk-equipment-body p { margin:0; }
+.sk-equipment-body h3 { margin:0; color:var(--sk-goldHi); font-size:26px; }
+.sk-equipment-body h4 { margin:0; color:var(--sk-goldHi); font-size:26px; text-transform:capitalize; }
+.sk-equipment-body section { display:grid; gap:14px; }
+.sk-equipment-toolbar { display:flex; justify-content:space-between; align-items:center; gap:12px; font-size:18px; color:var(--sk-textDim); }
+.sk-equipment-toolbar button { flex:none; min-height:44px; }
+.sk-equipment-recipe-grid,.sk-equipment-tools { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:14px; }
+.sk-equipment-card { display:grid; gap:12px; padding:16px; border:1px solid var(--sk-border); background:linear-gradient(145deg,rgba(206,169,94,.07),transparent),var(--sk-surface); box-shadow:inset 0 0 0 2px rgba(255,255,255,.025),0 2px 0 rgba(0,0,0,.25); }
+.sk-equipment-eyebrow { color:var(--sk-textDim); font-size:15px; letter-spacing:1.5px; }
+.sk-equipment-muted { color:var(--sk-textDim); font-size:18px; }
+.sk-equipment-stock { display:flex; flex-direction:column; padding:10px 0; border-block:1px solid var(--sk-border); }
+.sk-equipment-stock strong { color:var(--sk-goldHi); font-size:24px; }
+.sk-equipment-stock span { color:var(--sk-textDim); font-size:18px; }
+.sk-equipment-costs { list-style:none; margin:0; padding:0; display:grid; gap:6px; }
+.sk-equipment-costs li { display:flex; flex-direction:column; text-transform:capitalize; }
+.sk-equipment-costs small { color:var(--sk-textDim); font-size:18px; font-weight:normal; }
+.sk-equipment-tool { display:grid; text-align:left; gap:6px; border:2px solid var(--sk-border); padding:14px; background:var(--sk-surface); font:18px/1.25 'VT323',monospace; color:var(--sk-textDim); cursor:pointer; }
+.sk-equipment-tool strong { color:var(--sk-text); font-size:24px; }
+.sk-equipment-tool[aria-pressed=true] { border-color:var(--sk-gold); background:rgba(208,169,79,.1); }
+.sk-equipment-tool[aria-pressed=true] strong { color:var(--sk-goldHi); }
+.sk-equipment-terms { display:grid; gap:8px; }
+.sk-equipment-stats { display:flex; flex-wrap:wrap; gap:10px 24px; padding:10px 0; border-block:1px solid var(--sk-border); }
+.sk-equipment-stats > div { display:flex; flex-direction:column; }
+.sk-equipment-stats span { text-transform:capitalize; color:var(--sk-textDim); font-size:18px; }
+.sk-equipment-stats strong { color:var(--sk-goldHi); font-size:26px; }
+.sk-equipment-body select { display:block; box-sizing:border-box; padding:8px; border:1px solid var(--sk-border); margin-top:6px; }
+.sk-equipment-body summary { cursor:pointer; min-height:44px; padding:8px 0; box-sizing:border-box; color:var(--sk-gold); }
+.sk-equipment-body details p { overflow-wrap:anywhere; margin-bottom:8px; }
+.sk-equipment-notice,.sk-equipment-body [role=alert] { padding:12px; border-left:3px solid var(--sk-gold); background:rgba(208,169,79,.08); }
+.sk-equipment-history { display:flex; justify-content:space-between; gap:12px; text-align:left; padding:14px; border:1px solid var(--sk-border); background:var(--sk-surface); color:var(--sk-text); font:20px 'VT323',monospace; cursor:pointer; }
+.sk-equipment-history > span:first-child { display:grid; gap:6px; text-transform:capitalize; }
+.sk-equipment-history > span:first-child > span { color:var(--sk-textDim); font-size:18px; }
+.sk-equipment-history > span:last-child { color:var(--sk-gold); align-self:center; }
+.sk-equipment-panel :focus-visible { outline:2px solid var(--sk-goldHi); outline-offset:3px; }
+.sk-equipment-panel button:disabled { cursor:default; opacity:.55; }
+@media(max-width:520px) { .sk-equipment-header { padding:12px; gap:8px; } .sk-equipment-header h2 { font-size:24px; } .sk-equipment-body { padding:12px; } .sk-equipment-recipe-grid { grid-template-columns:1fr; } .sk-equipment-tools { gap:8px; } .sk-equipment-tool { padding:10px; } .sk-equipment-materials > div { grid-template-columns:repeat(2,minmax(0,1fr)); } .sk-equipment-nav { padding:0 4px; } .sk-equipment-nav button { font-size:19px; } }
+
+.sk-equipment-recovery { display:flex; flex-wrap:wrap; gap:8px 18px; }
+.sk-equipment-recovery button { min-height:44px; padding:6px 0; border:0; background:transparent; color:var(--sk-gold); font:20px 'VT323',monospace; text-decoration:underline; text-underline-offset:4px; cursor:pointer; }
+
+.sk-equipment-material-choice { display:flex; align-items:center; justify-content:space-between; gap:12px; color:var(--sk-goldHi); }
+.sk-equipment-material-choice select { min-height:44px; max-width:65%; min-width:0; margin:0; background:var(--sk-surface); color:var(--sk-text); font:20px 'VT323',monospace; text-transform:capitalize; }

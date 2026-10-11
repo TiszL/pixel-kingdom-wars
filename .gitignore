@@ -1,0 +1,56 @@
+# OS / editor
+.DS_Store
+.thumbnail
+.idea/
+.vscode/
+
+# design iteration scraps & derived analysis (not part of the product)
+scraps/
+.reports/
+# Local owner variant not yet selected as an authoritative website pack.
+/website rework v2/
+
+# deps & builds
+node_modules/
+dist/
+build/
+coverage/
+*.tsbuildinfo
+
+# Runtime atlases, audio and brand files under apps/web/public/{atlas,audio,brand}
+# are committed in this repository (generated output of the private art pipeline).
+
+
+# anchor / rust
+programs/target/
+target/
+.anchor/
+test-ledger/
+
+# env & secrets — NEVER commit keypairs
+.env
+.env.*
+!.env.example
+!infra/.env.prod.example
+*.keypair.json
+*-keypair.json
+*_keypair.json
+infra/keys/
+infra/policy-signer-state/
+# Android signing and submission artifacts must stay outside every Git path.
+*.apk
+*.aab
+*.keystore
+*.jks
+/mobile/dappstore/
+*.p12
+*.pfx
+
+# logs
+*.log
+
+
+# Production env — lives on the server only.
+infra/.env.prod
+infra/.env.local
+infra/backups/

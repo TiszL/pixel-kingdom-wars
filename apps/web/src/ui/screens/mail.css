@@ -1,0 +1,184 @@
+/* KEEP MAIL — pixel design system (owner 2026-08-16 "mailbox too").
+ * Palette + bevels mirror ui/primitives.tsx: Chip cards (#14121a on 2px
+ * #3d3833), Pill relief insets, Btn gold bevel (#f4d77b top / #9c6f1e deep),
+ * uppercase gold kickers. Class names and box metrics are unchanged so
+ * mail.tsx behavior, tests, and 375px layout stay intact. */
+
+.mail-tabs {
+  display: flex;
+  gap: 4px;
+  padding: 8px 10px 0;
+  background: #14121a;
+}
+
+.mail-tabs > button,
+.mail-compose-mode > button {
+  flex: 1;
+  min-height: 44px;
+}
+
+.mail-list,
+.mail-detail,
+.mail-compose {
+  width: min(760px, 100%);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Inbox rows are Chips: dark card, 2px border, pixel relief. */
+.mail-row {
+  appearance: none;
+  width: 100%;
+  min-height: 76px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 11px 13px;
+  color: #c4bba4;
+  background: #14121a;
+  border: 2px solid #3d3833;
+  box-shadow: inset 0 1px 0 rgba(244, 215, 123, .07), inset 0 -3px 0 rgba(0, 0, 0, .45);
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+/* Unread = the game's active-state gold accent: full gold border + rail. */
+.mail-row.unread {
+  color: #efe8d6;
+  border-color: #e3ae3c;
+  background: linear-gradient(90deg, rgba(227, 174, 60, .08), rgba(227, 174, 60, 0) 60%), #14121a;
+  box-shadow: inset 2px 0 0 #9c6f1e, inset 0 1px 0 rgba(244, 215, 123, .12), inset 0 -3px 0 rgba(0, 0, 0, .45);
+}
+
+.mail-row-mark { color: #9c6f1e; font-size: 22px; }
+.mail-row.unread .mail-row-mark { color: #f4d77b; }
+.mail-row-copy { min-width: 0; flex: 1; display: flex; flex-direction: column; gap: 4px; }
+.mail-row-title {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 21px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+.mail-row-meta { color: #9c937f; font-size: 14px; letter-spacing: 1px; }
+.mail-kicker { color: #9c6f1e; font-size: 14px; letter-spacing: 1px; text-transform: uppercase; }
+
+/* CLAIM tag wears the gold Btn bevel. */
+.mail-pending {
+  color: #1a171e;
+  background: #e3ae3c;
+  border: 2px solid #1a171e;
+  box-shadow: inset 0 2px 0 #f4d77b, inset 0 -3px 0 #9c6f1e;
+  padding: 4px 8px 5px;
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+
+.mail-empty { padding: 28px 12px; color: #9c937f; text-align: center; font-size: 18px; letter-spacing: 1px; }
+
+.mail-error {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 10px;
+  color: #f0aa88;
+  background: #26171a;
+  border: 2px solid #8f2c2c;
+  box-shadow: inset 0 -2px 0 rgba(0, 0, 0, .45);
+  font-size: 16px;
+}
+
+.mail-detail header,
+.mail-rewards {
+  padding: 14px;
+  background: #14121a;
+  border: 2px solid #3d3833;
+  box-shadow: inset 0 1px 0 rgba(244, 215, 123, .07), inset 0 -3px 0 rgba(0, 0, 0, .45);
+}
+
+/* Panel9's twin gold rivets on the read-view header. */
+.mail-detail header { position: relative; }
+.mail-detail header::before,
+.mail-detail header::after {
+  content: '';
+  position: absolute;
+  top: 6px;
+  width: 6px;
+  height: 6px;
+  background: #e3ae3c;
+}
+.mail-detail header::before { left: 6px; }
+.mail-detail header::after { right: 6px; }
+
+.mail-detail h2 {
+  margin: 4px 0 0;
+  color: #f4d77b;
+  font-size: 28px;
+  font-weight: normal;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  overflow-wrap: anywhere;
+}
+.mail-body {
+  min-height: 140px;
+  padding: 18px 14px;
+  color: #efe8d6;
+  background: #100e14;
+  border: 2px solid #3d3833;
+  box-shadow: inset 0 2px 0 rgba(0, 0, 0, .55);
+  font-size: 19px;
+  line-height: 1.35;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
+.mail-rewards { display: flex; flex-wrap: wrap; gap: 8px; }
+.mail-rewards .mail-kicker { width: 100%; }
+.mail-reward {
+  padding: 8px 10px;
+  color: #f4d77b;
+  background: #2a241b;
+  border: 2px solid #9c6f1e;
+  box-shadow: inset 0 1px 0 rgba(244, 215, 123, .14), inset 0 -2px 0 rgba(0, 0, 0, .45);
+  letter-spacing: 1px;
+}
+.mail-state { width: 100%; color: #9c937f; font-size: 14px; letter-spacing: 1px; }
+.mail-state.claimed { color: #8cb36e; }
+.mail-state.expired { color: #c75a2e; }
+.mail-actions { display: flex; flex-wrap: wrap; gap: 8px; }
+.mail-actions > button { flex: 1; min-width: 180px; }
+
+.mail-compose-mode { display: flex; gap: 4px; }
+.mail-field { display: flex; flex-direction: column; gap: 5px; color: #9c937f; font-size: 15px; letter-spacing: 1px; }
+.mail-field input,
+.mail-field textarea,
+.mail-field select {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 10px;
+  color: #efe8d6;
+  background: #100e14;
+  border: 2px solid #3d3833;
+  border-radius: 0;
+  box-shadow: inset 0 2px 0 rgba(0, 0, 0, .55);
+  font: 18px inherit;
+  resize: vertical;
+}
+
+.mail-field input:focus,
+.mail-field textarea:focus,
+.mail-field select:focus { outline: 2px solid #e3ae3c; outline-offset: 1px; }
+.mail-attachment-editor { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; border: 2px solid #3d3833; padding: 12px; }
+.mail-attachment-editor legend { color: #e3ae3c; padding: 0 6px; letter-spacing: 1px; }
+.mail-compose-note { color: #9c937f; font-size: 14px; line-height: 1.35; }
+
+@media (max-width: 520px) {
+  .mail-attachment-editor { grid-template-columns: 1fr; }
+  .mail-row { gap: 8px; padding: 9px; }
+  .mail-pending { font-size: 12px; }
+}

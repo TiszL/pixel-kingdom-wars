@@ -1,0 +1,17 @@
+/* Icon.css — <PkIcon>. The box is the design size; the art inside is a whole device scale, centred (it may overhang
+ * the box by under half a step, like Android). Glyph fills come from the tint custom property set inline. */
+.pk-icon {
+  position: relative;
+  display: inline-flex;
+  flex: none;
+  align-items: center;
+  justify-content: center;
+  overflow: visible;
+  vertical-align: middle;
+}
+.pk-icon__img { display: block; flex: none; }
+.pk-icon__glyph { display: block; flex: none; overflow: visible; }
+.pk-icon__t { fill: var(--pk-icon-tint, var(--pk-text)); }
+/* KIT drawGlyph: highlight = lerp(tint, white, 0.45); white is the label stand-in (kitBase.css bridge gap). */
+.pk-icon__h { fill: color-mix(in srgb, var(--pk-icon-tint, var(--pk-text)) 55%, var(--pk-k-label)); }
+.pk-icon__x { fill: var(--pk-ink); }

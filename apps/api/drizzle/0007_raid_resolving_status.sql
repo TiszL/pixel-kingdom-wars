@@ -1,0 +1,1 @@
+ALTER TYPE "public"."raid_status" ADD VALUE 'resolving' BEFORE 'resolved';

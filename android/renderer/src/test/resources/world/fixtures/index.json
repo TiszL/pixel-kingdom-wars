@@ -1,0 +1,98 @@
+{
+  "schema": 1,
+  "synthetic": true,
+  "generator": "tools/world-fixtures.mjs",
+  "note": "Synthetic only (GLOBE-NATIVE-PLAN §6.1): no real pack bytes may be exported until the web pack manifest exists.",
+  "deedPx": {
+    "thisRealm": 255,
+    "otherRealm": 96,
+    "none": 0
+  },
+  "packs": [
+    {
+      "name": "overview",
+      "valid": true,
+      "realms": [
+        "alpha",
+        "wrap"
+      ],
+      "wrapsDateline": [
+        "wrap"
+      ],
+      "manifestSha256": "8843103fef4e6da48072fc6052885018efe09c224872a8e3c76cf61d806eee85"
+    },
+    {
+      "name": "tampered",
+      "valid": false,
+      "defect": "sha256-mismatch",
+      "file": "realm/alpha/deeds.png",
+      "manifestSha256": "8843103fef4e6da48072fc6052885018efe09c224872a8e3c76cf61d806eee85"
+    },
+    {
+      "name": "miscounted",
+      "valid": false,
+      "defect": "deed-count",
+      "file": "realm/wrap/realm.json",
+      "declared": "grid.deeds",
+      "off": 1,
+      "manifestSha256": "d351b7c2d3e4481981c367cdf2765a9777ec0a8d74cba31c25cbdbcbd9e402ec"
+    }
+  ],
+  "png": [
+    {
+      "name": "rgb-filters",
+      "png": "png/rgb-filters.png",
+      "rgba": "png/rgb-filters.rgba",
+      "width": 7,
+      "height": 10,
+      "colorType": 2,
+      "bitDepth": 8,
+      "deflate": "fixed",
+      "idatChunks": 3
+    },
+    {
+      "name": "rgba-alpha0",
+      "png": "png/rgba-alpha0.png",
+      "rgba": "png/rgba-alpha0.rgba",
+      "width": 6,
+      "height": 5,
+      "colorType": 6,
+      "bitDepth": 8,
+      "deflate": "stored",
+      "idatChunks": 1
+    },
+    {
+      "name": "gray-trns",
+      "png": "png/gray-trns.png",
+      "rgba": "png/gray-trns.rgba",
+      "width": 5,
+      "height": 4,
+      "colorType": 0,
+      "bitDepth": 8,
+      "deflate": "fixed",
+      "idatChunks": 1
+    },
+    {
+      "name": "palette4-trns",
+      "png": "png/palette4-trns.png",
+      "rgba": "png/palette4-trns.rgba",
+      "width": 5,
+      "height": 3,
+      "colorType": 3,
+      "bitDepth": 4,
+      "deflate": "stored",
+      "idatChunks": 2
+    },
+    {
+      "name": "gray-alpha",
+      "png": "png/gray-alpha.png",
+      "rgba": "png/gray-alpha.rgba",
+      "width": 4,
+      "height": 3,
+      "colorType": 4,
+      "bitDepth": 8,
+      "deflate": "stored",
+      "idatChunks": 1
+    }
+  ]
+}

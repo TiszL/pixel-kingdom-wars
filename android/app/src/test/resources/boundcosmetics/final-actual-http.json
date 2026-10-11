@@ -1,0 +1,316 @@
+{
+  "version": 1,
+  "wallet": "3UkBfvh5bys7FtnPx5ueNRjUgdCfMHpYZrAhqK2PxJCX",
+  "serverNow": "2026-09-29T18:33:13.335Z",
+  "acceptingJobs": true,
+  "applicationReady": true,
+  "blueprint": {
+    "state": "eligible",
+    "proof": {
+      "blueprintId": "architect_blueprint_artisan_finishes_v1",
+      "jobId": "058d9362-835c-42eb-bb55-15bd40e63703",
+      "baseId": "4ce5dea6-3f88-4d7c-b620-911e367baf38",
+      "actorWallet": "3UkBfvh5bys7FtnPx5ueNRjUgdCfMHpYZrAhqK2PxJCX",
+      "completedAt": "2026-09-29T18:28:13.335Z"
+    }
+  },
+  "recipes": [
+    {
+      "recipe": {
+        "recipeId": "craft_artisan_market_awning_t1_v1",
+        "recipeVersion": 1,
+        "outputId": "artisan_market_awning_t1",
+        "quantity": "1",
+        "durationSec": 300,
+        "inputs": [
+          {
+            "itemId": "heartwood_beams",
+            "quantity": "2"
+          },
+          {
+            "itemId": "thornsilk",
+            "quantity": "2"
+          },
+          {
+            "itemId": "crownsteel",
+            "quantity": "1"
+          }
+        ],
+        "requiredFacility": {
+          "type": "market",
+          "level": 1
+        },
+        "blueprintId": "architect_blueprint_artisan_finishes_v1"
+      },
+      "appearance": {
+        "version": 1,
+        "outputId": "artisan_market_awning_t1",
+        "sourceId": "artisan-market-t1",
+        "sourceManifestSha256": "b4b67f78efd4d74fa416e78822af9f0e037ad6d3bc30f3fc77127cd169292394",
+        "sourceIndexSha256": "04f96c922ca04d93f1bf760e6385713908b971ce82c3aa022602f1fa199e2181",
+        "bindingSha256": "eb0f98c1eeb2dd4657fc2f2144c2f387e7fc763a9c9e95c6c77598e5458acea5"
+      }
+    },
+    {
+      "recipe": {
+        "recipeId": "craft_artisan_market_awning_t2_v1",
+        "recipeVersion": 1,
+        "outputId": "artisan_market_awning_t2",
+        "quantity": "1",
+        "durationSec": 600,
+        "inputs": [
+          {
+            "itemId": "heartwood_beams",
+            "quantity": "4"
+          },
+          {
+            "itemId": "thornsilk",
+            "quantity": "4"
+          },
+          {
+            "itemId": "crownsteel",
+            "quantity": "2"
+          }
+        ],
+        "requiredFacility": {
+          "type": "market",
+          "level": 6
+        },
+        "blueprintId": "architect_blueprint_artisan_finishes_v1"
+      },
+      "appearance": {
+        "version": 1,
+        "outputId": "artisan_market_awning_t2",
+        "sourceId": "artisan-market-t2",
+        "sourceManifestSha256": "b4b67f78efd4d74fa416e78822af9f0e037ad6d3bc30f3fc77127cd169292394",
+        "sourceIndexSha256": "04f96c922ca04d93f1bf760e6385713908b971ce82c3aa022602f1fa199e2181",
+        "bindingSha256": "805ddc70f1794a2625aeaefea705e71b5d92d73127c976b7d665c71f70c131e2"
+      }
+    },
+    {
+      "recipe": {
+        "recipeId": "craft_artisan_market_awning_t3_v1",
+        "recipeVersion": 1,
+        "outputId": "artisan_market_awning_t3",
+        "quantity": "1",
+        "durationSec": 900,
+        "inputs": [
+          {
+            "itemId": "heartwood_beams",
+            "quantity": "8"
+          },
+          {
+            "itemId": "thornsilk",
+            "quantity": "8"
+          },
+          {
+            "itemId": "crownsteel",
+            "quantity": "4"
+          }
+        ],
+        "requiredFacility": {
+          "type": "market",
+          "level": 11
+        },
+        "blueprintId": "architect_blueprint_artisan_finishes_v1"
+      },
+      "appearance": {
+        "version": 1,
+        "outputId": "artisan_market_awning_t3",
+        "sourceId": "artisan-market-t3",
+        "sourceManifestSha256": "b4b67f78efd4d74fa416e78822af9f0e037ad6d3bc30f3fc77127cd169292394",
+        "sourceIndexSha256": "04f96c922ca04d93f1bf760e6385713908b971ce82c3aa022602f1fa199e2181",
+        "bindingSha256": "0e2d687e929e2505170f039a5902229a1be22e6c7a8adaff1c90bfa0bf4bde88"
+      }
+    },
+    {
+      "recipe": {
+        "recipeId": "craft_artisan_market_awning_t4_v1",
+        "recipeVersion": 1,
+        "outputId": "artisan_market_awning_t4",
+        "quantity": "1",
+        "durationSec": 1200,
+        "inputs": [
+          {
+            "itemId": "heartwood_beams",
+            "quantity": "16"
+          },
+          {
+            "itemId": "thornsilk",
+            "quantity": "16"
+          },
+          {
+            "itemId": "crownsteel",
+            "quantity": "8"
+          }
+        ],
+        "requiredFacility": {
+          "type": "market",
+          "level": 16
+        },
+        "blueprintId": "architect_blueprint_artisan_finishes_v1"
+      },
+      "appearance": {
+        "version": 1,
+        "outputId": "artisan_market_awning_t4",
+        "sourceId": "artisan-market-t4",
+        "sourceManifestSha256": "b4b67f78efd4d74fa416e78822af9f0e037ad6d3bc30f3fc77127cd169292394",
+        "sourceIndexSha256": "04f96c922ca04d93f1bf760e6385713908b971ce82c3aa022602f1fa199e2181",
+        "bindingSha256": "38a533ed017a858e5862d1c6e27e52f2e80787ccc52518bc5c51c46dc968537a"
+      }
+    }
+  ],
+  "originals": [
+    {
+      "version": 1,
+      "wallet": "3UkBfvh5bys7FtnPx5ueNRjUgdCfMHpYZrAhqK2PxJCX",
+      "idempotencyKey": "552c55bc-3213-4b5f-ae62-285513a499a1",
+      "serverNow": "2026-09-29T18:33:13.335Z",
+      "status": "accepted",
+      "receipt": {
+        "wallet": "3UkBfvh5bys7FtnPx5ueNRjUgdCfMHpYZrAhqK2PxJCX",
+        "jobId": "552c55bc-3213-4b5f-ae62-285513a499a1",
+        "request": {
+          "idempotencyKey": "552c55bc-3213-4b5f-ae62-285513a499a1",
+          "baseId": "4ce5dea6-3f88-4d7c-b620-911e367baf38",
+          "recipeId": "craft_artisan_market_awning_t1_v1",
+          "recipeVersion": 1,
+          "appearanceBindingSha256": "eb0f98c1eeb2dd4657fc2f2144c2f387e7fc763a9c9e95c6c77598e5458acea5"
+        },
+        "recipe": {
+          "recipeId": "craft_artisan_market_awning_t1_v1",
+          "recipeVersion": 1,
+          "outputId": "artisan_market_awning_t1",
+          "quantity": "1",
+          "durationSec": 300,
+          "inputs": [
+            {
+              "itemId": "heartwood_beams",
+              "quantity": "2"
+            },
+            {
+              "itemId": "thornsilk",
+              "quantity": "2"
+            },
+            {
+              "itemId": "crownsteel",
+              "quantity": "1"
+            }
+          ],
+          "requiredFacility": {
+            "type": "market",
+            "level": 1
+          },
+          "blueprintId": "architect_blueprint_artisan_finishes_v1"
+        },
+        "appearance": {
+          "version": 1,
+          "outputId": "artisan_market_awning_t1",
+          "sourceId": "artisan-market-t1",
+          "sourceManifestSha256": "b4b67f78efd4d74fa416e78822af9f0e037ad6d3bc30f3fc77127cd169292394",
+          "sourceIndexSha256": "04f96c922ca04d93f1bf760e6385713908b971ce82c3aa022602f1fa199e2181",
+          "bindingSha256": "eb0f98c1eeb2dd4657fc2f2144c2f387e7fc763a9c9e95c6c77598e5458acea5"
+        },
+        "blueprint": {
+          "blueprintId": "architect_blueprint_artisan_finishes_v1",
+          "jobId": "058d9362-835c-42eb-bb55-15bd40e63703",
+          "baseId": "4ce5dea6-3f88-4d7c-b620-911e367baf38",
+          "actorWallet": "3UkBfvh5bys7FtnPx5ueNRjUgdCfMHpYZrAhqK2PxJCX",
+          "completedAt": "2026-09-29T18:28:13.335Z"
+        },
+        "startedAt": "2026-09-29T18:28:13.335Z",
+        "readyAt": "2026-09-29T18:33:13.335Z"
+      },
+      "completion": {
+        "completedAt": "2026-09-29T18:33:13.335Z"
+      }
+    }
+  ],
+  "selectedBase": {
+    "state": "available",
+    "baseId": "4ce5dea6-3f88-4d7c-b620-911e367baf38",
+    "craftingStock": [
+      {
+        "itemId": "frostglass",
+        "available": "1",
+        "pendingOutput": "0"
+      },
+      {
+        "itemId": "heartwood_beams",
+        "available": "0",
+        "pendingOutput": "0"
+      },
+      {
+        "itemId": "sunstone_blocks",
+        "available": "0",
+        "pendingOutput": "0"
+      },
+      {
+        "itemId": "crownsteel",
+        "available": "0",
+        "pendingOutput": "0"
+      },
+      {
+        "itemId": "prismstone_lens",
+        "available": "0",
+        "pendingOutput": "0"
+      },
+      {
+        "itemId": "stormalloy",
+        "available": "0",
+        "pendingOutput": "0"
+      },
+      {
+        "itemId": "thornsilk",
+        "available": "0",
+        "pendingOutput": "0"
+      },
+      {
+        "itemId": "embercore",
+        "available": "0",
+        "pendingOutput": "0"
+      },
+      {
+        "itemId": "navigation_kit",
+        "available": "0",
+        "pendingOutput": "0"
+      },
+      {
+        "itemId": "climate_kit",
+        "available": "0",
+        "pendingOutput": "0"
+      },
+      {
+        "itemId": "expedition_kit",
+        "available": "0",
+        "pendingOutput": "0"
+      }
+    ],
+    "workshops": [
+      {
+        "buildingId": "2ed50010-7b1a-4b61-a49c-a9fa785c9028",
+        "level": 1,
+        "completedAt": "2026-09-29T18:27:12.335Z"
+      }
+    ],
+    "markets": [
+      {
+        "buildingId": "39e39aaf-a824-449f-bb75-4576f52bc231",
+        "level": 1,
+        "completedAt": "2026-09-29T18:27:12.335Z"
+      }
+    ],
+    "queue": [],
+    "preference": {
+      "enabled": false,
+      "revision": "2"
+    },
+    "visual": {
+      "state": "available",
+      "visual": {
+        "version": 1,
+        "marketAwnings": []
+      }
+    }
+  }
+}

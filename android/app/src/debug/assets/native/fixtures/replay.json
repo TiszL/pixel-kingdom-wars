@@ -1,0 +1,1721 @@
+{
+  "id": "fixture-mixed-assault",
+  "snapshot": {
+    "keepLevel": 1,
+    "buildings": [
+      {
+        "id": "keep",
+        "type": "keep",
+        "level": 2,
+        "tx": 8,
+        "ty": 8
+      },
+      {
+        "id": "vault",
+        "type": "vault",
+        "level": 2,
+        "tx": 11,
+        "ty": 8
+      },
+      {
+        "id": "mine",
+        "type": "mine",
+        "level": 2,
+        "tx": 5,
+        "ty": 8
+      },
+      {
+        "id": "cannon",
+        "type": "cannon",
+        "level": 2,
+        "tx": 8,
+        "ty": 5
+      },
+      {
+        "id": "tower",
+        "type": "archertower",
+        "level": 2,
+        "tx": 8,
+        "ty": 12
+      },
+      {
+        "id": "mortar",
+        "type": "mortar",
+        "level": 1,
+        "tx": 12,
+        "ty": 12
+      },
+      {
+        "id": "wall_0",
+        "type": "wall",
+        "level": 2,
+        "tx": 4,
+        "ty": 4
+      },
+      {
+        "id": "wall_1",
+        "type": "wall",
+        "level": 2,
+        "tx": 4,
+        "ty": 5
+      },
+      {
+        "id": "wall_2",
+        "type": "wall",
+        "level": 2,
+        "tx": 4,
+        "ty": 6
+      },
+      {
+        "id": "wall_3",
+        "type": "wall",
+        "level": 2,
+        "tx": 4,
+        "ty": 7
+      },
+      {
+        "id": "wall_4",
+        "type": "wall",
+        "level": 2,
+        "tx": 4,
+        "ty": 8
+      },
+      {
+        "id": "wall_5",
+        "type": "wall",
+        "level": 2,
+        "tx": 4,
+        "ty": 9
+      },
+      {
+        "id": "wall_6",
+        "type": "wall",
+        "level": 2,
+        "tx": 4,
+        "ty": 10
+      },
+      {
+        "id": "wall_7",
+        "type": "wall",
+        "level": 2,
+        "tx": 4,
+        "ty": 11
+      },
+      {
+        "id": "wall_8",
+        "type": "wall",
+        "level": 2,
+        "tx": 4,
+        "ty": 12
+      }
+    ],
+    "surplusShards": 1000
+  },
+  "simVersion": 18,
+  "events": [
+    {
+      "t": 0,
+      "e": "deploy",
+      "id": 0,
+      "troop": "kegrunner",
+      "x": 128,
+      "y": 2176
+    },
+    {
+      "t": 0,
+      "e": "deploy",
+      "id": 1,
+      "troop": "turrider",
+      "x": 4480,
+      "y": 2176
+    },
+    {
+      "t": 0,
+      "e": "pos",
+      "id": 0,
+      "x": 189,
+      "y": 2176
+    },
+    {
+      "t": 0,
+      "e": "pos",
+      "id": 1,
+      "x": 4464,
+      "y": 2192
+    },
+    {
+      "t": 0,
+      "e": "fire",
+      "id": "mortar",
+      "target": 1,
+      "proj": "shell",
+      "ix": 4464,
+      "iy": 2192,
+      "releaseOffsetMs": 143,
+      "flightMs": 1235,
+      "impactOffsetTicks": 14
+    },
+    {
+      "t": 5,
+      "e": "pos",
+      "id": 0,
+      "x": 494,
+      "y": 2176
+    },
+    {
+      "t": 5,
+      "e": "pos",
+      "id": 1,
+      "x": 4384,
+      "y": 2272
+    },
+    {
+      "t": 8,
+      "e": "deploy",
+      "id": 2,
+      "troop": "highlander",
+      "x": 128,
+      "y": 2176
+    },
+    {
+      "t": 9,
+      "e": "deploy",
+      "id": 3,
+      "troop": "highlander",
+      "x": 128,
+      "y": 2432
+    },
+    {
+      "t": 9,
+      "e": "fire",
+      "id": "tower",
+      "target": 0,
+      "proj": "arrow",
+      "ix": 738,
+      "iy": 2176,
+      "releaseOffsetMs": 0,
+      "flightMs": 420,
+      "impactOffsetTicks": 5
+    },
+    {
+      "t": 10,
+      "e": "pos",
+      "id": 0,
+      "x": 799,
+      "y": 2176
+    },
+    {
+      "t": 10,
+      "e": "pos",
+      "id": 1,
+      "x": 4304,
+      "y": 2352
+    },
+    {
+      "t": 10,
+      "e": "pos",
+      "id": 2,
+      "x": 218,
+      "y": 2176
+    },
+    {
+      "t": 10,
+      "e": "pos",
+      "id": 3,
+      "x": 186,
+      "y": 2426
+    },
+    {
+      "t": 11,
+      "e": "fire",
+      "id": "cannon",
+      "target": 0,
+      "proj": "cannonball",
+      "ix": 860,
+      "iy": 2176,
+      "releaseOffsetMs": 143,
+      "flightMs": 950,
+      "impactOffsetTicks": 11
+    },
+    {
+      "t": 14,
+      "e": "detonate",
+      "id": 0,
+      "x": 1152,
+      "y": 2176
+    },
+    {
+      "t": 14,
+      "e": "attackRun",
+      "id": 0,
+      "side": "attacker",
+      "troop": "kegrunner",
+      "targetKind": "building",
+      "target": "mine",
+      "ix": 1152,
+      "iy": 2176,
+      "mode": "detonate",
+      "technique": "detonate",
+      "cycleMs": 462,
+      "releaseOffsetMs": 77,
+      "cycleTicks": 5,
+      "releaseOffsetTicks": 1,
+      "impactOffsetsTicks": [
+        1
+      ],
+      "cadenceTicks": 5,
+      "count": 1
+    },
+    {
+      "t": 14,
+      "e": "fire",
+      "id": "tower",
+      "target": 0,
+      "proj": "arrow",
+      "ix": 982,
+      "iy": 2176,
+      "releaseOffsetMs": 0,
+      "flightMs": 420,
+      "impactOffsetTicks": 5
+    },
+    {
+      "t": 14,
+      "e": "hit",
+      "target": 0,
+      "dmg": 21
+    },
+    {
+      "t": 14,
+      "e": "hit",
+      "target": 1,
+      "dmg": 339
+    },
+    {
+      "t": 15,
+      "e": "deploy",
+      "id": 4,
+      "troop": "bowman",
+      "x": 128,
+      "y": 1920
+    },
+    {
+      "t": 15,
+      "e": "hit",
+      "target": "wall_4",
+      "dmg": 900
+    },
+    {
+      "t": 15,
+      "e": "destroyed",
+      "id": "wall_4"
+    },
+    {
+      "t": 15,
+      "e": "hit",
+      "target": "wall_3",
+      "dmg": 900
+    },
+    {
+      "t": 15,
+      "e": "destroyed",
+      "id": "wall_3"
+    },
+    {
+      "t": 15,
+      "e": "hit",
+      "target": "wall_5",
+      "dmg": 900
+    },
+    {
+      "t": 15,
+      "e": "destroyed",
+      "id": "wall_5"
+    },
+    {
+      "t": 15,
+      "e": "hit",
+      "target": "mine",
+      "dmg": 45
+    },
+    {
+      "t": 15,
+      "e": "troopDeath",
+      "id": 0
+    },
+    {
+      "t": 15,
+      "e": "pos",
+      "id": 1,
+      "x": 4224,
+      "y": 2432
+    },
+    {
+      "t": 15,
+      "e": "pos",
+      "id": 2,
+      "x": 368,
+      "y": 2176
+    },
+    {
+      "t": 15,
+      "e": "pos",
+      "id": 3,
+      "x": 331,
+      "y": 2411
+    },
+    {
+      "t": 15,
+      "e": "pos",
+      "id": 4,
+      "x": 162,
+      "y": 1923
+    },
+    {
+      "t": 20,
+      "e": "pos",
+      "id": 1,
+      "x": 4144,
+      "y": 2512
+    },
+    {
+      "t": 20,
+      "e": "pos",
+      "id": 2,
+      "x": 518,
+      "y": 2176
+    },
+    {
+      "t": 20,
+      "e": "pos",
+      "id": 3,
+      "x": 476,
+      "y": 2396
+    },
+    {
+      "t": 20,
+      "e": "pos",
+      "id": 4,
+      "x": 332,
+      "y": 1939
+    },
+    {
+      "t": 23,
+      "e": "attackRun",
+      "id": 4,
+      "side": "attacker",
+      "troop": "bowman",
+      "targetKind": "building",
+      "target": "mine",
+      "ix": 1280,
+      "iy": 2048,
+      "mode": "projectile",
+      "technique": "arrow",
+      "cycleMs": 629,
+      "releaseOffsetMs": 429,
+      "cycleTicks": 7,
+      "releaseOffsetTicks": 5,
+      "impactOffsetsTicks": [
+        14
+      ],
+      "cadenceTicks": 7,
+      "count": 1
+    },
+    {
+      "t": 24,
+      "e": "fire",
+      "id": "tower",
+      "target": 3,
+      "proj": "arrow",
+      "ix": 592,
+      "iy": 2384,
+      "releaseOffsetMs": 0,
+      "flightMs": 420,
+      "impactOffsetTicks": 5
+    },
+    {
+      "t": 25,
+      "e": "deploy",
+      "id": 5,
+      "troop": "plunderer",
+      "x": 128,
+      "y": 2688
+    },
+    {
+      "t": 25,
+      "e": "pos",
+      "id": 1,
+      "x": 4064,
+      "y": 2592
+    },
+    {
+      "t": 25,
+      "e": "pos",
+      "id": 2,
+      "x": 668,
+      "y": 2176
+    },
+    {
+      "t": 25,
+      "e": "pos",
+      "id": 3,
+      "x": 621,
+      "y": 2381
+    },
+    {
+      "t": 25,
+      "e": "pos",
+      "id": 5,
+      "x": 171,
+      "y": 2674
+    },
+    {
+      "t": 29,
+      "e": "fire",
+      "id": "tower",
+      "target": 3,
+      "proj": "arrow",
+      "ix": 737,
+      "iy": 2369,
+      "releaseOffsetMs": 0,
+      "flightMs": 420,
+      "impactOffsetTicks": 5
+    },
+    {
+      "t": 29,
+      "e": "hit",
+      "target": 3,
+      "dmg": 20
+    },
+    {
+      "t": 30,
+      "e": "pos",
+      "id": 1,
+      "x": 3984,
+      "y": 2672
+    },
+    {
+      "t": 30,
+      "e": "pos",
+      "id": 2,
+      "x": 818,
+      "y": 2176
+    },
+    {
+      "t": 30,
+      "e": "pos",
+      "id": 3,
+      "x": 766,
+      "y": 2366
+    },
+    {
+      "t": 30,
+      "e": "attackRun",
+      "id": 4,
+      "side": "attacker",
+      "troop": "bowman",
+      "targetKind": "building",
+      "target": "mine",
+      "ix": 1280,
+      "iy": 2048,
+      "mode": "projectile",
+      "technique": "arrow",
+      "cycleMs": 629,
+      "releaseOffsetMs": 429,
+      "cycleTicks": 7,
+      "releaseOffsetTicks": 5,
+      "impactOffsetsTicks": [
+        14
+      ],
+      "cadenceTicks": 7,
+      "count": 1
+    },
+    {
+      "t": 30,
+      "e": "pos",
+      "id": 5,
+      "x": 386,
+      "y": 2604
+    },
+    {
+      "t": 31,
+      "e": "fire",
+      "id": "cannon",
+      "target": 2,
+      "proj": "cannonball",
+      "ix": 848,
+      "iy": 2176,
+      "releaseOffsetMs": 143,
+      "flightMs": 950,
+      "impactOffsetTicks": 11
+    },
+    {
+      "t": 34,
+      "e": "fire",
+      "id": "tower",
+      "target": 3,
+      "proj": "arrow",
+      "ix": 882,
+      "iy": 2354,
+      "releaseOffsetMs": 0,
+      "flightMs": 420,
+      "impactOffsetTicks": 5
+    },
+    {
+      "t": 34,
+      "e": "hit",
+      "target": 3,
+      "dmg": 20
+    },
+    {
+      "t": 35,
+      "e": "pos",
+      "id": 1,
+      "x": 3904,
+      "y": 2752
+    },
+    {
+      "t": 35,
+      "e": "pos",
+      "id": 2,
+      "x": 968,
+      "y": 2176
+    },
+    {
+      "t": 35,
+      "e": "pos",
+      "id": 3,
+      "x": 911,
+      "y": 2351
+    },
+    {
+      "t": 35,
+      "e": "pos",
+      "id": 5,
+      "x": 601,
+      "y": 2534
+    },
+    {
+      "t": 37,
+      "e": "hit",
+      "target": "mine",
+      "dmg": 11
+    },
+    {
+      "t": 37,
+      "e": "attackRun",
+      "id": 4,
+      "side": "attacker",
+      "troop": "bowman",
+      "targetKind": "building",
+      "target": "mine",
+      "ix": 1280,
+      "iy": 2048,
+      "mode": "projectile",
+      "technique": "arrow",
+      "cycleMs": 629,
+      "releaseOffsetMs": 429,
+      "cycleTicks": 7,
+      "releaseOffsetTicks": 5,
+      "impactOffsetsTicks": [
+        14
+      ],
+      "cadenceTicks": 7,
+      "count": 1
+    },
+    {
+      "t": 39,
+      "e": "fire",
+      "id": "tower",
+      "target": 3,
+      "proj": "arrow",
+      "ix": 1027,
+      "iy": 2338,
+      "releaseOffsetMs": 0,
+      "flightMs": 420,
+      "impactOffsetTicks": 5
+    },
+    {
+      "t": 39,
+      "e": "hit",
+      "target": 3,
+      "dmg": 22
+    },
+    {
+      "t": 40,
+      "e": "pos",
+      "id": 1,
+      "x": 3824,
+      "y": 2832
+    },
+    {
+      "t": 40,
+      "e": "pos",
+      "id": 2,
+      "x": 1118,
+      "y": 2176
+    },
+    {
+      "t": 40,
+      "e": "pos",
+      "id": 3,
+      "x": 1056,
+      "y": 2334
+    },
+    {
+      "t": 40,
+      "e": "pos",
+      "id": 5,
+      "x": 816,
+      "y": 2464
+    },
+    {
+      "t": 40,
+      "e": "fire",
+      "id": "mortar",
+      "target": 1,
+      "proj": "shell",
+      "ix": 3824,
+      "iy": 2832,
+      "releaseOffsetMs": 143,
+      "flightMs": 1235,
+      "impactOffsetTicks": 14
+    },
+    {
+      "t": 42,
+      "e": "attackRun",
+      "id": 2,
+      "side": "attacker",
+      "troop": "highlander",
+      "targetKind": "building",
+      "target": "mine",
+      "ix": 1280,
+      "iy": 2176,
+      "mode": "melee",
+      "technique": "strike",
+      "cycleMs": 500,
+      "releaseOffsetMs": 167,
+      "cycleTicks": 5,
+      "releaseOffsetTicks": 2,
+      "impactOffsetsTicks": [
+        2
+      ],
+      "cadenceTicks": 5,
+      "count": 1
+    },
+    {
+      "t": 42,
+      "e": "hit",
+      "target": 2,
+      "dmg": 84
+    },
+    {
+      "t": 43,
+      "e": "fire",
+      "id": "cannon",
+      "target": 2,
+      "proj": "cannonball",
+      "ix": 1148,
+      "iy": 2176,
+      "releaseOffsetMs": 143,
+      "flightMs": 950,
+      "impactOffsetTicks": 11
+    },
+    {
+      "t": 44,
+      "e": "hit",
+      "target": "mine",
+      "dmg": 11
+    },
+    {
+      "t": 44,
+      "e": "hit",
+      "target": "mine",
+      "dmg": 10
+    },
+    {
+      "t": 44,
+      "e": "attackRun",
+      "id": 3,
+      "side": "attacker",
+      "troop": "highlander",
+      "targetKind": "building",
+      "target": "mine",
+      "ix": 1280,
+      "iy": 2304,
+      "mode": "melee",
+      "technique": "strike",
+      "cycleMs": 500,
+      "releaseOffsetMs": 167,
+      "cycleTicks": 5,
+      "releaseOffsetTicks": 2,
+      "impactOffsetsTicks": [
+        2
+      ],
+      "cadenceTicks": 5,
+      "count": 1
+    },
+    {
+      "t": 44,
+      "e": "attackRun",
+      "id": 4,
+      "side": "attacker",
+      "troop": "bowman",
+      "targetKind": "building",
+      "target": "mine",
+      "ix": 1280,
+      "iy": 2048,
+      "mode": "projectile",
+      "technique": "arrow",
+      "cycleMs": 629,
+      "releaseOffsetMs": 429,
+      "cycleTicks": 7,
+      "releaseOffsetTicks": 5,
+      "impactOffsetsTicks": [
+        14
+      ],
+      "cadenceTicks": 7,
+      "count": 1
+    },
+    {
+      "t": 44,
+      "e": "fire",
+      "id": "tower",
+      "target": 3,
+      "proj": "arrow",
+      "ix": 1143,
+      "iy": 2323,
+      "releaseOffsetMs": 0,
+      "flightMs": 420,
+      "impactOffsetTicks": 5
+    },
+    {
+      "t": 44,
+      "e": "hit",
+      "target": 3,
+      "dmg": 22
+    },
+    {
+      "t": 45,
+      "e": "pos",
+      "id": 1,
+      "x": 3744,
+      "y": 2912
+    },
+    {
+      "t": 45,
+      "e": "pos",
+      "id": 5,
+      "x": 1031,
+      "y": 2390
+    },
+    {
+      "t": 46,
+      "e": "hit",
+      "target": "mine",
+      "dmg": 10
+    },
+    {
+      "t": 47,
+      "e": "attackRun",
+      "id": 2,
+      "side": "attacker",
+      "troop": "highlander",
+      "targetKind": "building",
+      "target": "mine",
+      "ix": 1280,
+      "iy": 2176,
+      "mode": "melee",
+      "technique": "strike",
+      "cycleMs": 500,
+      "releaseOffsetMs": 167,
+      "cycleTicks": 5,
+      "releaseOffsetTicks": 2,
+      "impactOffsetsTicks": [
+        2
+      ],
+      "cadenceTicks": 5,
+      "count": 1
+    },
+    {
+      "t": 49,
+      "e": "hit",
+      "target": "mine",
+      "dmg": 10
+    },
+    {
+      "t": 49,
+      "e": "attackRun",
+      "id": 1,
+      "side": "attacker",
+      "troop": "turrider",
+      "targetKind": "building",
+      "target": "mortar",
+      "ix": 3584,
+      "iy": 3072,
+      "mode": "melee",
+      "technique": "strike",
+      "cycleMs": 462,
+      "releaseOffsetMs": 231,
+      "cycleTicks": 5,
+      "releaseOffsetTicks": 3,
+      "impactOffsetsTicks": [
+        3
+      ],
+      "cadenceTicks": 5,
+      "count": 1
+    },
+    {
+      "t": 49,
+      "e": "attackRun",
+      "id": 3,
+      "side": "attacker",
+      "troop": "highlander",
+      "targetKind": "building",
+      "target": "mine",
+      "ix": 1280,
+      "iy": 2304,
+      "mode": "melee",
+      "technique": "strike",
+      "cycleMs": 500,
+      "releaseOffsetMs": 167,
+      "cycleTicks": 5,
+      "releaseOffsetTicks": 2,
+      "impactOffsetsTicks": [
+        2
+      ],
+      "cadenceTicks": 5,
+      "count": 1
+    },
+    {
+      "t": 49,
+      "e": "attackRun",
+      "id": 5,
+      "side": "attacker",
+      "troop": "plunderer",
+      "targetKind": "building",
+      "target": "mine",
+      "ix": 1280,
+      "iy": 2304,
+      "mode": "melee",
+      "technique": "strike",
+      "cycleMs": 429,
+      "releaseOffsetMs": 215,
+      "cycleTicks": 5,
+      "releaseOffsetTicks": 3,
+      "impactOffsetsTicks": [
+        3
+      ],
+      "cadenceTicks": 5,
+      "count": 1
+    },
+    {
+      "t": 49,
+      "e": "fire",
+      "id": "tower",
+      "target": 3,
+      "proj": "arrow",
+      "ix": 1143,
+      "iy": 2323,
+      "releaseOffsetMs": 0,
+      "flightMs": 420,
+      "impactOffsetTicks": 5
+    },
+    {
+      "t": 49,
+      "e": "hit",
+      "target": 3,
+      "dmg": 20
+    },
+    {
+      "t": 51,
+      "e": "hit",
+      "target": "mine",
+      "dmg": 11
+    },
+    {
+      "t": 51,
+      "e": "hit",
+      "target": "mine",
+      "dmg": 10
+    },
+    {
+      "t": 51,
+      "e": "attackRun",
+      "id": 4,
+      "side": "attacker",
+      "troop": "bowman",
+      "targetKind": "building",
+      "target": "mine",
+      "ix": 1280,
+      "iy": 2048,
+      "mode": "projectile",
+      "technique": "arrow",
+      "cycleMs": 629,
+      "releaseOffsetMs": 429,
+      "cycleTicks": 7,
+      "releaseOffsetTicks": 5,
+      "impactOffsetsTicks": [
+        14
+      ],
+      "cadenceTicks": 7,
+      "count": 1
+    },
+    {
+      "t": 52,
+      "e": "hit",
+      "target": "mortar",
+      "dmg": 23
+    },
+    {
+      "t": 52,
+      "e": "hit",
+      "target": "mine",
+      "dmg": 27
+    },
+    {
+      "t": 52,
+      "e": "attackRun",
+      "id": 2,
+      "side": "attacker",
+      "troop": "highlander",
+      "targetKind": "building",
+      "target": "mine",
+      "ix": 1280,
+      "iy": 2176,
+      "mode": "melee",
+      "technique": "strike",
+      "cycleMs": 500,
+      "releaseOffsetMs": 167,
+      "cycleTicks": 5,
+      "releaseOffsetTicks": 2,
+      "impactOffsetsTicks": [
+        2
+      ],
+      "cadenceTicks": 5,
+      "count": 1
+    },
+    {
+      "t": 54,
+      "e": "hit",
+      "target": "mine",
+      "dmg": 10
+    },
+    {
+      "t": 54,
+      "e": "attackRun",
+      "id": 1,
+      "side": "attacker",
+      "troop": "turrider",
+      "targetKind": "building",
+      "target": "mortar",
+      "ix": 3584,
+      "iy": 3072,
+      "mode": "melee",
+      "technique": "strike",
+      "cycleMs": 462,
+      "releaseOffsetMs": 231,
+      "cycleTicks": 5,
+      "releaseOffsetTicks": 3,
+      "impactOffsetsTicks": [
+        3
+      ],
+      "cadenceTicks": 5,
+      "count": 1
+    },
+    {
+      "t": 54,
+      "e": "attackRun",
+      "id": 3,
+      "side": "attacker",
+      "troop": "highlander",
+      "targetKind": "building",
+      "target": "mine",
+      "ix": 1280,
+      "iy": 2304,
+      "mode": "melee",
+      "technique": "strike",
+      "cycleMs": 500,
+      "releaseOffsetMs": 167,
+      "cycleTicks": 5,
+      "releaseOffsetTicks": 2,
+      "impactOffsetsTicks": [
+        2
+      ],
+      "cadenceTicks": 5,
+      "count": 1
+    },
+    {
+      "t": 54,
+      "e": "attackRun",
+      "id": 5,
+      "side": "attacker",
+      "troop": "plunderer",
+      "targetKind": "building",
+      "target": "mine",
+      "ix": 1280,
+      "iy": 2304,
+      "mode": "melee",
+      "technique": "strike",
+      "cycleMs": 429,
+      "releaseOffsetMs": 215,
+      "cycleTicks": 5,
+      "releaseOffsetTicks": 3,
+      "impactOffsetsTicks": [
+        3
+      ],
+      "cadenceTicks": 5,
+      "count": 1
+    },
+    {
+      "t": 54,
+      "e": "fire",
+      "id": "tower",
+      "target": 3,
+      "proj": "arrow",
+      "ix": 1143,
+      "iy": 2323,
+      "releaseOffsetMs": 0,
+      "flightMs": 420,
+      "impactOffsetTicks": 5
+    },
+    {
+      "t": 54,
+      "e": "hit",
+      "target": 3,
+      "dmg": 20
+    },
+    {
+      "t": 54,
+      "e": "troopDeath",
+      "id": 3
+    },
+    {
+      "t": 54,
+      "e": "hit",
+      "target": 2,
+      "dmg": 79
+    },
+    {
+      "t": 54,
+      "e": "troopDeath",
+      "id": 2
+    },
+    {
+      "t": 54,
+      "e": "hit",
+      "target": 1,
+      "dmg": 301
+    },
+    {
+      "t": 54,
+      "e": "troopDeath",
+      "id": 1
+    },
+    {
+      "t": 55,
+      "e": "fire",
+      "id": "cannon",
+      "target": 5,
+      "proj": "cannonball",
+      "ix": 1160,
+      "iy": 2346,
+      "releaseOffsetMs": 143,
+      "flightMs": 950,
+      "impactOffsetTicks": 11
+    },
+    {
+      "t": 57,
+      "e": "hit",
+      "target": "mine",
+      "dmg": 27
+    },
+    {
+      "t": 58,
+      "e": "hit",
+      "target": "mine",
+      "dmg": 11
+    },
+    {
+      "t": 58,
+      "e": "attackRun",
+      "id": 4,
+      "side": "attacker",
+      "troop": "bowman",
+      "targetKind": "building",
+      "target": "mine",
+      "ix": 1280,
+      "iy": 2048,
+      "mode": "projectile",
+      "technique": "arrow",
+      "cycleMs": 629,
+      "releaseOffsetMs": 429,
+      "cycleTicks": 7,
+      "releaseOffsetTicks": 5,
+      "impactOffsetsTicks": [
+        14
+      ],
+      "cadenceTicks": 7,
+      "count": 1
+    },
+    {
+      "t": 59,
+      "e": "attackRun",
+      "id": 5,
+      "side": "attacker",
+      "troop": "plunderer",
+      "targetKind": "building",
+      "target": "mine",
+      "ix": 1280,
+      "iy": 2304,
+      "mode": "melee",
+      "technique": "strike",
+      "cycleMs": 429,
+      "releaseOffsetMs": 215,
+      "cycleTicks": 5,
+      "releaseOffsetTicks": 3,
+      "impactOffsetsTicks": [
+        3
+      ],
+      "cadenceTicks": 5,
+      "count": 1
+    },
+    {
+      "t": 59,
+      "e": "fire",
+      "id": "tower",
+      "target": 5,
+      "proj": "arrow",
+      "ix": 1160,
+      "iy": 2346,
+      "releaseOffsetMs": 0,
+      "flightMs": 420,
+      "impactOffsetTicks": 5
+    },
+    {
+      "t": 62,
+      "e": "hit",
+      "target": "mine",
+      "dmg": 27
+    },
+    {
+      "t": 64,
+      "e": "attackRun",
+      "id": 5,
+      "side": "attacker",
+      "troop": "plunderer",
+      "targetKind": "building",
+      "target": "mine",
+      "ix": 1280,
+      "iy": 2304,
+      "mode": "melee",
+      "technique": "strike",
+      "cycleMs": 429,
+      "releaseOffsetMs": 215,
+      "cycleTicks": 5,
+      "releaseOffsetTicks": 3,
+      "impactOffsetsTicks": [
+        3
+      ],
+      "cadenceTicks": 5,
+      "count": 1
+    },
+    {
+      "t": 64,
+      "e": "fire",
+      "id": "tower",
+      "target": 5,
+      "proj": "arrow",
+      "ix": 1160,
+      "iy": 2346,
+      "releaseOffsetMs": 0,
+      "flightMs": 420,
+      "impactOffsetTicks": 5
+    },
+    {
+      "t": 64,
+      "e": "hit",
+      "target": 5,
+      "dmg": 21
+    },
+    {
+      "t": 65,
+      "e": "hit",
+      "target": "mine",
+      "dmg": 11
+    },
+    {
+      "t": 65,
+      "e": "attackRun",
+      "id": 4,
+      "side": "attacker",
+      "troop": "bowman",
+      "targetKind": "building",
+      "target": "mine",
+      "ix": 1280,
+      "iy": 2048,
+      "mode": "projectile",
+      "technique": "arrow",
+      "cycleMs": 629,
+      "releaseOffsetMs": 429,
+      "cycleTicks": 7,
+      "releaseOffsetTicks": 5,
+      "impactOffsetsTicks": [
+        14
+      ],
+      "cadenceTicks": 7,
+      "count": 1
+    },
+    {
+      "t": 66,
+      "e": "hit",
+      "target": 5,
+      "dmg": 84
+    },
+    {
+      "t": 66,
+      "e": "troopDeath",
+      "id": 5
+    },
+    {
+      "t": 72,
+      "e": "hit",
+      "target": "mine",
+      "dmg": 11
+    },
+    {
+      "t": 72,
+      "e": "attackRun",
+      "id": 4,
+      "side": "attacker",
+      "troop": "bowman",
+      "targetKind": "building",
+      "target": "mine",
+      "ix": 1280,
+      "iy": 2048,
+      "mode": "projectile",
+      "technique": "arrow",
+      "cycleMs": 629,
+      "releaseOffsetMs": 429,
+      "cycleTicks": 7,
+      "releaseOffsetTicks": 5,
+      "impactOffsetsTicks": [
+        14
+      ],
+      "cadenceTicks": 7,
+      "count": 1
+    },
+    {
+      "t": 79,
+      "e": "hit",
+      "target": "mine",
+      "dmg": 11
+    },
+    {
+      "t": 79,
+      "e": "attackRun",
+      "id": 4,
+      "side": "attacker",
+      "troop": "bowman",
+      "targetKind": "building",
+      "target": "mine",
+      "ix": 1280,
+      "iy": 2048,
+      "mode": "projectile",
+      "technique": "arrow",
+      "cycleMs": 629,
+      "releaseOffsetMs": 429,
+      "cycleTicks": 7,
+      "releaseOffsetTicks": 5,
+      "impactOffsetsTicks": [
+        14
+      ],
+      "cadenceTicks": 7,
+      "count": 1
+    },
+    {
+      "t": 80,
+      "e": "rally",
+      "x": 1664,
+      "y": 2176
+    },
+    {
+      "t": 86,
+      "e": "hit",
+      "target": "mine",
+      "dmg": 11
+    },
+    {
+      "t": 86,
+      "e": "attackRun",
+      "id": 4,
+      "side": "attacker",
+      "troop": "bowman",
+      "targetKind": "building",
+      "target": "mine",
+      "ix": 1280,
+      "iy": 2048,
+      "mode": "projectile",
+      "technique": "arrow",
+      "cycleMs": 629,
+      "releaseOffsetMs": 429,
+      "cycleTicks": 7,
+      "releaseOffsetTicks": 5,
+      "impactOffsetsTicks": [
+        14
+      ],
+      "cadenceTicks": 7,
+      "count": 1
+    },
+    {
+      "t": 93,
+      "e": "hit",
+      "target": "mine",
+      "dmg": 11
+    },
+    {
+      "t": 93,
+      "e": "attackRun",
+      "id": 4,
+      "side": "attacker",
+      "troop": "bowman",
+      "targetKind": "building",
+      "target": "mine",
+      "ix": 1280,
+      "iy": 2048,
+      "mode": "projectile",
+      "technique": "arrow",
+      "cycleMs": 629,
+      "releaseOffsetMs": 429,
+      "cycleTicks": 7,
+      "releaseOffsetTicks": 5,
+      "impactOffsetsTicks": [
+        14
+      ],
+      "cadenceTicks": 7,
+      "count": 1
+    },
+    {
+      "t": 100,
+      "e": "hit",
+      "target": "mine",
+      "dmg": 11
+    },
+    {
+      "t": 100,
+      "e": "attackRun",
+      "id": 4,
+      "side": "attacker",
+      "troop": "bowman",
+      "targetKind": "building",
+      "target": "mine",
+      "ix": 1280,
+      "iy": 2048,
+      "mode": "projectile",
+      "technique": "arrow",
+      "cycleMs": 629,
+      "releaseOffsetMs": 429,
+      "cycleTicks": 7,
+      "releaseOffsetTicks": 5,
+      "impactOffsetsTicks": [
+        14
+      ],
+      "cadenceTicks": 7,
+      "count": 1
+    },
+    {
+      "t": 107,
+      "e": "hit",
+      "target": "mine",
+      "dmg": 11
+    },
+    {
+      "t": 107,
+      "e": "attackRun",
+      "id": 4,
+      "side": "attacker",
+      "troop": "bowman",
+      "targetKind": "building",
+      "target": "mine",
+      "ix": 1280,
+      "iy": 2048,
+      "mode": "projectile",
+      "technique": "arrow",
+      "cycleMs": 629,
+      "releaseOffsetMs": 429,
+      "cycleTicks": 7,
+      "releaseOffsetTicks": 5,
+      "impactOffsetsTicks": [
+        14
+      ],
+      "cadenceTicks": 7,
+      "count": 1
+    },
+    {
+      "t": 114,
+      "e": "hit",
+      "target": "mine",
+      "dmg": 11
+    },
+    {
+      "t": 114,
+      "e": "attackRun",
+      "id": 4,
+      "side": "attacker",
+      "troop": "bowman",
+      "targetKind": "building",
+      "target": "mine",
+      "ix": 1280,
+      "iy": 2048,
+      "mode": "projectile",
+      "technique": "arrow",
+      "cycleMs": 629,
+      "releaseOffsetMs": 429,
+      "cycleTicks": 7,
+      "releaseOffsetTicks": 5,
+      "impactOffsetsTicks": [
+        14
+      ],
+      "cadenceTicks": 7,
+      "count": 1
+    },
+    {
+      "t": 121,
+      "e": "hit",
+      "target": "mine",
+      "dmg": 11
+    },
+    {
+      "t": 121,
+      "e": "attackRun",
+      "id": 4,
+      "side": "attacker",
+      "troop": "bowman",
+      "targetKind": "building",
+      "target": "mine",
+      "ix": 1280,
+      "iy": 2048,
+      "mode": "projectile",
+      "technique": "arrow",
+      "cycleMs": 629,
+      "releaseOffsetMs": 429,
+      "cycleTicks": 7,
+      "releaseOffsetTicks": 5,
+      "impactOffsetsTicks": [
+        14
+      ],
+      "cadenceTicks": 7,
+      "count": 1
+    },
+    {
+      "t": 128,
+      "e": "hit",
+      "target": "mine",
+      "dmg": 11
+    },
+    {
+      "t": 128,
+      "e": "attackRun",
+      "id": 4,
+      "side": "attacker",
+      "troop": "bowman",
+      "targetKind": "building",
+      "target": "mine",
+      "ix": 1280,
+      "iy": 2048,
+      "mode": "projectile",
+      "technique": "arrow",
+      "cycleMs": 629,
+      "releaseOffsetMs": 429,
+      "cycleTicks": 7,
+      "releaseOffsetTicks": 5,
+      "impactOffsetsTicks": [
+        14
+      ],
+      "cadenceTicks": 7,
+      "count": 1
+    },
+    {
+      "t": 135,
+      "e": "hit",
+      "target": "mine",
+      "dmg": 11
+    },
+    {
+      "t": 135,
+      "e": "attackRun",
+      "id": 4,
+      "side": "attacker",
+      "troop": "bowman",
+      "targetKind": "building",
+      "target": "mine",
+      "ix": 1280,
+      "iy": 2048,
+      "mode": "projectile",
+      "technique": "arrow",
+      "cycleMs": 629,
+      "releaseOffsetMs": 429,
+      "cycleTicks": 7,
+      "releaseOffsetTicks": 5,
+      "impactOffsetsTicks": [
+        14
+      ],
+      "cadenceTicks": 7,
+      "count": 1
+    },
+    {
+      "t": 142,
+      "e": "hit",
+      "target": "mine",
+      "dmg": 11
+    },
+    {
+      "t": 142,
+      "e": "attackRun",
+      "id": 4,
+      "side": "attacker",
+      "troop": "bowman",
+      "targetKind": "building",
+      "target": "mine",
+      "ix": 1280,
+      "iy": 2048,
+      "mode": "projectile",
+      "technique": "arrow",
+      "cycleMs": 629,
+      "releaseOffsetMs": 429,
+      "cycleTicks": 7,
+      "releaseOffsetTicks": 5,
+      "impactOffsetsTicks": [
+        14
+      ],
+      "cadenceTicks": 7,
+      "count": 1
+    },
+    {
+      "t": 149,
+      "e": "hit",
+      "target": "mine",
+      "dmg": 11
+    },
+    {
+      "t": 149,
+      "e": "attackRun",
+      "id": 4,
+      "side": "attacker",
+      "troop": "bowman",
+      "targetKind": "building",
+      "target": "mine",
+      "ix": 1280,
+      "iy": 2048,
+      "mode": "projectile",
+      "technique": "arrow",
+      "cycleMs": 629,
+      "releaseOffsetMs": 429,
+      "cycleTicks": 7,
+      "releaseOffsetTicks": 5,
+      "impactOffsetsTicks": [
+        14
+      ],
+      "cadenceTicks": 7,
+      "count": 1
+    },
+    {
+      "t": 156,
+      "e": "hit",
+      "target": "mine",
+      "dmg": 11
+    },
+    {
+      "t": 156,
+      "e": "destroyed",
+      "id": "mine"
+    },
+    {
+      "t": 160,
+      "e": "pos",
+      "id": 4,
+      "x": 570,
+      "y": 1956
+    },
+    {
+      "t": 165,
+      "e": "pos",
+      "id": 4,
+      "x": 740,
+      "y": 1966
+    },
+    {
+      "t": 166,
+      "e": "fire",
+      "id": "cannon",
+      "target": 4,
+      "proj": "cannonball",
+      "ix": 774,
+      "iy": 1968,
+      "releaseOffsetMs": 143,
+      "flightMs": 950,
+      "impactOffsetTicks": 11
+    },
+    {
+      "t": 169,
+      "e": "fire",
+      "id": "tower",
+      "target": 4,
+      "proj": "arrow",
+      "ix": 876,
+      "iy": 1974,
+      "releaseOffsetMs": 0,
+      "flightMs": 420,
+      "impactOffsetTicks": 5
+    },
+    {
+      "t": 170,
+      "e": "pos",
+      "id": 4,
+      "x": 910,
+      "y": 1976
+    },
+    {
+      "t": 174,
+      "e": "fire",
+      "id": "tower",
+      "target": 4,
+      "proj": "arrow",
+      "ix": 1046,
+      "iy": 1984,
+      "releaseOffsetMs": 0,
+      "flightMs": 420,
+      "impactOffsetTicks": 5
+    },
+    {
+      "t": 174,
+      "e": "hit",
+      "target": 4,
+      "dmg": 22
+    },
+    {
+      "t": 175,
+      "e": "pos",
+      "id": 4,
+      "x": 1080,
+      "y": 1986
+    },
+    {
+      "t": 177,
+      "e": "hit",
+      "target": 4,
+      "dmg": 83
+    },
+    {
+      "t": 177,
+      "e": "troopDeath",
+      "id": 4
+    }
+  ],
+  "armySnapshot": {
+    "levels": {}
+  },
+  "timeline": {
+    "sha256": "1ab83904e35fca3066f510d45c46ff6c67de861ea8359606153df226ad09c895",
+    "durationMs": 17700
+  }
+}

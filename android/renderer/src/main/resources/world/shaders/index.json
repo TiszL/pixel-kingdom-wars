@@ -1,0 +1,728 @@
+{
+  "schema": 2,
+  "provisional": false,
+  "source": {
+    "commit": "02e9da8414156b9e0000df1653de6273b196cca6",
+    "engine": "concepts/globe3d-2026-09-23/src/realm",
+    "globe": {
+      "module": "concepts/globe3d-2026-09-23/src/shaders.js",
+      "programsFrom": "concepts/globe3d-2026-09-23/src/main.js",
+      "flat": [
+        "src/globe/flat.glsl.js"
+      ],
+      "status": "exported"
+    }
+  },
+  "preambleSha256": "26ee68bb4ce89eea9468e3e81e759f9ec172efe275bfce0bce4d300eeab8920e",
+  "rules": {
+    "stageChars": 80000,
+    "inlinedChars": 128000,
+    "classifierDisplay": 0,
+    "classifierBake": 1,
+    "loopMax": 64,
+    "samplerMax": 16
+  },
+  "programs": [
+    {
+      "name": "bases-dot",
+      "defines": {},
+      "bake": false,
+      "module": "bases.js",
+      "vs": {
+        "path": "bases-dot.vs.glsl",
+        "sha256": "63269860ee813b49b74a2e09a7da7be29d00ba768993c7bfe484a1b2d4f009eb",
+        "chars": 7549,
+        "inlinedChars": 386
+      },
+      "fs": {
+        "path": "bases-dot.fs.glsl",
+        "sha256": "886006e2536def16d5e88f68c2085903ba6ff937b6b0abb56912fd73d3262b71",
+        "chars": 7824,
+        "inlinedChars": 495
+      }
+    },
+    {
+      "name": "bases-field",
+      "defines": {},
+      "bake": false,
+      "module": "bases.js",
+      "vs": {
+        "path": "bases-field.vs.glsl",
+        "sha256": "740bd015773e80828bf38c468a894cdcdc3dcd29164ab115bf8034c08854d3c0",
+        "chars": 7753,
+        "inlinedChars": 561
+      },
+      "fs": {
+        "path": "bases-field.fs.glsl",
+        "sha256": "e7519490c4cf8df6d2e52adf4e2e9812b13077eb798f90eb2a01baacffefb43a",
+        "chars": 13071,
+        "inlinedChars": 17817
+      }
+    },
+    {
+      "name": "bases-fx",
+      "defines": {},
+      "bake": false,
+      "module": "bases.js",
+      "vs": {
+        "path": "bases-fx.vs.glsl",
+        "sha256": "d0879ba34396597d6c6d8bed9d2b441c4bef7b53df00dbb1d689113646c4f405",
+        "chars": 7671,
+        "inlinedChars": 689
+      },
+      "fs": {
+        "path": "bases-fx.fs.glsl",
+        "sha256": "d5c26f4eaccdeaa24b374bcde4d55011f36b093910779e113cd6d6625c175768",
+        "chars": 8351,
+        "inlinedChars": 861
+      }
+    },
+    {
+      "name": "bases-shield",
+      "defines": {},
+      "bake": false,
+      "module": "bases.js",
+      "vs": {
+        "path": "bases-shield.vs.glsl",
+        "sha256": "5a330dcb0c7ae742972ea81faae5dfb76229e4f4e3e209a73ae48e7a5e00f66d",
+        "chars": 7741,
+        "inlinedChars": 718
+      },
+      "fs": {
+        "path": "bases-shield.fs.glsl",
+        "sha256": "7b8eaebdd9f1a3dbad8dfc695293a7d5c1e3f92f8e3df345b0ffbf520e8d4f2d",
+        "chars": 19644,
+        "inlinedChars": 9724
+      }
+    },
+    {
+      "name": "bases-sprite",
+      "defines": {},
+      "bake": false,
+      "module": "bases.js",
+      "vs": {
+        "path": "bases-sprite.vs.glsl",
+        "sha256": "3bfd7d74f5d9466b8815110dc966855380595ca9b256fa8e0e7e35767f0ad633",
+        "chars": 9518,
+        "inlinedChars": 1739
+      },
+      "fs": {
+        "path": "bases-sprite.fs.glsl",
+        "sha256": "df745e48272852c298f92b1cb540686e97764ae5c440cce50bb636ce8bd27e56",
+        "chars": 8062,
+        "inlinedChars": 8498
+      }
+    },
+    {
+      "name": "life-bird",
+      "defines": {},
+      "bake": false,
+      "module": "life.js",
+      "vs": {
+        "path": "life-bird.vs.glsl",
+        "sha256": "ef05de343c942f4912bb4e368620433dcb6808a7b340d1981518c1d18fffe3c0",
+        "chars": 40111,
+        "inlinedChars": 5818
+      },
+      "fs": {
+        "path": "life-bird.fs.glsl",
+        "sha256": "6d4cf18a71cff859303975173f3b2341ee906393429d18a7835d97ecf4270a36",
+        "chars": 7650,
+        "inlinedChars": 8496
+      }
+    },
+    {
+      "name": "life-creature",
+      "defines": {},
+      "bake": false,
+      "module": "life.js",
+      "vs": {
+        "path": "life-creature.vs.glsl",
+        "sha256": "f33429353c9e2586b3e95ad068ff2b29f1afd831f48ee3f47d42f05d86589c25",
+        "chars": 38535,
+        "inlinedChars": 24425
+      },
+      "fs": {
+        "path": "life-creature.fs.glsl",
+        "sha256": "078c8479fc9b402b5fe9e3c2a75ff6f8079f5470957750153f65eb41a4e61c9f",
+        "chars": 8272,
+        "inlinedChars": 8432
+      }
+    },
+    {
+      "name": "life-particle",
+      "defines": {},
+      "bake": false,
+      "module": "life.js",
+      "vs": {
+        "path": "life-particle.vs.glsl",
+        "sha256": "dbb8890f3de215bbbc71c8e8642a2db6e3cce90c4c105b1b9203246a34a94791",
+        "chars": 39471,
+        "inlinedChars": 5854
+      },
+      "fs": {
+        "path": "life-particle.fs.glsl",
+        "sha256": "6d4cf18a71cff859303975173f3b2341ee906393429d18a7835d97ecf4270a36",
+        "chars": 7650,
+        "inlinedChars": 8496
+      }
+    },
+    {
+      "name": "life-scatter",
+      "defines": {
+        "LIFE_GLOW": "1"
+      },
+      "bake": false,
+      "module": "life.js",
+      "vs": {
+        "path": "life-scatter+LIFE_GLOW=1.vs.glsl",
+        "sha256": "d8c5c58cbfda0159ba93885e00302df26eab8798014a8c7a0b546c68b0680b65",
+        "chars": 43153,
+        "inlinedChars": 32367
+      },
+      "fs": {
+        "path": "life-scatter+LIFE_GLOW=1.fs.glsl",
+        "sha256": "20e48662caf4f3ac4b1e95cfd4721d20eca581275c8f85757a5eecde220c8959",
+        "chars": 8291,
+        "inlinedChars": 8902
+      }
+    },
+    {
+      "name": "life-stand-merged",
+      "defines": {
+        "STAND_MERGED": "1"
+      },
+      "bake": false,
+      "module": "life.js",
+      "vs": {
+        "path": "life-stand-merged+STAND_MERGED=1.vs.glsl",
+        "sha256": "ab87671244efc1562825360d86afa102e2e06787f80939bad65bbc161dca1422",
+        "chars": 41855,
+        "inlinedChars": 28924
+      },
+      "fs": {
+        "path": "life-stand-merged+STAND_MERGED=1.fs.glsl",
+        "sha256": "0bb2cb16522384c48992f19dd94327c365bd3292844eede1d14a85da87a9b63f",
+        "chars": 8294,
+        "inlinedChars": 8432
+      }
+    },
+    {
+      "name": "life-stand",
+      "defines": {},
+      "bake": false,
+      "module": "life.js",
+      "vs": {
+        "path": "life-stand.vs.glsl",
+        "sha256": "990cd00d15da5ad4fa3be874218d7df09fd18d752fe6a7d86788eea21f4cba7e",
+        "chars": 41833,
+        "inlinedChars": 29221
+      },
+      "fs": {
+        "path": "life-stand.fs.glsl",
+        "sha256": "078c8479fc9b402b5fe9e3c2a75ff6f8079f5470957750153f65eb41a4e61c9f",
+        "chars": 8272,
+        "inlinedChars": 8432
+      }
+    },
+    {
+      "name": "minimap-dots",
+      "defines": {},
+      "bake": false,
+      "module": "minimap.js",
+      "vs": {
+        "path": "minimap-dots.vs.glsl",
+        "sha256": "5392d019cf7806b38df7fb766ec4846a1940f3a14d3510c1338a956e9ae7ab78",
+        "chars": 7685,
+        "inlinedChars": 367
+      },
+      "fs": {
+        "path": "minimap-dots.fs.glsl",
+        "sha256": "2237a92e3254759ec7bf9d69190b538005955e39b00d6fb8b402353531f8f4de",
+        "chars": 8134,
+        "inlinedChars": 665
+      }
+    },
+    {
+      "name": "minimap",
+      "defines": {},
+      "bake": false,
+      "module": "minimap.js",
+      "vs": {
+        "path": "minimap.vs.glsl",
+        "sha256": "c02be7a2bcb49cafa969b151ca6c8c62c57d99a8f62eefa01edf7fa921e7ea1a",
+        "chars": 314,
+        "inlinedChars": 37
+      },
+      "fs": {
+        "path": "minimap.fs.glsl",
+        "sha256": "fbe2d65d424bce16e0516ba259ebb33cd8b2660f8e1d4f00b22e3b4c5086137e",
+        "chars": 9261,
+        "inlinedChars": 1112
+      }
+    },
+    {
+      "name": "rm-chart",
+      "defines": {},
+      "bake": false,
+      "module": "ground.js",
+      "vs": {
+        "path": "rm-chart.vs.glsl",
+        "sha256": "bc80b1d57c947739a2875b91dab71f3419fa63fb7b82bc54691da48290c8130c",
+        "chars": 316,
+        "inlinedChars": 37
+      },
+      "fs": {
+        "path": "rm-chart.fs.glsl",
+        "sha256": "d582050b10e655a2357e6b90b2d297ee89945e97795ae7afd6ebe8db7a9ded84",
+        "chars": 17697,
+        "inlinedChars": 21684
+      }
+    },
+    {
+      "name": "rm-despeckle",
+      "defines": {},
+      "bake": true,
+      "module": "ground.js",
+      "vs": {
+        "path": "rm-despeckle.vs.glsl",
+        "sha256": "bc80b1d57c947739a2875b91dab71f3419fa63fb7b82bc54691da48290c8130c",
+        "chars": 316,
+        "inlinedChars": 37
+      },
+      "fs": {
+        "path": "rm-despeckle.fs.glsl",
+        "sha256": "416885a5dcf0822b101f9c979f0b80c72ad3f4e77154b278ce0b0a263a305c24",
+        "chars": 2833,
+        "inlinedChars": 2809
+      }
+    },
+    {
+      "name": "rm-legalise",
+      "defines": {},
+      "bake": true,
+      "module": "ground.js",
+      "vs": {
+        "path": "rm-legalise.vs.glsl",
+        "sha256": "bc80b1d57c947739a2875b91dab71f3419fa63fb7b82bc54691da48290c8130c",
+        "chars": 316,
+        "inlinedChars": 37
+      },
+      "fs": {
+        "path": "rm-legalise.fs.glsl",
+        "sha256": "72eeabfa6232f99f476295425a226e02fa60e9c29910e4c5daf8e16dd43003f1",
+        "chars": 1655,
+        "inlinedChars": 911
+      }
+    },
+    {
+      "name": "rm-lowres-blit",
+      "defines": {},
+      "bake": false,
+      "module": "core.js",
+      "vs": {
+        "path": "rm-lowres-blit.vs.glsl",
+        "sha256": "c02be7a2bcb49cafa969b151ca6c8c62c57d99a8f62eefa01edf7fa921e7ea1a",
+        "chars": 314,
+        "inlinedChars": 37
+      },
+      "fs": {
+        "path": "rm-lowres-blit.fs.glsl",
+        "sha256": "fd151be63e2488be5dfbd6dbe5c6fffffef67d2202da75dba118e60f0f1c723b",
+        "chars": 7239,
+        "inlinedChars": 222
+      }
+    },
+    {
+      "name": "rm-map-wmask",
+      "defines": {
+        "RM_DBG_WMASK": true
+      },
+      "bake": false,
+      "module": "ground.js",
+      "vs": {
+        "path": "rm-map-wmask+RM_DBG_WMASK.vs.glsl",
+        "sha256": "c5ab140dfb6a41afd0d3c775f538b152516dee498bd60e6718f08635d8794c8e",
+        "chars": 336,
+        "inlinedChars": 37
+      },
+      "fs": {
+        "path": "rm-map-wmask+RM_DBG_WMASK.fs.glsl",
+        "sha256": "cbd6cdbe5ab912a6b9136c42a90e88752325691c250dfb070d6dec3be885ebe8",
+        "chars": 60927,
+        "inlinedChars": 48002
+      }
+    },
+    {
+      "name": "rm-map",
+      "defines": {
+        "RM_LAVA": true
+      },
+      "bake": false,
+      "module": "ground.js",
+      "variant": "ground.js gd.RM_LAVA (tools/world-shaders-ground.json)",
+      "vs": {
+        "path": "rm-map+RM_LAVA.vs.glsl",
+        "sha256": "4d15bc1b455e124192cc279f8b808f48069e1fa40c480ac6b60cd90b73735772",
+        "chars": 331,
+        "inlinedChars": 37
+      },
+      "fs": {
+        "path": "rm-map+RM_LAVA.fs.glsl",
+        "sha256": "ceb8c1af91ee236f19b820791cb377deca935aaf3dfc6b5d43f282164b34ec0a",
+        "chars": 60922,
+        "inlinedChars": 51227
+      }
+    },
+    {
+      "name": "rm-map",
+      "defines": {},
+      "bake": false,
+      "module": "ground.js",
+      "vs": {
+        "path": "rm-map.vs.glsl",
+        "sha256": "bc80b1d57c947739a2875b91dab71f3419fa63fb7b82bc54691da48290c8130c",
+        "chars": 316,
+        "inlinedChars": 37
+      },
+      "fs": {
+        "path": "rm-map.fs.glsl",
+        "sha256": "88a1713762a30fe009002b23fa19f51ba44ceefd86bf727effe4e90cceee6db6",
+        "chars": 60907,
+        "inlinedChars": 47928
+      }
+    },
+    {
+      "name": "rm-pure",
+      "defines": {},
+      "bake": true,
+      "module": "ground.js",
+      "vs": {
+        "path": "rm-pure.vs.glsl",
+        "sha256": "bc80b1d57c947739a2875b91dab71f3419fa63fb7b82bc54691da48290c8130c",
+        "chars": 316,
+        "inlinedChars": 37
+      },
+      "fs": {
+        "path": "rm-pure.fs.glsl",
+        "sha256": "7721f39d95d6853195d7437838b4a4a69d9942c7bbfcc010449acc3b9b28643e",
+        "chars": 770,
+        "inlinedChars": 380
+      }
+    },
+    {
+      "name": "rm-raw",
+      "defines": {},
+      "bake": true,
+      "module": "ground.js",
+      "vs": {
+        "path": "rm-raw.vs.glsl",
+        "sha256": "bc80b1d57c947739a2875b91dab71f3419fa63fb7b82bc54691da48290c8130c",
+        "chars": 316,
+        "inlinedChars": 37
+      },
+      "fs": {
+        "path": "rm-raw.fs.glsl",
+        "sha256": "d33a11f8936ddb6da67f408ec59859c91bef560007a5f08dce149e3a8196799a",
+        "chars": 34325,
+        "inlinedChars": 3477
+      }
+    },
+    {
+      "name": "rm-record",
+      "defines": {},
+      "bake": true,
+      "module": "ground.js",
+      "vs": {
+        "path": "rm-record.vs.glsl",
+        "sha256": "bc80b1d57c947739a2875b91dab71f3419fa63fb7b82bc54691da48290c8130c",
+        "chars": 316,
+        "inlinedChars": 37
+      },
+      "fs": {
+        "path": "rm-record.fs.glsl",
+        "sha256": "d2bd2147d0e659acb223acdb342989558ec376df0a29372a0a72b026dfe7b110",
+        "chars": 11199,
+        "inlinedChars": 4476
+      }
+    },
+    {
+      "name": "rm-true-wmask",
+      "defines": {
+        "RM_DBG_WMASK": true
+      },
+      "bake": false,
+      "module": "ground.js",
+      "vs": {
+        "path": "rm-true-wmask+RM_DBG_WMASK.vs.glsl",
+        "sha256": "c5ab140dfb6a41afd0d3c775f538b152516dee498bd60e6718f08635d8794c8e",
+        "chars": 336,
+        "inlinedChars": 37
+      },
+      "fs": {
+        "path": "rm-true-wmask+RM_DBG_WMASK.fs.glsl",
+        "sha256": "0483c4b8e476aa7228ac62ee785afe114380a30ccb2811255b5134a2baf2faa4",
+        "chars": 28270,
+        "inlinedChars": 18755
+      }
+    },
+    {
+      "name": "rm-true",
+      "defines": {},
+      "bake": false,
+      "module": "ground.js",
+      "vs": {
+        "path": "rm-true.vs.glsl",
+        "sha256": "bc80b1d57c947739a2875b91dab71f3419fa63fb7b82bc54691da48290c8130c",
+        "chars": 316,
+        "inlinedChars": 37
+      },
+      "fs": {
+        "path": "rm-true.fs.glsl",
+        "sha256": "d5e0ffa1edf9e7f6153f1fcdab2469135f41f3368524a831c8a8793bb008304d",
+        "chars": 28250,
+        "inlinedChars": 18701
+      }
+    },
+    {
+      "name": "stub-ground",
+      "defines": {},
+      "bake": false,
+      "module": "map.js",
+      "vs": {
+        "path": "stub-ground.vs.glsl",
+        "sha256": "c02be7a2bcb49cafa969b151ca6c8c62c57d99a8f62eefa01edf7fa921e7ea1a",
+        "chars": 314,
+        "inlinedChars": 37
+      },
+      "fs": {
+        "path": "stub-ground.fs.glsl",
+        "sha256": "da57d5fd7c1968cea6b9fd7272f7e86c7fdd741eed92eaf97a089c5957b21e15",
+        "chars": 8539,
+        "inlinedChars": 1392
+      }
+    }
+  ],
+  "globe": [
+    {
+      "name": "globe-bake-cloud",
+      "module": "src/shaders.js",
+      "site": "S.BAKE_CLOUD_FS",
+      "use": "bake",
+      "vsName": "FULLSCREEN_VS",
+      "fsName": "BAKE_CLOUD_FS",
+      "vs": {
+        "path": "globe-bake-cloud.vs.glsl",
+        "sha256": "b76f0de3fe278a3cf37da9bc3c41d3398ce90a4b4e915dc917f0787877ea2c23",
+        "chars": 99,
+        "inlinedChars": 44
+      },
+      "fs": {
+        "path": "globe-bake-cloud.fs.glsl",
+        "sha256": "152b4094c9ff542287bcbff7a262a73bff214ed6db7b7a9eb4c85026ad9ad3df",
+        "chars": 3450,
+        "inlinedChars": 4258
+      }
+    },
+    {
+      "name": "globe-bake-height2",
+      "module": "src/shaders.js",
+      "site": "S.BAKE_HEIGHT2_FS",
+      "use": "bake",
+      "vsName": "FULLSCREEN_VS",
+      "fsName": "BAKE_HEIGHT2_FS",
+      "vs": {
+        "path": "globe-bake-height2.vs.glsl",
+        "sha256": "b76f0de3fe278a3cf37da9bc3c41d3398ce90a4b4e915dc917f0787877ea2c23",
+        "chars": 99,
+        "inlinedChars": 44
+      },
+      "fs": {
+        "path": "globe-bake-height2.fs.glsl",
+        "sha256": "a9569395cb2592145cada2a31695f6bdb7811db0cb4f1738d3f1784ab6158459",
+        "chars": 4792,
+        "inlinedChars": 6273
+      }
+    },
+    {
+      "name": "globe-bake-hint",
+      "module": "src/shaders.js",
+      "site": "S.BAKE_HINT_FS",
+      "use": "bake",
+      "vsName": "FULLSCREEN_VS",
+      "fsName": "BAKE_HINT_FS",
+      "vs": {
+        "path": "globe-bake-hint.vs.glsl",
+        "sha256": "b76f0de3fe278a3cf37da9bc3c41d3398ce90a4b4e915dc917f0787877ea2c23",
+        "chars": 99,
+        "inlinedChars": 44
+      },
+      "fs": {
+        "path": "globe-bake-hint.fs.glsl",
+        "sha256": "158f949816403f5fc74ac96aee94eff5b91971514c6293965d12f99a51d78783",
+        "chars": 4291,
+        "inlinedChars": 1266
+      }
+    },
+    {
+      "name": "globe-blit",
+      "module": "src/shaders.js",
+      "site": "pBlit",
+      "use": "draw",
+      "vsName": "FULLSCREEN_VS",
+      "fsName": null,
+      "vs": {
+        "path": "globe-blit.vs.glsl",
+        "sha256": "b76f0de3fe278a3cf37da9bc3c41d3398ce90a4b4e915dc917f0787877ea2c23",
+        "chars": 99,
+        "inlinedChars": 44
+      },
+      "fs": {
+        "path": "globe-blit.fs.glsl",
+        "sha256": "7812bdce8957eb1d3177428098ddb8121201f388bc350c32128d6a5e85e6be63",
+        "chars": 113,
+        "inlinedChars": 18
+      }
+    },
+    {
+      "name": "globe-cloud",
+      "module": "src/shaders.js",
+      "site": "S.CLOUD_FS",
+      "use": "draw",
+      "vsName": "CLOUD_VS",
+      "fsName": "CLOUD_FS",
+      "vs": {
+        "path": "globe-cloud.vs.glsl",
+        "sha256": "96adb8b47a717b6d2d2fc6dd0e6bebb568cca48a379d6edf1ee8470f28161a89",
+        "chars": 146,
+        "inlinedChars": 49
+      },
+      "fs": {
+        "path": "globe-cloud.fs.glsl",
+        "sha256": "dd29351e51a4943b4b084cd8d3889da7758ac8b40adf71963aa3123aa0cfa879",
+        "chars": 4784,
+        "inlinedChars": 812
+      }
+    },
+    {
+      "name": "globe-flat",
+      "module": "src/globe/flat.glsl.js",
+      "site": "GLOBE_PROGRAMS",
+      "use": "draw",
+      "vsName": "GLOBE_FLAT_VS",
+      "fsName": "GLOBE_FLAT_FS",
+      "vs": {
+        "path": "globe-flat.vs.glsl",
+        "sha256": "64bed743a370b92f59b37ae0a97ed9dca56dd0e3a1c28abc9ea556384d18ad79",
+        "chars": 329,
+        "inlinedChars": 39
+      },
+      "fs": {
+        "path": "globe-flat.fs.glsl",
+        "sha256": "8f7b17790aa6a8dea4da853204f9af11ed560c12d230e24db3637b6c1c9904b1",
+        "chars": 10067,
+        "inlinedChars": 7832
+      }
+    },
+    {
+      "name": "globe-fx",
+      "module": "src/globe/flat.glsl.js",
+      "site": "GLOBE_PROGRAMS",
+      "use": "draw",
+      "vsName": "GLOBE_FX_VS",
+      "fsName": "GLOBE_FX_FS",
+      "vs": {
+        "path": "globe-fx.vs.glsl",
+        "sha256": "68e7f623796f46679d0a5235453feb27e28b10db7ed44b74b8d1af1bc72cc060",
+        "chars": 7584,
+        "inlinedChars": 892
+      },
+      "fs": {
+        "path": "globe-fx.fs.glsl",
+        "sha256": "76ab6c0709b4f0ad5ee2fc70194a05eef0fddacb5e25e10a028ba5cedc25ebc8",
+        "chars": 279,
+        "inlinedChars": 9
+      }
+    },
+    {
+      "name": "globe-isles",
+      "module": "src/globe/flat.glsl.js",
+      "site": "GLOBE_PROGRAMS",
+      "use": "draw",
+      "vsName": "GLOBE_ISLES_VS",
+      "fsName": "GLOBE_ISLES_FS",
+      "vs": {
+        "path": "globe-isles.vs.glsl",
+        "sha256": "4b62daf51e2a38fdb330f1420299270bfb741cecf9c0a0b85723736efccd7daa",
+        "chars": 7437,
+        "inlinedChars": 666
+      },
+      "fs": {
+        "path": "globe-isles.fs.glsl",
+        "sha256": "01ff2782129bd6cf44b664984ba288b0723b65733b2af70055d9aea7e16dbccd",
+        "chars": 8159,
+        "inlinedChars": 4247
+      }
+    },
+    {
+      "name": "globe-read-heights",
+      "module": "src/shaders.js",
+      "site": "readHeights()",
+      "use": "draw",
+      "vsName": "FULLSCREEN_VS",
+      "fsName": null,
+      "vs": {
+        "path": "globe-read-heights.vs.glsl",
+        "sha256": "b76f0de3fe278a3cf37da9bc3c41d3398ce90a4b4e915dc917f0787877ea2c23",
+        "chars": 99,
+        "inlinedChars": 44
+      },
+      "fs": {
+        "path": "globe-read-heights.fs.glsl",
+        "sha256": "3413dd7b1024e9f0491baeb150d57ec2441812529991e89ad25831348ec9dc1e",
+        "chars": 382,
+        "inlinedChars": 283
+      }
+    },
+    {
+      "name": "globe-sky",
+      "module": "src/shaders.js",
+      "site": "S.SKY_FS",
+      "use": "draw",
+      "vsName": "FULLSCREEN_VS",
+      "fsName": "SKY_FS",
+      "vs": {
+        "path": "globe-sky.vs.glsl",
+        "sha256": "b76f0de3fe278a3cf37da9bc3c41d3398ce90a4b4e915dc917f0787877ea2c23",
+        "chars": 99,
+        "inlinedChars": 44
+      },
+      "fs": {
+        "path": "globe-sky.fs.glsl",
+        "sha256": "0a49ff6dcbec033e0b5d564a576bbc0675619556e2645c729b8e396e7b27d627",
+        "chars": 3974,
+        "inlinedChars": 1629
+      }
+    },
+    {
+      "name": "globe-terrain2",
+      "module": "src/shaders.js",
+      "site": "S.TERRAIN2_FS",
+      "use": "draw",
+      "vsName": "TERRAIN_VS",
+      "fsName": "TERRAIN2_FS",
+      "vs": {
+        "path": "globe-terrain2.vs.glsl",
+        "sha256": "b79ef0f8afd6368750866c175f5be0fbaba00465de0f544e06f3d7a6cabdd806",
+        "chars": 3685,
+        "inlinedChars": 509
+      },
+      "fs": {
+        "path": "globe-terrain2.fs.glsl",
+        "sha256": "7d3a5b6164ae1c2d3aa34f501528728959092e0ba866b15be2317eb33674363c",
+        "chars": 13047,
+        "inlinedChars": 11475
+      }
+    }
+  ]
+}

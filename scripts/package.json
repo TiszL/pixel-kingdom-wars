@@ -1,0 +1,43 @@
+{
+  "name": "@shardkeep/scripts",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "bootstrap:devnet": "tsx src/bootstrap-devnet.ts",
+    "token:mint": "tsx src/token-mint.ts",
+    "deed:collection": "tsx src/deed-collection.ts",
+    "econ:sim": "tsx src/econ-sim.ts",
+    "docs:constants": "tsx src/docs-constants-export.ts",
+    "forge:sim": "tsx src/forge-sim.ts",
+    "keep-mining:sim": "tsx src/keep-mining-sim.ts",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "deed:reuri": "tsx src/deed-reuri.ts",
+    "deed:thaw": "tsx src/deed-thaw.ts",
+    "deed:royalty": "tsx src/deed-royalty.ts",
+    "deed:royalty:creator": "tsx src/deed-royalty-creator.ts",
+    "deed:update-delegate": "tsx src/deed-update-delegate.ts",
+    "release-notes:lint": "tsx src/release-notes.ts lint",
+    "release-notes:history-json": "tsx src/release-notes.ts history-json",
+    "release-notes:collect": "tsx src/release-notes-collect.ts",
+    "verify:published-ground": "tsx src/verify-published-ground.ts"
+  },
+  "dependencies": {
+    "@resvg/resvg-js": "2.6.2",
+    "@shardkeep/chain": "workspace:*",
+    "@shardkeep/shared": "workspace:*",
+    "@solana/web3.js": "1.98.4",
+    "free-tex-packer-core": "0.3.8",
+    "jsfxr": "1.4.1",
+    "postgres": "^3.4.9",
+    "sharp": "0.35.1",
+    "tsx": "^4.22.4",
+    "typescript": "^5.9.3"
+  },
+  "devDependencies": {
+    "@bubblewrap/cli": "1.25.0",
+    "@types/node": "^25.9.3",
+    "vitest": "^4.1.8"
+  }
+}

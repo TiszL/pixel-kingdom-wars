@@ -1,0 +1,15 @@
+{
+  "schemaVersion":1,
+  "sdk":"ephemeral-vrf-sdk@0.17.2/anchor-compat",
+  "scope":"deterministic ABI compatibility; no provider delivery or unpredictability proof",
+  "craftProgram":"DUXczJ1EUMgyRVRFbToB95SiuAKEkewJ4iarhDaZTNMt",
+  "rootIdHex":"11111111111111111111111111111111",
+  "attemptIdHex":"22222222222222222222222222222222",
+  "termsHashHex":"000102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f",
+  "root":"BhYSCFRz3WjCKczDLVfxb8z2MAxeEuNnKYqDLNjCY4wJ",
+  "attempt":"aPHcQT9GKdDKqr9oebsXaatxnKVhN7EDgYM2kozWaPM",
+  "oracleEscrow":"Cg2ahtsodizsfaNBZZksuV7HNYHwYLCGTLtwtmsbj7BE",
+  "scopedProviderIdentity":"J99pUPr4rRoHcZ2auQ1WpRVUqdhrxnwaXajXgwSrJ3ou",
+  "request":{"programId":"Vrf1RNUjXmQGjmQrQLvJHs9SNkvDJEsRVFPkfSQUwGz","accounts":[{"address":"Cg2ahtsodizsfaNBZZksuV7HNYHwYLCGTLtwtmsbj7BE","isSigner":true,"isWritable":true},{"address":"GJqn8U414Fj1YUHTiZLREcs1NENtSqzXLYBwmRJX6suC","isSigner":true,"isWritable":false},{"address":"Cuj97ggrhhidhbu39TijNVqE74xvKJ69gDervRUXAxGh","isSigner":false,"isWritable":true},{"address":"11111111111111111111111111111111","isSigner":false,"isWritable":false},{"address":"SysvarS1otHashes111111111111111111111111111","isSigner":false,"isWritable":false}],"dataHex":"0a00000000000000000102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1fb9598c32a642eaa8b234f48134a70c4051a8d9fa09b9f2c745c167f3d2b9525f08000000e239a17d61021614020000009ef7a503f200d385a5c2b09446a4ba81028e25020150f787a12ec61fcf710d410000088d5db1fbf9e92db9d0133df5a6fe8f9f3b06f0672c29f443c18859076f55cc0001200000001111111111111111111111111111111122222222222222222222222222222222","dataLength":192},
+  "callback":{"programId":"DUXczJ1EUMgyRVRFbToB95SiuAKEkewJ4iarhDaZTNMt","accounts":[{"address":"J99pUPr4rRoHcZ2auQ1WpRVUqdhrxnwaXajXgwSrJ3ou","isSigner":true,"isWritable":false},{"address":"BhYSCFRz3WjCKczDLVfxb8z2MAxeEuNnKYqDLNjCY4wJ","isSigner":false,"isWritable":false},{"address":"aPHcQT9GKdDKqr9oebsXaatxnKVhN7EDgYM2kozWaPM","isSigner":false,"isWritable":true}],"discriminatorHex":"e239a17d61021614","randomnessHex":"a0a1a2a3a4a5a6a7a8a9aaabacadaeafb0b1b2b3b4b5b6b7b8b9babbbcbdbebf","argsHex":"1111111111111111111111111111111122222222222222222222222222222222","dataHex":"e239a17d61021614a0a1a2a3a4a5a6a7a8a9aaabacadaeafb0b1b2b3b4b5b6b7b8b9babbbcbdbebf1111111111111111111111111111111122222222222222222222222222222222","dataLength":72}
+}

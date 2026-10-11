@@ -1,0 +1,238 @@
+{
+  "sourceCommit": "427381a2adf934bbcc902baefc207a655b185eb6",
+  "sourceHashes": {
+    "packages/sim/tests/hero-skills.test.ts": "df9f91198bf4a4061da859972faf6e49a8fc90e3d90a5677c5a5de8da9fe2f8d",
+    "apps/web/src/game/fx/troop.ts": "33dc658ad94ae6b6a828c72d12947d5175d2d66c3731e171b87a3abac275b972",
+    "apps/web/src/game/scenes/BattleScene.ts": "caa08a270b3a16950ed5eac7c0de3f86a3b7f47e154d8fd30c096b25d168ae7d",
+    "packages/sim/src/sim.ts": "c9e55430ea6041c5fc2c1c8f4040d90e7f87f637308d4b975b1e989848560a41",
+    "packages/sim/tests/helpers.ts": "f7498b28fe6e77ec658fee2c6fd9a4be988be8b44ebd319cbdf8e7b283e57a86",
+    "packages/shared/src/constants.ts": "d289876ff1f02ca5a6ca917123b4cca956f7da15386447eeb0ab31c4cbbb9ba8"
+  },
+  "simVersion": 18,
+  "tickMs": 100,
+  "cases": [
+    {
+      "face": "heads",
+      "input": [
+        16,
+        2
+      ],
+      "events": [
+        {
+          "t": 0,
+          "e": "deploy",
+          "id": 0,
+          "troop": "highlander",
+          "x": 128,
+          "y": 3712,
+          "hero": "vex"
+        },
+        {
+          "t": 0,
+          "e": "pos",
+          "id": 0,
+          "x": 151,
+          "y": 3704
+        },
+        {
+          "t": 0,
+          "e": "pos",
+          "id": 0,
+          "x": 1339,
+          "y": 3228
+        },
+        {
+          "t": 5,
+          "e": "pos",
+          "id": 0,
+          "x": 1454,
+          "y": 3190
+        },
+        {
+          "t": 10,
+          "e": "pos",
+          "id": 0,
+          "x": 1569,
+          "y": 3151
+        },
+        {
+          "t": 15,
+          "e": "pos",
+          "id": 0,
+          "x": 1684,
+          "y": 3112
+        },
+        {
+          "t": 20,
+          "e": "pos",
+          "id": 0,
+          "x": 1799,
+          "y": 3073
+        },
+        {
+          "t": 25,
+          "e": "pos",
+          "id": 0,
+          "x": 1914,
+          "y": 3034
+        },
+        {
+          "t": 28,
+          "e": "heroSkill",
+          "id": 0,
+          "hero": "vex",
+          "side": "attacker",
+          "skill": "doubleOrNothingHeads",
+          "phase": "heads",
+          "x": 1983,
+          "y": 3011
+        }
+      ],
+      "body": {
+        "frames": [
+          "hero_vex_revive_f1",
+          "hero_vex_revive_f2"
+        ],
+        "lockMs": 500,
+        "priority": 4,
+        "once": true
+      },
+      "bodyAfterDeath": null,
+      "sweeps": [
+        {
+          "x": 1983,
+          "y": 3011,
+          "frames": [
+            "fx_vex_coinflip_f1",
+            "fx_vex_coinflip_f2",
+            "fx_vex_coinflip_f3",
+            "fx_vex_coinflip_f4"
+          ],
+          "stepMs": 100,
+          "lifetimeMs": 600,
+          "depth": 402684,
+          "scale": 1.7,
+          "anchor": [
+            0.5,
+            0.5
+          ]
+        }
+      ]
+    },
+    {
+      "face": "tails",
+      "input": [
+        16,
+        42
+      ],
+      "events": [
+        {
+          "t": 0,
+          "e": "deploy",
+          "id": 0,
+          "troop": "highlander",
+          "x": 128,
+          "y": 3712,
+          "hero": "vex"
+        },
+        {
+          "t": 0,
+          "e": "pos",
+          "id": 0,
+          "x": 151,
+          "y": 3704
+        },
+        {
+          "t": 0,
+          "e": "pos",
+          "id": 0,
+          "x": 1339,
+          "y": 3228
+        },
+        {
+          "t": 5,
+          "e": "pos",
+          "id": 0,
+          "x": 1454,
+          "y": 3190
+        },
+        {
+          "t": 10,
+          "e": "pos",
+          "id": 0,
+          "x": 1569,
+          "y": 3151
+        },
+        {
+          "t": 15,
+          "e": "pos",
+          "id": 0,
+          "x": 1684,
+          "y": 3112
+        },
+        {
+          "t": 20,
+          "e": "pos",
+          "id": 0,
+          "x": 1799,
+          "y": 3073
+        },
+        {
+          "t": 25,
+          "e": "pos",
+          "id": 0,
+          "x": 1914,
+          "y": 3034
+        },
+        {
+          "t": 28,
+          "e": "heroSkill",
+          "id": 0,
+          "hero": "vex",
+          "side": "attacker",
+          "skill": "doubleOrNothingTails",
+          "phase": "tails",
+          "x": 1983,
+          "y": 3011,
+          "refundPct": 50
+        },
+        {
+          "t": 28,
+          "e": "troopDeath",
+          "id": 0
+        }
+      ],
+      "body": {
+        "frames": [
+          "hero_vex_taunt_f1",
+          "hero_vex_taunt_f2",
+          "hero_vex_taunt_f3"
+        ],
+        "lockMs": 500,
+        "priority": 3,
+        "once": true
+      },
+      "bodyAfterDeath": null,
+      "sweeps": [
+        {
+          "x": 1983,
+          "y": 3011,
+          "frames": [
+            "fx_vex_coinflip_f1",
+            "fx_vex_coinflip_f2",
+            "fx_vex_coinflip_f3",
+            "fx_vex_coinflip_f4"
+          ],
+          "stepMs": 100,
+          "lifetimeMs": 600,
+          "depth": 402684,
+          "scale": 1.7,
+          "anchor": [
+            0.5,
+            0.5
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "hash": "9d119231",
+  "outcome": {
+    "stars": 0,
+    "destructionPct": 27,
+    "keepDestroyed": false,
+    "vaultDestroyed": false,
+    "mineDestroyed": false,
+    "victory": false,
+    "buildings": [
+      {
+        "id": "keep",
+        "type": "keep",
+        "hp": 15358,
+        "maxHp": 15358,
+        "destroyed": false
+      },
+      {
+        "id": "air",
+        "type": "airdefence",
+        "hp": 0,
+        "maxHp": 5759,
+        "destroyed": true
+      }
+    ],
+    "ticks": 650,
+    "eventCount": 253
+  }
+}

@@ -1,0 +1,601 @@
+{
+  "scope": "actual earned kit sale through authenticated API and finalized SPL",
+  "sellerStock": {
+    "baseId": "87cb9952-57f3-4a2f-8162-3bf440b46db8",
+    "wallet": "9mqocaPZazSQ9hTDdyWmfd6pEn7RbuVa8zty2NWNma9b",
+    "serverNow": "2026-09-28T20:13:23.589Z",
+    "policy": {
+      "version": 1,
+      "decimals": 9,
+      "minFillBaseUnits": "1000000",
+      "sellerBps": 9000,
+      "basisPoints": 10000,
+      "reviewMaxAgeMs": 30000
+    },
+    "catalogueVersion": 4,
+    "items": [
+      {
+        "itemId": "route_compass",
+        "available": "0",
+        "reserved": "0",
+        "pendingOutput": "0",
+        "marketOutgoing": "0",
+        "marketIncoming": "0"
+      },
+      {
+        "itemId": "survey_lens",
+        "available": "0",
+        "reserved": "0",
+        "pendingOutput": "0",
+        "marketOutgoing": "0",
+        "marketIncoming": "0"
+      },
+      {
+        "itemId": "frostglass",
+        "available": "0",
+        "reserved": "0",
+        "pendingOutput": "0",
+        "marketOutgoing": "0",
+        "marketIncoming": "0"
+      },
+      {
+        "itemId": "heartwood_beams",
+        "available": "0",
+        "reserved": "0",
+        "pendingOutput": "0",
+        "marketOutgoing": "0",
+        "marketIncoming": "0"
+      },
+      {
+        "itemId": "sunstone_blocks",
+        "available": "0",
+        "reserved": "0",
+        "pendingOutput": "0",
+        "marketOutgoing": "0",
+        "marketIncoming": "0"
+      },
+      {
+        "itemId": "crownsteel",
+        "available": "0",
+        "reserved": "0",
+        "pendingOutput": "0",
+        "marketOutgoing": "0",
+        "marketIncoming": "0"
+      },
+      {
+        "itemId": "prismstone_lens",
+        "available": "0",
+        "reserved": "0",
+        "pendingOutput": "0",
+        "marketOutgoing": "0",
+        "marketIncoming": "0"
+      },
+      {
+        "itemId": "stormalloy",
+        "available": "0",
+        "reserved": "0",
+        "pendingOutput": "0",
+        "marketOutgoing": "0",
+        "marketIncoming": "0"
+      },
+      {
+        "itemId": "thornsilk",
+        "available": "0",
+        "reserved": "0",
+        "pendingOutput": "0",
+        "marketOutgoing": "0",
+        "marketIncoming": "0"
+      },
+      {
+        "itemId": "embercore",
+        "available": "0",
+        "reserved": "0",
+        "pendingOutput": "0",
+        "marketOutgoing": "0",
+        "marketIncoming": "0"
+      },
+      {
+        "itemId": "navigation_kit",
+        "available": "0",
+        "reserved": "0",
+        "pendingOutput": "0",
+        "marketOutgoing": "0",
+        "marketIncoming": "0"
+      },
+      {
+        "itemId": "climate_kit",
+        "available": "2",
+        "reserved": "0",
+        "pendingOutput": "0",
+        "marketOutgoing": "0",
+        "marketIncoming": "0"
+      },
+      {
+        "itemId": "expedition_kit",
+        "available": "2",
+        "reserved": "0",
+        "pendingOutput": "0",
+        "marketOutgoing": "0",
+        "marketIncoming": "0"
+      },
+      {
+        "itemId": "crystal_fragment",
+        "available": "0",
+        "reserved": "0",
+        "pendingOutput": "0",
+        "marketOutgoing": "0",
+        "marketIncoming": "0"
+      }
+    ]
+  },
+  "buyerStock": {
+    "baseId": "d8b5c72f-95db-4c97-9816-1ce48dec0038",
+    "wallet": "7BTqD9tvT5DcQWwegac48J8Un6cKsZ9no178UH4jo78z",
+    "serverNow": "2026-09-28T20:13:23.589Z",
+    "policy": {
+      "version": 1,
+      "decimals": 9,
+      "minFillBaseUnits": "1000000",
+      "sellerBps": 9000,
+      "basisPoints": 10000,
+      "reviewMaxAgeMs": 30000
+    },
+    "catalogueVersion": 4,
+    "items": [
+      {
+        "itemId": "route_compass",
+        "available": "0",
+        "reserved": "0",
+        "pendingOutput": "0",
+        "marketOutgoing": "0",
+        "marketIncoming": "0"
+      },
+      {
+        "itemId": "survey_lens",
+        "available": "0",
+        "reserved": "0",
+        "pendingOutput": "0",
+        "marketOutgoing": "0",
+        "marketIncoming": "0"
+      },
+      {
+        "itemId": "frostglass",
+        "available": "0",
+        "reserved": "0",
+        "pendingOutput": "0",
+        "marketOutgoing": "0",
+        "marketIncoming": "0"
+      },
+      {
+        "itemId": "heartwood_beams",
+        "available": "0",
+        "reserved": "0",
+        "pendingOutput": "0",
+        "marketOutgoing": "0",
+        "marketIncoming": "0"
+      },
+      {
+        "itemId": "sunstone_blocks",
+        "available": "0",
+        "reserved": "0",
+        "pendingOutput": "0",
+        "marketOutgoing": "0",
+        "marketIncoming": "0"
+      },
+      {
+        "itemId": "crownsteel",
+        "available": "0",
+        "reserved": "0",
+        "pendingOutput": "0",
+        "marketOutgoing": "0",
+        "marketIncoming": "0"
+      },
+      {
+        "itemId": "prismstone_lens",
+        "available": "0",
+        "reserved": "0",
+        "pendingOutput": "0",
+        "marketOutgoing": "0",
+        "marketIncoming": "0"
+      },
+      {
+        "itemId": "stormalloy",
+        "available": "0",
+        "reserved": "0",
+        "pendingOutput": "0",
+        "marketOutgoing": "0",
+        "marketIncoming": "0"
+      },
+      {
+        "itemId": "thornsilk",
+        "available": "0",
+        "reserved": "0",
+        "pendingOutput": "0",
+        "marketOutgoing": "0",
+        "marketIncoming": "0"
+      },
+      {
+        "itemId": "embercore",
+        "available": "0",
+        "reserved": "0",
+        "pendingOutput": "0",
+        "marketOutgoing": "0",
+        "marketIncoming": "0"
+      },
+      {
+        "itemId": "navigation_kit",
+        "available": "0",
+        "reserved": "0",
+        "pendingOutput": "0",
+        "marketOutgoing": "0",
+        "marketIncoming": "0"
+      },
+      {
+        "itemId": "climate_kit",
+        "available": "0",
+        "reserved": "0",
+        "pendingOutput": "0",
+        "marketOutgoing": "0",
+        "marketIncoming": "0"
+      },
+      {
+        "itemId": "expedition_kit",
+        "available": "1",
+        "reserved": "0",
+        "pendingOutput": "0",
+        "marketOutgoing": "0",
+        "marketIncoming": "0"
+      },
+      {
+        "itemId": "crystal_fragment",
+        "available": "0",
+        "reserved": "0",
+        "pendingOutput": "0",
+        "marketOutgoing": "0",
+        "marketIncoming": "0"
+      }
+    ]
+  },
+  "delivered": {
+    "fill": {
+      "id": "f30b7759-185d-46af-8aab-7c931cf3d110",
+      "listingId": "11a63b61-2f4d-4f84-87be-2b331bff2a8a",
+      "buyerWallet": "7BTqD9tvT5DcQWwegac48J8Un6cKsZ9no178UH4jo78z",
+      "buyerBaseId": "d8b5c72f-95db-4c97-9816-1ce48dec0038",
+      "quantity": "1",
+      "totalBaseUnits": "1000001",
+      "createdAt": "2026-09-28T20:13:23.589Z",
+      "sellerWallet": "9mqocaPZazSQ9hTDdyWmfd6pEn7RbuVa8zty2NWNma9b",
+      "sellerBaseId": "87cb9952-57f3-4a2f-8162-3bf440b46db8",
+      "itemId": "expedition_kit",
+      "unitPriceBaseUnits": "1000001"
+    },
+    "preparation": {
+      "version": 1,
+      "transactionVersion": 0,
+      "original": {
+        "reservationId": "f30b7759-185d-46af-8aab-7c931cf3d110",
+        "buyer": "7BTqD9tvT5DcQWwegac48J8Un6cKsZ9no178UH4jo78z",
+        "seller": "9mqocaPZazSQ9hTDdyWmfd6pEn7RbuVa8zty2NWNma9b",
+        "keepMint": "HdvdhazkuVxhdNNmZWQaQqQUcgXdmwwjepTnp1nZZt2N",
+        "totalBaseUnits": "1000001",
+        "sellerAtaExists": false,
+        "sellerAtaRentCapLamports": "2039280"
+      },
+      "limits": {
+        "maxFeeLamports": "100000",
+        "maxPriorityFeeLamports": "0",
+        "maxComputeUnitLimit": 300000
+      },
+      "expectedGenesisHash": "Dub1FusCqcQ3XwZ1ijfMwEpUPyornGju4PfR98NKdmoS",
+      "expectedKeepMint": "HdvdhazkuVxhdNNmZWQaQqQUcgXdmwwjepTnp1nZZt2N",
+      "providerIds": [
+        "owned-bank-one",
+        "owned-bank-two"
+      ],
+      "blockhash": "HuQ9p5GatNKoeYxjVZjGa91zATj5wRBMhmS8hgivi2of",
+      "lastValidBlockHeight": 255,
+      "blockhashSlot": 105,
+      "minContextSlot": 105,
+      "messageSha256": "7d4238b1dd6ab2fefc6a0ef87ba1fc7a8742c81de0d491878d73ea179f2525fd",
+      "messageHex": "80010005095bd4448d60fb54c273353db1e6ce523ffcf40956ac8c7257bd5653f5d649ebd72530bb80a731ff40d8184e0d72aceabeee608a498194b4739eba7ef87e5d37ddf7308aee33dfe50b03d4d2b3b6d4bb9f2593a07d41aaddf2ddac38f9f0c1b51bd018ae879ebbfb17a83aacde2a991e1af6a6c7516cd01c04c8e78e9e490c543a8c97258f4e2489f1bb3d1029148e0d830b5a1399daff1084048e7bd8dbe9f859825a3bc7080a28c4623e7acb3ac9e1867e263b821c8fd18e71c727f7653b77a6000000000000000000000000000000000000000000000000000000000000000006ddf6e1d765a193d9cbe146ceeb79ac1cb485ed5f5b37913a8cf5857eff00a9054a535a992921064d24e87160da387c7c35b5ddbc92bb81e41fa8404105448dfb275ef08ae3fc722cae014f975baafeaf1d37e11ce25d6e0b40ba19d44b4bce04040600010502060701010704030201000a0ca0bb0d00000000000907030302000a0fa18601000000000009080034706b773a6b6565702d6d61726b65743a66333062373735392d313835642d343661662d386161622d37633933316366336431313000",
+      "observedAccounts": [
+        {
+          "address": "HdvdhazkuVxhdNNmZWQaQqQUcgXdmwwjepTnp1nZZt2N",
+          "owner": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+          "lamports": "1461600",
+          "dataLength": 82,
+          "dataSha256": "6a8a24cb2a70eb36d6f9688ec224ec61ec5e50f5ff353a930529907118c7bab3",
+          "executable": false
+        },
+        {
+          "address": "F1KdXfZikukd5KtkywDGXBPCUQDvvLZbeHkZXGT71CL1",
+          "owner": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+          "lamports": "2039280",
+          "dataLength": 165,
+          "dataSha256": "1dbca87ed1b3f188693a94e66092fa1d78850c915df2229ef9431fd0d3845bfb",
+          "executable": false
+        },
+        {
+          "address": "3WBBg4s1VsVJbTYjsg8655jSkjWfPSxduvnhKb45Zfq6",
+          "owner": null,
+          "lamports": "0",
+          "dataLength": 0,
+          "dataSha256": null,
+          "executable": false
+        },
+        {
+          "address": "7BTqD9tvT5DcQWwegac48J8Un6cKsZ9no178UH4jo78z",
+          "owner": "11111111111111111111111111111111",
+          "lamports": "996489120",
+          "dataLength": 0,
+          "dataSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "executable": false
+        }
+      ],
+      "accountEvidenceSha256": "4ee485de8c8a0e4ceb47cc45d2f53a3c08384d92e6309f8acf86844e65c27a4d",
+      "observations": [
+        {
+          "openingSlot": 105,
+          "accountSlot": 105,
+          "feeSlot": 105,
+          "validitySlot": 105,
+          "closingSlot": 105,
+          "currentBlockHeight": 105,
+          "feeLamports": "5000"
+        },
+        {
+          "openingSlot": 105,
+          "accountSlot": 105,
+          "feeSlot": 105,
+          "validitySlot": 105,
+          "closingSlot": 105,
+          "currentBlockHeight": 105,
+          "feeLamports": "5000"
+        }
+      ],
+      "balances": {
+        "buyerKeepBaseUnits": "20000000",
+        "sellerKeepBaseUnits": null,
+        "buyerSolLamports": "996489120",
+        "sellerAccountState": "missing"
+      },
+      "costs": {
+        "feeLamports": "5000",
+        "rentLamports": "2039280",
+        "fullAtaRentLamports": "2039280",
+        "totalLamports": "2044280"
+      },
+      "signingAuthorized": false,
+      "broadcastAuthorized": false,
+      "deliveryAuthorized": false,
+      "fenceReleaseAuthorized": false,
+      "unpaidProven": false,
+      "recordedAt": "2026-09-30T09:56:01.734Z"
+    },
+    "wire": {
+      "signature": "2nKvU4nfLP28AQHox8crDySqZFRFXyh7XupW28mWGKztC2T6BLaH6q6LTLZ34KAHY7i5uvAsFugyNhcDnXSDY3CC",
+      "wireSha256": "cfa42a60607448183b925a0e95d7846517c90bf4860e98743ab437a0958f5b5d",
+      "messageSha256": "7d4238b1dd6ab2fefc6a0ef87ba1fc7a8742c81de0d491878d73ea179f2525fd",
+      "signedTransactionHex": "01591ac8c545ea0cccfd139591d13bd7ff4f23a9a78d187486b70613b902a5669b69cb75c8ceee359f68c26b248051e816e9fcfe6d7ed56a5f5bc73ac40aaa370980010005095bd4448d60fb54c273353db1e6ce523ffcf40956ac8c7257bd5653f5d649ebd72530bb80a731ff40d8184e0d72aceabeee608a498194b4739eba7ef87e5d37ddf7308aee33dfe50b03d4d2b3b6d4bb9f2593a07d41aaddf2ddac38f9f0c1b51bd018ae879ebbfb17a83aacde2a991e1af6a6c7516cd01c04c8e78e9e490c543a8c97258f4e2489f1bb3d1029148e0d830b5a1399daff1084048e7bd8dbe9f859825a3bc7080a28c4623e7acb3ac9e1867e263b821c8fd18e71c727f7653b77a6000000000000000000000000000000000000000000000000000000000000000006ddf6e1d765a193d9cbe146ceeb79ac1cb485ed5f5b37913a8cf5857eff00a9054a535a992921064d24e87160da387c7c35b5ddbc92bb81e41fa8404105448dfb275ef08ae3fc722cae014f975baafeaf1d37e11ce25d6e0b40ba19d44b4bce04040600010502060701010704030201000a0ca0bb0d00000000000907030302000a0fa18601000000000009080034706b773a6b6565702d6d61726b65743a66333062373735392d313835642d343661662d386161622d37633933316366336431313000",
+      "recordedAt": "2026-09-30T09:56:01.788Z"
+    },
+    "delivery": {
+      "fillId": "f30b7759-185d-46af-8aab-7c931cf3d110",
+      "buyerBaseId": "d8b5c72f-95db-4c97-9816-1ce48dec0038",
+      "itemId": "expedition_kit",
+      "quantity": "1",
+      "proof": {
+        "version": 1,
+        "signature": "2nKvU4nfLP28AQHox8crDySqZFRFXyh7XupW28mWGKztC2T6BLaH6q6LTLZ34KAHY7i5uvAsFugyNhcDnXSDY3CC",
+        "reservationId": "f30b7759-185d-46af-8aab-7c931cf3d110",
+        "buyer": "7BTqD9tvT5DcQWwegac48J8Un6cKsZ9no178UH4jo78z",
+        "seller": "9mqocaPZazSQ9hTDdyWmfd6pEn7RbuVa8zty2NWNma9b",
+        "keepMint": "HdvdhazkuVxhdNNmZWQaQqQUcgXdmwwjepTnp1nZZt2N",
+        "buyerAta": "F1KdXfZikukd5KtkywDGXBPCUQDvvLZbeHkZXGT71CL1",
+        "sellerAta": "3WBBg4s1VsVJbTYjsg8655jSkjWfPSxduvnhKb45Zfq6",
+        "totalBaseUnits": "1000001",
+        "sellerBaseUnits": "900000",
+        "burnBaseUnits": "100001",
+        "slot": 137,
+        "feeLamports": "5000",
+        "createsSellerAta": true,
+        "sellerAtaCreated": true,
+        "sellerAtaRentCapLamports": "2039280",
+        "sellerAtaRentLamports": "2039280",
+        "innerInstructionsSha256": "0144c57734a008d3371f4dc0523c24a608c22fea7178bef2f4558d3693d39ec1",
+        "messageSha256": "7d4238b1dd6ab2fefc6a0ef87ba1fc7a8742c81de0d491878d73ea179f2525fd",
+        "resolvedKeys": [
+          "7BTqD9tvT5DcQWwegac48J8Un6cKsZ9no178UH4jo78z",
+          "3WBBg4s1VsVJbTYjsg8655jSkjWfPSxduvnhKb45Zfq6",
+          "HdvdhazkuVxhdNNmZWQaQqQUcgXdmwwjepTnp1nZZt2N",
+          "F1KdXfZikukd5KtkywDGXBPCUQDvvLZbeHkZXGT71CL1",
+          "ATokenGPvbdGVxr1b2hvZbsiqW5xWH25efTNsLJA8knL",
+          "9mqocaPZazSQ9hTDdyWmfd6pEn7RbuVa8zty2NWNma9b",
+          "11111111111111111111111111111111",
+          "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+          "MemoSq4gqABAXKb96qnH8TysNcWxMyWCqXgDLGmfcHr"
+        ],
+        "tokenBefore": [
+          "20000000",
+          "0"
+        ],
+        "tokenAfter": [
+          "18999999",
+          "900000"
+        ],
+        "lamportsBefore": [
+          996489120,
+          0,
+          1461600,
+          2039280,
+          731913600,
+          0,
+          1,
+          929020800,
+          521498880
+        ],
+        "lamportsAfter": [
+          994444840,
+          2039280,
+          1461600,
+          2039280,
+          731913600,
+          0,
+          1,
+          929020800,
+          521498880
+        ],
+        "evidenceSha256": "ceccf4474f675bfa00281f91b88052fef1e593e711c689ef76f762f383c2f546",
+        "fenceReleaseAuthorized": false,
+        "unpaidProven": false,
+        "expectedGenesisHash": "Dub1FusCqcQ3XwZ1ijfMwEpUPyornGju4PfR98NKdmoS",
+        "providerIds": [
+          "owned-bank-one",
+          "owned-bank-two"
+        ],
+        "finalizedAgreement": true
+      },
+      "deliveredAt": "2026-09-30T09:56:16.567Z"
+    },
+    "status": "delivered",
+    "signingAuthorized": false,
+    "broadcastAuthorized": false,
+    "fenceReleaseAuthorized": false,
+    "unpaidProven": false
+  },
+  "originalRecipes": [
+    {
+      "wallet": "9mqocaPZazSQ9hTDdyWmfd6pEn7RbuVa8zty2NWNma9b",
+      "idempotencyKey": "9cd9aed6-b12b-4b44-8bdd-6fa5e22ea902",
+      "serverNow": "2026-09-28T20:13:23.589Z",
+      "status": "accepted",
+      "receipt": {
+        "jobId": "9cd9aed6-b12b-4b44-8bdd-6fa5e22ea902",
+        "recipe": {
+          "recipeVersion": 2,
+          "recipeId": "craft_climate_kit",
+          "quantity": 2,
+          "durationSec": 240,
+          "inputs": [
+            {
+              "kind": "crafting",
+              "itemId": "sunstone_blocks",
+              "quantity": "2"
+            },
+            {
+              "kind": "crafting",
+              "itemId": "embercore",
+              "quantity": "2"
+            }
+          ],
+          "output": {
+            "itemId": "climate_kit",
+            "quantity": "2"
+          }
+        },
+        "startedAt": "2026-09-28T20:03:23.589Z",
+        "readyAt": "2026-09-28T20:07:23.589Z",
+        "wallet": "9mqocaPZazSQ9hTDdyWmfd6pEn7RbuVa8zty2NWNma9b",
+        "request": {
+          "idempotencyKey": "9cd9aed6-b12b-4b44-8bdd-6fa5e22ea902",
+          "baseId": "87cb9952-57f3-4a2f-8162-3bf440b46db8",
+          "recipeId": "craft_climate_kit",
+          "recipeVersion": 2,
+          "quantity": 2
+        }
+      },
+      "completion": {
+        "completedAt": "2026-09-28T20:07:23.589Z"
+      }
+    },
+    {
+      "wallet": "9mqocaPZazSQ9hTDdyWmfd6pEn7RbuVa8zty2NWNma9b",
+      "idempotencyKey": "89c910f0-9c76-4ff5-b2d3-eca1c35294c0",
+      "serverNow": "2026-09-28T20:13:23.589Z",
+      "status": "accepted",
+      "receipt": {
+        "jobId": "89c910f0-9c76-4ff5-b2d3-eca1c35294c0",
+        "recipe": {
+          "recipeVersion": 2,
+          "recipeId": "craft_expedition_kit",
+          "quantity": 2,
+          "durationSec": 360,
+          "inputs": [
+            {
+              "kind": "crafting",
+              "itemId": "heartwood_beams",
+              "quantity": "2"
+            },
+            {
+              "kind": "crafting",
+              "itemId": "thornsilk",
+              "quantity": "2"
+            },
+            {
+              "kind": "shards",
+              "itemId": "shards",
+              "quantity": "50"
+            }
+          ],
+          "output": {
+            "itemId": "expedition_kit",
+            "quantity": "2"
+          }
+        },
+        "startedAt": "2026-09-28T20:07:23.589Z",
+        "readyAt": "2026-09-28T20:13:23.589Z",
+        "wallet": "9mqocaPZazSQ9hTDdyWmfd6pEn7RbuVa8zty2NWNma9b",
+        "request": {
+          "idempotencyKey": "89c910f0-9c76-4ff5-b2d3-eca1c35294c0",
+          "baseId": "87cb9952-57f3-4a2f-8162-3bf440b46db8",
+          "recipeId": "craft_expedition_kit",
+          "recipeVersion": 2,
+          "quantity": 2
+        }
+      },
+      "completion": {
+        "completedAt": "2026-09-28T20:13:23.589Z"
+      }
+    }
+  ],
+  "legacyRecipe": {
+    "wallet": "9mqocaPZazSQ9hTDdyWmfd6pEn7RbuVa8zty2NWNma9b",
+    "idempotencyKey": "e4f2fa34-9531-46ae-ab2b-876ae7cb539f",
+    "serverNow": "2026-09-28T20:13:23.589Z",
+    "status": "accepted",
+    "receipt": {
+      "jobId": "e4f2fa34-9531-46ae-ab2b-876ae7cb539f",
+      "recipe": {
+        "recipeVersion": 1,
+        "recipeId": "refine_sunstone_blocks",
+        "quantity": 2,
+        "durationSec": 120,
+        "inputs": [
+          {
+            "kind": "raw",
+            "itemId": "sunstone_rubble",
+            "quantity": "20"
+          }
+        ],
+        "output": {
+          "itemId": "sunstone_blocks",
+          "quantity": "2"
+        }
+      },
+      "startedAt": "2026-09-28T12:25:23.589Z",
+      "readyAt": "2026-09-28T12:27:23.589Z",
+      "wallet": "9mqocaPZazSQ9hTDdyWmfd6pEn7RbuVa8zty2NWNma9b",
+      "request": {
+        "idempotencyKey": "e4f2fa34-9531-46ae-ab2b-876ae7cb539f",
+        "baseId": "87cb9952-57f3-4a2f-8162-3bf440b46db8",
+        "recipeId": "refine_sunstone_blocks",
+        "recipeVersion": 1,
+        "quantity": 2
+      }
+    },
+    "completion": {
+      "completedAt": "2026-09-28T12:27:23.589Z"
+    }
+  }
+}

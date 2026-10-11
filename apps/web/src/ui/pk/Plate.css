@@ -1,0 +1,79 @@
+/* Plate.css — plate materials (DESIGN-SYSTEM §5 recipes, Plate.kt drawPlate) and the parchment-in-wood frame.
+ * Two layers per material: an ink shell clipped to the M (or S) step, padded by the rim; inside it a face clipped to S.
+ * Bands are zero-blur inset shadows or hard gradient stops. Content padding = Plate.kt plateContentPadding (outer
+ * edge to content), split as shell rim + face padding. Only --pk-* values. */
+
+.pk-plate { position: relative; box-sizing: border-box; display: flex; min-width: 0; color: var(--pk-text); }
+.pk-plate__face { position: relative; box-sizing: border-box; flex: 1 1 auto; min-width: 0; display: flex; flex-direction: column; }
+
+/* VEIL (e1 HUD chip): ink S rim 2 -> #221D27 face, 2 px veil-hi top band. Content 4/4/4/2. */
+.pk-plate--veil { background: var(--pk-ink); clip-path: var(--pk-clip-s); padding: var(--pk-outline-chip); }
+.pk-plate--veil > .pk-plate__face {
+  clip-path: var(--pk-clip-s);
+  background: var(--pk-plate-face, var(--pk-veil));
+  box-shadow: inset 0 var(--pk-s2) 0 var(--pk-veil-hi);
+  padding: var(--pk-s2) var(--pk-s2) 0;
+}
+
+/* CHARCOAL (e2): ink M rim 3 -> 3 px band over surface, 2 px border inner frame, 4 px lip. Content 6/6/6/8. */
+.pk-plate--charcoal { background: var(--pk-ink); clip-path: var(--pk-k-clip-m); padding: var(--pk-outline-plate); }
+.pk-plate--charcoal > .pk-plate__face {
+  clip-path: var(--pk-clip-s);
+  background: linear-gradient(var(--pk-k-plate-band) 0 var(--pk-hi-band), var(--pk-plate-face, var(--pk-surface)) var(--pk-hi-band));
+  box-shadow: inset 0 calc(-1 * var(--pk-lip-plate)) 0 var(--pk-k-plate-lip), inset 0 0 0 var(--pk-outline-card) var(--pk-border);
+  padding: var(--pk-k-3) var(--pk-k-3) var(--pk-k-5);
+}
+
+/* PARCHMENT (sheet body): S, 3 px parch-hi top band, 4 px parch-lo bottom band, no ink rim. Content 5/6/6/6. */
+.pk-plate--parchment {
+  clip-path: var(--pk-clip-s);
+  background: var(--pk-plate-face, var(--pk-parch));
+  box-shadow: inset 0 var(--pk-hi-band) 0 var(--pk-parch-hi), inset 0 calc(-1 * var(--pk-lip-plate)) 0 var(--pk-parch-lo);
+  color: var(--pk-ink-text);
+  padding: var(--pk-k-5) var(--pk-s6) var(--pk-s6);
+  flex-direction: column;
+}
+
+/* CREAM (cards, tiles, bubbles): ink M rim 2 -> cream, 4 px cream-lo bottom band. Content 4/4/4/6. */
+.pk-plate--cream { background: var(--pk-ink); clip-path: var(--pk-k-clip-m); padding: var(--pk-outline-card); }
+.pk-plate--cream > .pk-plate__face {
+  clip-path: var(--pk-clip-s);
+  background: var(--pk-plate-face, var(--pk-cream));
+  box-shadow: inset 0 calc(-1 * var(--pk-lip-plate)) 0 var(--pk-cream-lo);
+  color: var(--pk-ink-text);
+  padding: var(--pk-s2) var(--pk-s2) var(--pk-s4);
+}
+
+/* WOOD (e4 sheet frame): ink M rim 3 -> wood with a 2 px seam every 12 px, 3 px wood-hi top, 4 px wood-lo bottom.
+ * Content 9/9/9/10. */
+.pk-plate--wood { background: var(--pk-ink); clip-path: var(--pk-k-clip-m); padding: var(--pk-outline-plate); }
+.pk-plate--wood > .pk-plate__face {
+  clip-path: var(--pk-clip-s);
+  background: repeating-linear-gradient(180deg,
+    var(--pk-plate-face, var(--pk-wood)) 0 calc(var(--pk-s12) - var(--pk-s2)),
+    var(--pk-wood-seam) calc(var(--pk-s12) - var(--pk-s2)) var(--pk-s12));
+  box-shadow: inset 0 var(--pk-hi-band) 0 var(--pk-wood-hi), inset 0 calc(-1 * var(--pk-lip-plate)) 0 var(--pk-wood-lo);
+  padding: var(--pk-s6) var(--pk-s6) var(--pk-k-7);
+}
+
+/* ---- Title plate (KIT SheetTitlePlate) ---- */
+.pk-title-plate { flex: 0 1 auto; min-width: 0; }
+.pk-title-plate > .pk-plate__face { justify-content: center; min-height: calc(var(--pk-min-tap) - 2 * var(--pk-outline-plate)); padding-inline: var(--pk-s8); }
+.pk-title-plate__row { display: flex; align-items: center; gap: var(--pk-s8); min-width: 0; }
+.pk-title-plate__name { color: var(--pk-gold-hi); min-width: 0; }
+.pk-title-plate__to { display: inline-flex; align-items: center; gap: var(--pk-s4); flex: none; }
+.pk-title-plate__to > .pk-t-caption { color: var(--pk-k-label); }
+
+/* ---- Frame: wood > head (title + tools) > parchment body > footer. The frame fills the host's box; the body
+ *      scrolls when the host bounds the height. ---- */
+.pk-frame { display: flex; min-width: 0; max-height: 100%; }
+.pk-frame__wood { flex: 1 1 auto; min-width: 0; max-height: 100%; }
+.pk-frame__wood > .pk-plate__face { gap: var(--pk-s8); min-height: 0; }
+.pk-frame__head { display: flex; align-items: flex-start; justify-content: space-between; gap: var(--pk-s8); min-width: 0; }
+.pk-frame__tools { display: inline-flex; gap: var(--pk-s6); flex: none; }
+.pk-frame__body { flex: 1 1 auto; min-height: 0; overflow: auto; overscroll-behavior: contain; gap: var(--pk-s8); }
+.pk-frame__foot { display: flex; flex-direction: column; gap: var(--pk-s8); flex: none; }
+
+/* Sheet gutter: wider breathing room on desktop and tablet-landscape side panels; same order, same chrome. */
+:root[data-pk-vp="desktop"] .pk-frame__wood > .pk-plate__face,
+:root[data-pk-vp="tablet-landscape"] .pk-frame__wood > .pk-plate__face { gap: var(--pk-s12); }

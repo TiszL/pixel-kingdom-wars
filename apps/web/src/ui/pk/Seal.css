@@ -1,0 +1,76 @@
+/* Seal.css — the money consent. Absolutely positioned inside the overlay root (never in document flow, so the Phaser
+ * canvas never reflows). z: --z-consent (bridge 3100: above toast, below celebration; LANE §3 P0 Z order). Only --pk-* values.
+ * Width per class (LANE §4 "Seal: centred; width 304 at the 320 floor"): max(min(380, 100% - 48), min(304, 100% - 16))
+ *   412 -> 364 (Android: 24 px side padding) | 320 -> 304 | 844x390 -> 380 | 768+ / desktop -> 380 */
+
+:root {
+  /* Seal sizes TOKENS.json does not carry (gaps, Seal.md Q1), spelled from bridge tokens so no literal is introduced: */
+  --pk-k-seal-back-w: calc(var(--pk-s32) * 3 + var(--pk-s4));                          /* 100 = KIT Dims.sealBackW */
+  --pk-k-seal-max-w: calc(var(--pk-size-name-plate-max-w) + var(--pk-k-seal-back-w));  /* 380 = Seal.kt widthIn(max = 380.dp) */
+  --pk-k-seal-floor-w: calc(var(--pk-size-name-plate-max-w) + var(--pk-s24));          /* 304 = LANE §4 floor width */
+}
+
+.pk-seal-root {
+  position: absolute;
+  inset: 0;
+  z-index: var(--z-consent);
+  display: grid;
+  place-items: center;
+  pointer-events: none;
+  animation: pk-seal-fade-in var(--pk-dur-seal-in) var(--pk-ease-out) both;
+}
+.pk-seal-root--leaving { animation: pk-seal-fade-out var(--pk-dur-seal-out) var(--pk-ease-in) both; }
+.pk-seal-root--leaving * { pointer-events: none !important; }
+
+.pk-seal__scrim { position: absolute; inset: 0; background: var(--pk-scrim-seal); }
+
+.pk-seal {
+  position: relative;
+  box-sizing: border-box;
+  width: max(min(var(--pk-k-seal-max-w), 100% - 2 * var(--pk-s24)), min(var(--pk-k-seal-floor-w), 100% - 2 * var(--pk-gutter)));
+  max-height: calc(100% - 2 * var(--pk-gutter));
+  display: flex;
+  animation: pk-seal-scale-in var(--pk-dur-seal-in) var(--pk-ease-out) both;
+}
+.pk-seal__wood { flex: 1 1 auto; min-width: 0; max-height: 100%; }
+.pk-seal__wood > .pk-plate__face { min-height: 0; }
+.pk-seal__parch {
+  align-items: center;
+  gap: calc(var(--pk-s8) + var(--pk-s2));
+  padding: var(--pk-s12) var(--pk-s12) var(--pk-s12);
+  overflow: auto;
+  overscroll-behavior: contain;
+}
+.pk-seal__title { margin: 0; color: var(--pk-ink-text); text-align: center; }
+.pk-seal__trade { display: flex; align-items: center; justify-content: center; gap: calc(var(--pk-s8) + var(--pk-s2)); flex-wrap: wrap; }
+.pk-seal__token { display: inline-flex; align-items: center; gap: var(--pk-s6); }
+.pk-seal__amount { color: var(--pk-ink-text); }
+.pk-seal__amount--short { color: var(--pk-short-text); }
+.pk-seal__line { margin: 0; color: var(--pk-ink-text-2); text-align: center; }
+.pk-seal__actions { display: flex; align-items: stretch; gap: var(--pk-s8); width: 100%; }
+.pk-seal__back { display: flex; flex: none; width: var(--pk-k-seal-back-w); }
+.pk-seal__back > .pk-btn { width: 100%; }
+.pk-seal__primary { flex: 1 1 auto; }
+
+/* The arming bar: 4 px ink, inset 6, sitting in the lip; grows over --pk-dur-seal-arm, gone once armed. */
+.pk-seal__arm {
+  position: absolute;
+  left: var(--pk-s6);
+  bottom: var(--pk-s6);
+  height: var(--pk-s4);
+  width: 0;
+  background: var(--pk-ink);
+  pointer-events: none;
+  animation: pk-seal-arm var(--pk-dur-seal-arm) var(--pk-ease-linear) both;
+}
+/* Reduced motion: no scale, the fade alone (Seal.kt `if (reduced) 1f`). */
+.pk-seal-root--still .pk-seal { animation: none; }
+
+@keyframes pk-seal-arm {
+  0% { width: 0; opacity: 1; }
+  99.9% { width: calc(100% - 2 * var(--pk-s6)); opacity: 1; }
+  100% { width: calc(100% - 2 * var(--pk-s6)); opacity: 0; }
+}
+@keyframes pk-seal-fade-in { from { opacity: 0; } to { opacity: 1; } }
+@keyframes pk-seal-fade-out { from { opacity: 1; } to { opacity: 0; } }
+@keyframes pk-seal-scale-in { from { transform: scale(.96); } to { transform: scale(1); } }

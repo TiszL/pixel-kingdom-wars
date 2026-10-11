@@ -1,0 +1,153 @@
+{
+  "version": 1,
+  "purpose": "Portable actual Core-created public account bytes for the constrained Charter decoder",
+  "provenance": "Executed by the pinned official Core release on a disposable loopback validator. These are real local Core-created account snapshots, not synthetic serializer vectors and not remote-chain authority or Charter registration/custody approval.",
+  "fixtureGenesis": "5DMs65m6imfZusWqxirDsi6hTxYz9hv5Ts5zKwRN19Vv",
+  "coreProgram": "CoREENxT6tW1HoK8ypY1SxRMZTcVPm7R94rH4PZNhX7d",
+  "release": {
+    "tag": "release/core@0.15.2",
+    "sourceCommit": "e72d63e4118a0a95ac9b40221e81b19d49e1e102",
+    "sha256": "69be69672220f4b5b0813e53cc4e2f3042dcac991f088b174bc7907dab4b2dee",
+    "bytes": 809696,
+    "metadata": "core-release.json"
+  },
+  "execution": {
+    "status": "passed",
+    "validatorVersion": "solana-test-validator 2.3.13 (src:5466f459; feat:2142755730, client:Agave)",
+    "coreSdkVersion": "1.10.0",
+    "umiVersion": "1.5.1",
+    "verifierSha256": "7d5f007e014cfee31fd256cf57301eed8c4a8baf522a7e9302e0737cd641db3e",
+    "fixtureCraft": "ws91DX9HBAAxGW77BZs5FogRDwpRtcUpiLBpKdPTfWu",
+    "clan": "12345678-1234-5678-9abc-def012345678",
+    "fixtureUpgradeAuthority": "F1iGncp1yqQCfkqdAyF2js1gSGvSgsjAWFtMnw2nnxTo",
+    "checks": 17,
+    "confirmedTransactions": 21
+  },
+  "limits": [
+    "Runtime Core ownership, account keys and nonexecutable status were checked by the local runner before decoding; file bytes alone do not authenticate those facts.",
+    "The accepted state proves only the narrow current-byte profile. The collection authority later revoked the freeze authority and thawed the separate governance asset; both changed snapshots are rejected.",
+    "No deployment, signing, permit, registration or permanent-custody authority is supplied by this artifact."
+  ],
+  "fixtures": [
+    {
+      "name": "valid",
+      "slot": 6,
+      "expectedTrust": {
+        "asset": "FTgm42ujrnRWDcEuUyZpoLUupE6TrxdXbVhwtswbrLEc",
+        "collection": "DaeoS9xBymmZmoiy9dChyp5KEtWuDPRb7ZoTyiCj6yyz",
+        "owner": "2DaaPav28BjsoZFBbjNUKMvHeQmQPSKdGsKteSuHi8Z8",
+        "freezeAuthority": "4d3Ur8AcrzXd2Xr6wDDv3J6YeehzfRpZFd6fEe9XEqp8",
+        "collectionAuthority": "F1iGncp1yqQCfkqdAyF2js1gSGvSgsjAWFtMnw2nnxTo"
+      },
+      "accounts": {
+        "asset": {
+          "key": "FTgm42ujrnRWDcEuUyZpoLUupE6TrxdXbVhwtswbrLEc",
+          "owner": "CoREENxT6tW1HoK8ypY1SxRMZTcVPm7R94rH4PZNhX7d",
+          "executable": false,
+          "lamports": 3685440,
+          "data": "0112149eeb39251674bc469966ccc36399930a260d5e41806bd5e0c16904a850eb02baeb26ac72c90f31353303034ce39262c4cabc9729a1f09c24c34ddca28d44510500000076616c69642c00000068747470733a2f2f696e76616c69642e6578616d706c652f636861727465722d666978747572652e6a736f6e0003870000000000000005010401000000050335cec631136dc65cf1b46e2505f6bd7d66ea873d5dda0022ee7f767885514215850000000000000000000000"
+        },
+        "collection": {
+          "key": "DaeoS9xBymmZmoiy9dChyp5KEtWuDPRb7ZoTyiCj6yyz",
+          "owner": "CoREENxT6tW1HoK8ypY1SxRMZTcVPm7R94rH4PZNhX7d",
+          "executable": false,
+          "lamports": 1649520,
+          "data": "05d03248983c96a4e2ece15a8ad7daf880cdfde9817ca6ce245c77b90db7f0af4610000000706c61696e2d636f6c6c656374696f6e2c00000068747470733a2f2f696e76616c69642e6578616d706c652f636861727465722d666978747572652e6a736f6e0100000001000000"
+        }
+      },
+      "accountDataSha256": {
+        "asset": "56531961b81154354640454d886cb33f84f362f1f115d39932b16d97cd9e1e27",
+        "collection": "91726d5691df42e731b39d5fa8eb2a89e43abc28232fb3acde9fd2b7def2ded4"
+      },
+      "expectedDecoder": {
+        "accepted": true,
+        "exitCode": 0,
+        "error": null
+      },
+      "sourceFiles": [
+        "valid-accounts.json",
+        "valid-decoder.json"
+      ]
+    },
+    {
+      "name": "governance-revoked",
+      "slot": 24,
+      "expectedTrust": {
+        "asset": "4xQREvXnkkadwMjfqgRcE8ieyF67Pet3nwQZ6bbdEBTx",
+        "collection": "DaeoS9xBymmZmoiy9dChyp5KEtWuDPRb7ZoTyiCj6yyz",
+        "owner": "2DaaPav28BjsoZFBbjNUKMvHeQmQPSKdGsKteSuHi8Z8",
+        "freezeAuthority": "4d3Ur8AcrzXd2Xr6wDDv3J6YeehzfRpZFd6fEe9XEqp8",
+        "collectionAuthority": "F1iGncp1yqQCfkqdAyF2js1gSGvSgsjAWFtMnw2nnxTo"
+      },
+      "accounts": {
+        "asset": {
+          "key": "4xQREvXnkkadwMjfqgRcE8ieyF67Pet3nwQZ6bbdEBTx",
+          "owner": "CoREENxT6tW1HoK8ypY1SxRMZTcVPm7R94rH4PZNhX7d",
+          "executable": false,
+          "lamports": 3497520,
+          "data": "0112149eeb39251674bc469966ccc36399930a260d5e41806bd5e0c16904a850eb02baeb26ac72c90f31353303034ce39262c4cabc9729a1f09c24c34ddca28d44510a000000676f7665726e616e63652c00000068747470733a2f2f696e76616c69642e6578616d706c652f636861727465722d666978747572652e6a736f6e00038c000000000000000501040100000005028a0000000000000000000000"
+        },
+        "collection": {
+          "key": "DaeoS9xBymmZmoiy9dChyp5KEtWuDPRb7ZoTyiCj6yyz",
+          "owner": "CoREENxT6tW1HoK8ypY1SxRMZTcVPm7R94rH4PZNhX7d",
+          "executable": false,
+          "lamports": 1649520,
+          "data": "05d03248983c96a4e2ece15a8ad7daf880cdfde9817ca6ce245c77b90db7f0af4610000000706c61696e2d636f6c6c656374696f6e2c00000068747470733a2f2f696e76616c69642e6578616d706c652f636861727465722d666978747572652e6a736f6e0700000007000000"
+        }
+      },
+      "accountDataSha256": {
+        "asset": "4cb5f735b4cc784267a7013f001859d809394fe2c8f6aea4ebd030658f45dd16",
+        "collection": "62920908f0f818cea6a7f5ee4d37ce0c680bc64e5bc9e5d66d25e74b12696532"
+      },
+      "expectedDecoder": {
+        "accepted": false,
+        "exitCode": 2,
+        "error": "UnsupportedProfile"
+      },
+      "sourceFiles": [
+        "governance-revoked-accounts.json",
+        "governance-revoked-decoder.json"
+      ]
+    },
+    {
+      "name": "governance-thawed",
+      "slot": 25,
+      "expectedTrust": {
+        "asset": "4xQREvXnkkadwMjfqgRcE8ieyF67Pet3nwQZ6bbdEBTx",
+        "collection": "DaeoS9xBymmZmoiy9dChyp5KEtWuDPRb7ZoTyiCj6yyz",
+        "owner": "2DaaPav28BjsoZFBbjNUKMvHeQmQPSKdGsKteSuHi8Z8",
+        "freezeAuthority": "4d3Ur8AcrzXd2Xr6wDDv3J6YeehzfRpZFd6fEe9XEqp8",
+        "collectionAuthority": "F1iGncp1yqQCfkqdAyF2js1gSGvSgsjAWFtMnw2nnxTo"
+      },
+      "accounts": {
+        "asset": {
+          "key": "4xQREvXnkkadwMjfqgRcE8ieyF67Pet3nwQZ6bbdEBTx",
+          "owner": "CoREENxT6tW1HoK8ypY1SxRMZTcVPm7R94rH4PZNhX7d",
+          "executable": false,
+          "lamports": 3497520,
+          "data": "0112149eeb39251674bc469966ccc36399930a260d5e41806bd5e0c16904a850eb02baeb26ac72c90f31353303034ce39262c4cabc9729a1f09c24c34ddca28d44510a000000676f7665726e616e63652c00000068747470733a2f2f696e76616c69642e6578616d706c652f636861727465722d666978747572652e6a736f6e00038c000000000000000500040100000005028a0000000000000000000000"
+        },
+        "collection": {
+          "key": "DaeoS9xBymmZmoiy9dChyp5KEtWuDPRb7ZoTyiCj6yyz",
+          "owner": "CoREENxT6tW1HoK8ypY1SxRMZTcVPm7R94rH4PZNhX7d",
+          "executable": false,
+          "lamports": 1649520,
+          "data": "05d03248983c96a4e2ece15a8ad7daf880cdfde9817ca6ce245c77b90db7f0af4610000000706c61696e2d636f6c6c656374696f6e2c00000068747470733a2f2f696e76616c69642e6578616d706c652f636861727465722d666978747572652e6a736f6e0700000007000000"
+        }
+      },
+      "accountDataSha256": {
+        "asset": "0618bd0ab0046e935f0d3603d712016d68f5ff9f5c25d359df72495cb2fc9adf",
+        "collection": "62920908f0f818cea6a7f5ee4d37ce0c680bc64e5bc9e5d66d25e74b12696532"
+      },
+      "expectedDecoder": {
+        "accepted": false,
+        "exitCode": 2,
+        "error": "NotFrozen"
+      },
+      "sourceFiles": [
+        "governance-thawed-accounts.json",
+        "governance-thawed-decoder.json"
+      ]
+    }
+  ]
+}

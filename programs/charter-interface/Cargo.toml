@@ -1,0 +1,10 @@
+[package]
+name = "shardkeep-charter-interface"
+version = "0.1.0"
+edition = "2021"
+description = "Bounded SDK-free Charter cross-program wire contract"
+
+[lib]
+name = "shardkeep_charter_interface"
+
+[dependencies]

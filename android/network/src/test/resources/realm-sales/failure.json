@@ -1,0 +1,158 @@
+{
+  "preparation": {
+    "version": 1,
+    "wallet": "4Ckdk2xsg5L9vmfMunhfr4NhyfESjfEnSJmMwftNsCzM",
+    "idempotencyKey": "631c191b-858f-4157-a355-3f12d036804d",
+    "saleId": "07070707070707070707070707070707",
+    "spot": 0,
+    "realm": 0,
+    "terms": {
+      "round": "1",
+      "day": "10",
+      "seller": "8qbHbw2BbbTHBW1sbeqakYXVKRQM8Ne7pLK7m6CVfeR",
+      "developer": "CktRuQ2mttgRGkXJtyksdKHjUdc2C4TgDzyB98oEzy8",
+      "priorExpiry": "0",
+      "validAfter": "864000",
+      "validUntil": "864060"
+    },
+    "source": {
+      "revision": "fixture-r1",
+      "genesisHash": "GgBaCs3NCBuZN12kCJgAW63ydqohFkHEdfdEXBPzLHq",
+      "programId": "27bgnruDhviykKK12k5t2imTEgLUYfAgZRwGiD4zxWDf",
+      "programDataSha256": "a5db34c78ceae707e1c8369da96d8705dfbc4477842b1276915a9573d32391a4",
+      "reviewedDeploymentSlot": 90,
+      "termProofHash": "cdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcd",
+      "snapshotHash": "efefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefef",
+      "termSlot": 99,
+      "initialSlot": 100,
+      "blockhashSlot": 100,
+      "feeSlot": 100,
+      "costSlot": 100,
+      "admissionSlot": 100
+    },
+    "quote": {
+      "blockhash": "GgBaCs3NCBuZN12kCJgAW63ydqohFkHEdfdEXBPzLHq",
+      "lastValidBlockHeight": 300,
+      "unixTimestamp": "864000",
+      "needsAccess": true,
+      "needsQuota": true,
+      "quotaRemaining": 10,
+      "messageHex": "0100080e2f95c94558db907204aa36a329e45c541a07b8658266188d461f89c05cc7c70a6d1f142f4e215a30229fa85aa193eb872f4333fbc2e589adc4790a8bfd0314b9a92e6e6046b12f13188efd2d59f18eca2a442deec98407c6f76b5fdce3fcfccd56107cbf733f19cee716d643d6542c9bb43f44b76f9dd62bc12e493b6592c4e502020202020202020202020202020202020202020202020202020202020202020303030303030303030303030303030303030303030303030303030303030303108c64340236fe0090b04fa2533d22f15bd6d9c816db6f877f161f1cbbf21c7abad4a265a76af3a9c791c4875254c315953b0cf3f7f0752a262d4de4655e2685000000000000000000000000000000000000000000000000000000000000000021b885242c164ff0665854ec335c9a07ae687cbc6b595dc5a52ee6322613843ebd672c48e29236435055735f87c59c87e2764773f7a62f975c7886f8392f1e0db1e50ced1bbfb5c2681cd594715f145c4eb962ec9a8679fb9e1cc2a1c97e880b82a56188ca232633e9a8c173a472541758e5a5c9906eb62fc99e0049522fd9731145048c9c452de6ce2958358e239de79b8b5954f2708c8922fa896e156f4a07040404040404040404040404040404040404040404040404040404040404040403060400070108290d40bdc8b5670c2d2f95c94558db907204aa36a329e45c541a07b8658266188d461f89c05cc7c70a00060400070208113bf7b1c02d1c7a7b000a00000000000000060d0009070a0b0c0d0201030405089901a4abb085b5a951830107070707070707070707070707070707000001000000000000000a000000000000000202020202020202020202020202020202020202020202020202020202020202030303030303030303030303030303030303030303030303030303030303030301008096980000000000803a090000000000881388130000000000000000002f0d00000000003c2f0d0000000000",
+      "messageSha256": "f0b7fd05e3c44f6633b5b773e372234cc22828a01da3d17779cbe7e9bdac67fd",
+      "packetBytes": 792,
+      "rents": [
+        {
+          "address": "8Lxvfs3Pr5KP8ePNqnHswddiBo1cZJxNYtCdwEudwHPE",
+          "space": 83,
+          "minimumBalanceLamports": "1000000",
+          "existingLamports": "0",
+          "maxIncreaseLamports": "1000000"
+        },
+        {
+          "address": "CPQxxq5rZgxND3qbbuaW4JG7Qn7YQaifArd1dFAdt45a",
+          "space": 20,
+          "minimumBalanceLamports": "1000000",
+          "existingLamports": "0",
+          "maxIncreaseLamports": "1000000"
+        },
+        {
+          "address": "6nxeKay3gXHucHbZk6Nj14gXeyiMtC5DwjssnpbkCF16",
+          "space": 294,
+          "minimumBalanceLamports": "1000000",
+          "existingLamports": "0",
+          "maxIncreaseLamports": "1000000"
+        }
+      ],
+      "feeLamports": "5000",
+      "rentLamports": "3000000",
+      "paymentDebitLamports": "10000000",
+      "requiredLamports": "13005000",
+      "payerLamports": "100000000"
+    },
+    "state": "prepared",
+    "currentSigningAuthorized": false,
+    "submissionAuthorized": false
+  },
+  "wire": {
+    "wallet": "4Ckdk2xsg5L9vmfMunhfr4NhyfESjfEnSJmMwftNsCzM",
+    "idempotencyKey": "631c191b-858f-4157-a355-3f12d036804d",
+    "saleId": "07070707070707070707070707070707",
+    "signature": "3MsMFc7gWie95aGJ74xhTHgQ8Y1HRgP3W1XctPRpkLzGWyLFN2xhHnsuydc6YfA3GpRJDUBpPfM577bSXrqJM18A",
+    "signedTransactionHex": "017607a3e6f7c75e45675fe403863cce2127e27af1588759486fc482454ff2fefe626e69e6cacc47e8946e72140defcb81eefc7cb6ff6ea9fce010c1e843d95b0f0100080e2f95c94558db907204aa36a329e45c541a07b8658266188d461f89c05cc7c70a6d1f142f4e215a30229fa85aa193eb872f4333fbc2e589adc4790a8bfd0314b9a92e6e6046b12f13188efd2d59f18eca2a442deec98407c6f76b5fdce3fcfccd56107cbf733f19cee716d643d6542c9bb43f44b76f9dd62bc12e493b6592c4e502020202020202020202020202020202020202020202020202020202020202020303030303030303030303030303030303030303030303030303030303030303108c64340236fe0090b04fa2533d22f15bd6d9c816db6f877f161f1cbbf21c7abad4a265a76af3a9c791c4875254c315953b0cf3f7f0752a262d4de4655e2685000000000000000000000000000000000000000000000000000000000000000021b885242c164ff0665854ec335c9a07ae687cbc6b595dc5a52ee6322613843ebd672c48e29236435055735f87c59c87e2764773f7a62f975c7886f8392f1e0db1e50ced1bbfb5c2681cd594715f145c4eb962ec9a8679fb9e1cc2a1c97e880b82a56188ca232633e9a8c173a472541758e5a5c9906eb62fc99e0049522fd9731145048c9c452de6ce2958358e239de79b8b5954f2708c8922fa896e156f4a07040404040404040404040404040404040404040404040404040404040404040403060400070108290d40bdc8b5670c2d2f95c94558db907204aa36a329e45c541a07b8658266188d461f89c05cc7c70a00060400070208113bf7b1c02d1c7a7b000a00000000000000060d0009070a0b0c0d0201030405089901a4abb085b5a951830107070707070707070707070707070707000001000000000000000a000000000000000202020202020202020202020202020202020202020202020202020202020202030303030303030303030303030303030303030303030303030303030303030301008096980000000000803a090000000000881388130000000000000000002f0d00000000003c2f0d0000000000",
+    "wireSha256": "ffc89376c43793f49b632495680e9c6fb02ffc4bfd2e301689d0b20124dd5662",
+    "messageSha256": "f0b7fd05e3c44f6633b5b773e372234cc22828a01da3d17779cbe7e9bdac67fd",
+    "acceptedAt": "2026-09-26T02:26:53.231616Z",
+    "currentSigningAuthorized": false,
+    "relayAuthorized": false
+  },
+  "failure": {
+    "wallet": "4Ckdk2xsg5L9vmfMunhfr4NhyfESjfEnSJmMwftNsCzM",
+    "idempotencyKey": "631c191b-858f-4157-a355-3f12d036804d",
+    "saleId": "07070707070707070707070707070707",
+    "receipt": {
+      "version": 1,
+      "wallet": "4Ckdk2xsg5L9vmfMunhfr4NhyfESjfEnSJmMwftNsCzM",
+      "saleId": "07070707070707070707070707070707",
+      "spot": 0,
+      "realm": 0,
+      "round": "1",
+      "day": "10",
+      "signature": "3MsMFc7gWie95aGJ74xhTHgQ8Y1HRgP3W1XctPRpkLzGWyLFN2xhHnsuydc6YfA3GpRJDUBpPfM577bSXrqJM18A",
+      "originalMessageSha256": "f0b7fd05e3c44f6633b5b773e372234cc22828a01da3d17779cbe7e9bdac67fd",
+      "signedTransactionSha256": "ffc89376c43793f49b632495680e9c6fb02ffc4bfd2e301689d0b20124dd5662",
+      "slot": 101,
+      "blockTime": 863997,
+      "feeLamports": "5000",
+      "actualRentLamports": "0",
+      "buyerNetPaymentLamports": "0",
+      "accessChanged": false,
+      "quotaConsumed": false,
+      "observedAccountSlot": 150,
+      "proofClockUnixTimestamp": "864000",
+      "source": {
+        "trust": "trusted-finalized-rpc-reviewed-program",
+        "stateProvenance": "fresh-reviewed-deployment",
+        "genesisHash": "GgBaCs3NCBuZN12kCJgAW63ydqohFkHEdfdEXBPzLHq",
+        "programId": "27bgnruDhviykKK12k5t2imTEgLUYfAgZRwGiD4zxWDf",
+        "reviewedDeploymentSlot": 90,
+        "reviewedProgramDataSha256": "a5db34c78ceae707e1c8369da96d8705dfbc4477842b1276915a9573d32391a4",
+        "upgradeAuthority": "CktRuQ2mttgRGkXJtyksdKHjUdc2C4TgDzyB98oEzy8",
+        "accounts": [
+          {
+            "address": "27bgnruDhviykKK12k5t2imTEgLUYfAgZRwGiD4zxWDf",
+            "exists": true,
+            "owner": "BPFLoaderUpgradeab1e11111111111111111111111",
+            "executable": true,
+            "dataSha256": "6e3ccd238d321da8683ff67c89f5deb4f964c400c1124fc8c980d0e0d488bd28"
+          },
+          {
+            "address": "4hNHCop8CsMJ4jVMCpPnSEG4bS8fKRNmnRJWfVdWgMLv",
+            "exists": true,
+            "owner": "BPFLoaderUpgradeab1e11111111111111111111111",
+            "executable": false,
+            "dataSha256": "a5db34c78ceae707e1c8369da96d8705dfbc4477842b1276915a9573d32391a4"
+          },
+          {
+            "address": "SysvarC1ock11111111111111111111111111111111",
+            "exists": true,
+            "owner": "Sysvar1111111111111111111111111111111111111",
+            "executable": false,
+            "dataSha256": "ae7651165dcfcc0df0549e7f8ecf28fe5737589dabd4a912240676615cdbcc5b"
+          }
+        ]
+      },
+      "outcome": "failed",
+      "transactionFailed": true,
+      "finalityVerified": true,
+      "paymentAuthorized": false,
+      "admissionAuthorized": false,
+      "signingAuthorized": false,
+      "broadcastAuthorized": false,
+      "journalClearingAuthorized": false
+    },
+    "verifiedAt": "2026-09-26T02:26:53.369631Z",
+    "transactionFailed": true,
+    "purchaseFinalized": false,
+    "journalClearingAuthorized": false
+  }
+}

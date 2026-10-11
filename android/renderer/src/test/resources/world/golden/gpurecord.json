@@ -1,0 +1,1829 @@
+{
+ "bandSet": {
+  "far": 0,
+  "far-map": 1,
+  "map": 1,
+  "map-true": 2,
+  "true": 2
+ },
+ "count": 99,
+ "crash": {
+  "clean": 2,
+  "steady": 60
+ },
+ "generator": "16950360f03ed2843e6974157461f5745e1f26005ae4ee4e5ee719a194edeb3f",
+ "note": "core.js gpuRecord, call by call (rec in, args, out); start returns { level, reason, hold, rec }, every other op the next record (null = remove it). A trace chains each out into the next call where it continues a visit. dirtyLeave = map.js markPending(false) after a lost context (delete pending and band, no clean count). The web never keeps a record on a software rasteriser. steadyBand: map.js steadyBand (the deepest band with ≥ crash.steady steady GPU samples this visit, else −1); bandSet: map.js BAND_SET (the view band → the crash band index).",
+ "pin": "02e9da8414156b9e0000df1653de6273b196cca6",
+ "schema": 1,
+ "sources": {
+  "concepts/globe3d-2026-09-23/src/realm/camera.js": "879c4d6aabda484b36b3ceeea69108692131a5c222579c7983c9a282d8e5c4a9",
+  "concepts/globe3d-2026-09-23/src/realm/contracts.js": "3d3215dee2273b456c98b6684f5dc6835c1aaea1c3f7ea98e55fa462cb693eb0",
+  "concepts/globe3d-2026-09-23/src/realm/core.js": "8a6a17ceb4c2d65d0b18383b57b7f20b0685f471472e7144263b8de0a1f19941",
+  "concepts/globe3d-2026-09-23/src/realm/groundcost.js": "52ed0b62657866babdaa84c420fa78ea573e4dbade5406d3aee8defdf8ca05fa",
+  "concepts/globe3d-2026-09-23/src/realm/loader.js": "3aedcb60d54c73c883f5f8d4032ed1959d2e9f0febad0441f6ca3a9cd37668cb",
+  "concepts/globe3d-2026-09-23/src/realm/map.js": "5ca663519fb8fdf66dcec93136c26ed0910935decde620b6239e8615024cfea2",
+  "concepts/globe3d-2026-09-23/src/realm/ui.js": "3b1cfc07315e12f1cd2e81194b1c23526cbc399281a96461852462154683b4c3",
+  "packages/shared/src/constants.ts": "360f8c643ee0211b5a7d8a81eedb60dc5fb3c47a67c9202109c424794d4821d6",
+  "packages/shared/src/data/fantasy-world-v1.json": "cf82430425544e849746b699cf7fae5b334cf30ce1204907a9f4ceb121ca50bd",
+  "packages/shared/src/fantasyWorld.ts": "0e374b6a9688eba68f4bc7656a6ef41eaada169e19cbac05e4b7768c06e1a166"
+ },
+ "steadyBand": [
+  {
+   "band": -1,
+   "steady": [0,0,0]
+  },
+  {
+   "band": 0,
+   "steady": [60,0,0]
+  },
+  {
+   "band": -1,
+   "steady": [59,59,59]
+  },
+  {
+   "band": 1,
+   "steady": [0,60,0]
+  },
+  {
+   "band": 1,
+   "steady": [240,60,59]
+  },
+  {
+   "band": 2,
+   "steady": [0,0,60]
+  },
+  {
+   "band": 2,
+   "steady": [60,60,60]
+  },
+  {
+   "band": 0,
+   "steady": [61,0,1]
+  }
+ ],
+ "suite": "gpurecord",
+ "tolerance": 0,
+ "traces": [
+  {
+   "calls": [
+    {
+     "args": [1000000060000,null],
+     "op": "start",
+     "out": {
+      "hold": false,
+      "level": 0,
+      "reason": null,
+      "rec": null
+     },
+     "rec": null
+    },
+    {
+     "args": [1000000120000],
+     "op": "enter",
+     "out": {
+      "band": 0,
+      "pending": 1000000120000
+     },
+     "rec": null
+    },
+    {
+     "args": [1],
+     "op": "at",
+     "out": {
+      "band": 1,
+      "pending": 1000000120000
+     },
+     "rec": {
+      "band": 0,
+      "pending": 1000000120000
+     }
+    },
+    {
+     "args": [
+      {
+       "steadyBand": 1
+      }
+     ],
+     "op": "leave",
+     "out": null,
+     "rec": {
+      "band": 1,
+      "pending": 1000000120000
+     }
+    }
+   ],
+   "name": "no record: a first visit that leaves cleanly stores nothing"
+  },
+  {
+   "calls": [
+    {
+     "args": [1000000060000],
+     "op": "enter",
+     "out": {
+      "band": 0,
+      "pending": 1000000060000
+     },
+     "rec": null
+    },
+    {
+     "args": [1],
+     "op": "at",
+     "out": {
+      "band": 1,
+      "pending": 1000000060000
+     },
+     "rec": {
+      "band": 0,
+      "pending": 1000000060000
+     }
+    },
+    {
+     "args": [1000000120000,null],
+     "op": "start",
+     "out": {
+      "hold": false,
+      "level": 2,
+      "reason": "the last visit ended inside the realm map (a freeze or a crash)",
+      "rec": {
+       "clean": 0,
+       "crashBand": 1,
+       "crashes": 1,
+       "level": 2,
+       "reason": "the last visit ended inside the realm map (a freeze or a crash)",
+       "t": 1000000120000
+      }
+     },
+     "rec": {
+      "band": 1,
+      "pending": 1000000060000
+     }
+    },
+    {
+     "args": [1000000180000],
+     "op": "enter",
+     "out": {
+      "band": 0,
+      "clean": 0,
+      "crashBand": 1,
+      "crashes": 1,
+      "level": 2,
+      "pending": 1000000180000,
+      "reason": "the last visit ended inside the realm map (a freeze or a crash)",
+      "t": 1000000120000
+     },
+     "rec": {
+      "clean": 0,
+      "crashBand": 1,
+      "crashes": 1,
+      "level": 2,
+      "reason": "the last visit ended inside the realm map (a freeze or a crash)",
+      "t": 1000000120000
+     }
+    },
+    {
+     "args": [
+      {
+       "steadyBand": 0
+      }
+     ],
+     "op": "leave",
+     "out": {
+      "clean": 0,
+      "crashBand": 1,
+      "crashes": 1,
+      "level": 2,
+      "reason": "the last visit ended inside the realm map (a freeze or a crash)",
+      "t": 1000000120000
+     },
+     "rec": {
+      "band": 0,
+      "clean": 0,
+      "crashBand": 1,
+      "crashes": 1,
+      "level": 2,
+      "pending": 1000000180000,
+      "reason": "the last visit ended inside the realm map (a freeze or a crash)",
+      "t": 1000000120000
+     }
+    },
+    {
+     "args": [1000000240000],
+     "op": "enter",
+     "out": {
+      "band": 0,
+      "clean": 0,
+      "crashBand": 1,
+      "crashes": 1,
+      "level": 2,
+      "pending": 1000000240000,
+      "reason": "the last visit ended inside the realm map (a freeze or a crash)",
+      "t": 1000000120000
+     },
+     "rec": {
+      "clean": 0,
+      "crashBand": 1,
+      "crashes": 1,
+      "level": 2,
+      "reason": "the last visit ended inside the realm map (a freeze or a crash)",
+      "t": 1000000120000
+     }
+    },
+    {
+     "args": [1],
+     "op": "at",
+     "out": {
+      "band": 1,
+      "clean": 0,
+      "crashBand": 1,
+      "crashes": 1,
+      "level": 2,
+      "pending": 1000000240000,
+      "reason": "the last visit ended inside the realm map (a freeze or a crash)",
+      "t": 1000000120000
+     },
+     "rec": {
+      "band": 0,
+      "clean": 0,
+      "crashBand": 1,
+      "crashes": 1,
+      "level": 2,
+      "pending": 1000000240000,
+      "reason": "the last visit ended inside the realm map (a freeze or a crash)",
+      "t": 1000000120000
+     }
+    },
+    {
+     "args": [
+      {
+       "steadyBand": -1
+      }
+     ],
+     "op": "leave",
+     "out": {
+      "clean": 0,
+      "crashBand": 1,
+      "crashes": 1,
+      "level": 2,
+      "reason": "the last visit ended inside the realm map (a freeze or a crash)",
+      "t": 1000000120000
+     },
+     "rec": {
+      "band": 1,
+      "clean": 0,
+      "crashBand": 1,
+      "crashes": 1,
+      "level": 2,
+      "pending": 1000000240000,
+      "reason": "the last visit ended inside the realm map (a freeze or a crash)",
+      "t": 1000000120000
+     }
+    },
+    {
+     "args": [1000000300000],
+     "op": "enter",
+     "out": {
+      "band": 0,
+      "clean": 0,
+      "crashBand": 1,
+      "crashes": 1,
+      "level": 2,
+      "pending": 1000000300000,
+      "reason": "the last visit ended inside the realm map (a freeze or a crash)",
+      "t": 1000000120000
+     },
+     "rec": {
+      "clean": 0,
+      "crashBand": 1,
+      "crashes": 1,
+      "level": 2,
+      "reason": "the last visit ended inside the realm map (a freeze or a crash)",
+      "t": 1000000120000
+     }
+    },
+    {
+     "args": [1],
+     "op": "at",
+     "out": {
+      "band": 1,
+      "clean": 0,
+      "crashBand": 1,
+      "crashes": 1,
+      "level": 2,
+      "pending": 1000000300000,
+      "reason": "the last visit ended inside the realm map (a freeze or a crash)",
+      "t": 1000000120000
+     },
+     "rec": {
+      "band": 0,
+      "clean": 0,
+      "crashBand": 1,
+      "crashes": 1,
+      "level": 2,
+      "pending": 1000000300000,
+      "reason": "the last visit ended inside the realm map (a freeze or a crash)",
+      "t": 1000000120000
+     }
+    },
+    {
+     "args": [
+      {
+       "steadyBand": 1
+      }
+     ],
+     "op": "leave",
+     "out": {
+      "clean": 1,
+      "crashBand": 1,
+      "crashes": 1,
+      "level": 2,
+      "reason": "the last visit ended inside the realm map (a freeze or a crash)",
+      "t": 1000000120000
+     },
+     "rec": {
+      "band": 1,
+      "clean": 0,
+      "crashBand": 1,
+      "crashes": 1,
+      "level": 2,
+      "pending": 1000000300000,
+      "reason": "the last visit ended inside the realm map (a freeze or a crash)",
+      "t": 1000000120000
+     }
+    },
+    {
+     "args": [1000000360000],
+     "op": "enter",
+     "out": {
+      "band": 0,
+      "clean": 1,
+      "crashBand": 1,
+      "crashes": 1,
+      "level": 2,
+      "pending": 1000000360000,
+      "reason": "the last visit ended inside the realm map (a freeze or a crash)",
+      "t": 1000000120000
+     },
+     "rec": {
+      "clean": 1,
+      "crashBand": 1,
+      "crashes": 1,
+      "level": 2,
+      "reason": "the last visit ended inside the realm map (a freeze or a crash)",
+      "t": 1000000120000
+     }
+    },
+    {
+     "args": [2],
+     "op": "at",
+     "out": {
+      "band": 2,
+      "clean": 1,
+      "crashBand": 1,
+      "crashes": 1,
+      "level": 2,
+      "pending": 1000000360000,
+      "reason": "the last visit ended inside the realm map (a freeze or a crash)",
+      "t": 1000000120000
+     },
+     "rec": {
+      "band": 0,
+      "clean": 1,
+      "crashBand": 1,
+      "crashes": 1,
+      "level": 2,
+      "pending": 1000000360000,
+      "reason": "the last visit ended inside the realm map (a freeze or a crash)",
+      "t": 1000000120000
+     }
+    },
+    {
+     "args": [
+      {
+       "steadyBand": 2
+      }
+     ],
+     "op": "leave",
+     "out": {
+      "crashes": 1
+     },
+     "rec": {
+      "band": 2,
+      "clean": 1,
+      "crashBand": 1,
+      "crashes": 1,
+      "level": 2,
+      "pending": 1000000360000,
+      "reason": "the last visit ended inside the realm map (a freeze or a crash)",
+      "t": 1000000120000
+     }
+    },
+    {
+     "args": [1000000420000,null],
+     "op": "start",
+     "out": {
+      "hold": false,
+      "level": 0,
+      "reason": null,
+      "rec": {
+       "crashes": 1
+      }
+     },
+     "rec": {
+      "crashes": 1
+     }
+    }
+   ],
+   "name": "a MAP freeze: safe at the next start; visits without steady MAP frames never clear it; clean × crashes (2) visits with them do"
+  },
+  {
+   "calls": [
+    {
+     "args": [1000000060000],
+     "op": "enter",
+     "out": {
+      "band": 0,
+      "crashes": 1,
+      "pending": 1000000060000
+     },
+     "rec": {
+      "crashes": 1
+     }
+    },
+    {
+     "args": [2],
+     "op": "at",
+     "out": {
+      "band": 2,
+      "crashes": 1,
+      "pending": 1000000060000
+     },
+     "rec": {
+      "band": 0,
+      "crashes": 1,
+      "pending": 1000000060000
+     }
+    },
+    {
+     "args": [1000000120000,null],
+     "op": "start",
+     "out": {
+      "hold": false,
+      "level": 2,
+      "reason": "the last visit ended inside the realm map (a freeze or a crash)",
+      "rec": {
+       "clean": 0,
+       "crashBand": 2,
+       "crashes": 2,
+       "level": 2,
+       "reason": "the last visit ended inside the realm map (a freeze or a crash)",
+       "t": 1000000120000
+      }
+     },
+     "rec": {
+      "band": 2,
+      "crashes": 1,
+      "pending": 1000000060000
+     }
+    },
+    {
+     "args": [1000000180000],
+     "op": "enter",
+     "out": {
+      "band": 0,
+      "clean": 0,
+      "crashBand": 2,
+      "crashes": 2,
+      "level": 2,
+      "pending": 1000000180000,
+      "reason": "the last visit ended inside the realm map (a freeze or a crash)",
+      "t": 1000000120000
+     },
+     "rec": {
+      "clean": 0,
+      "crashBand": 2,
+      "crashes": 2,
+      "level": 2,
+      "reason": "the last visit ended inside the realm map (a freeze or a crash)",
+      "t": 1000000120000
+     }
+    },
+    {
+     "args": [2],
+     "op": "at",
+     "out": {
+      "band": 2,
+      "clean": 0,
+      "crashBand": 2,
+      "crashes": 2,
+      "level": 2,
+      "pending": 1000000180000,
+      "reason": "the last visit ended inside the realm map (a freeze or a crash)",
+      "t": 1000000120000
+     },
+     "rec": {
+      "band": 0,
+      "clean": 0,
+      "crashBand": 2,
+      "crashes": 2,
+      "level": 2,
+      "pending": 1000000180000,
+      "reason": "the last visit ended inside the realm map (a freeze or a crash)",
+      "t": 1000000120000
+     }
+    },
+    {
+     "args": [
+      {
+       "steadyBand": 1
+      }
+     ],
+     "op": "leave",
+     "out": {
+      "clean": 0,
+      "crashBand": 2,
+      "crashes": 2,
+      "level": 2,
+      "reason": "the last visit ended inside the realm map (a freeze or a crash)",
+      "t": 1000000120000
+     },
+     "rec": {
+      "band": 2,
+      "clean": 0,
+      "crashBand": 2,
+      "crashes": 2,
+      "level": 2,
+      "pending": 1000000180000,
+      "reason": "the last visit ended inside the realm map (a freeze or a crash)",
+      "t": 1000000120000
+     }
+    },
+    {
+     "args": [1000000240000],
+     "op": "enter",
+     "out": {
+      "band": 0,
+      "clean": 0,
+      "crashBand": 2,
+      "crashes": 2,
+      "level": 2,
+      "pending": 1000000240000,
+      "reason": "the last visit ended inside the realm map (a freeze or a crash)",
+      "t": 1000000120000
+     },
+     "rec": {
+      "clean": 0,
+      "crashBand": 2,
+      "crashes": 2,
+      "level": 2,
+      "reason": "the last visit ended inside the realm map (a freeze or a crash)",
+      "t": 1000000120000
+     }
+    },
+    {
+     "args": [2],
+     "op": "at",
+     "out": {
+      "band": 2,
+      "clean": 0,
+      "crashBand": 2,
+      "crashes": 2,
+      "level": 2,
+      "pending": 1000000240000,
+      "reason": "the last visit ended inside the realm map (a freeze or a crash)",
+      "t": 1000000120000
+     },
+     "rec": {
+      "band": 0,
+      "clean": 0,
+      "crashBand": 2,
+      "crashes": 2,
+      "level": 2,
+      "pending": 1000000240000,
+      "reason": "the last visit ended inside the realm map (a freeze or a crash)",
+      "t": 1000000120000
+     }
+    },
+    {
+     "args": [
+      {
+       "steadyBand": 2
+      }
+     ],
+     "op": "leave",
+     "out": {
+      "clean": 1,
+      "crashBand": 2,
+      "crashes": 2,
+      "level": 2,
+      "reason": "the last visit ended inside the realm map (a freeze or a crash)",
+      "t": 1000000120000
+     },
+     "rec": {
+      "band": 2,
+      "clean": 0,
+      "crashBand": 2,
+      "crashes": 2,
+      "level": 2,
+      "pending": 1000000240000,
+      "reason": "the last visit ended inside the realm map (a freeze or a crash)",
+      "t": 1000000120000
+     }
+    },
+    {
+     "args": [1000000300000],
+     "op": "enter",
+     "out": {
+      "band": 0,
+      "clean": 1,
+      "crashBand": 2,
+      "crashes": 2,
+      "level": 2,
+      "pending": 1000000300000,
+      "reason": "the last visit ended inside the realm map (a freeze or a crash)",
+      "t": 1000000120000
+     },
+     "rec": {
+      "clean": 1,
+      "crashBand": 2,
+      "crashes": 2,
+      "level": 2,
+      "reason": "the last visit ended inside the realm map (a freeze or a crash)",
+      "t": 1000000120000
+     }
+    },
+    {
+     "args": [2],
+     "op": "at",
+     "out": {
+      "band": 2,
+      "clean": 1,
+      "crashBand": 2,
+      "crashes": 2,
+      "level": 2,
+      "pending": 1000000300000,
+      "reason": "the last visit ended inside the realm map (a freeze or a crash)",
+      "t": 1000000120000
+     },
+     "rec": {
+      "band": 0,
+      "clean": 1,
+      "crashBand": 2,
+      "crashes": 2,
+      "level": 2,
+      "pending": 1000000300000,
+      "reason": "the last visit ended inside the realm map (a freeze or a crash)",
+      "t": 1000000120000
+     }
+    },
+    {
+     "args": [
+      {
+       "steadyBand": 2
+      }
+     ],
+     "op": "leave",
+     "out": {
+      "clean": 2,
+      "crashBand": 2,
+      "crashes": 2,
+      "level": 2,
+      "reason": "the last visit ended inside the realm map (a freeze or a crash)",
+      "t": 1000000120000
+     },
+     "rec": {
+      "band": 2,
+      "clean": 1,
+      "crashBand": 2,
+      "crashes": 2,
+      "level": 2,
+      "pending": 1000000300000,
+      "reason": "the last visit ended inside the realm map (a freeze or a crash)",
+      "t": 1000000120000
+     }
+    },
+    {
+     "args": [1000000360000],
+     "op": "enter",
+     "out": {
+      "band": 0,
+      "clean": 2,
+      "crashBand": 2,
+      "crashes": 2,
+      "level": 2,
+      "pending": 1000000360000,
+      "reason": "the last visit ended inside the realm map (a freeze or a crash)",
+      "t": 1000000120000
+     },
+     "rec": {
+      "clean": 2,
+      "crashBand": 2,
+      "crashes": 2,
+      "level": 2,
+      "reason": "the last visit ended inside the realm map (a freeze or a crash)",
+      "t": 1000000120000
+     }
+    },
+    {
+     "args": [2],
+     "op": "at",
+     "out": {
+      "band": 2,
+      "clean": 2,
+      "crashBand": 2,
+      "crashes": 2,
+      "level": 2,
+      "pending": 1000000360000,
+      "reason": "the last visit ended inside the realm map (a freeze or a crash)",
+      "t": 1000000120000
+     },
+     "rec": {
+      "band": 0,
+      "clean": 2,
+      "crashBand": 2,
+      "crashes": 2,
+      "level": 2,
+      "pending": 1000000360000,
+      "reason": "the last visit ended inside the realm map (a freeze or a crash)",
+      "t": 1000000120000
+     }
+    },
+    {
+     "args": [
+      {
+       "steadyBand": 2
+      }
+     ],
+     "op": "leave",
+     "out": {
+      "clean": 3,
+      "crashBand": 2,
+      "crashes": 2,
+      "level": 2,
+      "reason": "the last visit ended inside the realm map (a freeze or a crash)",
+      "t": 1000000120000
+     },
+     "rec": {
+      "band": 2,
+      "clean": 2,
+      "crashBand": 2,
+      "crashes": 2,
+      "level": 2,
+      "pending": 1000000360000,
+      "reason": "the last visit ended inside the realm map (a freeze or a crash)",
+      "t": 1000000120000
+     }
+    },
+    {
+     "args": [1000000420000],
+     "op": "enter",
+     "out": {
+      "band": 0,
+      "clean": 3,
+      "crashBand": 2,
+      "crashes": 2,
+      "level": 2,
+      "pending": 1000000420000,
+      "reason": "the last visit ended inside the realm map (a freeze or a crash)",
+      "t": 1000000120000
+     },
+     "rec": {
+      "clean": 3,
+      "crashBand": 2,
+      "crashes": 2,
+      "level": 2,
+      "reason": "the last visit ended inside the realm map (a freeze or a crash)",
+      "t": 1000000120000
+     }
+    },
+    {
+     "args": [2],
+     "op": "at",
+     "out": {
+      "band": 2,
+      "clean": 3,
+      "crashBand": 2,
+      "crashes": 2,
+      "level": 2,
+      "pending": 1000000420000,
+      "reason": "the last visit ended inside the realm map (a freeze or a crash)",
+      "t": 1000000120000
+     },
+     "rec": {
+      "band": 0,
+      "clean": 3,
+      "crashBand": 2,
+      "crashes": 2,
+      "level": 2,
+      "pending": 1000000420000,
+      "reason": "the last visit ended inside the realm map (a freeze or a crash)",
+      "t": 1000000120000
+     }
+    },
+    {
+     "args": [
+      {
+       "steadyBand": 2
+      }
+     ],
+     "op": "leave",
+     "out": {
+      "crashes": 2
+     },
+     "rec": {
+      "band": 2,
+      "clean": 3,
+      "crashBand": 2,
+      "crashes": 2,
+      "level": 2,
+      "pending": 1000000420000,
+      "reason": "the last visit ended inside the realm map (a freeze or a crash)",
+      "t": 1000000120000
+     }
+    },
+    {
+     "args": [1000000480000,null],
+     "op": "start",
+     "out": {
+      "hold": false,
+      "level": 0,
+      "reason": null,
+      "rec": {
+       "crashes": 2
+      }
+     },
+     "rec": {
+      "crashes": 2
+     }
+    }
+   ],
+   "name": "a second crash, in TRUE: clean × crashes (4) visits, each with steady TRUE frames"
+  },
+  {
+   "calls": [
+    {
+     "args": [1000000060000],
+     "op": "enter",
+     "out": {
+      "band": 0,
+      "pending": 1000000060000
+     },
+     "rec": null
+    },
+    {
+     "args": [1],
+     "op": "at",
+     "out": {
+      "band": 1,
+      "pending": 1000000060000
+     },
+     "rec": {
+      "band": 0,
+      "pending": 1000000060000
+     }
+    },
+    {
+     "args": [1000000120000,null],
+     "op": "start",
+     "out": {
+      "hold": false,
+      "level": 2,
+      "reason": "the last visit ended inside the realm map (a freeze or a crash)",
+      "rec": {
+       "clean": 0,
+       "crashBand": 1,
+       "crashes": 1,
+       "level": 2,
+       "reason": "the last visit ended inside the realm map (a freeze or a crash)",
+       "t": 1000000120000
+      }
+     },
+     "rec": {
+      "band": 1,
+      "pending": 1000000060000
+     }
+    },
+    {
+     "args": [1000000180000],
+     "op": "enter",
+     "out": {
+      "band": 0,
+      "clean": 0,
+      "crashBand": 1,
+      "crashes": 1,
+      "level": 2,
+      "pending": 1000000180000,
+      "reason": "the last visit ended inside the realm map (a freeze or a crash)",
+      "t": 1000000120000
+     },
+     "rec": {
+      "clean": 0,
+      "crashBand": 1,
+      "crashes": 1,
+      "level": 2,
+      "reason": "the last visit ended inside the realm map (a freeze or a crash)",
+      "t": 1000000120000
+     }
+    },
+    {
+     "args": [1],
+     "op": "at",
+     "out": {
+      "band": 1,
+      "clean": 0,
+      "crashBand": 1,
+      "crashes": 1,
+      "level": 2,
+      "pending": 1000000180000,
+      "reason": "the last visit ended inside the realm map (a freeze or a crash)",
+      "t": 1000000120000
+     },
+     "rec": {
+      "band": 0,
+      "clean": 0,
+      "crashBand": 1,
+      "crashes": 1,
+      "level": 2,
+      "pending": 1000000180000,
+      "reason": "the last visit ended inside the realm map (a freeze or a crash)",
+      "t": 1000000120000
+     }
+    },
+    {
+     "args": [1000000240000,null],
+     "op": "start",
+     "out": {
+      "hold": true,
+      "level": 2,
+      "reason": "the last visit ended inside the realm map (a freeze or a crash)",
+      "rec": {
+       "clean": 0,
+       "crashBand": 1,
+       "crashes": 2,
+       "hold": true,
+       "level": 2,
+       "reason": "the last visit ended inside the realm map (a freeze or a crash)",
+       "t": 1000000240000
+      }
+     },
+     "rec": {
+      "band": 1,
+      "clean": 0,
+      "crashBand": 1,
+      "crashes": 1,
+      "level": 2,
+      "pending": 1000000180000,
+      "reason": "the last visit ended inside the realm map (a freeze or a crash)",
+      "t": 1000000120000
+     }
+    },
+    {
+     "args": [1000000300000],
+     "op": "enter",
+     "out": {
+      "band": 0,
+      "clean": 0,
+      "crashBand": 1,
+      "crashes": 2,
+      "hold": true,
+      "level": 2,
+      "pending": 1000000300000,
+      "reason": "the last visit ended inside the realm map (a freeze or a crash)",
+      "t": 1000000240000
+     },
+     "rec": {
+      "clean": 0,
+      "crashBand": 1,
+      "crashes": 2,
+      "hold": true,
+      "level": 2,
+      "reason": "the last visit ended inside the realm map (a freeze or a crash)",
+      "t": 1000000240000
+     }
+    },
+    {
+     "args": [],
+     "op": "tryAgain",
+     "out": {
+      "band": 0,
+      "crashes": 2,
+      "pending": 1000000300000
+     },
+     "rec": {
+      "band": 0,
+      "clean": 0,
+      "crashBand": 1,
+      "crashes": 2,
+      "hold": true,
+      "level": 2,
+      "pending": 1000000300000,
+      "reason": "the last visit ended inside the realm map (a freeze or a crash)",
+      "t": 1000000240000
+     }
+    },
+    {
+     "args": [],
+     "op": "tryAgain",
+     "out": {
+      "crashes": 2
+     },
+     "rec": {
+      "clean": 0,
+      "crashBand": 1,
+      "crashes": 2,
+      "hold": true,
+      "level": 2,
+      "reason": "the last visit ended inside the realm map (a freeze or a crash)",
+      "t": 1000000240000
+     }
+    },
+    {
+     "args": [1000000360000,null],
+     "op": "start",
+     "out": {
+      "hold": false,
+      "level": 0,
+      "reason": null,
+      "rec": {
+       "crashes": 2
+      }
+     },
+     "rec": {
+      "crashes": 2
+     }
+    }
+   ],
+   "name": "a freeze while already safe holds the map until TRY AGAIN, which keeps the crash count"
+  },
+  {
+   "calls": [
+    {
+     "args": [1000000060000],
+     "op": "enter",
+     "out": {
+      "band": 0,
+      "pending": 1000000060000
+     },
+     "rec": null
+    },
+    {
+     "args": [1],
+     "op": "at",
+     "out": {
+      "band": 1,
+      "pending": 1000000060000
+     },
+     "rec": {
+      "band": 0,
+      "pending": 1000000060000
+     }
+    },
+    {
+     "args": [1000000120000,"a lost graphics context",1],
+     "op": "loss",
+     "out": {
+      "band": 1,
+      "clean": 0,
+      "crashBand": 1,
+      "crashes": 1,
+      "level": 2,
+      "pending": 1000000060000,
+      "reason": "a lost graphics context",
+      "t": 1000000120000
+     },
+     "rec": {
+      "band": 1,
+      "pending": 1000000060000
+     }
+    },
+    {
+     "args": [],
+     "op": "dirtyLeave",
+     "out": {
+      "clean": 0,
+      "crashBand": 1,
+      "crashes": 1,
+      "level": 2,
+      "reason": "a lost graphics context",
+      "t": 1000000120000
+     },
+     "rec": {
+      "band": 1,
+      "clean": 0,
+      "crashBand": 1,
+      "crashes": 1,
+      "level": 2,
+      "pending": 1000000060000,
+      "reason": "a lost graphics context",
+      "t": 1000000120000
+     }
+    },
+    {
+     "args": [1000000180000,null],
+     "op": "start",
+     "out": {
+      "hold": false,
+      "level": 2,
+      "reason": "a lost graphics context",
+      "rec": {
+       "clean": 0,
+       "crashBand": 1,
+       "crashes": 1,
+       "level": 2,
+       "reason": "a lost graphics context",
+       "t": 1000000120000
+      }
+     },
+     "rec": {
+      "clean": 0,
+      "crashBand": 1,
+      "crashes": 1,
+      "level": 2,
+      "reason": "a lost graphics context",
+      "t": 1000000120000
+     }
+    },
+    {
+     "args": [1000000240000],
+     "op": "enter",
+     "out": {
+      "band": 0,
+      "clean": 0,
+      "crashBand": 1,
+      "crashes": 1,
+      "level": 2,
+      "pending": 1000000240000,
+      "reason": "a lost graphics context",
+      "t": 1000000120000
+     },
+     "rec": {
+      "clean": 0,
+      "crashBand": 1,
+      "crashes": 1,
+      "level": 2,
+      "reason": "a lost graphics context",
+      "t": 1000000120000
+     }
+    },
+    {
+     "args": [
+      {
+       "steadyBand": 0
+      }
+     ],
+     "op": "leave",
+     "out": {
+      "clean": 0,
+      "crashBand": 1,
+      "crashes": 1,
+      "level": 2,
+      "reason": "a lost graphics context",
+      "t": 1000000120000
+     },
+     "rec": {
+      "band": 0,
+      "clean": 0,
+      "crashBand": 1,
+      "crashes": 1,
+      "level": 2,
+      "pending": 1000000240000,
+      "reason": "a lost graphics context",
+      "t": 1000000120000
+     }
+    },
+    {
+     "args": [1000000300000],
+     "op": "enter",
+     "out": {
+      "band": 0,
+      "clean": 0,
+      "crashBand": 1,
+      "crashes": 1,
+      "level": 2,
+      "pending": 1000000300000,
+      "reason": "a lost graphics context",
+      "t": 1000000120000
+     },
+     "rec": {
+      "clean": 0,
+      "crashBand": 1,
+      "crashes": 1,
+      "level": 2,
+      "reason": "a lost graphics context",
+      "t": 1000000120000
+     }
+    },
+    {
+     "args": [1],
+     "op": "at",
+     "out": {
+      "band": 1,
+      "clean": 0,
+      "crashBand": 1,
+      "crashes": 1,
+      "level": 2,
+      "pending": 1000000300000,
+      "reason": "a lost graphics context",
+      "t": 1000000120000
+     },
+     "rec": {
+      "band": 0,
+      "clean": 0,
+      "crashBand": 1,
+      "crashes": 1,
+      "level": 2,
+      "pending": 1000000300000,
+      "reason": "a lost graphics context",
+      "t": 1000000120000
+     }
+    },
+    {
+     "args": [
+      {
+       "steadyBand": 1
+      }
+     ],
+     "op": "leave",
+     "out": {
+      "clean": 1,
+      "crashBand": 1,
+      "crashes": 1,
+      "level": 2,
+      "reason": "a lost graphics context",
+      "t": 1000000120000
+     },
+     "rec": {
+      "band": 1,
+      "clean": 0,
+      "crashBand": 1,
+      "crashes": 1,
+      "level": 2,
+      "pending": 1000000300000,
+      "reason": "a lost graphics context",
+      "t": 1000000120000
+     }
+    },
+    {
+     "args": [1000000360000],
+     "op": "enter",
+     "out": {
+      "band": 0,
+      "clean": 1,
+      "crashBand": 1,
+      "crashes": 1,
+      "level": 2,
+      "pending": 1000000360000,
+      "reason": "a lost graphics context",
+      "t": 1000000120000
+     },
+     "rec": {
+      "clean": 1,
+      "crashBand": 1,
+      "crashes": 1,
+      "level": 2,
+      "reason": "a lost graphics context",
+      "t": 1000000120000
+     }
+    },
+    {
+     "args": [1],
+     "op": "at",
+     "out": {
+      "band": 1,
+      "clean": 1,
+      "crashBand": 1,
+      "crashes": 1,
+      "level": 2,
+      "pending": 1000000360000,
+      "reason": "a lost graphics context",
+      "t": 1000000120000
+     },
+     "rec": {
+      "band": 0,
+      "clean": 1,
+      "crashBand": 1,
+      "crashes": 1,
+      "level": 2,
+      "pending": 1000000360000,
+      "reason": "a lost graphics context",
+      "t": 1000000120000
+     }
+    },
+    {
+     "args": [
+      {
+       "steadyBand": 1
+      }
+     ],
+     "op": "leave",
+     "out": {
+      "crashes": 1
+     },
+     "rec": {
+      "band": 1,
+      "clean": 1,
+      "crashBand": 1,
+      "crashes": 1,
+      "level": 2,
+      "pending": 1000000360000,
+      "reason": "a lost graphics context",
+      "t": 1000000120000
+     }
+    },
+    {
+     "args": [1000000420000,"a lost graphics context",0],
+     "op": "loss",
+     "out": {
+      "clean": 0,
+      "crashBand": 0,
+      "crashes": 1,
+      "level": 2,
+      "reason": "a lost graphics context",
+      "t": 1000000420000
+     },
+     "rec": null
+    },
+    {
+     "args": [1000000480000],
+     "op": "enter",
+     "out": {
+      "band": 0,
+      "clean": 0,
+      "crashBand": 0,
+      "crashes": 1,
+      "level": 2,
+      "pending": 1000000480000,
+      "reason": "a lost graphics context",
+      "t": 1000000420000
+     },
+     "rec": {
+      "clean": 0,
+      "crashBand": 0,
+      "crashes": 1,
+      "level": 2,
+      "reason": "a lost graphics context",
+      "t": 1000000420000
+     }
+    },
+    {
+     "args": [
+      {
+       "steadyBand": 0
+      }
+     ],
+     "op": "leave",
+     "out": {
+      "clean": 1,
+      "crashBand": 0,
+      "crashes": 1,
+      "level": 2,
+      "reason": "a lost graphics context",
+      "t": 1000000420000
+     },
+     "rec": {
+      "band": 0,
+      "clean": 0,
+      "crashBand": 0,
+      "crashes": 1,
+      "level": 2,
+      "pending": 1000000480000,
+      "reason": "a lost graphics context",
+      "t": 1000000420000
+     }
+    }
+   ],
+   "name": "a lost context in the map stores safe mode at its band; the dirty visit is not a clean one"
+  },
+  {
+   "calls": [
+    {
+     "args": [1000000060000,"0"],
+     "op": "start",
+     "out": {
+      "hold": false,
+      "level": 0,
+      "reason": null,
+      "rec": null
+     },
+     "rec": {
+      "clean": 1,
+      "crashBand": 1,
+      "crashes": 3,
+      "level": 2,
+      "reason": "x",
+      "t": 1000000000000
+     }
+    },
+    {
+     "args": [1000000120000,"1"],
+     "op": "start",
+     "out": {
+      "hold": false,
+      "level": 1,
+      "reason": "forced by ?gpusafe",
+      "rec": {
+       "clean": 1,
+       "crashBand": 1,
+       "crashes": 3,
+       "level": 2,
+       "reason": "x",
+       "t": 1000000000000
+      }
+     },
+     "rec": {
+      "clean": 1,
+      "crashBand": 1,
+      "crashes": 3,
+      "level": 2,
+      "reason": "x",
+      "t": 1000000000000
+     }
+    },
+    {
+     "args": [1000000180000,"2"],
+     "op": "start",
+     "out": {
+      "hold": false,
+      "level": 2,
+      "reason": "forced by ?gpusafe",
+      "rec": null
+     },
+     "rec": null
+    },
+    {
+     "args": [1000000240000,"yes"],
+     "op": "start",
+     "out": {
+      "hold": false,
+      "level": 2,
+      "reason": "x",
+      "rec": {
+       "clean": 1,
+       "crashBand": 1,
+       "crashes": 3,
+       "level": 2,
+       "reason": "x",
+       "t": 1000000000000
+      }
+     },
+     "rec": {
+      "clean": 1,
+      "crashBand": 1,
+      "crashes": 3,
+      "level": 2,
+      "reason": "x",
+      "t": 1000000000000
+     }
+    }
+   ],
+   "name": "the ?gpusafe parameter: 0 clears, 1 and 2 force the level and keep the record"
+  },
+  {
+   "calls": [
+    {
+     "args": [1],
+     "op": "at",
+     "out": null,
+     "rec": null
+    },
+    {
+     "args": [2],
+     "op": "at",
+     "out": {
+      "crashBand": 1,
+      "crashes": 1,
+      "level": 2
+     },
+     "rec": {
+      "crashBand": 1,
+      "crashes": 1,
+      "level": 2
+     }
+    },
+    {
+     "args": [1000000060000],
+     "op": "enter",
+     "out": {
+      "band": 0,
+      "crashes": 1,
+      "pending": 1000000060000
+     },
+     "rec": {
+      "crashes": 1
+     }
+    },
+    {
+     "args": [5],
+     "op": "at",
+     "out": {
+      "band": 2,
+      "crashes": 1,
+      "pending": 1000000060000
+     },
+     "rec": {
+      "band": 0,
+      "crashes": 1,
+      "pending": 1000000060000
+     }
+    },
+    {
+     "args": [-3],
+     "op": "at",
+     "out": {
+      "band": 0,
+      "crashes": 1,
+      "pending": 1000000060000
+     },
+     "rec": {
+      "band": 0,
+      "crashes": 1,
+      "pending": 1000000060000
+     }
+    },
+    {
+     "args": [1.5],
+     "op": "at",
+     "out": {
+      "band": 0,
+      "crashes": 1,
+      "pending": 1000000060000
+     },
+     "rec": {
+      "band": 0,
+      "crashes": 1,
+      "pending": 1000000060000
+     }
+    },
+    {
+     "args": [null],
+     "op": "at",
+     "out": {
+      "band": 0,
+      "crashes": 1,
+      "pending": 1000000060000
+     },
+     "rec": {
+      "band": 0,
+      "crashes": 1,
+      "pending": 1000000060000
+     }
+    }
+   ],
+   "name": "bands clamp to 0..2 (a non-integer is FAR); at() outside a visit changes nothing"
+  },
+  {
+   "calls": [
+    {
+     "args": [1000000060000,null],
+     "op": "start",
+     "out": {
+      "hold": false,
+      "level": 2,
+      "reason": "the last visit ended inside the realm map (a freeze or a crash)",
+      "rec": {
+       "clean": 0,
+       "crashBand": 1,
+       "crashes": 1,
+       "level": 2,
+       "reason": "the last visit ended inside the realm map (a freeze or a crash)",
+       "t": 1000000060000
+      }
+     },
+     "rec": {
+      "pending": 1000000000000
+     }
+    },
+    {
+     "args": [1000000120000,null],
+     "op": "start",
+     "out": {
+      "hold": false,
+      "level": 2,
+      "reason": "the last visit ended inside the realm map (a freeze or a crash)",
+      "rec": {
+       "clean": 0,
+       "crashBand": 0,
+       "crashes": 1,
+       "level": 2,
+       "reason": "the last visit ended inside the realm map (a freeze or a crash)",
+       "t": 1000000120000
+      }
+     },
+     "rec": {
+      "band": 0,
+      "pending": 1000000000000
+     }
+    },
+    {
+     "args": [1000000180000,null],
+     "op": "start",
+     "out": {
+      "hold": false,
+      "level": 2,
+      "reason": "the last visit ended inside the realm map (a freeze or a crash)",
+      "rec": {
+       "clean": 0,
+       "crashBand": 2,
+       "crashes": 1,
+       "level": 2,
+       "reason": "the last visit ended inside the realm map (a freeze or a crash)",
+       "t": 1000000180000
+      }
+     },
+     "rec": {
+      "band": 0,
+      "crashBand": 2,
+      "level": 1,
+      "pending": 1000000000000
+     }
+    },
+    {
+     "args": [1000000240000,null],
+     "op": "start",
+     "out": {
+      "hold": false,
+      "level": 1,
+      "reason": "an earlier graphics reset",
+      "rec": {
+       "level": 1
+      }
+     },
+     "rec": {
+      "level": 1
+     }
+    },
+    {
+     "args": [1000000300000,null],
+     "op": "start",
+     "out": {
+      "hold": true,
+      "level": 2,
+      "reason": "r",
+      "rec": {
+       "hold": true,
+       "level": 5,
+       "reason": "r"
+      }
+     },
+     "rec": {
+      "hold": true,
+      "level": 5,
+      "reason": "r"
+     }
+    },
+    {
+     "args": [1000000360000,null],
+     "op": "start",
+     "out": {
+      "hold": false,
+      "level": 0,
+      "reason": null,
+      "rec": {
+       "crashes": 4
+      }
+     },
+     "rec": {
+      "crashes": 4
+     }
+    },
+    {
+     "args": [
+      {
+       "steadyBand": 0
+      }
+     ],
+     "op": "leave",
+     "out": {
+      "clean": 0,
+      "crashes": 1,
+      "level": 2
+     },
+     "rec": {
+      "clean": 0,
+      "crashes": 1,
+      "level": 2
+     }
+    },
+    {
+     "args": [
+      {
+       "steadyBand": 1
+      }
+     ],
+     "op": "leave",
+     "out": {
+      "clean": 1,
+      "crashes": 1,
+      "level": 2
+     },
+     "rec": {
+      "clean": 0,
+      "crashes": 1,
+      "level": 2
+     }
+    },
+    {
+     "args": [null],
+     "op": "leave",
+     "out": {
+      "clean": 1,
+      "crashes": 1,
+      "level": 2
+     },
+     "rec": {
+      "clean": 1,
+      "crashes": 1,
+      "level": 2
+     }
+    }
+   ],
+   "name": "records from older builds: no band counts as MAP, no crashBand as MAP, levels clamp to 2"
+  },
+  {
+   "calls": [
+    {
+     "args": [null],
+     "op": "leave",
+     "out": null,
+     "rec": null
+    },
+    {
+     "args": [
+      {
+       "steadyBand": 2
+      }
+     ],
+     "op": "leave",
+     "out": {
+      "crashes": 3
+     },
+     "rec": {
+      "band": 1,
+      "crashes": 3,
+      "pending": 1000000000000
+     }
+    },
+    {
+     "args": [
+      {
+       "steadyBand": 2
+      }
+     ],
+     "op": "leave",
+     "out": null,
+     "rec": {
+      "level": 0
+     }
+    },
+    {
+     "args": [],
+     "op": "tryAgain",
+     "out": null,
+     "rec": null
+    },
+    {
+     "args": [],
+     "op": "tryAgain",
+     "out": null,
+     "rec": {
+      "crashes": 0,
+      "level": 2
+     }
+    },
+    {
+     "args": [],
+     "op": "tryAgain",
+     "out": {
+      "crashes": 2,
+      "pending": 1000000000000
+     },
+     "rec": {
+      "crashes": 2,
+      "level": 2,
+      "pending": 1000000000000
+     }
+    },
+    {
+     "args": [1000000060000,"reset",0],
+     "op": "loss",
+     "out": {
+      "band": 0,
+      "clean": 0,
+      "crashBand": 2,
+      "crashes": 2,
+      "level": 2,
+      "pending": 1000000000000,
+      "reason": "reset",
+      "t": 1000000060000
+     },
+     "rec": {
+      "band": 0,
+      "crashBand": 2,
+      "crashes": 1,
+      "pending": 1000000000000
+     }
+    }
+   ],
+   "name": "edge records: nothing in, nothing out; a crash count alone survives"
+  }
+ ]
+}

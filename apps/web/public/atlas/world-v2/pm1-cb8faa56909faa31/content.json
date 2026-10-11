@@ -1,0 +1,890 @@
+{
+  "schema": 1,
+  "kind": "pkw-world-debug-content",
+  "note": "Bundled in every build type (tools/world-debug-content.mjs). Paths are relative to the assets root world/. Verify each file against its sha256 before use.",
+  "pin": "02e9da8414156b9e0000df1653de6273b196cca6",
+  "manifest": {
+    "path": "concepts/globe3d-2026-09-23/pack-manifest.json",
+    "sha256": "ac241498c956d8da3309ddfa5228b6cb147ad751ee40d9a75b31f4f9069c9007",
+    "packVersion": "pm1-cb8faa56909faa31"
+  },
+  "phaseEIslands": true,
+  "realms": [
+    {
+      "id": "cinderfall",
+      "status": "preview",
+      "packVersion": "2026-09-25-8fabe2ef"
+    },
+    {
+      "id": "crownlands",
+      "status": "preview",
+      "packVersion": "2026-09-25-a8604550"
+    },
+    {
+      "id": "elderwood",
+      "status": "preview",
+      "packVersion": "2026-09-25-dcaab3dc"
+    },
+    {
+      "id": "frostveil",
+      "status": "preview",
+      "packVersion": "2026-09-25-af8c42a5"
+    },
+    {
+      "id": "seeker-reach",
+      "status": "preview",
+      "packVersion": "2026-09-25-7677b944"
+    },
+    {
+      "id": "stormcairn",
+      "status": "preview",
+      "packVersion": "2026-09-25-be64165b"
+    },
+    {
+      "id": "sunscar",
+      "status": "preview",
+      "packVersion": "2026-09-25-c950ec12"
+    },
+    {
+      "id": "thornwake",
+      "status": "preview",
+      "packVersion": "2026-09-25-fdc24709"
+    }
+  ],
+  "totals": {
+    "files": 166,
+    "bytes": 31793761
+  },
+  "files": [
+    {
+      "path": "globe-v2/globe-v2.json",
+      "sha256": "10847ac42c7695b78663ec1b48f198e3b741b548858acf1e2a07c8093ba40db0",
+      "bytes": 11610
+    },
+    {
+      "path": "globe-v2/a256-0.webp",
+      "sha256": "31216dc134e2ffba132074812547c0e030d5f1620a004b9a7125e1e30b2a5685",
+      "bytes": 19114
+    },
+    {
+      "path": "globe-v2/a1024-0.webp",
+      "sha256": "7467b8df4c99078b6f47dd2e7acf277762c34cf7ef62906f873a4a051b3421fd",
+      "bytes": 278076
+    },
+    {
+      "path": "globe-v2/ssg512-0.png",
+      "sha256": "f4948593f9f45dc860df594b22da3f202444b5236837c762d67c50de95efbe42",
+      "bytes": 118661
+    },
+    {
+      "path": "globe-v2/a256-1.webp",
+      "sha256": "d7bd6d263b73ea3844100c25f241e3c3480564f740dedd3562d0ec3023c33a9c",
+      "bytes": 23510
+    },
+    {
+      "path": "globe-v2/a1024-1.webp",
+      "sha256": "209c29c3b7fc32442c79e89e8071dc3e42cc582f4d1c2840b88d588271900159",
+      "bytes": 359198
+    },
+    {
+      "path": "globe-v2/ssg512-1.png",
+      "sha256": "a5c0f45064c77930b15f8422514a64d10513ae87b7a992a77442df7af995cca6",
+      "bytes": 82298
+    },
+    {
+      "path": "globe-v2/a256-2.webp",
+      "sha256": "49be99d9668a24c1cfb5bab5a3b72f28d166b1c8bc56e9393bed4104a9a0c81c",
+      "bytes": 21960
+    },
+    {
+      "path": "globe-v2/a1024-2.webp",
+      "sha256": "9742bd58bc68d00b5262c1ca9b072c4bea473cf0a315d601f7eae80a1b22c6cb",
+      "bytes": 317012
+    },
+    {
+      "path": "globe-v2/ssg512-2.png",
+      "sha256": "70c4656d1c225cfb0fff26eccfbb23d79e6a33370e1fd93600a2d757ec477d51",
+      "bytes": 83513
+    },
+    {
+      "path": "globe-v2/a256-3.webp",
+      "sha256": "0beeaaf47179124e72173655352e64814098dc4cc9c56f86693a9390e79d576f",
+      "bytes": 12260
+    },
+    {
+      "path": "globe-v2/a1024-3.webp",
+      "sha256": "5ab64cf98a00b009dc32110ea0d147a9d01a3476be666fa7a39dd317fce8d2d7",
+      "bytes": 166520
+    },
+    {
+      "path": "globe-v2/ssg512-3.png",
+      "sha256": "1efd30fd1c5f691e60bb26bed3605095825362453444d3ea9126dc0062e3d6a9",
+      "bytes": 84525
+    },
+    {
+      "path": "globe-v2/a256-4.webp",
+      "sha256": "0c22bc8766052e93e8f46c984b21fb7382396c16e120bb012e4691e3b02ed157",
+      "bytes": 31342
+    },
+    {
+      "path": "globe-v2/a1024-4.webp",
+      "sha256": "ae515bee270407170f035f7d6ce159f807cae923f4d0044615108b8099d8c13c",
+      "bytes": 448442
+    },
+    {
+      "path": "globe-v2/ssg512-4.png",
+      "sha256": "ad28b9edff06f0342cb182d6671d32b310a38e4d5123cf4692e26e85e50c72ad",
+      "bytes": 150206
+    },
+    {
+      "path": "globe-v2/a256-5.webp",
+      "sha256": "f02a81e269286421dffe3a81f885ac65697f7c1bac7721a78bc61d48a11abc4b",
+      "bytes": 21690
+    },
+    {
+      "path": "globe-v2/a1024-5.webp",
+      "sha256": "54fccc0c105bf32308a6ff151bb05fa3f376a6443b8072cafbf9df270d31b88c",
+      "bytes": 340810
+    },
+    {
+      "path": "globe-v2/ssg512-5.png",
+      "sha256": "3769aa57cbb78ff704f60c670ab567b21d2f4766431e05f8bb0dca957711f275",
+      "bytes": 51438
+    },
+    {
+      "path": "globe-v2/sel-cinderfall.png",
+      "sha256": "765445d91d3441e4bc3a73fc31d3d448527b9fe3d03d3eec227c0270d5813dfa",
+      "bytes": 48380
+    },
+    {
+      "path": "globe-v2/sel-crownlands.png",
+      "sha256": "695db79cc67b537465235d1ddddb9454682b17aaaa676a8178a51c446daa8e78",
+      "bytes": 76544
+    },
+    {
+      "path": "globe-v2/sel-elderwood.png",
+      "sha256": "cdb00d8389f991342af80dc4f98aae664b4c7c4040fb9b841bbd4e5abe98ff45",
+      "bytes": 79808
+    },
+    {
+      "path": "globe-v2/sel-frostveil.png",
+      "sha256": "04b11afb178eac8b5e213e95c7733e4d97d266acf2a26bb20f0163351ace51e1",
+      "bytes": 131102
+    },
+    {
+      "path": "globe-v2/sel-seeker-reach.png",
+      "sha256": "65c5fcf630ce70dc7b6f11aacd88056ed55f79500d521fb00aa7001ae63038da",
+      "bytes": 51098
+    },
+    {
+      "path": "globe-v2/sel-stormcairn.png",
+      "sha256": "22d3152d05216692538eba6999cf0c68daa51b3513bc58f064afc009bb6490b1",
+      "bytes": 91845
+    },
+    {
+      "path": "globe-v2/sel-sunscar.png",
+      "sha256": "b177e89f05101ce2f01ee3d7f1c6cd539f87e8c63b97bebb5421d816236d5248",
+      "bytes": 85531
+    },
+    {
+      "path": "globe-v2/sel-thornwake.png",
+      "sha256": "283791178a0403a928ef06cf0dab95920497ad1c222fb64a444bc8c3fdd0cf93",
+      "bytes": 51579
+    },
+    {
+      "path": "baked/c512-0.webp",
+      "sha256": "4b2fbac6e5fa7fafd9ea750255a5ac976fb1e55911e0477d8ac7e5c1856817ca",
+      "bytes": 16550
+    },
+    {
+      "path": "baked/c512-1.webp",
+      "sha256": "9f1686e5fd188748424f226d445b32487d8773abb3eeed2f598bbd0317024457",
+      "bytes": 17810
+    },
+    {
+      "path": "baked/c512-2.webp",
+      "sha256": "98a8f8221006fc60419bfe07392a8a9b4232870955ac3e61d08d3ed24d53d16a",
+      "bytes": 19554
+    },
+    {
+      "path": "baked/c512-3.webp",
+      "sha256": "eac0cee8e165dde32349ba0e95bdb6ac5884ca4f1a5af83efe7ea030f7137502",
+      "bytes": 10530
+    },
+    {
+      "path": "baked/c512-4.webp",
+      "sha256": "e48cdce7127c8fbf83c8e1637e92fd220097f6c96165ea6cae04a0e44f0d7e10",
+      "bytes": 14130
+    },
+    {
+      "path": "baked/c512-5.webp",
+      "sha256": "902e7275db818083bfae0e102dd8b80d0ce6b01392ed1b73213540d06873c104",
+      "bytes": 19106
+    },
+    {
+      "path": "cinderfall.webp",
+      "sha256": "cab5a56eb598db5ddf5b0af73138a343109edbb150305f5bb4b9aae9c3539bfc",
+      "bytes": 870190
+    },
+    {
+      "path": "crownlands.webp",
+      "sha256": "85216b434770c57feab9c4b5f12a5b27d88756343ab907b87c00812d23fe4bfa",
+      "bytes": 1187910
+    },
+    {
+      "path": "elderwood.webp",
+      "sha256": "865d841976d28c20035f32fafc378d069217d459d67061f2935863d9cbdc8b9a",
+      "bytes": 1076906
+    },
+    {
+      "path": "frostveil.webp",
+      "sha256": "f4bd653b5c0e4f89e63b41f5a84c71c16bc2d0e8145bae4475755e5299143ac6",
+      "bytes": 1140684
+    },
+    {
+      "path": "seeker-reach.webp",
+      "sha256": "1b26e69bffcd97d3e1ac67a7cf852c09e809e0a1238140fb6501ffe7d816e8bc",
+      "bytes": 1061488
+    },
+    {
+      "path": "stormcairn.webp",
+      "sha256": "4a77ef3db6d3c6b7297b1b0f5453eec4ecb4dbec61e9d02398ca78f8ba114e0c",
+      "bytes": 1024224
+    },
+    {
+      "path": "sunscar.webp",
+      "sha256": "08742410f353113a070629a04c9c980cf960f294a9601d8c2164f0c3382ac64f",
+      "bytes": 943212
+    },
+    {
+      "path": "thornwake.webp",
+      "sha256": "d0fe7f63b9e1dadb48720d0c1fc6322800eba82f5326ee0e8b8f4ecb889e5cb8",
+      "bytes": 1031844
+    },
+    {
+      "path": "globe-v2/phase-e/sel-divine-isle.png",
+      "sha256": "f6e67680e12d8b5219abb67f49bfc4c61e2228308b7845a586b0a9562642a508",
+      "bytes": 409196
+    },
+    {
+      "path": "divine-isle.webp",
+      "sha256": "91945dfd20b3c13f84bd9b65a155d1915e9f512e580ddc8925eefdc31da470ec",
+      "bytes": 1408778
+    },
+    {
+      "path": "globe-v2/phase-e/sel-seeker-island.png",
+      "sha256": "d52c1ec5300c5a2ba4240995edeffad8ecd2a1da40d9fdb8dd0a03af77715372",
+      "bytes": 651322
+    },
+    {
+      "path": "seeker-island.webp",
+      "sha256": "66de932f0cd3e634823b69aa0dfcf82ea5d5fa2aac8e704341711ae4879a9d99",
+      "bytes": 1021632
+    },
+    {
+      "path": "globe-v2/phase-e/sel-solana-island.png",
+      "sha256": "13bcfad752ffcbdc976bc80dbf67e12f209a984dc4e61cc98e241ea9920d43c6",
+      "bytes": 346280
+    },
+    {
+      "path": "solana-island.webp",
+      "sha256": "c3eaa948d8c219b02036c0e62706a5e2ab417fd137107b485a0d02815086fddf",
+      "bytes": 1645514
+    },
+    {
+      "path": "realm/index.json",
+      "sha256": "7ecfc3cd5e5ebe201e87ca92918790114216d3d049b69f3502c23b689c262878",
+      "bytes": 3540
+    },
+    {
+      "path": "realm/cinderfall/realm.json",
+      "sha256": "676b5821a56df692fdd794dedeeba93995ab2cb209842ed2f8388ff0069a0685",
+      "bytes": 80842
+    },
+    {
+      "path": "realm/cinderfall/chart8.webp",
+      "sha256": "d113d1db8c3ec1b7651db9ff3c10232ffd16a0e2c1712cc127a20dad1930fa75",
+      "bytes": 149170
+    },
+    {
+      "path": "realm/cinderfall/deeds.png",
+      "sha256": "4eb64d166f4ff35b2b374f63944699498d91a4419c2a0b46e9239c7de8306801",
+      "bytes": 270
+    },
+    {
+      "path": "realm/crownlands/realm.json",
+      "sha256": "06c1f4ea860fa18a687160bb0b5d828f0c031d11030e18fcd768aa907ac21130",
+      "bytes": 98963
+    },
+    {
+      "path": "realm/crownlands/chart8.webp",
+      "sha256": "64b24d3e93e5f9d474cc87cfea2a397749262a6fe52774f355821d31a266ff73",
+      "bytes": 402582
+    },
+    {
+      "path": "realm/crownlands/deeds.png",
+      "sha256": "cc092addb13176183690f296e0589cae55e6bbb161a60d583b43d48f55a9f5cf",
+      "bytes": 826
+    },
+    {
+      "path": "realm/elderwood/realm.json",
+      "sha256": "d9479cadf6259555ec435e4b65ba0619fbfed0f04f9b82d161e2a3071a5b042c",
+      "bytes": 71243
+    },
+    {
+      "path": "realm/elderwood/chart8.webp",
+      "sha256": "d73d41cb30e408f6dbae155e2440734ae68c76bcf8afa700c79227bc4f275317",
+      "bytes": 420954
+    },
+    {
+      "path": "realm/elderwood/deeds.png",
+      "sha256": "1bdb605a6fdf2696e78e3da02426411c591c0a37635e5a9d46e8d0c9eb99d1d2",
+      "bytes": 774
+    },
+    {
+      "path": "realm/frostveil/realm.json",
+      "sha256": "e0a38aba5497467a00f13365b417b259b7bd2455f3ae1fca8cde178c6b75ce06",
+      "bytes": 72067
+    },
+    {
+      "path": "realm/frostveil/chart8.webp",
+      "sha256": "fc1c2114c6e0aa0863808ec5b04b439f1ab9a94fcd200e3eb579d97982e22ab6",
+      "bytes": 297188
+    },
+    {
+      "path": "realm/frostveil/deeds.png",
+      "sha256": "6700aba2e08fa50418b4922ca24c821093073d308512517f320211aded58fd0f",
+      "bytes": 750
+    },
+    {
+      "path": "realm/seeker-reach/realm.json",
+      "sha256": "761df2e7f45c31150d998d3e579474b5c9d68724c1d7ec07e35135a390dbb6b2",
+      "bytes": 76135
+    },
+    {
+      "path": "realm/seeker-reach/chart8.webp",
+      "sha256": "50b521080a75cf0c1ab0b866f5e278ee2c0bd31b2f81f8aefcf51a3e972eeab1",
+      "bytes": 182666
+    },
+    {
+      "path": "realm/seeker-reach/deeds.png",
+      "sha256": "7c76616d0c4f574419ac56ad7de02503f82caa3003884ec97e2bb0525c3eca84",
+      "bytes": 368
+    },
+    {
+      "path": "realm/stormcairn/realm.json",
+      "sha256": "7374c16f2f0f16a66517b73a69ee5a178e94d6d6cf302240c1ad6b323a4b1916",
+      "bytes": 77545
+    },
+    {
+      "path": "realm/stormcairn/chart8.webp",
+      "sha256": "76015cd0aae0554813c3096c4e406fc5b72fb914bb8932873096809bd3179755",
+      "bytes": 443292
+    },
+    {
+      "path": "realm/stormcairn/deeds.png",
+      "sha256": "bdedbdcc80faa86df64df1dc3011711a07927c4846a4fec98262f7bc019354a5",
+      "bytes": 798
+    },
+    {
+      "path": "realm/sunscar/realm.json",
+      "sha256": "52b969e0abcd36ddb8dfbefda14023e3cfbb373556cfc77009475806ccdb7336",
+      "bytes": 79166
+    },
+    {
+      "path": "realm/sunscar/chart8.webp",
+      "sha256": "723f07300361cdaaf868a2b64b22280f7211b8f40f486a39d3974dea68da3bae",
+      "bytes": 363818
+    },
+    {
+      "path": "realm/sunscar/deeds.png",
+      "sha256": "1ef3670aeca0dd4af464c49a1b7d2ea84118be8cd43a2c208b4d63073f0d6c88",
+      "bytes": 657
+    },
+    {
+      "path": "realm/thornwake/realm.json",
+      "sha256": "946df2956aee53f97184e66c676dd24c22b29188cf625708cceef91ecd76cdf1",
+      "bytes": 67619
+    },
+    {
+      "path": "realm/thornwake/chart8.webp",
+      "sha256": "80d88d56594491f8d1b58e74e0760d71c5787778cad7b73486262a836cf8a078",
+      "bytes": 248834
+    },
+    {
+      "path": "realm/thornwake/deeds.png",
+      "sha256": "f464404d742ff9042406513cf2ce736e71aec0a8dd4f69800c2bf70b80698962",
+      "bytes": 474
+    },
+    {
+      "path": "realm/cinderfall/decals.png",
+      "sha256": "cae25a9826a460cb8f5e9ad3eee2ff269e91340b8d5259866f3831c7e212dee1",
+      "bytes": 23316
+    },
+    {
+      "path": "realm/cinderfall/fieldsA.png",
+      "sha256": "cae4bce4793303a7bede2daf3cf16667763c0b7c8babc89fed2d312f8ae0506d",
+      "bytes": 177609
+    },
+    {
+      "path": "realm/cinderfall/fieldsBC.png",
+      "sha256": "93f0df94b43994da5f7ee454ce365b08431be28f656b9e9f19a9bb2ccbc904c0",
+      "bytes": 120815
+    },
+    {
+      "path": "realm/cinderfall/ground.png",
+      "sha256": "0fcb1a9937b35ea8da8e8e0af0ed975a18c5682d5d8fbbfd07c97475a77b2474",
+      "bytes": 132769
+    },
+    {
+      "path": "realm/cinderfall/groundmask.png",
+      "sha256": "da28a645fb0f2998a017dd67d1ec4a5c5d28b3ef6244b74afd1657295058b2c7",
+      "bytes": 17915
+    },
+    {
+      "path": "realm/cinderfall/lines.json",
+      "sha256": "a9e35ce2c6db5de23f72e599b320d5bcde2f343cc0114315690e964ac53cde4b",
+      "bytes": 35960
+    },
+    {
+      "path": "realm/cinderfall/mapkit.png",
+      "sha256": "35b8aacea01d688dea46f2bcf2075a098b1a08850280383e9a9c7fc6cfdf788e",
+      "bytes": 203427
+    },
+    {
+      "path": "realm/cinderfall/mapmask.png",
+      "sha256": "59ada6c72c581ecba2335446349f805cfe294e0d354fb19f10d24ceeef32cb91",
+      "bytes": 17742
+    },
+    {
+      "path": "realm/cinderfall/plots.webp",
+      "sha256": "25fc1728520480ee4eeab950787dc66eeabdf5830515f478940d582d708cf8b6",
+      "bytes": 21604
+    },
+    {
+      "path": "realm/cinderfall/spr.png",
+      "sha256": "7afc889f304acf4280bff0ee738cc80bb62ea215d334d240fc2461529fca624a",
+      "bytes": 318281
+    },
+    {
+      "path": "realm/cinderfall/tone.webp",
+      "sha256": "c57593a87886e5f38a0c135a09eb3836106784735a337b4b71eb6aec8e53015a",
+      "bytes": 33462
+    },
+    {
+      "path": "realm/crownlands/decals.png",
+      "sha256": "c5e556e9a85d3099c1068fb2519183ffb047ed2431b203760dc781d01189fae5",
+      "bytes": 9050
+    },
+    {
+      "path": "realm/crownlands/fieldsA.png",
+      "sha256": "c1620b7d0e020557313d089f613669e38baed470778b643ee69d949148b8df6f",
+      "bytes": 429649
+    },
+    {
+      "path": "realm/crownlands/fieldsBC.png",
+      "sha256": "8206fd2ef0e991dc27486d5c4535948db17d8b5e9122fed943a00cca9bc2a582",
+      "bytes": 290303
+    },
+    {
+      "path": "realm/crownlands/ground.png",
+      "sha256": "7b625a1ff1d32becb02dbf587e1473ae4b7bd904255c19a34e1f23950c46388f",
+      "bytes": 135732
+    },
+    {
+      "path": "realm/crownlands/groundmask.png",
+      "sha256": "b26a007cbdf8427992f514a8d3e837794998a7243c98d2c471caff4c84c65318",
+      "bytes": 23228
+    },
+    {
+      "path": "realm/crownlands/lines.json",
+      "sha256": "9b4851c6d929afcd65fd1f37e984e631b6c72b888c61fa69bf57b2a81dc750fc",
+      "bytes": 18406
+    },
+    {
+      "path": "realm/crownlands/mapkit.png",
+      "sha256": "4fb22b9c31fc1bfe0b4239240bf4c2fb9f0d1407347aa1b71c78e1e95a1d98de",
+      "bytes": 190273
+    },
+    {
+      "path": "realm/crownlands/mapmask.png",
+      "sha256": "ebfd44411df0786dc8703f0033375f551850ecec25d5256805e7aff8135da067",
+      "bytes": 10470
+    },
+    {
+      "path": "realm/crownlands/plots.webp",
+      "sha256": "ab8ecf7eec91fbead706b243e0692c8e923f0d1a766fb90ec215c735d6fc2c34",
+      "bytes": 20268
+    },
+    {
+      "path": "realm/crownlands/spr.png",
+      "sha256": "c1efeea4d10ee934f69c875bea7753421bed4161218a810b905f06bcc8bb7a18",
+      "bytes": 426628
+    },
+    {
+      "path": "realm/crownlands/tone.webp",
+      "sha256": "b63580ba5743978c70c8a139128d25cdd5e60d08e3d714d5282687e531431dad",
+      "bytes": 99548
+    },
+    {
+      "path": "realm/elderwood/decals.png",
+      "sha256": "5aadd105ba8c19b2ec7c3236e667df0bde265ace25e9af08364a6a3ae794b1a3",
+      "bytes": 21828
+    },
+    {
+      "path": "realm/elderwood/fieldsA.png",
+      "sha256": "1f412faea02af1a4e3e5d43901c8e08cc71c8e91977943c1f7d46e801319de9d",
+      "bytes": 316093
+    },
+    {
+      "path": "realm/elderwood/fieldsBC.png",
+      "sha256": "206c74478da1bf53842bd4ee6eff8325171343f752c8b09acdc630bbc69a658c",
+      "bytes": 125344
+    },
+    {
+      "path": "realm/elderwood/ground.png",
+      "sha256": "3dafedfd4d82f7ee70237f16e91d17e07f48a3a2baacb78ad79f66e19f587f70",
+      "bytes": 55674
+    },
+    {
+      "path": "realm/elderwood/groundmask.png",
+      "sha256": "64ec76e0c4900ffd2384e11703d923040ebcade42a0810a859a80bb2cca67e47",
+      "bytes": 7953
+    },
+    {
+      "path": "realm/elderwood/lines.json",
+      "sha256": "1ff10c51b69d6d532bc94beb8c9c954c5656a3358193b51eefe5c87a94a53836",
+      "bytes": 21941
+    },
+    {
+      "path": "realm/elderwood/mapkit.png",
+      "sha256": "3e40d9cff36f9ee6f67f0e45e18ccc28977c53e1a6cd029763c9d217eb0e8ae0",
+      "bytes": 258548
+    },
+    {
+      "path": "realm/elderwood/mapmask.png",
+      "sha256": "0bdc3c5ad2ca7aea25d8c8cecef1bad2d15bf2fefb9e71cfec37013f60eedac4",
+      "bytes": 10252
+    },
+    {
+      "path": "realm/elderwood/plots.webp",
+      "sha256": "bc86d2a04639925c410fd4d00394430dbea582649385cdeaa52ef15d26119464",
+      "bytes": 22542
+    },
+    {
+      "path": "realm/elderwood/spr.png",
+      "sha256": "aa7adcaa6d5cb7aae32ed554e5872da2004e6b9243f83589862234df938870af",
+      "bytes": 334914
+    },
+    {
+      "path": "realm/elderwood/tone.webp",
+      "sha256": "659b6eb8c7e4675c49fda80035bde1bcd1f63898ad504a8592fed19fcbea16ca",
+      "bytes": 115700
+    },
+    {
+      "path": "realm/frostveil/decals.png",
+      "sha256": "baf0aaf4d671f724b8102788dcfbb3918dbc63a17308e5fdd2098f537faccf0e",
+      "bytes": 15300
+    },
+    {
+      "path": "realm/frostveil/fieldsA.png",
+      "sha256": "5c01b854f64115cf3cae21d58338859df562bd2c25f7e12f61883a333071eef0",
+      "bytes": 556282
+    },
+    {
+      "path": "realm/frostveil/fieldsBC.png",
+      "sha256": "2883c0d90b0b4110523de2e2707d4470f48cbf8ddf63ac12c61578aa1a39bfe4",
+      "bytes": 421536
+    },
+    {
+      "path": "realm/frostveil/ground.png",
+      "sha256": "ed70595102cc84b2a00dcb504cf0fcb3e7cc587546406ce0afd2ad10279f061e",
+      "bytes": 68613
+    },
+    {
+      "path": "realm/frostveil/groundmask.png",
+      "sha256": "5806cfdfc27dd4b26951f9142da907dc449d242298fe7c68aecb44e1720b631a",
+      "bytes": 9534
+    },
+    {
+      "path": "realm/frostveil/lines.json",
+      "sha256": "9d32bcc41d1eb986b13960a9d8b58f8d951fcfab5323bc6979096b65e669209c",
+      "bytes": 38453
+    },
+    {
+      "path": "realm/frostveil/mapkit.png",
+      "sha256": "521f7fa8a547143acff1286e33480df73929e7721b4eef9afb2838cfed966dee",
+      "bytes": 201765
+    },
+    {
+      "path": "realm/frostveil/mapmask.png",
+      "sha256": "4e1a566f8c0033a4eb01767b469716b52899c3ba24c0ff1bf3adabed59724e70",
+      "bytes": 12008
+    },
+    {
+      "path": "realm/frostveil/plots.webp",
+      "sha256": "4790c6f5984d284b0cc25d7e1e97506c1bb898f0e9669dec52a59b005650cfb8",
+      "bytes": 20158
+    },
+    {
+      "path": "realm/frostveil/spr.png",
+      "sha256": "520dc9c7353ee54419bcd9bc35dec891ea9cd11b09aa13cf5cd02e2a7779bf6a",
+      "bytes": 318781
+    },
+    {
+      "path": "realm/frostveil/tone.webp",
+      "sha256": "f5e1ed41b3935d1e64161bb209df158a5c69fdf1edf47a5b340fb610ea8441b6",
+      "bytes": 78010
+    },
+    {
+      "path": "realm/seeker-reach/decals.png",
+      "sha256": "8db2aad207de61d25ff6a4abbccbb9945a070dfe755929069d8cd598063dd7f0",
+      "bytes": 15626
+    },
+    {
+      "path": "realm/seeker-reach/fieldsA.png",
+      "sha256": "837ac3a7be884f08ea665f3747903c4348f798d9f031caa1088c6daa7eacba76",
+      "bytes": 216993
+    },
+    {
+      "path": "realm/seeker-reach/fieldsBC.png",
+      "sha256": "1ee6a30b9365b4ebf47bbdeb9af98de4920cc8dc97d56b978c0f8f18700bd2cc",
+      "bytes": 95508
+    },
+    {
+      "path": "realm/seeker-reach/ground.png",
+      "sha256": "2b34c88834f261b848673b557e1e691cafbc6e7e6e1cd3d70af4e77025130e9e",
+      "bytes": 91390
+    },
+    {
+      "path": "realm/seeker-reach/groundmask.png",
+      "sha256": "5942d3858a28fa70a97487d521d2c89eadc4ad6727770674adfa7fdadda8f5b9",
+      "bytes": 12383
+    },
+    {
+      "path": "realm/seeker-reach/lines.json",
+      "sha256": "aea18039a633a85cf73ab8049acbf064f1fdae89b6523f5dd0d83a8acc486ad7",
+      "bytes": 13734
+    },
+    {
+      "path": "realm/seeker-reach/mapkit.png",
+      "sha256": "870a7627afd83d7f3f60c28fc1f9b4996feb0db5a9f97ad59003f1363c7041b4",
+      "bytes": 313855
+    },
+    {
+      "path": "realm/seeker-reach/mapmask.png",
+      "sha256": "4e6047dfdbfbfc75520521174c17d2d545826a2377eb2444d2898f6f630cb8c6",
+      "bytes": 17700
+    },
+    {
+      "path": "realm/seeker-reach/plots.webp",
+      "sha256": "83908e4442cc00d52d3aafd08431839e627527c1bcfbdff76f9c505487e7601b",
+      "bytes": 22068
+    },
+    {
+      "path": "realm/seeker-reach/spr.png",
+      "sha256": "e41adf4101432bebd4deb2510e108b63a64a0694a2ddf61900b9b89c9301e900",
+      "bytes": 280881
+    },
+    {
+      "path": "realm/seeker-reach/tone.webp",
+      "sha256": "634f530445bd55e0231ff6e7096fba107a02d4bdc876f3da3715ce2fe1e215dc",
+      "bytes": 41336
+    },
+    {
+      "path": "realm/stormcairn/decals.png",
+      "sha256": "005cd8112d41f2b4f237af3361bfd08aece2589c28eb8485e60a5eafc324d177",
+      "bytes": 22621
+    },
+    {
+      "path": "realm/stormcairn/fieldsA.png",
+      "sha256": "1f711f77cd975eda93045ea8bfa3873bbfeffb24226c517de3f167b73d6bedb5",
+      "bytes": 426423
+    },
+    {
+      "path": "realm/stormcairn/fieldsBC.png",
+      "sha256": "eed1a0f361254fcdc3fb7fbff6724493329c82abd093755f8d5e54e8eac42a2c",
+      "bytes": 361294
+    },
+    {
+      "path": "realm/stormcairn/ground.png",
+      "sha256": "f0c62a744f9f5f2083a7e740826531fcca296ddc9c5cdf25265ac6c0f895da5c",
+      "bytes": 128311
+    },
+    {
+      "path": "realm/stormcairn/groundmask.png",
+      "sha256": "ffecfe6c9f3576eeace3909a260b866fb44fb0e504489dda5edf0b594dba0a15",
+      "bytes": 22759
+    },
+    {
+      "path": "realm/stormcairn/lines.json",
+      "sha256": "0f20bdf5bdc0eb8c8e1e4100489be58f44c449b88a07184852ae513536791514",
+      "bytes": 13969
+    },
+    {
+      "path": "realm/stormcairn/mapkit.png",
+      "sha256": "4fc720e80ac4cc2bc7e8ef4003a8cf838973397831021c7fa149852ccecd2d69",
+      "bytes": 218697
+    },
+    {
+      "path": "realm/stormcairn/mapmask.png",
+      "sha256": "93b289ecfe59197f72c5a801d00328b2d8b7ead70d90fd451ca1c57dde66748d",
+      "bytes": 8119
+    },
+    {
+      "path": "realm/stormcairn/plots.webp",
+      "sha256": "ec4ea07252b0f7baf52f746a4e73bf9176da6d24d64b698cc87b25e01b2b681f",
+      "bytes": 21440
+    },
+    {
+      "path": "realm/stormcairn/spr.png",
+      "sha256": "f0039de35e739de35fe29c31f4ebbc1a2bbf66f06a3ae99cf4905f3283b50ed5",
+      "bytes": 336497
+    },
+    {
+      "path": "realm/stormcairn/tone.webp",
+      "sha256": "36df714d7c9e435ffb6c0fc2c3dbd043cab3f94fbbdc205a49d1c8fcc111e902",
+      "bytes": 107934
+    },
+    {
+      "path": "realm/sunscar/decals.png",
+      "sha256": "82ab2498a412666daa942a1c2c25378a37fb81c92ee052af85fb6a104e7bf3a7",
+      "bytes": 14535
+    },
+    {
+      "path": "realm/sunscar/fieldsA.png",
+      "sha256": "b7ea2f37cffbe2c06c23620426ac49f4ed7db3c4c4d4b2f12aad9a5ec4dd6a10",
+      "bytes": 320934
+    },
+    {
+      "path": "realm/sunscar/fieldsBC.png",
+      "sha256": "358ddab97a1ab1c1f482797c4f7591cfe7f13d3779ff4dd7a14045825b315253",
+      "bytes": 281286
+    },
+    {
+      "path": "realm/sunscar/ground.png",
+      "sha256": "ad4df85d3eda72fed2b35502277b16c03de1c40529c7b02975c21d7382994535",
+      "bytes": 48852
+    },
+    {
+      "path": "realm/sunscar/groundmask.png",
+      "sha256": "d316dd73195a9c6e3eb9691b865624df63ab0436598761fe20ff2be9b570d5d0",
+      "bytes": 6575
+    },
+    {
+      "path": "realm/sunscar/lines.json",
+      "sha256": "1e657a0cdf101d46d5d55ce19b62889034288e2ed1a74804ae90bdd12ff20548",
+      "bytes": 25784
+    },
+    {
+      "path": "realm/sunscar/mapkit.png",
+      "sha256": "1de10fd9baf11b949492b3b7289b7d31be68039aed1cec6499b71acda5d91c65",
+      "bytes": 179157
+    },
+    {
+      "path": "realm/sunscar/mapmask.png",
+      "sha256": "60a03213f0d0d0bdc8664cf0da43acde4ca43154686f702cfeecd7abd4cf8f0c",
+      "bytes": 10154
+    },
+    {
+      "path": "realm/sunscar/plots.webp",
+      "sha256": "602a962ec24932d13cd68ca0bb8d68e55d78aebf502630ae43bd2f0c06484b41",
+      "bytes": 21462
+    },
+    {
+      "path": "realm/sunscar/spr.png",
+      "sha256": "a16d258c6a4c829587adc0a6596de7600c1249be9c1c445f47b465e159ec8445",
+      "bytes": 280340
+    },
+    {
+      "path": "realm/sunscar/tone.webp",
+      "sha256": "9665989c30bb04d51ff91dbc238276c7b2d8b2a7c4076cef81706641236f416c",
+      "bytes": 68080
+    },
+    {
+      "path": "realm/thornwake/decals.png",
+      "sha256": "1d5046e400d2f9cd8d182adf2e18abcbeff61da835a5b4319fda29a65ec7774b",
+      "bytes": 16318
+    },
+    {
+      "path": "realm/thornwake/fieldsA.png",
+      "sha256": "1880c79d5ea0152dbffb1770e103bdb765fa4708eedfaa1e01136576b3555223",
+      "bytes": 161923
+    },
+    {
+      "path": "realm/thornwake/fieldsBC.png",
+      "sha256": "3523c255139f50b858ef003ceac266c639b3234eba430346e611dd4bb4869f97",
+      "bytes": 75578
+    },
+    {
+      "path": "realm/thornwake/ground.png",
+      "sha256": "3b0ae88469c767d32a06d12a385b69733e9c884323c42737bccda0ef0365d096",
+      "bytes": 54353
+    },
+    {
+      "path": "realm/thornwake/groundmask.png",
+      "sha256": "1be7d0e1e1600af8b6bfc1214d2311ae8f70c57bb523fb571578426fff2de035",
+      "bytes": 6910
+    },
+    {
+      "path": "realm/thornwake/lines.json",
+      "sha256": "6ea8116c581ac5e94099af2616cf106e62f176a5e2e46096a85501526ba6f4ce",
+      "bytes": 50006
+    },
+    {
+      "path": "realm/thornwake/mapkit.png",
+      "sha256": "e43a17af1f2be721b8dc3fca2ea72d0bc86a59a31a7b6a81fa2540ad235b1f67",
+      "bytes": 254675
+    },
+    {
+      "path": "realm/thornwake/mapmask.png",
+      "sha256": "fead241e0f68ca357659c4350225ad43365f2806060b39c65c0578c1a4d47447",
+      "bytes": 9125
+    },
+    {
+      "path": "realm/thornwake/plots.webp",
+      "sha256": "ea81a77f7295723f5bb68a1cd920b73e0dcb27a43ec43e8cb758f854a053c821",
+      "bytes": 23082
+    },
+    {
+      "path": "realm/thornwake/spr.png",
+      "sha256": "77b9227fd21c64d8d3620231d95887d2f55b8fc0e47d85cf547c1c7f7745d37a",
+      "bytes": 333792
+    },
+    {
+      "path": "realm/thornwake/tone.webp",
+      "sha256": "7b573d3a8675ee12bdbd823de572d160883763767be92caa539ad7dc2102ba14",
+      "bytes": 51516
+    },
+    {
+      "path": "realm/shared/keeps.json",
+      "sha256": "992ff8ab895648e99173de729f1ec0d4bb6ab2c753be226916e53413c3358cfa",
+      "bytes": 4901
+    },
+    {
+      "path": "realm/shared/keeps.png",
+      "sha256": "80b3ba95b4e08bb3a9cc9ee93f43ae0c1b6eee5c0f6eb5548c17e7b24b673c13",
+      "bytes": 344932
+    },
+    {
+      "path": "realm/shared/decor.json",
+      "sha256": "1fc128b1990587ea6718f4e0feeca9fea76c19ec46ec32b080a1f54c90849d2f",
+      "bytes": 29065
+    },
+    {
+      "path": "realm/shared/decor.png",
+      "sha256": "7aca574a3020511e887210880e27c7ff9e5c9cf66199fb472e55b6f360c9d575",
+      "bytes": 242588
+    },
+    {
+      "path": "realm/shared/fx.json",
+      "sha256": "c9f5e7c3a7c004cfe17e2b318af50bc29a1b7f6116d8b3a1ac9e17b0f9bb1d35",
+      "bytes": 2898
+    },
+    {
+      "path": "realm/shared/fx.png",
+      "sha256": "4db1e03e60f479d9efde876550627ad0420f39ffaccd1e8e64d23788c089c9e1",
+      "bytes": 2245
+    }
+  ]
+}

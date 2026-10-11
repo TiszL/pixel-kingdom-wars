@@ -1,0 +1,384 @@
+{
+  "provenance": {
+    "kind": "synthetic-unsigned-ABI-unit-vectors",
+    "historicalFixtureSha256": "2fac5348ba7d8b4da58252d121e08ffbeaafb7787381ce696778b1a2db6c3b11",
+    "method": "Independent public PDA and legacy-message arithmetic; historical full-message calibration; no SDK runtime, capture or signing",
+    "sourceAttestation": "source hash fields are all-zero unit placeholders; remaining quote metadata is retained synthetic test input, not current chain evidence",
+    "signingExecuted": false,
+    "captureExecuted": false
+  },
+  "claim": {
+    "version": 1,
+    "wallet": "CY1rd3fmUV3rY2TCfE9CYBHfg5cArf325e6zoTrZXJFC",
+    "idempotencyKey": "00000000-0000-4000-8000-000000000001",
+    "claimId": "00000000-0000-4000-8000-000000000002",
+    "round": "0",
+    "spot": 0,
+    "caps": {
+      "maxFeeLamports": "10000",
+      "maxRentLamports": "100000",
+      "maxTotalLamports": "110000"
+    },
+    "quoteVersion": 1,
+    "quoteTtlSec": 120,
+    "preparedAt": "2035-01-01T00:00:00.000Z",
+    "expiresAt": "2035-01-01T00:02:00.000Z",
+    "identity": {
+      "genesisHash": "CktRuQ2mttgRGkXJtyksdKHjUdc2C4TgDzyB98oEzy8",
+      "programId": "5qyN1Xbe2L16t7MPwwcD5QGmLYAnGF4VjN9BXtazvzkr",
+      "configAddress": "7LyC7Nq4C6DcrjJCFsnKs44nWSim8EZPCcPwzHie4fLy",
+      "keepMint": "4vJ9JU1bJJE96FWSJKvHsmmFADCg4gpZQff4P3bkLKi",
+      "reserveOwner": "8qbHbw2BbbTHBW1sbeqakYXVKRQM8Ne7pLK7m6CVfeR",
+      "auctionConfig": "614u1z4LiRPRYSzVNTV2pcNoZq7QXRNw5HPM6aXKGNGa",
+      "term": "GTBAmbi74Qk77QBY52V5m8GGamVsmwUWZHh25fyqkyF6",
+      "registry": "1DxNTYaXyKjmvsAnyFJYfaCrsjWRSpyT4ZmPehW4D4u",
+      "registryHash": "a4aacd9f6dd5caa33c42b3163d9ad45b0efcb9a500520315792b2b677db9e200",
+      "pool": "3inJ9zaUqytJNTt9Bb55vaE3uTyo3yjutihKGYazeWrJ",
+      "cursor": "C8AQvxtnH4eYU5jCqxRQdj2ERom5EyLRSqLgFW4oZ6xX",
+      "auction": "BYEuzyD1PqPnFwSaon4zKGgLLmvAVBAUiKTBYM6N94C6",
+      "claimantAta": "CeKCGvRNAVr6GTMcXWRg3BbyfHe79iR5CPWgim6RyHh4",
+      "originalWinner": "CY1rd3fmUV3rY2TCfE9CYBHfg5cArf325e6zoTrZXJFC"
+    },
+    "term": {
+      "auctionStart": "1577749800",
+      "auctionEnd": "1577836200",
+      "operatingStart": "1577836200",
+      "operatingEnd": "1578441000",
+      "completedAt": "1577836800",
+      "completedSlot": "1099",
+      "winnerCount": 3,
+      "distributionVersion": 1
+    },
+    "source": {
+      "genesisHash": "CktRuQ2mttgRGkXJtyksdKHjUdc2C4TgDzyB98oEzy8",
+      "programId": "5qyN1Xbe2L16t7MPwwcD5QGmLYAnGF4VjN9BXtazvzkr",
+      "reviewedDeploymentSlot": 90,
+      "reviewedProgramDataSha256": "0000000000000000000000000000000000000000000000000000000000000000",
+      "firstSnapshotSlot": 2000,
+      "snapshotSlot": 2000,
+      "feeSlot": 2000,
+      "snapshotSha256": "0000000000000000000000000000000000000000000000000000000000000000",
+      "blockhashSlot": 2000
+    },
+    "snapshot": {
+      "unixTimestamp": "1578527400",
+      "claimedBaseUnits": "0",
+      "poolAccruedBaseUnits": "10"
+    },
+    "intended": {
+      "claimBaseUnits": "3",
+      "cumulativeBaseUnits": "3",
+      "dustBaseUnits": "1"
+    },
+    "setup": {
+      "needsAta": false,
+      "needsPool": false,
+      "needsCursor": false,
+      "accrualDays": []
+    },
+    "blockhash": "CY1rd3fmUV3rY2TCfE9CYBHfg5cArf325e6zoTrZXJFC",
+    "lastValidBlockHeight": 200,
+    "blockHeight": 100,
+    "fees": {
+      "feeLamports": "5000",
+      "rentLamports": "0",
+      "totalLamports": "5000",
+      "payerBalanceLamports": "1000000"
+    },
+    "transactions": [
+      {
+        "ordinal": 0,
+        "kind": "claim",
+        "messageHex": "0100070dab628754b9693eaea13b6bd9009c6e92fd14c6b6de25b4fcb55688184bb07d6b5e43b1632a87a60a626ccf36cbc6feee6d91ea9f1bced87fc945ab0a3f2290c6286b67330d4675a3c6657183d34f4e3b5c997add4939e743593fecce230ddf77a54643c3ce4f6962c03191f3ff3af2218e19ed5228b1688d92fe3af6d1b01248b3598b01b6b5683c558bb4ee807761e65de04046227edf423465c2b5c57deb95acff9e5ba1a462e9cfba5ec7f122eee02ff9dd6f23a22b8a3a44cb59c7ec643347fa5b02e453f55a58ade0d325fce2b337520e04471b6a9823b728f51b848b2b4a4ed73f2909c2fa15f74da1823cfea3172f62b7ee12e521b91ab645afb1e673000ea5db1ab29e6e7de8bd4ab7f3e5679c4f236abbe898b87fe48ea5c548bf1ae593e7047359e05237f06a6744939234c3f70c3ed36e5c142faf338f541e8e499c959b5160b94f61eaacb7d20a2e14da98351c12af6bde8d795e6268cfa04a1f010101010101010101010101010101010101010101010101010101010101010106ddf6e1d765a193d9cbe146ceeb79ac1cb485ed5f5b37913a8cf5857eff00a9ab628754b9693eaea13b6bd9009c6e92fd14c6b6de25b4fcb55688184bb07d6b01060c0001070809020a0304050b0c08fb9ef7ba9c038896",
+        "messageSha256": "2b1264f1fe0f5f3009f4c906744b886238df08abddf508713dd5045e912d69dc",
+        "packetBytes": 541,
+        "feeLamports": "5000",
+        "rentLamports": "0",
+        "newAccounts": []
+      }
+    ],
+    "state": "prepared",
+    "currentSigningAuthorized": false,
+    "submissionAuthorized": false
+  },
+  "combined": {
+    "version": 1,
+    "wallet": "3Yid2Z6YmAcVrjdEm53JU57TTtC8FHBMSpponhvjEv6s",
+    "idempotencyKey": "00000000-0000-4000-8000-000000000001",
+    "claimId": "00000000-0000-4000-8000-000000000002",
+    "round": "0",
+    "spot": 0,
+    "caps": {
+      "maxFeeLamports": "10000",
+      "maxRentLamports": "100000",
+      "maxTotalLamports": "110000"
+    },
+    "quoteVersion": 1,
+    "quoteTtlSec": 120,
+    "preparedAt": "2035-01-01T00:00:00.000Z",
+    "expiresAt": "2035-01-01T00:02:00.000Z",
+    "identity": {
+      "genesisHash": "CktRuQ2mttgRGkXJtyksdKHjUdc2C4TgDzyB98oEzy8",
+      "programId": "5qyN1Xbe2L16t7MPwwcD5QGmLYAnGF4VjN9BXtazvzkr",
+      "configAddress": "7LyC7Nq4C6DcrjJCFsnKs44nWSim8EZPCcPwzHie4fLy",
+      "keepMint": "4vJ9JU1bJJE96FWSJKvHsmmFADCg4gpZQff4P3bkLKi",
+      "reserveOwner": "8qbHbw2BbbTHBW1sbeqakYXVKRQM8Ne7pLK7m6CVfeR",
+      "auctionConfig": "614u1z4LiRPRYSzVNTV2pcNoZq7QXRNw5HPM6aXKGNGa",
+      "term": "GTBAmbi74Qk77QBY52V5m8GGamVsmwUWZHh25fyqkyF6",
+      "registry": "1DxNTYaXyKjmvsAnyFJYfaCrsjWRSpyT4ZmPehW4D4u",
+      "registryHash": "a4aacd9f6dd5caa33c42b3163d9ad45b0efcb9a500520315792b2b677db9e200",
+      "pool": "3inJ9zaUqytJNTt9Bb55vaE3uTyo3yjutihKGYazeWrJ",
+      "cursor": "C8AQvxtnH4eYU5jCqxRQdj2ERom5EyLRSqLgFW4oZ6xX",
+      "auction": "BYEuzyD1PqPnFwSaon4zKGgLLmvAVBAUiKTBYM6N94C6",
+      "claimantAta": "8pe2Q7MH6UA2ir4xtUM9PQiGdCmh4osL5raHD9L8EEAD",
+      "originalWinner": "3Yid2Z6YmAcVrjdEm53JU57TTtC8FHBMSpponhvjEv6s"
+    },
+    "term": {
+      "auctionStart": "1577749800",
+      "auctionEnd": "1577836200",
+      "operatingStart": "1577836200",
+      "operatingEnd": "1578441000",
+      "completedAt": "1577836800",
+      "completedSlot": "1099",
+      "winnerCount": 3,
+      "distributionVersion": 1
+    },
+    "source": {
+      "genesisHash": "CktRuQ2mttgRGkXJtyksdKHjUdc2C4TgDzyB98oEzy8",
+      "programId": "5qyN1Xbe2L16t7MPwwcD5QGmLYAnGF4VjN9BXtazvzkr",
+      "reviewedDeploymentSlot": 90,
+      "reviewedProgramDataSha256": "0000000000000000000000000000000000000000000000000000000000000000",
+      "firstSnapshotSlot": 2000,
+      "snapshotSlot": 2000,
+      "feeSlot": 2000,
+      "snapshotSha256": "0000000000000000000000000000000000000000000000000000000000000000",
+      "blockhashSlot": 2000
+    },
+    "snapshot": {
+      "unixTimestamp": "1578527400",
+      "claimedBaseUnits": "0",
+      "poolAccruedBaseUnits": "0"
+    },
+    "intended": {
+      "claimBaseUnits": "3",
+      "cumulativeBaseUnits": "3",
+      "dustBaseUnits": "1"
+    },
+    "setup": {
+      "needsAta": true,
+      "needsPool": true,
+      "needsCursor": true,
+      "accrualDays": [
+        "18262"
+      ]
+    },
+    "blockhash": "3Yid2Z6YmAcVrjdEm53JU57TTtC8FHBMSpponhvjEv6s",
+    "lastValidBlockHeight": 200,
+    "blockHeight": 100,
+    "fees": {
+      "feeLamports": "5000",
+      "rentLamports": "40000",
+      "totalLamports": "45000",
+      "payerBalanceLamports": "1000000"
+    },
+    "transactions": [
+      {
+        "ordinal": 0,
+        "kind": "combined",
+        "messageHex": "01000a1125d770abb3de4462dbd090466e95cc7e558f703db62d44ee6e0cc99f2b82b7107435f84541f54221a98c015a0c8795c2b9e547b176615f34d0116a63c82d85425e43b1632a87a60a626ccf36cbc6feee6d91ea9f1bced87fc945ab0a3f2290c6286b67330d4675a3c6657183d34f4e3b5c997add4939e743593fecce230ddf77c809196c7067111f1fc582c1700bde57eabd2db8f9edda61001df390df88cfeaa54643c3ce4f6962c03191f3ff3af2218e19ed5228b1688d92fe3af6d1b01248b3598b01b6b5683c558bb4ee807761e65de04046227edf423465c2b5c57deb958c97258f4e2489f1bb3d1029148e0d830b5a1399daff1084048e7bd8dbe9f8590101010101010101010101010101010101010101010101010101010101010101000000000000000000000000000000000000000000000000000000000000000006ddf6e1d765a193d9cbe146ceeb79ac1cb485ed5f5b37913a8cf5857eff00a947fa5b02e453f55a58ade0d325fce2b337520e04471b6a9823b728f51b848b2b4a4ed73f2909c2fa15f74da1823cfea3172f62b7ee12e521b91ab645afb1e673000ea5db1ab29e6e7de8bd4ab7f3e5679c4f236abbe898b87fe48ea5c548bf1ae593e7047359e05237f06a6744939234c3f70c3ed36e5c142faf338f541e8e4956e3e176b96fe3645cad1e32b970d902e3b5a22ccedace67b30144458b199c1c9c959b5160b94f61eaacb7d20a2e14da98351c12af6bde8d795e6268cfa04a1f25d770abb3de4462dbd090466e95cc7e558f703db62d44ee6e0cc99f2b82b71005070600010008090a01010b0700020c0d0e0309087e95e72e81236bff0b0900020c0d0e030f040908ec79c0ddc226abcd0b0900020c0d0e0310050908a2c9ed6e7bb1396b0b0c00020c0d0e0310050601080a08fb9ef7ba9c038896",
+        "messageSha256": "568218a1e012b74a327d4e4495052940d8be76e62fb3b16a27891e9ff064cf47",
+        "packetBytes": 737,
+        "feeLamports": "5000",
+        "rentLamports": "40000",
+        "newAccounts": [
+          {
+            "address": "8pe2Q7MH6UA2ir4xtUM9PQiGdCmh4osL5raHD9L8EEAD",
+            "space": 165,
+            "rentLamports": "10000"
+          },
+          {
+            "address": "3inJ9zaUqytJNTt9Bb55vaE3uTyo3yjutihKGYazeWrJ",
+            "space": 125,
+            "rentLamports": "10000"
+          },
+          {
+            "address": "ETrb3mPcWAhXPLBHtBKDBWRLTZB7g4g7LBeh5XgDqn7T",
+            "space": 123,
+            "rentLamports": "10000"
+          },
+          {
+            "address": "C8AQvxtnH4eYU5jCqxRQdj2ERom5EyLRSqLgFW4oZ6xX",
+            "space": 116,
+            "rentLamports": "10000"
+          }
+        ]
+      }
+    ],
+    "state": "prepared",
+    "currentSigningAuthorized": false,
+    "submissionAuthorized": false
+  },
+  "split": {
+    "version": 1,
+    "wallet": "5yc1kXRHRsG6JARRYkDVvuLP78nvRurSnN1hLEPW8HBL",
+    "idempotencyKey": "00000000-0000-4000-8000-000000000001",
+    "claimId": "00000000-0000-4000-8000-000000000002",
+    "round": "0",
+    "spot": 0,
+    "caps": {
+      "maxFeeLamports": "10000",
+      "maxRentLamports": "100000",
+      "maxTotalLamports": "110000"
+    },
+    "quoteVersion": 1,
+    "quoteTtlSec": 120,
+    "preparedAt": "2035-01-01T00:00:00.000Z",
+    "expiresAt": "2035-01-01T00:02:00.000Z",
+    "identity": {
+      "genesisHash": "CktRuQ2mttgRGkXJtyksdKHjUdc2C4TgDzyB98oEzy8",
+      "programId": "5qyN1Xbe2L16t7MPwwcD5QGmLYAnGF4VjN9BXtazvzkr",
+      "configAddress": "7LyC7Nq4C6DcrjJCFsnKs44nWSim8EZPCcPwzHie4fLy",
+      "keepMint": "4vJ9JU1bJJE96FWSJKvHsmmFADCg4gpZQff4P3bkLKi",
+      "reserveOwner": "8qbHbw2BbbTHBW1sbeqakYXVKRQM8Ne7pLK7m6CVfeR",
+      "auctionConfig": "614u1z4LiRPRYSzVNTV2pcNoZq7QXRNw5HPM6aXKGNGa",
+      "term": "GTBAmbi74Qk77QBY52V5m8GGamVsmwUWZHh25fyqkyF6",
+      "registry": "1DxNTYaXyKjmvsAnyFJYfaCrsjWRSpyT4ZmPehW4D4u",
+      "registryHash": "a4aacd9f6dd5caa33c42b3163d9ad45b0efcb9a500520315792b2b677db9e200",
+      "pool": "3inJ9zaUqytJNTt9Bb55vaE3uTyo3yjutihKGYazeWrJ",
+      "cursor": "C8AQvxtnH4eYU5jCqxRQdj2ERom5EyLRSqLgFW4oZ6xX",
+      "auction": "BYEuzyD1PqPnFwSaon4zKGgLLmvAVBAUiKTBYM6N94C6",
+      "claimantAta": "7PyFSCruVivKsBoTTVpNEfFJokwFshQXzdX3D8tS5Q3N",
+      "originalWinner": "5yc1kXRHRsG6JARRYkDVvuLP78nvRurSnN1hLEPW8HBL"
+    },
+    "term": {
+      "auctionStart": "1577750400",
+      "auctionEnd": "1577836800",
+      "operatingStart": "1577836800",
+      "operatingEnd": "1578441600",
+      "completedAt": "1577836800",
+      "completedSlot": "1099",
+      "winnerCount": 3,
+      "distributionVersion": 1
+    },
+    "source": {
+      "genesisHash": "CktRuQ2mttgRGkXJtyksdKHjUdc2C4TgDzyB98oEzy8",
+      "programId": "5qyN1Xbe2L16t7MPwwcD5QGmLYAnGF4VjN9BXtazvzkr",
+      "reviewedDeploymentSlot": 90,
+      "reviewedProgramDataSha256": "0000000000000000000000000000000000000000000000000000000000000000",
+      "firstSnapshotSlot": 2000,
+      "snapshotSlot": 2000,
+      "blockhashSlot": 2000,
+      "feeSlot": 2000,
+      "snapshotSha256": "0000000000000000000000000000000000000000000000000000000000000000"
+    },
+    "snapshot": {
+      "unixTimestamp": "1578528000",
+      "claimedBaseUnits": "0",
+      "poolAccruedBaseUnits": "0"
+    },
+    "intended": {
+      "claimBaseUnits": "23",
+      "cumulativeBaseUnits": "23",
+      "dustBaseUnits": "1"
+    },
+    "setup": {
+      "needsAta": true,
+      "needsPool": true,
+      "needsCursor": true,
+      "accrualDays": [
+        "18262",
+        "18263",
+        "18264",
+        "18265",
+        "18266",
+        "18267",
+        "18268"
+      ]
+    },
+    "blockhash": "BRgRzaBNVaJtjwTDCc9JSyALTKYtaRo8GFxw4pncUn8A",
+    "lastValidBlockHeight": 200,
+    "blockHeight": 100,
+    "fees": {
+      "feeLamports": "10000",
+      "rentLamports": "100000",
+      "totalLamports": "110000",
+      "payerBalanceLamports": "1000000"
+    },
+    "transactions": [
+      {
+        "ordinal": 0,
+        "kind": "setup",
+        "messageHex": "0100111c49eedcbdac0e8df020f3e704aa1d91618e376084859f5292aa2719bca6b84eff5f08800a78d3bee7cda68b17cbfe2b643753b10fc6330874e9a116da74997c95286b67330d4675a3c6657183d34f4e3b5c997add4939e743593fecce230ddf77c809196c7067111f1fc582c1700bde57eabd2db8f9edda61001df390df88cfeab2bd5179bcb8f4d399a2bea00307418ba859716fde98eb761a3507da8620d88377b7237d45223a8a241ebc4b5da901226c026ebc8b9ac9e387cbfca413fb46247cc65098b7a34ee35ad510e97eec11e8a36f86dd01930311bfb533da9feb1b82d8f4b78b4fc77571966f81d0e7e1932fac859dc11a1317d061d7869051f74ae4a0067328943d5d3e91f06ac27b8a8c1f432807609220967743ecbf534e4d6b3cbc99247f1aac0d6197817f2400f6798b31dd4d42eee0613b0569b408a8ca5a6ea54643c3ce4f6962c03191f3ff3af2218e19ed5228b1688d92fe3af6d1b012488c97258f4e2489f1bb3d1029148e0d830b5a1399daff1084048e7bd8dbe9f8590101010101010101010101010101010101010101010101010101010101010101000000000000000000000000000000000000000000000000000000000000000006ddf6e1d765a193d9cbe146ceeb79ac1cb485ed5f5b37913a8cf5857eff00a947fa5b02e453f55a58ade0d325fce2b337520e04471b6a9823b728f51b848b2b5e43b1632a87a60a626ccf36cbc6feee6d91ea9f1bced87fc945ab0a3f2290c64a4ed73f2909c2fa15f74da1823cfea3172f62b7ee12e521b91ab645afb1e673000ea5db1ab29e6e7de8bd4ab7f3e5679c4f236abbe898b87fe48ea5c548bf1ae593e7047359e05237f06a6744939234c3f70c3ed36e5c142faf338f541e8e4956e3e176b96fe3645cad1e32b970d902e3b5a22ccedace67b30144458b199c1cda2ecab6c93265521f09e2dab9ead76d30beb46f19614e5c2e3598dced5e91273d708a1272957beb0f70847d7dd8f335c23806e703c286c5d0441411815e47de5d9e8397892245dcc965804db98ba39de4e35a04ddfa9b744063f69122250cf8652c1378f45a99d34a536df7753072101cb398a195126b7f481ab80fbbeb2a35b275eed39a34647598f5bfc8df77de1ab90d0818655a271abfe25e5ab4cd6122f248114fc66cf7eda5f0403b337413bba6a4fd97c0e62cb7a51bf7e2eecb923d9c959b5160b94f61eaacb7d20a2e14da98351c12af6bde8d795e6268cfa04a1f9ae764b29b1f8141eddec44cc2d448117ed08545f9eb26ab2dc9909211c5fabb0a0b060001000c0d0e01010f070010111213020d087e95e72e81236bff0f0900101112130214030d08ec79c0ddc226abcd0f0900101112130215040d08ec79c0ddc226abcd0f0900101112130216050d08ec79c0ddc226abcd0f0900101112130217060d08ec79c0ddc226abcd0f0900101112130218070d08ec79c0ddc226abcd0f0900101112130219080d08ec79c0ddc226abcd0f090010111213021a090d08ec79c0ddc226abcd0f090010111213021b0a0d08a2c9ed6e7bb1396b",
+        "messageSha256": "df3a60efa8884588a6059a428ef93cd1c12decf1a8e24cd548c3b29c9fd2a66b",
+        "packetBytes": 1186,
+        "feeLamports": "5000",
+        "rentLamports": "100000",
+        "newAccounts": [
+          {
+            "address": "7PyFSCruVivKsBoTTVpNEfFJokwFshQXzdX3D8tS5Q3N",
+            "space": 165,
+            "rentLamports": "10000"
+          },
+          {
+            "address": "3inJ9zaUqytJNTt9Bb55vaE3uTyo3yjutihKGYazeWrJ",
+            "space": 125,
+            "rentLamports": "10000"
+          },
+          {
+            "address": "ETrb3mPcWAhXPLBHtBKDBWRLTZB7g4g7LBeh5XgDqn7T",
+            "space": 123,
+            "rentLamports": "10000"
+          },
+          {
+            "address": "D2j1FF49TytN5uuDCPE7tKGKy2ppPuzx3pKYbXdJqkJE",
+            "space": 123,
+            "rentLamports": "10000"
+          },
+          {
+            "address": "94KV7kmmV3zm5Byd84N6HEaZwsRq6yEPZxW3AD13J56j",
+            "space": 123,
+            "rentLamports": "10000"
+          },
+          {
+            "address": "9Q4wpXmRny4xGS18yLbofLJgfWSLpkdHSycxwVeMJRr1",
+            "space": 123,
+            "rentLamports": "10000"
+          },
+          {
+            "address": "FbuVWtoPnijb2bVhpXeRUSDTSpmytmz4JTSihoVReQZZ",
+            "space": 123,
+            "rentLamports": "10000"
+          },
+          {
+            "address": "BmfwHQVzUqPG9rUFWt8xz6s96Wt1m9Ld8xu5obPkb1zK",
+            "space": 123,
+            "rentLamports": "10000"
+          },
+          {
+            "address": "DhD64UTyHj2WpQpB8BTKjnMw7Frega1omZYSoZPgi8pu",
+            "space": 123,
+            "rentLamports": "10000"
+          },
+          {
+            "address": "C8AQvxtnH4eYU5jCqxRQdj2ERom5EyLRSqLgFW4oZ6xX",
+            "space": 116,
+            "rentLamports": "10000"
+          }
+        ]
+      },
+      {
+        "ordinal": 1,
+        "kind": "claim",
+        "messageHex": "0100070d49eedcbdac0e8df020f3e704aa1d91618e376084859f5292aa2719bca6b84eff5e43b1632a87a60a626ccf36cbc6feee6d91ea9f1bced87fc945ab0a3f2290c6286b67330d4675a3c6657183d34f4e3b5c997add4939e743593fecce230ddf77a54643c3ce4f6962c03191f3ff3af2218e19ed5228b1688d92fe3af6d1b01248b3598b01b6b5683c558bb4ee807761e65de04046227edf423465c2b5c57deb955f08800a78d3bee7cda68b17cbfe2b643753b10fc6330874e9a116da74997c9547fa5b02e453f55a58ade0d325fce2b337520e04471b6a9823b728f51b848b2b4a4ed73f2909c2fa15f74da1823cfea3172f62b7ee12e521b91ab645afb1e673000ea5db1ab29e6e7de8bd4ab7f3e5679c4f236abbe898b87fe48ea5c548bf1ae593e7047359e05237f06a6744939234c3f70c3ed36e5c142faf338f541e8e499c959b5160b94f61eaacb7d20a2e14da98351c12af6bde8d795e6268cfa04a1f010101010101010101010101010101010101010101010101010101010101010106ddf6e1d765a193d9cbe146ceeb79ac1cb485ed5f5b37913a8cf5857eff00a99ae764b29b1f8141eddec44cc2d448117ed08545f9eb26ab2dc9909211c5fabb01060c0001070809020a0304050b0c08fb9ef7ba9c038896",
+        "messageSha256": "f6de9150b6575991f0248aba70d041b3d9973b42d46c19db99c04293d909f94a",
+        "packetBytes": 541,
+        "feeLamports": "5000",
+        "rentLamports": "0",
+        "newAccounts": []
+      }
+    ],
+    "state": "prepared",
+    "currentSigningAuthorized": false,
+    "submissionAuthorized": false
+  }
+}

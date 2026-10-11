@@ -1,0 +1,99 @@
+/* CommandBar.css — <PkCommandBar> looks. Geometry (left/top/width/height) comes inline from the p2Logic port, so no
+ * selector here picks a layout by pixel width; per-class differences read [data-pk-vp] (LANE §10.6). Tokens only. */
+
+.pk-cbar {
+  position: fixed; inset: 0; pointer-events: none; z-index: var(--z-cmd);
+  contain: layout style; /* its own containing block: never reflows the canvas or the document */
+  color: var(--pk-text); font-family: var(--pk-font-body);
+}
+
+/* The 2-step shelf (DS §6 CommandBar): ink 18 % step, then the 36 % band. Paint only; a pan may start on it. */
+.pk-cbar__step, .pk-cbar__band { position: absolute; pointer-events: none; }
+.pk-cbar__step { background: var(--pk-ink); opacity: 0.18; }
+.pk-cbar__band { background: var(--pk-scrim-shelf); box-shadow: inset 0 var(--pk-s2) 0 var(--pk-scrim-shelf); }
+.pk-cbar[data-side="TOP"] .pk-cbar__band { box-shadow: inset 0 calc(-1 * var(--pk-s2)) 0 var(--pk-scrim-shelf); }
+/* Docked band (desktop / tablet-landscape / phone-landscape): the shelf spans only the bar's own band. */
+.pk-cbar[data-docked="true"] .pk-cbar__step { clip-path: var(--pk-clip-s); }
+
+/* Hint / reason pill: VT body on ink 86 %, stepped S corners, centred on the band. Paint only. */
+.pk-cbar__pill {
+  position: absolute; transform: translateX(-50%); white-space: nowrap; pointer-events: none;
+  max-width: calc(100vw - 2 * var(--pk-gutter)); overflow: hidden; text-overflow: ellipsis;
+  padding: var(--pk-s4) var(--pk-s12); box-sizing: border-box; height: var(--pk-s32);
+  display: flex; align-items: center;
+  background: var(--pk-scrim-seal); background: color-mix(in srgb, var(--pk-ink) 86%, transparent);
+  clip-path: var(--pk-clip-s); color: var(--pk-text);
+  animation: pk-cbar-fade var(--pk-dur-toast-in) var(--pk-ease-out) both;
+}
+/* The reason pill reads in --pk-text like the hint (Android InfoPill, CommandBar.kt:392-394; states.png). */
+
+/* ---- the press target: the <button> around one column (never clipped, so its focus ring shows) ---- */
+.pk-press {
+  appearance: none; background: none; border: 0; padding: 0; margin: 0; color: inherit; font: inherit;
+  display: block; cursor: pointer; pointer-events: auto; touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+}
+.pk-press:focus { outline: none; }
+.pk-press:focus-visible { outline: var(--pk-outline-button) solid var(--pk-gold-hi); outline-offset: var(--pk-s2); }
+.pk-press:active .pk-cmd__shell { transform: translateY(var(--pk-lip-button-pressed)); transition-duration: var(--pk-dur-press); }
+.pk-press[aria-disabled="true"] { cursor: default; }
+/* Hover = the first px of press travel, no colour change (LANE §4 Input). Pointer classes only, so it never sticks
+ * after a touch on phones and tablets. */
+[data-pk-vp="desktop"] .pk-press:hover:not(:active):not([aria-disabled="true"]) .pk-cmd__shell { transform: translateY(calc(var(--pk-unit) / 2)); }
+
+/* ---- one command column ---- */
+.pk-cmd { position: absolute; display: flex; flex-direction: column; align-items: center; }
+.pk-cmd__press { display: flex; flex-direction: column; align-items: center; width: 100%; }
+.pk-cmd__price { display: flex; justify-content: center; height: var(--pk-size-cost-pill-h); margin-bottom: var(--pk-s4); }
+.pk-cmd__faceWrap { position: relative; display: block; }
+/* The face is P0's chunky shell + face (Button.css); only its press travel is the medallion's own (a whole-face drop). */
+.pk-cmd__faceWrap > .pk-cmd__shell { transition: transform var(--pk-dur-release) var(--pk-ease-out); }
+.pk-cmd__content { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: var(--pk-s2); min-width: 0; }
+/* P0's <PkBadge> at the corner (-6 / -6, KIT-API Chips), the same placement as Button.css `.pk-btn > .pk-btn__badge`. */
+.pk-cmd__faceWrap > .pk-cmd__badge { position: absolute; right: calc(-1 * var(--pk-s6)); top: calc(-1 * var(--pk-s6)); }
+.pk-cmd__caption { margin-top: var(--pk-s4); color: var(--pk-text); white-space: nowrap; }
+.pk-cmd__label { color: var(--pk-text); white-space: nowrap; }
+.pk-cmd__icons { display: flex; align-items: center; justify-content: center; gap: var(--pk-s2); }
+.pk-cmd__icons[data-dim="true"] { opacity: 0.6; }
+.pk-cmd__sub { color: var(--pk-text); margin-top: calc(-1 * var(--pk-s2)); }
+.pk-cmd__lockIcon { position: relative; display: block; }
+/* GameButton.kt:246-251: the icon at 50 % with the gold padlock CENTRED on it (kit.png "locked: Keep Lv 6"). */
+.pk-cmd__padlock { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; }
+.pk-cmd__lockRow { display: flex; align-items: center; gap: var(--pk-s6); }
+.pk-cmd__lockReason { color: var(--pk-gold-hi); white-space: nowrap; }
+.pk-cmd[data-state="DISABLED"] .pk-cmd__caption, .pk-cmd[data-state="LOCKED"] .pk-cmd__caption { color: var(--pk-off-hi); }
+
+/* Shake on a DISABLED tap: 2 px, twice, in --pk-dur-invalid-shake (buildings/SPEC §1.7). */
+.pk-cmd__faceWrap[data-shake="true"] { animation: pk-cmd-shake var(--pk-dur-invalid-shake) var(--pk-ease-linear); }
+@keyframes pk-cmd-shake {
+  0%, 50%, 100% { transform: translateX(0); }
+  12.5%, 62.5% { transform: translateX(var(--pk-s2)); }
+  37.5%, 87.5% { transform: translateX(calc(-1 * var(--pk-s2))); }
+}
+
+/* ---- motion (DS §7 Select building; buildings/SPEC §1.7) ---- */
+.pk-cbar[data-motion="enter"] .pk-cbar__step, .pk-cbar[data-motion="enter"] .pk-cbar__band {
+  animation: pk-cbar-fade var(--pk-dur-plate-in) var(--pk-ease-out) both;
+}
+.pk-cbar[data-motion="enter"] .pk-cmd {
+  animation: pk-cmd-rise var(--pk-dur-plate-in) var(--pk-ease-out) both;
+  animation-delay: calc(var(--pk-cmd-i) * var(--pk-dur-command-stagger));
+}
+.pk-cbar[data-motion="swap"] .pk-cmd { animation: pk-cbar-fade var(--pk-dur-crossfade) var(--pk-ease-out) both; }
+/* Exit hold = paint only, beating the host's `#overlay-root .interactive { pointer-events: auto }` (1,1,0). */
+.pk-cbar[data-motion="exit"], .pk-cbar[data-motion="exit"] * { pointer-events: none !important; }
+.pk-cbar[data-motion="exit"] .pk-cmd { animation: pk-cmd-sink var(--pk-dur-crossfade) var(--pk-ease-in) both; }
+.pk-cbar[data-motion="exit"] .pk-cbar__step, .pk-cbar[data-motion="exit"] .pk-cbar__band, .pk-cbar[data-motion="exit"] .pk-cbar__pill {
+  animation: pk-cbar-fade-out var(--pk-dur-crossfade) var(--pk-ease-in) both;
+}
+@keyframes pk-cbar-fade { from { opacity: 0; } }
+@keyframes pk-cbar-fade-out { to { opacity: 0; } }
+@keyframes pk-cmd-rise { from { opacity: 0; transform: translateY(var(--pk-s12)); } }
+@keyframes pk-cmd-sink { to { opacity: 0; transform: translateY(var(--pk-s12)); } }
+/* The step's 18 % opacity must survive the fade: animate a wrapper value, not the final opacity. */
+.pk-cbar__step { animation-name: none; }
+.pk-cbar[data-motion="enter"] .pk-cbar__step { animation-name: pk-cbar-step-in; }
+.pk-cbar[data-motion="exit"] .pk-cbar__step { animation-name: pk-cbar-step-out; }
+@keyframes pk-cbar-step-in { from { opacity: 0; } to { opacity: 0.18; } }
+@keyframes pk-cbar-step-out { from { opacity: 0.18; } to { opacity: 0; } }
+/* Reduced motion (both triggers) lives in kitBase.css: one list for the whole kit. */

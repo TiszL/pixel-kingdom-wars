@@ -1,0 +1,4221 @@
+{
+  "schemaVersion": 1,
+  "sourceCommit": "427381a2adf934bbcc902baefc207a655b185eb6",
+  "simVersion": 18,
+  "snapshot": {
+    "keepLevel": 1,
+    "buildings": [
+      {
+        "id": "keep",
+        "type": "keep",
+        "level": 1,
+        "tx": 8,
+        "ty": 8
+      },
+      {
+        "id": "nest",
+        "type": "dragonnest",
+        "level": 3,
+        "tx": 11,
+        "ty": 8
+      }
+    ],
+    "surplusShards": 1000,
+    "claimMin": 2,
+    "claimMax": 16
+  },
+  "orders": {
+    "deploys": [
+      {
+        "troop": "highlander",
+        "tx": 0,
+        "ty": 8,
+        "tMs": 0
+      },
+      {
+        "troop": "highlander",
+        "tx": 0,
+        "ty": 9,
+        "tMs": 0
+      },
+      {
+        "troop": "highlander",
+        "tx": 0,
+        "ty": 7,
+        "tMs": 0
+      }
+    ]
+  },
+  "seed": 884311,
+  "options": {},
+  "stars": 0,
+  "destructionPct": 32,
+  "keepDestroyed": false,
+  "vaultDestroyed": false,
+  "mineDestroyed": false,
+  "victory": false,
+  "buildings": [
+    {
+      "id": "keep",
+      "type": "keep",
+      "hp": 462,
+      "maxHp": 1200,
+      "destroyed": false
+    },
+    {
+      "id": "nest",
+      "type": "dragonnest",
+      "hp": 1094,
+      "maxHp": 1094,
+      "destroyed": false
+    }
+  ],
+  "ticks": 257,
+  "events": [
+    {
+      "t": 0,
+      "e": "deploy",
+      "id": 0,
+      "troop": "highlander",
+      "x": 128,
+      "y": 1920
+    },
+    {
+      "t": 0,
+      "e": "deploy",
+      "id": 1,
+      "troop": "highlander",
+      "x": 128,
+      "y": 2176
+    },
+    {
+      "t": 0,
+      "e": "deploy",
+      "id": 2,
+      "troop": "highlander",
+      "x": 128,
+      "y": 2432
+    },
+    {
+      "t": 0,
+      "e": "pos",
+      "id": 0,
+      "x": 157,
+      "y": 1921
+    },
+    {
+      "t": 0,
+      "e": "pos",
+      "id": 1,
+      "x": 158,
+      "y": 2176
+    },
+    {
+      "t": 0,
+      "e": "pos",
+      "id": 2,
+      "x": 158,
+      "y": 2432
+    },
+    {
+      "t": 5,
+      "e": "pos",
+      "id": 0,
+      "x": 302,
+      "y": 1931
+    },
+    {
+      "t": 5,
+      "e": "pos",
+      "id": 1,
+      "x": 308,
+      "y": 2176
+    },
+    {
+      "t": 5,
+      "e": "pos",
+      "id": 2,
+      "x": 308,
+      "y": 2432
+    },
+    {
+      "t": 10,
+      "e": "pos",
+      "id": 0,
+      "x": 447,
+      "y": 1941
+    },
+    {
+      "t": 10,
+      "e": "pos",
+      "id": 1,
+      "x": 458,
+      "y": 2176
+    },
+    {
+      "t": 10,
+      "e": "pos",
+      "id": 2,
+      "x": 458,
+      "y": 2432
+    },
+    {
+      "t": 15,
+      "e": "pos",
+      "id": 0,
+      "x": 592,
+      "y": 1950
+    },
+    {
+      "t": 15,
+      "e": "pos",
+      "id": 1,
+      "x": 608,
+      "y": 2176
+    },
+    {
+      "t": 15,
+      "e": "pos",
+      "id": 2,
+      "x": 608,
+      "y": 2432
+    },
+    {
+      "t": 20,
+      "e": "pos",
+      "id": 0,
+      "x": 737,
+      "y": 1960
+    },
+    {
+      "t": 20,
+      "e": "pos",
+      "id": 1,
+      "x": 758,
+      "y": 2176
+    },
+    {
+      "t": 20,
+      "e": "pos",
+      "id": 2,
+      "x": 758,
+      "y": 2432
+    },
+    {
+      "t": 25,
+      "e": "pos",
+      "id": 0,
+      "x": 882,
+      "y": 1970
+    },
+    {
+      "t": 25,
+      "e": "pos",
+      "id": 1,
+      "x": 908,
+      "y": 2176
+    },
+    {
+      "t": 25,
+      "e": "pos",
+      "id": 2,
+      "x": 908,
+      "y": 2432
+    },
+    {
+      "t": 30,
+      "e": "pos",
+      "id": 0,
+      "x": 1027,
+      "y": 1979
+    },
+    {
+      "t": 30,
+      "e": "pos",
+      "id": 1,
+      "x": 1058,
+      "y": 2176
+    },
+    {
+      "t": 30,
+      "e": "pos",
+      "id": 2,
+      "x": 1058,
+      "y": 2432
+    },
+    {
+      "t": 35,
+      "e": "pos",
+      "id": 0,
+      "x": 1172,
+      "y": 1989
+    },
+    {
+      "t": 35,
+      "e": "pos",
+      "id": 1,
+      "x": 1208,
+      "y": 2176
+    },
+    {
+      "t": 35,
+      "e": "pos",
+      "id": 2,
+      "x": 1208,
+      "y": 2432
+    },
+    {
+      "t": 40,
+      "e": "pos",
+      "id": 0,
+      "x": 1317,
+      "y": 1999
+    },
+    {
+      "t": 40,
+      "e": "pos",
+      "id": 1,
+      "x": 1358,
+      "y": 2176
+    },
+    {
+      "t": 40,
+      "e": "pos",
+      "id": 2,
+      "x": 1358,
+      "y": 2432
+    },
+    {
+      "t": 45,
+      "e": "pos",
+      "id": 0,
+      "x": 1462,
+      "y": 2008
+    },
+    {
+      "t": 45,
+      "e": "pos",
+      "id": 1,
+      "x": 1508,
+      "y": 2176
+    },
+    {
+      "t": 45,
+      "e": "pos",
+      "id": 2,
+      "x": 1508,
+      "y": 2432
+    },
+    {
+      "t": 50,
+      "e": "pos",
+      "id": 0,
+      "x": 1607,
+      "y": 2018
+    },
+    {
+      "t": 50,
+      "e": "pos",
+      "id": 1,
+      "x": 1658,
+      "y": 2176
+    },
+    {
+      "t": 50,
+      "e": "pos",
+      "id": 2,
+      "x": 1658,
+      "y": 2432
+    },
+    {
+      "t": 55,
+      "e": "pos",
+      "id": 0,
+      "x": 1756,
+      "y": 2028
+    },
+    {
+      "t": 55,
+      "e": "pos",
+      "id": 1,
+      "x": 1808,
+      "y": 2176
+    },
+    {
+      "t": 55,
+      "e": "pos",
+      "id": 2,
+      "x": 1808,
+      "y": 2432
+    },
+    {
+      "t": 59,
+      "e": "attackRun",
+      "id": 1,
+      "side": "attacker",
+      "troop": "highlander",
+      "targetKind": "building",
+      "target": "keep",
+      "ix": 2048,
+      "iy": 2176,
+      "mode": "melee",
+      "technique": "strike",
+      "cycleMs": 500,
+      "releaseOffsetMs": 167,
+      "cycleTicks": 5,
+      "releaseOffsetTicks": 2,
+      "impactOffsetsTicks": [
+        2
+      ],
+      "cadenceTicks": 5,
+      "count": 1
+    },
+    {
+      "t": 59,
+      "e": "attackRun",
+      "id": 2,
+      "side": "attacker",
+      "troop": "highlander",
+      "targetKind": "building",
+      "target": "keep",
+      "ix": 2048,
+      "iy": 2432,
+      "mode": "melee",
+      "technique": "strike",
+      "cycleMs": 500,
+      "releaseOffsetMs": 167,
+      "cycleTicks": 5,
+      "releaseOffsetTicks": 2,
+      "impactOffsetsTicks": [
+        2
+      ],
+      "cadenceTicks": 5,
+      "count": 1
+    },
+    {
+      "t": 60,
+      "e": "pos",
+      "id": 0,
+      "x": 1906,
+      "y": 2038
+    },
+    {
+      "t": 60,
+      "e": "spawn",
+      "id": 3,
+      "from": "nest",
+      "troop": "wyrmling",
+      "x": 3072,
+      "y": 2304
+    },
+    {
+      "t": 61,
+      "e": "hit",
+      "target": "keep",
+      "dmg": 9
+    },
+    {
+      "t": 61,
+      "e": "hit",
+      "target": "keep",
+      "dmg": 9
+    },
+    {
+      "t": 61,
+      "e": "attackRun",
+      "id": 0,
+      "side": "attacker",
+      "troop": "highlander",
+      "targetKind": "building",
+      "target": "keep",
+      "ix": 2048,
+      "iy": 2048,
+      "mode": "melee",
+      "technique": "strike",
+      "cycleMs": 500,
+      "releaseOffsetMs": 167,
+      "cycleTicks": 5,
+      "releaseOffsetTicks": 2,
+      "impactOffsetsTicks": [
+        2
+      ],
+      "cadenceTicks": 5,
+      "count": 1
+    },
+    {
+      "t": 63,
+      "e": "hit",
+      "target": "keep",
+      "dmg": 9
+    },
+    {
+      "t": 64,
+      "e": "attackRun",
+      "id": 1,
+      "side": "attacker",
+      "troop": "highlander",
+      "targetKind": "building",
+      "target": "keep",
+      "ix": 2048,
+      "iy": 2176,
+      "mode": "melee",
+      "technique": "strike",
+      "cycleMs": 500,
+      "releaseOffsetMs": 167,
+      "cycleTicks": 5,
+      "releaseOffsetTicks": 2,
+      "impactOffsetsTicks": [
+        2
+      ],
+      "cadenceTicks": 5,
+      "count": 1
+    },
+    {
+      "t": 64,
+      "e": "attackRun",
+      "id": 2,
+      "side": "attacker",
+      "troop": "highlander",
+      "targetKind": "building",
+      "target": "keep",
+      "ix": 2048,
+      "iy": 2432,
+      "mode": "melee",
+      "technique": "strike",
+      "cycleMs": 500,
+      "releaseOffsetMs": 167,
+      "cycleTicks": 5,
+      "releaseOffsetTicks": 2,
+      "impactOffsetsTicks": [
+        2
+      ],
+      "cadenceTicks": 5,
+      "count": 1
+    },
+    {
+      "t": 65,
+      "e": "pos",
+      "id": 3,
+      "x": 2877,
+      "y": 2284
+    },
+    {
+      "t": 66,
+      "e": "hit",
+      "target": "keep",
+      "dmg": 9
+    },
+    {
+      "t": 66,
+      "e": "hit",
+      "target": "keep",
+      "dmg": 9
+    },
+    {
+      "t": 66,
+      "e": "attackRun",
+      "id": 0,
+      "side": "attacker",
+      "troop": "highlander",
+      "targetKind": "building",
+      "target": "keep",
+      "ix": 2048,
+      "iy": 2048,
+      "mode": "melee",
+      "technique": "strike",
+      "cycleMs": 500,
+      "releaseOffsetMs": 167,
+      "cycleTicks": 5,
+      "releaseOffsetTicks": 2,
+      "impactOffsetsTicks": [
+        2
+      ],
+      "cadenceTicks": 5,
+      "count": 1
+    },
+    {
+      "t": 68,
+      "e": "hit",
+      "target": "keep",
+      "dmg": 9
+    },
+    {
+      "t": 69,
+      "e": "attackRun",
+      "id": 1,
+      "side": "attacker",
+      "troop": "highlander",
+      "targetKind": "building",
+      "target": "keep",
+      "ix": 2048,
+      "iy": 2176,
+      "mode": "melee",
+      "technique": "strike",
+      "cycleMs": 500,
+      "releaseOffsetMs": 167,
+      "cycleTicks": 5,
+      "releaseOffsetTicks": 2,
+      "impactOffsetsTicks": [
+        2
+      ],
+      "cadenceTicks": 5,
+      "count": 1
+    },
+    {
+      "t": 69,
+      "e": "attackRun",
+      "id": 2,
+      "side": "attacker",
+      "troop": "highlander",
+      "targetKind": "building",
+      "target": "keep",
+      "ix": 2048,
+      "iy": 2432,
+      "mode": "melee",
+      "technique": "strike",
+      "cycleMs": 500,
+      "releaseOffsetMs": 167,
+      "cycleTicks": 5,
+      "releaseOffsetTicks": 2,
+      "impactOffsetsTicks": [
+        2
+      ],
+      "cadenceTicks": 5,
+      "count": 1
+    },
+    {
+      "t": 70,
+      "e": "pos",
+      "id": 3,
+      "x": 2682,
+      "y": 2264
+    },
+    {
+      "t": 71,
+      "e": "hit",
+      "target": "keep",
+      "dmg": 9
+    },
+    {
+      "t": 71,
+      "e": "hit",
+      "target": "keep",
+      "dmg": 9
+    },
+    {
+      "t": 71,
+      "e": "attackRun",
+      "id": 0,
+      "side": "attacker",
+      "troop": "highlander",
+      "targetKind": "building",
+      "target": "keep",
+      "ix": 2048,
+      "iy": 2048,
+      "mode": "melee",
+      "technique": "strike",
+      "cycleMs": 500,
+      "releaseOffsetMs": 167,
+      "cycleTicks": 5,
+      "releaseOffsetTicks": 2,
+      "impactOffsetsTicks": [
+        2
+      ],
+      "cadenceTicks": 5,
+      "count": 1
+    },
+    {
+      "t": 73,
+      "e": "hit",
+      "target": "keep",
+      "dmg": 9
+    },
+    {
+      "t": 74,
+      "e": "attackRun",
+      "id": 1,
+      "side": "attacker",
+      "troop": "highlander",
+      "targetKind": "building",
+      "target": "keep",
+      "ix": 2048,
+      "iy": 2176,
+      "mode": "melee",
+      "technique": "strike",
+      "cycleMs": 500,
+      "releaseOffsetMs": 167,
+      "cycleTicks": 5,
+      "releaseOffsetTicks": 2,
+      "impactOffsetsTicks": [
+        2
+      ],
+      "cadenceTicks": 5,
+      "count": 1
+    },
+    {
+      "t": 74,
+      "e": "attackRun",
+      "id": 2,
+      "side": "attacker",
+      "troop": "highlander",
+      "targetKind": "building",
+      "target": "keep",
+      "ix": 2048,
+      "iy": 2432,
+      "mode": "melee",
+      "technique": "strike",
+      "cycleMs": 500,
+      "releaseOffsetMs": 167,
+      "cycleTicks": 5,
+      "releaseOffsetTicks": 2,
+      "impactOffsetsTicks": [
+        2
+      ],
+      "cadenceTicks": 5,
+      "count": 1
+    },
+    {
+      "t": 75,
+      "e": "pos",
+      "id": 3,
+      "x": 2487,
+      "y": 2244
+    },
+    {
+      "t": 76,
+      "e": "hit",
+      "target": "keep",
+      "dmg": 9
+    },
+    {
+      "t": 76,
+      "e": "hit",
+      "target": "keep",
+      "dmg": 9
+    },
+    {
+      "t": 76,
+      "e": "attackRun",
+      "id": 0,
+      "side": "attacker",
+      "troop": "highlander",
+      "targetKind": "building",
+      "target": "keep",
+      "ix": 2048,
+      "iy": 2048,
+      "mode": "melee",
+      "technique": "strike",
+      "cycleMs": 500,
+      "releaseOffsetMs": 167,
+      "cycleTicks": 5,
+      "releaseOffsetTicks": 2,
+      "impactOffsetsTicks": [
+        2
+      ],
+      "cadenceTicks": 5,
+      "count": 1
+    },
+    {
+      "t": 78,
+      "e": "hit",
+      "target": "keep",
+      "dmg": 9
+    },
+    {
+      "t": 79,
+      "e": "attackRun",
+      "id": 1,
+      "side": "attacker",
+      "troop": "highlander",
+      "targetKind": "building",
+      "target": "keep",
+      "ix": 2048,
+      "iy": 2176,
+      "mode": "melee",
+      "technique": "strike",
+      "cycleMs": 500,
+      "releaseOffsetMs": 167,
+      "cycleTicks": 5,
+      "releaseOffsetTicks": 2,
+      "impactOffsetsTicks": [
+        2
+      ],
+      "cadenceTicks": 5,
+      "count": 1
+    },
+    {
+      "t": 79,
+      "e": "attackRun",
+      "id": 2,
+      "side": "attacker",
+      "troop": "highlander",
+      "targetKind": "building",
+      "target": "keep",
+      "ix": 2048,
+      "iy": 2432,
+      "mode": "melee",
+      "technique": "strike",
+      "cycleMs": 500,
+      "releaseOffsetMs": 167,
+      "cycleTicks": 5,
+      "releaseOffsetTicks": 2,
+      "impactOffsetsTicks": [
+        2
+      ],
+      "cadenceTicks": 5,
+      "count": 1
+    },
+    {
+      "t": 79,
+      "e": "hit",
+      "target": 1,
+      "dmg": 2
+    },
+    {
+      "t": 80,
+      "e": "hit",
+      "target": 1,
+      "dmg": 2
+    },
+    {
+      "t": 80,
+      "e": "troopFire",
+      "id": 3,
+      "target": 1,
+      "ix": 1898,
+      "iy": 2176
+    },
+    {
+      "t": 81,
+      "e": "hit",
+      "target": "keep",
+      "dmg": 9
+    },
+    {
+      "t": 81,
+      "e": "hit",
+      "target": "keep",
+      "dmg": 9
+    },
+    {
+      "t": 81,
+      "e": "attackRun",
+      "id": 0,
+      "side": "attacker",
+      "troop": "highlander",
+      "targetKind": "building",
+      "target": "keep",
+      "ix": 2048,
+      "iy": 2048,
+      "mode": "melee",
+      "technique": "strike",
+      "cycleMs": 500,
+      "releaseOffsetMs": 167,
+      "cycleTicks": 5,
+      "releaseOffsetTicks": 2,
+      "impactOffsetsTicks": [
+        2
+      ],
+      "cadenceTicks": 5,
+      "count": 1
+    },
+    {
+      "t": 81,
+      "e": "hit",
+      "target": 1,
+      "dmg": 2
+    },
+    {
+      "t": 82,
+      "e": "hit",
+      "target": 1,
+      "dmg": 2
+    },
+    {
+      "t": 83,
+      "e": "hit",
+      "target": "keep",
+      "dmg": 9
+    },
+    {
+      "t": 83,
+      "e": "hit",
+      "target": 1,
+      "dmg": 2
+    },
+    {
+      "t": 84,
+      "e": "attackRun",
+      "id": 1,
+      "side": "attacker",
+      "troop": "highlander",
+      "targetKind": "building",
+      "target": "keep",
+      "ix": 2048,
+      "iy": 2176,
+      "mode": "melee",
+      "technique": "strike",
+      "cycleMs": 500,
+      "releaseOffsetMs": 167,
+      "cycleTicks": 5,
+      "releaseOffsetTicks": 2,
+      "impactOffsetsTicks": [
+        2
+      ],
+      "cadenceTicks": 5,
+      "count": 1
+    },
+    {
+      "t": 84,
+      "e": "attackRun",
+      "id": 2,
+      "side": "attacker",
+      "troop": "highlander",
+      "targetKind": "building",
+      "target": "keep",
+      "ix": 2048,
+      "iy": 2432,
+      "mode": "melee",
+      "technique": "strike",
+      "cycleMs": 500,
+      "releaseOffsetMs": 167,
+      "cycleTicks": 5,
+      "releaseOffsetTicks": 2,
+      "impactOffsetsTicks": [
+        2
+      ],
+      "cadenceTicks": 5,
+      "count": 1
+    },
+    {
+      "t": 84,
+      "e": "hit",
+      "target": 1,
+      "dmg": 2
+    },
+    {
+      "t": 85,
+      "e": "hit",
+      "target": 1,
+      "dmg": 2
+    },
+    {
+      "t": 85,
+      "e": "troopFire",
+      "id": 3,
+      "target": 1,
+      "ix": 1898,
+      "iy": 2176
+    },
+    {
+      "t": 86,
+      "e": "hit",
+      "target": "keep",
+      "dmg": 9
+    },
+    {
+      "t": 86,
+      "e": "hit",
+      "target": "keep",
+      "dmg": 9
+    },
+    {
+      "t": 86,
+      "e": "attackRun",
+      "id": 0,
+      "side": "attacker",
+      "troop": "highlander",
+      "targetKind": "building",
+      "target": "keep",
+      "ix": 2048,
+      "iy": 2048,
+      "mode": "melee",
+      "technique": "strike",
+      "cycleMs": 500,
+      "releaseOffsetMs": 167,
+      "cycleTicks": 5,
+      "releaseOffsetTicks": 2,
+      "impactOffsetsTicks": [
+        2
+      ],
+      "cadenceTicks": 5,
+      "count": 1
+    },
+    {
+      "t": 86,
+      "e": "hit",
+      "target": 1,
+      "dmg": 2
+    },
+    {
+      "t": 87,
+      "e": "hit",
+      "target": 1,
+      "dmg": 2
+    },
+    {
+      "t": 88,
+      "e": "hit",
+      "target": "keep",
+      "dmg": 9
+    },
+    {
+      "t": 88,
+      "e": "hit",
+      "target": 1,
+      "dmg": 2
+    },
+    {
+      "t": 89,
+      "e": "attackRun",
+      "id": 1,
+      "side": "attacker",
+      "troop": "highlander",
+      "targetKind": "building",
+      "target": "keep",
+      "ix": 2048,
+      "iy": 2176,
+      "mode": "melee",
+      "technique": "strike",
+      "cycleMs": 500,
+      "releaseOffsetMs": 167,
+      "cycleTicks": 5,
+      "releaseOffsetTicks": 2,
+      "impactOffsetsTicks": [
+        2
+      ],
+      "cadenceTicks": 5,
+      "count": 1
+    },
+    {
+      "t": 89,
+      "e": "attackRun",
+      "id": 2,
+      "side": "attacker",
+      "troop": "highlander",
+      "targetKind": "building",
+      "target": "keep",
+      "ix": 2048,
+      "iy": 2432,
+      "mode": "melee",
+      "technique": "strike",
+      "cycleMs": 500,
+      "releaseOffsetMs": 167,
+      "cycleTicks": 5,
+      "releaseOffsetTicks": 2,
+      "impactOffsetsTicks": [
+        2
+      ],
+      "cadenceTicks": 5,
+      "count": 1
+    },
+    {
+      "t": 89,
+      "e": "hit",
+      "target": 1,
+      "dmg": 2
+    },
+    {
+      "t": 90,
+      "e": "hit",
+      "target": 1,
+      "dmg": 2
+    },
+    {
+      "t": 90,
+      "e": "troopFire",
+      "id": 3,
+      "target": 1,
+      "ix": 1898,
+      "iy": 2176
+    },
+    {
+      "t": 91,
+      "e": "hit",
+      "target": "keep",
+      "dmg": 9
+    },
+    {
+      "t": 91,
+      "e": "hit",
+      "target": "keep",
+      "dmg": 9
+    },
+    {
+      "t": 91,
+      "e": "attackRun",
+      "id": 0,
+      "side": "attacker",
+      "troop": "highlander",
+      "targetKind": "building",
+      "target": "keep",
+      "ix": 2048,
+      "iy": 2048,
+      "mode": "melee",
+      "technique": "strike",
+      "cycleMs": 500,
+      "releaseOffsetMs": 167,
+      "cycleTicks": 5,
+      "releaseOffsetTicks": 2,
+      "impactOffsetsTicks": [
+        2
+      ],
+      "cadenceTicks": 5,
+      "count": 1
+    },
+    {
+      "t": 91,
+      "e": "hit",
+      "target": 1,
+      "dmg": 2
+    },
+    {
+      "t": 92,
+      "e": "hit",
+      "target": 1,
+      "dmg": 2
+    },
+    {
+      "t": 93,
+      "e": "hit",
+      "target": "keep",
+      "dmg": 9
+    },
+    {
+      "t": 93,
+      "e": "hit",
+      "target": 1,
+      "dmg": 2
+    },
+    {
+      "t": 94,
+      "e": "attackRun",
+      "id": 1,
+      "side": "attacker",
+      "troop": "highlander",
+      "targetKind": "building",
+      "target": "keep",
+      "ix": 2048,
+      "iy": 2176,
+      "mode": "melee",
+      "technique": "strike",
+      "cycleMs": 500,
+      "releaseOffsetMs": 167,
+      "cycleTicks": 5,
+      "releaseOffsetTicks": 2,
+      "impactOffsetsTicks": [
+        2
+      ],
+      "cadenceTicks": 5,
+      "count": 1
+    },
+    {
+      "t": 94,
+      "e": "attackRun",
+      "id": 2,
+      "side": "attacker",
+      "troop": "highlander",
+      "targetKind": "building",
+      "target": "keep",
+      "ix": 2048,
+      "iy": 2432,
+      "mode": "melee",
+      "technique": "strike",
+      "cycleMs": 500,
+      "releaseOffsetMs": 167,
+      "cycleTicks": 5,
+      "releaseOffsetTicks": 2,
+      "impactOffsetsTicks": [
+        2
+      ],
+      "cadenceTicks": 5,
+      "count": 1
+    },
+    {
+      "t": 94,
+      "e": "hit",
+      "target": 1,
+      "dmg": 2
+    },
+    {
+      "t": 95,
+      "e": "hit",
+      "target": 1,
+      "dmg": 2
+    },
+    {
+      "t": 95,
+      "e": "troopFire",
+      "id": 3,
+      "target": 1,
+      "ix": 1898,
+      "iy": 2176
+    },
+    {
+      "t": 96,
+      "e": "hit",
+      "target": "keep",
+      "dmg": 9
+    },
+    {
+      "t": 96,
+      "e": "hit",
+      "target": "keep",
+      "dmg": 9
+    },
+    {
+      "t": 96,
+      "e": "attackRun",
+      "id": 0,
+      "side": "attacker",
+      "troop": "highlander",
+      "targetKind": "building",
+      "target": "keep",
+      "ix": 2048,
+      "iy": 2048,
+      "mode": "melee",
+      "technique": "strike",
+      "cycleMs": 500,
+      "releaseOffsetMs": 167,
+      "cycleTicks": 5,
+      "releaseOffsetTicks": 2,
+      "impactOffsetsTicks": [
+        2
+      ],
+      "cadenceTicks": 5,
+      "count": 1
+    },
+    {
+      "t": 96,
+      "e": "hit",
+      "target": 1,
+      "dmg": 2
+    },
+    {
+      "t": 97,
+      "e": "hit",
+      "target": 1,
+      "dmg": 2
+    },
+    {
+      "t": 98,
+      "e": "hit",
+      "target": "keep",
+      "dmg": 9
+    },
+    {
+      "t": 98,
+      "e": "hit",
+      "target": 1,
+      "dmg": 2
+    },
+    {
+      "t": 99,
+      "e": "attackRun",
+      "id": 1,
+      "side": "attacker",
+      "troop": "highlander",
+      "targetKind": "building",
+      "target": "keep",
+      "ix": 2048,
+      "iy": 2176,
+      "mode": "melee",
+      "technique": "strike",
+      "cycleMs": 500,
+      "releaseOffsetMs": 167,
+      "cycleTicks": 5,
+      "releaseOffsetTicks": 2,
+      "impactOffsetsTicks": [
+        2
+      ],
+      "cadenceTicks": 5,
+      "count": 1
+    },
+    {
+      "t": 99,
+      "e": "attackRun",
+      "id": 2,
+      "side": "attacker",
+      "troop": "highlander",
+      "targetKind": "building",
+      "target": "keep",
+      "ix": 2048,
+      "iy": 2432,
+      "mode": "melee",
+      "technique": "strike",
+      "cycleMs": 500,
+      "releaseOffsetMs": 167,
+      "cycleTicks": 5,
+      "releaseOffsetTicks": 2,
+      "impactOffsetsTicks": [
+        2
+      ],
+      "cadenceTicks": 5,
+      "count": 1
+    },
+    {
+      "t": 99,
+      "e": "hit",
+      "target": 1,
+      "dmg": 2
+    },
+    {
+      "t": 100,
+      "e": "hit",
+      "target": 1,
+      "dmg": 2
+    },
+    {
+      "t": 100,
+      "e": "troopFire",
+      "id": 3,
+      "target": 1,
+      "ix": 1898,
+      "iy": 2176
+    },
+    {
+      "t": 101,
+      "e": "hit",
+      "target": "keep",
+      "dmg": 9
+    },
+    {
+      "t": 101,
+      "e": "hit",
+      "target": "keep",
+      "dmg": 9
+    },
+    {
+      "t": 101,
+      "e": "attackRun",
+      "id": 0,
+      "side": "attacker",
+      "troop": "highlander",
+      "targetKind": "building",
+      "target": "keep",
+      "ix": 2048,
+      "iy": 2048,
+      "mode": "melee",
+      "technique": "strike",
+      "cycleMs": 500,
+      "releaseOffsetMs": 167,
+      "cycleTicks": 5,
+      "releaseOffsetTicks": 2,
+      "impactOffsetsTicks": [
+        2
+      ],
+      "cadenceTicks": 5,
+      "count": 1
+    },
+    {
+      "t": 101,
+      "e": "hit",
+      "target": 1,
+      "dmg": 2
+    },
+    {
+      "t": 102,
+      "e": "hit",
+      "target": 1,
+      "dmg": 2
+    },
+    {
+      "t": 103,
+      "e": "hit",
+      "target": "keep",
+      "dmg": 9
+    },
+    {
+      "t": 103,
+      "e": "hit",
+      "target": 1,
+      "dmg": 2
+    },
+    {
+      "t": 104,
+      "e": "attackRun",
+      "id": 1,
+      "side": "attacker",
+      "troop": "highlander",
+      "targetKind": "building",
+      "target": "keep",
+      "ix": 2048,
+      "iy": 2176,
+      "mode": "melee",
+      "technique": "strike",
+      "cycleMs": 500,
+      "releaseOffsetMs": 167,
+      "cycleTicks": 5,
+      "releaseOffsetTicks": 2,
+      "impactOffsetsTicks": [
+        2
+      ],
+      "cadenceTicks": 5,
+      "count": 1
+    },
+    {
+      "t": 104,
+      "e": "attackRun",
+      "id": 2,
+      "side": "attacker",
+      "troop": "highlander",
+      "targetKind": "building",
+      "target": "keep",
+      "ix": 2048,
+      "iy": 2432,
+      "mode": "melee",
+      "technique": "strike",
+      "cycleMs": 500,
+      "releaseOffsetMs": 167,
+      "cycleTicks": 5,
+      "releaseOffsetTicks": 2,
+      "impactOffsetsTicks": [
+        2
+      ],
+      "cadenceTicks": 5,
+      "count": 1
+    },
+    {
+      "t": 104,
+      "e": "hit",
+      "target": 1,
+      "dmg": 2
+    },
+    {
+      "t": 105,
+      "e": "hit",
+      "target": 1,
+      "dmg": 2
+    },
+    {
+      "t": 105,
+      "e": "troopFire",
+      "id": 3,
+      "target": 1,
+      "ix": 1898,
+      "iy": 2176
+    },
+    {
+      "t": 106,
+      "e": "hit",
+      "target": "keep",
+      "dmg": 9
+    },
+    {
+      "t": 106,
+      "e": "hit",
+      "target": "keep",
+      "dmg": 9
+    },
+    {
+      "t": 106,
+      "e": "attackRun",
+      "id": 0,
+      "side": "attacker",
+      "troop": "highlander",
+      "targetKind": "building",
+      "target": "keep",
+      "ix": 2048,
+      "iy": 2048,
+      "mode": "melee",
+      "technique": "strike",
+      "cycleMs": 500,
+      "releaseOffsetMs": 167,
+      "cycleTicks": 5,
+      "releaseOffsetTicks": 2,
+      "impactOffsetsTicks": [
+        2
+      ],
+      "cadenceTicks": 5,
+      "count": 1
+    },
+    {
+      "t": 106,
+      "e": "hit",
+      "target": 1,
+      "dmg": 2
+    },
+    {
+      "t": 107,
+      "e": "hit",
+      "target": 1,
+      "dmg": 2
+    },
+    {
+      "t": 108,
+      "e": "hit",
+      "target": "keep",
+      "dmg": 9
+    },
+    {
+      "t": 108,
+      "e": "hit",
+      "target": 1,
+      "dmg": 2
+    },
+    {
+      "t": 109,
+      "e": "attackRun",
+      "id": 1,
+      "side": "attacker",
+      "troop": "highlander",
+      "targetKind": "building",
+      "target": "keep",
+      "ix": 2048,
+      "iy": 2176,
+      "mode": "melee",
+      "technique": "strike",
+      "cycleMs": 500,
+      "releaseOffsetMs": 167,
+      "cycleTicks": 5,
+      "releaseOffsetTicks": 2,
+      "impactOffsetsTicks": [
+        2
+      ],
+      "cadenceTicks": 5,
+      "count": 1
+    },
+    {
+      "t": 109,
+      "e": "attackRun",
+      "id": 2,
+      "side": "attacker",
+      "troop": "highlander",
+      "targetKind": "building",
+      "target": "keep",
+      "ix": 2048,
+      "iy": 2432,
+      "mode": "melee",
+      "technique": "strike",
+      "cycleMs": 500,
+      "releaseOffsetMs": 167,
+      "cycleTicks": 5,
+      "releaseOffsetTicks": 2,
+      "impactOffsetsTicks": [
+        2
+      ],
+      "cadenceTicks": 5,
+      "count": 1
+    },
+    {
+      "t": 109,
+      "e": "hit",
+      "target": 1,
+      "dmg": 2
+    },
+    {
+      "t": 110,
+      "e": "hit",
+      "target": 1,
+      "dmg": 2
+    },
+    {
+      "t": 110,
+      "e": "troopFire",
+      "id": 3,
+      "target": 1,
+      "ix": 1898,
+      "iy": 2176
+    },
+    {
+      "t": 111,
+      "e": "hit",
+      "target": "keep",
+      "dmg": 9
+    },
+    {
+      "t": 111,
+      "e": "hit",
+      "target": "keep",
+      "dmg": 9
+    },
+    {
+      "t": 111,
+      "e": "attackRun",
+      "id": 0,
+      "side": "attacker",
+      "troop": "highlander",
+      "targetKind": "building",
+      "target": "keep",
+      "ix": 2048,
+      "iy": 2048,
+      "mode": "melee",
+      "technique": "strike",
+      "cycleMs": 500,
+      "releaseOffsetMs": 167,
+      "cycleTicks": 5,
+      "releaseOffsetTicks": 2,
+      "impactOffsetsTicks": [
+        2
+      ],
+      "cadenceTicks": 5,
+      "count": 1
+    },
+    {
+      "t": 111,
+      "e": "hit",
+      "target": 1,
+      "dmg": 2
+    },
+    {
+      "t": 112,
+      "e": "hit",
+      "target": 1,
+      "dmg": 2
+    },
+    {
+      "t": 113,
+      "e": "hit",
+      "target": "keep",
+      "dmg": 9
+    },
+    {
+      "t": 113,
+      "e": "hit",
+      "target": 1,
+      "dmg": 2
+    },
+    {
+      "t": 114,
+      "e": "attackRun",
+      "id": 1,
+      "side": "attacker",
+      "troop": "highlander",
+      "targetKind": "building",
+      "target": "keep",
+      "ix": 2048,
+      "iy": 2176,
+      "mode": "melee",
+      "technique": "strike",
+      "cycleMs": 500,
+      "releaseOffsetMs": 167,
+      "cycleTicks": 5,
+      "releaseOffsetTicks": 2,
+      "impactOffsetsTicks": [
+        2
+      ],
+      "cadenceTicks": 5,
+      "count": 1
+    },
+    {
+      "t": 114,
+      "e": "attackRun",
+      "id": 2,
+      "side": "attacker",
+      "troop": "highlander",
+      "targetKind": "building",
+      "target": "keep",
+      "ix": 2048,
+      "iy": 2432,
+      "mode": "melee",
+      "technique": "strike",
+      "cycleMs": 500,
+      "releaseOffsetMs": 167,
+      "cycleTicks": 5,
+      "releaseOffsetTicks": 2,
+      "impactOffsetsTicks": [
+        2
+      ],
+      "cadenceTicks": 5,
+      "count": 1
+    },
+    {
+      "t": 114,
+      "e": "hit",
+      "target": 1,
+      "dmg": 2
+    },
+    {
+      "t": 115,
+      "e": "hit",
+      "target": 1,
+      "dmg": 2
+    },
+    {
+      "t": 115,
+      "e": "troopFire",
+      "id": 3,
+      "target": 1,
+      "ix": 1898,
+      "iy": 2176
+    },
+    {
+      "t": 116,
+      "e": "hit",
+      "target": "keep",
+      "dmg": 9
+    },
+    {
+      "t": 116,
+      "e": "hit",
+      "target": "keep",
+      "dmg": 9
+    },
+    {
+      "t": 116,
+      "e": "attackRun",
+      "id": 0,
+      "side": "attacker",
+      "troop": "highlander",
+      "targetKind": "building",
+      "target": "keep",
+      "ix": 2048,
+      "iy": 2048,
+      "mode": "melee",
+      "technique": "strike",
+      "cycleMs": 500,
+      "releaseOffsetMs": 167,
+      "cycleTicks": 5,
+      "releaseOffsetTicks": 2,
+      "impactOffsetsTicks": [
+        2
+      ],
+      "cadenceTicks": 5,
+      "count": 1
+    },
+    {
+      "t": 116,
+      "e": "hit",
+      "target": 1,
+      "dmg": 2
+    },
+    {
+      "t": 117,
+      "e": "hit",
+      "target": 1,
+      "dmg": 2
+    },
+    {
+      "t": 118,
+      "e": "hit",
+      "target": "keep",
+      "dmg": 9
+    },
+    {
+      "t": 118,
+      "e": "hit",
+      "target": 1,
+      "dmg": 2
+    },
+    {
+      "t": 119,
+      "e": "attackRun",
+      "id": 1,
+      "side": "attacker",
+      "troop": "highlander",
+      "targetKind": "building",
+      "target": "keep",
+      "ix": 2048,
+      "iy": 2176,
+      "mode": "melee",
+      "technique": "strike",
+      "cycleMs": 500,
+      "releaseOffsetMs": 167,
+      "cycleTicks": 5,
+      "releaseOffsetTicks": 2,
+      "impactOffsetsTicks": [
+        2
+      ],
+      "cadenceTicks": 5,
+      "count": 1
+    },
+    {
+      "t": 119,
+      "e": "attackRun",
+      "id": 2,
+      "side": "attacker",
+      "troop": "highlander",
+      "targetKind": "building",
+      "target": "keep",
+      "ix": 2048,
+      "iy": 2432,
+      "mode": "melee",
+      "technique": "strike",
+      "cycleMs": 500,
+      "releaseOffsetMs": 167,
+      "cycleTicks": 5,
+      "releaseOffsetTicks": 2,
+      "impactOffsetsTicks": [
+        2
+      ],
+      "cadenceTicks": 5,
+      "count": 1
+    },
+    {
+      "t": 119,
+      "e": "hit",
+      "target": 1,
+      "dmg": 2
+    },
+    {
+      "t": 120,
+      "e": "hit",
+      "target": 1,
+      "dmg": 2
+    },
+    {
+      "t": 120,
+      "e": "troopFire",
+      "id": 3,
+      "target": 1,
+      "ix": 1898,
+      "iy": 2176
+    },
+    {
+      "t": 120,
+      "e": "spawn",
+      "id": 4,
+      "from": "nest",
+      "troop": "wyrmling",
+      "x": 3072,
+      "y": 2304
+    },
+    {
+      "t": 121,
+      "e": "hit",
+      "target": "keep",
+      "dmg": 9
+    },
+    {
+      "t": 121,
+      "e": "hit",
+      "target": "keep",
+      "dmg": 9
+    },
+    {
+      "t": 121,
+      "e": "attackRun",
+      "id": 0,
+      "side": "attacker",
+      "troop": "highlander",
+      "targetKind": "building",
+      "target": "keep",
+      "ix": 2048,
+      "iy": 2048,
+      "mode": "melee",
+      "technique": "strike",
+      "cycleMs": 500,
+      "releaseOffsetMs": 167,
+      "cycleTicks": 5,
+      "releaseOffsetTicks": 2,
+      "impactOffsetsTicks": [
+        2
+      ],
+      "cadenceTicks": 5,
+      "count": 1
+    },
+    {
+      "t": 121,
+      "e": "hit",
+      "target": 1,
+      "dmg": 2
+    },
+    {
+      "t": 122,
+      "e": "hit",
+      "target": 1,
+      "dmg": 2
+    },
+    {
+      "t": 123,
+      "e": "hit",
+      "target": "keep",
+      "dmg": 9
+    },
+    {
+      "t": 123,
+      "e": "hit",
+      "target": 1,
+      "dmg": 2
+    },
+    {
+      "t": 124,
+      "e": "attackRun",
+      "id": 1,
+      "side": "attacker",
+      "troop": "highlander",
+      "targetKind": "building",
+      "target": "keep",
+      "ix": 2048,
+      "iy": 2176,
+      "mode": "melee",
+      "technique": "strike",
+      "cycleMs": 500,
+      "releaseOffsetMs": 167,
+      "cycleTicks": 5,
+      "releaseOffsetTicks": 2,
+      "impactOffsetsTicks": [
+        2
+      ],
+      "cadenceTicks": 5,
+      "count": 1
+    },
+    {
+      "t": 124,
+      "e": "attackRun",
+      "id": 2,
+      "side": "attacker",
+      "troop": "highlander",
+      "targetKind": "building",
+      "target": "keep",
+      "ix": 2048,
+      "iy": 2432,
+      "mode": "melee",
+      "technique": "strike",
+      "cycleMs": 500,
+      "releaseOffsetMs": 167,
+      "cycleTicks": 5,
+      "releaseOffsetTicks": 2,
+      "impactOffsetsTicks": [
+        2
+      ],
+      "cadenceTicks": 5,
+      "count": 1
+    },
+    {
+      "t": 124,
+      "e": "hit",
+      "target": 1,
+      "dmg": 2
+    },
+    {
+      "t": 125,
+      "e": "hit",
+      "target": 1,
+      "dmg": 2
+    },
+    {
+      "t": 125,
+      "e": "troopFire",
+      "id": 3,
+      "target": 1,
+      "ix": 1898,
+      "iy": 2176
+    },
+    {
+      "t": 125,
+      "e": "pos",
+      "id": 4,
+      "x": 2877,
+      "y": 2284
+    },
+    {
+      "t": 126,
+      "e": "hit",
+      "target": "keep",
+      "dmg": 9
+    },
+    {
+      "t": 126,
+      "e": "hit",
+      "target": "keep",
+      "dmg": 9
+    },
+    {
+      "t": 126,
+      "e": "attackRun",
+      "id": 0,
+      "side": "attacker",
+      "troop": "highlander",
+      "targetKind": "building",
+      "target": "keep",
+      "ix": 2048,
+      "iy": 2048,
+      "mode": "melee",
+      "technique": "strike",
+      "cycleMs": 500,
+      "releaseOffsetMs": 167,
+      "cycleTicks": 5,
+      "releaseOffsetTicks": 2,
+      "impactOffsetsTicks": [
+        2
+      ],
+      "cadenceTicks": 5,
+      "count": 1
+    },
+    {
+      "t": 126,
+      "e": "hit",
+      "target": 1,
+      "dmg": 2
+    },
+    {
+      "t": 127,
+      "e": "hit",
+      "target": 1,
+      "dmg": 2
+    },
+    {
+      "t": 128,
+      "e": "hit",
+      "target": "keep",
+      "dmg": 9
+    },
+    {
+      "t": 128,
+      "e": "hit",
+      "target": 1,
+      "dmg": 2
+    },
+    {
+      "t": 129,
+      "e": "attackRun",
+      "id": 1,
+      "side": "attacker",
+      "troop": "highlander",
+      "targetKind": "building",
+      "target": "keep",
+      "ix": 2048,
+      "iy": 2176,
+      "mode": "melee",
+      "technique": "strike",
+      "cycleMs": 500,
+      "releaseOffsetMs": 167,
+      "cycleTicks": 5,
+      "releaseOffsetTicks": 2,
+      "impactOffsetsTicks": [
+        2
+      ],
+      "cadenceTicks": 5,
+      "count": 1
+    },
+    {
+      "t": 129,
+      "e": "attackRun",
+      "id": 2,
+      "side": "attacker",
+      "troop": "highlander",
+      "targetKind": "building",
+      "target": "keep",
+      "ix": 2048,
+      "iy": 2432,
+      "mode": "melee",
+      "technique": "strike",
+      "cycleMs": 500,
+      "releaseOffsetMs": 167,
+      "cycleTicks": 5,
+      "releaseOffsetTicks": 2,
+      "impactOffsetsTicks": [
+        2
+      ],
+      "cadenceTicks": 5,
+      "count": 1
+    },
+    {
+      "t": 129,
+      "e": "hit",
+      "target": 1,
+      "dmg": 2
+    },
+    {
+      "t": 130,
+      "e": "hit",
+      "target": 1,
+      "dmg": 2
+    },
+    {
+      "t": 130,
+      "e": "troopFire",
+      "id": 3,
+      "target": 1,
+      "ix": 1898,
+      "iy": 2176
+    },
+    {
+      "t": 130,
+      "e": "pos",
+      "id": 4,
+      "x": 2682,
+      "y": 2264
+    },
+    {
+      "t": 131,
+      "e": "hit",
+      "target": "keep",
+      "dmg": 9
+    },
+    {
+      "t": 131,
+      "e": "hit",
+      "target": "keep",
+      "dmg": 9
+    },
+    {
+      "t": 131,
+      "e": "attackRun",
+      "id": 0,
+      "side": "attacker",
+      "troop": "highlander",
+      "targetKind": "building",
+      "target": "keep",
+      "ix": 2048,
+      "iy": 2048,
+      "mode": "melee",
+      "technique": "strike",
+      "cycleMs": 500,
+      "releaseOffsetMs": 167,
+      "cycleTicks": 5,
+      "releaseOffsetTicks": 2,
+      "impactOffsetsTicks": [
+        2
+      ],
+      "cadenceTicks": 5,
+      "count": 1
+    },
+    {
+      "t": 131,
+      "e": "hit",
+      "target": 1,
+      "dmg": 2
+    },
+    {
+      "t": 132,
+      "e": "hit",
+      "target": 1,
+      "dmg": 2
+    },
+    {
+      "t": 133,
+      "e": "hit",
+      "target": "keep",
+      "dmg": 9
+    },
+    {
+      "t": 133,
+      "e": "hit",
+      "target": 1,
+      "dmg": 2
+    },
+    {
+      "t": 134,
+      "e": "attackRun",
+      "id": 1,
+      "side": "attacker",
+      "troop": "highlander",
+      "targetKind": "building",
+      "target": "keep",
+      "ix": 2048,
+      "iy": 2176,
+      "mode": "melee",
+      "technique": "strike",
+      "cycleMs": 500,
+      "releaseOffsetMs": 167,
+      "cycleTicks": 5,
+      "releaseOffsetTicks": 2,
+      "impactOffsetsTicks": [
+        2
+      ],
+      "cadenceTicks": 5,
+      "count": 1
+    },
+    {
+      "t": 134,
+      "e": "attackRun",
+      "id": 2,
+      "side": "attacker",
+      "troop": "highlander",
+      "targetKind": "building",
+      "target": "keep",
+      "ix": 2048,
+      "iy": 2432,
+      "mode": "melee",
+      "technique": "strike",
+      "cycleMs": 500,
+      "releaseOffsetMs": 167,
+      "cycleTicks": 5,
+      "releaseOffsetTicks": 2,
+      "impactOffsetsTicks": [
+        2
+      ],
+      "cadenceTicks": 5,
+      "count": 1
+    },
+    {
+      "t": 134,
+      "e": "hit",
+      "target": 1,
+      "dmg": 2
+    },
+    {
+      "t": 135,
+      "e": "hit",
+      "target": 1,
+      "dmg": 2
+    },
+    {
+      "t": 135,
+      "e": "troopFire",
+      "id": 3,
+      "target": 1,
+      "ix": 1898,
+      "iy": 2176
+    },
+    {
+      "t": 135,
+      "e": "pos",
+      "id": 4,
+      "x": 2487,
+      "y": 2244
+    },
+    {
+      "t": 136,
+      "e": "hit",
+      "target": "keep",
+      "dmg": 9
+    },
+    {
+      "t": 136,
+      "e": "hit",
+      "target": "keep",
+      "dmg": 9
+    },
+    {
+      "t": 136,
+      "e": "attackRun",
+      "id": 0,
+      "side": "attacker",
+      "troop": "highlander",
+      "targetKind": "building",
+      "target": "keep",
+      "ix": 2048,
+      "iy": 2048,
+      "mode": "melee",
+      "technique": "strike",
+      "cycleMs": 500,
+      "releaseOffsetMs": 167,
+      "cycleTicks": 5,
+      "releaseOffsetTicks": 2,
+      "impactOffsetsTicks": [
+        2
+      ],
+      "cadenceTicks": 5,
+      "count": 1
+    },
+    {
+      "t": 136,
+      "e": "hit",
+      "target": 1,
+      "dmg": 2
+    },
+    {
+      "t": 137,
+      "e": "hit",
+      "target": 1,
+      "dmg": 2
+    },
+    {
+      "t": 138,
+      "e": "hit",
+      "target": "keep",
+      "dmg": 9
+    },
+    {
+      "t": 138,
+      "e": "hit",
+      "target": 1,
+      "dmg": 2
+    },
+    {
+      "t": 138,
+      "e": "troopDeath",
+      "id": 1
+    },
+    {
+      "t": 139,
+      "e": "attackRun",
+      "id": 2,
+      "side": "attacker",
+      "troop": "highlander",
+      "targetKind": "building",
+      "target": "keep",
+      "ix": 2048,
+      "iy": 2432,
+      "mode": "melee",
+      "technique": "strike",
+      "cycleMs": 500,
+      "releaseOffsetMs": 167,
+      "cycleTicks": 5,
+      "releaseOffsetTicks": 2,
+      "impactOffsetsTicks": [
+        2
+      ],
+      "cadenceTicks": 5,
+      "count": 1
+    },
+    {
+      "t": 139,
+      "e": "hit",
+      "target": 0,
+      "dmg": 2
+    },
+    {
+      "t": 139,
+      "e": "hit",
+      "target": 0,
+      "dmg": 2
+    },
+    {
+      "t": 140,
+      "e": "hit",
+      "target": 0,
+      "dmg": 2
+    },
+    {
+      "t": 140,
+      "e": "troopFire",
+      "id": 3,
+      "target": 0,
+      "ix": 1906,
+      "iy": 2038
+    },
+    {
+      "t": 140,
+      "e": "hit",
+      "target": 0,
+      "dmg": 2
+    },
+    {
+      "t": 140,
+      "e": "troopFire",
+      "id": 4,
+      "target": 0,
+      "ix": 1906,
+      "iy": 2038
+    },
+    {
+      "t": 140,
+      "e": "troopDeath",
+      "id": 3
+    },
+    {
+      "t": 141,
+      "e": "hit",
+      "target": "keep",
+      "dmg": 9
+    },
+    {
+      "t": 141,
+      "e": "attackRun",
+      "id": 0,
+      "side": "attacker",
+      "troop": "highlander",
+      "targetKind": "building",
+      "target": "keep",
+      "ix": 2048,
+      "iy": 2048,
+      "mode": "melee",
+      "technique": "strike",
+      "cycleMs": 500,
+      "releaseOffsetMs": 167,
+      "cycleTicks": 5,
+      "releaseOffsetTicks": 2,
+      "impactOffsetsTicks": [
+        2
+      ],
+      "cadenceTicks": 5,
+      "count": 1
+    },
+    {
+      "t": 141,
+      "e": "hit",
+      "target": 0,
+      "dmg": 2
+    },
+    {
+      "t": 142,
+      "e": "hit",
+      "target": 0,
+      "dmg": 2
+    },
+    {
+      "t": 143,
+      "e": "hit",
+      "target": "keep",
+      "dmg": 9
+    },
+    {
+      "t": 143,
+      "e": "hit",
+      "target": 0,
+      "dmg": 2
+    },
+    {
+      "t": 144,
+      "e": "attackRun",
+      "id": 2,
+      "side": "attacker",
+      "troop": "highlander",
+      "targetKind": "building",
+      "target": "keep",
+      "ix": 2048,
+      "iy": 2432,
+      "mode": "melee",
+      "technique": "strike",
+      "cycleMs": 500,
+      "releaseOffsetMs": 167,
+      "cycleTicks": 5,
+      "releaseOffsetTicks": 2,
+      "impactOffsetsTicks": [
+        2
+      ],
+      "cadenceTicks": 5,
+      "count": 1
+    },
+    {
+      "t": 144,
+      "e": "hit",
+      "target": 0,
+      "dmg": 2
+    },
+    {
+      "t": 145,
+      "e": "hit",
+      "target": 0,
+      "dmg": 2
+    },
+    {
+      "t": 145,
+      "e": "troopFire",
+      "id": 4,
+      "target": 0,
+      "ix": 1906,
+      "iy": 2038
+    },
+    {
+      "t": 146,
+      "e": "hit",
+      "target": "keep",
+      "dmg": 9
+    },
+    {
+      "t": 146,
+      "e": "attackRun",
+      "id": 0,
+      "side": "attacker",
+      "troop": "highlander",
+      "targetKind": "building",
+      "target": "keep",
+      "ix": 2048,
+      "iy": 2048,
+      "mode": "melee",
+      "technique": "strike",
+      "cycleMs": 500,
+      "releaseOffsetMs": 167,
+      "cycleTicks": 5,
+      "releaseOffsetTicks": 2,
+      "impactOffsetsTicks": [
+        2
+      ],
+      "cadenceTicks": 5,
+      "count": 1
+    },
+    {
+      "t": 146,
+      "e": "hit",
+      "target": 0,
+      "dmg": 2
+    },
+    {
+      "t": 147,
+      "e": "hit",
+      "target": 0,
+      "dmg": 2
+    },
+    {
+      "t": 148,
+      "e": "hit",
+      "target": "keep",
+      "dmg": 9
+    },
+    {
+      "t": 148,
+      "e": "hit",
+      "target": 0,
+      "dmg": 2
+    },
+    {
+      "t": 149,
+      "e": "attackRun",
+      "id": 2,
+      "side": "attacker",
+      "troop": "highlander",
+      "targetKind": "building",
+      "target": "keep",
+      "ix": 2048,
+      "iy": 2432,
+      "mode": "melee",
+      "technique": "strike",
+      "cycleMs": 500,
+      "releaseOffsetMs": 167,
+      "cycleTicks": 5,
+      "releaseOffsetTicks": 2,
+      "impactOffsetsTicks": [
+        2
+      ],
+      "cadenceTicks": 5,
+      "count": 1
+    },
+    {
+      "t": 149,
+      "e": "hit",
+      "target": 0,
+      "dmg": 2
+    },
+    {
+      "t": 150,
+      "e": "hit",
+      "target": 0,
+      "dmg": 2
+    },
+    {
+      "t": 150,
+      "e": "troopFire",
+      "id": 4,
+      "target": 0,
+      "ix": 1906,
+      "iy": 2038
+    },
+    {
+      "t": 151,
+      "e": "hit",
+      "target": "keep",
+      "dmg": 9
+    },
+    {
+      "t": 151,
+      "e": "attackRun",
+      "id": 0,
+      "side": "attacker",
+      "troop": "highlander",
+      "targetKind": "building",
+      "target": "keep",
+      "ix": 2048,
+      "iy": 2048,
+      "mode": "melee",
+      "technique": "strike",
+      "cycleMs": 500,
+      "releaseOffsetMs": 167,
+      "cycleTicks": 5,
+      "releaseOffsetTicks": 2,
+      "impactOffsetsTicks": [
+        2
+      ],
+      "cadenceTicks": 5,
+      "count": 1
+    },
+    {
+      "t": 151,
+      "e": "hit",
+      "target": 0,
+      "dmg": 2
+    },
+    {
+      "t": 152,
+      "e": "hit",
+      "target": 0,
+      "dmg": 2
+    },
+    {
+      "t": 153,
+      "e": "hit",
+      "target": "keep",
+      "dmg": 9
+    },
+    {
+      "t": 153,
+      "e": "hit",
+      "target": 0,
+      "dmg": 2
+    },
+    {
+      "t": 154,
+      "e": "attackRun",
+      "id": 2,
+      "side": "attacker",
+      "troop": "highlander",
+      "targetKind": "building",
+      "target": "keep",
+      "ix": 2048,
+      "iy": 2432,
+      "mode": "melee",
+      "technique": "strike",
+      "cycleMs": 500,
+      "releaseOffsetMs": 167,
+      "cycleTicks": 5,
+      "releaseOffsetTicks": 2,
+      "impactOffsetsTicks": [
+        2
+      ],
+      "cadenceTicks": 5,
+      "count": 1
+    },
+    {
+      "t": 154,
+      "e": "hit",
+      "target": 0,
+      "dmg": 2
+    },
+    {
+      "t": 155,
+      "e": "hit",
+      "target": 0,
+      "dmg": 2
+    },
+    {
+      "t": 155,
+      "e": "troopFire",
+      "id": 4,
+      "target": 0,
+      "ix": 1906,
+      "iy": 2038
+    },
+    {
+      "t": 156,
+      "e": "hit",
+      "target": "keep",
+      "dmg": 9
+    },
+    {
+      "t": 156,
+      "e": "attackRun",
+      "id": 0,
+      "side": "attacker",
+      "troop": "highlander",
+      "targetKind": "building",
+      "target": "keep",
+      "ix": 2048,
+      "iy": 2048,
+      "mode": "melee",
+      "technique": "strike",
+      "cycleMs": 500,
+      "releaseOffsetMs": 167,
+      "cycleTicks": 5,
+      "releaseOffsetTicks": 2,
+      "impactOffsetsTicks": [
+        2
+      ],
+      "cadenceTicks": 5,
+      "count": 1
+    },
+    {
+      "t": 156,
+      "e": "hit",
+      "target": 0,
+      "dmg": 2
+    },
+    {
+      "t": 157,
+      "e": "hit",
+      "target": 0,
+      "dmg": 2
+    },
+    {
+      "t": 158,
+      "e": "hit",
+      "target": "keep",
+      "dmg": 9
+    },
+    {
+      "t": 158,
+      "e": "hit",
+      "target": 0,
+      "dmg": 2
+    },
+    {
+      "t": 159,
+      "e": "attackRun",
+      "id": 2,
+      "side": "attacker",
+      "troop": "highlander",
+      "targetKind": "building",
+      "target": "keep",
+      "ix": 2048,
+      "iy": 2432,
+      "mode": "melee",
+      "technique": "strike",
+      "cycleMs": 500,
+      "releaseOffsetMs": 167,
+      "cycleTicks": 5,
+      "releaseOffsetTicks": 2,
+      "impactOffsetsTicks": [
+        2
+      ],
+      "cadenceTicks": 5,
+      "count": 1
+    },
+    {
+      "t": 159,
+      "e": "hit",
+      "target": 0,
+      "dmg": 2
+    },
+    {
+      "t": 160,
+      "e": "hit",
+      "target": 0,
+      "dmg": 2
+    },
+    {
+      "t": 160,
+      "e": "troopFire",
+      "id": 4,
+      "target": 0,
+      "ix": 1906,
+      "iy": 2038
+    },
+    {
+      "t": 161,
+      "e": "hit",
+      "target": "keep",
+      "dmg": 9
+    },
+    {
+      "t": 161,
+      "e": "attackRun",
+      "id": 0,
+      "side": "attacker",
+      "troop": "highlander",
+      "targetKind": "building",
+      "target": "keep",
+      "ix": 2048,
+      "iy": 2048,
+      "mode": "melee",
+      "technique": "strike",
+      "cycleMs": 500,
+      "releaseOffsetMs": 167,
+      "cycleTicks": 5,
+      "releaseOffsetTicks": 2,
+      "impactOffsetsTicks": [
+        2
+      ],
+      "cadenceTicks": 5,
+      "count": 1
+    },
+    {
+      "t": 161,
+      "e": "hit",
+      "target": 0,
+      "dmg": 2
+    },
+    {
+      "t": 162,
+      "e": "hit",
+      "target": 0,
+      "dmg": 2
+    },
+    {
+      "t": 163,
+      "e": "hit",
+      "target": "keep",
+      "dmg": 9
+    },
+    {
+      "t": 163,
+      "e": "hit",
+      "target": 0,
+      "dmg": 2
+    },
+    {
+      "t": 164,
+      "e": "attackRun",
+      "id": 2,
+      "side": "attacker",
+      "troop": "highlander",
+      "targetKind": "building",
+      "target": "keep",
+      "ix": 2048,
+      "iy": 2432,
+      "mode": "melee",
+      "technique": "strike",
+      "cycleMs": 500,
+      "releaseOffsetMs": 167,
+      "cycleTicks": 5,
+      "releaseOffsetTicks": 2,
+      "impactOffsetsTicks": [
+        2
+      ],
+      "cadenceTicks": 5,
+      "count": 1
+    },
+    {
+      "t": 164,
+      "e": "hit",
+      "target": 0,
+      "dmg": 2
+    },
+    {
+      "t": 165,
+      "e": "hit",
+      "target": 0,
+      "dmg": 2
+    },
+    {
+      "t": 165,
+      "e": "troopFire",
+      "id": 4,
+      "target": 0,
+      "ix": 1906,
+      "iy": 2038
+    },
+    {
+      "t": 166,
+      "e": "hit",
+      "target": "keep",
+      "dmg": 9
+    },
+    {
+      "t": 166,
+      "e": "attackRun",
+      "id": 0,
+      "side": "attacker",
+      "troop": "highlander",
+      "targetKind": "building",
+      "target": "keep",
+      "ix": 2048,
+      "iy": 2048,
+      "mode": "melee",
+      "technique": "strike",
+      "cycleMs": 500,
+      "releaseOffsetMs": 167,
+      "cycleTicks": 5,
+      "releaseOffsetTicks": 2,
+      "impactOffsetsTicks": [
+        2
+      ],
+      "cadenceTicks": 5,
+      "count": 1
+    },
+    {
+      "t": 166,
+      "e": "hit",
+      "target": 0,
+      "dmg": 2
+    },
+    {
+      "t": 167,
+      "e": "hit",
+      "target": 0,
+      "dmg": 2
+    },
+    {
+      "t": 168,
+      "e": "hit",
+      "target": "keep",
+      "dmg": 9
+    },
+    {
+      "t": 168,
+      "e": "hit",
+      "target": 0,
+      "dmg": 2
+    },
+    {
+      "t": 169,
+      "e": "attackRun",
+      "id": 2,
+      "side": "attacker",
+      "troop": "highlander",
+      "targetKind": "building",
+      "target": "keep",
+      "ix": 2048,
+      "iy": 2432,
+      "mode": "melee",
+      "technique": "strike",
+      "cycleMs": 500,
+      "releaseOffsetMs": 167,
+      "cycleTicks": 5,
+      "releaseOffsetTicks": 2,
+      "impactOffsetsTicks": [
+        2
+      ],
+      "cadenceTicks": 5,
+      "count": 1
+    },
+    {
+      "t": 169,
+      "e": "hit",
+      "target": 0,
+      "dmg": 2
+    },
+    {
+      "t": 170,
+      "e": "hit",
+      "target": 0,
+      "dmg": 2
+    },
+    {
+      "t": 170,
+      "e": "troopFire",
+      "id": 4,
+      "target": 0,
+      "ix": 1906,
+      "iy": 2038
+    },
+    {
+      "t": 171,
+      "e": "hit",
+      "target": "keep",
+      "dmg": 9
+    },
+    {
+      "t": 171,
+      "e": "attackRun",
+      "id": 0,
+      "side": "attacker",
+      "troop": "highlander",
+      "targetKind": "building",
+      "target": "keep",
+      "ix": 2048,
+      "iy": 2048,
+      "mode": "melee",
+      "technique": "strike",
+      "cycleMs": 500,
+      "releaseOffsetMs": 167,
+      "cycleTicks": 5,
+      "releaseOffsetTicks": 2,
+      "impactOffsetsTicks": [
+        2
+      ],
+      "cadenceTicks": 5,
+      "count": 1
+    },
+    {
+      "t": 171,
+      "e": "hit",
+      "target": 0,
+      "dmg": 2
+    },
+    {
+      "t": 172,
+      "e": "hit",
+      "target": 0,
+      "dmg": 2
+    },
+    {
+      "t": 173,
+      "e": "hit",
+      "target": "keep",
+      "dmg": 9
+    },
+    {
+      "t": 173,
+      "e": "hit",
+      "target": 0,
+      "dmg": 2
+    },
+    {
+      "t": 174,
+      "e": "attackRun",
+      "id": 2,
+      "side": "attacker",
+      "troop": "highlander",
+      "targetKind": "building",
+      "target": "keep",
+      "ix": 2048,
+      "iy": 2432,
+      "mode": "melee",
+      "technique": "strike",
+      "cycleMs": 500,
+      "releaseOffsetMs": 167,
+      "cycleTicks": 5,
+      "releaseOffsetTicks": 2,
+      "impactOffsetsTicks": [
+        2
+      ],
+      "cadenceTicks": 5,
+      "count": 1
+    },
+    {
+      "t": 174,
+      "e": "hit",
+      "target": 0,
+      "dmg": 2
+    },
+    {
+      "t": 175,
+      "e": "hit",
+      "target": 0,
+      "dmg": 2
+    },
+    {
+      "t": 175,
+      "e": "troopFire",
+      "id": 4,
+      "target": 0,
+      "ix": 1906,
+      "iy": 2038
+    },
+    {
+      "t": 176,
+      "e": "hit",
+      "target": "keep",
+      "dmg": 9
+    },
+    {
+      "t": 176,
+      "e": "attackRun",
+      "id": 0,
+      "side": "attacker",
+      "troop": "highlander",
+      "targetKind": "building",
+      "target": "keep",
+      "ix": 2048,
+      "iy": 2048,
+      "mode": "melee",
+      "technique": "strike",
+      "cycleMs": 500,
+      "releaseOffsetMs": 167,
+      "cycleTicks": 5,
+      "releaseOffsetTicks": 2,
+      "impactOffsetsTicks": [
+        2
+      ],
+      "cadenceTicks": 5,
+      "count": 1
+    },
+    {
+      "t": 176,
+      "e": "hit",
+      "target": 0,
+      "dmg": 2
+    },
+    {
+      "t": 177,
+      "e": "hit",
+      "target": 0,
+      "dmg": 2
+    },
+    {
+      "t": 178,
+      "e": "hit",
+      "target": "keep",
+      "dmg": 9
+    },
+    {
+      "t": 178,
+      "e": "hit",
+      "target": 0,
+      "dmg": 2
+    },
+    {
+      "t": 179,
+      "e": "attackRun",
+      "id": 2,
+      "side": "attacker",
+      "troop": "highlander",
+      "targetKind": "building",
+      "target": "keep",
+      "ix": 2048,
+      "iy": 2432,
+      "mode": "melee",
+      "technique": "strike",
+      "cycleMs": 500,
+      "releaseOffsetMs": 167,
+      "cycleTicks": 5,
+      "releaseOffsetTicks": 2,
+      "impactOffsetsTicks": [
+        2
+      ],
+      "cadenceTicks": 5,
+      "count": 1
+    },
+    {
+      "t": 179,
+      "e": "hit",
+      "target": 0,
+      "dmg": 2
+    },
+    {
+      "t": 180,
+      "e": "hit",
+      "target": 0,
+      "dmg": 2
+    },
+    {
+      "t": 180,
+      "e": "troopFire",
+      "id": 4,
+      "target": 0,
+      "ix": 1906,
+      "iy": 2038
+    },
+    {
+      "t": 180,
+      "e": "spawn",
+      "id": 5,
+      "from": "nest",
+      "troop": "wyrmling",
+      "x": 3072,
+      "y": 2304
+    },
+    {
+      "t": 181,
+      "e": "hit",
+      "target": "keep",
+      "dmg": 9
+    },
+    {
+      "t": 181,
+      "e": "attackRun",
+      "id": 0,
+      "side": "attacker",
+      "troop": "highlander",
+      "targetKind": "building",
+      "target": "keep",
+      "ix": 2048,
+      "iy": 2048,
+      "mode": "melee",
+      "technique": "strike",
+      "cycleMs": 500,
+      "releaseOffsetMs": 167,
+      "cycleTicks": 5,
+      "releaseOffsetTicks": 2,
+      "impactOffsetsTicks": [
+        2
+      ],
+      "cadenceTicks": 5,
+      "count": 1
+    },
+    {
+      "t": 181,
+      "e": "hit",
+      "target": 0,
+      "dmg": 2
+    },
+    {
+      "t": 182,
+      "e": "hit",
+      "target": 0,
+      "dmg": 2
+    },
+    {
+      "t": 183,
+      "e": "hit",
+      "target": "keep",
+      "dmg": 9
+    },
+    {
+      "t": 183,
+      "e": "hit",
+      "target": 0,
+      "dmg": 2
+    },
+    {
+      "t": 184,
+      "e": "attackRun",
+      "id": 2,
+      "side": "attacker",
+      "troop": "highlander",
+      "targetKind": "building",
+      "target": "keep",
+      "ix": 2048,
+      "iy": 2432,
+      "mode": "melee",
+      "technique": "strike",
+      "cycleMs": 500,
+      "releaseOffsetMs": 167,
+      "cycleTicks": 5,
+      "releaseOffsetTicks": 2,
+      "impactOffsetsTicks": [
+        2
+      ],
+      "cadenceTicks": 5,
+      "count": 1
+    },
+    {
+      "t": 184,
+      "e": "hit",
+      "target": 0,
+      "dmg": 2
+    },
+    {
+      "t": 185,
+      "e": "hit",
+      "target": 0,
+      "dmg": 2
+    },
+    {
+      "t": 185,
+      "e": "troopFire",
+      "id": 4,
+      "target": 0,
+      "ix": 1906,
+      "iy": 2038
+    },
+    {
+      "t": 185,
+      "e": "pos",
+      "id": 5,
+      "x": 2877,
+      "y": 2324
+    },
+    {
+      "t": 186,
+      "e": "hit",
+      "target": "keep",
+      "dmg": 9
+    },
+    {
+      "t": 186,
+      "e": "attackRun",
+      "id": 0,
+      "side": "attacker",
+      "troop": "highlander",
+      "targetKind": "building",
+      "target": "keep",
+      "ix": 2048,
+      "iy": 2048,
+      "mode": "melee",
+      "technique": "strike",
+      "cycleMs": 500,
+      "releaseOffsetMs": 167,
+      "cycleTicks": 5,
+      "releaseOffsetTicks": 2,
+      "impactOffsetsTicks": [
+        2
+      ],
+      "cadenceTicks": 5,
+      "count": 1
+    },
+    {
+      "t": 186,
+      "e": "hit",
+      "target": 0,
+      "dmg": 2
+    },
+    {
+      "t": 187,
+      "e": "hit",
+      "target": 0,
+      "dmg": 2
+    },
+    {
+      "t": 188,
+      "e": "hit",
+      "target": "keep",
+      "dmg": 9
+    },
+    {
+      "t": 188,
+      "e": "hit",
+      "target": 0,
+      "dmg": 2
+    },
+    {
+      "t": 189,
+      "e": "attackRun",
+      "id": 2,
+      "side": "attacker",
+      "troop": "highlander",
+      "targetKind": "building",
+      "target": "keep",
+      "ix": 2048,
+      "iy": 2432,
+      "mode": "melee",
+      "technique": "strike",
+      "cycleMs": 500,
+      "releaseOffsetMs": 167,
+      "cycleTicks": 5,
+      "releaseOffsetTicks": 2,
+      "impactOffsetsTicks": [
+        2
+      ],
+      "cadenceTicks": 5,
+      "count": 1
+    },
+    {
+      "t": 189,
+      "e": "hit",
+      "target": 0,
+      "dmg": 2
+    },
+    {
+      "t": 190,
+      "e": "hit",
+      "target": 0,
+      "dmg": 2
+    },
+    {
+      "t": 190,
+      "e": "troopFire",
+      "id": 4,
+      "target": 0,
+      "ix": 1906,
+      "iy": 2038
+    },
+    {
+      "t": 190,
+      "e": "pos",
+      "id": 5,
+      "x": 2682,
+      "y": 2344
+    },
+    {
+      "t": 191,
+      "e": "hit",
+      "target": "keep",
+      "dmg": 9
+    },
+    {
+      "t": 191,
+      "e": "attackRun",
+      "id": 0,
+      "side": "attacker",
+      "troop": "highlander",
+      "targetKind": "building",
+      "target": "keep",
+      "ix": 2048,
+      "iy": 2048,
+      "mode": "melee",
+      "technique": "strike",
+      "cycleMs": 500,
+      "releaseOffsetMs": 167,
+      "cycleTicks": 5,
+      "releaseOffsetTicks": 2,
+      "impactOffsetsTicks": [
+        2
+      ],
+      "cadenceTicks": 5,
+      "count": 1
+    },
+    {
+      "t": 191,
+      "e": "hit",
+      "target": 0,
+      "dmg": 2
+    },
+    {
+      "t": 192,
+      "e": "hit",
+      "target": 0,
+      "dmg": 2
+    },
+    {
+      "t": 193,
+      "e": "hit",
+      "target": "keep",
+      "dmg": 9
+    },
+    {
+      "t": 193,
+      "e": "hit",
+      "target": 0,
+      "dmg": 2
+    },
+    {
+      "t": 194,
+      "e": "attackRun",
+      "id": 2,
+      "side": "attacker",
+      "troop": "highlander",
+      "targetKind": "building",
+      "target": "keep",
+      "ix": 2048,
+      "iy": 2432,
+      "mode": "melee",
+      "technique": "strike",
+      "cycleMs": 500,
+      "releaseOffsetMs": 167,
+      "cycleTicks": 5,
+      "releaseOffsetTicks": 2,
+      "impactOffsetsTicks": [
+        2
+      ],
+      "cadenceTicks": 5,
+      "count": 1
+    },
+    {
+      "t": 194,
+      "e": "hit",
+      "target": 0,
+      "dmg": 2
+    },
+    {
+      "t": 195,
+      "e": "hit",
+      "target": 0,
+      "dmg": 2
+    },
+    {
+      "t": 195,
+      "e": "troopFire",
+      "id": 4,
+      "target": 0,
+      "ix": 1906,
+      "iy": 2038
+    },
+    {
+      "t": 195,
+      "e": "pos",
+      "id": 5,
+      "x": 2487,
+      "y": 2364
+    },
+    {
+      "t": 196,
+      "e": "hit",
+      "target": "keep",
+      "dmg": 9
+    },
+    {
+      "t": 196,
+      "e": "attackRun",
+      "id": 0,
+      "side": "attacker",
+      "troop": "highlander",
+      "targetKind": "building",
+      "target": "keep",
+      "ix": 2048,
+      "iy": 2048,
+      "mode": "melee",
+      "technique": "strike",
+      "cycleMs": 500,
+      "releaseOffsetMs": 167,
+      "cycleTicks": 5,
+      "releaseOffsetTicks": 2,
+      "impactOffsetsTicks": [
+        2
+      ],
+      "cadenceTicks": 5,
+      "count": 1
+    },
+    {
+      "t": 196,
+      "e": "hit",
+      "target": 0,
+      "dmg": 2
+    },
+    {
+      "t": 196,
+      "e": "troopDeath",
+      "id": 0
+    },
+    {
+      "t": 198,
+      "e": "hit",
+      "target": 2,
+      "dmg": 2
+    },
+    {
+      "t": 199,
+      "e": "attackRun",
+      "id": 2,
+      "side": "attacker",
+      "troop": "highlander",
+      "targetKind": "building",
+      "target": "keep",
+      "ix": 2048,
+      "iy": 2432,
+      "mode": "melee",
+      "technique": "strike",
+      "cycleMs": 500,
+      "releaseOffsetMs": 167,
+      "cycleTicks": 5,
+      "releaseOffsetTicks": 2,
+      "impactOffsetsTicks": [
+        2
+      ],
+      "cadenceTicks": 5,
+      "count": 1
+    },
+    {
+      "t": 199,
+      "e": "hit",
+      "target": 2,
+      "dmg": 2
+    },
+    {
+      "t": 199,
+      "e": "hit",
+      "target": 2,
+      "dmg": 2
+    },
+    {
+      "t": 200,
+      "e": "hit",
+      "target": 2,
+      "dmg": 2
+    },
+    {
+      "t": 200,
+      "e": "troopFire",
+      "id": 4,
+      "target": 2,
+      "ix": 1898,
+      "iy": 2432
+    },
+    {
+      "t": 200,
+      "e": "hit",
+      "target": 2,
+      "dmg": 2
+    },
+    {
+      "t": 200,
+      "e": "troopFire",
+      "id": 5,
+      "target": 2,
+      "ix": 1898,
+      "iy": 2432
+    },
+    {
+      "t": 200,
+      "e": "troopDeath",
+      "id": 4
+    },
+    {
+      "t": 201,
+      "e": "hit",
+      "target": "keep",
+      "dmg": 9
+    },
+    {
+      "t": 201,
+      "e": "hit",
+      "target": 2,
+      "dmg": 2
+    },
+    {
+      "t": 202,
+      "e": "hit",
+      "target": 2,
+      "dmg": 2
+    },
+    {
+      "t": 203,
+      "e": "hit",
+      "target": 2,
+      "dmg": 2
+    },
+    {
+      "t": 204,
+      "e": "attackRun",
+      "id": 2,
+      "side": "attacker",
+      "troop": "highlander",
+      "targetKind": "building",
+      "target": "keep",
+      "ix": 2048,
+      "iy": 2432,
+      "mode": "melee",
+      "technique": "strike",
+      "cycleMs": 500,
+      "releaseOffsetMs": 167,
+      "cycleTicks": 5,
+      "releaseOffsetTicks": 2,
+      "impactOffsetsTicks": [
+        2
+      ],
+      "cadenceTicks": 5,
+      "count": 1
+    },
+    {
+      "t": 204,
+      "e": "hit",
+      "target": 2,
+      "dmg": 2
+    },
+    {
+      "t": 205,
+      "e": "hit",
+      "target": 2,
+      "dmg": 2
+    },
+    {
+      "t": 205,
+      "e": "troopFire",
+      "id": 5,
+      "target": 2,
+      "ix": 1898,
+      "iy": 2432
+    },
+    {
+      "t": 206,
+      "e": "hit",
+      "target": "keep",
+      "dmg": 9
+    },
+    {
+      "t": 206,
+      "e": "hit",
+      "target": 2,
+      "dmg": 2
+    },
+    {
+      "t": 207,
+      "e": "hit",
+      "target": 2,
+      "dmg": 2
+    },
+    {
+      "t": 208,
+      "e": "hit",
+      "target": 2,
+      "dmg": 2
+    },
+    {
+      "t": 209,
+      "e": "attackRun",
+      "id": 2,
+      "side": "attacker",
+      "troop": "highlander",
+      "targetKind": "building",
+      "target": "keep",
+      "ix": 2048,
+      "iy": 2432,
+      "mode": "melee",
+      "technique": "strike",
+      "cycleMs": 500,
+      "releaseOffsetMs": 167,
+      "cycleTicks": 5,
+      "releaseOffsetTicks": 2,
+      "impactOffsetsTicks": [
+        2
+      ],
+      "cadenceTicks": 5,
+      "count": 1
+    },
+    {
+      "t": 209,
+      "e": "hit",
+      "target": 2,
+      "dmg": 2
+    },
+    {
+      "t": 210,
+      "e": "hit",
+      "target": 2,
+      "dmg": 2
+    },
+    {
+      "t": 210,
+      "e": "troopFire",
+      "id": 5,
+      "target": 2,
+      "ix": 1898,
+      "iy": 2432
+    },
+    {
+      "t": 211,
+      "e": "hit",
+      "target": "keep",
+      "dmg": 9
+    },
+    {
+      "t": 211,
+      "e": "hit",
+      "target": 2,
+      "dmg": 2
+    },
+    {
+      "t": 212,
+      "e": "hit",
+      "target": 2,
+      "dmg": 2
+    },
+    {
+      "t": 213,
+      "e": "hit",
+      "target": 2,
+      "dmg": 2
+    },
+    {
+      "t": 214,
+      "e": "attackRun",
+      "id": 2,
+      "side": "attacker",
+      "troop": "highlander",
+      "targetKind": "building",
+      "target": "keep",
+      "ix": 2048,
+      "iy": 2432,
+      "mode": "melee",
+      "technique": "strike",
+      "cycleMs": 500,
+      "releaseOffsetMs": 167,
+      "cycleTicks": 5,
+      "releaseOffsetTicks": 2,
+      "impactOffsetsTicks": [
+        2
+      ],
+      "cadenceTicks": 5,
+      "count": 1
+    },
+    {
+      "t": 214,
+      "e": "hit",
+      "target": 2,
+      "dmg": 2
+    },
+    {
+      "t": 215,
+      "e": "hit",
+      "target": 2,
+      "dmg": 2
+    },
+    {
+      "t": 215,
+      "e": "troopFire",
+      "id": 5,
+      "target": 2,
+      "ix": 1898,
+      "iy": 2432
+    },
+    {
+      "t": 216,
+      "e": "hit",
+      "target": "keep",
+      "dmg": 9
+    },
+    {
+      "t": 216,
+      "e": "hit",
+      "target": 2,
+      "dmg": 2
+    },
+    {
+      "t": 217,
+      "e": "hit",
+      "target": 2,
+      "dmg": 2
+    },
+    {
+      "t": 218,
+      "e": "hit",
+      "target": 2,
+      "dmg": 2
+    },
+    {
+      "t": 219,
+      "e": "attackRun",
+      "id": 2,
+      "side": "attacker",
+      "troop": "highlander",
+      "targetKind": "building",
+      "target": "keep",
+      "ix": 2048,
+      "iy": 2432,
+      "mode": "melee",
+      "technique": "strike",
+      "cycleMs": 500,
+      "releaseOffsetMs": 167,
+      "cycleTicks": 5,
+      "releaseOffsetTicks": 2,
+      "impactOffsetsTicks": [
+        2
+      ],
+      "cadenceTicks": 5,
+      "count": 1
+    },
+    {
+      "t": 219,
+      "e": "hit",
+      "target": 2,
+      "dmg": 2
+    },
+    {
+      "t": 220,
+      "e": "hit",
+      "target": 2,
+      "dmg": 2
+    },
+    {
+      "t": 220,
+      "e": "troopFire",
+      "id": 5,
+      "target": 2,
+      "ix": 1898,
+      "iy": 2432
+    },
+    {
+      "t": 221,
+      "e": "hit",
+      "target": "keep",
+      "dmg": 9
+    },
+    {
+      "t": 221,
+      "e": "hit",
+      "target": 2,
+      "dmg": 2
+    },
+    {
+      "t": 222,
+      "e": "hit",
+      "target": 2,
+      "dmg": 2
+    },
+    {
+      "t": 223,
+      "e": "hit",
+      "target": 2,
+      "dmg": 2
+    },
+    {
+      "t": 224,
+      "e": "attackRun",
+      "id": 2,
+      "side": "attacker",
+      "troop": "highlander",
+      "targetKind": "building",
+      "target": "keep",
+      "ix": 2048,
+      "iy": 2432,
+      "mode": "melee",
+      "technique": "strike",
+      "cycleMs": 500,
+      "releaseOffsetMs": 167,
+      "cycleTicks": 5,
+      "releaseOffsetTicks": 2,
+      "impactOffsetsTicks": [
+        2
+      ],
+      "cadenceTicks": 5,
+      "count": 1
+    },
+    {
+      "t": 224,
+      "e": "hit",
+      "target": 2,
+      "dmg": 2
+    },
+    {
+      "t": 225,
+      "e": "hit",
+      "target": 2,
+      "dmg": 2
+    },
+    {
+      "t": 225,
+      "e": "troopFire",
+      "id": 5,
+      "target": 2,
+      "ix": 1898,
+      "iy": 2432
+    },
+    {
+      "t": 226,
+      "e": "hit",
+      "target": "keep",
+      "dmg": 9
+    },
+    {
+      "t": 226,
+      "e": "hit",
+      "target": 2,
+      "dmg": 2
+    },
+    {
+      "t": 227,
+      "e": "hit",
+      "target": 2,
+      "dmg": 2
+    },
+    {
+      "t": 228,
+      "e": "hit",
+      "target": 2,
+      "dmg": 2
+    },
+    {
+      "t": 229,
+      "e": "attackRun",
+      "id": 2,
+      "side": "attacker",
+      "troop": "highlander",
+      "targetKind": "building",
+      "target": "keep",
+      "ix": 2048,
+      "iy": 2432,
+      "mode": "melee",
+      "technique": "strike",
+      "cycleMs": 500,
+      "releaseOffsetMs": 167,
+      "cycleTicks": 5,
+      "releaseOffsetTicks": 2,
+      "impactOffsetsTicks": [
+        2
+      ],
+      "cadenceTicks": 5,
+      "count": 1
+    },
+    {
+      "t": 229,
+      "e": "hit",
+      "target": 2,
+      "dmg": 2
+    },
+    {
+      "t": 230,
+      "e": "hit",
+      "target": 2,
+      "dmg": 2
+    },
+    {
+      "t": 230,
+      "e": "troopFire",
+      "id": 5,
+      "target": 2,
+      "ix": 1898,
+      "iy": 2432
+    },
+    {
+      "t": 231,
+      "e": "hit",
+      "target": "keep",
+      "dmg": 9
+    },
+    {
+      "t": 231,
+      "e": "hit",
+      "target": 2,
+      "dmg": 2
+    },
+    {
+      "t": 232,
+      "e": "hit",
+      "target": 2,
+      "dmg": 2
+    },
+    {
+      "t": 233,
+      "e": "hit",
+      "target": 2,
+      "dmg": 2
+    },
+    {
+      "t": 234,
+      "e": "attackRun",
+      "id": 2,
+      "side": "attacker",
+      "troop": "highlander",
+      "targetKind": "building",
+      "target": "keep",
+      "ix": 2048,
+      "iy": 2432,
+      "mode": "melee",
+      "technique": "strike",
+      "cycleMs": 500,
+      "releaseOffsetMs": 167,
+      "cycleTicks": 5,
+      "releaseOffsetTicks": 2,
+      "impactOffsetsTicks": [
+        2
+      ],
+      "cadenceTicks": 5,
+      "count": 1
+    },
+    {
+      "t": 234,
+      "e": "hit",
+      "target": 2,
+      "dmg": 2
+    },
+    {
+      "t": 235,
+      "e": "hit",
+      "target": 2,
+      "dmg": 2
+    },
+    {
+      "t": 235,
+      "e": "troopFire",
+      "id": 5,
+      "target": 2,
+      "ix": 1898,
+      "iy": 2432
+    },
+    {
+      "t": 236,
+      "e": "hit",
+      "target": "keep",
+      "dmg": 9
+    },
+    {
+      "t": 236,
+      "e": "hit",
+      "target": 2,
+      "dmg": 2
+    },
+    {
+      "t": 237,
+      "e": "hit",
+      "target": 2,
+      "dmg": 2
+    },
+    {
+      "t": 238,
+      "e": "hit",
+      "target": 2,
+      "dmg": 2
+    },
+    {
+      "t": 239,
+      "e": "attackRun",
+      "id": 2,
+      "side": "attacker",
+      "troop": "highlander",
+      "targetKind": "building",
+      "target": "keep",
+      "ix": 2048,
+      "iy": 2432,
+      "mode": "melee",
+      "technique": "strike",
+      "cycleMs": 500,
+      "releaseOffsetMs": 167,
+      "cycleTicks": 5,
+      "releaseOffsetTicks": 2,
+      "impactOffsetsTicks": [
+        2
+      ],
+      "cadenceTicks": 5,
+      "count": 1
+    },
+    {
+      "t": 239,
+      "e": "hit",
+      "target": 2,
+      "dmg": 2
+    },
+    {
+      "t": 240,
+      "e": "hit",
+      "target": 2,
+      "dmg": 2
+    },
+    {
+      "t": 240,
+      "e": "troopFire",
+      "id": 5,
+      "target": 2,
+      "ix": 1898,
+      "iy": 2432
+    },
+    {
+      "t": 240,
+      "e": "spawn",
+      "id": 6,
+      "from": "nest",
+      "troop": "wyrmling",
+      "x": 3072,
+      "y": 2304
+    },
+    {
+      "t": 241,
+      "e": "hit",
+      "target": "keep",
+      "dmg": 9
+    },
+    {
+      "t": 241,
+      "e": "hit",
+      "target": 2,
+      "dmg": 2
+    },
+    {
+      "t": 242,
+      "e": "hit",
+      "target": 2,
+      "dmg": 2
+    },
+    {
+      "t": 243,
+      "e": "hit",
+      "target": 2,
+      "dmg": 2
+    },
+    {
+      "t": 244,
+      "e": "attackRun",
+      "id": 2,
+      "side": "attacker",
+      "troop": "highlander",
+      "targetKind": "building",
+      "target": "keep",
+      "ix": 2048,
+      "iy": 2432,
+      "mode": "melee",
+      "technique": "strike",
+      "cycleMs": 500,
+      "releaseOffsetMs": 167,
+      "cycleTicks": 5,
+      "releaseOffsetTicks": 2,
+      "impactOffsetsTicks": [
+        2
+      ],
+      "cadenceTicks": 5,
+      "count": 1
+    },
+    {
+      "t": 244,
+      "e": "hit",
+      "target": 2,
+      "dmg": 2
+    },
+    {
+      "t": 245,
+      "e": "hit",
+      "target": 2,
+      "dmg": 2
+    },
+    {
+      "t": 245,
+      "e": "troopFire",
+      "id": 5,
+      "target": 2,
+      "ix": 1898,
+      "iy": 2432
+    },
+    {
+      "t": 245,
+      "e": "pos",
+      "id": 6,
+      "x": 2877,
+      "y": 2324
+    },
+    {
+      "t": 246,
+      "e": "hit",
+      "target": "keep",
+      "dmg": 9
+    },
+    {
+      "t": 246,
+      "e": "hit",
+      "target": 2,
+      "dmg": 2
+    },
+    {
+      "t": 247,
+      "e": "hit",
+      "target": 2,
+      "dmg": 2
+    },
+    {
+      "t": 248,
+      "e": "hit",
+      "target": 2,
+      "dmg": 2
+    },
+    {
+      "t": 249,
+      "e": "attackRun",
+      "id": 2,
+      "side": "attacker",
+      "troop": "highlander",
+      "targetKind": "building",
+      "target": "keep",
+      "ix": 2048,
+      "iy": 2432,
+      "mode": "melee",
+      "technique": "strike",
+      "cycleMs": 500,
+      "releaseOffsetMs": 167,
+      "cycleTicks": 5,
+      "releaseOffsetTicks": 2,
+      "impactOffsetsTicks": [
+        2
+      ],
+      "cadenceTicks": 5,
+      "count": 1
+    },
+    {
+      "t": 249,
+      "e": "hit",
+      "target": 2,
+      "dmg": 2
+    },
+    {
+      "t": 250,
+      "e": "hit",
+      "target": 2,
+      "dmg": 2
+    },
+    {
+      "t": 250,
+      "e": "troopFire",
+      "id": 5,
+      "target": 2,
+      "ix": 1898,
+      "iy": 2432
+    },
+    {
+      "t": 250,
+      "e": "pos",
+      "id": 6,
+      "x": 2682,
+      "y": 2344
+    },
+    {
+      "t": 251,
+      "e": "hit",
+      "target": "keep",
+      "dmg": 9
+    },
+    {
+      "t": 251,
+      "e": "hit",
+      "target": 2,
+      "dmg": 2
+    },
+    {
+      "t": 252,
+      "e": "hit",
+      "target": 2,
+      "dmg": 2
+    },
+    {
+      "t": 253,
+      "e": "hit",
+      "target": 2,
+      "dmg": 2
+    },
+    {
+      "t": 254,
+      "e": "attackRun",
+      "id": 2,
+      "side": "attacker",
+      "troop": "highlander",
+      "targetKind": "building",
+      "target": "keep",
+      "ix": 2048,
+      "iy": 2432,
+      "mode": "melee",
+      "technique": "strike",
+      "cycleMs": 500,
+      "releaseOffsetMs": 167,
+      "cycleTicks": 5,
+      "releaseOffsetTicks": 2,
+      "impactOffsetsTicks": [
+        2
+      ],
+      "cadenceTicks": 5,
+      "count": 1
+    },
+    {
+      "t": 254,
+      "e": "hit",
+      "target": 2,
+      "dmg": 2
+    },
+    {
+      "t": 255,
+      "e": "hit",
+      "target": 2,
+      "dmg": 2
+    },
+    {
+      "t": 255,
+      "e": "troopDeath",
+      "id": 2
+    },
+    {
+      "t": 255,
+      "e": "troopFire",
+      "id": 5,
+      "target": 2,
+      "ix": 1898,
+      "iy": 2432
+    }
+  ]
+}

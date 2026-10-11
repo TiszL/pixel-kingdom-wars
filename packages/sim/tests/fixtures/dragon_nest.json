@@ -1,0 +1,29 @@
+{
+  "hash": "d719ab19",
+  "outcome": {
+    "stars": 0,
+    "destructionPct": 32,
+    "keepDestroyed": false,
+    "vaultDestroyed": false,
+    "mineDestroyed": false,
+    "victory": false,
+    "buildings": [
+      {
+        "id": "keep",
+        "type": "keep",
+        "hp": 462,
+        "maxHp": 1200,
+        "destroyed": false
+      },
+      {
+        "id": "nest",
+        "type": "dragonnest",
+        "hp": 1094,
+        "maxHp": 1094,
+        "destroyed": false
+      }
+    ],
+    "ticks": 257,
+    "eventCount": 444
+  }
+}

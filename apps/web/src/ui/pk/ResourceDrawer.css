@@ -1,0 +1,147 @@
+/* ResourceDrawer.css — <ResourceDrawer> (DESIGN-SYSTEM §6 "Resource drawer"; design/final/drawer.html; AND:K/ui/hud/ResourceDrawer.kt).
+ *
+ * One geometry rule serves every viewport class without a breakpoint: width = min(396, viewport − 2 × --pk-hud-edge),
+ * right-anchored at --pk-hud-edge, top 8 under the safe inset, height ≤ the viewport minus 8 top and bottom; the
+ * parchment body scrolls inside. That yields MAP §4.4 exactly: 396 on a 412 phone (8 + 396 + 8), 396 right-anchored
+ * on tablet / desktop, ≤ world width on phone-landscape, 304 on the 320 floor. data-vp is set for later per-class
+ * tuning; nothing here needs it today.
+ *
+ * Spacing (2026-10-03 parity pass vs drawer.png): group headers are as tall as their content (no 48 min-height); the
+ * header GO overhangs to keep a 48 hit area; the GO face is ≥ 38 wide like drawer.html .go. Drawer bottom ≈ 665 vs 660.
+ *
+ * Scrim: the drawer is the HUD's one modal (DS:443 "the world stays live under a 40% scrim"; drawer.png shows it):
+ * --pk-scrim-tall, a hit region only while open. See ResourceDrawer.md "Open questions" 1 for the conflict with the
+ * "scrim only under a Full sheet or the Seal" rule.
+ */
+
+.pk-drawer {
+  /* --- Not in TOKENS (proposed bridge additions) --- */
+  --dr-w-max: 396px;     /* DS:442 "WoodFrame … width 396" (= 412 − 2 × screenGutter) */
+  --dr-go-w: 64px;       /* DS:449 "blue GO 64 x 60" */
+  --dr-go-h: 60px;
+  --dr-well: 68px;       /* ResourceDrawer.kt InfoCard art well 68 (64 art + 2 rim) */
+  --dr-wide-h: 50px;     /* ResourceDrawer.kt WideRow heightIn(min = 50) */
+  --dr-go-small-h: 36px; /* design drawer.html .go height 36 (inside a 48 target) */
+
+  position: absolute;
+  inset: 0;
+  z-index: var(--z-tray); /* bridge 1100: above the sheet (1050), below the herald (1101) and toast (3000), as Android DRAWER 5 */
+  pointer-events: none;
+}
+
+.pk-drawer__scrim {
+  position: absolute;
+  inset: 0;
+  background: var(--pk-scrim-tall);
+  animation: pk-drawer-fade-in var(--pk-dur-drawer-in) var(--pk-ease-out) both;
+}
+.pk-drawer[data-state='out'] .pk-drawer__scrim { animation: pk-drawer-fade-out var(--pk-dur-drawer-out) var(--pk-ease-in) both; }
+
+.pk-drawer__panel {
+  position: absolute;
+  top: calc(env(safe-area-inset-top, 0px) + var(--pk-s8));
+  right: var(--pk-hud-edge);
+  width: min(var(--dr-w-max), calc(100% - 2 * var(--pk-hud-edge)));
+  max-height: calc(100% - env(safe-area-inset-top, 0px) - env(safe-area-inset-bottom, 0px) - 2 * var(--pk-s8));
+  display: flex;
+  flex-direction: column;
+  /* drops from the stack: height reveal 0 → full (ResourceDrawer.kt DrawerPanel layout { height × progress }) */
+  animation: pk-drawer-drop var(--pk-dur-drawer-in) var(--pk-ease-out) both;
+}
+.pk-drawer[data-state='out'] .pk-drawer__panel { animation: pk-drawer-lift var(--pk-dur-drawer-out) var(--pk-ease-in) both; }
+/* Leaving = paint only, beating the host's `#overlay-root .interactive { pointer-events: auto }` for any descendant. */
+.pk-drawer[data-state='out'], .pk-drawer[data-state='out'] * { pointer-events: none !important; }
+
+/* the wood frame (Plate.kt WOOD; design .wood) */
+.pk-drawer__wood { display: flex; flex-direction: column; min-height: 0; max-height: 100%; background: var(--pk-ink); clip-path: var(--pk-hud-clip-m); padding: var(--pk-outline-plate); }
+.pk-drawer__woodin {
+  display: flex; flex-direction: column; min-height: 0;
+  clip-path: var(--pk-clip-s);
+  background: repeating-linear-gradient(180deg, var(--pk-wood) 0 calc(var(--pk-s8) + var(--pk-s2)), var(--pk-wood-seam) calc(var(--pk-s8) + var(--pk-s2)) var(--pk-s12));
+  box-shadow: inset 0 var(--pk-hi-band) 0 var(--pk-wood-hi), inset 0 calc(-1 * var(--pk-lip-plate)) 0 var(--pk-wood-lo);
+  padding: var(--pk-s6);
+}
+.pk-drawer__head { display: flex; align-items: center; gap: var(--pk-s8); padding: 0 var(--pk-s2) var(--pk-s6); flex: none; }
+.pk-drawer__title { flex: 1; margin: 0; font-weight: normal; color: var(--pk-gold-hi); white-space: nowrap; }
+.pk-drawer__hint { color: var(--pk-parch); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; min-width: 0; }
+.pk-drawer__close { width: var(--pk-min-tap); height: var(--pk-min-tap); }
+
+/* the parchment body (Plate.kt PARCHMENT; design .parch) — it scrolls, the header stays */
+.pk-drawer__parch {
+  display: flex; flex-direction: column; min-height: 0; flex: 0 1 auto;
+  clip-path: var(--pk-clip-s);
+  background: var(--pk-parch);
+  box-shadow: inset 0 var(--pk-hi-band) 0 var(--pk-parch-hi), inset 0 calc(-1 * var(--pk-lip-plate)) 0 var(--pk-parch-lo);
+  color: var(--pk-ink-text);
+  padding: var(--pk-s8) 0 var(--pk-s6) var(--pk-s8);
+}
+.pk-drawer__scroll { overflow-y: auto; overflow-x: hidden; min-height: 0; overscroll-behavior: contain; touch-action: pan-y; scrollbar-width: thin; scrollbar-color: var(--pk-parch-lo) transparent; }
+.pk-drawer__sec { animation: pk-drawer-fade-in var(--pk-dur-drawer-in) var(--pk-ease-out) calc(var(--i, 0) * var(--pk-dur-drawer-row-stagger)) both; }
+.pk-drawer__none { margin: 0 var(--pk-s8) 0 0; color: var(--pk-ink-text-2); }
+.pk-drawer__foot { margin: var(--pk-s4) var(--pk-s8) 0 0; color: var(--pk-ink-text-2); line-height: 0.9; }
+
+/* 1. info card */
+.pk-info {
+  display: flex; align-items: center; gap: var(--pk-s8);
+  margin-right: var(--pk-s8); padding: var(--pk-s6);
+  background: var(--pk-selected); border: var(--pk-outline-card) solid var(--pk-ink);
+  animation: pk-drawer-fade-in var(--pk-dur-tab-switch) var(--pk-ease-out) both;
+}
+.pk-info__well { display: flex; align-items: center; justify-content: center; flex: none; width: var(--dr-well); height: var(--dr-well); background: var(--pk-charcoal); border: var(--pk-outline-card) solid var(--pk-ink); overflow: hidden; }
+.pk-info__text { flex: 1; min-width: 0; }
+.pk-info__line { display: flex; align-items: baseline; gap: var(--pk-s8); }
+.pk-info__name { color: var(--pk-ink-text); min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.pk-info__count { color: var(--pk-ink-text-2); white-space: nowrap; }
+.pk-info__count[data-empty] { color: var(--pk-short-text); }
+.pk-info__body { margin: var(--pk-s2) 0 0; color: var(--pk-ink-text-2); line-height: 0.9;
+  display: -webkit-box; -webkit-line-clamp: 4; -webkit-box-orient: vertical; overflow: hidden; }
+.pk-info__go { width: var(--dr-go-w); height: var(--dr-go-h); }
+
+/* 2. groups */
+/* ResourceDrawer.kt GroupHeader: padding top 8 / bottom 4, row as tall as its content (32 icon, 36 GO face) — no 48 min-height
+ * here; the GO keeps its 48 hit area by overhanging the row (negative block margin below), as drawer.png's spacing shows. */
+.pk-group__head { display: flex; align-items: center; gap: var(--pk-s6); padding: var(--pk-s8) var(--pk-s8) var(--pk-s4) 0; }
+.pk-group__title { color: var(--pk-ink-text); white-space: nowrap; }
+.pk-group__note { flex: 1; min-width: 0; color: var(--pk-ink-text-2); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+
+.pk-wide-grid { display: grid; grid-template-columns: 1fr 1fr; gap: var(--pk-s4); margin-right: var(--pk-s8); }
+.pk-wide { display: flex; align-items: center; min-height: var(--dr-wide-h); min-width: 0; background: var(--pk-cream); border: var(--pk-outline-card) solid var(--pk-ink); padding-right: var(--pk-s2); }
+.pk-wide[data-divine] { background: var(--pk-res-divine); }
+.pk-wide__main { flex: 1; min-width: 0; align-self: stretch; justify-content: flex-start; gap: var(--pk-s6); padding: var(--pk-s2) var(--pk-s4); text-align: left; }
+.pk-wide__main:active { background: var(--pk-cream-lo); }
+.pk-wide__text { display: flex; flex-direction: column; min-width: 0; }
+.pk-wide__v { color: var(--pk-ink-text); white-space: nowrap; }
+.pk-wide__v[data-empty] { color: var(--pk-short-text); }
+.pk-wide__n { color: var(--pk-ink-text-2); line-height: 0.8; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+
+/* a sideways strip of 48 × 56 tiles, running to the parchment's right edge (the peek) */
+.pk-strip { display: flex; overflow-x: auto; overflow-y: hidden; overscroll-behavior-x: contain; touch-action: pan-x; scrollbar-width: none; }
+.pk-strip::-webkit-scrollbar { display: none; }
+.pk-tile { width: var(--pk-size-drawer-tile-w); height: var(--pk-size-drawer-tile-h); background: var(--pk-ink); padding: var(--pk-s2); }
+.pk-tile__in { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: var(--pk-text-outline-1); width: 100%; height: 100%;
+  background: var(--pk-cream); box-shadow: inset 0 calc(-1 * var(--pk-lip-button-pressed)) 0 var(--pk-cream-lo); }
+.pk-tile__n { color: var(--pk-ink-text); }
+.pk-tile[data-empty] .pk-tile__ic { filter: grayscale(0.6); }
+.pk-tile[data-empty] .pk-tile__n { color: var(--pk-short-text); }
+.pk-tile[data-divine] .pk-tile__in { background: var(--pk-res-divine); }
+.pk-tile[data-selected] .pk-tile__in { background: var(--pk-selected); box-shadow: inset 0 0 0 var(--pk-outline-button) var(--pk-gold); }
+.pk-tile:hover .pk-tile__in { transform: translateY(var(--pk-text-outline-1)); }
+.pk-tile:active .pk-tile__in { background: var(--pk-cream-lo); }
+
+/* the small blue GO / BID (design .go) in a ≥ 48 target */
+.pk-go { min-width: var(--pk-min-tap); height: var(--pk-min-tap); flex: none; }
+.pk-group__head > .pk-go { margin-block: calc((var(--dr-go-small-h) - var(--pk-min-tap)) / 2); }
+.pk-go__face { position: relative; display: flex; align-items: center; justify-content: center; min-width: calc(var(--pk-s32) + var(--pk-s6)); height: var(--dr-go-small-h); padding: 0 var(--pk-s8); background: var(--pk-ink); clip-path: var(--pk-clip-s);
+  transition: transform var(--pk-dur-release) var(--pk-ease-pop); }
+.pk-go__face > i { position: absolute; inset: var(--pk-s2) var(--pk-s2) var(--pk-s4); clip-path: var(--pk-clip-s); background: linear-gradient(var(--pk-blue-hi) 0 var(--pk-s2), var(--pk-blue) var(--pk-s2)); }
+.pk-go__face > span { position: relative; color: var(--pk-text); }
+.pk-go:hover .pk-go__face { transform: translateY(var(--pk-text-outline-1)); }
+.pk-go:active .pk-go__face { transform: translateY(var(--pk-s2)); transition-duration: var(--pk-dur-press); }
+
+@keyframes pk-drawer-drop { from { clip-path: inset(0 0 100% 0); } to { clip-path: inset(0 0 0 0); } }
+@keyframes pk-drawer-lift { from { clip-path: inset(0 0 0 0); } to { clip-path: inset(0 0 100% 0); } }
+@keyframes pk-drawer-fade-in { from { opacity: 0; } to { opacity: 1; } }
+@keyframes pk-drawer-fade-out { from { opacity: 1; } to { opacity: 0; } }
+
+/* Reduced motion (no height reveal, the frame cross-fades; ResourceDrawer.kt: alpha = progress when reduced) is the
+ * shared kitBase.css block, under BOTH triggers (the OS query and html[data-motion="reduce"]). */

@@ -1,0 +1,13 @@
+{
+  "sourceCommit": "427381a2adf934bbcc902baefc207a655b185eb6",
+  "phaserVersion": "4.1.0",
+  "image": "images.missing",
+  "width": 32,
+  "height": 32,
+  "sourceHashes": {
+    "phaser/src/core/Config.js": "df9efffa2c380862a2dd4712cac7a64acb3da11f061f63435fe9435733b45bd1",
+    "phaser/src/textures/TextureManager.js": "bd6465c41d69ffe5f33cfc3c7cc5ba3d127f424875efb8a16e7644f8d9dedad9",
+    "apps/web/src/game/scenes/BattleScene.ts": "caa08a270b3a16950ed5eac7c0de3f86a3b7f47e154d8fd30c096b25d168ae7d",
+    "apps/web/src/game/world/atlasLoader.ts": "8015c2a8fcd420d76b747f011125572046ec4fc02b916e44d12ca27e53767dda"
+  }
+}

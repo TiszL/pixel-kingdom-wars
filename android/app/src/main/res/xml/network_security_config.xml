@@ -1,0 +1,5 @@
+<network-security-config>
+    <base-config cleartextTrafficPermitted="false" />
+    <!-- MWA's encrypted local association channel uses loopback WebSocket. -->
+    <domain-config cleartextTrafficPermitted="true"><domain includeSubdomains="false">localhost</domain><domain includeSubdomains="false">127.0.0.1</domain></domain-config>
+</network-security-config>

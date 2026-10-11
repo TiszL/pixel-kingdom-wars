@@ -1,0 +1,80 @@
+{
+ "schema": 1,
+ "note": "The realm-map GLSL modules the web ships, byte-identical to the concept at the native world pin. glsl.test.mjs recomputes every sha256 here and checks it against native.sources (and against the native lock file itself when it is on disk). A shader change goes through the concept and native first (D-176: the web follows native; D-168: one shader source); a web-only edit fails the test.",
+ "pin": "02e9da8414156b9e0000df1653de6273b196cca6",
+ "jsSource": "8acdf059b (globe-realms): the GLSL is identical to the pin there",
+ "native": {
+  "repo": "pkw-android-globe",
+  "branch": "globe-native",
+  "commit": "7b5075b",
+  "lock": "world-shaders.lock.json",
+  "lockSha256": "35f885d2b8d885f994e5026da84f051bbdcb04d812dabc5e2bd9909dfb48a47c",
+  "contentManifestSha256": "ac241498c956d8da3309ddfa5228b6cb147ad751ee40d9a75b31f4f9069c9007",
+  "packVersion": "pm1-cb8faa56909faa31",
+  "preambleSha256": "26ee68bb4ce89eea9468e3e81e759f9ec172efe275bfce0bce4d300eeab8920e",
+  "sources": {
+   "concepts/globe3d-2026-09-23/src/realm/glsl/air.glsl.js": "d956e5c91908a61d09e2bc14a21e74038f53bb04f0c8740c5b6b574e1482fadb",
+   "concepts/globe3d-2026-09-23/src/realm/glsl/bases.glsl.js": "75d5d54a658c6b808ebbae55723de3d3fbcb3c383babfd5a6eb8f663d349115c",
+   "concepts/globe3d-2026-09-23/src/realm/glsl/chart.glsl.js": "de74d054dd30822880d00241fcd7c541d7ea43eaac32c65d3d9409ba0dfef028",
+   "concepts/globe3d-2026-09-23/src/realm/glsl/classes.glsl.js": "2185799441e27e1a5fa8407c34e392b722f550b4cd24e78f093e6653c46631a9",
+   "concepts/globe3d-2026-09-23/src/realm/glsl/common.glsl.js": "7492ff9f85f283d3263fa3671907a9116ba646b5fdb56b100ae7cad73c35d52c",
+   "concepts/globe3d-2026-09-23/src/realm/glsl/mapground.glsl.js": "46167cfa53eeb641d56257f4f219cd4f91f5993b585bbc69f7aa7369a423bc8f",
+   "concepts/globe3d-2026-09-23/src/realm/glsl/minimap.glsl.js": "4cc369ec38f4f6f907a78d31efee078b50b4d989b7a65106331503beedba07a6",
+   "concepts/globe3d-2026-09-23/src/realm/glsl/resolve.glsl.js": "0ab09b771956ac464f124f6b86de19a7fafd17ab519fa2d7b7bd2dff8eb6eaa1",
+   "concepts/globe3d-2026-09-23/src/realm/glsl/shield.glsl.js": "44d418152468912295d9ce6d9c860aaf29eea434a0593aff93d4fac0fee211c6",
+   "concepts/globe3d-2026-09-23/src/realm/glsl/sprites.glsl.js": "5541e83924a2e91eab43c363c353e39f2eaa8dc065b28108f53f793d70a05aac",
+   "concepts/globe3d-2026-09-23/src/realm/glsl/trueground.glsl.js": "491ec986e7565cbce7b6894a27b9eaaf949e5b54edeb3d04c1c5461d98537c62",
+   "concepts/globe3d-2026-09-23/src/realm/glsl/water.glsl.js": "f1d0105e5bbeb44518fb92cfdee42c8fb8f805c960f5bff3a7cab3269e460098"
+  }
+ },
+ "modules": {
+  "glsl/air.glsl.mjs": {
+   "source": "concepts/globe3d-2026-09-23/src/realm/glsl/air.glsl.js",
+   "sha256": "d956e5c91908a61d09e2bc14a21e74038f53bb04f0c8740c5b6b574e1482fadb"
+  },
+  "glsl/bases.glsl.mjs": {
+   "source": "concepts/globe3d-2026-09-23/src/realm/glsl/bases.glsl.js",
+   "sha256": "75d5d54a658c6b808ebbae55723de3d3fbcb3c383babfd5a6eb8f663d349115c"
+  },
+  "glsl/chart.glsl.mjs": {
+   "source": "concepts/globe3d-2026-09-23/src/realm/glsl/chart.glsl.js",
+   "sha256": "de74d054dd30822880d00241fcd7c541d7ea43eaac32c65d3d9409ba0dfef028"
+  },
+  "glsl/classes.glsl.mjs": {
+   "source": "concepts/globe3d-2026-09-23/src/realm/glsl/classes.glsl.js",
+   "sha256": "2185799441e27e1a5fa8407c34e392b722f550b4cd24e78f093e6653c46631a9"
+  },
+  "glsl/common.glsl.mjs": {
+   "source": "concepts/globe3d-2026-09-23/src/realm/glsl/common.glsl.js",
+   "sha256": "7492ff9f85f283d3263fa3671907a9116ba646b5fdb56b100ae7cad73c35d52c"
+  },
+  "glsl/mapground.glsl.mjs": {
+   "source": "concepts/globe3d-2026-09-23/src/realm/glsl/mapground.glsl.js",
+   "sha256": "46167cfa53eeb641d56257f4f219cd4f91f5993b585bbc69f7aa7369a423bc8f"
+  },
+  "glsl/minimap.glsl.mjs": {
+   "source": "concepts/globe3d-2026-09-23/src/realm/glsl/minimap.glsl.js",
+   "sha256": "4cc369ec38f4f6f907a78d31efee078b50b4d989b7a65106331503beedba07a6"
+  },
+  "glsl/resolve.glsl.mjs": {
+   "source": "concepts/globe3d-2026-09-23/src/realm/glsl/resolve.glsl.js",
+   "sha256": "0ab09b771956ac464f124f6b86de19a7fafd17ab519fa2d7b7bd2dff8eb6eaa1"
+  },
+  "glsl/shield.glsl.mjs": {
+   "source": "concepts/globe3d-2026-09-23/src/realm/glsl/shield.glsl.js",
+   "sha256": "44d418152468912295d9ce6d9c860aaf29eea434a0593aff93d4fac0fee211c6"
+  },
+  "glsl/sprites.glsl.mjs": {
+   "source": "concepts/globe3d-2026-09-23/src/realm/glsl/sprites.glsl.js",
+   "sha256": "5541e83924a2e91eab43c363c353e39f2eaa8dc065b28108f53f793d70a05aac"
+  },
+  "glsl/trueground.glsl.mjs": {
+   "source": "concepts/globe3d-2026-09-23/src/realm/glsl/trueground.glsl.js",
+   "sha256": "491ec986e7565cbce7b6894a27b9eaaf949e5b54edeb3d04c1c5461d98537c62"
+  },
+  "glsl/water.glsl.mjs": {
+   "source": "concepts/globe3d-2026-09-23/src/realm/glsl/water.glsl.js",
+   "sha256": "f1d0105e5bbeb44518fb92cfdee42c8fb8f805c960f5bff3a7cab3269e460098"
+  }
+ }
+}

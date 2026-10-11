@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>SHARDKEEP — NEW Assets Contact Sheet</title>
+<link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#1A171E;color:#EFE8D6;font-family:"VT323",monospace;font-size:20px;padding:32px 40px 100px}
+h1{font-size:40px;letter-spacing:2px}
+h1 em{color:#E3AE3C;font-style:normal}
+p.sub{color:#9C937F;margin:6px 0 30px}
+h2{color:#E3AE3C;font-size:28px;letter-spacing:1px;margin:36px 0 6px;border-bottom:1px solid #3D3833;padding-bottom:6px}
+h2 em{color:#9377C9;font-style:normal}
+h3{color:#BBD0D6;font-size:20px;margin:18px 0 8px}
+p.desc{color:#9C937F;font-size:16px;margin-bottom:8px;max-width:900px}
+.row{display:flex;gap:6px;flex-wrap:wrap;align-items:flex-end;margin-bottom:6px}
+figure{margin:0;text-align:center;background:#242128;border:1px solid #3D3833;padding:6px 4px 4px;min-width:56px}
+figure.new{border-color:#9C6F1E;background:#2a2416}
+figure.ascend{border-color:#6B48A8;background:#221c30}
+figure.mythic{border-color:#1E8F94;background:#132328}
+figcaption{font-size:13px;color:#9C937F;margin-top:4px}
+figure.new figcaption{color:#E3AE3C}
+figure.ascend figcaption{color:#A480E0}
+figure.mythic figcaption{color:#6FE0D9}
+img{image-rendering:pixelated;display:block;margin:0 auto}
+.charblock{display:flex;gap:20px;flex-wrap:wrap;margin-bottom:18px;padding-bottom:18px;border-bottom:1px dashed #3D3833}
+.tierrow{display:flex;gap:10px;align-items:flex-end;margin-bottom:14px;flex-wrap:wrap}
+.tierlabel{font-size:13px;color:#9C937F;text-align:center;margin-top:4px}
+.badge{display:inline-block;background:#9C6F1E;color:#1A171E;font-size:12px;padding:1px 6px;border-radius:2px;margin-left:8px;vertical-align:middle}
+.badge.epic{background:#5B4389;color:#EFE8D6}
+a{color:#BBD0D6}
+.legend{display:flex;gap:16px;color:#9C937F;font-size:14px;margin:8px 0 20px;flex-wrap:wrap}
+.legend span{display:inline-flex;align-items:center;gap:5px}
+.swatch{width:12px;height:12px;display:inline-block;border:1px solid #1A171E}
+</style>
+</head>
+<body>
+<h1>SHARDKEEP <em>/ NEW ASSETS CONTACT SHEET</em></h1>
+<p class="sub">1080+ masters &middot; buildings + walls extended to <b style="color:#6FE0D9">L20/T20</b> &middot; 4 new epic defenses (L1&ndash;20) &middot; 12 new characters (Dragon, Mage, Giant, Troll, Bilgewraith, Wyrmling) &middot; upgrade tiers to <b style="color:#6FE0D9">T7 (L19&ndash;20)</b> &middot; live animation loops, 260ms tick &middot; see <a href="HANDOFF-NEW.md">HANDOFF-NEW.md</a> &middot; <button id="replayBtn" style="font-family:inherit;font-size:16px;background:#9C6F1E;color:#1A171E;border:none;padding:2px 10px;cursor:pointer">&#9654; REPLAY LOOPS</button></p>
+<div class="legend">
+<span><span class="swatch" style="background:#9C937F;border-color:#3D3833"></span>L1&ndash;12 (existing)</span>
+<span><span class="swatch" style="background:#2a2416;border-color:#9C6F1E"></span>gold — batch 9</span>
+<span><span class="swatch" style="background:#221c30;border-color:#6B48A8"></span>violet — Ascension V (L13&ndash;15)</span>
+<span><span class="swatch" style="background:#132328;border-color:#1E8F94"></span>cyan — Ascension VI (L16&ndash;18)</span>
+<span><span class="swatch" style="background:#2a2416;border-color:#E3AE3C"></span>mythic zenith (L19&ndash;20)</span>
+</div>
+
+<h2>1 &middot; BUILDINGS — full level runs L1&ndash;20 <em>(violet/cyan/mythic = new Ascension tiers)</em></h2>
+<p class="desc">Every leveled building now runs unbroken L1&rarr;L20. From L13 a floating shard-crystal spire grows above the roofline each level — violet (Ascension V), then cyan (Ascension VI), culminating in the mythic gold+violet+cyan zenith crown at L20.</p>
+<div id="buildings"></div>
+
+<h2>2 &middot; WALLS — tier runs T1&ndash;T20</h2>
+<div id="walls"></div>
+
+<h2>3 &middot; NEW DEFENSES — <em>Electric Tower &middot; Mage Tower &middot; Laser Tower &middot; Dragon Nest</em></h2>
+<p class="desc">Four epic new defense buildings, hand-designed and run L1&ndash;20 through the same Ascension system as the rest of the base. Each ships a firing/charge overlay, projectile or beam, and impact FX matching the "per-defense kit" standard.</p>
+<div id="newdefenses"></div>
+
+<h2>4 &middot; NEW CHARACTERS — full animation loops</h2>
+<div id="newchars"></div>
+
+<h2>5 &middot; CHARACTER UPGRADE TIERS — T1(L1&ndash;3) through T7(L19&ndash;20)</h2>
+<p class="desc">Ascension tiers T5&ndash;T7 are new this batch (violet awakening &rarr; cyan ascension &rarr; mythic zenith), continuing the existing gold/glow T2&ndash;T4 system for all 11 existing troops plus the new Wyrmling.</p>
+<div id="tiers"></div>
+
+<h2>6 &middot; SUPPORTING FX</h2>
+<div id="fx"></div>
+
+<script>
+const NEW_B = 'characters/';
+const OLD_B = '../assets-v2/';
+const NB = 'buildings/';
+const FXB = 'fx/';
+let tick = 0;
+let animTimer = null;
+const animEls = [];
+function fig(src, label, cls){
+  const f=document.createElement('figure'); if(cls) f.className=cls;
+  const img=document.createElement('img'); img.loading='lazy'; img.decoding='async'; img.src=src;
+  f.appendChild(img);
+  const cap=document.createElement('figcaption'); cap.textContent=label; f.appendChild(cap);
+  return {el:f, img};
+}
+function animImg(files, seq, w, h){
+  const img=document.createElement('img'); img.loading='lazy'; img.decoding='async'; img.width=w; img.height=h; img.src=files[0];
+  animEls.push({img, files, seq});
+  return img;
+}
+function startAnims(){
+  if(animTimer) clearInterval(animTimer);
+  tick = 0;
+  animTimer = setInterval(()=>{
+    tick++;
+    animEls.forEach(a=>{ a.img.src = a.files[a.seq[tick%a.seq.length]]; });
+    if(tick>=32){ clearInterval(animTimer); animTimer=null; animEls.forEach(a=>{ a.img.src=a.files[0]; }); }
+  }, 260);
+}
+function tierClassFor(L){ return L<=12?'new':L<=15?'ascend':L<=18?'mythic':'new'; }
+
+// ---------- 1. BUILDINGS ----------
+const BUILDINGS = [
+  {key:'keep', label:'Keep', max:5, fp:'2×2', scale:1.0},
+  {key:'mine', label:'Mine', max:5, fp:'1×1', scale:1.6},
+  {key:'vault', label:'Vault', max:5, fp:'1×1', scale:1.6},
+  {key:'barracks', label:'Barracks', max:3, fp:'2×1', scale:1.2},
+  {key:'cannon', label:'Cannon', max:3, fp:'1×1', scale:1.6},
+  {key:'archertower', label:'Archer Tower', max:3, fp:'1×1', scale:1.3},
+  {key:'mortar', label:'Mortar', max:3, fp:'2×2', scale:1.2},
+  {key:'forge', label:'Forge', max:3, fp:'1×1', scale:1.6},
+  {key:'camp', label:'Army Camp', max:3, fp:'2×2', scale:1.2}
+];
+const bWrap = document.getElementById('buildings');
+BUILDINGS.forEach(b=>{
+  const h3=document.createElement('h3'); h3.textContent=b.label+' ('+b.fp+' — L1-20)'; bWrap.appendChild(h3);
+  const row=document.createElement('div'); row.className='row';
+  const LEVELS = [1,4,7,10,12,13,14,15,16,17,18,19,20];
+  LEVELS.forEach(L=>{
+    const base = L<=12 ? (L<=b.max?OLD_B:NB) : NB;
+    const src = base+'bld_'+b.key+'_l'+L+'.svg';
+    const {el,img} = fig(src, 'L'+L, L<=12?(L>b.max?'new':''):tierClassFor(L));
+    img.style.height = Math.round(40*b.scale)+'px';
+    row.appendChild(el);
+  });
+  bWrap.appendChild(row);
+});
+(function(){
+  const h3=document.createElement('h3'); h3.textContent='Mine — idle⇄work loop, all eras'; bWrap.appendChild(h3);
+  const row=document.createElement('div'); row.className='row';
+  [6,10,14,18,20].forEach(L=>{
+    const img = animImg([NB+'bld_mine_l'+L+'.svg', NB+'bld_mine_l'+L+'_work_f1.svg'], [0,0,1,1], 32,44);
+    img.style.height='96px';
+    const f=document.createElement('figure'); f.className=tierClassFor(L); f.appendChild(img);
+    const c=document.createElement('figcaption'); c.textContent='L'+L+' idle⇄work'; f.appendChild(c);
+    row.appendChild(f);
+  });
+  const img2 = animImg([NB+'bld_keep_l10_banner_f1.svg', NB+'bld_keep_l10_banner_f2.svg'],[0,0,1,1],20,36);
+  img2.style.height='96px';
+  const f2=document.createElement('figure'); f2.className='new'; f2.appendChild(img2);
+  const c2=document.createElement('figcaption'); c2.textContent='keep L10+ banner'; f2.appendChild(c2);
+  row.appendChild(f2);
+  const img3 = animImg([NB+'bld_keep_l20_banner_f1.svg', NB+'bld_keep_l20_banner_f2.svg'],[0,0,1,1],24,42);
+  img3.style.height='96px';
+  const f3=document.createElement('figure'); f3.className='new'; f3.appendChild(img3);
+  const c3=document.createElement('figcaption'); c3.textContent='keep L20 grand banner'; f3.appendChild(c3);
+  row.appendChild(f3);
+  bWrap.appendChild(row);
+})();
+
+// ---------- 2. WALLS ----------
+const WALL_VARIANTS = ['straight','ns','corner_ne','corner_nw','corner_se','corner_sw'];
+const wWrap = document.getElementById('walls');
+WALL_VARIANTS.forEach(v=>{
+  const h3=document.createElement('h3'); h3.textContent='bld_wall_'+v; wWrap.appendChild(h3);
+  const row=document.createElement('div'); row.className='row';
+  const TIERS_SHOWN = [1,4,8,12,13,14,15,16,17,18,19,20];
+  TIERS_SHOWN.forEach(T=>{
+    const base = T<=3 ? OLD_B : NB;
+    const src = base+'bld_wall_'+v+'_t'+T+'.svg';
+    const {el,img} = fig(src, 'T'+T, T<=12?(T>3?'new':''):tierClassFor(T));
+    img.style.height='80px';
+    row.appendChild(el);
+  });
+  wWrap.appendChild(row);
+});
+
+// ---------- 3. NEW DEFENSES ----------
+const DEFENSES = [
+  {key:'electrictower', label:'Electric Tower', desc:'Tesla-coil arc turret — chains lightning between clustered enemies. Range: shared r4 ring.', h:98, fire:'fx_fire_electric', proj:'fx_bolt_electric', impact:'fx_shock', impactFrames:3},
+  {key:'magetower', label:'Mage Tower', desc:'Arcane spire — hurls a shard-orb that detonates in an AOE burst, damaging every enemy in the blast ring.', h:106, fire:'fx_fire_magetower', proj:null, impact:'fx_aoe_burst', impactFrames:4},
+  {key:'lasertower', label:'Laser Tower', desc:'Focusing-crystal turret — near-instant beam, longest range in the game (shared r7 ring), scorches its target.', h:94, fire:'fx_charge_laser', proj:'fx_beam_laser', impact:'fx_scorch', impactFrames:2},
+  {key:'dragonnest', label:'Dragon Nest', desc:'Aerie that launches defensive Wyrmlings to fly out and harry enemy troops before returning to roost.', h:108, fire:'fx_spawn_nest', proj:null, impact:null, impactFrames:3}
+];
+const ndWrap = document.getElementById('newdefenses');
+DEFENSES.forEach(d=>{
+  const block=document.createElement('div'); block.className='charblock';
+  const h3=document.createElement('h3'); h3.style.width='100%';
+  h3.innerHTML=d.label+'<span class="badge epic">NEW DEFENSE</span> — <span style="color:#9C937F;font-size:15px">'+d.desc+'</span>';
+  block.appendChild(h3);
+  const row=document.createElement('div'); row.className='row';
+  [1,3,6,9,10,12,13,15,16,18,20].forEach(L=>{
+    const src = NB+'bld_'+d.key+'_l'+L+'.svg';
+    const {el,img} = fig(src, 'L'+L, tierClassFor(L));
+    img.style.height='150px';
+    row.appendChild(el);
+  });
+  block.appendChild(row);
+  const row2=document.createElement('div'); row2.className='row';
+  if(d.fire){
+    const files=[FXB+d.fire+'_f1.svg', FXB+d.fire+'_f2.svg'];
+    const img=animImg(files,[0,0,1,1],48,36); img.style.height='72px';
+    const f=document.createElement('figure'); f.className='new'; f.appendChild(img);
+    f.appendChild(Object.assign(document.createElement('figcaption'),{textContent:d.fire+' (charge/fire)'}));
+    row2.appendChild(f);
+  }
+  if(d.proj){
+    const files=[FXB+d.proj+'_f1.svg', FXB+d.proj+'_f2.svg'];
+    const img=animImg(files,[0,1],48,24); img.style.height='60px';
+    const f=document.createElement('figure'); f.className='new'; f.appendChild(img);
+    f.appendChild(Object.assign(document.createElement('figcaption'),{textContent:d.proj+' (projectile/beam)'}));
+    row2.appendChild(f);
+  }
+  if(d.impact){
+    const files=[]; for(let i=1;i<=d.impactFrames;i++) files.push(FXB+d.impact+'_f'+i+'.svg');
+    const seq = files.map((_,i)=>i);
+    const img=animImg(files,seq,64,64); img.style.height='72px';
+    const f=document.createElement('figure'); f.className='mythic'; f.appendChild(img);
+    f.appendChild(Object.assign(document.createElement('figcaption'),{textContent:d.impact+' (impact'+(d.key==='magetower'?'/AOE':'')+')'}));
+    row2.appendChild(f);
+  }
+  if(d.key==='magetower'){
+    const f=fig(FXB+'ovl_aoe_r3.svg','ovl_aoe_r3 (splash preview)','ascend'); f.img.style.height='72px'; row2.appendChild(f.el);
+  }
+  if(d.key==='dragonnest'){
+    const flyFiles=[NEW_B+'trp_wyrmling_fly_e_f1.svg',NEW_B+'trp_wyrmling_fly_e_f2.svg',NEW_B+'trp_wyrmling_fly_e_f3.svg',NEW_B+'trp_wyrmling_fly_e_f4.svg'];
+    const img=animImg(flyFiles,[0,1,2,3],48,42); img.style.height='72px';
+    const f=document.createElement('figure'); f.className='new'; f.appendChild(img);
+    f.appendChild(Object.assign(document.createElement('figcaption'),{textContent:'trp_wyrmling fly_e (4-frame)'}));
+    row2.appendChild(f);
+    const atkFiles=[NEW_B+'trp_wyrmling_attack_e_f1.svg',NEW_B+'trp_wyrmling_attack_e_f2.svg',NEW_B+'trp_wyrmling_attack_e_f3.svg'];
+    const img2=animImg(atkFiles,[0,0,1,2,2],48,42); img2.style.height='72px';
+    const f2=document.createElement('figure'); f2.className='new'; f2.appendChild(img2);
+    f2.appendChild(Object.assign(document.createElement('figcaption'),{textContent:'wyrmling breath attack'})); row2.appendChild(f2);
+    const breathFiles=[FXB+'fx_breath_wyrmling_f1.svg',FXB+'fx_breath_wyrmling_f2.svg',FXB+'fx_breath_wyrmling_f3.svg'];
+    const img3=animImg(breathFiles,[0,1,2,1],48,32); img3.style.height='60px';
+    const f3=document.createElement('figure'); f3.className='new'; f3.appendChild(img3);
+    f3.appendChild(Object.assign(document.createElement('figcaption'),{textContent:'fx_breath_wyrmling'})); row2.appendChild(f3);
+  }
+  block.appendChild(row2);
+  ndWrap.appendChild(block);
+});
+
+// ---------- 4. NEW CHARACTERS ----------
+const NEW_CHARS = [
+  {key:'dragon', label:'Dragon', h:64, desc:'Biggest unit in the game — mountain wyvern, ranged fire-breath attacker.'},
+  {key:'mage', label:'Mage', h:32, desc:'Human-scale, shard-attuned battle caster — ranged bolt attacker.'},
+  {key:'giant', label:'Giant', h:64, desc:'Epic-tier siege brute — club smasher, bonus vs. buildings.'},
+  {key:'troll', label:'Troll', h:56, desc:'Epic-tier hunched brute — regenerating melee line.'},
+  {key:'bilgewraith', label:'Bilgewraith', h:24, desc:'Undead pirate infiltrator — burrows under walls, surfaces at Mines first.'},
+  {key:'wyrmling', label:'Wyrmling', h:28, desc:'Dragon Nest defender — small flying dragon, harries enemy troops then returns to roost. 4-frame wingbeat.', fly:true}
+];
+const ncWrap = document.getElementById('newchars');
+NEW_CHARS.forEach(c=>{
+  const block=document.createElement('div'); block.className='charblock';
+  const h3=document.createElement('h3'); h3.style.width='100%'; h3.innerHTML=c.label+'<span class="badge">NEW</span> — <span style="color:#9C937F;font-size:15px">'+c.desc+'</span>';
+  ncWrap.appendChild(h3);
+  const row=document.createElement('div'); row.className='row';
+  const base='characters/trp_'+c.key+'_';
+  const port = fig(base+'portrait.svg','portrait',true); port.img.style.height='90px'; row.appendChild(port.el);
+  if(c.fly){
+    ['s','e','n'].forEach(dir=>{
+      const files=[base+'fly_'+dir+'_f1.svg', base+'fly_'+dir+'_f2.svg', base+'fly_'+dir+'_f3.svg', base+'fly_'+dir+'_f4.svg'];
+      const img=animImg(files,[0,1,2,3],c.h,c.h); img.style.height='90px';
+      const f=document.createElement('figure'); f.className='new'; f.appendChild(img);
+      const cap=document.createElement('figcaption'); cap.textContent='fly_'+dir+' (4f)'; f.appendChild(cap);
+      row.appendChild(f);
+    });
+  } else {
+    ['s','e','n'].forEach(dir=>{
+      const files=[base+'walk_'+dir+'_f1.svg', base+'walk_'+dir+'_f2.svg', base+'walk_'+dir+'_f3.svg'];
+      const img=animImg(files,[0,1,2,1],c.h,c.h); img.style.height='90px';
+      const f=document.createElement('figure'); f.className='new'; f.appendChild(img);
+      const cap=document.createElement('figcaption'); cap.textContent='walk_'+dir; f.appendChild(cap);
+      row.appendChild(f);
+    });
+  }
+  const atkCount = c.key==='wyrmling'?3:2;
+  const atkFiles=[]; for(let i=1;i<=atkCount;i++) atkFiles.push(base+'attack_e_f'+i+'.svg');
+  const atkImg=animImg(atkFiles, atkCount===3?[0,0,1,2,2]:[0,0,0,1,1], c.h, c.h); atkImg.style.height='90px';
+  const atkF=document.createElement('figure'); atkF.className='new'; atkF.appendChild(atkImg);
+  atkF.appendChild(Object.assign(document.createElement('figcaption'),{textContent:'attack_e'})); row.appendChild(atkF);
+  const dieCount = c.key==='wyrmling'?3:2;
+  const dieFiles=[]; for(let i=1;i<=dieCount;i++) dieFiles.push(base+'death_f'+i+'.svg');
+  const dieImg=animImg(dieFiles, dieCount===3?[0,1,2]:[0,1,1], c.h, c.h); dieImg.style.height='90px';
+  const dieF=document.createElement('figure'); dieF.className='new'; dieF.appendChild(dieImg);
+  dieF.appendChild(Object.assign(document.createElement('figcaption'),{textContent:'death'})); row.appendChild(dieF);
+  if(c.key==='bilgewraith'){
+    const burImg=animImg([base+'burrow_f1.svg', base+'burrow_f2.svg'],[0,0,1,1],24,16); burImg.style.height='60px';
+    const burF=document.createElement('figure'); burF.className='new'; burF.appendChild(burImg);
+    burF.appendChild(Object.assign(document.createElement('figcaption'),{textContent:'burrow (untargetable)'})); row.appendChild(burF);
+    const emg=fig(base+'emerge_f1.svg','emerge',true); emg.img.style.height='90px'; row.appendChild(emg.el);
+  }
+  block.appendChild(row);
+  ncWrap.appendChild(block);
+});
+
+// ---------- 5. TIERS ----------
+const ALL_CHARS = NEW_CHARS.map(c=>({key:c.key,label:c.label,isNew:true,fly:c.fly})).concat([
+  {key:'highlander',label:'Highlander',isNew:false},{key:'bowman',label:'Bowman',isNew:false},
+  {key:'kegrunner',label:'Keg Runner',isNew:false},{key:'tunneler',label:'Tunneler',isNew:false},
+  {key:'turrider',label:'Tur Rider',isNew:false},{key:'plunderer',label:'Plunderer',isNew:false}
+]);
+const tWrap = document.getElementById('tiers');
+ALL_CHARS.forEach(c=>{
+  const h3=document.createElement('h3'); h3.textContent=c.label; tWrap.appendChild(h3);
+  const row=document.createElement('div'); row.className='tierrow';
+  const poseKey = c.fly ? 'fly_s_f1' : 'walk_s_f1';
+  const baseDir = c.isNew?'characters/trp_':OLD_B+'trp_';
+  const tierDefs=[
+    {n:1,label:'T1 · L1–3', portrait:baseDir+c.key+'_portrait.svg', pose:baseDir+c.key+'_'+poseKey+'.svg'},
+    {n:2,label:'T2 · L4–6', portrait:'characters/trp_'+c.key+'_t2_portrait.svg', pose:'characters/trp_'+c.key+'_t2_'+poseKey+'.svg'},
+    {n:3,label:'T3 · L7–9', portrait:'characters/trp_'+c.key+'_t3_portrait.svg', pose:'characters/trp_'+c.key+'_t3_'+poseKey+'.svg'},
+    {n:4,label:'T4 · L10–12', portrait:'characters/trp_'+c.key+'_t4_portrait.svg', pose:'characters/trp_'+c.key+'_t4_'+poseKey+'.svg'},
+    {n:5,label:'T5 · L13–15', portrait:'characters/trp_'+c.key+'_t5_portrait.svg', pose:'characters/trp_'+c.key+'_t5_'+poseKey+'.svg'},
+    {n:6,label:'T6 · L16–18', portrait:'characters/trp_'+c.key+'_t6_portrait.svg', pose:'characters/trp_'+c.key+'_t6_'+poseKey+'.svg'},
+    {n:7,label:'T7 · L19–20', portrait:'characters/trp_'+c.key+'_t7_portrait.svg', pose:'characters/trp_'+c.key+'_t7_'+poseKey+'.svg'}
+  ];
+  tierDefs.forEach(td=>{
+    const wrap=document.createElement('div');
+    const inner=document.createElement('div'); inner.style.display='flex'; inner.style.gap='4px';
+    const cls = td.n<=1?'':td.n<=4?'new':td.n<=5?'ascend':'mythic';
+    const f1=fig(td.portrait,'',cls); f1.img.style.height='64px'; inner.appendChild(f1.el);
+    wrap.appendChild(inner);
+    const lab=document.createElement('div'); lab.className='tierlabel'; lab.textContent=td.label; wrap.appendChild(lab);
+    row.appendChild(wrap);
+  });
+  tWrap.appendChild(row);
+});
+
+// ---------- 6. FX ----------
+const fxWrap = document.getElementById('fx');
+(function(){
+  const row=document.createElement('div'); row.className='row';
+  function addLoop(files, seq, w, h, label, cls){
+    const img=animImg(files,seq,w,h); img.style.height='72px';
+    const f=document.createElement('figure'); f.className=cls||'new'; f.appendChild(img);
+    f.appendChild(Object.assign(document.createElement('figcaption'),{textContent:label})); row.appendChild(f);
+  }
+  addLoop([FXB+'fx_breath_dragon_f1.svg',FXB+'fx_breath_dragon_f2.svg',FXB+'fx_breath_dragon_f3.svg'],[0,1,2,1],40,24,'fx_breath_dragon (loop)');
+  const boltF=fig(FXB+'fx_bolt_mage.svg','fx_bolt_mage (projectile)',true); boltF.img.style.height='60px'; row.appendChild(boltF.el);
+  addLoop([FXB+'fx_slam_giant_f1.svg',FXB+'fx_slam_giant_f2.svg'],[0,0,1,1],48,24,'fx_slam_giant (loop)');
+  addLoop([FXB+'fx_fire_electric_f1.svg',FXB+'fx_fire_electric_f2.svg'],[0,0,1,1],32,16,'fx_fire_electric','ascend');
+  addLoop([FXB+'fx_bolt_electric_f1.svg',FXB+'fx_bolt_electric_f2.svg'],[0,1],14,10,'fx_bolt_electric','ascend');
+  addLoop([FXB+'fx_shock_f1.svg',FXB+'fx_shock_f2.svg',FXB+'fx_shock_f3.svg'],[0,1,2],16,16,'fx_shock','ascend');
+  addLoop([FXB+'fx_fire_magetower_f1.svg',FXB+'fx_fire_magetower_f2.svg'],[0,0,1,1],32,20,'fx_fire_magetower','mythic');
+  addLoop([FXB+'fx_aoe_burst_f1.svg',FXB+'fx_aoe_burst_f2.svg',FXB+'fx_aoe_burst_f3.svg',FXB+'fx_aoe_burst_f4.svg'],[0,1,2,3],64,64,'fx_aoe_burst','mythic');
+  addLoop([FXB+'fx_charge_laser_f1.svg',FXB+'fx_charge_laser_f2.svg'],[0,0,1,1],16,16,'fx_charge_laser','new');
+  addLoop([FXB+'fx_beam_laser_f1.svg',FXB+'fx_beam_laser_f2.svg'],[0,1],24,6,'fx_beam_laser','new');
+  addLoop([FXB+'fx_scorch_f1.svg',FXB+'fx_scorch_f2.svg'],[0,1,1],12,8,'fx_scorch','new');
+  addLoop([FXB+'fx_spawn_nest_f1.svg',FXB+'fx_spawn_nest_f2.svg',FXB+'fx_spawn_nest_f3.svg'],[0,1,2,1],32,20,'fx_spawn_nest','new');
+  addLoop([FXB+'fx_breath_wyrmling_f1.svg',FXB+'fx_breath_wyrmling_f2.svg',FXB+'fx_breath_wyrmling_f3.svg'],[0,1,2,1],24,16,'fx_breath_wyrmling','new');
+  fxWrap.appendChild(row);
+})();
+
+startAnims();
+document.getElementById('replayBtn').addEventListener('click', startAnims);
+</script>
+</body>
+</html>

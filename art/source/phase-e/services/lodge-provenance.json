@@ -1,0 +1,276 @@
+{
+  "schemaVersion": 1,
+  "family": "lodge",
+  "zipSha256": "7a381d75251b280459dda151dba7d2ad7f3d1b8945d01af0f847528436e05aa3",
+  "indexSha256": "04f96c922ca04d93f1bf760e6385713908b971ce82c3aa022602f1fa199e2181",
+  "docsCommit": "11504e2316bd33a6d092f87b8d114f159aa0249c",
+  "scope": "source preparation only; no runtime or owner visual acceptance",
+  "files": [
+    {
+      "path": "services/animations/lodge-t1-collapse.png",
+      "bytes": 15571,
+      "sha256": "8272032eab864554ba0eddd4fd6cf158474ac57ecc5cc2dc2490bf13fd3a1f88",
+      "size": [
+        1008,
+        112
+      ]
+    },
+    {
+      "path": "services/animations/lodge-t1-construction.png",
+      "bytes": 15670,
+      "sha256": "a45714163e2f515561d84ddca553c18291303119153f50f604b2e1d9151028d7",
+      "size": [
+        1008,
+        112
+      ]
+    },
+    {
+      "path": "services/animations/lodge-t1-working.png",
+      "bytes": 8373,
+      "sha256": "a469885c41c31585b05e07a5c409bae35486d11a33bdf24dec66018c99400746",
+      "size": [
+        896,
+        112
+      ]
+    },
+    {
+      "path": "services/animations/lodge-t2-collapse.png",
+      "bytes": 16546,
+      "sha256": "6c09d66e141d95707924c35c96c30fad99f66983472fcec41ee0b3018029956e",
+      "size": [
+        1008,
+        112
+      ]
+    },
+    {
+      "path": "services/animations/lodge-t2-construction.png",
+      "bytes": 16485,
+      "sha256": "6ee46fe88fc53dcc31d8b3799f953d2839f9e894c064e6b4021cbf1740ee54ac",
+      "size": [
+        1008,
+        112
+      ]
+    },
+    {
+      "path": "services/animations/lodge-t2-working.png",
+      "bytes": 9873,
+      "sha256": "29d719a25e44f6455da03e754ee20131fcf9fee32d275f86e053a5606f0ccfbb",
+      "size": [
+        896,
+        112
+      ]
+    },
+    {
+      "path": "services/animations/lodge-t3-collapse.png",
+      "bytes": 16124,
+      "sha256": "faef57d7807e21056ed2db1a4388292bf7b0f31a4d9987ca8a266ebef9a0c9ee",
+      "size": [
+        1008,
+        112
+      ]
+    },
+    {
+      "path": "services/animations/lodge-t3-construction.png",
+      "bytes": 17529,
+      "sha256": "fb3540b1a4e50ddf1655dad7550d35f77453a506b46e5f033cddf964cf0ef913",
+      "size": [
+        1008,
+        112
+      ]
+    },
+    {
+      "path": "services/animations/lodge-t3-working.png",
+      "bytes": 10863,
+      "sha256": "38bac2518ac643595f9bcf7ea52d560cb5d599f7582c41f4f8d30d9b464e34d8",
+      "size": [
+        896,
+        112
+      ]
+    },
+    {
+      "path": "services/animations/lodge-t4-collapse.png",
+      "bytes": 17598,
+      "sha256": "615ece8d321b8a7e626fdfb98e787c4870b40d3cb0d90415ce5f2c88b5a58cf8",
+      "size": [
+        1008,
+        112
+      ]
+    },
+    {
+      "path": "services/animations/lodge-t4-construction.png",
+      "bytes": 18759,
+      "sha256": "6d5f1d539b219803878286e9519afb8dd969fbed0951538603f230a7025ed45b",
+      "size": [
+        1008,
+        112
+      ]
+    },
+    {
+      "path": "services/animations/lodge-t4-working.png",
+      "bytes": 11565,
+      "sha256": "bd0caf9603a454ae22760b84a96a8ebb100d41e572a143dc61bd45575a3e0c6d",
+      "size": [
+        896,
+        112
+      ]
+    },
+    {
+      "path": "services/manifest.json",
+      "bytes": 48979,
+      "sha256": "f7cbf1bf9646d31baf5d7fcd0706e85348f24c199022dde22292adb3e19f1885"
+    },
+    {
+      "path": "services/static/lodge-t1-damaged.png",
+      "bytes": 6149,
+      "sha256": "e70d68805778d140866f860c7eba1816d4562dbcb064268d1a7eee632f604f41",
+      "size": [
+        112,
+        112
+      ]
+    },
+    {
+      "path": "services/static/lodge-t1-idle.png",
+      "bytes": 5354,
+      "sha256": "a1e129a50a3ed68c4d811b7b834d39765bbf4af6af430501f74c16fa9fe5622b",
+      "size": [
+        112,
+        112
+      ]
+    },
+    {
+      "path": "services/static/lodge-t2-damaged.png",
+      "bytes": 7127,
+      "sha256": "eac842130c4405d93ed364bd57c181e612d1719a987fa2aff7038abf0ded8468",
+      "size": [
+        112,
+        112
+      ]
+    },
+    {
+      "path": "services/static/lodge-t2-idle.png",
+      "bytes": 5542,
+      "sha256": "aab7c96aa1d109c22b012bc99ad117fe101a73e8e47e3c7acc4bf026df6bd881",
+      "size": [
+        112,
+        112
+      ]
+    },
+    {
+      "path": "services/static/lodge-t3-damaged.png",
+      "bytes": 7319,
+      "sha256": "f03d1eea79d2eeca14311cdd565712a9dda365998d3bc203cf91df889f3db67c",
+      "size": [
+        112,
+        112
+      ]
+    },
+    {
+      "path": "services/static/lodge-t3-idle.png",
+      "bytes": 7032,
+      "sha256": "78d7942824456f0dc032fb691bad3e0318cd6d80c52a454af852530b793be74d",
+      "size": [
+        112,
+        112
+      ]
+    },
+    {
+      "path": "services/static/lodge-t4-damaged.png",
+      "bytes": 7718,
+      "sha256": "dd1350d47a0b180b24f7e34385c0dd746e874fc17a7d93f909151455a0787583",
+      "size": [
+        112,
+        112
+      ]
+    },
+    {
+      "path": "services/static/lodge-t4-idle.png",
+      "bytes": 6779,
+      "sha256": "fd2fad4a4436d106e55bbeb10d3f9678321bb7961202d216d95ed96fae630b9c",
+      "size": [
+        112,
+        112
+      ]
+    },
+    {
+      "path": "shared-fx/craft-success/atlas.png",
+      "bytes": 7460,
+      "sha256": "593ded1c87df4e6e44bfa4a197dde464713970d04174326967c30718d9edf424",
+      "size": [
+        512,
+        64
+      ]
+    },
+    {
+      "path": "workshop/derived/static/t1-construction.png",
+      "bytes": 6600,
+      "sha256": "9e546a251cee6324ada3a3a02b8d95607147088f4ee7f2734f056025bd3381a2",
+      "size": [
+        112,
+        112
+      ]
+    },
+    {
+      "path": "workshop/derived/static/t1-rubble.png",
+      "bytes": 5607,
+      "sha256": "3db88e664ca741c6555fdd469a3eefdd76396070821d17e479adb70b6e2dc4e9",
+      "size": [
+        112,
+        112
+      ]
+    },
+    {
+      "path": "workshop/derived/static/t2-construction.png",
+      "bytes": 6664,
+      "sha256": "fcb6dd3af4bdfe4598dbfee3126d5770c9994995553eb47301200a602c2fb3f1",
+      "size": [
+        112,
+        112
+      ]
+    },
+    {
+      "path": "workshop/derived/static/t2-rubble.png",
+      "bytes": 5349,
+      "sha256": "964fd0bcd258eadf75a183747651019ece004ce93a79db0a05c353e38b9d1c82",
+      "size": [
+        112,
+        112
+      ]
+    },
+    {
+      "path": "workshop/derived/static/t3-construction.png",
+      "bytes": 5985,
+      "sha256": "cead6e7968a5460219dbd269e0e2cef7401be6b92a1d500407acf684e8f88ffe",
+      "size": [
+        112,
+        112
+      ]
+    },
+    {
+      "path": "workshop/derived/static/t3-rubble.png",
+      "bytes": 5026,
+      "sha256": "5eb600d816e71f47d2e29f354e5647987c65aa96db784e9fea3637cefb26e610",
+      "size": [
+        112,
+        112
+      ]
+    },
+    {
+      "path": "workshop/derived/static/t4-construction.png",
+      "bytes": 7846,
+      "sha256": "3dc1bad0c91190090fdbdb8d1acbdc94f2f68cfd97530b830fa0dd6711a7cfc2",
+      "size": [
+        112,
+        112
+      ]
+    },
+    {
+      "path": "workshop/derived/static/t4-rubble.png",
+      "bytes": 5976,
+      "sha256": "78136a68f1f2f4f045bed29b53b00f62adb4af83e88e712602dcb12a1ea439d0",
+      "size": [
+        112,
+        112
+      ]
+    }
+  ]
+}

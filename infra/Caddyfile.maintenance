@@ -1,0 +1,48 @@
+# MAINTENANCE MODE (M23 a18) — swapped in by infra/deploy.sh for the drain
+# window via `caddy reload --config /etc/caddy/Caddyfile.maintenance`, and
+# swapped back to /etc/caddy/Caddyfile when traffic returns.
+#
+# Safety contract, same as the old hard `stop caddy`: NOTHING here proxies to
+# the api and NOTHING reads /srv/www (which is mid-publish). The api/worker
+# containers are stopped during the window anyway — this file exists so a
+# player sees an honest "back in minutes" page instead of a dead socket, and
+# an open game client gets a machine-readable MAINTENANCE code it can show.
+#
+# TLS: same domain and the same caddydata volume, so the live certificate is
+# reused — no re-issue, no rate-limit risk.
+
+{$API_DOMAIN} {
+	encode gzip zstd
+
+	header {
+		Retry-After "120"
+		X-Robots-Tag "noindex, nofollow, noarchive, nosnippet"
+		X-Content-Type-Options nosniff
+		Referrer-Policy no-referrer
+		Strict-Transport-Security "max-age=31536000; includeSubDomains"
+		-Server
+	}
+
+	# The game client polls /api/version and calls /api/* routes; a JSON body
+	# with a stable code lets apps/web show the in-game maintenance banner
+	# instead of a generic network error.
+	handle /api/* {
+		header Content-Type application/json
+		header Cache-Control no-store
+		# Exact apps/web error envelope: lib/api.ts reads json.error.code.
+		respond `{"error":{"code":"MAINTENANCE","message":"Deploy in progress - back in a few minutes."}}` 503
+	}
+
+	# Everything else: the self-contained maintenance page, honest 503 status
+	# (crawlers and uptime checks must not index or greenlight this state).
+	handle {
+		root * /srv/maintenance
+		error 503
+	}
+	handle_errors {
+		rewrite * /index.html
+		file_server {
+			root /srv/maintenance
+		}
+	}
+}

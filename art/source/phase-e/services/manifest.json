@@ -1,0 +1,1418 @@
+{
+  "schemaVersion": 1,
+  "product": "Pixel Kingdom Wars",
+  "group": "services",
+  "assets": [
+    {
+      "id": "lodge-t1",
+      "family": "lodge",
+      "tier": 1,
+      "states": {
+        "idle": {
+          "path": "static/lodge-t1-idle.png",
+          "cell": [
+            112,
+            112
+          ],
+          "frameCount": 1,
+          "fps": 0,
+          "loop": false,
+          "sha256": "a1e129a50a3ed68c4d811b7b834d39765bbf4af6af430501f74c16fa9fe5622b",
+          "alphaBounds": [
+            22,
+            38,
+            90,
+            104
+          ]
+        },
+        "ready": {
+          "path": "static/lodge-t1-idle.png",
+          "cell": [
+            112,
+            112
+          ],
+          "frameCount": 1,
+          "fps": 0,
+          "loop": false,
+          "sha256": "a1e129a50a3ed68c4d811b7b834d39765bbf4af6af430501f74c16fa9fe5622b",
+          "alphaBounds": [
+            22,
+            38,
+            90,
+            104
+          ],
+          "overlay": {
+            "path": "../shared-fx/craft-success/atlas.png",
+            "cell": [
+              64,
+              64
+            ],
+            "frameCount": 8,
+            "fps": 8,
+            "offset": [
+              24,
+              0
+            ]
+          },
+          "composition": "unchanged building + shared completion effect"
+        },
+        "damaged": {
+          "path": "static/lodge-t1-damaged.png",
+          "cell": [
+            112,
+            112
+          ],
+          "frameCount": 1,
+          "fps": 0,
+          "loop": false,
+          "sha256": "e70d68805778d140866f860c7eba1816d4562dbcb064268d1a7eee632f604f41",
+          "alphaBounds": [
+            22,
+            38,
+            90,
+            104
+          ]
+        },
+        "working": {
+          "path": "animations/lodge-t1-working.png",
+          "cell": [
+            112,
+            112
+          ],
+          "frameCount": 8,
+          "fps": 8,
+          "loop": true,
+          "sha256": "a469885c41c31585b05e07a5c409bae35486d11a33bdf24dec66018c99400746",
+          "frameHashes": [
+            "907a6eb59a5fd67c3e5308b4f82d2318267853555d915546778c80b980410af4",
+            "06fbe7e4b69ac8a2506cbec5a48f3db0048723c4432283bdb05e3881d15e0fd1",
+            "647baabd43989a4728b68458451b261647fe4a063512e3fa9514e523d18b1d4a",
+            "aef658896c616c8a1ae74c9731cc5198801ebb2c4cfeda27974ccc231b28d534",
+            "2d17b23c805e65eb9dee80d189f2f62e7137b18880b7bebd6e199b1d4eac8ea8",
+            "0e7e9d971c39bb3a85d9653b48c132fd0143e5916249bd68ccbe4ae88093a25e",
+            "68b2a73f9224e9a326bf53a6fc0adc6f1408f811490cd64f290d3f9993cbccdd",
+            "da295f0124437e65ff0b87e1e11d8a0bf499e5180666cdbdfe004f5285503851"
+          ],
+          "provenance": "PixelLab8generatedframes, originalinputframe0retained in masters; fixed integer registration; GoldForgeT4lower12pxfoundationfrozenfromcanonicalidle to remove3alpha-shimmer pixels"
+        },
+        "destroyed": {
+          "path": "../workshop/derived/static/t1-rubble.png",
+          "cell": [
+            112,
+            112
+          ],
+          "frameCount": 1,
+          "fps": 0,
+          "loop": false,
+          "reuse": "approved shared material-family rubble"
+        },
+        "construction": {
+          "path": "animations/lodge-t1-construction.png",
+          "cell": [
+            112,
+            112
+          ],
+          "frameCount": 9,
+          "fps": 8,
+          "loop": false,
+          "sha256": "a45714163e2f515561d84ddca553c18291303119153f50f604b2e1d9151028d7",
+          "frameHashes": [
+            "8b7d8a2ba77e079b79ef2fa119035a68384d600b6082f5290fbf7a467254def0",
+            "7f5850e3aa58dd3dc703d53feced08684e4eb4c3aaac9ba1a78503aedf0fc1d2",
+            "bb61f10a0f896f5e473279ca3861f795679c7781069525d01625d350cba3467b",
+            "c012c700026c1ed81dbde5acf77c98617b268dbef0545166e63d458b47b6d8ca",
+            "6b59acea981dd7aa0b678f0f291f7ce5cec8e95785433b2459e44cd3c0678415",
+            "e3bc37f7e24bd4f9869c8c78641a4b6c3ac31b4a26e8a1772e980e937695c043",
+            "d6462678f1e7bcec798c2fa540b8bc1a805030da27a406edeb6c170e5e286c83",
+            "d6462678f1e7bcec798c2fa540b8bc1a805030da27a406edeb6c170e5e286c83",
+            "d6462678f1e7bcec798c2fa540b8bc1a805030da27a406edeb6c170e5e286c83"
+          ],
+          "provenance": "Authored fixed-cell reveal: shared PixelLab scaffold \u2192 this exact building. No generated morphology."
+        },
+        "collapse": {
+          "path": "animations/lodge-t1-collapse.png",
+          "cell": [
+            112,
+            112
+          ],
+          "frameCount": 9,
+          "fps": 8,
+          "loop": false,
+          "sha256": "8272032eab864554ba0eddd4fd6cf158474ac57ecc5cc2dc2490bf13fd3a1f88",
+          "frameHashes": [
+            "6212f792e493e64806052a86baefba34285e3df8583b602dfdef0238eb8fe787",
+            "6212f792e493e64806052a86baefba34285e3df8583b602dfdef0238eb8fe787",
+            "6212f792e493e64806052a86baefba34285e3df8583b602dfdef0238eb8fe787",
+            "5be6147ffcc976c32045f21937fd313c6654f167d619fc32955098c7046e29f3",
+            "8acc85dca2bc7ab0cb72962aab0539f4dc7faa641f5b782fa34b029d400c362f",
+            "8ac8b67a7a0bd9efad4f1d709ddcee1dead2ce4e8830d63772d9f37ac08c5531",
+            "21fed8a05c89257c4937a47a980045d0f76550c9ee2841d39bb14a68802d82dc",
+            "f7f8f0e2c0a5c03670ee84484614a1b46aedcfdc6c8e00e4ee388238ee4595e9",
+            "d9bd26cb8b8e4aa25689e182e7a40ad9ec0be11de8102fafdb5638adc16e351b"
+          ],
+          "provenance": "Authored fixed-cell layer replacement: own damaged building \u2192 shared rubble. No generated motion claim."
+        }
+      },
+      "sourceCell": [
+        80,
+        80
+      ],
+      "cell": [
+        112,
+        112
+      ],
+      "drawScale": 1,
+      "pivot": [
+        56,
+        104
+      ],
+      "contactLine": 104,
+      "footprint": [
+        2,
+        2
+      ],
+      "packingOffset": [
+        16,
+        31
+      ],
+      "sourceHash": "07bc9481148c6c1f7032eb199d4cab0c4bacd5359fd83316dd3a7f0e6ce91d5b",
+      "status": "technical-review-pending-owner-choice",
+      "runtimeIntegrated": false
+    },
+    {
+      "id": "lodge-t2",
+      "family": "lodge",
+      "tier": 2,
+      "states": {
+        "idle": {
+          "path": "static/lodge-t2-idle.png",
+          "cell": [
+            112,
+            112
+          ],
+          "frameCount": 1,
+          "fps": 0,
+          "loop": false,
+          "sha256": "aab7c96aa1d109c22b012bc99ad117fe101a73e8e47e3c7acc4bf026df6bd881",
+          "alphaBounds": [
+            20,
+            31,
+            93,
+            104
+          ]
+        },
+        "ready": {
+          "path": "static/lodge-t2-idle.png",
+          "cell": [
+            112,
+            112
+          ],
+          "frameCount": 1,
+          "fps": 0,
+          "loop": false,
+          "sha256": "aab7c96aa1d109c22b012bc99ad117fe101a73e8e47e3c7acc4bf026df6bd881",
+          "alphaBounds": [
+            20,
+            31,
+            93,
+            104
+          ],
+          "overlay": {
+            "path": "../shared-fx/craft-success/atlas.png",
+            "cell": [
+              64,
+              64
+            ],
+            "frameCount": 8,
+            "fps": 8,
+            "offset": [
+              24,
+              0
+            ]
+          },
+          "composition": "unchanged building + shared completion effect"
+        },
+        "damaged": {
+          "path": "static/lodge-t2-damaged.png",
+          "cell": [
+            112,
+            112
+          ],
+          "frameCount": 1,
+          "fps": 0,
+          "loop": false,
+          "sha256": "eac842130c4405d93ed364bd57c181e612d1719a987fa2aff7038abf0ded8468",
+          "alphaBounds": [
+            20,
+            32,
+            93,
+            104
+          ]
+        },
+        "working": {
+          "path": "animations/lodge-t2-working.png",
+          "cell": [
+            112,
+            112
+          ],
+          "frameCount": 8,
+          "fps": 8,
+          "loop": true,
+          "sha256": "29d719a25e44f6455da03e754ee20131fcf9fee32d275f86e053a5606f0ccfbb",
+          "frameHashes": [
+            "04cb2d37ff51cebe640a2e15fa01e5be0f487670ca42efb1effa2d77d18649a5",
+            "6fc1f039d9ec62f0ef74345017f64f372ef07c758ae1b9be71ca40b624128de3",
+            "a4a5be6cd15ad4daae71562c3b38841923826c932dba8da32a257154bfeace2c",
+            "1cf71fc52dcf6657235f6aca4f3d0a6a3dd2ce0be8526d0d2bed78fa9af404ad",
+            "2624d1b15f9e095c161c5bc8256f1717f180cdee0d0804b32b6149ea88da4fae",
+            "87f51f8b0f4ab7000ae1eff2b2772682e9577ca410713fe00b8c4446af402118",
+            "de041b368c1c1396e9cbdbce3b81dba0118bb53966a157a9698d874b148b24e8",
+            "1599d594924ad2871c61ef29dbadea0e7f781398c82d043cb69f6a371cded4c1"
+          ],
+          "provenance": "PixelLab8generatedframes, originalinputframe0retained in masters; fixed integer registration; GoldForgeT4lower12pxfoundationfrozenfromcanonicalidle to remove3alpha-shimmer pixels"
+        },
+        "destroyed": {
+          "path": "../workshop/derived/static/t2-rubble.png",
+          "cell": [
+            112,
+            112
+          ],
+          "frameCount": 1,
+          "fps": 0,
+          "loop": false,
+          "reuse": "approved shared material-family rubble"
+        },
+        "construction": {
+          "path": "animations/lodge-t2-construction.png",
+          "cell": [
+            112,
+            112
+          ],
+          "frameCount": 9,
+          "fps": 8,
+          "loop": false,
+          "sha256": "6ee46fe88fc53dcc31d8b3799f953d2839f9e894c064e6b4021cbf1740ee54ac",
+          "frameHashes": [
+            "330d26526b8b6d3d16527eb51b4d25084adc990a3dcf126526a1db74f757284c",
+            "541912eafa5252e271f221e48683692563f4a47377b5af3c6e1e80372094966b",
+            "584b3aece79fa2d57c8cceae1d104082fac537906a2f57eaaaf8e5e15d7b13ef",
+            "1a50faa73af672160550952460511c2d6491c1d3245cf703662eb2b1117d93c8",
+            "98cfe65924a58cd2b370c355e93e4d7dec268136d4404cb62ae82e51d8a4e183",
+            "b41632d3d9992c9626f232d41eb8daca03b4acc01978d2ab6031a2e71b0e5c89",
+            "1599d594924ad2871c61ef29dbadea0e7f781398c82d043cb69f6a371cded4c1",
+            "1599d594924ad2871c61ef29dbadea0e7f781398c82d043cb69f6a371cded4c1",
+            "1599d594924ad2871c61ef29dbadea0e7f781398c82d043cb69f6a371cded4c1"
+          ],
+          "provenance": "Authored fixed-cell reveal: shared PixelLab scaffold \u2192 this exact building. No generated morphology."
+        },
+        "collapse": {
+          "path": "animations/lodge-t2-collapse.png",
+          "cell": [
+            112,
+            112
+          ],
+          "frameCount": 9,
+          "fps": 8,
+          "loop": false,
+          "sha256": "6c09d66e141d95707924c35c96c30fad99f66983472fcec41ee0b3018029956e",
+          "frameHashes": [
+            "1209e9d29c5893983bece199c51f88c17f2e85887ad014897ba072540fd0f59a",
+            "1209e9d29c5893983bece199c51f88c17f2e85887ad014897ba072540fd0f59a",
+            "1209e9d29c5893983bece199c51f88c17f2e85887ad014897ba072540fd0f59a",
+            "d956eb2fcced6b433893ef22a96de6d59f98f323189ab685332d93c072d0b745",
+            "038b5ea4822c178930e986c9e76b0c4b03694a78dd4c4e308a9dc61413a536c4",
+            "5ff746d80bc39929b4e3804f63299bc1107aa675fb602039a012c9a993215251",
+            "1a7688421e86152ffb7eaa6ee2a0fcbd96b1f79a8c78e562930126a9f806273d",
+            "1a1bdcd852983f732318ab538931d9b9839fea50f1894c31a4656fbebb8feca1",
+            "0162e24630d8c04df9b50eff6838706f2157a424c18d10c2d33a76573a596cee"
+          ],
+          "provenance": "Authored fixed-cell layer replacement: own damaged building \u2192 shared rubble. No generated motion claim."
+        }
+      },
+      "sourceCell": [
+        80,
+        80
+      ],
+      "cell": [
+        112,
+        112
+      ],
+      "drawScale": 1,
+      "pivot": [
+        56,
+        104
+      ],
+      "contactLine": 104,
+      "footprint": [
+        2,
+        2
+      ],
+      "packingOffset": [
+        16,
+        27
+      ],
+      "sourceHash": "2cd473e098619c5d6662a4bb878a521941d177585037eb7f2b68b1153c33f5df",
+      "status": "technical-review-pending-owner-choice",
+      "runtimeIntegrated": false
+    },
+    {
+      "id": "lodge-t3",
+      "family": "lodge",
+      "tier": 3,
+      "states": {
+        "idle": {
+          "path": "static/lodge-t3-idle.png",
+          "cell": [
+            112,
+            112
+          ],
+          "frameCount": 1,
+          "fps": 0,
+          "loop": false,
+          "sha256": "78d7942824456f0dc032fb691bad3e0318cd6d80c52a454af852530b793be74d",
+          "alphaBounds": [
+            21,
+            31,
+            91,
+            104
+          ]
+        },
+        "ready": {
+          "path": "static/lodge-t3-idle.png",
+          "cell": [
+            112,
+            112
+          ],
+          "frameCount": 1,
+          "fps": 0,
+          "loop": false,
+          "sha256": "78d7942824456f0dc032fb691bad3e0318cd6d80c52a454af852530b793be74d",
+          "alphaBounds": [
+            21,
+            31,
+            91,
+            104
+          ],
+          "overlay": {
+            "path": "../shared-fx/craft-success/atlas.png",
+            "cell": [
+              64,
+              64
+            ],
+            "frameCount": 8,
+            "fps": 8,
+            "offset": [
+              24,
+              0
+            ]
+          },
+          "composition": "unchanged building + shared completion effect"
+        },
+        "damaged": {
+          "path": "static/lodge-t3-damaged.png",
+          "cell": [
+            112,
+            112
+          ],
+          "frameCount": 1,
+          "fps": 0,
+          "loop": false,
+          "sha256": "f03d1eea79d2eeca14311cdd565712a9dda365998d3bc203cf91df889f3db67c",
+          "alphaBounds": [
+            21,
+            35,
+            91,
+            104
+          ]
+        },
+        "working": {
+          "path": "animations/lodge-t3-working.png",
+          "cell": [
+            112,
+            112
+          ],
+          "frameCount": 8,
+          "fps": 8,
+          "loop": true,
+          "sha256": "38bac2518ac643595f9bcf7ea52d560cb5d599f7582c41f4f8d30d9b464e34d8",
+          "frameHashes": [
+            "92d7bf20e518d17e9e8ebc76c86dfdc686f7cad84742195e62d0724a71883f5e",
+            "a1b7830b9c6614980e6ac794c8e6ef8cadcd1a36d514894e3d7156027b9a9585",
+            "1bff40eb602c8a6fc2084b44c215764e6ebd79f5dec58facc042210bd6045f5a",
+            "20cb5130c8c309b8e1da1124abe6558be1560da2de5849be3e1e0132f3be92ee",
+            "3df21e5cf0c365ab77117369d1a7b34523d662a8768ebf76e0b25ca3857b2c4c",
+            "a3ea579d376bea9ed3654754ff82a52a3d2405f406e43d3574a54e613325c41b",
+            "bbdec4059df63e5b9e7710e0595b9682f0a94583fa9571183afb8fe422ba0185",
+            "514ac03d0a3a77b130a3aeda12caeca6ecd186e00fe6361342d8ef48ea32bf4a"
+          ],
+          "provenance": "PixelLab8generatedframes, originalinputframe0retained in masters; fixed integer registration; GoldForgeT4lower12pxfoundationfrozenfromcanonicalidle to remove3alpha-shimmer pixels"
+        },
+        "destroyed": {
+          "path": "../workshop/derived/static/t3-rubble.png",
+          "cell": [
+            112,
+            112
+          ],
+          "frameCount": 1,
+          "fps": 0,
+          "loop": false,
+          "reuse": "approved shared material-family rubble"
+        },
+        "construction": {
+          "path": "animations/lodge-t3-construction.png",
+          "cell": [
+            112,
+            112
+          ],
+          "frameCount": 9,
+          "fps": 8,
+          "loop": false,
+          "sha256": "fb3540b1a4e50ddf1655dad7550d35f77453a506b46e5f033cddf964cf0ef913",
+          "frameHashes": [
+            "962bb103b268087f53b18d8f25aaabfcba1ed99889cb5db1dbb049aff51238c8",
+            "b8cf0f3b7e0af8f0b73d996f72109c92deac7a0fb222161bc258bb709497e387",
+            "062624155e40d0b77a74f4a718de4a4d6fbb57088ed7eff55cd0b74091db1f50",
+            "54577ba8f166f65c7e4ec8f04bf2310a6c98636f6fba434f046be20dbac3ae09",
+            "3f3c4534d351d7e55de26c23e1494d33341d70e1b95c68884c3d806fd6d34376",
+            "06a19804070ffffd5d50ea69f0d0c2097961142732aac3528105eb9f4503907a",
+            "bcd5f4b683bfdf5b369160c3540d064c2f282f83e7a69e6f05485c06d3a643d1",
+            "bcd5f4b683bfdf5b369160c3540d064c2f282f83e7a69e6f05485c06d3a643d1",
+            "bcd5f4b683bfdf5b369160c3540d064c2f282f83e7a69e6f05485c06d3a643d1"
+          ],
+          "provenance": "Authored fixed-cell reveal: shared PixelLab scaffold \u2192 this exact building. No generated morphology."
+        },
+        "collapse": {
+          "path": "animations/lodge-t3-collapse.png",
+          "cell": [
+            112,
+            112
+          ],
+          "frameCount": 9,
+          "fps": 8,
+          "loop": false,
+          "sha256": "faef57d7807e21056ed2db1a4388292bf7b0f31a4d9987ca8a266ebef9a0c9ee",
+          "frameHashes": [
+            "9420486ad13e3b792eeea2f2f605aca06e95e1c6652ceb4976972e09f8a85ee8",
+            "9420486ad13e3b792eeea2f2f605aca06e95e1c6652ceb4976972e09f8a85ee8",
+            "9420486ad13e3b792eeea2f2f605aca06e95e1c6652ceb4976972e09f8a85ee8",
+            "cf0d22277019933ea099aab72cb5db2a3769eadf89bd81519e9d54f98b8883fb",
+            "115bd8362bc17ceaf292ec6d37a665623efe4929b5a05a6aef19eca9a26a2419",
+            "eb8ead57aa146189f3a809dc005bd5b77b62cb35cb966e44598bfe3e091fe18b",
+            "eebd67443883e085f7fa9a4767a69dd3851759f38cb5fedb95b07c15f150a2ac",
+            "2bb403774f4799a6c2d9388fdf7b89e451ea96bd029f99604f00973a26d3f662",
+            "86ba562c0cd3428338d648be7040f1d7754dc99c1af6d279140ef8d7e6fb5bc5"
+          ],
+          "provenance": "Authored fixed-cell layer replacement: own damaged building \u2192 shared rubble. No generated motion claim."
+        }
+      },
+      "sourceCell": [
+        80,
+        80
+      ],
+      "cell": [
+        112,
+        112
+      ],
+      "drawScale": 1,
+      "pivot": [
+        56,
+        104
+      ],
+      "contactLine": 104,
+      "footprint": [
+        2,
+        2
+      ],
+      "packingOffset": [
+        16,
+        28
+      ],
+      "sourceHash": "4965c5251f48634d6afc7f43fbcaaccc0e4067a12866471eeceee236de0beadf",
+      "status": "technical-review-pending-owner-choice",
+      "runtimeIntegrated": false
+    },
+    {
+      "id": "lodge-t4",
+      "family": "lodge",
+      "tier": 4,
+      "states": {
+        "idle": {
+          "path": "static/lodge-t4-idle.png",
+          "cell": [
+            112,
+            112
+          ],
+          "frameCount": 1,
+          "fps": 0,
+          "loop": false,
+          "sha256": "fd2fad4a4436d106e55bbeb10d3f9678321bb7961202d216d95ed96fae630b9c",
+          "alphaBounds": [
+            20,
+            32,
+            93,
+            104
+          ]
+        },
+        "ready": {
+          "path": "static/lodge-t4-idle.png",
+          "cell": [
+            112,
+            112
+          ],
+          "frameCount": 1,
+          "fps": 0,
+          "loop": false,
+          "sha256": "fd2fad4a4436d106e55bbeb10d3f9678321bb7961202d216d95ed96fae630b9c",
+          "alphaBounds": [
+            20,
+            32,
+            93,
+            104
+          ],
+          "overlay": {
+            "path": "../shared-fx/craft-success/atlas.png",
+            "cell": [
+              64,
+              64
+            ],
+            "frameCount": 8,
+            "fps": 8,
+            "offset": [
+              24,
+              0
+            ]
+          },
+          "composition": "unchanged building + shared completion effect"
+        },
+        "damaged": {
+          "path": "static/lodge-t4-damaged.png",
+          "cell": [
+            112,
+            112
+          ],
+          "frameCount": 1,
+          "fps": 0,
+          "loop": false,
+          "sha256": "dd1350d47a0b180b24f7e34385c0dd746e874fc17a7d93f909151455a0787583",
+          "alphaBounds": [
+            20,
+            35,
+            93,
+            104
+          ]
+        },
+        "working": {
+          "path": "animations/lodge-t4-working.png",
+          "cell": [
+            112,
+            112
+          ],
+          "frameCount": 8,
+          "fps": 8,
+          "loop": true,
+          "sha256": "bd0caf9603a454ae22760b84a96a8ebb100d41e572a143dc61bd45575a3e0c6d",
+          "frameHashes": [
+            "942564465482a49f6c1ef78d28479346328a4186c6ab1f235673b3d13c8c5211",
+            "776067ab522973b99c628f90c2c56f3b87491bbbfed05391368ebc57e06dac7a",
+            "088e175ffb8d1cdf20fa31c8432fa2fda5fe61f2c8c1f9223170249b8571e637",
+            "137152eedd8cfb70abbbeb45f005919e76a04fab75b730019eab4b3d01bd29bd",
+            "c321494c6f406fd2b0c03dcc051f8b9c49a05679a30707140a9f13f9ca30826c",
+            "1c76a9d3d9ac23f78f4e473e44eedd95102fcc3de97175f494b4c312b4101b15",
+            "c36f9d271c9a6656449f64e30efaf2b7e1f0825e007ff4e6f7af0f5c817ce0fd",
+            "52e45112db4255fc43262e2603453154fd7356179b113dfad7dc1e57eb9fe0e4"
+          ],
+          "provenance": "PixelLab8generatedframes, originalinputframe0retained in masters; fixed integer registration; GoldForgeT4lower12pxfoundationfrozenfromcanonicalidle to remove3alpha-shimmer pixels"
+        },
+        "destroyed": {
+          "path": "../workshop/derived/static/t4-rubble.png",
+          "cell": [
+            112,
+            112
+          ],
+          "frameCount": 1,
+          "fps": 0,
+          "loop": false,
+          "reuse": "approved shared material-family rubble"
+        },
+        "construction": {
+          "path": "animations/lodge-t4-construction.png",
+          "cell": [
+            112,
+            112
+          ],
+          "frameCount": 9,
+          "fps": 8,
+          "loop": false,
+          "sha256": "6d5f1d539b219803878286e9519afb8dd969fbed0951538603f230a7025ed45b",
+          "frameHashes": [
+            "90b155e45745ad03f7bd477498ee49f2ab7f0f098dc0646cf9708d186df2b00e",
+            "a9c8a9257183f81a4f73825caf2eb032fad0cc6ba1c3eaa3fc77d816fc7bb527",
+            "0388269ab62c1a07e5075fa01d0a14d5a88f5d2f0af6f4712a7b6725dea6496d",
+            "953c9f5e926adfbeb106762a289f9cd9937564b6859a7f21e211529f3308d686",
+            "79e878bf00cd029e0649a6b8a8c97b419847061031aab0906009fc27bd48cb5a",
+            "24842c14461a0585fe6005214b5613e8a56562ec5997984a1409d29ea602feca",
+            "52e45112db4255fc43262e2603453154fd7356179b113dfad7dc1e57eb9fe0e4",
+            "52e45112db4255fc43262e2603453154fd7356179b113dfad7dc1e57eb9fe0e4",
+            "52e45112db4255fc43262e2603453154fd7356179b113dfad7dc1e57eb9fe0e4"
+          ],
+          "provenance": "Authored fixed-cell reveal: shared PixelLab scaffold \u2192 this exact building. No generated morphology."
+        },
+        "collapse": {
+          "path": "animations/lodge-t4-collapse.png",
+          "cell": [
+            112,
+            112
+          ],
+          "frameCount": 9,
+          "fps": 8,
+          "loop": false,
+          "sha256": "615ece8d321b8a7e626fdfb98e787c4870b40d3cb0d90415ce5f2c88b5a58cf8",
+          "frameHashes": [
+            "b50552f5fcda74b6b278a0ba18411ee4e8955c65f46512717bcbdd557b1bc19b",
+            "b50552f5fcda74b6b278a0ba18411ee4e8955c65f46512717bcbdd557b1bc19b",
+            "b50552f5fcda74b6b278a0ba18411ee4e8955c65f46512717bcbdd557b1bc19b",
+            "3a34c4b325b29541952a3214e943112d82f67d0bc4c6a262c45741873114e746",
+            "a3938739f784582a0e64133b1ccd7103090fea1cae999430b77f1197fe5d7438",
+            "eb5e30a1475ee4a6bd4031f5900cd2ddaa0c7edacef3fc366a8f031b930f491f",
+            "8e7749ab2fb6a546281c11bac94788c8f3c9b916b85fd720bab67f4e8762641f",
+            "41e9f5fb8cbe0f302d40af3b96091fb0b636f8ce3fde607d3a9f051b1c9ac148",
+            "cf961623edebd953d32ccb3ac3b41f594187ae78a0e12552e94d76002aff92f8"
+          ],
+          "provenance": "Authored fixed-cell layer replacement: own damaged building \u2192 shared rubble. No generated motion claim."
+        }
+      },
+      "sourceCell": [
+        80,
+        80
+      ],
+      "cell": [
+        112,
+        112
+      ],
+      "drawScale": 1,
+      "pivot": [
+        56,
+        104
+      ],
+      "contactLine": 104,
+      "footprint": [
+        2,
+        2
+      ],
+      "packingOffset": [
+        17,
+        29
+      ],
+      "sourceHash": "5b760fb96922670b018b7b22a725a8c7585a258e83dbc4339044d984b3d0f34a",
+      "status": "technical-review-pending-owner-choice",
+      "runtimeIntegrated": false
+    },
+    {
+      "id": "market-t1",
+      "family": "market",
+      "tier": 1,
+      "states": {
+        "idle": {
+          "path": "static/market-t1-idle.png",
+          "cell": [
+            112,
+            112
+          ],
+          "frameCount": 1,
+          "fps": 0,
+          "loop": false,
+          "sha256": "c4a85ee766f11e75616577ceed2e8b0fdaee1cda32ddb343470801a1a84d3a16",
+          "alphaBounds": [
+            24,
+            30,
+            89,
+            104
+          ]
+        },
+        "ready": {
+          "path": "static/market-t1-idle.png",
+          "cell": [
+            112,
+            112
+          ],
+          "frameCount": 1,
+          "fps": 0,
+          "loop": false,
+          "sha256": "c4a85ee766f11e75616577ceed2e8b0fdaee1cda32ddb343470801a1a84d3a16",
+          "alphaBounds": [
+            24,
+            30,
+            89,
+            104
+          ],
+          "overlay": {
+            "path": "../shared-fx/craft-success/atlas.png",
+            "cell": [
+              64,
+              64
+            ],
+            "frameCount": 8,
+            "fps": 8,
+            "offset": [
+              24,
+              0
+            ]
+          },
+          "composition": "unchanged building + shared completion effect"
+        },
+        "damaged": {
+          "path": "static/market-t1-damaged.png",
+          "cell": [
+            112,
+            112
+          ],
+          "frameCount": 1,
+          "fps": 0,
+          "loop": false,
+          "sha256": "f69d53dcd7eebe5da07deec18423503a984c6cf8ecd0502c10225aeb5a92df94",
+          "alphaBounds": [
+            25,
+            30,
+            88,
+            104
+          ]
+        },
+        "working": {
+          "path": "animations/market-t1-working.png",
+          "cell": [
+            112,
+            112
+          ],
+          "frameCount": 8,
+          "fps": 8,
+          "loop": true,
+          "sha256": "b224b9d21140c2b74d9a52e6478ff45cd12a7d2584551bc2ce0ef43f290544d6",
+          "frameHashes": [
+            "b09b48c22790ddd5f0de5e52d1ccc8e9d87e3ad7bbe1bdc13fa16b0bdb1095ea",
+            "57fb24e8aba1e71933bb1237681b8fe2f1f4960f1acb70b46f320b57a1639240",
+            "eadf11e088439777272ac62a7d383a03628614b1daca3acf3c344b255a4da3c5",
+            "934f6905e2cc3e41fd3918366d667c03bb5c6f8a779a7bb53941bc35bb5645d6",
+            "0673eccf2f6974556c5f557c8d69c81d4635f5589a1ba0871255f2eee289fda3",
+            "f0e0f15b96d5b2365f5dcb44f0eb628dc23a6d66aef0e7ce8b7f8896abdd190e",
+            "92f1403afe434d4bf2ef28976951602c16ed88e532f91dd56d77139fbaf98adc",
+            "427daae87054ab53dde5794347f376c0fb0e4ef93b327a59ed7a7831b08babc3"
+          ],
+          "provenance": "PixelLab8generatedframes, originalinputframe0retained in masters; fixed integer registration; GoldForgeT4lower12pxfoundationfrozenfromcanonicalidle to remove3alpha-shimmer pixels"
+        },
+        "destroyed": {
+          "path": "../workshop/derived/static/t1-rubble.png",
+          "cell": [
+            112,
+            112
+          ],
+          "frameCount": 1,
+          "fps": 0,
+          "loop": false,
+          "reuse": "approved shared material-family rubble"
+        },
+        "construction": {
+          "path": "animations/market-t1-construction.png",
+          "cell": [
+            112,
+            112
+          ],
+          "frameCount": 9,
+          "fps": 8,
+          "loop": false,
+          "sha256": "409f049bd9e2a8b5c9beb9cea7a53f554e134d1bd6db187b4a948eda65b1144d",
+          "frameHashes": [
+            "8b7d8a2ba77e079b79ef2fa119035a68384d600b6082f5290fbf7a467254def0",
+            "ecdcde5e4e22c38eb1140df4310580e108029d17cb20901e9c7800a6d271b040",
+            "ea5c6c2cf9083662f05bdbcb1d91a42857b2bb2e100c5de07bc0f502019493c0",
+            "9e1d049df12538585249711d347542599efa1f2fb2c4dfc6a6b7e46e80865aa1",
+            "3621dde1a9d4bd3ca0dfb761b8cadc36af5e0f96f651ce66806f5edb30c5d7c4",
+            "30be997d896a22bd4a85ee6639a7197fb7feda6bf803f46fcb5306de4e529770",
+            "f89570df11017e6662807a524403de250210f313c01e8fa54dcecae993343827",
+            "f89570df11017e6662807a524403de250210f313c01e8fa54dcecae993343827",
+            "f89570df11017e6662807a524403de250210f313c01e8fa54dcecae993343827"
+          ],
+          "provenance": "Authored fixed-cell reveal: shared PixelLab scaffold \u2192 this exact building. No generated morphology."
+        },
+        "collapse": {
+          "path": "animations/market-t1-collapse.png",
+          "cell": [
+            112,
+            112
+          ],
+          "frameCount": 9,
+          "fps": 8,
+          "loop": false,
+          "sha256": "09c184960655c6e7c58bafa670c92306e687f793306be9242471c6675bb3280e",
+          "frameHashes": [
+            "34837f9a046e61ea421624ed1f4a215ad26e0c94cecbf79fbbf51e164157593c",
+            "34837f9a046e61ea421624ed1f4a215ad26e0c94cecbf79fbbf51e164157593c",
+            "34837f9a046e61ea421624ed1f4a215ad26e0c94cecbf79fbbf51e164157593c",
+            "1bf19c7a6cc3d742804146a7e8f110705e99b0dab5f19ed8134a81ca8133e5cf",
+            "ec44cabe782f18f5f65c598ff2f7fe10a97349043da290bf4340a5b1d1d6dab7",
+            "45a6f50732554e105f4154f78f0e6d41a94769bf107f8360ff6f9b4c3bc50b09",
+            "bf0de33e0343e5e62b514ce6b471ca2339f9f6a3bba80db373a6065b0eb2f182",
+            "8cf32f131c489b858e6d16a092797978987fec70c9e11e5db2fe12b708f54578",
+            "d9bd26cb8b8e4aa25689e182e7a40ad9ec0be11de8102fafdb5638adc16e351b"
+          ],
+          "provenance": "Authored fixed-cell layer replacement: own damaged building \u2192 shared rubble. No generated motion claim."
+        }
+      },
+      "sourceCell": [
+        80,
+        80
+      ],
+      "cell": [
+        112,
+        112
+      ],
+      "drawScale": 1,
+      "pivot": [
+        56,
+        104
+      ],
+      "contactLine": 104,
+      "footprint": [
+        2,
+        2
+      ],
+      "packingOffset": [
+        16,
+        27
+      ],
+      "sourceHash": "1e7bae79ba3b68766fb1b040d40b8be5ece1742219e381cdc0328a6228d53b7d",
+      "status": "technical-review-pending-owner-choice",
+      "runtimeIntegrated": false
+    },
+    {
+      "id": "market-t2",
+      "family": "market",
+      "tier": 2,
+      "states": {
+        "idle": {
+          "path": "static/market-t2-idle.png",
+          "cell": [
+            112,
+            112
+          ],
+          "frameCount": 1,
+          "fps": 0,
+          "loop": false,
+          "sha256": "71e0ec40bf715c444d824895834b7a6400e0f006af2aef7fc63fb64db3ad5d36",
+          "alphaBounds": [
+            23,
+            30,
+            90,
+            104
+          ]
+        },
+        "ready": {
+          "path": "static/market-t2-idle.png",
+          "cell": [
+            112,
+            112
+          ],
+          "frameCount": 1,
+          "fps": 0,
+          "loop": false,
+          "sha256": "71e0ec40bf715c444d824895834b7a6400e0f006af2aef7fc63fb64db3ad5d36",
+          "alphaBounds": [
+            23,
+            30,
+            90,
+            104
+          ],
+          "overlay": {
+            "path": "../shared-fx/craft-success/atlas.png",
+            "cell": [
+              64,
+              64
+            ],
+            "frameCount": 8,
+            "fps": 8,
+            "offset": [
+              24,
+              0
+            ]
+          },
+          "composition": "unchanged building + shared completion effect"
+        },
+        "damaged": {
+          "path": "static/market-t2-damaged.png",
+          "cell": [
+            112,
+            112
+          ],
+          "frameCount": 1,
+          "fps": 0,
+          "loop": false,
+          "sha256": "bfd7ee82a147b61a7ece72071762cb9a4fb3ff3bedc769824aa6c7ac3ab3a843",
+          "alphaBounds": [
+            24,
+            33,
+            88,
+            104
+          ]
+        },
+        "working": {
+          "path": "animations/market-t2-working.png",
+          "cell": [
+            112,
+            112
+          ],
+          "frameCount": 8,
+          "fps": 8,
+          "loop": true,
+          "sha256": "9702445d6f0364ce8ca6180e1fa06d076a51e13308df9d4256c91a7fcb42514a",
+          "frameHashes": [
+            "5e1ffb67d8d86e21766d74907f1eb1fabf95c7820eddc1c63027a326cf6f94e9",
+            "211bb9f8f6628d9f1a92dfee33eb1eb6358c692d37e171024879786af8fa348e",
+            "bca1b5292133641e6898d2daf13dee4dd6265978e3dd11a7313ea200481bfa31",
+            "0b6cc135228b117b9bc0714e95b55982d7d97539fbd2a5889c9161d92daaad7d",
+            "e643eff80b225a73299ab968b66aa8ab360c331d44ea06969b5ac7c7595f1906",
+            "cec730d278395c0dfc4ab9b8c5f3deb22c8a5090bcd5027ee826f745d73ecd47",
+            "c0af247e8249b9e2372e2319223e6695fa38b137ce059d028b45da66c1292db9",
+            "5ba40bd67cbd58e67e4d387ab236bfe3677516a07ff61fb8157e12b482353cb4"
+          ],
+          "provenance": "PixelLab8generatedframes, originalinputframe0retained in masters; fixed integer registration; GoldForgeT4lower12pxfoundationfrozenfromcanonicalidle to remove3alpha-shimmer pixels"
+        },
+        "destroyed": {
+          "path": "../workshop/derived/static/t2-rubble.png",
+          "cell": [
+            112,
+            112
+          ],
+          "frameCount": 1,
+          "fps": 0,
+          "loop": false,
+          "reuse": "approved shared material-family rubble"
+        },
+        "construction": {
+          "path": "animations/market-t2-construction.png",
+          "cell": [
+            112,
+            112
+          ],
+          "frameCount": 9,
+          "fps": 8,
+          "loop": false,
+          "sha256": "fd928ae11e38a64337860cd89097b2353f71c71ecde60c038f568958aa4cc61a",
+          "frameHashes": [
+            "330d26526b8b6d3d16527eb51b4d25084adc990a3dcf126526a1db74f757284c",
+            "2899b0a9ea12a82bb22eeedbfb04fffd7d9bdc2f09aa70176e65c4a77d9755bf",
+            "bcc8a2f1c11e7101e32d89d303c0f24c384b576edbd0c7fb9a361c5d65f6b565",
+            "1cd9748e46c31958cc3e7bc5765bb57f288c898fcbadb06e73d3cf13a4490e02",
+            "1a6a48d5dddc68deb0d8fa022eccbb0fbb3c66a6cc7c646f9fecf21807c680c4",
+            "d87a4d6e2867569729636c70053f896b262342f48db3e3ecde6e6603bc9e6887",
+            "7543f5e65fa0c649e6939016c3169d4e844de3701ab4ec99872e8503ae3539a7",
+            "7543f5e65fa0c649e6939016c3169d4e844de3701ab4ec99872e8503ae3539a7",
+            "7543f5e65fa0c649e6939016c3169d4e844de3701ab4ec99872e8503ae3539a7"
+          ],
+          "provenance": "Authored fixed-cell reveal: shared PixelLab scaffold \u2192 this exact building. No generated morphology."
+        },
+        "collapse": {
+          "path": "animations/market-t2-collapse.png",
+          "cell": [
+            112,
+            112
+          ],
+          "frameCount": 9,
+          "fps": 8,
+          "loop": false,
+          "sha256": "75b2d8c6334afb3ca8ad386d8b5916e531ac88e3ccb94befb741536076eabf4b",
+          "frameHashes": [
+            "0e2f93745c732bdf40b76c26841d3eb1f4bb2a8a089e7112f5ae03b155d75aa7",
+            "0e2f93745c732bdf40b76c26841d3eb1f4bb2a8a089e7112f5ae03b155d75aa7",
+            "0e2f93745c732bdf40b76c26841d3eb1f4bb2a8a089e7112f5ae03b155d75aa7",
+            "b94c5ba9774c1868f1d0b7578dd2ffe1368965df51d7ee946c52f14341bad022",
+            "ecaf209f263361b8d0e068fe1fa17fa03aceb27e166aece14a65879e18205e01",
+            "9f733482d0a478fcd9ee0d6dee358fbe0af925af02a30cbbf9987b2b8a7f05ff",
+            "bf71926bb1658a78ce97738df5956564c4167afb5afb75e4faaff5b2cbe0fe32",
+            "4f64e0c8782af805041a287126cf7240c11d95411676e95deec4568e629dbce8",
+            "0162e24630d8c04df9b50eff6838706f2157a424c18d10c2d33a76573a596cee"
+          ],
+          "provenance": "Authored fixed-cell layer replacement: own damaged building \u2192 shared rubble. No generated motion claim."
+        }
+      },
+      "sourceCell": [
+        80,
+        80
+      ],
+      "cell": [
+        112,
+        112
+      ],
+      "drawScale": 1,
+      "pivot": [
+        56,
+        104
+      ],
+      "contactLine": 104,
+      "footprint": [
+        2,
+        2
+      ],
+      "packingOffset": [
+        16,
+        26
+      ],
+      "sourceHash": "4d3db3fcc6d808325600ce38a1ace43db5174745215dafea53a18197a19fe2be",
+      "status": "technical-review-pending-owner-choice",
+      "runtimeIntegrated": false
+    },
+    {
+      "id": "market-t3",
+      "family": "market",
+      "tier": 3,
+      "states": {
+        "idle": {
+          "path": "static/market-t3-idle.png",
+          "cell": [
+            112,
+            112
+          ],
+          "frameCount": 1,
+          "fps": 0,
+          "loop": false,
+          "sha256": "a0e62fd2992cab4eb6a85c4a76ad341a6350e5222cc3b1ee00f3f86b83135147",
+          "alphaBounds": [
+            21,
+            30,
+            91,
+            104
+          ]
+        },
+        "ready": {
+          "path": "static/market-t3-idle.png",
+          "cell": [
+            112,
+            112
+          ],
+          "frameCount": 1,
+          "fps": 0,
+          "loop": false,
+          "sha256": "a0e62fd2992cab4eb6a85c4a76ad341a6350e5222cc3b1ee00f3f86b83135147",
+          "alphaBounds": [
+            21,
+            30,
+            91,
+            104
+          ],
+          "overlay": {
+            "path": "../shared-fx/craft-success/atlas.png",
+            "cell": [
+              64,
+              64
+            ],
+            "frameCount": 8,
+            "fps": 8,
+            "offset": [
+              24,
+              0
+            ]
+          },
+          "composition": "unchanged building + shared completion effect"
+        },
+        "damaged": {
+          "path": "static/market-t3-damaged.png",
+          "cell": [
+            112,
+            112
+          ],
+          "frameCount": 1,
+          "fps": 0,
+          "loop": false,
+          "sha256": "f466e07e3357478fcdb734dd799ef5b9c4e712578ec4369a94b61d70f8560e77",
+          "alphaBounds": [
+            21,
+            30,
+            91,
+            104
+          ]
+        },
+        "working": {
+          "path": "animations/market-t3-working.png",
+          "cell": [
+            112,
+            112
+          ],
+          "frameCount": 8,
+          "fps": 8,
+          "loop": true,
+          "sha256": "298d3e0b56cd43d21c2f16c651ddef2231b4c7afc6edbd0de0e199082aafe2da",
+          "frameHashes": [
+            "075398743afc79853d4882119ccb7f7bf2c29dba377a60ce78913f5ee18ed9cb",
+            "5e83deffe50a05197b1ffd516e0e2b31a9f9442b87761fc09425f82f683e7e21",
+            "c45135ee2dccecaa2d66dfb9e48f53981f53f37078ace67d86b37f1ba4e016e5",
+            "9877e98e9666c7e4303337bdff7830c9d3aee2d22bff9edb202767f6180eb22c",
+            "25c8cab9967a2d12b02e93521c51eeefd16cbdb267451e041aee7f1c565ae121",
+            "74e5499454d935274e992e528ce904f7809a4255ecf3d6bef428a3db32a6fe71",
+            "5026e5931015a74f99b8d0e0495542192ef2bc62c70951fbe21c9ec84f342f73",
+            "e0f462890869bb47dd5297dcf137a73be86b36574898426e8c2f429fcffcf420"
+          ],
+          "provenance": "PixelLab8generatedframes, originalinputframe0retained in masters; fixed integer registration; GoldForgeT4lower12pxfoundationfrozenfromcanonicalidle to remove3alpha-shimmer pixels"
+        },
+        "destroyed": {
+          "path": "../workshop/derived/static/t3-rubble.png",
+          "cell": [
+            112,
+            112
+          ],
+          "frameCount": 1,
+          "fps": 0,
+          "loop": false,
+          "reuse": "approved shared material-family rubble"
+        },
+        "construction": {
+          "path": "animations/market-t3-construction.png",
+          "cell": [
+            112,
+            112
+          ],
+          "frameCount": 9,
+          "fps": 8,
+          "loop": false,
+          "sha256": "fb6b75fafc2a8b26ee9f183a6b0f78da1a3174398bb8239c1f303445551ec92e",
+          "frameHashes": [
+            "962bb103b268087f53b18d8f25aaabfcba1ed99889cb5db1dbb049aff51238c8",
+            "5b9a7418017b7acdccfcc5ca0a91ff7ba311220e96f5dd86b341617b4c823231",
+            "84290483bcce8fa05034a8b2e9a249e88d70e7ee0b82d7347215a110fa5cf973",
+            "2bc3c6c84550ced3d2fb04b3f2a27863ef8681a2efcf69878980d27c5c917897",
+            "542c9db880b1b5b55ab4f28a8fadf5dfad5ac4e7605709cedbb2929aa559d268",
+            "99f881757860ef080d33abb0413e2869978e471ba1356c7cb3e382f7e36a0d1d",
+            "671bdfe752271eefa39a2f54a479ce96dfc096a9eb24fc8c213c0d465b5cdc5a",
+            "671bdfe752271eefa39a2f54a479ce96dfc096a9eb24fc8c213c0d465b5cdc5a",
+            "671bdfe752271eefa39a2f54a479ce96dfc096a9eb24fc8c213c0d465b5cdc5a"
+          ],
+          "provenance": "Authored fixed-cell reveal: shared PixelLab scaffold \u2192 this exact building. No generated morphology."
+        },
+        "collapse": {
+          "path": "animations/market-t3-collapse.png",
+          "cell": [
+            112,
+            112
+          ],
+          "frameCount": 9,
+          "fps": 8,
+          "loop": false,
+          "sha256": "e2dfda59ed9840f69ef26d0a772abcff937eead1a4ae0af8d679009cf7d7c098",
+          "frameHashes": [
+            "105c4f2a1bf3cb8a08d75029e77df460e7ac38fecca6195ccb771d130dad1387",
+            "105c4f2a1bf3cb8a08d75029e77df460e7ac38fecca6195ccb771d130dad1387",
+            "105c4f2a1bf3cb8a08d75029e77df460e7ac38fecca6195ccb771d130dad1387",
+            "6a4cb0a847f5a9998a63abe4f4ab471d14976c635264193790e6b58f18b11620",
+            "d6e6e86a42095559d5800b0a127e1b5a34ee5cd15bed39108371bf67811d7a86",
+            "5206358f8747741311a5fadd184957344d9198aaf23b7beb1bb15f0d506f10b5",
+            "6b20a002a668e0f1a8779db3205de1355fcb936bf9d44fedf187e55f953ed929",
+            "cda1f9086d42d468ab122c771b306292cbf3f0ff57c01814cf7af74860c4d16f",
+            "86ba562c0cd3428338d648be7040f1d7754dc99c1af6d279140ef8d7e6fb5bc5"
+          ],
+          "provenance": "Authored fixed-cell layer replacement: own damaged building \u2192 shared rubble. No generated motion claim."
+        }
+      },
+      "sourceCell": [
+        80,
+        80
+      ],
+      "cell": [
+        112,
+        112
+      ],
+      "drawScale": 1,
+      "pivot": [
+        56,
+        104
+      ],
+      "contactLine": 104,
+      "footprint": [
+        2,
+        2
+      ],
+      "packingOffset": [
+        16,
+        27
+      ],
+      "sourceHash": "62bef7d241ded7f1798abb38fc0ad6b2e693c90fc74788f00d2209979b9ad85c",
+      "status": "technical-review-pending-owner-choice",
+      "runtimeIntegrated": false
+    },
+    {
+      "id": "market-t4",
+      "family": "market",
+      "tier": 4,
+      "states": {
+        "idle": {
+          "path": "static/market-t4-idle.png",
+          "cell": [
+            112,
+            112
+          ],
+          "frameCount": 1,
+          "fps": 0,
+          "loop": false,
+          "sha256": "1091c20731f3a993092c5c380105d7900c9d98549df6f10c0f97d2ba5390077c",
+          "alphaBounds": [
+            19,
+            29,
+            93,
+            104
+          ]
+        },
+        "ready": {
+          "path": "static/market-t4-idle.png",
+          "cell": [
+            112,
+            112
+          ],
+          "frameCount": 1,
+          "fps": 0,
+          "loop": false,
+          "sha256": "1091c20731f3a993092c5c380105d7900c9d98549df6f10c0f97d2ba5390077c",
+          "alphaBounds": [
+            19,
+            29,
+            93,
+            104
+          ],
+          "overlay": {
+            "path": "../shared-fx/craft-success/atlas.png",
+            "cell": [
+              64,
+              64
+            ],
+            "frameCount": 8,
+            "fps": 8,
+            "offset": [
+              24,
+              0
+            ]
+          },
+          "composition": "unchanged building + shared completion effect"
+        },
+        "damaged": {
+          "path": "static/market-t4-damaged.png",
+          "cell": [
+            112,
+            112
+          ],
+          "frameCount": 1,
+          "fps": 0,
+          "loop": false,
+          "sha256": "06d9cc413b9044b7a328b29c183ec8b4bc3ee8b220ae76f467330ce9081b6afb",
+          "alphaBounds": [
+            19,
+            29,
+            93,
+            104
+          ]
+        },
+        "working": {
+          "path": "animations/market-t4-working.png",
+          "cell": [
+            112,
+            112
+          ],
+          "frameCount": 8,
+          "fps": 8,
+          "loop": true,
+          "sha256": "15bdaaef67a66e8f2ec9f8561af54677c63217d66fc66a50667f7a2a7a98e425",
+          "frameHashes": [
+            "664a6dffed10ed822a2f28f71522bd917a29d62c1e1146adfe7a33b0ffc511cf",
+            "af3dfe120d619322f0b492e70a6da2038bcde7553d75b2328e414f2e59ef3d92",
+            "8e9ea57633bac4c2d54962b2341dd7cbd1ec0b9900517fbc13a1582929e991a4",
+            "256711c2938ceda81f5c566230f78d37d6cbe949e79b4310f22346a2e05d346a",
+            "057755208ee9b014b5c9df617d718b31d702ebb7a7fdfbf58c1b2839af9e840e",
+            "e6eb250457c8f50ae3b1418a1820a1e540e3a7369b94aa75950cc1ac42337742",
+            "e93cbffdec31c659892f80765b49513327d69b83297f673d7aa1d87c28eb3a08",
+            "b085c37769e04ac65868cb2615a6ab8e97d8baca2f024d51024946ba774f56bb"
+          ],
+          "provenance": "PixelLab8generatedframes, originalinputframe0retained in masters; fixed integer registration; GoldForgeT4lower12pxfoundationfrozenfromcanonicalidle to remove3alpha-shimmer pixels"
+        },
+        "destroyed": {
+          "path": "../workshop/derived/static/t4-rubble.png",
+          "cell": [
+            112,
+            112
+          ],
+          "frameCount": 1,
+          "fps": 0,
+          "loop": false,
+          "reuse": "approved shared material-family rubble"
+        },
+        "construction": {
+          "path": "animations/market-t4-construction.png",
+          "cell": [
+            112,
+            112
+          ],
+          "frameCount": 9,
+          "fps": 8,
+          "loop": false,
+          "sha256": "fa095b54e188fc48b2dc1fb16b8bd4e9304694cbc87114a3c6af7d7936549840",
+          "frameHashes": [
+            "90b155e45745ad03f7bd477498ee49f2ab7f0f098dc0646cf9708d186df2b00e",
+            "829bdf510fe4e9b9441519b532db7c771bf240136951e6bc5bc8485e6fb55090",
+            "c58611ebaa741e34e647fe45e51dfab3c4778b1e1b1ef8cd48b9442bf93769ee",
+            "321c1d4cfef10a702c42a4fbdf07e278434aa15676b27937425d55821bc46666",
+            "8f66474771a3148e2ba1999206d5b5e774accd985a2850c860f19569b62973e7",
+            "274f252a91649709b5bc398b680930269a26425446aedc9e034f471d34d3bfc4",
+            "b085c37769e04ac65868cb2615a6ab8e97d8baca2f024d51024946ba774f56bb",
+            "b085c37769e04ac65868cb2615a6ab8e97d8baca2f024d51024946ba774f56bb",
+            "b085c37769e04ac65868cb2615a6ab8e97d8baca2f024d51024946ba774f56bb"
+          ],
+          "provenance": "Authored fixed-cell reveal: shared PixelLab scaffold \u2192 this exact building. No generated morphology."
+        },
+        "collapse": {
+          "path": "animations/market-t4-collapse.png",
+          "cell": [
+            112,
+            112
+          ],
+          "frameCount": 9,
+          "fps": 8,
+          "loop": false,
+          "sha256": "bd38b4659807187e1ab06f1c746f9ce8439d446cff0cf2fb4ea5ab753bb52e90",
+          "frameHashes": [
+            "1c805d292cbb978463c6b36aec914276fd3fcaaa2dcfce987fcb19fe2d397ceb",
+            "1c805d292cbb978463c6b36aec914276fd3fcaaa2dcfce987fcb19fe2d397ceb",
+            "1c805d292cbb978463c6b36aec914276fd3fcaaa2dcfce987fcb19fe2d397ceb",
+            "2e76fc8f09d037c30b442af881fbe70f5946fb06a8f974e76f4ae6fcccb6f9ab",
+            "661e2d30b6e8b222253cd35fdfdcf2e7480554d42016cf644fa20912ab7f0e98",
+            "eaf4c034ea9c9a253674c89dfe362d156b5b01f1fe7ae0a1baf852fcc646de4e",
+            "f1c9989f6133ec8db940f2ec65f7cb265663a96b09c00d64c32527c9e3d4359d",
+            "a8094dedaaf83f6851d9ebc4e2259aaea5483925a1a2ac22a312581d6f9b021a",
+            "cf961623edebd953d32ccb3ac3b41f594187ae78a0e12552e94d76002aff92f8"
+          ],
+          "provenance": "Authored fixed-cell layer replacement: own damaged building \u2192 shared rubble. No generated motion claim."
+        }
+      },
+      "sourceCell": [
+        80,
+        80
+      ],
+      "cell": [
+        112,
+        112
+      ],
+      "drawScale": 1,
+      "pivot": [
+        56,
+        104
+      ],
+      "contactLine": 104,
+      "footprint": [
+        2,
+        2
+      ],
+      "packingOffset": [
+        16,
+        27
+      ],
+      "sourceHash": "eca8275b9d6ff64f4c01fad0e684894930836da6ebd7deb8d44cffe7167741b8",
+      "status": "technical-review-pending-owner-choice",
+      "runtimeIntegrated": false
+    }
+  ],
+  "sourceJobs": "../root-building-jobs.json",
+  "sharedConstructionRubble": "../workshop/manifest.json",
+  "scope": "art and presentation only; balance and deployment held"
+}

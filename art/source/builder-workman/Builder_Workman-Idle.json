@@ -1,0 +1,173 @@
+{
+  "character": {
+    "id": "8ccaa9b2-6743-4522-b1af-ff9c53041de9",
+    "name": "Idle",
+    "prompt": "stocky civilian builder workman, no armor, no helmet, no weapons, soft tan cloth flat cap, mustard ochre work shirt with rolled up sleeves, heavy brown leather apron, dusty blue-grey work trousers, holding a wooden handled steel claw hammer down at his side, small canvas tool pouch on his belt, short brown beard, friendly, warm earthy desaturated palette, dark near black outline, hard pixel edges",
+    "size": {
+      "width": 60,
+      "height": 60
+    },
+    "directions": 8,
+    "view": "low top-down"
+  },
+  "spritesheet": {
+    "path": "Builder_Workman-Idle.png",
+    "cell_size": {
+      "width": 84,
+      "height": 84
+    },
+    "sheet_size": {
+      "width": 672,
+      "height": 1428
+    },
+    "columns": 8,
+    "pivot": "cell-center",
+    "rows": [
+      {
+        "row": 0,
+        "type": "rotations",
+        "frame_count": 8,
+        "directions": [
+          "south",
+          "south-east",
+          "east",
+          "north-east",
+          "north",
+          "north-west",
+          "west",
+          "south-west"
+        ]
+      },
+      {
+        "row": 1,
+        "type": "animation",
+        "frame_count": 8,
+        "animation": "builder_walk",
+        "animation_group_id": "9eae39e3-8e6a-46d3-9ae7-0d952038843b",
+        "direction": "south"
+      },
+      {
+        "row": 2,
+        "type": "animation",
+        "frame_count": 8,
+        "animation": "builder_walk",
+        "animation_group_id": "9eae39e3-8e6a-46d3-9ae7-0d952038843b",
+        "direction": "south-east"
+      },
+      {
+        "row": 3,
+        "type": "animation",
+        "frame_count": 8,
+        "animation": "builder_walk",
+        "animation_group_id": "9eae39e3-8e6a-46d3-9ae7-0d952038843b",
+        "direction": "east"
+      },
+      {
+        "row": 4,
+        "type": "animation",
+        "frame_count": 8,
+        "animation": "builder_walk",
+        "animation_group_id": "9eae39e3-8e6a-46d3-9ae7-0d952038843b",
+        "direction": "north-east"
+      },
+      {
+        "row": 5,
+        "type": "animation",
+        "frame_count": 8,
+        "animation": "builder_walk",
+        "animation_group_id": "9eae39e3-8e6a-46d3-9ae7-0d952038843b",
+        "direction": "north"
+      },
+      {
+        "row": 6,
+        "type": "animation",
+        "frame_count": 8,
+        "animation": "builder_walk",
+        "animation_group_id": "9eae39e3-8e6a-46d3-9ae7-0d952038843b",
+        "direction": "north-west"
+      },
+      {
+        "row": 7,
+        "type": "animation",
+        "frame_count": 8,
+        "animation": "builder_walk",
+        "animation_group_id": "9eae39e3-8e6a-46d3-9ae7-0d952038843b",
+        "direction": "west"
+      },
+      {
+        "row": 8,
+        "type": "animation",
+        "frame_count": 8,
+        "animation": "builder_walk",
+        "animation_group_id": "9eae39e3-8e6a-46d3-9ae7-0d952038843b",
+        "direction": "south-west"
+      },
+      {
+        "row": 9,
+        "type": "animation",
+        "frame_count": 6,
+        "animation": "builder_work",
+        "animation_group_id": "d896ac30-7c51-4b07-8cf3-28c336657e8a",
+        "direction": "south"
+      },
+      {
+        "row": 10,
+        "type": "animation",
+        "frame_count": 6,
+        "animation": "builder_work",
+        "animation_group_id": "d896ac30-7c51-4b07-8cf3-28c336657e8a",
+        "direction": "south-east"
+      },
+      {
+        "row": 11,
+        "type": "animation",
+        "frame_count": 6,
+        "animation": "builder_work",
+        "animation_group_id": "d896ac30-7c51-4b07-8cf3-28c336657e8a",
+        "direction": "east"
+      },
+      {
+        "row": 12,
+        "type": "animation",
+        "frame_count": 6,
+        "animation": "builder_work",
+        "animation_group_id": "d896ac30-7c51-4b07-8cf3-28c336657e8a",
+        "direction": "north-east"
+      },
+      {
+        "row": 13,
+        "type": "animation",
+        "frame_count": 6,
+        "animation": "builder_work",
+        "animation_group_id": "d896ac30-7c51-4b07-8cf3-28c336657e8a",
+        "direction": "north"
+      },
+      {
+        "row": 14,
+        "type": "animation",
+        "frame_count": 6,
+        "animation": "builder_work",
+        "animation_group_id": "d896ac30-7c51-4b07-8cf3-28c336657e8a",
+        "direction": "north-west"
+      },
+      {
+        "row": 15,
+        "type": "animation",
+        "frame_count": 6,
+        "animation": "builder_work",
+        "animation_group_id": "d896ac30-7c51-4b07-8cf3-28c336657e8a",
+        "direction": "west"
+      },
+      {
+        "row": 16,
+        "type": "animation",
+        "frame_count": 6,
+        "animation": "builder_work",
+        "animation_group_id": "d896ac30-7c51-4b07-8cf3-28c336657e8a",
+        "direction": "south-west"
+      }
+    ]
+  },
+  "export_version": "1.0",
+  "export_date": "2026-09-10T11:02:03.382192+00:00"
+}

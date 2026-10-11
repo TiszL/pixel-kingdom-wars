@@ -1,0 +1,78 @@
+/* The loading strip (D-193). One slim plate docked at the bottom of the screen; every
+   state renders into the same fixed box, so nothing on it ever moves or resizes. */
+.sk-game-loading-shell{box-sizing:border-box;position:absolute;inset:0;z-index:10;display:flex;align-items:center;justify-content:center;padding: max(20px,env(safe-area-inset-top)) max(20px,env(safe-area-inset-right)) max(20px,env(safe-area-inset-bottom)) max(20px,env(safe-area-inset-left));background:#100e14;overflow:auto;overscroll-behavior:contain;pointer-events:auto;touch-action:pan-y}
+/* The dock: bottom-anchored, above the safe area, never a centred card. Phones: 12px + inset; desktop: 24px. */
+.sk-loading-dock{box-sizing:border-box;position:absolute;left:0;right:0;bottom:0;z-index:2;display:flex;flex-direction:column;align-items:center;gap:6px;padding:0 max(16px,env(safe-area-inset-right)) calc(12px + env(safe-area-inset-bottom,0px)) max(16px,env(safe-area-inset-left));pointer-events:none}
+.sk-loading-dock>*{pointer-events:auto}
+/* The version label: tiny, faint, on a thin dark plate, bottom-left, outside the strip. */
+.sk-loading-version{align-self:flex-start;margin:0;padding:3px 6px;font:13px/1 var(--sk-font-game,'VT323',monospace);letter-spacing:1px;color:var(--sk-text-faint,#9c937f);background:rgba(16,14,20,.72);white-space:nowrap}
+@media(min-width:768px) and (min-height:500px){
+  .sk-loading-dock{padding-bottom:24px}
+}
+/* Desktop corner placement, left of the strip's row on the same baseline, only where it fits: the 16px gutter, the
+   167px label and a gutter must end before the centred 560px strip's left edge at (width − 560) / 2, i.e. from
+   926px. Narrower (768–925px: iPad portrait, small windows) it painted over the sprite (review 2026-09-28), so there
+   the label stacks above the strip at the left edge exactly as on phones. */
+@media(min-width:960px) and (min-height:500px){
+  .sk-loading-version{position:absolute;left:max(16px,env(safe-area-inset-left));bottom:24px}
+}
+/* The strip: HUD plate (.82 surface, 1px light border, no shadow), fixed height, a grid of
+   sprite | head / meter / tip | actions. The actions column reserves nothing while empty. */
+.sk-game-loading{box-sizing:border-box;width:min(100%,560px);height:88px;margin:0;padding:10px 12px;flex-shrink:0;display:grid;grid-template-columns:56px minmax(0,1fr) auto;grid-template-rows:22px 4px minmax(0,1fr);grid-template-areas:"sprite head actions" "sprite meter actions" "sprite tip actions";column-gap:12px;row-gap:4px;align-items:start;text-align:left;color:var(--sk-text,#efe8d6);background:rgba(26,23,30,.82);border:1px solid var(--sk-border-lt,#6b6354)}
+.sk-game-loading:not([data-tips]){grid-template-columns:minmax(0,1fr) auto;grid-template-areas:"head actions" "meter actions" "tip actions"}
+.sk-game-loading[data-compact]{height:66px;padding:6px 10px;grid-template-columns:44px minmax(0,1fr) auto;grid-template-rows:18px 4px minmax(0,1fr);column-gap:10px;row-gap:2px}
+.sk-game-loading[data-compact]:not([data-tips]){grid-template-columns:minmax(0,1fr) auto}
+.sk-game-loading-tips{display:contents}
+.sk-game-loading-sprite{grid-area:sprite;align-self:center;justify-self:center;width:56px;height:56px}
+.sk-game-loading[data-compact] .sk-game-loading-sprite{width:44px;height:44px}
+.sk-game-loading-head{grid-area:head;display:flex;align-items:baseline;justify-content:space-between;min-width:0}
+.sk-game-loading h2{font:400 22px/22px var(--sk-font-game,'VT323',monospace);color:var(--sk-gold-hi,#f4d77b);margin:0;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.sk-game-loading-detail{flex:none;margin:0 0 0 8px;font:14px/22px var(--sk-font-game,'VT323',monospace);color:var(--sk-text-dim,#c4bba4);white-space:nowrap}
+.sk-game-loading[data-compact] h2{font-size:18px;line-height:18px}
+.sk-game-loading[data-compact] .sk-game-loading-detail{font-size:12px;line-height:18px}
+.sk-game-loading-detail[data-reserved]{visibility:hidden;width:0;margin:0;overflow:hidden}
+.sk-game-loading-meter{grid-area:meter;height:4px;background:#3d3833;overflow:hidden;text-align:left}
+.sk-game-loading-meter>span{display:block;height:100%;background:var(--sk-gold,#e3ae3c);transition:width .18s linear}
+/* One-way linear sweep that enters and leaves the track faded: the old ease-in-out ping-pong read as dizzy flicking. */
+.sk-game-loading-meter[data-indeterminate]>span{transition:none;animation:sk-game-loading-travel 1.6s linear infinite}
+/* The tip line: category + text on one run, clamped to two lines. The texts stack in one cell so a
+   rotation crossfades the TEXT only (200ms) with no height change. */
+.sk-game-loading-tip{grid-area:tip;display:grid;margin:0;min-width:0;align-self:start}
+.sk-game-loading-tiptext{grid-area:1/1;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow:hidden;overflow-wrap:anywhere;font:15px/17px var(--sk-font-body,'VT323',monospace);color:var(--sk-text-dim,#c4bba4)}
+.sk-game-loading[data-compact] .sk-game-loading-tiptext{font-size:13px;line-height:14px}
+.sk-game-loading-tipcat{color:var(--sk-gold,#e3ae3c);font-size:12px;letter-spacing:2px;margin-right:6px;text-transform:uppercase}
+.sk-game-loading-tip[data-reserved]{visibility:hidden}
+.sk-game-loading-tip[data-notice] .sk-game-loading-tiptext{color:var(--sk-text,#efe8d6)}
+.sk-game-loading-tiptext[data-enter]{animation:sk-game-loading-tip-in .2s linear}
+.sk-game-loading-tiptext[data-leave]{animation:sk-game-loading-tip-out .2s linear forwards;pointer-events:none}
+@keyframes sk-game-loading-tip-in{from{opacity:0}to{opacity:1}}
+@keyframes sk-game-loading-tip-out{from{opacity:1}to{opacity:0}}
+/* Actions: only when a state has buttons, at the right, 48px tap size, in place. */
+.sk-game-loading-actions{grid-area:actions;align-self:center;display:flex;flex-direction:column;gap:6px;justify-content:center}
+.sk-game-loading-actions button,.sk-game-loading-back{box-sizing:border-box;min-width:48px!important;min-height:48px!important;padding:6px 10px!important;font:400 16px/1.1 var(--sk-font-game,'VT323',monospace)!important;color:var(--sk-text,#efe8d6);border:1px solid var(--sk-border-lt,#6b6354);background:#29262e;cursor:pointer;touch-action:manipulation;white-space:nowrap}
+.sk-game-loading-actions button:focus-visible,.sk-game-loading-back:focus-visible{outline:2px solid #f4d77b;outline-offset:2px}
+.sk-game-loading-back{position:absolute;z-index:11;top:max(8px,env(safe-area-inset-top));left:max(8px,env(safe-area-inset-left))}
+.sk-game-loading-shell:has(>.sk-game-loading-back){padding-top:calc(72px + env(safe-area-inset-top))}
+/* Narrow strips (< 440px, every portrait phone): the 22px title has no room next to the sprite AND a measured
+   detail or a button. The measured detail paints as "47%": its "Downloading · " prefix is clipped to a 1px box, NOT
+   display:none, so it stays in the accessibility tree and a screen reader still hears "Downloading · 47%". The
+   sprite column stays in every state so a notice never relocates the title, meter or tip (review 2026-09-28:
+   dropping it shifted them 68px and back); instead a FAILED title drops to the compact 18px and the action button
+   may wrap to its widest word ("TRY / AGAIN", 54px; this block sits AFTER the actions rules so it wins the
+   white-space tie). Measured at 390px: the column next to a button is 200px; "Couldn’t load your
+   kingdom" at 18px is 187px and "Opening your kingdom…" (a paused pack keeps its 22px title) is 185px. */
+@media(max-width:439px){
+  .sk-game-loading-detail{position:relative}
+  .sk-game-loading-detail>span{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+  .sk-game-loading[data-failed] h2{font-size:18px}
+  .sk-game-loading-actions button{white-space:normal;width:min-content}
+}
+@keyframes sk-game-loading-travel{0%{transform:translateX(-100%);opacity:0}12%,88%{opacity:1}100%{transform:translateX(455%);opacity:0}}
+/* No strip fade-in and no transform on appear: each loading-surface handoff remounts the strip, and a replayed fade blinked it. */
+.sk-game-loading[data-reduced-motion] .sk-game-loading-meter>span{animation:none;transition:none}
+.sk-game-loading[data-reduced-motion] .sk-game-loading-tiptext{animation:none}
+.sk-game-loading[data-reduced-motion] .sk-game-loading-tiptext[data-leave]{display:none}
+@media(prefers-reduced-motion:reduce){.sk-game-loading,.sk-game-loading-meter>span,.sk-game-loading-tiptext{animation:none!important;transition:none}.sk-game-loading-tiptext[data-leave]{display:none}}
+
+/* A plain shell (the map's opening covers) centres the strip above its own dark fill. */
+.sk-game-loading-shell>.sk-game-loading{margin:auto;position:relative}

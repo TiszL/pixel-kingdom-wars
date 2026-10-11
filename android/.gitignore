@@ -1,0 +1,18 @@
+.gradle/
+.kotlin/
+**/build/
+local.properties
+.idea/
+*.iml
+.DS_Store
+.env*
+!.env.example
+*.keystore
+*.jks
+*PASSWORD*
+client-packs/
+# app/src/main/assets/{native,world} carry the shipped content pack and are committed.
+releases/
+.reports/
+.source/
+**/google-services.json

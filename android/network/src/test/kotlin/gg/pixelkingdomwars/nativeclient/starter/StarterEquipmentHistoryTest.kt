@@ -1,0 +1,15 @@
+package gg.pixelkingdomwars.nativeclient.starter
+import gg.pixelkingdomwars.nativeclient.charter.*
+import gg.pixelkingdomwars.nativeclient.ordinaryequipment.*
+import kotlinx.serialization.json.*
+import org.junit.Assert.*
+import org.junit.Test
+class StarterEquipmentHistoryTest {
+ private val f=Json.parseToJsonElement(requireNotNull(javaClass.getResource("/ordinary-equipment.json")).readText()).jsonObject
+ private val policy=EquipmentPolicy.from(f.charterObject("policy"));private val receipt=f.charterObject("starterEnvelope").charterObject("receipt")
+ private fun legacy():JsonObject{val base=f.charterObject("starterView");val original=policy.original(receipt.charterObject("route"));val routes=starterRouteIds.map{id->val common=id.startsWith("common_");val realm=if(common)id.removePrefix("common_").replace('_','-')else "crownlands";JsonObject(original+mapOf("routeId" to JsonPrimitive(id),"realmId" to JsonPrimitive(realm),"resourceId" to JsonPrimitive(starterResourceRealms.entries.single{it.value==realm}.key))+if(common)mapOf("access" to buildJsonObject{put("kind","starter_common");put("policyVersion",1)})else emptyMap())}
+  return JsonObject(base-"fitting"+mapOf("routes" to JsonArray(routes),"acceptingDepartures" to JsonPrimitive(false),"flight" to JsonObject(receipt-setOf("wallet","request"))))}
+ @Test fun `paused legacy discovery reads all ordinary routes and an original fitted flight`() {val parsed=StarterExpeditionView.from(legacy());assertFalse(parsed.acceptingDepartures);assertEquals(11,parsed.routes.size);assertEquals("route_compass",parsed.flight!!.route.fitting!!.itemId);assertEquals("15",parsed.flight.route.grossQuantity);assertEquals(receipt.charterText("returnsAt"),parsed.flight.returnsAt);policy.original(receipt.charterObject("route"))}
+ @Test fun `absent fitting serializes exactly absent and cannot leak into old command`() {val view=StarterExpeditionView.from(JsonObject(legacy()+("flight" to JsonNull)+( "acceptingDepartures" to JsonPrimitive(true))));val id=StarterIdentity("https://legacy.test","devnet",view.wallet);val command=StarterExpeditionCommand.review(id,view,"00000000-0000-4000-8000-000000000099","coastal_survey");assertFalse(command.request.body().containsKey("fitting"));assertFalse(starterJson.encodeToJsonElement(StarterExpeditionRoute.serializer(),command.route).jsonObject.containsKey("fitting"));assertThrows(Exception::class.java){command.copy(route=starterJson.decodeFromJsonElement<StarterExpeditionRoute>(receipt.charterObject("route"))).validate()}}
+ @Test fun `legacy history rejects null unsupported and contradictory fitting snapshots`() {val flight=legacy().charterObject("flight");val route=flight.charterObject("route");for(fitting in listOf(JsonNull,JsonObject(route.charterObject("fitting")+("policyVersion" to JsonPrimitive(2))),JsonObject(route.charterObject("fitting")+("originalNetQuantity" to JsonPrimitive("999"))))){val forged=JsonObject(legacy()+("flight" to JsonObject(flight+("route" to JsonObject(route+("fitting" to fitting))))));assertThrows(Exception::class.java){StarterExpeditionView.from(forged)}}}
+}

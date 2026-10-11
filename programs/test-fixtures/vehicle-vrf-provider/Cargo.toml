@@ -1,0 +1,14 @@
+[package]
+name = "vehicle-vrf-provider"
+version = "0.1.0"
+edition = "2021"
+publish = false
+description = "Synthetic local-only vehicle request/callback interface fixture"
+[lib]
+crate-type = ["cdylib", "lib"]
+name = "vehicle_vrf_provider"
+[features]
+default = []
+no-entrypoint = []
+[dependencies]
+anchor-lang = "=0.32.1"

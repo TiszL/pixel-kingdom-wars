@@ -1,0 +1,99 @@
+/* Celebration.css — the receipt-gated celebration and its overlay root. Only --pk-* values.
+ * Transient overlay, not HUD; no scrim (scrims exist only under a Full sheet or the Seal). Same size on every class:
+ * 200-300 wide (Feedback.kt widthIn(200, 300); not in TOKENS, spelled from bridge sizes), centred. */
+
+.pk-celebration-root {
+  --pk-k-cel-min-w: calc(var(--pk-size-name-plate-min-w) + var(--pk-s32) + var(--pk-s8)); /* 200 */
+  --pk-k-cel-max-w: calc(var(--pk-size-name-plate-max-w) + var(--pk-s16) + var(--pk-s4)); /* 300 */
+  /* KIT RAYS_DEG_PER_S 8 -> one turn per 45 s (= 50 x celebrate); not in TOKENS (gap). */
+  --pk-k-rays-turn: calc(var(--pk-dur-celebrate) * 50);
+  position: absolute;
+  inset: 0;
+  z-index: var(--z-celebrate);
+  display: grid;
+  place-items: center;
+  pointer-events: none;
+  animation: pk-cel-fade-in var(--pk-dur-plate-in) var(--pk-ease-out) both;
+}
+.pk-celebration-root--leaving { animation: pk-cel-fade-out var(--pk-dur-crossfade) var(--pk-ease-in) both; }
+.pk-celebration-root--leaving * { pointer-events: none !important; }
+
+.pk-celebration {
+  position: relative;
+  display: flex;
+  min-width: var(--pk-k-cel-min-w);
+  max-width: min(var(--pk-k-cel-max-w), 100% - 2 * var(--pk-gutter));
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: none;
+  font: inherit;
+  cursor: pointer;
+  pointer-events: auto;
+  -webkit-tap-highlight-color: transparent;
+}
+.pk-celebration__plate { flex: 1 1 auto; min-width: 0; }
+.pk-celebration__plate > .pk-plate__face { overflow: hidden; }
+
+/* Stepped gold sunrays: 6 hard-edged 18° wedges every 60° at 22% gold (Feedback.kt drawRays), turning 8°/s. */
+.pk-celebration__rays {
+  position: absolute;
+  inset: -50%;
+  background: repeating-conic-gradient(from 0deg,
+    color-mix(in srgb, var(--pk-gold) 22%, transparent) 0deg 18deg, transparent 18deg 60deg);
+  animation: pk-cel-rays var(--pk-k-rays-turn) var(--pk-ease-linear) infinite;
+}
+.pk-celebration__sparks { position: absolute; inset: 0; }
+.pk-celebration__sparks > i {
+  position: absolute;
+  left: calc(12% + 9.5% * var(--k));
+  bottom: 15%;
+  width: var(--pk-s4);
+  height: var(--pk-s4);
+  background: var(--pk-gold-hi);
+  animation: pk-cel-spark var(--pk-dur-celebrate) var(--pk-ease-out) both;
+}
+.pk-celebration__col {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--pk-s8);
+  padding: var(--pk-s12) var(--pk-s8);
+  text-align: center;
+}
+/* Ribbon: ink S rim 2, gold face with the gold-hi band (kit-2.png), ink label; drops 12 px in with `pop`. */
+.pk-celebration__ribbon {
+  display: inline-flex;
+  padding: var(--pk-outline-chip);
+  background: var(--pk-ink);
+  clip-path: var(--pk-clip-s);
+  animation: pk-cel-drop var(--pk-dur-plate-in) var(--pk-ease-pop) both;
+}
+.pk-celebration__ribbon > span {
+  padding: var(--pk-s2) calc(var(--pk-s8) + var(--pk-s2));
+  clip-path: var(--pk-clip-s);
+  color: var(--pk-ink);
+  background: linear-gradient(var(--pk-gold-hi) 0 var(--pk-s2), var(--pk-gold) var(--pk-s2));
+}
+.pk-celebration__line { color: var(--pk-text); }
+
+/* The auto-dismiss clock: invisible, runs once for --pk-dur-celebrate. */
+.pk-celebration__clock {
+  position: absolute; width: 0; height: 0; overflow: hidden;
+  animation: pk-cel-clock var(--pk-dur-celebrate) var(--pk-ease-linear) both;
+}
+
+/* Reduced motion: no turning rays, no drop (sparks are not rendered). */
+.pk-celebration-root--still .pk-celebration__rays,
+.pk-celebration-root--still .pk-celebration__ribbon { animation: none; }
+
+@keyframes pk-cel-rays { to { transform: rotate(360deg); } }
+@keyframes pk-cel-spark {
+  from { transform: translateY(0); opacity: 1; }
+  to { transform: translateY(calc(-1 * var(--pk-s32) - var(--pk-s8) * var(--r))); opacity: .4; }
+}
+@keyframes pk-cel-drop { from { transform: translateY(calc(-1 * var(--pk-s12))); } to { transform: none; } }
+@keyframes pk-cel-clock { from { opacity: 0; } to { opacity: 1; } }
+@keyframes pk-cel-fade-in { from { opacity: 0; } to { opacity: 1; } }
+@keyframes pk-cel-fade-out { from { opacity: 1; } to { opacity: 0; } }

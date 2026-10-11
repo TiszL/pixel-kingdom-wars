@@ -1,0 +1,35 @@
+# Isolated fantasy-world acceptance data. Never point this at a recovery volume.
+name: shardkeep-fantasy-qa
+services:
+  postgres:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_USER: shardkeep
+      POSTGRES_PASSWORD: shardkeep
+      POSTGRES_DB: fantasy_qa
+    ports: ["127.0.0.1:55508:5432"]
+    volumes: ["fantasy-pgdata:/var/lib/postgresql/data"]
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U shardkeep -d fantasy_qa"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+  redis:
+    image: redis:7-alpine
+    ports: ["127.0.0.1:56408:6379"]
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+  media:
+    image: minio/minio:latest
+    command: server /data --console-address ':9001'
+    environment:
+      MINIO_ROOT_USER: fantasy-local
+      MINIO_ROOT_PASSWORD: fantasy-local-only
+    ports: ["127.0.0.1:19090:9000", "127.0.0.1:19091:9001"]
+    volumes: ["fantasy-media:/data"]
+volumes:
+  fantasy-pgdata:
+  fantasy-media:

@@ -1,0 +1,251 @@
+{
+ "columns": {
+  "mismatch": ["tileId","dx","dy","pack value","catalog value","catalog realmId|null"]
+ },
+ "count": 157782,
+ "generator": "16950360f03ed2843e6974157461f5745e1f26005ae4ee4e5ee719a194edeb3f",
+ "note": "Each realm pack deeds.png (decoded by the pinned loader.js decodePng, R channel) against the frozen catalog per grid cell: want = 255 when the catalog puts the tile in this realm, 96 in another realm, 0 none. A mismatch is a pack defect (plan §7: the grid is never bent to fit a pack); native reports the same list (stats.maskMismatch) and draws the catalog.",
+ "pack": {
+  "manifestSha256": "ac241498c956d8da3309ddfa5228b6cb147ad751ee40d9a75b31f4f9069c9007",
+  "packVersion": "pm1-cb8faa56909faa31"
+ },
+ "pin": "02e9da8414156b9e0000df1653de6273b196cca6",
+ "realms": [
+  {
+   "cols": 119,
+   "counts": {
+    "catalogThis": 4237,
+    "packNone": 2758,
+    "packOther": 26,
+    "packOtherValue": 0,
+    "packThis": 4237
+   },
+   "deedsSha256": "4eb64d166f4ff35b2b374f63944699498d91a4419c2a0b46e9239c7de8306801",
+   "id": "cinderfall",
+   "mismatch": [
+    [193747,72,5,0,255,"cinderfall"],
+    [229012,57,54,255,0,null]
+   ],
+   "mismatchCount": 2,
+   "packDeclaredDeeds": 4237,
+   "rows": 59
+  },
+  {
+   "cols": 178,
+   "counts": {
+    "catalogThis": 12959,
+    "packNone": 7974,
+    "packOther": 2386,
+    "packOtherValue": 0,
+    "packThis": 12958
+   },
+   "deedsSha256": "cc092addb13176183690f296e0589cae55e6bbb161a60d583b43d48f55a9f5cf",
+   "id": "crownlands",
+   "mismatch": [
+    [57262,30,14,96,0,null],
+    [59422,30,17,96,0,null],
+    [63022,30,22,0,96,"frostveil"],
+    [65902,30,26,255,96,"frostveil"],
+    [83317,165,50,0,255,"crownlands"],
+    [135050,58,122,255,0,null],
+    [135051,59,122,255,0,null],
+    [135054,62,122,96,255,"crownlands"],
+    [135055,63,122,96,255,"crownlands"],
+    [135056,64,122,96,255,"crownlands"],
+    [135117,125,122,0,96,"sunscar"]
+   ],
+   "mismatchCount": 11,
+   "packDeclaredDeeds": 12958,
+   "rows": 131
+  },
+  {
+   "cols": 166,
+   "counts": {
+    "catalogThis": 13610,
+    "packNone": 12035,
+    "packOther": 252,
+    "packOtherValue": 0,
+    "packThis": 13609
+   },
+   "deedsSha256": "1bdb605a6fdf2696e78e3da02426411c591c0a37635e5a9d46e8d0c9eb99d1d2",
+   "id": "elderwood",
+   "mismatch": [
+    [93187,132,10,0,96,"frostveil"],
+    [97507,132,16,0,255,"elderwood"],
+    [98227,132,17,0,255,"elderwood"],
+    [113992,57,39,255,0,null],
+    [134848,33,68,255,0,null],
+    [134851,36,68,255,0,null],
+    [134965,150,68,255,0,null],
+    [134966,151,68,255,0,null],
+    [138472,57,73,255,0,null],
+    [141322,27,77,255,0,null],
+    [145747,132,83,0,255,"elderwood"],
+    [162307,132,106,0,255,"elderwood"],
+    [167234,19,113,0,255,"elderwood"],
+    [173077,102,121,0,255,"elderwood"],
+    [174517,102,123,0,255,"elderwood"],
+    [175237,102,124,0,255,"elderwood"],
+    [191002,27,146,255,0,null],
+    [193912,57,150,0,255,"elderwood"]
+   ],
+   "mismatchCount": 18,
+   "packDeclaredDeeds": 13609,
+   "rows": 156
+  },
+  {
+   "cols": 226,
+   "counts": {
+    "catalogThis": 13126,
+    "packNone": 10066,
+    "packOther": 3927,
+    "packOtherValue": 0,
+    "packThis": 13127
+   },
+   "deedsSha256": "6700aba2e08fa50418b4922ca24c821093073d308512517f320211aded58fd0f",
+   "id": "frostveil",
+   "mismatch": [
+    [21187,101,14,255,0,null],
+    [26167,41,21,255,0,null],
+    [37659,13,37,0,255,"frostveil"],
+    [43582,176,45,0,255,"frostveil"],
+    [44302,176,46,0,255,"frostveil"],
+    [49912,26,54,255,0,null],
+    [52072,26,57,255,0,null],
+    [57262,176,64,255,0,null],
+    [59422,176,67,255,0,null],
+    [63022,176,72,0,255,"frostveil"],
+    [65902,176,76,96,255,"frostveil"],
+    [77317,71,92,255,0,null],
+    [93187,101,114,0,255,"frostveil"]
+   ],
+   "mismatchCount": 13,
+   "packDeclaredDeeds": 13127,
+   "rows": 120
+  },
+  {
+   "cols": 101,
+   "counts": {
+    "catalogThis": 5582,
+    "packNone": 3505,
+    "packOther": 0,
+    "packOtherValue": 0,
+    "packThis": 5585
+   },
+   "deedsSha256": "7c76616d0c4f574419ac56ad7de02503f82caa3003884ec97e2bb0525c3eca84",
+   "id": "seeker-reach",
+   "mismatch": [
+    [50497,14,12,255,0,null],
+    [51277,74,13,255,0,null],
+    [54892,89,18,0,255,"seeker-reach"],
+    [67777,14,36,255,0,null],
+    [79297,14,52,255,0,null],
+    [87292,89,63,255,0,null],
+    [93772,89,72,0,255,"seeker-reach"],
+    [94492,89,73,0,255,"seeker-reach"],
+    [101617,14,83,255,0,null]
+   ],
+   "mismatchCount": 9,
+   "packDeclaredDeeds": 5585,
+   "rows": 90
+  },
+  {
+   "cols": 169,
+   "counts": {
+    "catalogThis": 15270,
+    "packNone": 13558,
+    "packOther": 411,
+    "packOtherValue": 0,
+    "packThis": 15268
+   },
+   "deedsSha256": "bdedbdcc80faa86df64df1dc3011711a07927c4846a4fec98262f7bc019354a5",
+   "id": "stormcairn",
+   "mismatch": [
+    [48907,76,17,255,0,null],
+    [49627,76,18,255,0,null],
+    [50347,76,19,255,0,null],
+    [69067,76,45,255,0,null],
+    [69787,76,46,255,0,null],
+    [79867,76,60,0,255,"stormcairn"],
+    [80587,76,61,0,255,"stormcairn"],
+    [135331,100,137,0,255,"stormcairn"],
+    [135332,101,137,0,255,"stormcairn"],
+    [135333,102,137,0,255,"stormcairn"],
+    [135334,103,137,0,255,"stormcairn"],
+    [135335,104,137,0,255,"stormcairn"]
+   ],
+   "mismatchCount": 12,
+   "packDeclaredDeeds": 15268,
+   "rows": 173
+  },
+  {
+   "cols": 181,
+   "counts": {
+    "catalogThis": 13925,
+    "packNone": 9272,
+    "packOther": 689,
+    "packOtherValue": 0,
+    "packThis": 13931
+   },
+   "deedsSha256": "1ef3670aeca0dd4af464c49a1b7d2ea84118be8cd43a2c208b4d63073f0d6c88",
+   "id": "sunscar",
+   "mismatch": [
+    [135050,33,13,96,0,null],
+    [135051,34,13,96,0,null],
+    [135054,37,13,255,96,"crownlands"],
+    [135055,38,13,255,96,"crownlands"],
+    [135056,39,13,255,96,"crownlands"],
+    [135117,100,13,0,255,"sunscar"],
+    [163957,140,53,0,255,"sunscar"],
+    [165262,5,55,255,0,null],
+    [165982,5,56,255,0,null],
+    [174622,5,68,255,0,null],
+    [175342,5,69,255,0,null],
+    [176062,5,70,255,0,null]
+   ],
+   "mismatchCount": 12,
+   "packDeclaredDeeds": 13931,
+   "rows": 132
+  },
+  {
+   "cols": 109,
+   "counts": {
+    "catalogThis": 6705,
+    "packNone": 5457,
+    "packOther": 45,
+    "packOtherValue": 0,
+    "packThis": 6706
+   },
+   "deedsSha256": "f464404d742ff9042406513cf2ce736e71aec0a8dd4f69800c2bf70b80698962",
+   "id": "thornwake",
+   "mismatch": [
+    [120292,32,9,0,255,"thornwake"],
+    [123937,77,14,255,0,null],
+    [131137,77,24,0,255,"thornwake"],
+    [134690,30,29,255,0,null],
+    [134692,32,29,255,0,null],
+    [134753,93,29,255,0,null],
+    [167066,6,74,0,255,"thornwake"],
+    [193747,47,111,0,96,"cinderfall"]
+   ],
+   "mismatchCount": 8,
+   "packDeclaredDeeds": 6706,
+   "rows": 112
+  }
+ ],
+ "schema": 1,
+ "sources": {
+  "concepts/globe3d-2026-09-23/src/realm/camera.js": "879c4d6aabda484b36b3ceeea69108692131a5c222579c7983c9a282d8e5c4a9",
+  "concepts/globe3d-2026-09-23/src/realm/contracts.js": "3d3215dee2273b456c98b6684f5dc6835c1aaea1c3f7ea98e55fa462cb693eb0",
+  "concepts/globe3d-2026-09-23/src/realm/core.js": "8a6a17ceb4c2d65d0b18383b57b7f20b0685f471472e7144263b8de0a1f19941",
+  "concepts/globe3d-2026-09-23/src/realm/groundcost.js": "52ed0b62657866babdaa84c420fa78ea573e4dbade5406d3aee8defdf8ca05fa",
+  "concepts/globe3d-2026-09-23/src/realm/loader.js": "3aedcb60d54c73c883f5f8d4032ed1959d2e9f0febad0441f6ca3a9cd37668cb",
+  "concepts/globe3d-2026-09-23/src/realm/map.js": "5ca663519fb8fdf66dcec93136c26ed0910935decde620b6239e8615024cfea2",
+  "concepts/globe3d-2026-09-23/src/realm/ui.js": "3b1cfc07315e12f1cd2e81194b1c23526cbc399281a96461852462154683b4c3",
+  "packages/shared/src/constants.ts": "360f8c643ee0211b5a7d8a81eedb60dc5fb3c47a67c9202109c424794d4821d6",
+  "packages/shared/src/data/fantasy-world-v1.json": "cf82430425544e849746b699cf7fae5b334cf30ce1204907a9f4ceb121ca50bd",
+  "packages/shared/src/fantasyWorld.ts": "0e374b6a9688eba68f4bc7656a6ef41eaada169e19cbac05e4b7768c06e1a166"
+ },
+ "suite": "deedmask",
+ "tolerance": "exact"
+}

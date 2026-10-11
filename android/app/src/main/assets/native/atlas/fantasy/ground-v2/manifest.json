@@ -1,0 +1,65 @@
+{
+  "version": 2,
+  "sourceSize": 1536,
+  "worldOriginTiles": -34,
+  "worldTiles": 98,
+  "tilePx": 32,
+  "files": [
+    {
+      "id": "frostveil",
+      "path": "frostveil.png",
+      "sha256": "86df6a83a9ba069b1a64f0fc754470b870ea92f84b29eb36c6f65fede23a5983",
+      "width": 1536,
+      "height": 1536
+    },
+    {
+      "id": "elderwood",
+      "path": "elderwood.png",
+      "sha256": "d8dad39a1c95fbef7eb53bcea38fa0c3a192f6880f659b58072cf68b8bc450d2",
+      "width": 1536,
+      "height": 1536
+    },
+    {
+      "id": "sunscar",
+      "path": "sunscar.png",
+      "sha256": "466af802750cc02299e140dc46f0a5a91e79384802109a6cc0f6306f3df0b687",
+      "width": 1536,
+      "height": 1536
+    },
+    {
+      "id": "crownlands",
+      "path": "crownlands.png",
+      "sha256": "85c9b58c9c1de5b7d5b9333201d6872884ba6959769c24b3260b49818902d022",
+      "width": 1536,
+      "height": 1536
+    },
+    {
+      "id": "seeker-reach",
+      "path": "seeker-reach.png",
+      "sha256": "b5b63110eab3849f3292801b9ee25984d44ff22e844057acb3311794c4d15f45",
+      "width": 1536,
+      "height": 1536
+    },
+    {
+      "id": "stormcairn",
+      "path": "stormcairn.png",
+      "sha256": "9ee40a604c0bff45a072078b07a1e040c11ee54c5c5f180f496f96cc0d3866c0",
+      "width": 1536,
+      "height": 1536
+    },
+    {
+      "id": "thornwake",
+      "path": "thornwake.png",
+      "sha256": "a75bbf48f318d78bc378ab950b995364baa75e6baa47a03688567aceeb6f8acb",
+      "width": 1536,
+      "height": 1536
+    },
+    {
+      "id": "cinderfall",
+      "path": "cinderfall.png",
+      "sha256": "423cae471a19b3502e7843329296edc2e72583c4ddf217c53fa379e7c0dd4eef",
+      "width": 1536,
+      "height": 1536
+    }
+  ]
+}

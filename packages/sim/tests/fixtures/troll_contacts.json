@@ -1,0 +1,22 @@
+{
+  "hash": "74370882",
+  "outcome": {
+    "stars": 3,
+    "destructionPct": 100,
+    "keepDestroyed": true,
+    "vaultDestroyed": false,
+    "mineDestroyed": false,
+    "victory": true,
+    "buildings": [
+      {
+        "id": "keep",
+        "type": "keep",
+        "hp": 0,
+        "maxHp": 1200,
+        "destroyed": true
+      }
+    ],
+    "ticks": 433,
+    "eventCount": 145
+  }
+}

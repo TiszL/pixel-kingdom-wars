@@ -1,0 +1,106 @@
+/* HudKit.css — the painted pieces P1 shares (HudArt.tsx): chunky face, shape glyphs, art boxes, type helpers, and the
+ * placement of P0's <PkBadge> on HUD buttons. The badge itself, the 2-pass outline (.pk-ol1 / .pk-ol2) and the missing-
+ * icon "?" are P0's (Button.css, kitBase.css, Icon.css): parity verdict B3, no P1 copies.
+ * Colours and sizes come only from the token bridge (pk-tokens.generated.css). The few geometry constants the bridge
+ * does not carry are declared ONCE below, each with its source, as proposed bridge additions (see HomeHud.md §Gaps).
+ * No border-radius, no blurred shadow, no @media (reduced motion is the shared kitBase.css block). */
+
+:where(.pk-hud, .pk-drawer) {
+  /* --- Not in TOKENS (proposed bridge additions) --- */
+  /* KIT CornerProfiles.M = design --px-m: 3 steps, cut 8 (2,4,8). Built from the space scale. */
+  --pk-hud-clip-m: polygon(0 var(--pk-s8), var(--pk-s2) var(--pk-s8), var(--pk-s2) var(--pk-s4), var(--pk-s4) var(--pk-s4), var(--pk-s4) var(--pk-s2), var(--pk-s8) var(--pk-s2), var(--pk-s8) 0,
+    calc(100% - var(--pk-s8)) 0, calc(100% - var(--pk-s8)) var(--pk-s2), calc(100% - var(--pk-s4)) var(--pk-s2), calc(100% - var(--pk-s4)) var(--pk-s4), calc(100% - var(--pk-s2)) var(--pk-s4), calc(100% - var(--pk-s2)) var(--pk-s8), 100% var(--pk-s8),
+    100% calc(100% - var(--pk-s8)), calc(100% - var(--pk-s2)) calc(100% - var(--pk-s8)), calc(100% - var(--pk-s2)) calc(100% - var(--pk-s4)), calc(100% - var(--pk-s4)) calc(100% - var(--pk-s4)), calc(100% - var(--pk-s4)) calc(100% - var(--pk-s2)), calc(100% - var(--pk-s8)) calc(100% - var(--pk-s2)), calc(100% - var(--pk-s8)) 100%,
+    var(--pk-s8) 100%, var(--pk-s8) calc(100% - var(--pk-s2)), var(--pk-s4) calc(100% - var(--pk-s2)), var(--pk-s4) calc(100% - var(--pk-s4)), var(--pk-s2) calc(100% - var(--pk-s4)), var(--pk-s2) calc(100% - var(--pk-s8)), 0 calc(100% - var(--pk-s8)));
+  /* Android PkwTokens.Type display fallbacks (PkwTokens.kt:149-157: caption 20, label 22, title 24, primary 26,
+   * numeralL 30 VT323) expressed on the bridge's single stand-in (22 px, amendment 3). On Press Start 2P admission
+   * these become --pk-type-caption / -label / -title / -primary / -numeral-l. */
+  --pk-hud-t-caption: calc(var(--pk-font-display-standin-size) - var(--pk-s2));
+  --pk-hud-t-label: var(--pk-font-display-standin-size);
+  --pk-hud-t-title: calc(var(--pk-font-display-standin-size) + var(--pk-s2));
+  --pk-hud-t-primary: calc(var(--pk-font-display-standin-size) + var(--pk-s4));
+  /* drawChunky lip on HUD faces is 5 (HomeHud.kt LevelBadge drawChunky(…, 5f); design .btn inset -5px). */
+  --pk-hud-lip-face: calc(var(--pk-lip-button) - var(--pk-text-outline-1));
+  /* Charcoal ramp (PkwTokens.kt:65 charcoalRamp #4A4552/#29262E/#232028/#151218) → nearest bridge colours. */
+  --pk-hud-char-hi: var(--pk-veil-hi);
+  --pk-hud-char-mid: var(--pk-veil);
+  --pk-hud-char-lo: var(--pk-ink);
+
+  font-family: var(--pk-font-body);
+  color: var(--pk-text);
+}
+
+/* The kit is laid out border-box (design/final/*.html `*{box-sizing:border-box}`), whatever the host page sets. */
+:where(.pk-hud, .pk-drawer), :where(.pk-hud, .pk-drawer) *, :where(.pk-hud, .pk-drawer) *::before, :where(.pk-hud, .pk-drawer) *::after { box-sizing: border-box; }
+
+/* ---------- type ---------- */
+.pk-disp { font-family: var(--pk-font-display); font-size: var(--pk-hud-t-caption); line-height: 1; letter-spacing: 0; }
+.pk-disp--label { font-size: var(--pk-hud-t-label); }
+.pk-disp--title { font-size: var(--pk-hud-t-title); }
+.pk-disp--primary { font-size: var(--pk-hud-t-primary); }
+.pk-body { font-family: var(--pk-font-body); font-size: var(--pk-type-body); line-height: 1; }
+.pk-small { font-family: var(--pk-font-body); font-size: var(--pk-type-small); line-height: 1; }
+/* Outlined text: P0 kitBase.css `.pk-ol1` / `.pk-ol2` (HudArt.tsx imports it). */
+
+/* ---------- art ---------- */
+.pk-art { display: inline-flex; align-items: center; justify-content: center; flex: none; position: relative; }
+/* Integer-scaled art may overhang its box by under half a step, centred (KitLogic.integerArtScale). */
+.pk-art > img { display: block; image-rendering: pixelated; flex: none; pointer-events: none; }
+
+/* ---------- drawn shapes (KIT-API rule 4) ---------- */
+.pk-shape { position: relative; display: inline-block; flex: none; }
+.pk-shape > i { display: none; }
+/* shape:envelope — design home.html mail tab */
+.pk-shape--mail { width: calc(var(--pk-s24) + var(--pk-s2)); height: calc(var(--pk-s16) + var(--pk-s4)); background: var(--pk-cream); box-shadow: inset 0 calc(-1 * var(--pk-lip-button-pressed)) 0 var(--pk-parch-lo); }
+.pk-shape--mail > i:nth-child(1) { display: block; position: absolute; left: 0; right: 0; top: 0; height: calc(var(--pk-s8) + var(--pk-lip-button-pressed)); background: var(--pk-parch-lo); clip-path: polygon(0 0, 100% 0, 50% 100%); }
+.pk-shape--mail > i:nth-child(2) { display: block; position: absolute; left: calc(var(--pk-s8) + var(--pk-s2)); top: calc(var(--pk-s6) + var(--pk-text-outline-1)); width: var(--pk-s6); height: var(--pk-s6); background: var(--pk-red); }
+/* shape:speech — design .bubble-ic */
+.pk-shape--chat { width: calc(var(--pk-s24) + var(--pk-s2)); height: calc(var(--pk-s16) + var(--pk-s4)); background: var(--pk-text); clip-path: var(--pk-clip-s); }
+.pk-shape--chat::after { content: ''; position: absolute; left: calc(var(--pk-s4) + var(--pk-text-outline-1)); bottom: calc(-1 * var(--pk-text-outline-1)); width: var(--pk-s6); height: var(--pk-s6); background: var(--pk-text); }
+.pk-shape--chat > i { display: block; position: absolute; top: var(--pk-s8); width: var(--pk-s4); height: var(--pk-s4); background: var(--pk-ink); }
+.pk-shape--chat > i:nth-child(1) { left: calc(var(--pk-s4) + var(--pk-text-outline-1)); }
+.pk-shape--chat > i:nth-child(2) { left: calc(var(--pk-s12) - var(--pk-text-outline-1)); }
+.pk-shape--chat > i:nth-child(3) { left: calc(var(--pk-s16) + var(--pk-text-outline-1)); }
+/* shape:caret — design .caret > b (ink chevron) */
+.pk-shape--caret { width: calc(var(--pk-s8) + var(--pk-s2)); height: var(--pk-s6); background: var(--pk-ink);
+  clip-path: polygon(0 0, 100% 0, 100% 33%, 80% 33%, 80% 66%, 60% 66%, 60% 100%, 40% 100%, 40% 66%, 20% 66%, 20% 33%, 0 33%); }
+.pk-shape--up { width: calc(var(--pk-s8) + var(--pk-s2)); height: var(--pk-s6); background: var(--pk-ink); transform: scaleY(-1);
+  clip-path: polygon(0 0, 100% 0, 100% 33%, 80% 33%, 80% 66%, 60% 66%, 60% 100%, 40% 100%, 40% 66%, 20% 66%, 20% 33%, 0 33%); }
+
+/* ---------- badge placement (DS §10) — the badge is P0's <PkBadge> (Button.css); P1 only places it ---------- */
+/* On a HUD button it sits on the corner, over the face. Scoped under P1's .pk-tap (0,2,0) so it beats P0's
+ * `.pk-badge { position: relative }` whatever the CSS load order (the same pattern as Button.css `.pk-btn > .pk-btn__badge`). */
+.pk-tap > .pk-badge { position: absolute; z-index: 2; }
+/* The width grows with its text; positioned children of a button use these corners (−6 / −6, KIT-API Chips). */
+.pk-badge--tr { top: calc(-1 * var(--pk-s6)); right: calc(-1 * var(--pk-s6)); }
+.pk-badge--tl { top: calc(-1 * var(--pk-s6)); left: calc(-1 * var(--pk-s6)); }
+
+/* ---------- chunky face (design .btn; HomeHud.kt drawChunky) ---------- */
+.pk-chunky { position: relative; display: flex; width: 100%; height: 100%; background: var(--pk-ink); clip-path: var(--pk-hud-clip-m);
+  padding: var(--pk-outline-button) var(--pk-outline-button) var(--pk-lip-button);
+  transition: padding var(--pk-dur-release) var(--pk-ease-pop), transform var(--pk-dur-release) var(--pk-ease-pop); }
+.pk-chunky__face { flex: 1; min-width: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: var(--pk-s2);
+  clip-path: var(--pk-clip-s); position: relative;
+  background: linear-gradient(var(--c-hi) 0 var(--pk-hi-band), var(--c-face) var(--pk-hi-band) 55%, var(--c-mid) 55%);
+  box-shadow: inset 0 calc(-1 * var(--pk-hud-lip-face)) 0 var(--c-lo); color: var(--pk-text); }
+.pk-chunky--gold { --c-hi: var(--pk-gold-hi); --c-face: var(--pk-gold); --c-mid: var(--pk-gold-mid); --c-lo: var(--pk-gold-lo); }
+.pk-chunky--green { --c-hi: var(--pk-green-hi); --c-face: var(--pk-green); --c-mid: var(--pk-green-mid); --c-lo: var(--pk-green-lo); }
+.pk-chunky--blue { --c-hi: var(--pk-blue-hi); --c-face: var(--pk-blue); --c-mid: var(--pk-blue-mid); --c-lo: var(--pk-blue-lo); }
+.pk-chunky--red { --c-hi: var(--pk-red-hi); --c-face: var(--pk-red); --c-mid: var(--pk-red-mid); --c-lo: var(--pk-red-lo); }
+.pk-chunky--stone { --c-hi: var(--pk-stone-hi); --c-face: var(--pk-stone); --c-mid: var(--pk-stone-mid); --c-lo: var(--pk-stone-lo); }
+.pk-chunky--char { --c-hi: var(--pk-hud-char-hi); --c-face: var(--pk-charcoal); --c-mid: var(--pk-hud-char-mid); --c-lo: var(--pk-hud-char-lo); }
+.pk-chunky--off { --c-hi: var(--pk-off-hi); --c-face: var(--pk-off); --c-mid: var(--pk-off); --c-lo: var(--pk-off-lo); }
+.pk-chunky--moss { --c-hi: var(--pk-moss-hi); --c-face: var(--pk-moss); --c-mid: var(--pk-moss); --c-lo: var(--pk-moss-lo); }
+
+/* ---------- the interactive shell every painted piece uses ---------- */
+.pk-tap { appearance: none; border: 0; margin: 0; padding: 0; background: none; color: inherit; font: inherit; cursor: pointer;
+  position: relative; display: inline-flex; align-items: center; justify-content: center; flex: none;
+  -webkit-tap-highlight-color: transparent; touch-action: manipulation; }
+.pk-tap:focus { outline: none; }
+.pk-tap:focus-visible { outline: var(--pk-outline-chip) solid var(--pk-gold-hi); outline-offset: var(--pk-s2); }
+.pk-tap[disabled], .pk-tap[aria-disabled='true'] { cursor: default; }
+/* Hover = the first 1 px of the press travel, no colour change (lane §4 Input). */
+.pk-tap:hover:not([disabled]) .pk-chunky { transform: translateY(var(--pk-text-outline-1)); }
+/* Press: 60 ms linear down to the pressed lip, 90 ms pop back (DS §7 "Any button"). */
+.pk-tap:active:not([disabled]) .pk-chunky { transition-duration: var(--pk-dur-press); transition-timing-function: var(--pk-ease-linear);
+  padding-bottom: var(--pk-lip-button-pressed); transform: translateY(var(--pk-lip-button-pressed)); }

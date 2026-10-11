@@ -1,0 +1,332 @@
+# Production stack for the devnet launch — one host, ONE origin.
+#
+#     ./infra/deploy.sh          (never a bare `up` — the deploy builds + verifies)
+#
+# Caddy serves the built web dist AND proxies /api/* to the api container on
+# play.pixelkingdomwars.com. The single-origin shape is load-bearing: the
+# session cookie is sameSite:'lax' + host-only and the installed APK is pinned
+# to play.* — splitting the API onto a subdomain logs every player out (see
+# infra/Caddyfile.vps for the full why). Only the LANDING site lives on
+# Cloudflare Pages, at the apex (landing/DEPLOY.md).
+#
+# Differs from docker-compose.yml (the dev one) in every way that matters:
+# nothing binds to a public interface except Caddy, Postgres and Redis are not
+# reachable from the internet at all, and every service restarts unless stopped.
+#
+# The Mac (production until cutover) runs this same file with the local +
+# origin overlays and never starts caddy — changes here must keep that working.
+
+name: shardkeep
+
+services:
+  postgres:
+    image: postgres:16-alpine
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:?set POSTGRES_USER in infra/.env.prod}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?set POSTGRES_PASSWORD in infra/.env.prod}
+      POSTGRES_DB: ${POSTGRES_DB:-shardkeep}
+    # Headroom for DB_POOL_MAX x (api replicas + worker) plus admin sessions.
+    command: ['postgres', '-c', 'max_connections=200']
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    # NO ports: — the database is reachable only over the compose network.
+    # Exposing 5432 on a public VPS is how a devnet ledger becomes someone
+    # else's. Use `docker compose exec postgres psql` for admin access.
+    healthcheck:
+      test: ['CMD-SHELL', 'pg_isready -U ${POSTGRES_USER}']
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  # One-shot least-privilege bootstrap. `legacy` is a no-op so existing devnet
+  # environments keep working; mainnet-beta refuses to start unless isolated
+  # API/worker roles and independent passwords are configured. deploy.sh runs
+  # this both before read-only preflights and after migrations.
+  db-roles:
+    image: postgres:16-alpine
+    restart: "no"
+    depends_on:
+      postgres: { condition: service_healthy }
+    environment:
+      PGHOST: postgres
+      PGPORT: 5432
+      PGDATABASE: ${POSTGRES_DB:-shardkeep}
+      PGUSER: ${POSTGRES_USER:?set POSTGRES_USER in infra/.env.prod}
+      PGPASSWORD: ${POSTGRES_PASSWORD:?set POSTGRES_PASSWORD in infra/.env.prod}
+      POSTGRES_USER: ${POSTGRES_USER:?set POSTGRES_USER in infra/.env.prod}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?set POSTGRES_PASSWORD in infra/.env.prod}
+      DB_ROLE_MODE: ${DB_ROLE_MODE:-legacy}
+      SOLANA_CLUSTER: ${SOLANA_CLUSTER:-devnet}
+      API_DB_USER: ${API_DB_USER:-}
+      API_DB_PASSWORD: ${API_DB_PASSWORD:-}
+      WORKER_DB_USER: ${WORKER_DB_USER:-}
+      WORKER_DB_PASSWORD: ${WORKER_DB_PASSWORD:-}
+    volumes:
+      - ./db:/opt/shardkeep-db:ro
+    command: ['/opt/shardkeep-db/provision-runtime-roles.sh']
+
+  redis:
+    image: redis:7-alpine
+    restart: unless-stopped
+    # appendonly: the queues are not the source of truth (Postgres is), but
+    # losing them on restart means silently dropped jobs rather than a loud error.
+    command: ['redis-server', '--appendonly', 'yes']
+    volumes:
+      - redisdata:/data
+    healthcheck:
+      test: ['CMD', 'redis-cli', 'ping']
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  # STATELESS. Serves requests and nothing else — no schedulers, no migrations.
+  # `docker compose up -d --scale api=3` is therefore safe: the rate limiter is
+  # Redis-backed, sessions are stateless JWTs, and every singleton lives in the
+  # worker below. Nothing here has to change to add a container.
+  api:
+    image: ${API_IMAGE:-shardkeep-api:latest}
+    restart: unless-stopped
+    depends_on:
+      postgres: { condition: service_healthy }
+      db-roles: { condition: service_completed_successfully }
+      redis: { condition: service_healthy }
+    env_file:
+      # required:false so infra/docker-compose.local.yml can run this same
+      # stack with its own env. deploy.sh still hard-fails without this file,
+      # and every value that matters uses ${VAR:?} below.
+      - path: .env.prod
+        required: false
+    environment:
+      NODE_ENV: production
+      HOST: 0.0.0.0
+      PORT: 3001
+      DATABASE_URL: postgres://${API_DB_USER:-${POSTGRES_USER}}:${API_DB_PASSWORD:-${POSTGRES_PASSWORD}}@postgres:5432/${POSTGRES_DB:-shardkeep}
+      REDIS_URL: redis://redis:6379
+      # Explicitly OFF here even though it is the default: this is the line that
+      # makes scaling this service safe, so it should be visible, not implied.
+      ENABLE_WORKERS: 'false'
+      RUN_INPROC_SCHEDULERS: 'false'
+      # Public custody identity only. The API verifies deposits, publishes PoR
+      # and queues instant payouts without possessing any signer material.
+      HOT_WALLET_PUBKEY: ${HOT_WALLET_PUBKEY:?set HOT_WALLET_PUBKEY in infra/.env.prod}
+      # Defense in depth: env_file contains worker paths, but an accidental
+      # signer factory call on this process still sees no usable path.
+      ADMIN_KEYPAIR_PATH: ''
+      HOT_WALLET_KEYPAIR_PATH: ''
+      DEED_OPS_KEYPAIR_PATH: ''
+      # Shared boot validation sees the URL, but API has no signer network.
+      WITHDRAWAL_POLICY_SIGNER_ALLOW_PRIVATE_HTTP: 'true'
+    # server.ts drains in-flight requests on SIGTERM. Docker's default is 10s,
+    # which can cut a raid resolution or a Solana confirmation mid-flight.
+    stop_grace_period: 60s
+    healthcheck:
+      # /health executes `select 1`, so this fails when Postgres is unreachable
+      # rather than merely when the process is alive.
+      test: ['CMD', 'node', '-e', "fetch('http://localhost:3001/health').then(r=>process.exit(r.ok?0:1)).catch(()=>process.exit(1))"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 20s
+
+  # Private, database-blind custody boundary. This process alone receives the
+  # hot-wallet key and its append-only policy state. It has no default network,
+  # so it cannot reach Postgres, Redis, the public API or the internet; the
+  # worker supplies a finalized blockhash and remains responsible for exact-byte
+  # broadcast/reconciliation after the signer has durably counted the artifact.
+  withdrawal-signer:
+    image: ${API_IMAGE:-shardkeep-api:latest}
+    restart: unless-stopped
+    # These numeric IDs own every mode-0600 signer input on the host. deploy.sh
+    # refuses a mismatch before maintenance, avoiding a late signer crash-loop.
+    user: '${WITHDRAWAL_POLICY_SIGNER_UID:-1000}:${WITHDRAWAL_POLICY_SIGNER_GID:-1000}'
+    read_only: true
+    cap_drop: [ALL]
+    security_opt: [no-new-privileges:true]
+    # tsx keeps its transform cache under os.tmpdir(); keep the root filesystem
+    # immutable while providing only a bounded, ephemeral scratch path.
+    tmpfs:
+      - /tmp:rw,noexec,nosuid,nodev,size=64m
+    command: ['node', '--import', 'tsx', 'src/policySignerServer.ts']
+    environment:
+      NODE_ENV: production
+      SOLANA_CLUSTER: ${SOLANA_CLUSTER:-devnet}
+      # This image implements only the devnet file backend. Mainnet-beta is
+      # rejected until a reviewed HSM/enclave adapter exists in code.
+      WITHDRAWAL_POLICY_CUSTODY_BACKEND: ${WITHDRAWAL_POLICY_CUSTODY_BACKEND:-file}
+      HOT_WALLET_PUBKEY: ${HOT_WALLET_PUBKEY:?set HOT_WALLET_PUBKEY in infra/.env.prod}
+      HOT_WALLET_KEYPAIR_PATH: /run/secrets/hot-wallet.keypair.json
+      WITHDRAWAL_POLICY_KEEP_MINT: ${WITHDRAWAL_POLICY_KEEP_MINT:?set WITHDRAWAL_POLICY_KEEP_MINT in infra/.env.prod}
+      WITHDRAWAL_POLICY_SIGNER_AUTH_TOKEN_FILE: /run/secrets/withdrawal-policy-signer.token
+      WITHDRAWAL_POLICY_SIGNER_STATE_FILE: /var/lib/shardkeep-policy/state.json
+      WITHDRAWAL_POLICY_MAX_PER_TRANSFER_KEEP: ${WITHDRAWAL_POLICY_MAX_PER_TRANSFER_KEEP:?set signer transfer limit in infra/.env.prod}
+      WITHDRAWAL_POLICY_MAX_PER_WALLET_24H_KEEP: ${WITHDRAWAL_POLICY_MAX_PER_WALLET_24H_KEEP:?set signer wallet limit in infra/.env.prod}
+      WITHDRAWAL_POLICY_MAX_AGGREGATE_24H_KEEP: ${WITHDRAWAL_POLICY_MAX_AGGREGATE_24H_KEEP:?set signer aggregate limit in infra/.env.prod}
+      WITHDRAWAL_POLICY_SIGNER_HOST: 0.0.0.0
+      # Reviewed exception: this listener exists only on the internal network.
+      WITHDRAWAL_POLICY_SIGNER_ALLOW_NON_LOOPBACK_BIND: 'true'
+      WITHDRAWAL_POLICY_SIGNER_PORT: 3003
+    volumes:
+      - ./keys/hot-wallet.keypair.json:/run/secrets/hot-wallet.keypair.json:ro
+      - ./keys/withdrawal-policy-signer.token:/run/secrets/withdrawal-policy-signer.token:ro
+      - ./policy-signer-state:/var/lib/shardkeep-policy
+    networks: [withdrawal-signer]
+    # Allow an in-flight state-file fsync + directory fsync to finish before
+    # Docker escalates SIGTERM. The signer is always stopped after the worker.
+    stop_grace_period: 60s
+    healthcheck:
+      test: ['CMD', 'node', '-e', "fetch('http://127.0.0.1:3003/health').then(r=>process.exit(r.ok?0:1)).catch(()=>process.exit(1))"]
+      interval: 10s
+      timeout: 3s
+      retries: 3
+      start_period: 10s
+
+  # EXACTLY ONE OF THESE. Owns every scheduled job: BullMQ repeatables (snapshot,
+  # league reset, PvE respawn, outbox relay, withdrawal payouts, the emission
+  # controller) and the deed->R2 reconciler. Never scale it — a second copy means
+  # two withdrawal processors and two emission controllers, and the emission
+  # controller's rate limiter is per TICK, so doubling the ticks doubles how fast
+  # emission recovers toward 1.0x. It publishes no ports and serves no traffic.
+  worker:
+    image: ${API_IMAGE:-shardkeep-api:latest}
+    restart: unless-stopped
+    # Matches ownership of admin/deed/token mounts and the private signer.
+    user: '${WITHDRAWAL_POLICY_SIGNER_UID:-1000}:${WITHDRAWAL_POLICY_SIGNER_GID:-1000}'
+    depends_on:
+      postgres: { condition: service_healthy }
+      db-roles: { condition: service_completed_successfully }
+      redis: { condition: service_healthy }
+      withdrawal-signer: { condition: service_healthy }
+    env_file:
+      # required:false so infra/docker-compose.local.yml can run this same
+      # stack with its own env. deploy.sh still hard-fails without this file,
+      # and every value that matters uses ${VAR:?} below.
+      - path: .env.prod
+        required: false
+    environment:
+      # DEVNET PLAYTEST ONLY (owner 2026-08-22). Default off unless .env.prod opts in.
+      DEVNET_FAUCET_ENABLED: ${DEVNET_FAUCET_ENABLED:-false}
+      DEVNET_FAUCET_KEYPAIR_PATH: /app/infra/keys/devnet-faucet.keypair.json
+      NODE_ENV: production
+      HOST: 127.0.0.1
+      # A different port so a single-box deploy cannot collide with api's.
+      PORT: 3002
+      DATABASE_URL: postgres://${WORKER_DB_USER:-${POSTGRES_USER}}:${WORKER_DB_PASSWORD:-${POSTGRES_PASSWORD}}@postgres:5432/${POSTGRES_DB:-shardkeep}
+      REDIS_URL: redis://redis:6379
+      ENABLE_WORKERS: 'true'
+      HOT_WALLET_PUBKEY: ${HOT_WALLET_PUBKEY:?set HOT_WALLET_PUBKEY in infra/.env.prod}
+      # The database-connected worker has no hot key. It authenticates over the
+      # private network and validates the returned signed transaction before it
+      # persists or broadcasts a byte.
+      HOT_WALLET_KEYPAIR_PATH: ''
+      WITHDRAWAL_SIGNER_MODE: remote
+      WITHDRAWAL_POLICY_CUSTODY_BACKEND: ${WITHDRAWAL_POLICY_CUSTODY_BACKEND:-file}
+      WITHDRAWAL_POLICY_SIGNER_URL: http://withdrawal-signer:3003
+      # Exact reviewed HTTP origin on the unexposed internal Docker network.
+      WITHDRAWAL_POLICY_SIGNER_ALLOW_PRIVATE_HTTP: 'true'
+      WITHDRAWAL_POLICY_SIGNER_AUTH_TOKEN_FILE: /run/secrets/withdrawal-policy-signer.token
+      WITHDRAWAL_POLICY_KEEP_MINT: ${WITHDRAWAL_POLICY_KEEP_MINT:?set WITHDRAWAL_POLICY_KEEP_MINT in infra/.env.prod}
+      WITHDRAWAL_POLICY_MAX_PER_TRANSFER_KEEP: ${WITHDRAWAL_POLICY_MAX_PER_TRANSFER_KEEP:?set signer transfer limit in infra/.env.prod}
+      WITHDRAWAL_POLICY_MAX_PER_WALLET_24H_KEEP: ${WITHDRAWAL_POLICY_MAX_PER_WALLET_24H_KEEP:?set signer wallet limit in infra/.env.prod}
+      WITHDRAWAL_POLICY_MAX_AGGREGATE_24H_KEEP: ${WITHDRAWAL_POLICY_MAX_AGGREGATE_24H_KEEP:?set signer aggregate limit in infra/.env.prod}
+    # Longer than the API: a payout that has been BROADCAST but not yet recorded
+    # must be allowed to finish. Being SIGKILLed there leaves a row in
+    # 'processing' with the money already gone, which is the one state that needs
+    # a human to resolve.
+    stop_grace_period: 120s
+    volumes:
+      # Explicit mounts prevent the worker from seeing the hot-wallet key while
+      # preserving its separate root-relay and deed-ops responsibilities.
+      - ./keys/admin.keypair.json:/app/infra/keys/admin.keypair.json:ro
+      - ./keys/deed-ops.keypair.json:/app/infra/keys/deed-ops.keypair.json:ro
+      # DEVNET PLAYTEST ONLY: the in-game SOL faucet treasury (money/devnetFaucet.ts).
+      - ./keys/devnet-faucet.keypair.json:/app/infra/keys/devnet-faucet.keypair.json:ro
+      # DEVNET ONLY (D153.275): the in-app SKR faucet's dedicated authority key
+      # (devnet-only/index.ts registerDevnetOnlyJobs). Worker-only and read-only:
+      # the api routes need just the public DEVNET_SKR_FAUCET_AUTHORITY, so the api
+      # never mounts it. .env.prod names this container path in
+      # DEVNET_SKR_FAUCET_KEYPAIR_PATH; deploy.sh checks the host file when
+      # DEVNET_SKR_FAUCET_ENABLED=true (docs/deploy/SKR-FAUCET-WORKER-KEY.md).
+      - ./keys/devnet-skr-faucet.keypair.json:/run/secrets/devnet-skr-faucet.json:ro
+      - ./keys/withdrawal-policy-signer.token:/run/secrets/withdrawal-policy-signer.token:ro
+    networks: [default, withdrawal-signer]
+    # The worker is the ONLY container whose /health carries the deed R2 + chain
+    # sync legs (an api container answers "worker owns it", ok:true) — so an
+    # external uptime check on /api/health can NEVER see a dead deed sync. This
+    # healthcheck is the machine-visible signal for exactly that failure, the
+    # one that once froze deed metadata for five days unnoticed.
+    healthcheck:
+      test: ['CMD', 'node', '-e', "fetch('http://127.0.0.1:3002/health').then(r=>process.exit(r.ok?0:1)).catch(()=>process.exit(1))"]
+      interval: 30s
+      timeout: 5s
+      retries: 4
+      start_period: 30s
+
+  # Deploy/maintenance one-shots only. This service deliberately retains the
+  # schema-owner credential; it never serves traffic and mounts no signing keys.
+  # Runtime API and worker containers use the isolated URLs above.
+  migrate:
+    image: ${API_IMAGE:-shardkeep-api:latest}
+    restart: "no"
+    depends_on:
+      postgres: { condition: service_healthy }
+    env_file:
+      - path: .env.prod
+        required: false
+    environment:
+      NODE_ENV: production
+      DATABASE_URL: postgres://${POSTGRES_USER}:${POSTGRES_PASSWORD}@postgres:5432/${POSTGRES_DB:-shardkeep}
+      # Shared config validation sees the compose-internal signer origin even
+      # though this one-shot has neither signer credentials nor network access.
+      WITHDRAWAL_POLICY_SIGNER_ALLOW_PRIVATE_HTTP: 'true'
+
+  # The ONLY service with public ports. Terminates TLS (real ACME — the DNS A
+  # record must be DNS-only at least until first issuance), serves the web dist,
+  # and proxies /api/* to the api container. Not started on the Mac (local-up.sh
+  # names its services explicitly), so the mounts below may not exist there.
+  caddy:
+    # Pinned to the exact version production runs (verified 2026-09-02, K-071).
+    # Same rule as Anchor/Agave: the edge is upgraded deliberately, never by a
+    # floating tag on the next `up -d --force-recreate`.
+    image: caddy:2.11.4-alpine
+    command: ['sh', '/etc/caddy/start.sh']
+    restart: unless-stopped
+    depends_on: [api]
+    # 443/udp is HTTP/3 — Caddy advertises it via Alt-Svc, and a blocked UDP
+    # port means every player waits out a QUIC timeout before falling back.
+    ports: ['80:80', '443:443', '443:443/udp']
+    environment:
+      # Now the ONE public origin (play.pixelkingdomwars.com) — game + /api.
+      API_DOMAIN: ${API_DOMAIN:?set API_DOMAIN in infra/.env.prod}
+      # M45 §3: /native/releases/<code>-<sha256>.apk proxies to the deed R2 bucket's
+      # public base (scheme://host, no path or trailing slash). Fail-soft: unset
+      # only makes APK downloads 502; production sets it for deed metadata anyway.
+      R2_PUBLIC_BASE_URL: ${R2_PUBLIC_BASE_URL:-https://invalid.invalid}
+    volumes:
+      - ./Caddyfile.vps:/etc/caddy/Caddyfile:ro
+      - ./caddy-start.sh:/etc/caddy/start.sh:ro
+      # The persistent /config/shardkeep-maintenance marker keeps a staged
+      # release private even after restart; absent marker means normal startup.
+      - ./Caddyfile.maintenance:/etc/caddy/Caddyfile.maintenance:ro
+      - ./maintenance:/srv/maintenance:ro
+      # The published web dist, read-only. infra/deploy.sh builds apps/web/dist
+      # on this box and rsyncs it to infra/dist — a SEPARATE dir so a build that
+      # dies halfway can never leave the live site half-empty. (infra/dist is
+      # covered by the repo's `dist/` gitignore rule.)
+      # _releases/<SHA> and _assets remain inside this same mount; deploy's
+      # --delete excludes them so old clients can fetch their exact public bytes.
+      - ./dist:/srv/www:ro
+      # Certificates and ACME account keys. Losing this volume means re-issuing
+      # on every restart, which will hit Let's Encrypt rate limits.
+      - caddydata:/data
+      - caddyconfig:/config
+
+volumes:
+  pgdata:
+  redisdata:
+  caddydata:
+  caddyconfig:
+
+networks:
+  withdrawal-signer:
+    internal: true

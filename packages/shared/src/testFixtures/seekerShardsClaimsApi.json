@@ -1,0 +1,58 @@
+{
+  "request": {
+    "idempotencyKey": "10000000-0000-4000-8000-000000000001",
+    "baseId": "20000000-0000-4000-8000-000000000001",
+    "termId": "30000000-0000-4000-8000-000000000001",
+    "spotId": 0
+  },
+  "envelope": {
+    "wallet": "11111111111111111111111111111111",
+    "receipt": {
+      "idempotencyKey": "10000000-0000-4000-8000-000000000001",
+      "baseId": "20000000-0000-4000-8000-000000000001",
+      "termId": "30000000-0000-4000-8000-000000000001",
+      "spotId": 0,
+      "id": "10000000-0000-4000-8000-000000000001",
+      "wallet": "11111111111111111111111111111111",
+      "termHash": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "winnerCount": 3,
+      "poolTotal": "8",
+      "previousTotal": "1",
+      "cumulativeTotal": "2",
+      "quantity": "1",
+      "balanceBefore": "4",
+      "balanceAfter": "5",
+      "claimedAt": "2026-09-25T00:00:00.000Z",
+      "currency": "SHARDS",
+      "ledgerTransactionId": "40000000-0000-4000-8000-000000000001"
+    }
+  },
+  "entitlements": {
+    "version": 1,
+    "wallet": "11111111111111111111111111111111",
+    "claimsEnabled": false,
+    "currency": "SHARDS",
+    "status": "available",
+    "reason": null,
+    "cursor": null,
+    "nextCursor": "30000000-0000-4000-8000-000000000001",
+    "rows": [
+      {
+        "termId": "30000000-0000-4000-8000-000000000001",
+        "termHash": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "startsAt": "2026-09-18T00:00:00.000Z",
+        "endsAt": "2026-09-25T00:00:00.000Z",
+        "spotId": 0,
+        "winnerCount": 3,
+        "poolTotal": "8",
+        "cumulativeTotal": "2",
+        "claimedTotal": "1",
+        "dueQuantity": "1"
+      }
+    ]
+  },
+  "policy": {
+    "totalSpots": 100,
+    "operatingTermSec": 604800
+  }
+}

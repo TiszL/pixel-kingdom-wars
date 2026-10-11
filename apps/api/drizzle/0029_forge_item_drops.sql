@@ -1,0 +1,1 @@
+ALTER TABLE "forge_contributions" ADD COLUMN "item_dropped" text;

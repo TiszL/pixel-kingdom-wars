@@ -1,0 +1,98 @@
+{
+  "schemaVersion": 1,
+  "family": "currency",
+  "revision": "gems-emerald-step-v2",
+  "decision": "D-153.6 (delegated selection; revisable)",
+  "selectedCandidate": 0,
+  "selectedMasterSha256": "5e018e37d4a3ab376ba853cb7a9fa943b9abd00c58044a09e7f8e2ab4355b2e9",
+  "provider": "PixelLab",
+  "tool": "edit_image_pixen",
+  "generationUnits": 3,
+  "status": "illustrated and admitted dark; no deployment or individual owner visual approval",
+  "runtimeReady": true,
+  "geometry": {
+    "scale": 1,
+    "frameIndexBase": 0,
+    "anchor": "cell-centre",
+    "tiers": "none; separately authored native UI sizes"
+  },
+  "brandRule": "Emerald step-cut gem; KEEP and all existing masters unchanged.",
+  "items": [
+    {
+      "id": "gem-24",
+      "path": "chips/gem-24.png",
+      "dimensions": [
+        24,
+        24
+      ],
+      "sha256": "88d9a84782ccd3ec5c19dcc4a00dc5c3c617c8d3339b2540f5a5229343e82bc1",
+      "bytes": 508,
+      "alphaBounds": [
+        4,
+        2,
+        19,
+        20
+      ],
+      "objectId": "c69692b8-aa04-4584-b7cc-fcb7ffa8558f",
+      "review": "native-preview-reviewed-by-delegated-agent",
+      "nativeRaster": true
+    },
+    {
+      "id": "gem-32",
+      "path": "chips/gem-32.png",
+      "dimensions": [
+        32,
+        32
+      ],
+      "sha256": "602ce9b0f7f7f8bb395ebca5bd3ff003706a6199a818267c4aefecdef510d51f",
+      "bytes": 712,
+      "alphaBounds": [
+        5,
+        2,
+        26,
+        27
+      ],
+      "objectId": "2521d7ed-fb06-4e2b-9c31-8d412671ae64",
+      "review": "native-preview-reviewed-by-delegated-agent",
+      "nativeRaster": true
+    },
+    {
+      "id": "gem-48",
+      "path": "chips/gem-48.png",
+      "dimensions": [
+        48,
+        48
+      ],
+      "sha256": "3bbf971a986073985b4028be5218db68bbab2131b54c66c169ae92804ec2b827",
+      "bytes": 1088,
+      "alphaBounds": [
+        8,
+        4,
+        38,
+        41
+      ],
+      "objectId": "901da3cf-4eb1-4493-855e-de9129fbb9ae",
+      "review": "native-preview-reviewed-by-delegated-agent",
+      "nativeRaster": true
+    },
+    {
+      "id": "gem-64",
+      "path": "gem-64.png",
+      "dimensions": [
+        64,
+        64
+      ],
+      "sha256": "5e018e37d4a3ab376ba853cb7a9fa943b9abd00c58044a09e7f8e2ab4355b2e9",
+      "bytes": 1030,
+      "alphaBounds": [
+        11,
+        5,
+        51,
+        54
+      ],
+      "objectId": "f1dba13f-fd31-4912-bfae-3bec99e35015",
+      "review": "native-preview-reviewed-by-delegated-agent",
+      "nativeRaster": true
+    }
+  ]
+}

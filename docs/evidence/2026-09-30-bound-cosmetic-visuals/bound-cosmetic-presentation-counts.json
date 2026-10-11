@@ -1,0 +1,28 @@
+{
+  "presentation": {
+    "log": "/tmp/bound-cosmetic-presentation1.log",
+    "passed": 6,
+    "failed": 0,
+    "skipped": 0,
+    "durationSec": 32.19
+  },
+  "diagnostic": {
+    "log": "/tmp/bound-cosmetic-presentation-diagnostic2.log",
+    "passed": 1,
+    "durationSec": 22.36,
+    "note": "Earlier diagnostic1 had no test file because wrong relative shell output path; zero assertions, preserved raw log"
+  },
+  "types": {
+    "log": "/tmp/bound-cosmetic-presentation-types1.log",
+    "exit": 0
+  },
+  "adaptedLegacySql11": {
+    "log": "/tmp/bound-cosmetic-visual-sql5.log",
+    "passed": 11,
+    "failed": 0,
+    "skipped": 0,
+    "durationSec": 21.69,
+    "journalEntries": 285,
+    "fixturePrefix": "0279"
+  }
+}

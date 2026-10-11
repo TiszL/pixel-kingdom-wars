@@ -1,0 +1,49 @@
+qa.pixelkingdomwars.com {
+    encode zstd gzip {
+        match {
+            header Content-Type application/json*
+        }
+    }
+    header X-Content-Type-Options nosniff
+    header Referrer-Policy no-referrer
+    handle_path /api/* {
+        reverse_proxy api:3001 {
+            flush_interval -1
+        }
+    }
+    handle_path /native-content/* {
+        root * /srv/native-content
+        header Cache-Control "public, max-age=31536000, immutable"
+        file_server
+    }
+    handle /icons/icon-192.png {
+        root * /srv/public
+        file_server
+    }
+    handle /.well-known/assetlinks.json {
+        root * /srv/public
+        file_server
+    }
+    # M45 §3 update channel: the same exact immutable APK name shape as production,
+    # served statically from the candidate's public directory; anything else 404s.
+    @nativeRelease path_regexp ^/native/releases/[0-9]{1,6}-[0-9a-f]{64}\.apk$
+    handle @nativeRelease {
+        root * /srv/public
+        @existing file {path}
+        header @existing Cache-Control "public, max-age=31536000, immutable"
+        @missing not file {path}
+        header @missing Cache-Control "no-store"
+        file_server
+    }
+    handle /native/releases/* {
+        header Cache-Control "no-store"
+        respond 404
+    }
+    # Private test builds for the owner's Seeker: unguessable per-build path, no listing.
+    handle_path /apk/* {
+        root * /srv/public/apk
+        header Cache-Control "no-store"
+        file_server
+    }
+    respond "Pixel Kingdom Wars private candidate. Open the local launcher or test app." 200
+}

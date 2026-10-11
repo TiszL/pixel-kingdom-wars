@@ -1,0 +1,219 @@
+{
+  "_provenance": {
+    "source": "FIXTURE-DERIVED, not a live capture (night 2026-10-06, K-night-A1)",
+    "what": "One claim on 2026-10-06 through the four P5 routes, then the status after each step and the owned grants page after the claim.",
+    "server": "TiszL server night/server ca7fe4d7d: apps/api/test/skr-faucet-fixtures.ts through apps/api/src/devnet-only/skrFaucet.ts; checked by apps/api/test/skr-faucet-native-decoder.ts",
+    "generator": "tools/skr-faucet-fixture-vectors.mts",
+    "recapture": "Re-capture from a live chain lane with scripts/candidate/capture-skr-faucet-vectors.mjs (server repo) and the tester phone; newerPage cannot come from a live server and stays fixture-derived.",
+    "pin": {
+      "mint": "Bincuik5v411CXzJaptVZu2xsMwQrcfc4D5epovrRa3R",
+      "decimals": 6,
+      "grantSkr": 1000,
+      "grantReadPageSize": 20
+    }
+  },
+  "status": {
+    "enabled": true,
+    "cluster": "devnet",
+    "isTestToken": true,
+    "label": "Devnet Test SKR — not official SKR",
+    "symbol": "tSKR",
+    "mint": "Bincuik5v411CXzJaptVZu2xsMwQrcfc4D5epovrRa3R",
+    "decimals": 6,
+    "grantSkr": "1000",
+    "grantRaw": "1000000000",
+    "day": "2026-10-06",
+    "nextEligibleAt": "2026-10-07T00:00:00.000Z",
+    "eligible": true,
+    "reason": "ok",
+    "today": null
+  },
+  "claim": {
+    "grant": {
+      "id": "2d2e8255-1236-4b18-bb4d-468ba15545be",
+      "status": "requested",
+      "mint": "Bincuik5v411CXzJaptVZu2xsMwQrcfc4D5epovrRa3R",
+      "decimals": 6,
+      "amountRaw": "1000000000",
+      "error": null,
+      "requestedAt": "2026-10-06T12:00:00.000Z",
+      "sentAt": null,
+      "attempt": null
+    },
+    "nextEligibleAt": "2026-10-07T00:00:00.000Z"
+  },
+  "prepare": {
+    "grant": {
+      "id": "2d2e8255-1236-4b18-bb4d-468ba15545be",
+      "status": "requested",
+      "mint": "Bincuik5v411CXzJaptVZu2xsMwQrcfc4D5epovrRa3R",
+      "decimals": 6,
+      "amountRaw": "1000000000",
+      "error": null,
+      "requestedAt": "2026-10-06T12:00:00.000Z",
+      "sentAt": null,
+      "attempt": {
+        "id": "a1172e23-3397-4c9f-8e4a-d2996c1e013d",
+        "phase": "prepared",
+        "signature": null,
+        "lastValidBlockHeight": "200"
+      }
+    },
+    "unsignedTransaction": "AgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgEFCcBQxWN6RPqGKf/zzMziMAyzYqY9mdlfxUFFJm9DMkRaIBLLkMpg6OXY2vZuInLSIz4EhtVX6MZhQe2JIBd9frc62MU9dxVUz6e+bLDoPQNTHNDaVcEvt59c8YUfdAad9Pl5FMjPVi8nvAayDKFgeGiJ6iDVNwP/nMHa7s/90EDSjJclj04kifG7PRApFI4NgwtaE5na/xCEBI572Nvp+FmfSUOenbCVvEER7SXTV5XYMbxVoEf0sdf2ruN3e7QSIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABt324ddloZPZy+FGzut5rBy0he1fWzeROoz1hX7/AKlrc0qO/yRv5zSzjUBGwUju5fBP6Hs6CkI5Vad5Vt4Ga8aCJjfH0xDsV2J74AuiWdJTdJ9Kr2REcM/75To19zJCAgQGAAIABQYHAQEHBQMFAgEICgwAypo7AAAAAAY=",
+    "networkFeeLamports": "10000",
+    "accountRentLamports": "2039280"
+  },
+  "submit": {
+    "grant": {
+      "id": "2d2e8255-1236-4b18-bb4d-468ba15545be",
+      "status": "requested",
+      "mint": "Bincuik5v411CXzJaptVZu2xsMwQrcfc4D5epovrRa3R",
+      "decimals": 6,
+      "amountRaw": "1000000000",
+      "error": null,
+      "requestedAt": "2026-10-06T12:00:00.000Z",
+      "sentAt": null,
+      "attempt": {
+        "id": "a1172e23-3397-4c9f-8e4a-d2996c1e013d",
+        "phase": "player_signed",
+        "signature": "5eMt4VE4PaTNTya7At4EyXr98RKXBzhJBmC9LXsmKo3EpTt8nHWMdGVeiyrc5XkNJQoht9im7VosvWiUH7b19upB",
+        "lastValidBlockHeight": "200"
+      }
+    }
+  },
+  "statusSignRequired": {
+    "enabled": true,
+    "cluster": "devnet",
+    "isTestToken": true,
+    "label": "Devnet Test SKR — not official SKR",
+    "symbol": "tSKR",
+    "mint": "Bincuik5v411CXzJaptVZu2xsMwQrcfc4D5epovrRa3R",
+    "decimals": 6,
+    "grantSkr": "1000",
+    "grantRaw": "1000000000",
+    "day": "2026-10-06",
+    "nextEligibleAt": "2026-10-07T00:00:00.000Z",
+    "eligible": false,
+    "reason": "sign_required",
+    "today": {
+      "id": "2d2e8255-1236-4b18-bb4d-468ba15545be",
+      "status": "requested",
+      "mint": "Bincuik5v411CXzJaptVZu2xsMwQrcfc4D5epovrRa3R",
+      "decimals": 6,
+      "amountRaw": "1000000000",
+      "error": null,
+      "requestedAt": "2026-10-06T12:00:00.000Z",
+      "sentAt": null,
+      "attempt": null
+    }
+  },
+  "statusPending": {
+    "enabled": true,
+    "cluster": "devnet",
+    "isTestToken": true,
+    "label": "Devnet Test SKR — not official SKR",
+    "symbol": "tSKR",
+    "mint": "Bincuik5v411CXzJaptVZu2xsMwQrcfc4D5epovrRa3R",
+    "decimals": 6,
+    "grantSkr": "1000",
+    "grantRaw": "1000000000",
+    "day": "2026-10-06",
+    "nextEligibleAt": "2026-10-07T00:00:00.000Z",
+    "eligible": false,
+    "reason": "pending",
+    "today": {
+      "id": "2d2e8255-1236-4b18-bb4d-468ba15545be",
+      "status": "requested",
+      "mint": "Bincuik5v411CXzJaptVZu2xsMwQrcfc4D5epovrRa3R",
+      "decimals": 6,
+      "amountRaw": "1000000000",
+      "error": null,
+      "requestedAt": "2026-10-06T12:00:00.000Z",
+      "sentAt": null,
+      "attempt": {
+        "id": "a1172e23-3397-4c9f-8e4a-d2996c1e013d",
+        "phase": "prepared",
+        "signature": null,
+        "lastValidBlockHeight": "200"
+      }
+    }
+  },
+  "statusSubmitted": {
+    "enabled": true,
+    "cluster": "devnet",
+    "isTestToken": true,
+    "label": "Devnet Test SKR — not official SKR",
+    "symbol": "tSKR",
+    "mint": "Bincuik5v411CXzJaptVZu2xsMwQrcfc4D5epovrRa3R",
+    "decimals": 6,
+    "grantSkr": "1000",
+    "grantRaw": "1000000000",
+    "day": "2026-10-06",
+    "nextEligibleAt": "2026-10-07T00:00:00.000Z",
+    "eligible": false,
+    "reason": "submitted",
+    "today": {
+      "id": "2d2e8255-1236-4b18-bb4d-468ba15545be",
+      "status": "requested",
+      "mint": "Bincuik5v411CXzJaptVZu2xsMwQrcfc4D5epovrRa3R",
+      "decimals": 6,
+      "amountRaw": "1000000000",
+      "error": null,
+      "requestedAt": "2026-10-06T12:00:00.000Z",
+      "sentAt": null,
+      "attempt": {
+        "id": "a1172e23-3397-4c9f-8e4a-d2996c1e013d",
+        "phase": "player_signed",
+        "signature": "5eMt4VE4PaTNTya7At4EyXr98RKXBzhJBmC9LXsmKo3EpTt8nHWMdGVeiyrc5XkNJQoht9im7VosvWiUH7b19upB",
+        "lastValidBlockHeight": "200"
+      }
+    }
+  },
+  "statusClaimed": {
+    "enabled": true,
+    "cluster": "devnet",
+    "isTestToken": true,
+    "label": "Devnet Test SKR — not official SKR",
+    "symbol": "tSKR",
+    "mint": "Bincuik5v411CXzJaptVZu2xsMwQrcfc4D5epovrRa3R",
+    "decimals": 6,
+    "grantSkr": "1000",
+    "grantRaw": "1000000000",
+    "day": "2026-10-06",
+    "nextEligibleAt": "2026-10-07T00:00:00.000Z",
+    "eligible": false,
+    "reason": "daily_limit",
+    "today": {
+      "id": "2d2e8255-1236-4b18-bb4d-468ba15545be",
+      "status": "sent",
+      "mint": "Bincuik5v411CXzJaptVZu2xsMwQrcfc4D5epovrRa3R",
+      "decimals": 6,
+      "amountRaw": "1000000000",
+      "error": null,
+      "requestedAt": "2026-10-06T12:00:00.000Z",
+      "sentAt": "2026-10-06T12:00:00.000Z",
+      "attempt": {
+        "id": "a1172e23-3397-4c9f-8e4a-d2996c1e013d",
+        "phase": "finalized",
+        "signature": "5eMt4VE4PaTNTya7At4EyXr98RKXBzhJBmC9LXsmKo3EpTt8nHWMdGVeiyrc5XkNJQoht9im7VosvWiUH7b19upB",
+        "lastValidBlockHeight": "200"
+      }
+    }
+  },
+  "grantsAfterClaim": {
+    "items": [
+      {
+        "id": "2d2e8255-1236-4b18-bb4d-468ba15545be",
+        "status": "requested",
+        "mint": "Bincuik5v411CXzJaptVZu2xsMwQrcfc4D5epovrRa3R",
+        "decimals": 6,
+        "amountRaw": "1000000000",
+        "error": null,
+        "requestedAt": "2026-10-06T12:00:00.000Z",
+        "sentAt": null,
+        "attempt": null
+      }
+    ],
+    "nextCursor": null
+  }
+}

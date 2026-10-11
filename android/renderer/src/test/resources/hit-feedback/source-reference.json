@@ -1,0 +1,3323 @@
+{
+  "policy": {
+    "version": 1,
+    "flash": {
+      "durationMs": 90,
+      "color": 16777215,
+      "mode": "fill"
+    },
+    "star": {
+      "atlasPath": "atlas/fx@1x.json",
+      "frames": [
+        {
+          "key": "fx_hit_f1",
+          "atMs": 0,
+          "width": 8,
+          "height": 8
+        },
+        {
+          "key": "fx_hit_f2",
+          "atMs": 120,
+          "width": 8,
+          "height": 8
+        }
+      ],
+      "durationMs": 260,
+      "depth": 402690,
+      "anchor": [
+        0.5,
+        0.5
+      ],
+      "scale": 1
+    },
+    "actorHeightFactor": 0.6,
+    "buildingHeightFactor": 0.5,
+    "buildingLiftMax": 96,
+    "sourceHashes": {
+      "apps/web/src/game/scenes/BattleScene.ts": "caa08a270b3a16950ed5eac7c0de3f86a3b7f47e154d8fd30c096b25d168ae7d",
+      "apps/web/src/lib/juice.ts": "c6734e05040297272e4780319d73bb7e93979819017f5e6e494dd8531113404b",
+      "apps/web/src/game/fx/troop.ts": "33dc658ad94ae6b6a828c72d12947d5175d2d66c3731e171b87a3abac275b972",
+      "apps/web/src/game/v2/troop.ts": "a0412bbd11e587cfeacfc9b1d407ffb2b9116e61c228bda5cd290f48e60471f6",
+      "apps/web/src/game/world/depth.ts": "401f8c68a52775799f53e1de9c68850219306ce1efe6b91a9776bae26e5dbe36",
+      "apps/web/src/game/world/walls.ts": "f2011e7ecbc649661bc4eeabf1755a7b3a248c81299c306cf67c151c98d4c3de",
+      "packages/shared/src/wallRender.ts": "ce3ce9daab54295adbefdaf37bad0ec2a4039c1ca776a38a2eac9e42010b55aa",
+      "phaser/gameobjects/components/Origin.js": "8c8a4245e5d0cc3af10c80acd7ab673993fb5116d3bfde6267dd917185ba7be8",
+      "phaser/gameobjects/components/Transform.js": "4c6eaa8f8beb29aa96cc01358d09763947a303cfaf865661b4a4033b20ff618c",
+      "phaser/gameobjects/image/Image.js": "215a4f156bc53b7cd58376b54dde3d1fec39876f5e7b4f068baea13da874c1d6",
+      "phaser/renderer/webgl/shaders/ApplyTint-glsl.js": "cd460ad2bed6da62d04389a25f90a55fc3c15e7ede66fea215dddfb6bb79ed5e",
+      "apps/web/src/game/world/marketArt.ts": "7533ad9879f6c051b1de534ec4331d83980ede9eb641e458fb089bae9f6d9edb",
+      "apps/web/src/game/world/harvesterArt.ts": "7b9bb8f8e674713cdd15c20cb50d5f8624186a7778cdc8e6ab556a69644f8aeb",
+      "apps/web/public/atlas/fx@1x.json": "6b3f9846f59dca5b13de6b4e2e4b2e04af75075fa980b49defe4f4f5bf325725"
+    }
+  },
+  "cases": [
+    {
+      "name": "actor-hit",
+      "kind": "actor",
+      "damage": 8,
+      "alive": true,
+      "jumping": false,
+      "destroyed": false,
+      "missing": false,
+      "height": 200,
+      "stars": [
+        {
+          "x": 17,
+          "y": -97
+        }
+      ]
+    },
+    {
+      "name": "building-hit",
+      "kind": "building",
+      "damage": 8,
+      "alive": true,
+      "jumping": false,
+      "destroyed": false,
+      "missing": false,
+      "height": 200,
+      "stars": [
+        {
+          "x": 5,
+          "y": -88
+        }
+      ]
+    },
+    {
+      "name": "short-building",
+      "kind": "building",
+      "damage": 8,
+      "alive": true,
+      "jumping": false,
+      "destroyed": false,
+      "missing": false,
+      "height": 80,
+      "stars": [
+        {
+          "x": 5,
+          "y": -32
+        }
+      ]
+    },
+    {
+      "name": "actor-zero",
+      "kind": "actor",
+      "damage": 0,
+      "alive": true,
+      "jumping": false,
+      "destroyed": false,
+      "missing": false,
+      "height": 200,
+      "stars": [
+        {
+          "x": 17,
+          "y": -97
+        }
+      ]
+    },
+    {
+      "name": "actor-missing-damage",
+      "kind": "actor",
+      "damage": null,
+      "alive": true,
+      "jumping": false,
+      "destroyed": false,
+      "missing": false,
+      "height": 200,
+      "stars": [
+        {
+          "x": 17,
+          "y": -97
+        }
+      ]
+    },
+    {
+      "name": "actor-cold",
+      "kind": "actor",
+      "damage": 8,
+      "alive": true,
+      "jumping": true,
+      "destroyed": false,
+      "missing": false,
+      "height": 200,
+      "stars": []
+    },
+    {
+      "name": "actor-missing",
+      "kind": "actor",
+      "damage": 8,
+      "alive": true,
+      "jumping": false,
+      "destroyed": false,
+      "missing": true,
+      "height": 200,
+      "stars": []
+    },
+    {
+      "name": "building-zero",
+      "kind": "building",
+      "damage": 0,
+      "alive": true,
+      "jumping": false,
+      "destroyed": false,
+      "missing": false,
+      "height": 200,
+      "stars": [
+        {
+          "x": 5,
+          "y": -88
+        }
+      ]
+    },
+    {
+      "name": "building-missing-damage",
+      "kind": "building",
+      "damage": null,
+      "alive": true,
+      "jumping": false,
+      "destroyed": false,
+      "missing": false,
+      "height": 200,
+      "stars": [
+        {
+          "x": 5,
+          "y": -88
+        }
+      ]
+    },
+    {
+      "name": "building-cold",
+      "kind": "building",
+      "damage": 8,
+      "alive": true,
+      "jumping": true,
+      "destroyed": false,
+      "missing": false,
+      "height": 200,
+      "stars": []
+    },
+    {
+      "name": "building-missing",
+      "kind": "building",
+      "damage": 8,
+      "alive": true,
+      "jumping": false,
+      "destroyed": false,
+      "missing": true,
+      "height": 200,
+      "stars": []
+    },
+    {
+      "name": "chain-zero",
+      "kind": "chain",
+      "damage": 0,
+      "alive": true,
+      "jumping": false,
+      "destroyed": false,
+      "missing": false,
+      "height": 200,
+      "stars": []
+    },
+    {
+      "name": "chain-missing-damage",
+      "kind": "chain",
+      "damage": null,
+      "alive": true,
+      "jumping": false,
+      "destroyed": false,
+      "missing": false,
+      "height": 200,
+      "stars": []
+    },
+    {
+      "name": "chain-cold",
+      "kind": "chain",
+      "damage": 8,
+      "alive": true,
+      "jumping": true,
+      "destroyed": false,
+      "missing": false,
+      "height": 200,
+      "stars": []
+    },
+    {
+      "name": "chain-missing",
+      "kind": "chain",
+      "damage": 8,
+      "alive": true,
+      "jumping": false,
+      "destroyed": false,
+      "missing": true,
+      "height": 200,
+      "stars": []
+    },
+    {
+      "name": "actor-dead",
+      "kind": "actor",
+      "damage": 8,
+      "alive": false,
+      "jumping": false,
+      "destroyed": false,
+      "missing": false,
+      "height": 200,
+      "stars": []
+    },
+    {
+      "name": "chain-dead",
+      "kind": "chain",
+      "damage": 8,
+      "alive": false,
+      "jumping": false,
+      "destroyed": false,
+      "missing": false,
+      "height": 200,
+      "stars": []
+    },
+    {
+      "name": "chain-positive",
+      "kind": "chain",
+      "damage": 8,
+      "alive": true,
+      "jumping": false,
+      "destroyed": false,
+      "missing": false,
+      "height": 200,
+      "stars": [
+        {
+          "x": 17,
+          "y": -97
+        }
+      ]
+    },
+    {
+      "name": "building-destroyed",
+      "kind": "building",
+      "damage": 8,
+      "alive": true,
+      "jumping": false,
+      "destroyed": true,
+      "missing": false,
+      "height": 200,
+      "stars": []
+    },
+    {
+      "name": "service-workshop-controller-live-0",
+      "kind": "building",
+      "damage": 0,
+      "alive": true,
+      "jumping": false,
+      "destroyed": false,
+      "missing": false,
+      "height": 200,
+      "stars": [
+        {
+          "x": 5,
+          "y": -88
+        }
+      ],
+      "type": "workshop",
+      "variant": "controller",
+      "hp": 100,
+      "damageUpdates": 0,
+      "routes": []
+    },
+    {
+      "name": "service-workshop-controller-live-49",
+      "kind": "building",
+      "damage": 49,
+      "alive": true,
+      "jumping": false,
+      "destroyed": false,
+      "missing": false,
+      "height": 200,
+      "stars": [
+        {
+          "x": 5,
+          "y": -88
+        }
+      ],
+      "type": "workshop",
+      "variant": "controller",
+      "hp": 51,
+      "damageUpdates": 0,
+      "routes": []
+    },
+    {
+      "name": "service-workshop-controller-live-50",
+      "kind": "building",
+      "damage": 50,
+      "alive": true,
+      "jumping": false,
+      "destroyed": false,
+      "missing": false,
+      "height": 200,
+      "stars": [
+        {
+          "x": 5,
+          "y": -88
+        }
+      ],
+      "type": "workshop",
+      "variant": "controller",
+      "hp": 50,
+      "damageUpdates": 0,
+      "routes": []
+    },
+    {
+      "name": "service-workshop-controller-live-51",
+      "kind": "building",
+      "damage": 51,
+      "alive": true,
+      "jumping": false,
+      "destroyed": false,
+      "missing": false,
+      "height": 200,
+      "stars": [
+        {
+          "x": 5,
+          "y": -88
+        }
+      ],
+      "type": "workshop",
+      "variant": "controller",
+      "hp": 49,
+      "damageUpdates": 0,
+      "routes": [
+        [
+          "market",
+          "setDamaged",
+          true
+        ]
+      ]
+    },
+    {
+      "name": "service-workshop-controller-live-200",
+      "kind": "building",
+      "damage": 200,
+      "alive": true,
+      "jumping": false,
+      "destroyed": false,
+      "missing": false,
+      "height": 200,
+      "stars": [
+        {
+          "x": 5,
+          "y": -88
+        }
+      ],
+      "type": "workshop",
+      "variant": "controller",
+      "hp": 0,
+      "damageUpdates": 0,
+      "routes": [
+        [
+          "market",
+          "setDamaged",
+          true
+        ]
+      ]
+    },
+    {
+      "name": "service-workshop-controller-cold-0",
+      "kind": "building",
+      "damage": 0,
+      "alive": true,
+      "jumping": true,
+      "destroyed": false,
+      "missing": false,
+      "height": 200,
+      "stars": [],
+      "type": "workshop",
+      "variant": "controller",
+      "hp": 100,
+      "damageUpdates": 0,
+      "routes": []
+    },
+    {
+      "name": "service-workshop-controller-cold-49",
+      "kind": "building",
+      "damage": 49,
+      "alive": true,
+      "jumping": true,
+      "destroyed": false,
+      "missing": false,
+      "height": 200,
+      "stars": [],
+      "type": "workshop",
+      "variant": "controller",
+      "hp": 51,
+      "damageUpdates": 0,
+      "routes": []
+    },
+    {
+      "name": "service-workshop-controller-cold-50",
+      "kind": "building",
+      "damage": 50,
+      "alive": true,
+      "jumping": true,
+      "destroyed": false,
+      "missing": false,
+      "height": 200,
+      "stars": [],
+      "type": "workshop",
+      "variant": "controller",
+      "hp": 50,
+      "damageUpdates": 0,
+      "routes": []
+    },
+    {
+      "name": "service-workshop-controller-cold-51",
+      "kind": "building",
+      "damage": 51,
+      "alive": true,
+      "jumping": true,
+      "destroyed": false,
+      "missing": false,
+      "height": 200,
+      "stars": [],
+      "type": "workshop",
+      "variant": "controller",
+      "hp": 49,
+      "damageUpdates": 0,
+      "routes": [
+        [
+          "market",
+          "setDamaged",
+          true
+        ]
+      ]
+    },
+    {
+      "name": "service-workshop-controller-cold-200",
+      "kind": "building",
+      "damage": 200,
+      "alive": true,
+      "jumping": true,
+      "destroyed": false,
+      "missing": false,
+      "height": 200,
+      "stars": [],
+      "type": "workshop",
+      "variant": "controller",
+      "hp": 0,
+      "damageUpdates": 0,
+      "routes": [
+        [
+          "market",
+          "setDamaged",
+          true
+        ]
+      ]
+    },
+    {
+      "name": "service-workshop-pending-live-0",
+      "kind": "building",
+      "damage": 0,
+      "alive": true,
+      "jumping": false,
+      "destroyed": false,
+      "missing": false,
+      "height": 200,
+      "stars": [
+        {
+          "x": 5,
+          "y": -88
+        }
+      ],
+      "type": "workshop",
+      "variant": "pending",
+      "hp": 100,
+      "damageUpdates": 0,
+      "routes": []
+    },
+    {
+      "name": "service-workshop-pending-live-49",
+      "kind": "building",
+      "damage": 49,
+      "alive": true,
+      "jumping": false,
+      "destroyed": false,
+      "missing": false,
+      "height": 200,
+      "stars": [
+        {
+          "x": 5,
+          "y": -88
+        }
+      ],
+      "type": "workshop",
+      "variant": "pending",
+      "hp": 51,
+      "damageUpdates": 0,
+      "routes": []
+    },
+    {
+      "name": "service-workshop-pending-live-50",
+      "kind": "building",
+      "damage": 50,
+      "alive": true,
+      "jumping": false,
+      "destroyed": false,
+      "missing": false,
+      "height": 200,
+      "stars": [
+        {
+          "x": 5,
+          "y": -88
+        }
+      ],
+      "type": "workshop",
+      "variant": "pending",
+      "hp": 50,
+      "damageUpdates": 0,
+      "routes": []
+    },
+    {
+      "name": "service-workshop-pending-live-51",
+      "kind": "building",
+      "damage": 51,
+      "alive": true,
+      "jumping": false,
+      "destroyed": false,
+      "missing": false,
+      "height": 200,
+      "stars": [
+        {
+          "x": 5,
+          "y": -88
+        }
+      ],
+      "type": "workshop",
+      "variant": "pending",
+      "hp": 49,
+      "damageUpdates": 0,
+      "routes": [
+        [
+          "marketFallback",
+          "damaged"
+        ]
+      ]
+    },
+    {
+      "name": "service-workshop-pending-live-200",
+      "kind": "building",
+      "damage": 200,
+      "alive": true,
+      "jumping": false,
+      "destroyed": false,
+      "missing": false,
+      "height": 200,
+      "stars": [
+        {
+          "x": 5,
+          "y": -88
+        }
+      ],
+      "type": "workshop",
+      "variant": "pending",
+      "hp": 0,
+      "damageUpdates": 0,
+      "routes": [
+        [
+          "marketFallback",
+          "damaged"
+        ]
+      ]
+    },
+    {
+      "name": "service-workshop-pending-cold-0",
+      "kind": "building",
+      "damage": 0,
+      "alive": true,
+      "jumping": true,
+      "destroyed": false,
+      "missing": false,
+      "height": 200,
+      "stars": [],
+      "type": "workshop",
+      "variant": "pending",
+      "hp": 100,
+      "damageUpdates": 0,
+      "routes": []
+    },
+    {
+      "name": "service-workshop-pending-cold-49",
+      "kind": "building",
+      "damage": 49,
+      "alive": true,
+      "jumping": true,
+      "destroyed": false,
+      "missing": false,
+      "height": 200,
+      "stars": [],
+      "type": "workshop",
+      "variant": "pending",
+      "hp": 51,
+      "damageUpdates": 0,
+      "routes": []
+    },
+    {
+      "name": "service-workshop-pending-cold-50",
+      "kind": "building",
+      "damage": 50,
+      "alive": true,
+      "jumping": true,
+      "destroyed": false,
+      "missing": false,
+      "height": 200,
+      "stars": [],
+      "type": "workshop",
+      "variant": "pending",
+      "hp": 50,
+      "damageUpdates": 0,
+      "routes": []
+    },
+    {
+      "name": "service-workshop-pending-cold-51",
+      "kind": "building",
+      "damage": 51,
+      "alive": true,
+      "jumping": true,
+      "destroyed": false,
+      "missing": false,
+      "height": 200,
+      "stars": [],
+      "type": "workshop",
+      "variant": "pending",
+      "hp": 49,
+      "damageUpdates": 0,
+      "routes": [
+        [
+          "marketFallback",
+          "damaged"
+        ]
+      ]
+    },
+    {
+      "name": "service-workshop-pending-cold-200",
+      "kind": "building",
+      "damage": 200,
+      "alive": true,
+      "jumping": true,
+      "destroyed": false,
+      "missing": false,
+      "height": 200,
+      "stars": [],
+      "type": "workshop",
+      "variant": "pending",
+      "hp": 0,
+      "damageUpdates": 0,
+      "routes": [
+        [
+          "marketFallback",
+          "damaged"
+        ]
+      ]
+    },
+    {
+      "name": "service-workshop-ordinary-live-0",
+      "kind": "building",
+      "damage": 0,
+      "alive": true,
+      "jumping": false,
+      "destroyed": false,
+      "missing": false,
+      "height": 200,
+      "stars": [
+        {
+          "x": 5,
+          "y": -88
+        }
+      ],
+      "type": "workshop",
+      "variant": "ordinary",
+      "hp": 100,
+      "damageUpdates": 1,
+      "routes": []
+    },
+    {
+      "name": "service-workshop-ordinary-live-49",
+      "kind": "building",
+      "damage": 49,
+      "alive": true,
+      "jumping": false,
+      "destroyed": false,
+      "missing": false,
+      "height": 200,
+      "stars": [
+        {
+          "x": 5,
+          "y": -88
+        }
+      ],
+      "type": "workshop",
+      "variant": "ordinary",
+      "hp": 51,
+      "damageUpdates": 1,
+      "routes": []
+    },
+    {
+      "name": "service-workshop-ordinary-live-50",
+      "kind": "building",
+      "damage": 50,
+      "alive": true,
+      "jumping": false,
+      "destroyed": false,
+      "missing": false,
+      "height": 200,
+      "stars": [
+        {
+          "x": 5,
+          "y": -88
+        }
+      ],
+      "type": "workshop",
+      "variant": "ordinary",
+      "hp": 50,
+      "damageUpdates": 1,
+      "routes": []
+    },
+    {
+      "name": "service-workshop-ordinary-live-51",
+      "kind": "building",
+      "damage": 51,
+      "alive": true,
+      "jumping": false,
+      "destroyed": false,
+      "missing": false,
+      "height": 200,
+      "stars": [
+        {
+          "x": 5,
+          "y": -88
+        }
+      ],
+      "type": "workshop",
+      "variant": "ordinary",
+      "hp": 49,
+      "damageUpdates": 1,
+      "routes": []
+    },
+    {
+      "name": "service-workshop-ordinary-live-200",
+      "kind": "building",
+      "damage": 200,
+      "alive": true,
+      "jumping": false,
+      "destroyed": false,
+      "missing": false,
+      "height": 200,
+      "stars": [
+        {
+          "x": 5,
+          "y": -88
+        }
+      ],
+      "type": "workshop",
+      "variant": "ordinary",
+      "hp": 0,
+      "damageUpdates": 1,
+      "routes": []
+    },
+    {
+      "name": "service-workshop-ordinary-cold-0",
+      "kind": "building",
+      "damage": 0,
+      "alive": true,
+      "jumping": true,
+      "destroyed": false,
+      "missing": false,
+      "height": 200,
+      "stars": [],
+      "type": "workshop",
+      "variant": "ordinary",
+      "hp": 100,
+      "damageUpdates": 1,
+      "routes": []
+    },
+    {
+      "name": "service-workshop-ordinary-cold-49",
+      "kind": "building",
+      "damage": 49,
+      "alive": true,
+      "jumping": true,
+      "destroyed": false,
+      "missing": false,
+      "height": 200,
+      "stars": [],
+      "type": "workshop",
+      "variant": "ordinary",
+      "hp": 51,
+      "damageUpdates": 1,
+      "routes": []
+    },
+    {
+      "name": "service-workshop-ordinary-cold-50",
+      "kind": "building",
+      "damage": 50,
+      "alive": true,
+      "jumping": true,
+      "destroyed": false,
+      "missing": false,
+      "height": 200,
+      "stars": [],
+      "type": "workshop",
+      "variant": "ordinary",
+      "hp": 50,
+      "damageUpdates": 1,
+      "routes": []
+    },
+    {
+      "name": "service-workshop-ordinary-cold-51",
+      "kind": "building",
+      "damage": 51,
+      "alive": true,
+      "jumping": true,
+      "destroyed": false,
+      "missing": false,
+      "height": 200,
+      "stars": [],
+      "type": "workshop",
+      "variant": "ordinary",
+      "hp": 49,
+      "damageUpdates": 1,
+      "routes": []
+    },
+    {
+      "name": "service-workshop-ordinary-cold-200",
+      "kind": "building",
+      "damage": 200,
+      "alive": true,
+      "jumping": true,
+      "destroyed": false,
+      "missing": false,
+      "height": 200,
+      "stars": [],
+      "type": "workshop",
+      "variant": "ordinary",
+      "hp": 0,
+      "damageUpdates": 1,
+      "routes": []
+    },
+    {
+      "name": "service-workshop-destroyed",
+      "kind": "building",
+      "damage": 51,
+      "alive": true,
+      "jumping": false,
+      "destroyed": true,
+      "missing": false,
+      "height": 200,
+      "stars": [],
+      "type": "workshop",
+      "variant": "controller",
+      "hp": 100,
+      "damageUpdates": 0,
+      "routes": []
+    },
+    {
+      "name": "service-workshop-missing",
+      "kind": "building",
+      "damage": 51,
+      "alive": true,
+      "jumping": false,
+      "destroyed": false,
+      "missing": true,
+      "height": 200,
+      "stars": [],
+      "type": "workshop",
+      "variant": "controller",
+      "hp": 100,
+      "damageUpdates": 0,
+      "routes": []
+    },
+    {
+      "name": "service-lodge-controller-live-0",
+      "kind": "building",
+      "damage": 0,
+      "alive": true,
+      "jumping": false,
+      "destroyed": false,
+      "missing": false,
+      "height": 200,
+      "stars": [
+        {
+          "x": 5,
+          "y": -88
+        }
+      ],
+      "type": "lodge",
+      "variant": "controller",
+      "hp": 100,
+      "damageUpdates": 0,
+      "routes": []
+    },
+    {
+      "name": "service-lodge-controller-live-49",
+      "kind": "building",
+      "damage": 49,
+      "alive": true,
+      "jumping": false,
+      "destroyed": false,
+      "missing": false,
+      "height": 200,
+      "stars": [
+        {
+          "x": 5,
+          "y": -88
+        }
+      ],
+      "type": "lodge",
+      "variant": "controller",
+      "hp": 51,
+      "damageUpdates": 0,
+      "routes": []
+    },
+    {
+      "name": "service-lodge-controller-live-50",
+      "kind": "building",
+      "damage": 50,
+      "alive": true,
+      "jumping": false,
+      "destroyed": false,
+      "missing": false,
+      "height": 200,
+      "stars": [
+        {
+          "x": 5,
+          "y": -88
+        }
+      ],
+      "type": "lodge",
+      "variant": "controller",
+      "hp": 50,
+      "damageUpdates": 0,
+      "routes": []
+    },
+    {
+      "name": "service-lodge-controller-live-51",
+      "kind": "building",
+      "damage": 51,
+      "alive": true,
+      "jumping": false,
+      "destroyed": false,
+      "missing": false,
+      "height": 200,
+      "stars": [
+        {
+          "x": 5,
+          "y": -88
+        }
+      ],
+      "type": "lodge",
+      "variant": "controller",
+      "hp": 49,
+      "damageUpdates": 0,
+      "routes": [
+        [
+          "market",
+          "setDamaged",
+          true
+        ]
+      ]
+    },
+    {
+      "name": "service-lodge-controller-live-200",
+      "kind": "building",
+      "damage": 200,
+      "alive": true,
+      "jumping": false,
+      "destroyed": false,
+      "missing": false,
+      "height": 200,
+      "stars": [
+        {
+          "x": 5,
+          "y": -88
+        }
+      ],
+      "type": "lodge",
+      "variant": "controller",
+      "hp": 0,
+      "damageUpdates": 0,
+      "routes": [
+        [
+          "market",
+          "setDamaged",
+          true
+        ]
+      ]
+    },
+    {
+      "name": "service-lodge-controller-cold-0",
+      "kind": "building",
+      "damage": 0,
+      "alive": true,
+      "jumping": true,
+      "destroyed": false,
+      "missing": false,
+      "height": 200,
+      "stars": [],
+      "type": "lodge",
+      "variant": "controller",
+      "hp": 100,
+      "damageUpdates": 0,
+      "routes": []
+    },
+    {
+      "name": "service-lodge-controller-cold-49",
+      "kind": "building",
+      "damage": 49,
+      "alive": true,
+      "jumping": true,
+      "destroyed": false,
+      "missing": false,
+      "height": 200,
+      "stars": [],
+      "type": "lodge",
+      "variant": "controller",
+      "hp": 51,
+      "damageUpdates": 0,
+      "routes": []
+    },
+    {
+      "name": "service-lodge-controller-cold-50",
+      "kind": "building",
+      "damage": 50,
+      "alive": true,
+      "jumping": true,
+      "destroyed": false,
+      "missing": false,
+      "height": 200,
+      "stars": [],
+      "type": "lodge",
+      "variant": "controller",
+      "hp": 50,
+      "damageUpdates": 0,
+      "routes": []
+    },
+    {
+      "name": "service-lodge-controller-cold-51",
+      "kind": "building",
+      "damage": 51,
+      "alive": true,
+      "jumping": true,
+      "destroyed": false,
+      "missing": false,
+      "height": 200,
+      "stars": [],
+      "type": "lodge",
+      "variant": "controller",
+      "hp": 49,
+      "damageUpdates": 0,
+      "routes": [
+        [
+          "market",
+          "setDamaged",
+          true
+        ]
+      ]
+    },
+    {
+      "name": "service-lodge-controller-cold-200",
+      "kind": "building",
+      "damage": 200,
+      "alive": true,
+      "jumping": true,
+      "destroyed": false,
+      "missing": false,
+      "height": 200,
+      "stars": [],
+      "type": "lodge",
+      "variant": "controller",
+      "hp": 0,
+      "damageUpdates": 0,
+      "routes": [
+        [
+          "market",
+          "setDamaged",
+          true
+        ]
+      ]
+    },
+    {
+      "name": "service-lodge-pending-live-0",
+      "kind": "building",
+      "damage": 0,
+      "alive": true,
+      "jumping": false,
+      "destroyed": false,
+      "missing": false,
+      "height": 200,
+      "stars": [
+        {
+          "x": 5,
+          "y": -88
+        }
+      ],
+      "type": "lodge",
+      "variant": "pending",
+      "hp": 100,
+      "damageUpdates": 0,
+      "routes": []
+    },
+    {
+      "name": "service-lodge-pending-live-49",
+      "kind": "building",
+      "damage": 49,
+      "alive": true,
+      "jumping": false,
+      "destroyed": false,
+      "missing": false,
+      "height": 200,
+      "stars": [
+        {
+          "x": 5,
+          "y": -88
+        }
+      ],
+      "type": "lodge",
+      "variant": "pending",
+      "hp": 51,
+      "damageUpdates": 0,
+      "routes": []
+    },
+    {
+      "name": "service-lodge-pending-live-50",
+      "kind": "building",
+      "damage": 50,
+      "alive": true,
+      "jumping": false,
+      "destroyed": false,
+      "missing": false,
+      "height": 200,
+      "stars": [
+        {
+          "x": 5,
+          "y": -88
+        }
+      ],
+      "type": "lodge",
+      "variant": "pending",
+      "hp": 50,
+      "damageUpdates": 0,
+      "routes": []
+    },
+    {
+      "name": "service-lodge-pending-live-51",
+      "kind": "building",
+      "damage": 51,
+      "alive": true,
+      "jumping": false,
+      "destroyed": false,
+      "missing": false,
+      "height": 200,
+      "stars": [
+        {
+          "x": 5,
+          "y": -88
+        }
+      ],
+      "type": "lodge",
+      "variant": "pending",
+      "hp": 49,
+      "damageUpdates": 0,
+      "routes": [
+        [
+          "marketFallback",
+          "damaged"
+        ]
+      ]
+    },
+    {
+      "name": "service-lodge-pending-live-200",
+      "kind": "building",
+      "damage": 200,
+      "alive": true,
+      "jumping": false,
+      "destroyed": false,
+      "missing": false,
+      "height": 200,
+      "stars": [
+        {
+          "x": 5,
+          "y": -88
+        }
+      ],
+      "type": "lodge",
+      "variant": "pending",
+      "hp": 0,
+      "damageUpdates": 0,
+      "routes": [
+        [
+          "marketFallback",
+          "damaged"
+        ]
+      ]
+    },
+    {
+      "name": "service-lodge-pending-cold-0",
+      "kind": "building",
+      "damage": 0,
+      "alive": true,
+      "jumping": true,
+      "destroyed": false,
+      "missing": false,
+      "height": 200,
+      "stars": [],
+      "type": "lodge",
+      "variant": "pending",
+      "hp": 100,
+      "damageUpdates": 0,
+      "routes": []
+    },
+    {
+      "name": "service-lodge-pending-cold-49",
+      "kind": "building",
+      "damage": 49,
+      "alive": true,
+      "jumping": true,
+      "destroyed": false,
+      "missing": false,
+      "height": 200,
+      "stars": [],
+      "type": "lodge",
+      "variant": "pending",
+      "hp": 51,
+      "damageUpdates": 0,
+      "routes": []
+    },
+    {
+      "name": "service-lodge-pending-cold-50",
+      "kind": "building",
+      "damage": 50,
+      "alive": true,
+      "jumping": true,
+      "destroyed": false,
+      "missing": false,
+      "height": 200,
+      "stars": [],
+      "type": "lodge",
+      "variant": "pending",
+      "hp": 50,
+      "damageUpdates": 0,
+      "routes": []
+    },
+    {
+      "name": "service-lodge-pending-cold-51",
+      "kind": "building",
+      "damage": 51,
+      "alive": true,
+      "jumping": true,
+      "destroyed": false,
+      "missing": false,
+      "height": 200,
+      "stars": [],
+      "type": "lodge",
+      "variant": "pending",
+      "hp": 49,
+      "damageUpdates": 0,
+      "routes": [
+        [
+          "marketFallback",
+          "damaged"
+        ]
+      ]
+    },
+    {
+      "name": "service-lodge-pending-cold-200",
+      "kind": "building",
+      "damage": 200,
+      "alive": true,
+      "jumping": true,
+      "destroyed": false,
+      "missing": false,
+      "height": 200,
+      "stars": [],
+      "type": "lodge",
+      "variant": "pending",
+      "hp": 0,
+      "damageUpdates": 0,
+      "routes": [
+        [
+          "marketFallback",
+          "damaged"
+        ]
+      ]
+    },
+    {
+      "name": "service-lodge-ordinary-live-0",
+      "kind": "building",
+      "damage": 0,
+      "alive": true,
+      "jumping": false,
+      "destroyed": false,
+      "missing": false,
+      "height": 200,
+      "stars": [
+        {
+          "x": 5,
+          "y": -88
+        }
+      ],
+      "type": "lodge",
+      "variant": "ordinary",
+      "hp": 100,
+      "damageUpdates": 1,
+      "routes": []
+    },
+    {
+      "name": "service-lodge-ordinary-live-49",
+      "kind": "building",
+      "damage": 49,
+      "alive": true,
+      "jumping": false,
+      "destroyed": false,
+      "missing": false,
+      "height": 200,
+      "stars": [
+        {
+          "x": 5,
+          "y": -88
+        }
+      ],
+      "type": "lodge",
+      "variant": "ordinary",
+      "hp": 51,
+      "damageUpdates": 1,
+      "routes": []
+    },
+    {
+      "name": "service-lodge-ordinary-live-50",
+      "kind": "building",
+      "damage": 50,
+      "alive": true,
+      "jumping": false,
+      "destroyed": false,
+      "missing": false,
+      "height": 200,
+      "stars": [
+        {
+          "x": 5,
+          "y": -88
+        }
+      ],
+      "type": "lodge",
+      "variant": "ordinary",
+      "hp": 50,
+      "damageUpdates": 1,
+      "routes": []
+    },
+    {
+      "name": "service-lodge-ordinary-live-51",
+      "kind": "building",
+      "damage": 51,
+      "alive": true,
+      "jumping": false,
+      "destroyed": false,
+      "missing": false,
+      "height": 200,
+      "stars": [
+        {
+          "x": 5,
+          "y": -88
+        }
+      ],
+      "type": "lodge",
+      "variant": "ordinary",
+      "hp": 49,
+      "damageUpdates": 1,
+      "routes": []
+    },
+    {
+      "name": "service-lodge-ordinary-live-200",
+      "kind": "building",
+      "damage": 200,
+      "alive": true,
+      "jumping": false,
+      "destroyed": false,
+      "missing": false,
+      "height": 200,
+      "stars": [
+        {
+          "x": 5,
+          "y": -88
+        }
+      ],
+      "type": "lodge",
+      "variant": "ordinary",
+      "hp": 0,
+      "damageUpdates": 1,
+      "routes": []
+    },
+    {
+      "name": "service-lodge-ordinary-cold-0",
+      "kind": "building",
+      "damage": 0,
+      "alive": true,
+      "jumping": true,
+      "destroyed": false,
+      "missing": false,
+      "height": 200,
+      "stars": [],
+      "type": "lodge",
+      "variant": "ordinary",
+      "hp": 100,
+      "damageUpdates": 1,
+      "routes": []
+    },
+    {
+      "name": "service-lodge-ordinary-cold-49",
+      "kind": "building",
+      "damage": 49,
+      "alive": true,
+      "jumping": true,
+      "destroyed": false,
+      "missing": false,
+      "height": 200,
+      "stars": [],
+      "type": "lodge",
+      "variant": "ordinary",
+      "hp": 51,
+      "damageUpdates": 1,
+      "routes": []
+    },
+    {
+      "name": "service-lodge-ordinary-cold-50",
+      "kind": "building",
+      "damage": 50,
+      "alive": true,
+      "jumping": true,
+      "destroyed": false,
+      "missing": false,
+      "height": 200,
+      "stars": [],
+      "type": "lodge",
+      "variant": "ordinary",
+      "hp": 50,
+      "damageUpdates": 1,
+      "routes": []
+    },
+    {
+      "name": "service-lodge-ordinary-cold-51",
+      "kind": "building",
+      "damage": 51,
+      "alive": true,
+      "jumping": true,
+      "destroyed": false,
+      "missing": false,
+      "height": 200,
+      "stars": [],
+      "type": "lodge",
+      "variant": "ordinary",
+      "hp": 49,
+      "damageUpdates": 1,
+      "routes": []
+    },
+    {
+      "name": "service-lodge-ordinary-cold-200",
+      "kind": "building",
+      "damage": 200,
+      "alive": true,
+      "jumping": true,
+      "destroyed": false,
+      "missing": false,
+      "height": 200,
+      "stars": [],
+      "type": "lodge",
+      "variant": "ordinary",
+      "hp": 0,
+      "damageUpdates": 1,
+      "routes": []
+    },
+    {
+      "name": "service-lodge-destroyed",
+      "kind": "building",
+      "damage": 51,
+      "alive": true,
+      "jumping": false,
+      "destroyed": true,
+      "missing": false,
+      "height": 200,
+      "stars": [],
+      "type": "lodge",
+      "variant": "controller",
+      "hp": 100,
+      "damageUpdates": 0,
+      "routes": []
+    },
+    {
+      "name": "service-lodge-missing",
+      "kind": "building",
+      "damage": 51,
+      "alive": true,
+      "jumping": false,
+      "destroyed": false,
+      "missing": true,
+      "height": 200,
+      "stars": [],
+      "type": "lodge",
+      "variant": "controller",
+      "hp": 100,
+      "damageUpdates": 0,
+      "routes": []
+    },
+    {
+      "name": "service-market-controller-live-0",
+      "kind": "building",
+      "damage": 0,
+      "alive": true,
+      "jumping": false,
+      "destroyed": false,
+      "missing": false,
+      "height": 200,
+      "stars": [
+        {
+          "x": 5,
+          "y": -88
+        }
+      ],
+      "type": "market",
+      "variant": "controller",
+      "hp": 100,
+      "damageUpdates": 0,
+      "routes": []
+    },
+    {
+      "name": "service-market-controller-live-49",
+      "kind": "building",
+      "damage": 49,
+      "alive": true,
+      "jumping": false,
+      "destroyed": false,
+      "missing": false,
+      "height": 200,
+      "stars": [
+        {
+          "x": 5,
+          "y": -88
+        }
+      ],
+      "type": "market",
+      "variant": "controller",
+      "hp": 51,
+      "damageUpdates": 0,
+      "routes": []
+    },
+    {
+      "name": "service-market-controller-live-50",
+      "kind": "building",
+      "damage": 50,
+      "alive": true,
+      "jumping": false,
+      "destroyed": false,
+      "missing": false,
+      "height": 200,
+      "stars": [
+        {
+          "x": 5,
+          "y": -88
+        }
+      ],
+      "type": "market",
+      "variant": "controller",
+      "hp": 50,
+      "damageUpdates": 0,
+      "routes": []
+    },
+    {
+      "name": "service-market-controller-live-51",
+      "kind": "building",
+      "damage": 51,
+      "alive": true,
+      "jumping": false,
+      "destroyed": false,
+      "missing": false,
+      "height": 200,
+      "stars": [
+        {
+          "x": 5,
+          "y": -88
+        }
+      ],
+      "type": "market",
+      "variant": "controller",
+      "hp": 49,
+      "damageUpdates": 0,
+      "routes": [
+        [
+          "market",
+          "setDamaged",
+          true
+        ]
+      ]
+    },
+    {
+      "name": "service-market-controller-live-200",
+      "kind": "building",
+      "damage": 200,
+      "alive": true,
+      "jumping": false,
+      "destroyed": false,
+      "missing": false,
+      "height": 200,
+      "stars": [
+        {
+          "x": 5,
+          "y": -88
+        }
+      ],
+      "type": "market",
+      "variant": "controller",
+      "hp": 0,
+      "damageUpdates": 0,
+      "routes": [
+        [
+          "market",
+          "setDamaged",
+          true
+        ]
+      ]
+    },
+    {
+      "name": "service-market-controller-cold-0",
+      "kind": "building",
+      "damage": 0,
+      "alive": true,
+      "jumping": true,
+      "destroyed": false,
+      "missing": false,
+      "height": 200,
+      "stars": [],
+      "type": "market",
+      "variant": "controller",
+      "hp": 100,
+      "damageUpdates": 0,
+      "routes": []
+    },
+    {
+      "name": "service-market-controller-cold-49",
+      "kind": "building",
+      "damage": 49,
+      "alive": true,
+      "jumping": true,
+      "destroyed": false,
+      "missing": false,
+      "height": 200,
+      "stars": [],
+      "type": "market",
+      "variant": "controller",
+      "hp": 51,
+      "damageUpdates": 0,
+      "routes": []
+    },
+    {
+      "name": "service-market-controller-cold-50",
+      "kind": "building",
+      "damage": 50,
+      "alive": true,
+      "jumping": true,
+      "destroyed": false,
+      "missing": false,
+      "height": 200,
+      "stars": [],
+      "type": "market",
+      "variant": "controller",
+      "hp": 50,
+      "damageUpdates": 0,
+      "routes": []
+    },
+    {
+      "name": "service-market-controller-cold-51",
+      "kind": "building",
+      "damage": 51,
+      "alive": true,
+      "jumping": true,
+      "destroyed": false,
+      "missing": false,
+      "height": 200,
+      "stars": [],
+      "type": "market",
+      "variant": "controller",
+      "hp": 49,
+      "damageUpdates": 0,
+      "routes": [
+        [
+          "market",
+          "setDamaged",
+          true
+        ]
+      ]
+    },
+    {
+      "name": "service-market-controller-cold-200",
+      "kind": "building",
+      "damage": 200,
+      "alive": true,
+      "jumping": true,
+      "destroyed": false,
+      "missing": false,
+      "height": 200,
+      "stars": [],
+      "type": "market",
+      "variant": "controller",
+      "hp": 0,
+      "damageUpdates": 0,
+      "routes": [
+        [
+          "market",
+          "setDamaged",
+          true
+        ]
+      ]
+    },
+    {
+      "name": "service-market-pending-live-0",
+      "kind": "building",
+      "damage": 0,
+      "alive": true,
+      "jumping": false,
+      "destroyed": false,
+      "missing": false,
+      "height": 200,
+      "stars": [
+        {
+          "x": 5,
+          "y": -88
+        }
+      ],
+      "type": "market",
+      "variant": "pending",
+      "hp": 100,
+      "damageUpdates": 0,
+      "routes": []
+    },
+    {
+      "name": "service-market-pending-live-49",
+      "kind": "building",
+      "damage": 49,
+      "alive": true,
+      "jumping": false,
+      "destroyed": false,
+      "missing": false,
+      "height": 200,
+      "stars": [
+        {
+          "x": 5,
+          "y": -88
+        }
+      ],
+      "type": "market",
+      "variant": "pending",
+      "hp": 51,
+      "damageUpdates": 0,
+      "routes": []
+    },
+    {
+      "name": "service-market-pending-live-50",
+      "kind": "building",
+      "damage": 50,
+      "alive": true,
+      "jumping": false,
+      "destroyed": false,
+      "missing": false,
+      "height": 200,
+      "stars": [
+        {
+          "x": 5,
+          "y": -88
+        }
+      ],
+      "type": "market",
+      "variant": "pending",
+      "hp": 50,
+      "damageUpdates": 0,
+      "routes": []
+    },
+    {
+      "name": "service-market-pending-live-51",
+      "kind": "building",
+      "damage": 51,
+      "alive": true,
+      "jumping": false,
+      "destroyed": false,
+      "missing": false,
+      "height": 200,
+      "stars": [
+        {
+          "x": 5,
+          "y": -88
+        }
+      ],
+      "type": "market",
+      "variant": "pending",
+      "hp": 49,
+      "damageUpdates": 0,
+      "routes": [
+        [
+          "marketFallback",
+          "damaged"
+        ]
+      ]
+    },
+    {
+      "name": "service-market-pending-live-200",
+      "kind": "building",
+      "damage": 200,
+      "alive": true,
+      "jumping": false,
+      "destroyed": false,
+      "missing": false,
+      "height": 200,
+      "stars": [
+        {
+          "x": 5,
+          "y": -88
+        }
+      ],
+      "type": "market",
+      "variant": "pending",
+      "hp": 0,
+      "damageUpdates": 0,
+      "routes": [
+        [
+          "marketFallback",
+          "damaged"
+        ]
+      ]
+    },
+    {
+      "name": "service-market-pending-cold-0",
+      "kind": "building",
+      "damage": 0,
+      "alive": true,
+      "jumping": true,
+      "destroyed": false,
+      "missing": false,
+      "height": 200,
+      "stars": [],
+      "type": "market",
+      "variant": "pending",
+      "hp": 100,
+      "damageUpdates": 0,
+      "routes": []
+    },
+    {
+      "name": "service-market-pending-cold-49",
+      "kind": "building",
+      "damage": 49,
+      "alive": true,
+      "jumping": true,
+      "destroyed": false,
+      "missing": false,
+      "height": 200,
+      "stars": [],
+      "type": "market",
+      "variant": "pending",
+      "hp": 51,
+      "damageUpdates": 0,
+      "routes": []
+    },
+    {
+      "name": "service-market-pending-cold-50",
+      "kind": "building",
+      "damage": 50,
+      "alive": true,
+      "jumping": true,
+      "destroyed": false,
+      "missing": false,
+      "height": 200,
+      "stars": [],
+      "type": "market",
+      "variant": "pending",
+      "hp": 50,
+      "damageUpdates": 0,
+      "routes": []
+    },
+    {
+      "name": "service-market-pending-cold-51",
+      "kind": "building",
+      "damage": 51,
+      "alive": true,
+      "jumping": true,
+      "destroyed": false,
+      "missing": false,
+      "height": 200,
+      "stars": [],
+      "type": "market",
+      "variant": "pending",
+      "hp": 49,
+      "damageUpdates": 0,
+      "routes": [
+        [
+          "marketFallback",
+          "damaged"
+        ]
+      ]
+    },
+    {
+      "name": "service-market-pending-cold-200",
+      "kind": "building",
+      "damage": 200,
+      "alive": true,
+      "jumping": true,
+      "destroyed": false,
+      "missing": false,
+      "height": 200,
+      "stars": [],
+      "type": "market",
+      "variant": "pending",
+      "hp": 0,
+      "damageUpdates": 0,
+      "routes": [
+        [
+          "marketFallback",
+          "damaged"
+        ]
+      ]
+    },
+    {
+      "name": "service-market-ordinary-live-0",
+      "kind": "building",
+      "damage": 0,
+      "alive": true,
+      "jumping": false,
+      "destroyed": false,
+      "missing": false,
+      "height": 200,
+      "stars": [
+        {
+          "x": 5,
+          "y": -88
+        }
+      ],
+      "type": "market",
+      "variant": "ordinary",
+      "hp": 100,
+      "damageUpdates": 1,
+      "routes": []
+    },
+    {
+      "name": "service-market-ordinary-live-49",
+      "kind": "building",
+      "damage": 49,
+      "alive": true,
+      "jumping": false,
+      "destroyed": false,
+      "missing": false,
+      "height": 200,
+      "stars": [
+        {
+          "x": 5,
+          "y": -88
+        }
+      ],
+      "type": "market",
+      "variant": "ordinary",
+      "hp": 51,
+      "damageUpdates": 1,
+      "routes": []
+    },
+    {
+      "name": "service-market-ordinary-live-50",
+      "kind": "building",
+      "damage": 50,
+      "alive": true,
+      "jumping": false,
+      "destroyed": false,
+      "missing": false,
+      "height": 200,
+      "stars": [
+        {
+          "x": 5,
+          "y": -88
+        }
+      ],
+      "type": "market",
+      "variant": "ordinary",
+      "hp": 50,
+      "damageUpdates": 1,
+      "routes": []
+    },
+    {
+      "name": "service-market-ordinary-live-51",
+      "kind": "building",
+      "damage": 51,
+      "alive": true,
+      "jumping": false,
+      "destroyed": false,
+      "missing": false,
+      "height": 200,
+      "stars": [
+        {
+          "x": 5,
+          "y": -88
+        }
+      ],
+      "type": "market",
+      "variant": "ordinary",
+      "hp": 49,
+      "damageUpdates": 1,
+      "routes": []
+    },
+    {
+      "name": "service-market-ordinary-live-200",
+      "kind": "building",
+      "damage": 200,
+      "alive": true,
+      "jumping": false,
+      "destroyed": false,
+      "missing": false,
+      "height": 200,
+      "stars": [
+        {
+          "x": 5,
+          "y": -88
+        }
+      ],
+      "type": "market",
+      "variant": "ordinary",
+      "hp": 0,
+      "damageUpdates": 1,
+      "routes": []
+    },
+    {
+      "name": "service-market-ordinary-cold-0",
+      "kind": "building",
+      "damage": 0,
+      "alive": true,
+      "jumping": true,
+      "destroyed": false,
+      "missing": false,
+      "height": 200,
+      "stars": [],
+      "type": "market",
+      "variant": "ordinary",
+      "hp": 100,
+      "damageUpdates": 1,
+      "routes": []
+    },
+    {
+      "name": "service-market-ordinary-cold-49",
+      "kind": "building",
+      "damage": 49,
+      "alive": true,
+      "jumping": true,
+      "destroyed": false,
+      "missing": false,
+      "height": 200,
+      "stars": [],
+      "type": "market",
+      "variant": "ordinary",
+      "hp": 51,
+      "damageUpdates": 1,
+      "routes": []
+    },
+    {
+      "name": "service-market-ordinary-cold-50",
+      "kind": "building",
+      "damage": 50,
+      "alive": true,
+      "jumping": true,
+      "destroyed": false,
+      "missing": false,
+      "height": 200,
+      "stars": [],
+      "type": "market",
+      "variant": "ordinary",
+      "hp": 50,
+      "damageUpdates": 1,
+      "routes": []
+    },
+    {
+      "name": "service-market-ordinary-cold-51",
+      "kind": "building",
+      "damage": 51,
+      "alive": true,
+      "jumping": true,
+      "destroyed": false,
+      "missing": false,
+      "height": 200,
+      "stars": [],
+      "type": "market",
+      "variant": "ordinary",
+      "hp": 49,
+      "damageUpdates": 1,
+      "routes": []
+    },
+    {
+      "name": "service-market-ordinary-cold-200",
+      "kind": "building",
+      "damage": 200,
+      "alive": true,
+      "jumping": true,
+      "destroyed": false,
+      "missing": false,
+      "height": 200,
+      "stars": [],
+      "type": "market",
+      "variant": "ordinary",
+      "hp": 0,
+      "damageUpdates": 1,
+      "routes": []
+    },
+    {
+      "name": "service-market-destroyed",
+      "kind": "building",
+      "damage": 51,
+      "alive": true,
+      "jumping": false,
+      "destroyed": true,
+      "missing": false,
+      "height": 200,
+      "stars": [],
+      "type": "market",
+      "variant": "controller",
+      "hp": 100,
+      "damageUpdates": 0,
+      "routes": []
+    },
+    {
+      "name": "service-market-missing",
+      "kind": "building",
+      "damage": 51,
+      "alive": true,
+      "jumping": false,
+      "destroyed": false,
+      "missing": true,
+      "height": 200,
+      "stars": [],
+      "type": "market",
+      "variant": "controller",
+      "hp": 100,
+      "damageUpdates": 0,
+      "routes": []
+    },
+    {
+      "name": "service-harvester-controller-live-0",
+      "kind": "building",
+      "damage": 0,
+      "alive": true,
+      "jumping": false,
+      "destroyed": false,
+      "missing": false,
+      "height": 200,
+      "stars": [
+        {
+          "x": 5,
+          "y": -88
+        }
+      ],
+      "type": "harvester",
+      "variant": "controller",
+      "hp": 100,
+      "damageUpdates": 0,
+      "routes": []
+    },
+    {
+      "name": "service-harvester-controller-live-49",
+      "kind": "building",
+      "damage": 49,
+      "alive": true,
+      "jumping": false,
+      "destroyed": false,
+      "missing": false,
+      "height": 200,
+      "stars": [
+        {
+          "x": 5,
+          "y": -88
+        }
+      ],
+      "type": "harvester",
+      "variant": "controller",
+      "hp": 51,
+      "damageUpdates": 0,
+      "routes": []
+    },
+    {
+      "name": "service-harvester-controller-live-50",
+      "kind": "building",
+      "damage": 50,
+      "alive": true,
+      "jumping": false,
+      "destroyed": false,
+      "missing": false,
+      "height": 200,
+      "stars": [
+        {
+          "x": 5,
+          "y": -88
+        }
+      ],
+      "type": "harvester",
+      "variant": "controller",
+      "hp": 50,
+      "damageUpdates": 0,
+      "routes": []
+    },
+    {
+      "name": "service-harvester-controller-live-51",
+      "kind": "building",
+      "damage": 51,
+      "alive": true,
+      "jumping": false,
+      "destroyed": false,
+      "missing": false,
+      "height": 200,
+      "stars": [
+        {
+          "x": 5,
+          "y": -88
+        }
+      ],
+      "type": "harvester",
+      "variant": "controller",
+      "hp": 49,
+      "damageUpdates": 0,
+      "routes": [
+        [
+          "market",
+          "setDamaged",
+          true
+        ]
+      ]
+    },
+    {
+      "name": "service-harvester-controller-live-200",
+      "kind": "building",
+      "damage": 200,
+      "alive": true,
+      "jumping": false,
+      "destroyed": false,
+      "missing": false,
+      "height": 200,
+      "stars": [
+        {
+          "x": 5,
+          "y": -88
+        }
+      ],
+      "type": "harvester",
+      "variant": "controller",
+      "hp": 0,
+      "damageUpdates": 0,
+      "routes": [
+        [
+          "market",
+          "setDamaged",
+          true
+        ]
+      ]
+    },
+    {
+      "name": "service-harvester-controller-cold-0",
+      "kind": "building",
+      "damage": 0,
+      "alive": true,
+      "jumping": true,
+      "destroyed": false,
+      "missing": false,
+      "height": 200,
+      "stars": [],
+      "type": "harvester",
+      "variant": "controller",
+      "hp": 100,
+      "damageUpdates": 0,
+      "routes": []
+    },
+    {
+      "name": "service-harvester-controller-cold-49",
+      "kind": "building",
+      "damage": 49,
+      "alive": true,
+      "jumping": true,
+      "destroyed": false,
+      "missing": false,
+      "height": 200,
+      "stars": [],
+      "type": "harvester",
+      "variant": "controller",
+      "hp": 51,
+      "damageUpdates": 0,
+      "routes": []
+    },
+    {
+      "name": "service-harvester-controller-cold-50",
+      "kind": "building",
+      "damage": 50,
+      "alive": true,
+      "jumping": true,
+      "destroyed": false,
+      "missing": false,
+      "height": 200,
+      "stars": [],
+      "type": "harvester",
+      "variant": "controller",
+      "hp": 50,
+      "damageUpdates": 0,
+      "routes": []
+    },
+    {
+      "name": "service-harvester-controller-cold-51",
+      "kind": "building",
+      "damage": 51,
+      "alive": true,
+      "jumping": true,
+      "destroyed": false,
+      "missing": false,
+      "height": 200,
+      "stars": [],
+      "type": "harvester",
+      "variant": "controller",
+      "hp": 49,
+      "damageUpdates": 0,
+      "routes": [
+        [
+          "market",
+          "setDamaged",
+          true
+        ]
+      ]
+    },
+    {
+      "name": "service-harvester-controller-cold-200",
+      "kind": "building",
+      "damage": 200,
+      "alive": true,
+      "jumping": true,
+      "destroyed": false,
+      "missing": false,
+      "height": 200,
+      "stars": [],
+      "type": "harvester",
+      "variant": "controller",
+      "hp": 0,
+      "damageUpdates": 0,
+      "routes": [
+        [
+          "market",
+          "setDamaged",
+          true
+        ]
+      ]
+    },
+    {
+      "name": "service-harvester-pending-live-0",
+      "kind": "building",
+      "damage": 0,
+      "alive": true,
+      "jumping": false,
+      "destroyed": false,
+      "missing": false,
+      "height": 200,
+      "stars": [
+        {
+          "x": 5,
+          "y": -88
+        }
+      ],
+      "type": "harvester",
+      "variant": "pending",
+      "hp": 100,
+      "damageUpdates": 0,
+      "routes": []
+    },
+    {
+      "name": "service-harvester-pending-live-49",
+      "kind": "building",
+      "damage": 49,
+      "alive": true,
+      "jumping": false,
+      "destroyed": false,
+      "missing": false,
+      "height": 200,
+      "stars": [
+        {
+          "x": 5,
+          "y": -88
+        }
+      ],
+      "type": "harvester",
+      "variant": "pending",
+      "hp": 51,
+      "damageUpdates": 0,
+      "routes": []
+    },
+    {
+      "name": "service-harvester-pending-live-50",
+      "kind": "building",
+      "damage": 50,
+      "alive": true,
+      "jumping": false,
+      "destroyed": false,
+      "missing": false,
+      "height": 200,
+      "stars": [
+        {
+          "x": 5,
+          "y": -88
+        }
+      ],
+      "type": "harvester",
+      "variant": "pending",
+      "hp": 50,
+      "damageUpdates": 0,
+      "routes": []
+    },
+    {
+      "name": "service-harvester-pending-live-51",
+      "kind": "building",
+      "damage": 51,
+      "alive": true,
+      "jumping": false,
+      "destroyed": false,
+      "missing": false,
+      "height": 200,
+      "stars": [
+        {
+          "x": 5,
+          "y": -88
+        }
+      ],
+      "type": "harvester",
+      "variant": "pending",
+      "hp": 49,
+      "damageUpdates": 0,
+      "routes": [
+        [
+          "marketFallback",
+          "damaged"
+        ]
+      ]
+    },
+    {
+      "name": "service-harvester-pending-live-200",
+      "kind": "building",
+      "damage": 200,
+      "alive": true,
+      "jumping": false,
+      "destroyed": false,
+      "missing": false,
+      "height": 200,
+      "stars": [
+        {
+          "x": 5,
+          "y": -88
+        }
+      ],
+      "type": "harvester",
+      "variant": "pending",
+      "hp": 0,
+      "damageUpdates": 0,
+      "routes": [
+        [
+          "marketFallback",
+          "damaged"
+        ]
+      ]
+    },
+    {
+      "name": "service-harvester-pending-cold-0",
+      "kind": "building",
+      "damage": 0,
+      "alive": true,
+      "jumping": true,
+      "destroyed": false,
+      "missing": false,
+      "height": 200,
+      "stars": [],
+      "type": "harvester",
+      "variant": "pending",
+      "hp": 100,
+      "damageUpdates": 0,
+      "routes": []
+    },
+    {
+      "name": "service-harvester-pending-cold-49",
+      "kind": "building",
+      "damage": 49,
+      "alive": true,
+      "jumping": true,
+      "destroyed": false,
+      "missing": false,
+      "height": 200,
+      "stars": [],
+      "type": "harvester",
+      "variant": "pending",
+      "hp": 51,
+      "damageUpdates": 0,
+      "routes": []
+    },
+    {
+      "name": "service-harvester-pending-cold-50",
+      "kind": "building",
+      "damage": 50,
+      "alive": true,
+      "jumping": true,
+      "destroyed": false,
+      "missing": false,
+      "height": 200,
+      "stars": [],
+      "type": "harvester",
+      "variant": "pending",
+      "hp": 50,
+      "damageUpdates": 0,
+      "routes": []
+    },
+    {
+      "name": "service-harvester-pending-cold-51",
+      "kind": "building",
+      "damage": 51,
+      "alive": true,
+      "jumping": true,
+      "destroyed": false,
+      "missing": false,
+      "height": 200,
+      "stars": [],
+      "type": "harvester",
+      "variant": "pending",
+      "hp": 49,
+      "damageUpdates": 0,
+      "routes": [
+        [
+          "marketFallback",
+          "damaged"
+        ]
+      ]
+    },
+    {
+      "name": "service-harvester-pending-cold-200",
+      "kind": "building",
+      "damage": 200,
+      "alive": true,
+      "jumping": true,
+      "destroyed": false,
+      "missing": false,
+      "height": 200,
+      "stars": [],
+      "type": "harvester",
+      "variant": "pending",
+      "hp": 0,
+      "damageUpdates": 0,
+      "routes": [
+        [
+          "marketFallback",
+          "damaged"
+        ]
+      ]
+    },
+    {
+      "name": "service-harvester-unpresented-live-0",
+      "kind": "building",
+      "damage": 0,
+      "alive": true,
+      "jumping": false,
+      "destroyed": false,
+      "missing": false,
+      "height": 200,
+      "stars": [
+        {
+          "x": 5,
+          "y": -88
+        }
+      ],
+      "type": "harvester",
+      "variant": "unpresented",
+      "hp": 100,
+      "damageUpdates": 0,
+      "routes": []
+    },
+    {
+      "name": "service-harvester-unpresented-live-49",
+      "kind": "building",
+      "damage": 49,
+      "alive": true,
+      "jumping": false,
+      "destroyed": false,
+      "missing": false,
+      "height": 200,
+      "stars": [
+        {
+          "x": 5,
+          "y": -88
+        }
+      ],
+      "type": "harvester",
+      "variant": "unpresented",
+      "hp": 51,
+      "damageUpdates": 0,
+      "routes": []
+    },
+    {
+      "name": "service-harvester-unpresented-live-50",
+      "kind": "building",
+      "damage": 50,
+      "alive": true,
+      "jumping": false,
+      "destroyed": false,
+      "missing": false,
+      "height": 200,
+      "stars": [
+        {
+          "x": 5,
+          "y": -88
+        }
+      ],
+      "type": "harvester",
+      "variant": "unpresented",
+      "hp": 50,
+      "damageUpdates": 0,
+      "routes": []
+    },
+    {
+      "name": "service-harvester-unpresented-live-51",
+      "kind": "building",
+      "damage": 51,
+      "alive": true,
+      "jumping": false,
+      "destroyed": false,
+      "missing": false,
+      "height": 200,
+      "stars": [
+        {
+          "x": 5,
+          "y": -88
+        }
+      ],
+      "type": "harvester",
+      "variant": "unpresented",
+      "hp": 49,
+      "damageUpdates": 0,
+      "routes": [
+        [
+          "marketFallback",
+          "damaged"
+        ]
+      ]
+    },
+    {
+      "name": "service-harvester-unpresented-live-200",
+      "kind": "building",
+      "damage": 200,
+      "alive": true,
+      "jumping": false,
+      "destroyed": false,
+      "missing": false,
+      "height": 200,
+      "stars": [
+        {
+          "x": 5,
+          "y": -88
+        }
+      ],
+      "type": "harvester",
+      "variant": "unpresented",
+      "hp": 0,
+      "damageUpdates": 0,
+      "routes": [
+        [
+          "marketFallback",
+          "damaged"
+        ]
+      ]
+    },
+    {
+      "name": "service-harvester-unpresented-cold-0",
+      "kind": "building",
+      "damage": 0,
+      "alive": true,
+      "jumping": true,
+      "destroyed": false,
+      "missing": false,
+      "height": 200,
+      "stars": [],
+      "type": "harvester",
+      "variant": "unpresented",
+      "hp": 100,
+      "damageUpdates": 0,
+      "routes": []
+    },
+    {
+      "name": "service-harvester-unpresented-cold-49",
+      "kind": "building",
+      "damage": 49,
+      "alive": true,
+      "jumping": true,
+      "destroyed": false,
+      "missing": false,
+      "height": 200,
+      "stars": [],
+      "type": "harvester",
+      "variant": "unpresented",
+      "hp": 51,
+      "damageUpdates": 0,
+      "routes": []
+    },
+    {
+      "name": "service-harvester-unpresented-cold-50",
+      "kind": "building",
+      "damage": 50,
+      "alive": true,
+      "jumping": true,
+      "destroyed": false,
+      "missing": false,
+      "height": 200,
+      "stars": [],
+      "type": "harvester",
+      "variant": "unpresented",
+      "hp": 50,
+      "damageUpdates": 0,
+      "routes": []
+    },
+    {
+      "name": "service-harvester-unpresented-cold-51",
+      "kind": "building",
+      "damage": 51,
+      "alive": true,
+      "jumping": true,
+      "destroyed": false,
+      "missing": false,
+      "height": 200,
+      "stars": [],
+      "type": "harvester",
+      "variant": "unpresented",
+      "hp": 49,
+      "damageUpdates": 0,
+      "routes": [
+        [
+          "marketFallback",
+          "damaged"
+        ]
+      ]
+    },
+    {
+      "name": "service-harvester-unpresented-cold-200",
+      "kind": "building",
+      "damage": 200,
+      "alive": true,
+      "jumping": true,
+      "destroyed": false,
+      "missing": false,
+      "height": 200,
+      "stars": [],
+      "type": "harvester",
+      "variant": "unpresented",
+      "hp": 0,
+      "damageUpdates": 0,
+      "routes": [
+        [
+          "marketFallback",
+          "damaged"
+        ]
+      ]
+    },
+    {
+      "name": "service-harvester-destroyed",
+      "kind": "building",
+      "damage": 51,
+      "alive": true,
+      "jumping": false,
+      "destroyed": true,
+      "missing": false,
+      "height": 200,
+      "stars": [],
+      "type": "harvester",
+      "variant": "controller",
+      "hp": 100,
+      "damageUpdates": 0,
+      "routes": []
+    },
+    {
+      "name": "service-harvester-missing",
+      "kind": "building",
+      "damage": 51,
+      "alive": true,
+      "jumping": false,
+      "destroyed": false,
+      "missing": true,
+      "height": 200,
+      "stars": [],
+      "type": "harvester",
+      "variant": "controller",
+      "hp": 100,
+      "damageUpdates": 0,
+      "routes": []
+    },
+    {
+      "name": "service-berth-controller-live-0",
+      "kind": "building",
+      "damage": 0,
+      "alive": true,
+      "jumping": false,
+      "destroyed": false,
+      "missing": false,
+      "height": 200,
+      "stars": [
+        {
+          "x": 5,
+          "y": -88
+        }
+      ],
+      "type": "berth",
+      "variant": "controller",
+      "hp": 100,
+      "damageUpdates": 0,
+      "routes": []
+    },
+    {
+      "name": "service-berth-controller-live-49",
+      "kind": "building",
+      "damage": 49,
+      "alive": true,
+      "jumping": false,
+      "destroyed": false,
+      "missing": false,
+      "height": 200,
+      "stars": [
+        {
+          "x": 5,
+          "y": -88
+        }
+      ],
+      "type": "berth",
+      "variant": "controller",
+      "hp": 51,
+      "damageUpdates": 0,
+      "routes": []
+    },
+    {
+      "name": "service-berth-controller-live-50",
+      "kind": "building",
+      "damage": 50,
+      "alive": true,
+      "jumping": false,
+      "destroyed": false,
+      "missing": false,
+      "height": 200,
+      "stars": [
+        {
+          "x": 5,
+          "y": -88
+        }
+      ],
+      "type": "berth",
+      "variant": "controller",
+      "hp": 50,
+      "damageUpdates": 0,
+      "routes": []
+    },
+    {
+      "name": "service-berth-controller-live-51",
+      "kind": "building",
+      "damage": 51,
+      "alive": true,
+      "jumping": false,
+      "destroyed": false,
+      "missing": false,
+      "height": 200,
+      "stars": [
+        {
+          "x": 5,
+          "y": -88
+        }
+      ],
+      "type": "berth",
+      "variant": "controller",
+      "hp": 49,
+      "damageUpdates": 0,
+      "routes": [
+        [
+          "berth",
+          "setDamaged",
+          true
+        ]
+      ]
+    },
+    {
+      "name": "service-berth-controller-live-200",
+      "kind": "building",
+      "damage": 200,
+      "alive": true,
+      "jumping": false,
+      "destroyed": false,
+      "missing": false,
+      "height": 200,
+      "stars": [
+        {
+          "x": 5,
+          "y": -88
+        }
+      ],
+      "type": "berth",
+      "variant": "controller",
+      "hp": 0,
+      "damageUpdates": 0,
+      "routes": [
+        [
+          "berth",
+          "setDamaged",
+          true
+        ]
+      ]
+    },
+    {
+      "name": "service-berth-controller-cold-0",
+      "kind": "building",
+      "damage": 0,
+      "alive": true,
+      "jumping": true,
+      "destroyed": false,
+      "missing": false,
+      "height": 200,
+      "stars": [],
+      "type": "berth",
+      "variant": "controller",
+      "hp": 100,
+      "damageUpdates": 0,
+      "routes": []
+    },
+    {
+      "name": "service-berth-controller-cold-49",
+      "kind": "building",
+      "damage": 49,
+      "alive": true,
+      "jumping": true,
+      "destroyed": false,
+      "missing": false,
+      "height": 200,
+      "stars": [],
+      "type": "berth",
+      "variant": "controller",
+      "hp": 51,
+      "damageUpdates": 0,
+      "routes": []
+    },
+    {
+      "name": "service-berth-controller-cold-50",
+      "kind": "building",
+      "damage": 50,
+      "alive": true,
+      "jumping": true,
+      "destroyed": false,
+      "missing": false,
+      "height": 200,
+      "stars": [],
+      "type": "berth",
+      "variant": "controller",
+      "hp": 50,
+      "damageUpdates": 0,
+      "routes": []
+    },
+    {
+      "name": "service-berth-controller-cold-51",
+      "kind": "building",
+      "damage": 51,
+      "alive": true,
+      "jumping": true,
+      "destroyed": false,
+      "missing": false,
+      "height": 200,
+      "stars": [],
+      "type": "berth",
+      "variant": "controller",
+      "hp": 49,
+      "damageUpdates": 0,
+      "routes": [
+        [
+          "berth",
+          "setDamaged",
+          true
+        ]
+      ]
+    },
+    {
+      "name": "service-berth-controller-cold-200",
+      "kind": "building",
+      "damage": 200,
+      "alive": true,
+      "jumping": true,
+      "destroyed": false,
+      "missing": false,
+      "height": 200,
+      "stars": [],
+      "type": "berth",
+      "variant": "controller",
+      "hp": 0,
+      "damageUpdates": 0,
+      "routes": [
+        [
+          "berth",
+          "setDamaged",
+          true
+        ]
+      ]
+    },
+    {
+      "name": "service-berth-pending-live-0",
+      "kind": "building",
+      "damage": 0,
+      "alive": true,
+      "jumping": false,
+      "destroyed": false,
+      "missing": false,
+      "height": 200,
+      "stars": [
+        {
+          "x": 5,
+          "y": -88
+        }
+      ],
+      "type": "berth",
+      "variant": "pending",
+      "hp": 100,
+      "damageUpdates": 0,
+      "routes": []
+    },
+    {
+      "name": "service-berth-pending-live-49",
+      "kind": "building",
+      "damage": 49,
+      "alive": true,
+      "jumping": false,
+      "destroyed": false,
+      "missing": false,
+      "height": 200,
+      "stars": [
+        {
+          "x": 5,
+          "y": -88
+        }
+      ],
+      "type": "berth",
+      "variant": "pending",
+      "hp": 51,
+      "damageUpdates": 0,
+      "routes": []
+    },
+    {
+      "name": "service-berth-pending-live-50",
+      "kind": "building",
+      "damage": 50,
+      "alive": true,
+      "jumping": false,
+      "destroyed": false,
+      "missing": false,
+      "height": 200,
+      "stars": [
+        {
+          "x": 5,
+          "y": -88
+        }
+      ],
+      "type": "berth",
+      "variant": "pending",
+      "hp": 50,
+      "damageUpdates": 0,
+      "routes": []
+    },
+    {
+      "name": "service-berth-pending-live-51",
+      "kind": "building",
+      "damage": 51,
+      "alive": true,
+      "jumping": false,
+      "destroyed": false,
+      "missing": false,
+      "height": 200,
+      "stars": [
+        {
+          "x": 5,
+          "y": -88
+        }
+      ],
+      "type": "berth",
+      "variant": "pending",
+      "hp": 49,
+      "damageUpdates": 0,
+      "routes": [
+        [
+          "berthFallback",
+          "damaged"
+        ]
+      ]
+    },
+    {
+      "name": "service-berth-pending-live-200",
+      "kind": "building",
+      "damage": 200,
+      "alive": true,
+      "jumping": false,
+      "destroyed": false,
+      "missing": false,
+      "height": 200,
+      "stars": [
+        {
+          "x": 5,
+          "y": -88
+        }
+      ],
+      "type": "berth",
+      "variant": "pending",
+      "hp": 0,
+      "damageUpdates": 0,
+      "routes": [
+        [
+          "berthFallback",
+          "damaged"
+        ]
+      ]
+    },
+    {
+      "name": "service-berth-pending-cold-0",
+      "kind": "building",
+      "damage": 0,
+      "alive": true,
+      "jumping": true,
+      "destroyed": false,
+      "missing": false,
+      "height": 200,
+      "stars": [],
+      "type": "berth",
+      "variant": "pending",
+      "hp": 100,
+      "damageUpdates": 0,
+      "routes": []
+    },
+    {
+      "name": "service-berth-pending-cold-49",
+      "kind": "building",
+      "damage": 49,
+      "alive": true,
+      "jumping": true,
+      "destroyed": false,
+      "missing": false,
+      "height": 200,
+      "stars": [],
+      "type": "berth",
+      "variant": "pending",
+      "hp": 51,
+      "damageUpdates": 0,
+      "routes": []
+    },
+    {
+      "name": "service-berth-pending-cold-50",
+      "kind": "building",
+      "damage": 50,
+      "alive": true,
+      "jumping": true,
+      "destroyed": false,
+      "missing": false,
+      "height": 200,
+      "stars": [],
+      "type": "berth",
+      "variant": "pending",
+      "hp": 50,
+      "damageUpdates": 0,
+      "routes": []
+    },
+    {
+      "name": "service-berth-pending-cold-51",
+      "kind": "building",
+      "damage": 51,
+      "alive": true,
+      "jumping": true,
+      "destroyed": false,
+      "missing": false,
+      "height": 200,
+      "stars": [],
+      "type": "berth",
+      "variant": "pending",
+      "hp": 49,
+      "damageUpdates": 0,
+      "routes": [
+        [
+          "berthFallback",
+          "damaged"
+        ]
+      ]
+    },
+    {
+      "name": "service-berth-pending-cold-200",
+      "kind": "building",
+      "damage": 200,
+      "alive": true,
+      "jumping": true,
+      "destroyed": false,
+      "missing": false,
+      "height": 200,
+      "stars": [],
+      "type": "berth",
+      "variant": "pending",
+      "hp": 0,
+      "damageUpdates": 0,
+      "routes": [
+        [
+          "berthFallback",
+          "damaged"
+        ]
+      ]
+    },
+    {
+      "name": "service-berth-destroyed",
+      "kind": "building",
+      "damage": 51,
+      "alive": true,
+      "jumping": false,
+      "destroyed": true,
+      "missing": false,
+      "height": 200,
+      "stars": [],
+      "type": "berth",
+      "variant": "controller",
+      "hp": 100,
+      "damageUpdates": 0,
+      "routes": []
+    },
+    {
+      "name": "service-berth-missing",
+      "kind": "building",
+      "damage": 51,
+      "alive": true,
+      "jumping": false,
+      "destroyed": false,
+      "missing": true,
+      "height": 200,
+      "stars": [],
+      "type": "berth",
+      "variant": "controller",
+      "hp": 100,
+      "damageUpdates": 0,
+      "routes": []
+    }
+  ],
+  "bodyOrdering": [
+    {
+      "skill": "cheekQuake",
+      "frames": [
+        "hero_theo_slam_f1",
+        "hero_theo_slam_f2",
+        "hero_theo_slam_f3",
+        "hero_theo_slam_f4",
+        "hero_theo_slam_f5",
+        "hero_theo_slam_f6",
+        "hero_theo_slam_f7",
+        "hero_theo_slam_f8"
+      ]
+    },
+    {
+      "skill": "snotRocket",
+      "frames": [
+        "hero_theo_snot_f1",
+        "hero_theo_snot_f2",
+        "hero_theo_snot_f3",
+        "hero_theo_snot_f4",
+        "hero_theo_snot_f5",
+        "hero_theo_snot_f6"
+      ]
+    }
+  ],
+  "serviceSourceHashes": {
+    "packages/shared/src/constants.ts": "d289876ff1f02ca5a6ca917123b4cca956f7da15386447eeb0ab31c4cbbb9ba8"
+  }
+}

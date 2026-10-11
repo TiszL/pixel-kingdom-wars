@@ -1,0 +1,284 @@
+{
+ "generator": "e0af2a2f70adeedd0578d5bd3951b358a91d0f21008f730540f148482e6c6f20",
+ "note": "per realm: the life.js species/density table (RGBA16UI, tableW × rows texels) as uploaded, sha256 over its uint16 little-endian bytes; groups rows [id, table row, species, hasGlow, hasTwins, hasEmit]; glow rows [group, row, species index, species id, T0, T4, T5] for every species with flag bit 4 (T0.z >> 4 & 4): T4 = [glow x + twin ox, glow y + twin oy, GLOW.radiusMap, GLOW.periodMs]; arrays [key, LW, LH, layers]",
+ "pack": {
+  "manifestSha256": "ac241498c956d8da3309ddfa5228b6cb147ad751ee40d9a75b31f4f9069c9007",
+  "packVersion": "pm1-cb8faa56909faa31"
+ },
+ "pin": "02e9da8414156b9e0000df1653de6273b196cca6",
+ "realms": {
+  "cinderfall": {
+   "arrays": [
+    ["spr3",160,128,20],
+    ["spr2",96,96,21],
+    ["spr1",64,64,189],
+    ["air0",32,32,85],
+    ["cre1",64,64,192],
+    ["tw0",16,16,37],
+    ["tw1",32,32,24],
+    ["tw3",128,128,4],
+    ["tw2",64,64,37]
+   ],
+   "darkTwinsReplaced": ["basalt_spire","basalt_spire_b","canopy_ash_snag","canopy_ash_snag_b","canopy_black_spruce","canopy_black_thorn","canopy_burnt_bramble","canopy_dead_burnt_oak","canopy_ember_maple","canopy_half_burnt_pine","canopy_red_sapling","charred_log","ember_ground","fissure_vent","kiln_house","obsidian_arch","quay_shed","rock_l_basalt","rock_s_basalt_column_shard","rock_s_basalt_columns","slag_lump","slag_ruin","smelter_gate","stump_burnt","stump_smoulder","watchtower_burnt"],
+   "glow": [],
+   "groups": [
+    ["grove",0,9,0,0,0],
+    ["lone",2,6,0,1,0],
+    ["scrub",4,6,0,0,0],
+    ["rocks",6,9,0,0,0],
+    ["litter",8,7,0,0,0],
+    ["crops",10,4,0,0,0],
+    ["features",12,16,0,1,1],
+    ["landmarks",14,3,0,1,1],
+    ["mapobj",16,20,0,1,0]
+   ],
+   "missing": [],
+   "rows": 70,
+   "sha256": "caecec9275844d62e2811de87f3468f2ca144c9843c698feb35bb38ffdb14eab",
+   "tableW": 384
+  },
+  "crownlands": {
+   "arrays": [
+    ["spr3",160,128,8],
+    ["spr2",96,96,31],
+    ["spr1",64,64,201],
+    ["spr0",32,32,2],
+    ["air0",32,32,75],
+    ["cre1",64,64,240],
+    ["tw0",16,16,63],
+    ["tw1",32,32,27],
+    ["tw3",128,128,4],
+    ["tw2",64,64,30]
+   ],
+   "darkTwinsReplaced": ["barn_b","berry_bush","birch","bridge_ns_top_wide","canopy_ash","canopy_bramble","canopy_fir","canopy_holly","canopy_oak_old","canopy_pine","canopy_rowan","canopy_sapling","dead_tree","flowers","mushrooms","stump","watchtower_ruin","watchtower_ruin_b","wf_daisies","wf_foxgloves","wf_hawthorn_blossom","wf_iris_yellow","wf_lavender","willow","willow_b"],
+   "glow": [],
+   "groups": [
+    ["grove",0,11,0,0,0],
+    ["lone",2,10,0,1,0],
+    ["scrub",4,7,0,0,0],
+    ["rocks",6,4,0,0,0],
+    ["litter",8,4,0,0,0],
+    ["crops",10,6,0,0,0],
+    ["features",12,12,0,1,1],
+    ["landmarks",14,1,0,1,0],
+    ["mapobj",16,20,0,1,0]
+   ],
+   "missing": [],
+   "rows": 72,
+   "sha256": "30a766e5e36dac06721d6ad333d1ad6fe3198ab9525648cf2d2ff81d090100af",
+   "tableW": 384
+  },
+  "elderwood": {
+   "arrays": [
+    ["spr3",160,128,18],
+    ["spr2",96,96,4],
+    ["spr1",64,64,162],
+    ["air0",32,32,89],
+    ["cre1",64,64,192],
+    ["tw0",16,16,46],
+    ["tw1",32,32,26],
+    ["tw3",128,128,5],
+    ["tw2",64,64,32]
+   ],
+   "darkTwinsReplaced": ["bluebell_clump_b","canopy_ancient_yew","canopy_bramble","canopy_bramble_small","canopy_elder_bush","canopy_elder_bush_small","canopy_elder_oak_b","canopy_fern_bush","canopy_fern_small","canopy_gnarled_elder","canopy_great_oak_b","canopy_hazel_coppice_small","canopy_hollow_oak","canopy_holly","canopy_log_mossy","canopy_moss_beech_b","canopy_mushroom_ring_b","canopy_old_willow_b","canopy_sapling","canopy_sapling_beech","canopy_twisted_beech_b","fern_tall","foxgloves","foxgloves_b","root_boathouse"],
+   "glow": [],
+   "groups": [
+    ["grove",0,11,0,0,0],
+    ["lone",2,10,0,1,0],
+    ["scrub",4,14,0,0,0],
+    ["rocks",6,9,0,0,0],
+    ["litter",8,10,0,0,0],
+    ["features",10,20,0,1,1],
+    ["landmarks",12,4,0,1,1],
+    ["mapobj",14,19,0,1,0]
+   ],
+   "missing": [],
+   "rows": 72,
+   "sha256": "be92c1b510fb333c5fb796009dddd8247824705d4212fe6913175f48d7bf1025",
+   "tableW": 384
+  },
+  "frostveil": {
+   "arrays": [
+    ["spr3",160,128,26],
+    ["spr2",96,96,14],
+    ["spr1",64,64,149],
+    ["air0",32,32,79],
+    ["cre1",64,64,192],
+    ["tw0",16,16,41],
+    ["tw1",32,32,23],
+    ["tw3",128,128,4],
+    ["tw2",64,64,36]
+   ],
+   "darkTwinsReplaced": ["berry_bush_frost","canopy_birch_white","canopy_bramble_frost","canopy_larch_bare","canopy_spruce","canopy_spruce_b","canopy_spruce_old","great_spruce","holly_snow","icicle_rock","watchtower_frost","watchtower_frost_b"],
+   "glow": [],
+   "groups": [
+    ["grove",0,9,0,0,0],
+    ["lone",2,7,0,1,0],
+    ["scrub",4,8,0,0,0],
+    ["rocks",6,7,0,0,0],
+    ["litter",8,4,0,0,0],
+    ["crops",10,4,0,0,0],
+    ["features",12,15,0,1,1],
+    ["landmarks",14,3,0,1,0],
+    ["mapobj",16,20,0,1,0]
+   ],
+   "missing": [],
+   "rows": 68,
+   "sha256": "95fbdac0a616a9da44d87019f76a835a6421196fc01d66931d19026d30514c63",
+   "tableW": 384
+  },
+  "seeker-reach": {
+   "arrays": [
+    ["spr3",160,128,26],
+    ["spr2",96,96,4],
+    ["spr1",64,64,184],
+    ["air0",32,32,82],
+    ["cre1",64,64,192],
+    ["tw0",16,16,47],
+    ["tw1",32,32,40],
+    ["tw3",128,128,8],
+    ["tw2",64,64,65]
+   ],
+   "darkTwinsReplaced": ["broken_monolith","canopy_crystal_amethyst_l","canopy_crystal_amethyst_l_b","canopy_crystal_amethyst_s","canopy_crystal_teal_l","canopy_crystal_teal_l_b","canopy_crystal_teal_s","canopy_glowcap_s","canopy_lumen_tree","canopy_lumen_tree_b","canopy_petrified_oak_b","canopy_petrified_pine","canopy_silver_birch_b","canopy_void_pine","canopy_void_pine_b","geode_hall","lumen_reeds_b","quay_house","silver_fern"],
+   "glow": [
+    [
+     "mapobj",
+     14,
+     8,
+     "map_beacon_1",
+     [0,15191,79,152],
+     [32,20,9,2400],
+     [4097,16448,32,64]
+    ],
+    [
+     "mapobj",
+     14,
+     9,
+     "map_beacon_2",
+     [0,16360,79,152],
+     [31,18,9,2400],
+     [4098,16448,32,64]
+    ]
+   ],
+   "groups": [
+    ["grove",0,11,0,0,0],
+    ["lone",2,8,0,1,0],
+    ["scrub",4,11,0,0,0],
+    ["rocks",6,11,0,0,0],
+    ["litter",8,5,0,0,0],
+    ["features",10,23,0,1,1],
+    ["landmarks",12,6,0,1,1],
+    ["mapobj",14,53,1,1,0]
+   ],
+   "missing": [],
+   "rows": 88,
+   "sha256": "764657e15cee84e4bfb4861d8cafa2f524a5f305639a9739a9a363c7a59bc077",
+   "tableW": 384
+  },
+  "stormcairn": {
+   "arrays": [
+    ["spr3",160,128,19],
+    ["spr2",96,96,16],
+    ["spr1",64,64,138],
+    ["air0",32,32,86],
+    ["cre1",64,64,192],
+    ["tw0",16,16,35],
+    ["tw1",32,32,38],
+    ["tw3",128,128,4],
+    ["tw2",64,64,27]
+   ],
+   "darkTwinsReplaced": ["blackhouse_byre","cairn_circle","canopy_great_pine","canopy_great_pine_b","canopy_great_thorn","canopy_hawthorn_wind","canopy_rowan_wind","canopy_rowan_young","canopy_scots_pine","canopy_scots_pine_b","canopy_sea_buckthorn","canopy_stunted_oak","canopy_thorn_scrub","driftwood","kelp_heap","peat_creel","sea_stack","shingle_bank","stump_pine"],
+   "glow": [],
+   "groups": [
+    ["grove",0,8,0,0,0],
+    ["lone",2,6,0,1,0],
+    ["scrub",4,9,0,0,0],
+    ["rocks",6,8,0,0,0],
+    ["litter",8,5,0,0,0],
+    ["crops",10,8,0,0,0],
+    ["features",12,10,0,1,1],
+    ["landmarks",14,4,0,1,0],
+    ["mapobj",16,20,0,1,0]
+   ],
+   "missing": [],
+   "rows": 74,
+   "sha256": "f93e3825dafeb36c2aac3c8bd720f0444228cbdd620cc0e0df5a70299082a109",
+   "tableW": 384
+  },
+  "sunscar": {
+   "arrays": [
+    ["spr3",160,128,11],
+    ["spr2",96,96,13],
+    ["spr1",64,64,153],
+    ["air0",32,32,74],
+    ["cre1",64,64,192],
+    ["tw0",16,16,39],
+    ["tw1",32,32,30],
+    ["tw3",128,128,4],
+    ["tw2",64,64,28]
+   ],
+   "darkTwinsReplaced": ["agave","cactus_cluster","canopy_acacia","canopy_acacia_b","canopy_acacia_dead","canopy_date_palm","canopy_date_palm_b","canopy_dead_scrub_low","canopy_fan_palm","canopy_fig","canopy_joshua","canopy_palm_young","canopy_thornbush","clay_granary","dead_scrub","desert_flowers","driftwood","great_palm","great_palm_b","palm_frond_pile","temple_ruin","tumbleweed"],
+   "glow": [],
+   "groups": [
+    ["grove",0,9,0,0,0],
+    ["lone",2,8,0,1,0],
+    ["scrub",4,8,0,0,0],
+    ["rocks",6,6,0,0,0],
+    ["litter",8,4,0,0,0],
+    ["crops",10,4,0,0,0],
+    ["features",12,16,0,1,1],
+    ["landmarks",14,3,0,1,0],
+    ["mapobj",16,20,0,1,0]
+   ],
+   "missing": [],
+   "rows": 68,
+   "sha256": "23f7f0a29516994110ebca15df3f11168fc9c1e3c372851da47b1b87a992eaf1",
+   "tableW": 384
+  },
+  "thornwake": {
+   "arrays": [
+    ["spr3",160,128,11],
+    ["spr2",96,96,5],
+    ["spr1",64,64,174],
+    ["air0",32,32,81],
+    ["cre1",64,64,192],
+    ["tw0",16,16,37],
+    ["tw1",32,32,36],
+    ["tw3",128,128,4],
+    ["tw2",64,64,29]
+   ],
+   "darkTwinsReplaced": ["canopy_bamboo","canopy_banana_young","canopy_dead_palm","canopy_fern_small","canopy_great_kapok_b","canopy_jungle_palm_slender","canopy_kapok_b","canopy_liana_hardwood_b","canopy_rubber_tree","canopy_rubber_tree_b","canopy_strangler_fig_b","canopy_tree_fern","canopy_tree_fern_young","canopy_vine_tangle","fallen_fruit_pile","heliconia","pitcher_plants","stilt_boathouse","stilt_longhouse","stump_jungle"],
+   "glow": [],
+   "groups": [
+    ["grove",0,12,0,0,0],
+    ["lone",2,10,0,1,0],
+    ["scrub",4,9,0,0,0],
+    ["rocks",6,6,0,0,0],
+    ["litter",8,4,0,0,0],
+    ["features",10,20,0,1,1],
+    ["landmarks",12,4,0,1,1],
+    ["mapobj",14,19,0,1,0]
+   ],
+   "missing": [],
+   "rows": 74,
+   "sha256": "722a8f06516133ba1ce79b8173039b42ad91dd567bce20bbf92f8b694a8edf77",
+   "tableW": 384
+  }
+ },
+ "schema": 1,
+ "sources": {
+  "concepts/globe3d-2026-09-23/src/realm/bases.js": "7e3db4e21e3c9b1e9a5bec2c5f717d859876ee5b4e9e29f28710e9f58ad1cad6",
+  "concepts/globe3d-2026-09-23/src/realm/camera.js": "879c4d6aabda484b36b3ceeea69108692131a5c222579c7983c9a282d8e5c4a9",
+  "concepts/globe3d-2026-09-23/src/realm/contracts.js": "3d3215dee2273b456c98b6684f5dc6835c1aaea1c3f7ea98e55fa462cb693eb0",
+  "concepts/globe3d-2026-09-23/src/realm/decor.js": "5c8eb39e2fe633ab67cd01193b38d3b07aaadf2dc4d9fcc558f3101ef1d1b59b",
+  "concepts/globe3d-2026-09-23/src/realm/demo-bases.js": "e4441307fc9e0129614fb083b4661ff6e828ca1dbd4f7bbd17b733a3c5165c02",
+  "concepts/globe3d-2026-09-23/src/realm/glsl/common.glsl.js": "7492ff9f85f283d3263fa3671907a9116ba646b5fdb56b100ae7cad73c35d52c",
+  "concepts/globe3d-2026-09-23/src/realm/life.js": "716142c459c8ccb8cc8d0a1e7d980cf502d5deda7480ed43a99d0b6f3f5ac169",
+  "concepts/globe3d-2026-09-23/src/realm/loader.js": "3aedcb60d54c73c883f5f8d4032ed1959d2e9f0febad0441f6ca3a9cd37668cb",
+  "concepts/globe3d-2026-09-23/src/realm/scatter.js": "969f0a75f67509f393ad48c252a7a1ea2ac149991be3c1df2424b682fb393cae",
+  "packages/shared/src/constants.ts": "360f8c643ee0211b5a7d8a81eedb60dc5fb3c47a67c9202109c424794d4821d6",
+  "packages/shared/src/wallConnect.ts": "ff7784ca91d3069b6f0ef217c6543eb002445fdbadb7d10bd50823097ee5b45b"
+ },
+ "suite": "table",
+ "tolerance": "exact"
+}

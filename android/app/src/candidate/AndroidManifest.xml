@@ -1,0 +1,6 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <application>
+        <!-- Seeker-only candidate must not intercept the production app's OAuth return. -->
+        <activity android:name="io.privy.sdk.oAuth.PrivyRedirectActivity" tools:node="remove" />
+    </application>
+</manifest>

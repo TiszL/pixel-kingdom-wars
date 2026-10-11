@@ -1,0 +1,22 @@
+{
+  "schema": 1,
+  "synthetic": true,
+  "realms": [
+    {
+      "id": "alpha",
+      "name": "Alpha",
+      "packVersion": "fixture-1",
+      "kitCommit": "0000000000000000000000000000000000000000",
+      "status": "ready",
+      "deeds": 60
+    },
+    {
+      "id": "wrap",
+      "name": "Wrap",
+      "packVersion": "fixture-1",
+      "kitCommit": "0000000000000000000000000000000000000000",
+      "status": "preview",
+      "deeds": 31
+    }
+  ]
+}

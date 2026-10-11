@@ -1,0 +1,6932 @@
+{
+  "address": "27bgnruDhviykKK12k5t2imTEgLUYfAgZRwGiD4zxWDf",
+  "metadata": {
+    "name": "shardkeep_economy",
+    "version": "0.1.0",
+    "spec": "0.1.0",
+    "description": "SHARDKEEP Seeker auction authority and immutable term evidence"
+  },
+  "instructions": [
+    {
+      "name": "accept_admin",
+      "discriminator": [
+        112,
+        42,
+        45,
+        90,
+        116,
+        181,
+        13,
+        170
+      ],
+      "accounts": [
+        {
+          "name": "new_admin",
+          "signer": true
+        },
+        {
+          "name": "authority",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  115,
+                  101,
+                  101,
+                  107,
+                  101,
+                  114,
+                  95,
+                  97,
+                  117,
+                  116,
+                  104,
+                  111,
+                  114,
+                  105,
+                  116,
+                  121
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "args": []
+    },
+    {
+      "name": "accrue_mining_tax",
+      "discriminator": [
+        236,
+        121,
+        192,
+        221,
+        194,
+        38,
+        171,
+        205
+      ],
+      "accounts": [
+        {
+          "name": "payer",
+          "writable": true,
+          "signer": true
+        },
+        {
+          "name": "config",
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  101,
+                  99,
+                  111,
+                  110,
+                  111,
+                  109,
+                  121
+                ]
+              }
+            ]
+          },
+          "relations": [
+            "epoch"
+          ]
+        },
+        {
+          "name": "auction_config",
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  97,
+                  117,
+                  99,
+                  116,
+                  105,
+                  111,
+                  110,
+                  95,
+                  99,
+                  111,
+                  110,
+                  102,
+                  105,
+                  103
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "registry",
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  115,
+                  101,
+                  101,
+                  107,
+                  101,
+                  114,
+                  95,
+                  114,
+                  101,
+                  103,
+                  105,
+                  115,
+                  116,
+                  114,
+                  121
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "term",
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  115,
+                  101,
+                  101,
+                  107,
+                  101,
+                  114,
+                  95,
+                  116,
+                  101,
+                  114,
+                  109
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "auction_config"
+              },
+              {
+                "kind": "account",
+                "path": "term.round",
+                "account": "SeekerTerm"
+              }
+            ]
+          }
+        },
+        {
+          "name": "pool",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  109,
+                  105,
+                  110,
+                  105,
+                  110,
+                  103,
+                  95,
+                  116,
+                  97,
+                  120,
+                  95,
+                  112,
+                  111,
+                  111,
+                  108
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "config"
+              },
+              {
+                "kind": "account",
+                "path": "term"
+              }
+            ]
+          }
+        },
+        {
+          "name": "epoch",
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  109,
+                  105,
+                  110,
+                  105,
+                  110,
+                  103,
+                  95,
+                  101,
+                  112,
+                  111,
+                  99,
+                  104
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "epoch.day",
+                "account": "MiningEpochReceipt"
+              }
+            ]
+          }
+        },
+        {
+          "name": "accrual",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  109,
+                  105,
+                  110,
+                  105,
+                  110,
+                  103,
+                  95,
+                  116,
+                  97,
+                  120,
+                  95,
+                  101,
+                  112,
+                  111,
+                  99,
+                  104
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "config"
+              },
+              {
+                "kind": "account",
+                "path": "epoch"
+              }
+            ]
+          }
+        },
+        {
+          "name": "system_program",
+          "address": "11111111111111111111111111111111"
+        }
+      ],
+      "args": []
+    },
+    {
+      "name": "buy_realm_access",
+      "discriminator": [
+        164,
+        171,
+        176,
+        133,
+        181,
+        169,
+        81,
+        131
+      ],
+      "accounts": [
+        {
+          "name": "buyer",
+          "writable": true,
+          "signer": true
+        },
+        {
+          "name": "authority",
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  115,
+                  101,
+                  101,
+                  107,
+                  101,
+                  114,
+                  95,
+                  97,
+                  117,
+                  116,
+                  104,
+                  111,
+                  114,
+                  105,
+                  116,
+                  121
+                ]
+              }
+            ]
+          },
+          "relations": [
+            "config"
+          ]
+        },
+        {
+          "name": "config",
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  114,
+                  101,
+                  97,
+                  108,
+                  109,
+                  95,
+                  115,
+                  97,
+                  108,
+                  101,
+                  95,
+                  99,
+                  111,
+                  110,
+                  102,
+                  105,
+                  103
+                ]
+              }
+            ]
+          },
+          "relations": [
+            "access"
+          ]
+        },
+        {
+          "name": "auction_config",
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  97,
+                  117,
+                  99,
+                  116,
+                  105,
+                  111,
+                  110,
+                  95,
+                  99,
+                  111,
+                  110,
+                  102,
+                  105,
+                  103
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "registry",
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  115,
+                  101,
+                  101,
+                  107,
+                  101,
+                  114,
+                  95,
+                  114,
+                  101,
+                  103,
+                  105,
+                  115,
+                  116,
+                  114,
+                  121
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "term",
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  115,
+                  101,
+                  101,
+                  107,
+                  101,
+                  114,
+                  95,
+                  116,
+                  101,
+                  114,
+                  109
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "auction_config"
+              },
+              {
+                "kind": "arg",
+                "path": "args.round"
+              }
+            ]
+          }
+        },
+        {
+          "name": "auction"
+        },
+        {
+          "name": "quota",
+          "writable": true
+        },
+        {
+          "name": "access",
+          "writable": true
+        },
+        {
+          "name": "receipt",
+          "writable": true
+        },
+        {
+          "name": "seller",
+          "docs": [
+            "settled Auction winner; receiving SOL does not require system ownership."
+          ],
+          "writable": true
+        },
+        {
+          "name": "developer",
+          "writable": true
+        },
+        {
+          "name": "system_program",
+          "address": "11111111111111111111111111111111"
+        }
+      ],
+      "args": [
+        {
+          "name": "args",
+          "type": {
+            "defined": {
+              "name": "BuyRealmAccessArgs"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "claim_mining",
+      "discriminator": [
+        222,
+        36,
+        64,
+        123,
+        32,
+        17,
+        219,
+        8
+      ],
+      "accounts": [
+        {
+          "name": "claimant",
+          "signer": true
+        },
+        {
+          "name": "config",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  101,
+                  99,
+                  111,
+                  110,
+                  111,
+                  109,
+                  121
+                ]
+              }
+            ]
+          },
+          "relations": [
+            "root"
+          ]
+        },
+        {
+          "name": "root",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  97,
+                  108,
+                  108,
+                  111,
+                  99
+                ]
+              },
+              {
+                "kind": "arg",
+                "path": "sequence"
+              }
+            ]
+          }
+        },
+        {
+          "name": "miner",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  109,
+                  105,
+                  110,
+                  101,
+                  114
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "claimant"
+              }
+            ]
+          }
+        },
+        {
+          "name": "renown",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  114,
+                  101,
+                  110,
+                  111,
+                  119,
+                  110
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "claimant"
+              }
+            ]
+          }
+        },
+        {
+          "name": "vault",
+          "writable": true
+        },
+        {
+          "name": "destination",
+          "writable": true
+        },
+        {
+          "name": "keep_mint"
+        },
+        {
+          "name": "token_program",
+          "address": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA"
+        }
+      ],
+      "args": [
+        {
+          "name": "sequence",
+          "type": "u64"
+        },
+        {
+          "name": "cumulative_keep",
+          "type": "u64"
+        },
+        {
+          "name": "cumulative_renown",
+          "type": "u64"
+        },
+        {
+          "name": "cumulative_days",
+          "type": "u64"
+        },
+        {
+          "name": "proof",
+          "type": {
+            "vec": {
+              "defined": {
+                "name": "ProofNode"
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "claim_mining_tax",
+      "discriminator": [
+        251,
+        158,
+        247,
+        186,
+        156,
+        3,
+        136,
+        150
+      ],
+      "accounts": [
+        {
+          "name": "claimant",
+          "signer": true
+        },
+        {
+          "name": "config",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  101,
+                  99,
+                  111,
+                  110,
+                  111,
+                  109,
+                  121
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "auction_config",
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  97,
+                  117,
+                  99,
+                  116,
+                  105,
+                  111,
+                  110,
+                  95,
+                  99,
+                  111,
+                  110,
+                  102,
+                  105,
+                  103
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "registry",
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  115,
+                  101,
+                  101,
+                  107,
+                  101,
+                  114,
+                  95,
+                  114,
+                  101,
+                  103,
+                  105,
+                  115,
+                  116,
+                  114,
+                  121
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "term",
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  115,
+                  101,
+                  101,
+                  107,
+                  101,
+                  114,
+                  95,
+                  116,
+                  101,
+                  114,
+                  109
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "auction_config"
+              },
+              {
+                "kind": "account",
+                "path": "term.round",
+                "account": "SeekerTerm"
+              }
+            ]
+          }
+        },
+        {
+          "name": "pool",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  109,
+                  105,
+                  110,
+                  105,
+                  110,
+                  103,
+                  95,
+                  116,
+                  97,
+                  120,
+                  95,
+                  112,
+                  111,
+                  111,
+                  108
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "config"
+              },
+              {
+                "kind": "account",
+                "path": "term"
+              }
+            ]
+          },
+          "relations": [
+            "spot_claim"
+          ]
+        },
+        {
+          "name": "auction",
+          "relations": [
+            "spot_claim"
+          ]
+        },
+        {
+          "name": "spot_claim",
+          "writable": true
+        },
+        {
+          "name": "vault",
+          "writable": true
+        },
+        {
+          "name": "destination",
+          "writable": true
+        },
+        {
+          "name": "keep_mint"
+        },
+        {
+          "name": "token_program",
+          "address": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA"
+        }
+      ],
+      "args": []
+    },
+    {
+      "name": "close_permit_receipt",
+      "discriminator": [
+        52,
+        130,
+        172,
+        24,
+        80,
+        108,
+        88,
+        25
+      ],
+      "accounts": [
+        {
+          "name": "wallet",
+          "writable": true,
+          "signer": true,
+          "relations": [
+            "receipt"
+          ]
+        },
+        {
+          "name": "receipt",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  112,
+                  101,
+                  114,
+                  109,
+                  105,
+                  116
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "receipt.permit_id",
+                "account": "PermitReceipt"
+              }
+            ]
+          }
+        }
+      ],
+      "args": []
+    },
+    {
+      "name": "correct_allocation_root",
+      "discriminator": [
+        180,
+        97,
+        60,
+        21,
+        30,
+        59,
+        233,
+        139
+      ],
+      "accounts": [
+        {
+          "name": "signer",
+          "writable": true,
+          "signer": true
+        },
+        {
+          "name": "authority",
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  115,
+                  101,
+                  101,
+                  107,
+                  101,
+                  114,
+                  95,
+                  97,
+                  117,
+                  116,
+                  104,
+                  111,
+                  114,
+                  105,
+                  116,
+                  121
+                ]
+              }
+            ]
+          },
+          "relations": [
+            "config"
+          ]
+        },
+        {
+          "name": "config",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  101,
+                  99,
+                  111,
+                  110,
+                  111,
+                  109,
+                  121
+                ]
+              }
+            ]
+          },
+          "relations": [
+            "revoked_root",
+            "epoch"
+          ]
+        },
+        {
+          "name": "revoked_root",
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  97,
+                  108,
+                  108,
+                  111,
+                  99
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "revoked_root.sequence",
+                "account": "AllocationRoot"
+              }
+            ]
+          }
+        },
+        {
+          "name": "epoch",
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  109,
+                  105,
+                  110,
+                  105,
+                  110,
+                  103,
+                  95,
+                  101,
+                  112,
+                  111,
+                  99,
+                  104
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "epoch.day",
+                "account": "MiningEpochReceipt"
+              }
+            ]
+          }
+        },
+        {
+          "name": "root",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  97,
+                  108,
+                  108,
+                  111,
+                  99
+                ]
+              },
+              {
+                "kind": "arg",
+                "path": "args.sequence"
+              }
+            ]
+          }
+        },
+        {
+          "name": "mining_vault"
+        },
+        {
+          "name": "system_program",
+          "address": "11111111111111111111111111111111"
+        }
+      ],
+      "args": [
+        {
+          "name": "args",
+          "type": {
+            "defined": {
+              "name": "CorrectMiningArgs"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "initialize_auction_config",
+      "discriminator": [
+        94,
+        1,
+        96,
+        31,
+        46,
+        102,
+        88,
+        102
+      ],
+      "accounts": [
+        {
+          "name": "admin",
+          "writable": true,
+          "signer": true,
+          "relations": [
+            "authority"
+          ]
+        },
+        {
+          "name": "authority",
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  115,
+                  101,
+                  101,
+                  107,
+                  101,
+                  114,
+                  95,
+                  97,
+                  117,
+                  116,
+                  104,
+                  111,
+                  114,
+                  105,
+                  116,
+                  121
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "config",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  97,
+                  117,
+                  99,
+                  116,
+                  105,
+                  111,
+                  110,
+                  95,
+                  99,
+                  111,
+                  110,
+                  102,
+                  105,
+                  103
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "registry",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  115,
+                  101,
+                  101,
+                  107,
+                  101,
+                  114,
+                  95,
+                  114,
+                  101,
+                  103,
+                  105,
+                  115,
+                  116,
+                  114,
+                  121
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "mint"
+        },
+        {
+          "name": "prize_owner"
+        },
+        {
+          "name": "prize_ata",
+          "writable": true
+        },
+        {
+          "name": "token_program",
+          "address": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA"
+        },
+        {
+          "name": "associated_token_program",
+          "address": "ATokenGPvbdGVxr1b2hvZbsiqW5xWH25efTNsLJA8knL"
+        },
+        {
+          "name": "system_program",
+          "address": "11111111111111111111111111111111"
+        }
+      ],
+      "args": [
+        {
+          "name": "first_operating_start",
+          "type": "i64"
+        }
+      ]
+    },
+    {
+      "name": "initialize_economy",
+      "discriminator": [
+        180,
+        172,
+        91,
+        234,
+        105,
+        180,
+        23,
+        236
+      ],
+      "accounts": [
+        {
+          "name": "admin",
+          "writable": true,
+          "signer": true,
+          "relations": [
+            "authority"
+          ]
+        },
+        {
+          "name": "upgrade_authority",
+          "signer": true
+        },
+        {
+          "name": "program",
+          "address": "27bgnruDhviykKK12k5t2imTEgLUYfAgZRwGiD4zxWDf"
+        },
+        {
+          "name": "program_data"
+        },
+        {
+          "name": "authority",
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  115,
+                  101,
+                  101,
+                  107,
+                  101,
+                  114,
+                  95,
+                  97,
+                  117,
+                  116,
+                  104,
+                  111,
+                  114,
+                  105,
+                  116,
+                  121
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "config",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  101,
+                  99,
+                  111,
+                  110,
+                  111,
+                  109,
+                  121
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "mint"
+        },
+        {
+          "name": "reserve_owner"
+        },
+        {
+          "name": "reserve_ata"
+        },
+        {
+          "name": "mining_vault",
+          "writable": true
+        },
+        {
+          "name": "token_program",
+          "address": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA"
+        },
+        {
+          "name": "associated_token_program",
+          "address": "ATokenGPvbdGVxr1b2hvZbsiqW5xWH25efTNsLJA8knL"
+        },
+        {
+          "name": "system_program",
+          "address": "11111111111111111111111111111111"
+        }
+      ],
+      "args": [
+        {
+          "name": "publisher",
+          "type": "pubkey"
+        },
+        {
+          "name": "genesis_day",
+          "type": "u64"
+        }
+      ]
+    },
+    {
+      "name": "initialize_realm_sale_config",
+      "discriminator": [
+        36,
+        218,
+        208,
+        150,
+        192,
+        208,
+        60,
+        234
+      ],
+      "accounts": [
+        {
+          "name": "admin",
+          "writable": true,
+          "signer": true,
+          "relations": [
+            "authority"
+          ]
+        },
+        {
+          "name": "upgrade_authority",
+          "signer": true
+        },
+        {
+          "name": "program",
+          "address": "27bgnruDhviykKK12k5t2imTEgLUYfAgZRwGiD4zxWDf"
+        },
+        {
+          "name": "program_data"
+        },
+        {
+          "name": "authority",
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  115,
+                  101,
+                  101,
+                  107,
+                  101,
+                  114,
+                  95,
+                  97,
+                  117,
+                  116,
+                  104,
+                  111,
+                  114,
+                  105,
+                  116,
+                  121
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "config",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  114,
+                  101,
+                  97,
+                  108,
+                  109,
+                  95,
+                  115,
+                  97,
+                  108,
+                  101,
+                  95,
+                  99,
+                  111,
+                  110,
+                  102,
+                  105,
+                  103
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "developer"
+        },
+        {
+          "name": "system_program",
+          "address": "11111111111111111111111111111111"
+        }
+      ],
+      "args": []
+    },
+    {
+      "name": "initialize_seeker_authority",
+      "discriminator": [
+        150,
+        53,
+        194,
+        79,
+        189,
+        26,
+        124,
+        37
+      ],
+      "accounts": [
+        {
+          "name": "admin",
+          "writable": true,
+          "signer": true
+        },
+        {
+          "name": "program",
+          "address": "27bgnruDhviykKK12k5t2imTEgLUYfAgZRwGiD4zxWDf"
+        },
+        {
+          "name": "program_data"
+        },
+        {
+          "name": "authority",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  115,
+                  101,
+                  101,
+                  107,
+                  101,
+                  114,
+                  95,
+                  97,
+                  117,
+                  116,
+                  104,
+                  111,
+                  114,
+                  105,
+                  116,
+                  121
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "system_program",
+          "address": "11111111111111111111111111111111"
+        }
+      ],
+      "args": [
+        {
+          "name": "guardian",
+          "type": "pubkey"
+        },
+        {
+          "name": "policy_key",
+          "type": "pubkey"
+        },
+        {
+          "name": "cluster_genesis",
+          "type": {
+            "array": [
+              "u8",
+              32
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "open_auction",
+      "discriminator": [
+        48,
+        60,
+        204,
+        12,
+        175,
+        130,
+        173,
+        33
+      ],
+      "accounts": [
+        {
+          "name": "wallet",
+          "writable": true,
+          "signer": true
+        },
+        {
+          "name": "authority",
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  115,
+                  101,
+                  101,
+                  107,
+                  101,
+                  114,
+                  95,
+                  97,
+                  117,
+                  116,
+                  104,
+                  111,
+                  114,
+                  105,
+                  116,
+                  121
+                ]
+              }
+            ]
+          },
+          "relations": [
+            "config"
+          ]
+        },
+        {
+          "name": "config",
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  97,
+                  117,
+                  99,
+                  116,
+                  105,
+                  111,
+                  110,
+                  95,
+                  99,
+                  111,
+                  110,
+                  102,
+                  105,
+                  103
+                ]
+              }
+            ]
+          },
+          "relations": [
+            "term"
+          ]
+        },
+        {
+          "name": "registry",
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  115,
+                  101,
+                  101,
+                  107,
+                  101,
+                  114,
+                  95,
+                  114,
+                  101,
+                  103,
+                  105,
+                  115,
+                  116,
+                  114,
+                  121
+                ]
+              }
+            ]
+          },
+          "relations": [
+            "config"
+          ]
+        },
+        {
+          "name": "term",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  115,
+                  101,
+                  101,
+                  107,
+                  101,
+                  114,
+                  95,
+                  116,
+                  101,
+                  114,
+                  109
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "config"
+              },
+              {
+                "kind": "account",
+                "path": "term.round",
+                "account": "SeekerTerm"
+              }
+            ]
+          }
+        },
+        {
+          "name": "auction",
+          "writable": true
+        },
+        {
+          "name": "vault",
+          "writable": true
+        },
+        {
+          "name": "mint",
+          "relations": [
+            "config"
+          ]
+        },
+        {
+          "name": "receipt",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  112,
+                  101,
+                  114,
+                  109,
+                  105,
+                  116
+                ]
+              },
+              {
+                "kind": "arg",
+                "path": "permit.permit_id"
+              }
+            ]
+          }
+        },
+        {
+          "name": "instructions",
+          "address": "Sysvar1nstructions1111111111111111111111111"
+        },
+        {
+          "name": "token_program",
+          "address": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA"
+        },
+        {
+          "name": "associated_token_program",
+          "address": "ATokenGPvbdGVxr1b2hvZbsiqW5xWH25efTNsLJA8knL"
+        },
+        {
+          "name": "system_program",
+          "address": "11111111111111111111111111111111"
+        }
+      ],
+      "args": [
+        {
+          "name": "spot",
+          "type": "u8"
+        },
+        {
+          "name": "permit",
+          "type": {
+            "defined": {
+              "name": "PermitArgs"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "open_bid",
+      "discriminator": [
+        47,
+        244,
+        91,
+        248,
+        119,
+        250,
+        130,
+        129
+      ],
+      "accounts": [
+        {
+          "name": "wallet",
+          "writable": true,
+          "signer": true
+        },
+        {
+          "name": "config",
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  97,
+                  117,
+                  99,
+                  116,
+                  105,
+                  111,
+                  110,
+                  95,
+                  99,
+                  111,
+                  110,
+                  102,
+                  105,
+                  103
+                ]
+              }
+            ]
+          },
+          "relations": [
+            "auction"
+          ]
+        },
+        {
+          "name": "auction"
+        },
+        {
+          "name": "bid",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  98,
+                  105,
+                  100
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "auction"
+              },
+              {
+                "kind": "account",
+                "path": "wallet"
+              }
+            ]
+          }
+        },
+        {
+          "name": "system_program",
+          "address": "11111111111111111111111111111111"
+        }
+      ],
+      "args": []
+    },
+    {
+      "name": "open_miner_records",
+      "discriminator": [
+        119,
+        14,
+        190,
+        166,
+        208,
+        181,
+        158,
+        100
+      ],
+      "accounts": [
+        {
+          "name": "payer",
+          "writable": true,
+          "signer": true
+        },
+        {
+          "name": "miner",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  109,
+                  105,
+                  110,
+                  101,
+                  114
+                ]
+              },
+              {
+                "kind": "arg",
+                "path": "wallet"
+              }
+            ]
+          }
+        },
+        {
+          "name": "renown",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  114,
+                  101,
+                  110,
+                  111,
+                  119,
+                  110
+                ]
+              },
+              {
+                "kind": "arg",
+                "path": "wallet"
+              }
+            ]
+          }
+        },
+        {
+          "name": "system_program",
+          "address": "11111111111111111111111111111111"
+        }
+      ],
+      "args": [
+        {
+          "name": "wallet",
+          "type": "pubkey"
+        }
+      ]
+    },
+    {
+      "name": "open_mining_tax_pool",
+      "discriminator": [
+        126,
+        149,
+        231,
+        46,
+        129,
+        35,
+        107,
+        255
+      ],
+      "accounts": [
+        {
+          "name": "payer",
+          "writable": true,
+          "signer": true
+        },
+        {
+          "name": "config",
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  101,
+                  99,
+                  111,
+                  110,
+                  111,
+                  109,
+                  121
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "auction_config",
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  97,
+                  117,
+                  99,
+                  116,
+                  105,
+                  111,
+                  110,
+                  95,
+                  99,
+                  111,
+                  110,
+                  102,
+                  105,
+                  103
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "registry",
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  115,
+                  101,
+                  101,
+                  107,
+                  101,
+                  114,
+                  95,
+                  114,
+                  101,
+                  103,
+                  105,
+                  115,
+                  116,
+                  114,
+                  121
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "term",
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  115,
+                  101,
+                  101,
+                  107,
+                  101,
+                  114,
+                  95,
+                  116,
+                  101,
+                  114,
+                  109
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "auction_config"
+              },
+              {
+                "kind": "account",
+                "path": "term.round",
+                "account": "SeekerTerm"
+              }
+            ]
+          }
+        },
+        {
+          "name": "pool",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  109,
+                  105,
+                  110,
+                  105,
+                  110,
+                  103,
+                  95,
+                  116,
+                  97,
+                  120,
+                  95,
+                  112,
+                  111,
+                  111,
+                  108
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "config"
+              },
+              {
+                "kind": "account",
+                "path": "term"
+              }
+            ]
+          }
+        },
+        {
+          "name": "system_program",
+          "address": "11111111111111111111111111111111"
+        }
+      ],
+      "args": []
+    },
+    {
+      "name": "open_mining_tax_spot",
+      "discriminator": [
+        162,
+        201,
+        237,
+        110,
+        123,
+        177,
+        57,
+        107
+      ],
+      "accounts": [
+        {
+          "name": "payer",
+          "writable": true,
+          "signer": true
+        },
+        {
+          "name": "config",
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  101,
+                  99,
+                  111,
+                  110,
+                  111,
+                  109,
+                  121
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "auction_config",
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  97,
+                  117,
+                  99,
+                  116,
+                  105,
+                  111,
+                  110,
+                  95,
+                  99,
+                  111,
+                  110,
+                  102,
+                  105,
+                  103
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "registry",
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  115,
+                  101,
+                  101,
+                  107,
+                  101,
+                  114,
+                  95,
+                  114,
+                  101,
+                  103,
+                  105,
+                  115,
+                  116,
+                  114,
+                  121
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "term",
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  115,
+                  101,
+                  101,
+                  107,
+                  101,
+                  114,
+                  95,
+                  116,
+                  101,
+                  114,
+                  109
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "auction_config"
+              },
+              {
+                "kind": "account",
+                "path": "term.round",
+                "account": "SeekerTerm"
+              }
+            ]
+          }
+        },
+        {
+          "name": "pool",
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  109,
+                  105,
+                  110,
+                  105,
+                  110,
+                  103,
+                  95,
+                  116,
+                  97,
+                  120,
+                  95,
+                  112,
+                  111,
+                  111,
+                  108
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "config"
+              },
+              {
+                "kind": "account",
+                "path": "term"
+              }
+            ]
+          }
+        },
+        {
+          "name": "auction"
+        },
+        {
+          "name": "spot_claim",
+          "writable": true
+        },
+        {
+          "name": "system_program",
+          "address": "11111111111111111111111111111111"
+        }
+      ],
+      "args": []
+    },
+    {
+      "name": "open_realm_access",
+      "discriminator": [
+        13,
+        64,
+        189,
+        200,
+        181,
+        103,
+        12,
+        45
+      ],
+      "accounts": [
+        {
+          "name": "payer",
+          "writable": true,
+          "signer": true
+        },
+        {
+          "name": "config",
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  114,
+                  101,
+                  97,
+                  108,
+                  109,
+                  95,
+                  115,
+                  97,
+                  108,
+                  101,
+                  95,
+                  99,
+                  111,
+                  110,
+                  102,
+                  105,
+                  103
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "access",
+          "writable": true
+        },
+        {
+          "name": "system_program",
+          "address": "11111111111111111111111111111111"
+        }
+      ],
+      "args": [
+        {
+          "name": "wallet",
+          "type": "pubkey"
+        },
+        {
+          "name": "realm",
+          "type": "u8"
+        }
+      ]
+    },
+    {
+      "name": "open_spot_sales_quota",
+      "discriminator": [
+        59,
+        247,
+        177,
+        192,
+        45,
+        28,
+        122,
+        123
+      ],
+      "accounts": [
+        {
+          "name": "payer",
+          "writable": true,
+          "signer": true
+        },
+        {
+          "name": "config",
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  114,
+                  101,
+                  97,
+                  108,
+                  109,
+                  95,
+                  115,
+                  97,
+                  108,
+                  101,
+                  95,
+                  99,
+                  111,
+                  110,
+                  102,
+                  105,
+                  103
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "quota",
+          "writable": true
+        },
+        {
+          "name": "system_program",
+          "address": "11111111111111111111111111111111"
+        }
+      ],
+      "args": [
+        {
+          "name": "spot",
+          "type": "u8"
+        },
+        {
+          "name": "day",
+          "type": "u64"
+        }
+      ]
+    },
+    {
+      "name": "open_term",
+      "discriminator": [
+        6,
+        233,
+        234,
+        24,
+        44,
+        99,
+        251,
+        39
+      ],
+      "accounts": [
+        {
+          "name": "payer",
+          "writable": true,
+          "signer": true
+        },
+        {
+          "name": "config",
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  97,
+                  117,
+                  99,
+                  116,
+                  105,
+                  111,
+                  110,
+                  95,
+                  99,
+                  111,
+                  110,
+                  102,
+                  105,
+                  103
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "registry",
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  115,
+                  101,
+                  101,
+                  107,
+                  101,
+                  114,
+                  95,
+                  114,
+                  101,
+                  103,
+                  105,
+                  115,
+                  116,
+                  114,
+                  121
+                ]
+              }
+            ]
+          },
+          "relations": [
+            "config"
+          ]
+        },
+        {
+          "name": "term",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  115,
+                  101,
+                  101,
+                  107,
+                  101,
+                  114,
+                  95,
+                  116,
+                  101,
+                  114,
+                  109
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "config"
+              },
+              {
+                "kind": "arg",
+                "path": "round"
+              }
+            ]
+          }
+        },
+        {
+          "name": "previous_term",
+          "optional": true
+        },
+        {
+          "name": "system_program",
+          "address": "11111111111111111111111111111111"
+        }
+      ],
+      "args": [
+        {
+          "name": "round",
+          "type": "u64"
+        }
+      ]
+    },
+    {
+      "name": "place_bid",
+      "discriminator": [
+        238,
+        77,
+        148,
+        91,
+        200,
+        151,
+        92,
+        146
+      ],
+      "accounts": [
+        {
+          "name": "wallet",
+          "signer": true,
+          "relations": [
+            "bid"
+          ]
+        },
+        {
+          "name": "authority",
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  115,
+                  101,
+                  101,
+                  107,
+                  101,
+                  114,
+                  95,
+                  97,
+                  117,
+                  116,
+                  104,
+                  111,
+                  114,
+                  105,
+                  116,
+                  121
+                ]
+              }
+            ]
+          },
+          "relations": [
+            "config"
+          ]
+        },
+        {
+          "name": "config",
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  97,
+                  117,
+                  99,
+                  116,
+                  105,
+                  111,
+                  110,
+                  95,
+                  99,
+                  111,
+                  110,
+                  102,
+                  105,
+                  103
+                ]
+              }
+            ]
+          },
+          "relations": [
+            "term",
+            "auction"
+          ]
+        },
+        {
+          "name": "term",
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  115,
+                  101,
+                  101,
+                  107,
+                  101,
+                  114,
+                  95,
+                  116,
+                  101,
+                  114,
+                  109
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "config"
+              },
+              {
+                "kind": "account",
+                "path": "term.round",
+                "account": "SeekerTerm"
+              }
+            ]
+          },
+          "relations": [
+            "auction"
+          ]
+        },
+        {
+          "name": "auction",
+          "writable": true,
+          "relations": [
+            "bid"
+          ]
+        },
+        {
+          "name": "bid",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  98,
+                  105,
+                  100
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "auction"
+              },
+              {
+                "kind": "account",
+                "path": "wallet"
+              }
+            ]
+          }
+        },
+        {
+          "name": "mint",
+          "relations": [
+            "config"
+          ]
+        },
+        {
+          "name": "source",
+          "writable": true
+        },
+        {
+          "name": "vault",
+          "writable": true,
+          "relations": [
+            "auction"
+          ]
+        },
+        {
+          "name": "token_program",
+          "address": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA"
+        }
+      ],
+      "args": [
+        {
+          "name": "new_total",
+          "type": "u64"
+        }
+      ]
+    },
+    {
+      "name": "propose_admin",
+      "discriminator": [
+        121,
+        214,
+        199,
+        212,
+        87,
+        39,
+        117,
+        234
+      ],
+      "accounts": [
+        {
+          "name": "admin",
+          "signer": true,
+          "relations": [
+            "authority"
+          ]
+        },
+        {
+          "name": "authority",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  115,
+                  101,
+                  101,
+                  107,
+                  101,
+                  114,
+                  95,
+                  97,
+                  117,
+                  116,
+                  104,
+                  111,
+                  114,
+                  105,
+                  116,
+                  121
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "args": [
+        {
+          "name": "new_admin",
+          "type": "pubkey"
+        }
+      ]
+    },
+    {
+      "name": "publish_allocation_root",
+      "discriminator": [
+        113,
+        70,
+        109,
+        3,
+        19,
+        82,
+        37,
+        80
+      ],
+      "accounts": [
+        {
+          "name": "signer",
+          "writable": true,
+          "signer": true
+        },
+        {
+          "name": "authority",
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  115,
+                  101,
+                  101,
+                  107,
+                  101,
+                  114,
+                  95,
+                  97,
+                  117,
+                  116,
+                  104,
+                  111,
+                  114,
+                  105,
+                  116,
+                  121
+                ]
+              }
+            ]
+          },
+          "relations": [
+            "config"
+          ]
+        },
+        {
+          "name": "config",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  101,
+                  99,
+                  111,
+                  110,
+                  111,
+                  109,
+                  121
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "root",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  97,
+                  108,
+                  108,
+                  111,
+                  99
+                ]
+              },
+              {
+                "kind": "arg",
+                "path": "args.sequence"
+              }
+            ]
+          }
+        },
+        {
+          "name": "epoch",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  109,
+                  105,
+                  110,
+                  105,
+                  110,
+                  103,
+                  95,
+                  101,
+                  112,
+                  111,
+                  99,
+                  104
+                ]
+              },
+              {
+                "kind": "arg",
+                "path": "args.day"
+              }
+            ]
+          }
+        },
+        {
+          "name": "mint"
+        },
+        {
+          "name": "mining_vault",
+          "writable": true
+        },
+        {
+          "name": "reserve_ata",
+          "writable": true
+        },
+        {
+          "name": "token_program",
+          "address": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA"
+        },
+        {
+          "name": "system_program",
+          "address": "11111111111111111111111111111111"
+        }
+      ],
+      "args": [
+        {
+          "name": "args",
+          "type": {
+            "defined": {
+              "name": "PublishMiningArgs"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "revoke_allocation_root",
+      "discriminator": [
+        77,
+        2,
+        144,
+        225,
+        75,
+        0,
+        81,
+        214
+      ],
+      "accounts": [
+        {
+          "name": "admin",
+          "signer": true,
+          "relations": [
+            "authority"
+          ]
+        },
+        {
+          "name": "authority",
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  115,
+                  101,
+                  101,
+                  107,
+                  101,
+                  114,
+                  95,
+                  97,
+                  117,
+                  116,
+                  104,
+                  111,
+                  114,
+                  105,
+                  116,
+                  121
+                ]
+              }
+            ]
+          },
+          "relations": [
+            "config"
+          ]
+        },
+        {
+          "name": "config",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  101,
+                  99,
+                  111,
+                  110,
+                  111,
+                  109,
+                  121
+                ]
+              }
+            ]
+          },
+          "relations": [
+            "root"
+          ]
+        },
+        {
+          "name": "root",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  97,
+                  108,
+                  108,
+                  111,
+                  99
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "root.sequence",
+                "account": "AllocationRoot"
+              }
+            ]
+          }
+        }
+      ],
+      "args": []
+    },
+    {
+      "name": "rotate_policy",
+      "discriminator": [
+        205,
+        87,
+        206,
+        168,
+        227,
+        30,
+        103,
+        62
+      ],
+      "accounts": [
+        {
+          "name": "admin",
+          "signer": true,
+          "relations": [
+            "authority"
+          ]
+        },
+        {
+          "name": "authority",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  115,
+                  101,
+                  101,
+                  107,
+                  101,
+                  114,
+                  95,
+                  97,
+                  117,
+                  116,
+                  104,
+                  111,
+                  114,
+                  105,
+                  116,
+                  121
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "args": [
+        {
+          "name": "new_key",
+          "type": "pubkey"
+        }
+      ]
+    },
+    {
+      "name": "set_admission_paused",
+      "discriminator": [
+        35,
+        124,
+        80,
+        168,
+        238,
+        10,
+        228,
+        1
+      ],
+      "accounts": [
+        {
+          "name": "signer",
+          "signer": true
+        },
+        {
+          "name": "authority",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  115,
+                  101,
+                  101,
+                  107,
+                  101,
+                  114,
+                  95,
+                  97,
+                  117,
+                  116,
+                  104,
+                  111,
+                  114,
+                  105,
+                  116,
+                  121
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "args": [
+        {
+          "name": "paused",
+          "type": "bool"
+        }
+      ]
+    },
+    {
+      "name": "set_mining_flags",
+      "discriminator": [
+        3,
+        187,
+        69,
+        58,
+        198,
+        82,
+        255,
+        42
+      ],
+      "accounts": [
+        {
+          "name": "signer",
+          "signer": true
+        },
+        {
+          "name": "authority",
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  115,
+                  101,
+                  101,
+                  107,
+                  101,
+                  114,
+                  95,
+                  97,
+                  117,
+                  116,
+                  104,
+                  111,
+                  114,
+                  105,
+                  116,
+                  121
+                ]
+              }
+            ]
+          },
+          "relations": [
+            "config"
+          ]
+        },
+        {
+          "name": "config",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  101,
+                  99,
+                  111,
+                  110,
+                  111,
+                  109,
+                  121
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "args": [
+        {
+          "name": "flags",
+          "type": "u32"
+        }
+      ]
+    },
+    {
+      "name": "set_mining_publisher",
+      "discriminator": [
+        32,
+        91,
+        251,
+        212,
+        206,
+        151,
+        6,
+        44
+      ],
+      "accounts": [
+        {
+          "name": "admin",
+          "signer": true,
+          "relations": [
+            "authority"
+          ]
+        },
+        {
+          "name": "authority",
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  115,
+                  101,
+                  101,
+                  107,
+                  101,
+                  114,
+                  95,
+                  97,
+                  117,
+                  116,
+                  104,
+                  111,
+                  114,
+                  105,
+                  116,
+                  121
+                ]
+              }
+            ]
+          },
+          "relations": [
+            "config"
+          ]
+        },
+        {
+          "name": "config",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  101,
+                  99,
+                  111,
+                  110,
+                  111,
+                  109,
+                  121
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "args": [
+        {
+          "name": "publisher",
+          "type": "pubkey"
+        }
+      ]
+    },
+    {
+      "name": "settle_auction",
+      "discriminator": [
+        246,
+        196,
+        183,
+        98,
+        222,
+        139,
+        46,
+        133
+      ],
+      "accounts": [
+        {
+          "name": "wallet",
+          "signer": true
+        },
+        {
+          "name": "config",
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  97,
+                  117,
+                  99,
+                  116,
+                  105,
+                  111,
+                  110,
+                  95,
+                  99,
+                  111,
+                  110,
+                  102,
+                  105,
+                  103
+                ]
+              }
+            ]
+          },
+          "relations": [
+            "term",
+            "auction"
+          ]
+        },
+        {
+          "name": "term",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  115,
+                  101,
+                  101,
+                  107,
+                  101,
+                  114,
+                  95,
+                  116,
+                  101,
+                  114,
+                  109
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "config"
+              },
+              {
+                "kind": "account",
+                "path": "term.round",
+                "account": "SeekerTerm"
+              }
+            ]
+          },
+          "relations": [
+            "auction"
+          ]
+        },
+        {
+          "name": "auction",
+          "writable": true
+        },
+        {
+          "name": "mint",
+          "relations": [
+            "config"
+          ]
+        },
+        {
+          "name": "vault",
+          "writable": true,
+          "relations": [
+            "auction"
+          ]
+        },
+        {
+          "name": "prize_ata",
+          "writable": true
+        },
+        {
+          "name": "winner_bid",
+          "writable": true,
+          "optional": true
+        },
+        {
+          "name": "token_program",
+          "address": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA"
+        }
+      ],
+      "args": []
+    },
+    {
+      "name": "settle_auction_with_permit",
+      "discriminator": [
+        52,
+        154,
+        31,
+        128,
+        22,
+        163,
+        2,
+        202
+      ],
+      "accounts": [
+        {
+          "name": "wallet",
+          "writable": true,
+          "signer": true
+        },
+        {
+          "name": "config",
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  97,
+                  117,
+                  99,
+                  116,
+                  105,
+                  111,
+                  110,
+                  95,
+                  99,
+                  111,
+                  110,
+                  102,
+                  105,
+                  103
+                ]
+              }
+            ]
+          },
+          "relations": [
+            "term",
+            "auction"
+          ]
+        },
+        {
+          "name": "term",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  115,
+                  101,
+                  101,
+                  107,
+                  101,
+                  114,
+                  95,
+                  116,
+                  101,
+                  114,
+                  109
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "config"
+              },
+              {
+                "kind": "account",
+                "path": "term.round",
+                "account": "SeekerTerm"
+              }
+            ]
+          },
+          "relations": [
+            "auction"
+          ]
+        },
+        {
+          "name": "auction",
+          "writable": true
+        },
+        {
+          "name": "mint",
+          "relations": [
+            "config"
+          ]
+        },
+        {
+          "name": "vault",
+          "writable": true,
+          "relations": [
+            "auction"
+          ]
+        },
+        {
+          "name": "prize_ata",
+          "writable": true
+        },
+        {
+          "name": "winner_bid",
+          "writable": true,
+          "optional": true
+        },
+        {
+          "name": "token_program",
+          "address": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA"
+        },
+        {
+          "name": "authority",
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  115,
+                  101,
+                  101,
+                  107,
+                  101,
+                  114,
+                  95,
+                  97,
+                  117,
+                  116,
+                  104,
+                  111,
+                  114,
+                  105,
+                  116,
+                  121
+                ]
+              }
+            ]
+          },
+          "relations": [
+            "config"
+          ]
+        },
+        {
+          "name": "receipt",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  112,
+                  101,
+                  114,
+                  109,
+                  105,
+                  116
+                ]
+              },
+              {
+                "kind": "arg",
+                "path": "permit.permit_id"
+              }
+            ]
+          }
+        },
+        {
+          "name": "instructions",
+          "address": "Sysvar1nstructions1111111111111111111111111"
+        },
+        {
+          "name": "system_program",
+          "address": "11111111111111111111111111111111"
+        }
+      ],
+      "args": [
+        {
+          "name": "permit",
+          "type": {
+            "defined": {
+              "name": "PermitArgs"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "sync_renown",
+      "discriminator": [
+        195,
+        21,
+        10,
+        243,
+        78,
+        153,
+        91,
+        59
+      ],
+      "accounts": [
+        {
+          "name": "payer",
+          "signer": true
+        },
+        {
+          "name": "config",
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  101,
+                  99,
+                  111,
+                  110,
+                  111,
+                  109,
+                  121
+                ]
+              }
+            ]
+          },
+          "relations": [
+            "root"
+          ]
+        },
+        {
+          "name": "root",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  97,
+                  108,
+                  108,
+                  111,
+                  99
+                ]
+              },
+              {
+                "kind": "arg",
+                "path": "sequence"
+              }
+            ]
+          }
+        },
+        {
+          "name": "miner",
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  109,
+                  105,
+                  110,
+                  101,
+                  114
+                ]
+              },
+              {
+                "kind": "arg",
+                "path": "wallet"
+              }
+            ]
+          }
+        },
+        {
+          "name": "renown",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  114,
+                  101,
+                  110,
+                  111,
+                  119,
+                  110
+                ]
+              },
+              {
+                "kind": "arg",
+                "path": "wallet"
+              }
+            ]
+          }
+        }
+      ],
+      "args": [
+        {
+          "name": "wallet",
+          "type": "pubkey"
+        },
+        {
+          "name": "sequence",
+          "type": "u64"
+        },
+        {
+          "name": "cumulative_keep",
+          "type": "u64"
+        },
+        {
+          "name": "cumulative_renown",
+          "type": "u64"
+        },
+        {
+          "name": "cumulative_days",
+          "type": "u64"
+        },
+        {
+          "name": "proof",
+          "type": {
+            "vec": {
+              "defined": {
+                "name": "ProofNode"
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "withdraw_bid",
+      "discriminator": [
+        110,
+        53,
+        157,
+        195,
+        147,
+        100,
+        110,
+        73
+      ],
+      "accounts": [
+        {
+          "name": "wallet",
+          "signer": true,
+          "relations": [
+            "bid"
+          ]
+        },
+        {
+          "name": "config",
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  97,
+                  117,
+                  99,
+                  116,
+                  105,
+                  111,
+                  110,
+                  95,
+                  99,
+                  111,
+                  110,
+                  102,
+                  105,
+                  103
+                ]
+              }
+            ]
+          },
+          "relations": [
+            "auction"
+          ]
+        },
+        {
+          "name": "auction",
+          "writable": true,
+          "relations": [
+            "bid"
+          ]
+        },
+        {
+          "name": "bid",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  98,
+                  105,
+                  100
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "auction"
+              },
+              {
+                "kind": "account",
+                "path": "wallet"
+              }
+            ]
+          }
+        },
+        {
+          "name": "mint",
+          "relations": [
+            "config"
+          ]
+        },
+        {
+          "name": "destination",
+          "writable": true
+        },
+        {
+          "name": "vault",
+          "writable": true,
+          "relations": [
+            "auction"
+          ]
+        },
+        {
+          "name": "token_program",
+          "address": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA"
+        }
+      ],
+      "args": []
+    },
+    {
+      "name": "withdraw_mining_surplus",
+      "discriminator": [
+        211,
+        63,
+        1,
+        163,
+        142,
+        176,
+        77,
+        109
+      ],
+      "accounts": [
+        {
+          "name": "admin",
+          "signer": true,
+          "relations": [
+            "authority"
+          ]
+        },
+        {
+          "name": "authority",
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  115,
+                  101,
+                  101,
+                  107,
+                  101,
+                  114,
+                  95,
+                  97,
+                  117,
+                  116,
+                  104,
+                  111,
+                  114,
+                  105,
+                  116,
+                  121
+                ]
+              }
+            ]
+          },
+          "relations": [
+            "config"
+          ]
+        },
+        {
+          "name": "config",
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  101,
+                  99,
+                  111,
+                  110,
+                  111,
+                  109,
+                  121
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "mint"
+        },
+        {
+          "name": "mining_vault",
+          "writable": true
+        },
+        {
+          "name": "reserve_ata",
+          "writable": true
+        },
+        {
+          "name": "token_program",
+          "address": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA"
+        }
+      ],
+      "args": [
+        {
+          "name": "amount",
+          "type": "u64"
+        }
+      ]
+    }
+  ],
+  "accounts": [
+    {
+      "name": "AllocationRoot",
+      "discriminator": [
+        105,
+        13,
+        194,
+        216,
+        54,
+        121,
+        216,
+        194
+      ]
+    },
+    {
+      "name": "Auction",
+      "discriminator": [
+        218,
+        94,
+        247,
+        242,
+        126,
+        233,
+        131,
+        81
+      ]
+    },
+    {
+      "name": "AuctionConfig",
+      "discriminator": [
+        195,
+        54,
+        8,
+        51,
+        28,
+        231,
+        33,
+        142
+      ]
+    },
+    {
+      "name": "Bid",
+      "discriminator": [
+        143,
+        246,
+        48,
+        245,
+        42,
+        145,
+        180,
+        88
+      ]
+    },
+    {
+      "name": "EconomyConfig",
+      "discriminator": [
+        217,
+        204,
+        127,
+        47,
+        151,
+        223,
+        164,
+        182
+      ]
+    },
+    {
+      "name": "MinerClaim",
+      "discriminator": [
+        252,
+        249,
+        16,
+        249,
+        61,
+        181,
+        151,
+        199
+      ]
+    },
+    {
+      "name": "MiningEpochReceipt",
+      "discriminator": [
+        173,
+        52,
+        64,
+        184,
+        214,
+        128,
+        199,
+        137
+      ]
+    },
+    {
+      "name": "MiningTaxAccrual",
+      "discriminator": [
+        27,
+        146,
+        46,
+        65,
+        122,
+        147,
+        59,
+        2
+      ]
+    },
+    {
+      "name": "MiningTaxPool",
+      "discriminator": [
+        47,
+        125,
+        89,
+        204,
+        115,
+        161,
+        56,
+        54
+      ]
+    },
+    {
+      "name": "MiningTaxSpot",
+      "discriminator": [
+        206,
+        41,
+        86,
+        85,
+        194,
+        166,
+        34,
+        56
+      ]
+    },
+    {
+      "name": "PermitReceipt",
+      "discriminator": [
+        203,
+        111,
+        208,
+        76,
+        253,
+        14,
+        158,
+        38
+      ]
+    },
+    {
+      "name": "RealmAccess",
+      "discriminator": [
+        153,
+        148,
+        232,
+        166,
+        120,
+        152,
+        18,
+        87
+      ]
+    },
+    {
+      "name": "RealmSaleConfig",
+      "discriminator": [
+        131,
+        246,
+        176,
+        249,
+        153,
+        75,
+        56,
+        0
+      ]
+    },
+    {
+      "name": "RealmSaleReceipt",
+      "discriminator": [
+        150,
+        87,
+        46,
+        5,
+        104,
+        64,
+        139,
+        147
+      ]
+    },
+    {
+      "name": "RenownRecord",
+      "discriminator": [
+        219,
+        103,
+        218,
+        135,
+        150,
+        230,
+        37,
+        190
+      ]
+    },
+    {
+      "name": "SeekerAuthority",
+      "discriminator": [
+        217,
+        248,
+        20,
+        251,
+        30,
+        97,
+        197,
+        54
+      ]
+    },
+    {
+      "name": "SeekerRegistry",
+      "discriminator": [
+        164,
+        222,
+        210,
+        223,
+        149,
+        181,
+        174,
+        121
+      ]
+    },
+    {
+      "name": "SeekerTerm",
+      "discriminator": [
+        63,
+        156,
+        207,
+        122,
+        112,
+        151,
+        183,
+        158
+      ]
+    },
+    {
+      "name": "SpotSalesQuota",
+      "discriminator": [
+        54,
+        8,
+        170,
+        154,
+        165,
+        250,
+        91,
+        60
+      ]
+    }
+  ],
+  "events": [
+    {
+      "name": "AdminAccepted",
+      "discriminator": [
+        174,
+        12,
+        76,
+        139,
+        158,
+        99,
+        110,
+        254
+      ]
+    },
+    {
+      "name": "AdminProposed",
+      "discriminator": [
+        129,
+        249,
+        226,
+        227,
+        199,
+        82,
+        110,
+        243
+      ]
+    },
+    {
+      "name": "AdmissionPauseChanged",
+      "discriminator": [
+        102,
+        212,
+        173,
+        69,
+        173,
+        129,
+        99,
+        229
+      ]
+    },
+    {
+      "name": "AuctionConfigInitialized",
+      "discriminator": [
+        101,
+        7,
+        118,
+        97,
+        180,
+        39,
+        148,
+        141
+      ]
+    },
+    {
+      "name": "AuctionOpened",
+      "discriminator": [
+        25,
+        230,
+        140,
+        215,
+        100,
+        193,
+        14,
+        70
+      ]
+    },
+    {
+      "name": "AuctionSettled",
+      "discriminator": [
+        61,
+        151,
+        131,
+        170,
+        95,
+        203,
+        219,
+        147
+      ]
+    },
+    {
+      "name": "AuthorityInitialized",
+      "discriminator": [
+        33,
+        253,
+        110,
+        175,
+        141,
+        60,
+        170,
+        158
+      ]
+    },
+    {
+      "name": "BidPlaced",
+      "discriminator": [
+        135,
+        53,
+        176,
+        83,
+        193,
+        69,
+        108,
+        61
+      ]
+    },
+    {
+      "name": "BidWithdrawn",
+      "discriminator": [
+        145,
+        195,
+        97,
+        230,
+        166,
+        54,
+        74,
+        206
+      ]
+    },
+    {
+      "name": "MinerRecordsOpened",
+      "discriminator": [
+        196,
+        148,
+        147,
+        254,
+        233,
+        27,
+        74,
+        179
+      ]
+    },
+    {
+      "name": "MiningClaimed",
+      "discriminator": [
+        140,
+        230,
+        43,
+        210,
+        9,
+        77,
+        44,
+        11
+      ]
+    },
+    {
+      "name": "MiningEpochFunded",
+      "discriminator": [
+        193,
+        162,
+        146,
+        107,
+        19,
+        251,
+        232,
+        66
+      ]
+    },
+    {
+      "name": "MiningFlagsChanged",
+      "discriminator": [
+        208,
+        108,
+        3,
+        159,
+        196,
+        41,
+        37,
+        108
+      ]
+    },
+    {
+      "name": "MiningInitialized",
+      "discriminator": [
+        71,
+        55,
+        188,
+        196,
+        193,
+        100,
+        41,
+        138
+      ]
+    },
+    {
+      "name": "MiningPublisherChanged",
+      "discriminator": [
+        77,
+        196,
+        59,
+        55,
+        185,
+        31,
+        81,
+        104
+      ]
+    },
+    {
+      "name": "MiningRootPublished",
+      "discriminator": [
+        240,
+        191,
+        145,
+        125,
+        27,
+        218,
+        221,
+        239
+      ]
+    },
+    {
+      "name": "MiningRootRevoked",
+      "discriminator": [
+        227,
+        52,
+        136,
+        178,
+        103,
+        105,
+        167,
+        37
+      ]
+    },
+    {
+      "name": "MiningSurplusWithdrawn",
+      "discriminator": [
+        250,
+        243,
+        116,
+        64,
+        132,
+        241,
+        249,
+        129
+      ]
+    },
+    {
+      "name": "MiningTaxAccrued",
+      "discriminator": [
+        87,
+        174,
+        249,
+        47,
+        43,
+        165,
+        98,
+        9
+      ]
+    },
+    {
+      "name": "MiningTaxClaimed",
+      "discriminator": [
+        252,
+        221,
+        139,
+        11,
+        171,
+        71,
+        6,
+        206
+      ]
+    },
+    {
+      "name": "MiningTaxPoolOpened",
+      "discriminator": [
+        32,
+        47,
+        44,
+        146,
+        225,
+        34,
+        105,
+        142
+      ]
+    },
+    {
+      "name": "MiningTaxSpotOpened",
+      "discriminator": [
+        41,
+        129,
+        70,
+        190,
+        7,
+        172,
+        122,
+        185
+      ]
+    },
+    {
+      "name": "PolicyRotated",
+      "discriminator": [
+        116,
+        208,
+        75,
+        85,
+        218,
+        78,
+        210,
+        92
+      ]
+    },
+    {
+      "name": "RealmAccessOpened",
+      "discriminator": [
+        57,
+        147,
+        123,
+        214,
+        164,
+        159,
+        44,
+        21
+      ]
+    },
+    {
+      "name": "RealmAccessPurchased",
+      "discriminator": [
+        47,
+        224,
+        174,
+        64,
+        196,
+        49,
+        147,
+        224
+      ]
+    },
+    {
+      "name": "RealmSaleConfigured",
+      "discriminator": [
+        118,
+        102,
+        43,
+        7,
+        247,
+        141,
+        99,
+        206
+      ]
+    },
+    {
+      "name": "RenownSynced",
+      "discriminator": [
+        229,
+        58,
+        238,
+        133,
+        74,
+        192,
+        180,
+        135
+      ]
+    },
+    {
+      "name": "SpotSalesQuotaOpened",
+      "discriminator": [
+        183,
+        122,
+        219,
+        148,
+        131,
+        76,
+        156,
+        129
+      ]
+    },
+    {
+      "name": "TermCompleted",
+      "discriminator": [
+        4,
+        187,
+        35,
+        186,
+        34,
+        85,
+        32,
+        44
+      ]
+    },
+    {
+      "name": "TermOpened",
+      "discriminator": [
+        240,
+        218,
+        197,
+        138,
+        153,
+        122,
+        15,
+        105
+      ]
+    }
+  ],
+  "errors": [
+    {
+      "code": 6000,
+      "name": "Unauthorized",
+      "msg": "Authority is not authorized"
+    },
+    {
+      "code": 6001,
+      "name": "InvalidAuthority",
+      "msg": "Invalid authority or domain"
+    },
+    {
+      "code": 6002,
+      "name": "InvalidVersion",
+      "msg": "Unsupported account version"
+    },
+    {
+      "code": 6003,
+      "name": "InvalidPolicy",
+      "msg": "Invalid policy configuration"
+    },
+    {
+      "code": 6004,
+      "name": "Arithmetic",
+      "msg": "Checked arithmetic failed"
+    },
+    {
+      "code": 6005,
+      "name": "InvalidSpot",
+      "msg": "Unknown spot"
+    },
+    {
+      "code": 6006,
+      "name": "AlreadyRecorded",
+      "msg": "Already recorded"
+    },
+    {
+      "code": 6007,
+      "name": "InvalidPermit",
+      "msg": "Invalid native policy permit"
+    },
+    {
+      "code": 6008,
+      "name": "PermitExpired",
+      "msg": "Permit time boundary not satisfied"
+    },
+    {
+      "code": 6009,
+      "name": "InvalidCalendar",
+      "msg": "Initial auction needs the entire prelaunch window"
+    },
+    {
+      "code": 6010,
+      "name": "InvalidTokenAccount",
+      "msg": "Wrong canonical token account"
+    },
+    {
+      "code": 6011,
+      "name": "InvalidPredecessor",
+      "msg": "Wrong deterministic predecessor"
+    },
+    {
+      "code": 6012,
+      "name": "InvalidRegistry",
+      "msg": "Registry identity or contents mismatch"
+    },
+    {
+      "code": 7000,
+      "name": "Paused",
+      "msg": "Admission is paused"
+    },
+    {
+      "code": 7001,
+      "name": "Identity",
+      "msg": "Invalid immutable account relationship"
+    },
+    {
+      "code": 7002,
+      "name": "Configuration",
+      "msg": "Unsupported immutable configuration"
+    },
+    {
+      "code": 7003,
+      "name": "Time",
+      "msg": "Auction clock does not allow this action"
+    },
+    {
+      "code": 7004,
+      "name": "Incomplete",
+      "msg": "All auctions must be prepared before bidding"
+    },
+    {
+      "code": 7005,
+      "name": "Settled",
+      "msg": "Auction result is already settled"
+    },
+    {
+      "code": 7006,
+      "name": "BidTooLow",
+      "msg": "Bid must strictly exceed the leader and meet the opening minimum"
+    },
+    {
+      "code": 7007,
+      "name": "NotRefundable",
+      "msg": "No refundable loser balance"
+    },
+    {
+      "code": 7008,
+      "name": "Backing",
+      "msg": "Token balance delta or escrow backing mismatch"
+    },
+    {
+      "code": 7009,
+      "name": "Token",
+      "msg": "Frozen or substituted token account"
+    },
+    {
+      "code": 7010,
+      "name": "EscrowArithmetic",
+      "msg": "Checked arithmetic failed"
+    },
+    {
+      "code": 7011,
+      "name": "Winner",
+      "msg": "Winner account does not match the original leading bid"
+    },
+    {
+      "code": 7012,
+      "name": "TopLevelOnly",
+      "msg": "Settlement must be a top-level transaction instruction"
+    },
+    {
+      "code": 8000,
+      "name": "InvalidMiningProof",
+      "msg": "Invalid cumulative mining proof"
+    },
+    {
+      "code": 8001,
+      "name": "InvalidMiningClaim",
+      "msg": "Invalid cumulative mining claim"
+    },
+    {
+      "code": 8002,
+      "name": "InvalidMiningRenown",
+      "msg": "Invalid cumulative Renown or participation days"
+    },
+    {
+      "code": 8003,
+      "name": "InvalidMiningTaxTerm",
+      "msg": "Invalid original Seeker tax term"
+    },
+    {
+      "code": 8004,
+      "name": "InvalidMiningTaxEpoch",
+      "msg": "Invalid funded Seeker tax epoch"
+    },
+    {
+      "code": 8005,
+      "name": "InvalidMiningTaxClaim",
+      "msg": "Invalid original winning spot tax claim"
+    },
+    {
+      "code": 9000,
+      "name": "InvalidRealmSaleTerms",
+      "msg": "Invalid signed realm sale terms"
+    },
+    {
+      "code": 9001,
+      "name": "RealmSaleQuotaExhausted",
+      "msg": "The spot has sold its daily quota"
+    },
+    {
+      "code": 9002,
+      "name": "RealmAccessChanged",
+      "msg": "Realm access changed since the signed quote"
+    },
+    {
+      "code": 9003,
+      "name": "InvalidRealmSeller",
+      "msg": "Invalid current original Seeker seller"
+    },
+    {
+      "code": 9004,
+      "name": "RealmSaleBalance",
+      "msg": "SOL payment balance delta mismatch"
+    }
+  ],
+  "types": [
+    {
+      "name": "AdminAccepted",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "previous_admin",
+            "type": "pubkey"
+          },
+          {
+            "name": "admin",
+            "type": "pubkey"
+          }
+        ]
+      }
+    },
+    {
+      "name": "AdminProposed",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "admin",
+            "type": "pubkey"
+          },
+          {
+            "name": "new_admin",
+            "type": "pubkey"
+          }
+        ]
+      }
+    },
+    {
+      "name": "AdmissionPauseChanged",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "signer",
+            "type": "pubkey"
+          },
+          {
+            "name": "paused",
+            "type": "bool"
+          }
+        ]
+      }
+    },
+    {
+      "name": "AllocationRoot",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "version",
+            "type": "u8"
+          },
+          {
+            "name": "config",
+            "type": "pubkey"
+          },
+          {
+            "name": "epoch",
+            "type": "pubkey"
+          },
+          {
+            "name": "sequence",
+            "type": "u64"
+          },
+          {
+            "name": "day",
+            "type": "u64"
+          },
+          {
+            "name": "prev_day",
+            "type": "u64"
+          },
+          {
+            "name": "prev_total",
+            "type": "u64"
+          },
+          {
+            "name": "root",
+            "type": {
+              "array": [
+                "u8",
+                32
+              ]
+            }
+          },
+          {
+            "name": "total_cumulative",
+            "type": "u64"
+          },
+          {
+            "name": "leaf_count",
+            "type": "u32"
+          },
+          {
+            "name": "claims_count",
+            "type": "u64"
+          },
+          {
+            "name": "published_at",
+            "type": "i64"
+          },
+          {
+            "name": "revoked",
+            "type": "bool"
+          },
+          {
+            "name": "kind",
+            "type": "u8"
+          },
+          {
+            "name": "bump",
+            "type": "u8"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Auction",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "version",
+            "type": "u8"
+          },
+          {
+            "name": "config",
+            "type": "pubkey"
+          },
+          {
+            "name": "term",
+            "type": "pubkey"
+          },
+          {
+            "name": "registry",
+            "type": "pubkey"
+          },
+          {
+            "name": "spot",
+            "type": {
+              "defined": {
+                "name": "Spot"
+              }
+            }
+          },
+          {
+            "name": "round",
+            "type": "u64"
+          },
+          {
+            "name": "auction_start",
+            "type": "i64"
+          },
+          {
+            "name": "auction_end",
+            "type": "i64"
+          },
+          {
+            "name": "operating_start",
+            "type": "i64"
+          },
+          {
+            "name": "operating_end",
+            "type": "i64"
+          },
+          {
+            "name": "terms_hash",
+            "type": {
+              "array": [
+                "u8",
+                32
+              ]
+            }
+          },
+          {
+            "name": "vault",
+            "type": "pubkey"
+          },
+          {
+            "name": "high_bid",
+            "type": "u64"
+          },
+          {
+            "name": "high_bidder",
+            "type": {
+              "option": "pubkey"
+            }
+          },
+          {
+            "name": "outstanding_escrow",
+            "type": "u64"
+          },
+          {
+            "name": "settled",
+            "type": "bool"
+          },
+          {
+            "name": "result_owner",
+            "type": {
+              "option": "pubkey"
+            }
+          },
+          {
+            "name": "settled_at",
+            "type": {
+              "option": "i64"
+            }
+          },
+          {
+            "name": "settled_slot",
+            "type": {
+              "option": "u64"
+            }
+          },
+          {
+            "name": "bump",
+            "type": "u8"
+          }
+        ]
+      }
+    },
+    {
+      "name": "AuctionConfig",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "version",
+            "type": "u8"
+          },
+          {
+            "name": "authority",
+            "type": "pubkey"
+          },
+          {
+            "name": "registry",
+            "type": "pubkey"
+          },
+          {
+            "name": "registry_hash",
+            "type": {
+              "array": [
+                "u8",
+                32
+              ]
+            }
+          },
+          {
+            "name": "registry_version",
+            "type": "u16"
+          },
+          {
+            "name": "mint",
+            "type": "pubkey"
+          },
+          {
+            "name": "token_program",
+            "type": "pubkey"
+          },
+          {
+            "name": "decimals",
+            "type": "u8"
+          },
+          {
+            "name": "prize_owner",
+            "type": "pubkey"
+          },
+          {
+            "name": "prize_ata",
+            "type": "pubkey"
+          },
+          {
+            "name": "prize_bps",
+            "type": "u16"
+          },
+          {
+            "name": "opening_bid",
+            "type": "u64"
+          },
+          {
+            "name": "first_operating_start",
+            "type": "i64"
+          },
+          {
+            "name": "term_sec",
+            "type": "i64"
+          },
+          {
+            "name": "auction_sec",
+            "type": "i64"
+          },
+          {
+            "name": "grace_sec",
+            "type": "i64"
+          },
+          {
+            "name": "auction_format",
+            "type": "u16"
+          },
+          {
+            "name": "terms_format",
+            "type": "u16"
+          },
+          {
+            "name": "bump",
+            "type": "u8"
+          }
+        ]
+      }
+    },
+    {
+      "name": "AuctionConfigInitialized",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "config",
+            "type": "pubkey"
+          },
+          {
+            "name": "registry",
+            "type": "pubkey"
+          },
+          {
+            "name": "registry_hash",
+            "type": {
+              "array": [
+                "u8",
+                32
+              ]
+            }
+          },
+          {
+            "name": "mint",
+            "type": "pubkey"
+          },
+          {
+            "name": "prize_owner",
+            "type": "pubkey"
+          },
+          {
+            "name": "prize_ata",
+            "type": "pubkey"
+          },
+          {
+            "name": "first_operating_start",
+            "type": "i64"
+          }
+        ]
+      }
+    },
+    {
+      "name": "AuctionOpened",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "auction",
+            "type": "pubkey"
+          },
+          {
+            "name": "term",
+            "type": "pubkey"
+          },
+          {
+            "name": "spot",
+            "type": "u8"
+          },
+          {
+            "name": "round",
+            "type": "u64"
+          },
+          {
+            "name": "terms_hash",
+            "type": {
+              "array": [
+                "u8",
+                32
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "AuctionSettled",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "auction",
+            "type": "pubkey"
+          },
+          {
+            "name": "term",
+            "type": "pubkey"
+          },
+          {
+            "name": "settler",
+            "type": "pubkey"
+          },
+          {
+            "name": "winner",
+            "type": {
+              "option": "pubkey"
+            }
+          },
+          {
+            "name": "amount",
+            "type": "u64"
+          },
+          {
+            "name": "outstanding",
+            "type": "u64"
+          },
+          {
+            "name": "at",
+            "type": "i64"
+          },
+          {
+            "name": "slot",
+            "type": "u64"
+          }
+        ]
+      }
+    },
+    {
+      "name": "AuthorityInitialized",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "admin",
+            "type": "pubkey"
+          },
+          {
+            "name": "guardian",
+            "type": "pubkey"
+          },
+          {
+            "name": "policy_key",
+            "type": "pubkey"
+          },
+          {
+            "name": "cluster_genesis",
+            "type": {
+              "array": [
+                "u8",
+                32
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "Bid",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "version",
+            "type": "u8"
+          },
+          {
+            "name": "auction",
+            "type": "pubkey"
+          },
+          {
+            "name": "wallet",
+            "type": "pubkey"
+          },
+          {
+            "name": "amount",
+            "type": "u64"
+          },
+          {
+            "name": "refunded",
+            "type": "bool"
+          },
+          {
+            "name": "bump",
+            "type": "u8"
+          }
+        ]
+      }
+    },
+    {
+      "name": "BidPlaced",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "auction",
+            "type": "pubkey"
+          },
+          {
+            "name": "wallet",
+            "type": "pubkey"
+          },
+          {
+            "name": "deposited",
+            "type": "u64"
+          },
+          {
+            "name": "total",
+            "type": "u64"
+          },
+          {
+            "name": "outstanding",
+            "type": "u64"
+          }
+        ]
+      }
+    },
+    {
+      "name": "BidWithdrawn",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "auction",
+            "type": "pubkey"
+          },
+          {
+            "name": "wallet",
+            "type": "pubkey"
+          },
+          {
+            "name": "amount",
+            "type": "u64"
+          },
+          {
+            "name": "outstanding",
+            "type": "u64"
+          }
+        ]
+      }
+    },
+    {
+      "name": "BuyRealmAccessArgs",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "version",
+            "type": "u8"
+          },
+          {
+            "name": "sale_id",
+            "type": {
+              "array": [
+                "u8",
+                16
+              ]
+            }
+          },
+          {
+            "name": "spot",
+            "type": "u8"
+          },
+          {
+            "name": "realm",
+            "type": "u8"
+          },
+          {
+            "name": "round",
+            "type": "u64"
+          },
+          {
+            "name": "day",
+            "type": "u64"
+          },
+          {
+            "name": "seller",
+            "type": "pubkey"
+          },
+          {
+            "name": "developer",
+            "type": "pubkey"
+          },
+          {
+            "name": "registry_version",
+            "type": "u16"
+          },
+          {
+            "name": "price_lamports",
+            "type": "u64"
+          },
+          {
+            "name": "duration_sec",
+            "type": "i64"
+          },
+          {
+            "name": "seller_bps",
+            "type": "u16"
+          },
+          {
+            "name": "developer_bps",
+            "type": "u16"
+          },
+          {
+            "name": "prior_expiry",
+            "type": "i64"
+          },
+          {
+            "name": "valid_after",
+            "type": "i64"
+          },
+          {
+            "name": "valid_until",
+            "type": "i64"
+          }
+        ]
+      }
+    },
+    {
+      "name": "CorrectMiningArgs",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "sequence",
+            "type": "u64"
+          },
+          {
+            "name": "root",
+            "type": {
+              "array": [
+                "u8",
+                32
+              ]
+            }
+          },
+          {
+            "name": "total_cumulative",
+            "type": "u64"
+          },
+          {
+            "name": "leaf_count",
+            "type": "u32"
+          },
+          {
+            "name": "kind",
+            "type": "u8"
+          }
+        ]
+      }
+    },
+    {
+      "name": "EconomyConfig",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "version",
+            "type": "u8"
+          },
+          {
+            "name": "authority",
+            "type": "pubkey"
+          },
+          {
+            "name": "publisher",
+            "type": "pubkey"
+          },
+          {
+            "name": "keep_mint",
+            "type": "pubkey"
+          },
+          {
+            "name": "mining_vault",
+            "type": "pubkey"
+          },
+          {
+            "name": "emission_reserve_owner",
+            "type": "pubkey"
+          },
+          {
+            "name": "emission_reserve_ata",
+            "type": "pubkey"
+          },
+          {
+            "name": "decimals",
+            "type": "u8"
+          },
+          {
+            "name": "genesis_day",
+            "type": "u64"
+          },
+          {
+            "name": "latest_day",
+            "type": "u64"
+          },
+          {
+            "name": "latest_sequence",
+            "type": "u64"
+          },
+          {
+            "name": "total_published",
+            "type": "u64"
+          },
+          {
+            "name": "total_published_highwater",
+            "type": "u64"
+          },
+          {
+            "name": "total_claimed",
+            "type": "u64"
+          },
+          {
+            "name": "tax_highwater",
+            "type": "u64"
+          },
+          {
+            "name": "tax_paid",
+            "type": "u64"
+          },
+          {
+            "name": "recycled_total",
+            "type": "u64"
+          },
+          {
+            "name": "gross_published",
+            "type": "u64"
+          },
+          {
+            "name": "split_cursor",
+            "type": "u8"
+          },
+          {
+            "name": "flags",
+            "type": "u32"
+          },
+          {
+            "name": "correction_pending",
+            "type": "bool"
+          },
+          {
+            "name": "bump",
+            "type": "u8"
+          }
+        ]
+      }
+    },
+    {
+      "name": "MinerClaim",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "wallet",
+            "type": "pubkey"
+          },
+          {
+            "name": "claimed_total",
+            "type": "u64"
+          },
+          {
+            "name": "last_sequence",
+            "type": "u64"
+          },
+          {
+            "name": "last_claim_at",
+            "type": "i64"
+          },
+          {
+            "name": "version",
+            "type": "u8"
+          },
+          {
+            "name": "bump",
+            "type": "u8"
+          }
+        ]
+      }
+    },
+    {
+      "name": "MinerRecordsOpened",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "wallet",
+            "type": "pubkey"
+          },
+          {
+            "name": "payer",
+            "type": "pubkey"
+          }
+        ]
+      }
+    },
+    {
+      "name": "MiningClaimed",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "wallet",
+            "type": "pubkey"
+          },
+          {
+            "name": "sequence",
+            "type": "u64"
+          },
+          {
+            "name": "day",
+            "type": "u64"
+          },
+          {
+            "name": "delta",
+            "type": "u64"
+          },
+          {
+            "name": "cumulative_keep",
+            "type": "u64"
+          },
+          {
+            "name": "cumulative_renown",
+            "type": "u64"
+          },
+          {
+            "name": "cumulative_days",
+            "type": "u64"
+          }
+        ]
+      }
+    },
+    {
+      "name": "MiningEpochFunded",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "config",
+            "type": "pubkey"
+          },
+          {
+            "name": "epoch",
+            "type": "pubkey"
+          },
+          {
+            "name": "day",
+            "type": "u64"
+          },
+          {
+            "name": "budget_gross",
+            "type": "u64"
+          },
+          {
+            "name": "free_gross",
+            "type": "u64"
+          },
+          {
+            "name": "deed_gross",
+            "type": "u64"
+          },
+          {
+            "name": "player_net",
+            "type": "u64"
+          },
+          {
+            "name": "tax",
+            "type": "u64"
+          },
+          {
+            "name": "recycle",
+            "type": "u64"
+          },
+          {
+            "name": "source_hash",
+            "type": {
+              "array": [
+                "u8",
+                32
+              ]
+            }
+          },
+          {
+            "name": "tax_commitment",
+            "type": {
+              "array": [
+                "u8",
+                32
+              ]
+            }
+          },
+          {
+            "name": "tax_version",
+            "type": "u16"
+          },
+          {
+            "name": "split_start",
+            "type": "u8"
+          },
+          {
+            "name": "split_end",
+            "type": "u8"
+          }
+        ]
+      }
+    },
+    {
+      "name": "MiningEpochReceipt",
+      "docs": [
+        "Immutable funded-day fact. Version-two winning-term commitments can accrue",
+        "into permanent original-term tax pools. Held version-one commitments remain",
+        "liabilities and can never be reinterpreted by that payout protocol."
+      ],
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "version",
+            "type": "u8"
+          },
+          {
+            "name": "config",
+            "type": "pubkey"
+          },
+          {
+            "name": "day",
+            "type": "u64"
+          },
+          {
+            "name": "budget_gross",
+            "type": "u64"
+          },
+          {
+            "name": "free_gross",
+            "type": "u64"
+          },
+          {
+            "name": "deed_gross",
+            "type": "u64"
+          },
+          {
+            "name": "player_net",
+            "type": "u64"
+          },
+          {
+            "name": "tax",
+            "type": "u64"
+          },
+          {
+            "name": "recycle",
+            "type": "u64"
+          },
+          {
+            "name": "source_hash",
+            "type": {
+              "array": [
+                "u8",
+                32
+              ]
+            }
+          },
+          {
+            "name": "tax_commitment",
+            "type": {
+              "array": [
+                "u8",
+                32
+              ]
+            }
+          },
+          {
+            "name": "tax_version",
+            "type": "u16"
+          },
+          {
+            "name": "split_start",
+            "type": "u8"
+          },
+          {
+            "name": "split_end",
+            "type": "u8"
+          },
+          {
+            "name": "funded_at",
+            "type": "i64"
+          },
+          {
+            "name": "bump",
+            "type": "u8"
+          }
+        ]
+      }
+    },
+    {
+      "name": "MiningFlagsChanged",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "config",
+            "type": "pubkey"
+          },
+          {
+            "name": "signer",
+            "type": "pubkey"
+          },
+          {
+            "name": "flags",
+            "type": "u32"
+          }
+        ]
+      }
+    },
+    {
+      "name": "MiningInitialized",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "config",
+            "type": "pubkey"
+          },
+          {
+            "name": "authority",
+            "type": "pubkey"
+          },
+          {
+            "name": "mint",
+            "type": "pubkey"
+          },
+          {
+            "name": "vault",
+            "type": "pubkey"
+          },
+          {
+            "name": "reserve",
+            "type": "pubkey"
+          },
+          {
+            "name": "publisher",
+            "type": "pubkey"
+          },
+          {
+            "name": "genesis_day",
+            "type": "u64"
+          }
+        ]
+      }
+    },
+    {
+      "name": "MiningPublisherChanged",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "config",
+            "type": "pubkey"
+          },
+          {
+            "name": "publisher",
+            "type": "pubkey"
+          }
+        ]
+      }
+    },
+    {
+      "name": "MiningRootPublished",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "config",
+            "type": "pubkey"
+          },
+          {
+            "name": "root",
+            "type": "pubkey"
+          },
+          {
+            "name": "epoch",
+            "type": "pubkey"
+          },
+          {
+            "name": "sequence",
+            "type": "u64"
+          },
+          {
+            "name": "day",
+            "type": "u64"
+          },
+          {
+            "name": "total_cumulative",
+            "type": "u64"
+          },
+          {
+            "name": "corrected",
+            "type": "bool"
+          }
+        ]
+      }
+    },
+    {
+      "name": "MiningRootRevoked",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "config",
+            "type": "pubkey"
+          },
+          {
+            "name": "root",
+            "type": "pubkey"
+          },
+          {
+            "name": "sequence",
+            "type": "u64"
+          }
+        ]
+      }
+    },
+    {
+      "name": "MiningSurplusWithdrawn",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "config",
+            "type": "pubkey"
+          },
+          {
+            "name": "reserve",
+            "type": "pubkey"
+          },
+          {
+            "name": "amount",
+            "type": "u64"
+          },
+          {
+            "name": "outstanding",
+            "type": "u64"
+          }
+        ]
+      }
+    },
+    {
+      "name": "MiningTaxAccrual",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "version",
+            "type": "u16"
+          },
+          {
+            "name": "config",
+            "type": "pubkey"
+          },
+          {
+            "name": "pool",
+            "type": "pubkey"
+          },
+          {
+            "name": "epoch",
+            "type": "pubkey"
+          },
+          {
+            "name": "amount",
+            "type": "u64"
+          },
+          {
+            "name": "accrued_at",
+            "type": "i64"
+          },
+          {
+            "name": "bump",
+            "type": "u8"
+          }
+        ]
+      }
+    },
+    {
+      "name": "MiningTaxAccrued",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "pool",
+            "type": "pubkey"
+          },
+          {
+            "name": "epoch",
+            "type": "pubkey"
+          },
+          {
+            "name": "day",
+            "type": "u64"
+          },
+          {
+            "name": "amount",
+            "type": "u64"
+          },
+          {
+            "name": "accrued",
+            "type": "u64"
+          }
+        ]
+      }
+    },
+    {
+      "name": "MiningTaxClaimed",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "pool",
+            "type": "pubkey"
+          },
+          {
+            "name": "term",
+            "type": "pubkey"
+          },
+          {
+            "name": "auction",
+            "type": "pubkey"
+          },
+          {
+            "name": "spot",
+            "type": "u8"
+          },
+          {
+            "name": "wallet",
+            "type": "pubkey"
+          },
+          {
+            "name": "amount",
+            "type": "u64"
+          },
+          {
+            "name": "cumulative",
+            "type": "u64"
+          },
+          {
+            "name": "pool_paid",
+            "type": "u64"
+          },
+          {
+            "name": "total_tax_paid",
+            "type": "u64"
+          }
+        ]
+      }
+    },
+    {
+      "name": "MiningTaxPool",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "version",
+            "type": "u16"
+          },
+          {
+            "name": "distribution_version",
+            "type": "u8"
+          },
+          {
+            "name": "config",
+            "type": "pubkey"
+          },
+          {
+            "name": "term",
+            "type": "pubkey"
+          },
+          {
+            "name": "term_identity",
+            "type": {
+              "array": [
+                "u8",
+                32
+              ]
+            }
+          },
+          {
+            "name": "winner_count",
+            "type": "u8"
+          },
+          {
+            "name": "accrued",
+            "type": "u64"
+          },
+          {
+            "name": "paid",
+            "type": "u64"
+          },
+          {
+            "name": "bump",
+            "type": "u8"
+          }
+        ]
+      }
+    },
+    {
+      "name": "MiningTaxPoolOpened",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "pool",
+            "type": "pubkey"
+          },
+          {
+            "name": "config",
+            "type": "pubkey"
+          },
+          {
+            "name": "term",
+            "type": "pubkey"
+          },
+          {
+            "name": "term_identity",
+            "type": {
+              "array": [
+                "u8",
+                32
+              ]
+            }
+          },
+          {
+            "name": "winner_count",
+            "type": "u8"
+          },
+          {
+            "name": "distribution_version",
+            "type": "u8"
+          }
+        ]
+      }
+    },
+    {
+      "name": "MiningTaxSpot",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "version",
+            "type": "u16"
+          },
+          {
+            "name": "pool",
+            "type": "pubkey"
+          },
+          {
+            "name": "auction",
+            "type": "pubkey"
+          },
+          {
+            "name": "wallet",
+            "type": "pubkey"
+          },
+          {
+            "name": "spot",
+            "type": "u8"
+          },
+          {
+            "name": "claimed_total",
+            "type": "u64"
+          },
+          {
+            "name": "bump",
+            "type": "u8"
+          }
+        ]
+      }
+    },
+    {
+      "name": "MiningTaxSpotOpened",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "pool",
+            "type": "pubkey"
+          },
+          {
+            "name": "auction",
+            "type": "pubkey"
+          },
+          {
+            "name": "spot",
+            "type": "u8"
+          },
+          {
+            "name": "wallet",
+            "type": "pubkey"
+          }
+        ]
+      }
+    },
+    {
+      "name": "PermitArgs",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "permit_id",
+            "type": {
+              "array": [
+                "u8",
+                16
+              ]
+            }
+          },
+          {
+            "name": "expiry",
+            "type": "i64"
+          },
+          {
+            "name": "ed25519_instruction",
+            "type": "u16"
+          }
+        ]
+      }
+    },
+    {
+      "name": "PermitReceipt",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "version",
+            "type": "u8"
+          },
+          {
+            "name": "kind",
+            "type": "u8"
+          },
+          {
+            "name": "wallet",
+            "type": "pubkey"
+          },
+          {
+            "name": "permit_id",
+            "type": {
+              "array": [
+                "u8",
+                16
+              ]
+            }
+          },
+          {
+            "name": "expiry",
+            "type": "i64"
+          },
+          {
+            "name": "consumed_at",
+            "type": "i64"
+          },
+          {
+            "name": "payload_hash",
+            "type": {
+              "array": [
+                "u8",
+                32
+              ]
+            }
+          },
+          {
+            "name": "bump",
+            "type": "u8"
+          }
+        ]
+      }
+    },
+    {
+      "name": "PolicyRotated",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "previous_key",
+            "type": "pubkey"
+          },
+          {
+            "name": "current_key",
+            "type": "pubkey"
+          },
+          {
+            "name": "previous_valid_until",
+            "type": "i64"
+          }
+        ]
+      }
+    },
+    {
+      "name": "ProofNode",
+      "docs": [
+        "Exactly 41 Borsh bytes. Anchor's bool decoder rejects any side other than 0/1."
+      ],
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "hash",
+            "type": {
+              "array": [
+                "u8",
+                32
+              ]
+            }
+          },
+          {
+            "name": "sum",
+            "type": "u64"
+          },
+          {
+            "name": "is_left",
+            "type": "bool"
+          }
+        ]
+      }
+    },
+    {
+      "name": "PublishMiningArgs",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "sequence",
+            "type": "u64"
+          },
+          {
+            "name": "day",
+            "type": "u64"
+          },
+          {
+            "name": "kind",
+            "type": "u8"
+          },
+          {
+            "name": "root",
+            "type": {
+              "array": [
+                "u8",
+                32
+              ]
+            }
+          },
+          {
+            "name": "total_cumulative",
+            "type": "u64"
+          },
+          {
+            "name": "leaf_count",
+            "type": "u32"
+          },
+          {
+            "name": "budget_gross",
+            "type": "u64"
+          },
+          {
+            "name": "free_gross",
+            "type": "u64"
+          },
+          {
+            "name": "deed_gross",
+            "type": "u64"
+          },
+          {
+            "name": "source_hash",
+            "type": {
+              "array": [
+                "u8",
+                32
+              ]
+            }
+          },
+          {
+            "name": "tax_commitment",
+            "type": {
+              "array": [
+                "u8",
+                32
+              ]
+            }
+          },
+          {
+            "name": "tax_version",
+            "type": "u16"
+          }
+        ]
+      }
+    },
+    {
+      "name": "RealmAccess",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "version",
+            "type": "u8"
+          },
+          {
+            "name": "config",
+            "type": "pubkey"
+          },
+          {
+            "name": "wallet",
+            "type": "pubkey"
+          },
+          {
+            "name": "realm",
+            "type": "u8"
+          },
+          {
+            "name": "expires_at",
+            "type": "i64"
+          },
+          {
+            "name": "bump",
+            "type": "u8"
+          }
+        ]
+      }
+    },
+    {
+      "name": "RealmAccessOpened",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "access",
+            "type": "pubkey"
+          },
+          {
+            "name": "wallet",
+            "type": "pubkey"
+          },
+          {
+            "name": "realm",
+            "type": "u8"
+          }
+        ]
+      }
+    },
+    {
+      "name": "RealmAccessPurchased",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "receipt",
+            "type": "pubkey"
+          },
+          {
+            "name": "buyer",
+            "type": "pubkey"
+          },
+          {
+            "name": "seller",
+            "type": "pubkey"
+          },
+          {
+            "name": "developer",
+            "type": "pubkey"
+          },
+          {
+            "name": "term",
+            "type": "pubkey"
+          },
+          {
+            "name": "spot",
+            "type": "u8"
+          },
+          {
+            "name": "realm",
+            "type": "u8"
+          },
+          {
+            "name": "day",
+            "type": "u64"
+          },
+          {
+            "name": "coverage_start",
+            "type": "i64"
+          },
+          {
+            "name": "expires_at",
+            "type": "i64"
+          },
+          {
+            "name": "seller_lamports",
+            "type": "u64"
+          },
+          {
+            "name": "developer_lamports",
+            "type": "u64"
+          }
+        ]
+      }
+    },
+    {
+      "name": "RealmSaleConfig",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "version",
+            "type": "u8"
+          },
+          {
+            "name": "authority",
+            "type": "pubkey"
+          },
+          {
+            "name": "developer",
+            "type": "pubkey"
+          },
+          {
+            "name": "price_lamports",
+            "type": "u64"
+          },
+          {
+            "name": "duration_sec",
+            "type": "i64"
+          },
+          {
+            "name": "seller_bps",
+            "type": "u16"
+          },
+          {
+            "name": "developer_bps",
+            "type": "u16"
+          },
+          {
+            "name": "quota_max",
+            "type": "u8"
+          },
+          {
+            "name": "day_sec",
+            "type": "i64"
+          },
+          {
+            "name": "quote_ttl_sec",
+            "type": "i64"
+          },
+          {
+            "name": "bump",
+            "type": "u8"
+          }
+        ]
+      }
+    },
+    {
+      "name": "RealmSaleConfigured",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "config",
+            "type": "pubkey"
+          },
+          {
+            "name": "authority",
+            "type": "pubkey"
+          },
+          {
+            "name": "developer",
+            "type": "pubkey"
+          },
+          {
+            "name": "version",
+            "type": "u8"
+          }
+        ]
+      }
+    },
+    {
+      "name": "RealmSaleReceipt",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "version",
+            "type": "u8"
+          },
+          {
+            "name": "config",
+            "type": "pubkey"
+          },
+          {
+            "name": "sale_id",
+            "type": {
+              "array": [
+                "u8",
+                16
+              ]
+            }
+          },
+          {
+            "name": "buyer",
+            "type": "pubkey"
+          },
+          {
+            "name": "seller",
+            "type": "pubkey"
+          },
+          {
+            "name": "developer",
+            "type": "pubkey"
+          },
+          {
+            "name": "term",
+            "type": "pubkey"
+          },
+          {
+            "name": "spot",
+            "type": "u8"
+          },
+          {
+            "name": "realm",
+            "type": "u8"
+          },
+          {
+            "name": "day",
+            "type": "u64"
+          },
+          {
+            "name": "round",
+            "type": "u64"
+          },
+          {
+            "name": "registry_version",
+            "type": "u16"
+          },
+          {
+            "name": "registry_hash",
+            "type": {
+              "array": [
+                "u8",
+                32
+              ]
+            }
+          },
+          {
+            "name": "price_lamports",
+            "type": "u64"
+          },
+          {
+            "name": "seller_lamports",
+            "type": "u64"
+          },
+          {
+            "name": "developer_lamports",
+            "type": "u64"
+          },
+          {
+            "name": "prior_expiry",
+            "type": "i64"
+          },
+          {
+            "name": "coverage_start",
+            "type": "i64"
+          },
+          {
+            "name": "expires_at",
+            "type": "i64"
+          },
+          {
+            "name": "accepted_at",
+            "type": "i64"
+          },
+          {
+            "name": "bump",
+            "type": "u8"
+          }
+        ]
+      }
+    },
+    {
+      "name": "RenownRecord",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "wallet",
+            "type": "pubkey"
+          },
+          {
+            "name": "renown_total",
+            "type": "u64"
+          },
+          {
+            "name": "days_attested",
+            "type": "u64"
+          },
+          {
+            "name": "last_sequence",
+            "type": "u64"
+          },
+          {
+            "name": "synced_at",
+            "type": "i64"
+          },
+          {
+            "name": "version",
+            "type": "u8"
+          },
+          {
+            "name": "bump",
+            "type": "u8"
+          }
+        ]
+      }
+    },
+    {
+      "name": "RenownSynced",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "wallet",
+            "type": "pubkey"
+          },
+          {
+            "name": "sequence",
+            "type": "u64"
+          },
+          {
+            "name": "cumulative_renown",
+            "type": "u64"
+          },
+          {
+            "name": "cumulative_days",
+            "type": "u64"
+          }
+        ]
+      }
+    },
+    {
+      "name": "SeekerAuthority",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "version",
+            "type": "u8"
+          },
+          {
+            "name": "admin",
+            "type": "pubkey"
+          },
+          {
+            "name": "pending_admin",
+            "type": {
+              "option": "pubkey"
+            }
+          },
+          {
+            "name": "guardian",
+            "type": "pubkey"
+          },
+          {
+            "name": "current_policy_key",
+            "type": "pubkey"
+          },
+          {
+            "name": "previous_policy_key",
+            "type": {
+              "option": "pubkey"
+            }
+          },
+          {
+            "name": "previous_valid_until",
+            "type": "i64"
+          },
+          {
+            "name": "cluster_genesis",
+            "type": {
+              "array": [
+                "u8",
+                32
+              ]
+            }
+          },
+          {
+            "name": "admission_paused",
+            "type": "bool"
+          },
+          {
+            "name": "bump",
+            "type": "u8"
+          }
+        ]
+      }
+    },
+    {
+      "name": "SeekerRegistry",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "version",
+            "type": "u16"
+          },
+          {
+            "name": "island",
+            "type": "u8"
+          },
+          {
+            "name": "entries",
+            "type": {
+              "array": [
+                {
+                  "defined": {
+                    "name": "Spot"
+                  }
+                },
+                100
+              ]
+            }
+          },
+          {
+            "name": "hash",
+            "type": {
+              "array": [
+                "u8",
+                32
+              ]
+            }
+          },
+          {
+            "name": "bump",
+            "type": "u8"
+          }
+        ]
+      }
+    },
+    {
+      "name": "SeekerTerm",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "version",
+            "type": "u8"
+          },
+          {
+            "name": "config",
+            "type": "pubkey"
+          },
+          {
+            "name": "registry",
+            "type": "pubkey"
+          },
+          {
+            "name": "registry_hash",
+            "type": {
+              "array": [
+                "u8",
+                32
+              ]
+            }
+          },
+          {
+            "name": "round",
+            "type": "u64"
+          },
+          {
+            "name": "previous",
+            "type": {
+              "option": "pubkey"
+            }
+          },
+          {
+            "name": "auction_start",
+            "type": "i64"
+          },
+          {
+            "name": "auction_end",
+            "type": "i64"
+          },
+          {
+            "name": "operating_start",
+            "type": "i64"
+          },
+          {
+            "name": "operating_end",
+            "type": "i64"
+          },
+          {
+            "name": "opened",
+            "type": {
+              "array": [
+                "u8",
+                13
+              ]
+            }
+          },
+          {
+            "name": "settled",
+            "type": {
+              "array": [
+                "u8",
+                13
+              ]
+            }
+          },
+          {
+            "name": "completed_count",
+            "type": "u8"
+          },
+          {
+            "name": "winner_count",
+            "type": "u8"
+          },
+          {
+            "name": "completed_at",
+            "type": {
+              "option": "i64"
+            }
+          },
+          {
+            "name": "completed_slot",
+            "type": {
+              "option": "u64"
+            }
+          },
+          {
+            "name": "bump",
+            "type": "u8"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Spot",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "id",
+            "type": "u8"
+          },
+          {
+            "name": "class",
+            "type": "u8"
+          },
+          {
+            "name": "realm_mask",
+            "type": "u8"
+          }
+        ]
+      }
+    },
+    {
+      "name": "SpotSalesQuota",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "version",
+            "type": "u8"
+          },
+          {
+            "name": "spot",
+            "type": "u8"
+          },
+          {
+            "name": "day",
+            "type": "u64"
+          },
+          {
+            "name": "sales",
+            "type": "u8"
+          },
+          {
+            "name": "bump",
+            "type": "u8"
+          }
+        ]
+      }
+    },
+    {
+      "name": "SpotSalesQuotaOpened",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "quota",
+            "type": "pubkey"
+          },
+          {
+            "name": "spot",
+            "type": "u8"
+          },
+          {
+            "name": "day",
+            "type": "u64"
+          }
+        ]
+      }
+    },
+    {
+      "name": "TermCompleted",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "term",
+            "type": "pubkey"
+          },
+          {
+            "name": "round",
+            "type": "u64"
+          },
+          {
+            "name": "winners",
+            "type": "u8"
+          },
+          {
+            "name": "at",
+            "type": "i64"
+          },
+          {
+            "name": "slot",
+            "type": "u64"
+          }
+        ]
+      }
+    },
+    {
+      "name": "TermOpened",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "term",
+            "type": "pubkey"
+          },
+          {
+            "name": "config",
+            "type": "pubkey"
+          },
+          {
+            "name": "round",
+            "type": "u64"
+          },
+          {
+            "name": "auction_start",
+            "type": "i64"
+          },
+          {
+            "name": "auction_end",
+            "type": "i64"
+          },
+          {
+            "name": "operating_start",
+            "type": "i64"
+          },
+          {
+            "name": "operating_end",
+            "type": "i64"
+          }
+        ]
+      }
+    }
+  ]
+}

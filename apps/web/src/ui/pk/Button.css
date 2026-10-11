@@ -1,0 +1,158 @@
+/* Button.css — chunky faces (DESIGN-SYSTEM §5 ChunkyButton, Plate.kt drawChunky), verb ramps, badges, tags.
+ * The <button> itself is never clipped (so its focus ring and corner badge are not cut); the ink shell and the face
+ * inside it carry the stepped clip. Only --pk-* values (kitBase.css / Plate.css define the --pk-k-* bridge gaps). */
+
+:root {
+  --pk-k-hover-travel: var(--pk-text-outline-1); /* LANE §4 Input: hover = the first 1 px of press travel */
+  --pk-k-press-dark: color-mix(in srgb, var(--pk-ink) 35%, transparent); /* drawChunky press: black 35% lip band */
+  --pk-k-press-dark-top: color-mix(in srgb, var(--pk-ink) 18%, transparent); /* black 18% over the hi band */
+}
+
+/* ---- Verb ramps: hi band / face / mid / lo lip ---- */
+.pk-verb--gold { --v-hi: var(--pk-gold-hi); --v: var(--pk-gold); --v-mid: var(--pk-gold-mid); --v-lo: var(--pk-gold-lo); }
+.pk-verb--green { --v-hi: var(--pk-green-hi); --v: var(--pk-green); --v-mid: var(--pk-green-mid); --v-lo: var(--pk-green-lo); }
+.pk-verb--blue { --v-hi: var(--pk-blue-hi); --v: var(--pk-blue); --v-mid: var(--pk-blue-mid); --v-lo: var(--pk-blue-lo); }
+.pk-verb--red { --v-hi: var(--pk-red-hi); --v: var(--pk-red); --v-mid: var(--pk-red-mid); --v-lo: var(--pk-red-lo); }
+.pk-verb--stone { --v-hi: var(--pk-stone-hi); --v: var(--pk-stone); --v-mid: var(--pk-stone-mid); --v-lo: var(--pk-stone-lo); }
+.pk-verb--charcoal { --v-hi: var(--pk-k-charcoal-hi); --v: var(--pk-charcoal); --v-mid: var(--pk-k-charcoal-mid); --v-lo: var(--pk-k-charcoal-lo); }
+.pk-verb--off { --v-hi: var(--pk-off-hi); --v: var(--pk-off); --v-mid: var(--pk-off); --v-lo: var(--pk-off-lo); }
+.pk-verb--moss { --v-hi: var(--pk-moss-hi); --v: var(--pk-moss); --v-mid: var(--pk-k-moss-mid); --v-lo: var(--pk-moss-lo); }
+
+/* ---- The chunky button ---- */
+.pk-btn {
+  position: relative;
+  display: inline-flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  min-width: var(--pk-min-tap);
+  min-height: var(--pk-min-tap);
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: var(--pk-k-label);
+  font: inherit;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+  user-select: none;
+}
+.pk-btn[disabled] { cursor: default; }
+.pk-btn__shell {
+  flex: 1 1 auto;
+  display: flex;
+  box-sizing: border-box;
+  margin-top: 0;
+  padding: var(--pk-outline-button) var(--pk-outline-button) var(--pk-lip-button);
+  background: var(--pk-ink);
+  clip-path: var(--pk-k-clip-m);
+  transition: margin-top var(--pk-dur-release) var(--pk-ease-pop), padding-bottom var(--pk-dur-release) var(--pk-ease-pop);
+}
+.pk-btn__face {
+  flex: 1 1 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 0;
+  clip-path: var(--pk-clip-s);
+  background: linear-gradient(var(--v-hi) 0 var(--pk-hi-band), var(--v) var(--pk-hi-band) 55%, var(--v-mid) 55%);
+  box-shadow: inset 0 calc(-1 * var(--pk-k-5)) 0 var(--v-lo);
+}
+.pk-btn__content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--pk-s8);
+  min-width: 0;
+  padding: 0 var(--pk-s8);
+  /* the content sits half a lip above centre so it reads centred on the face */
+  margin-bottom: var(--pk-unit);
+}
+.pk-btn__labels { display: flex; flex-direction: column; align-items: center; min-width: 0; }
+.pk-btn__label { color: var(--pk-k-label); }
+.pk-btn__label--off { color: var(--pk-text); }
+.pk-btn__sentence, .pk-btn__sub { color: var(--pk-text); }
+
+/* Press: the shell's top drops 3 px and the lip shrinks to 3 px, so the bottom edge stays put. 60 ms linear down. */
+.pk-btn:not([disabled]):active .pk-btn__shell {
+  margin-top: var(--pk-lip-button-pressed);
+  padding-bottom: var(--pk-lip-button-pressed);
+  transition-duration: var(--pk-dur-press);
+  transition-timing-function: var(--pk-ease-linear);
+}
+.pk-btn:not([disabled]):active .pk-btn__face {
+  box-shadow: inset 0 calc(-1 * var(--pk-s2)) 0 var(--pk-k-press-dark), inset 0 var(--pk-hi-band) 0 var(--pk-k-press-dark-top);
+}
+/* Desktop pointer: hover is the first 1 px of travel, no colour change (LANE §4). Touch classes get no hover look. */
+:root[data-pk-vp="desktop"] .pk-btn:not([disabled]):hover:not(:active) .pk-btn__shell {
+  margin-top: var(--pk-k-hover-travel);
+  padding-bottom: calc(var(--pk-lip-button) - var(--pk-k-hover-travel));
+}
+
+/* ---- Sizes ---- */
+.pk-btn--primary { width: 100%; min-height: var(--pk-size-sheet-primary-h); }
+.pk-btn--secondary { min-height: var(--pk-size-secondary-h); }
+.pk-btn--secondary .pk-btn__content { gap: var(--pk-s6); }
+.pk-btn--square { width: var(--pk-min-tap); height: var(--pk-min-tap); }
+.pk-btn--square .pk-btn__content { padding: 0; }
+.pk-btn--go .pk-btn__content { flex-direction: column; gap: 0; padding: 0 var(--pk-s6); }
+
+/* ---- Corner badge (-6 / -6) ---- */
+.pk-btn > .pk-btn__badge { position: absolute; top: calc(-1 * var(--pk-s6)); right: calc(-1 * var(--pk-s6)); }
+
+/* ---- Primary: optional pill on the top edge, reason under it ---- */
+.pk-primary { display: flex; flex-direction: column; align-items: stretch; gap: var(--pk-outline-button); min-width: 0; }
+.pk-primary__slot { position: relative; display: flex; }
+.pk-primary--priced { padding-top: calc(var(--pk-s16) + var(--pk-s4)); } /* PRICE_ON_PRIMARY_OVERLAP 20 px */
+.pk-primary__slot > .pk-primary__price { position: absolute; z-index: 1; left: 50%; top: calc(-1 * (var(--pk-s16) + var(--pk-s4))); transform: translateX(-50%); }
+.pk-primary__reason { color: var(--pk-ink-text-2); text-align: center; }
+.pk-primary__reason--dark { color: var(--pk-danger); }
+.pk-btn[data-state="locked"] .pk-icon__img { filter: grayscale(1) brightness(.6); }
+
+/* ---- Quiet link: 48 px target, no face ---- */
+.pk-quiet {
+  flex: none;
+  display: inline-flex; align-items: center; justify-content: center;
+  min-width: var(--pk-min-tap); min-height: var(--pk-min-tap);
+  margin: 0; padding: 0 var(--pk-s4); border: 0; background: none; cursor: pointer;
+  color: var(--pk-blue-hi); text-decoration: underline; text-underline-offset: var(--pk-s2);
+  -webkit-tap-highlight-color: transparent;
+}
+.pk-quiet--parch { color: var(--pk-blue-lo); }
+
+/* ---- Busy dots ---- */
+.pk-dots { display: inline-flex; gap: var(--pk-s4); flex: none; }
+.pk-dots > i { width: var(--pk-s6); height: var(--pk-s6); background: var(--pk-text); }
+.pk-dots > i:nth-child(2) { opacity: .6; }
+.pk-dots > i:nth-child(3) { opacity: .3; }
+
+/* ---- Badge: 24 tall, min 24, ink S rim 2, face + 2 px hi band; pops 0 -> 1.15 -> 1 over badgePop ---- */
+.pk-badge {
+  position: relative; display: inline-flex; box-sizing: border-box;
+  min-width: var(--pk-size-badge-min-w); height: var(--pk-size-badge-h);
+  padding: var(--pk-s2); background: var(--pk-ink); clip-path: var(--pk-clip-s);
+  animation: pk-badge-pop var(--pk-dur-badge-pop) var(--pk-ease-pop) both;
+  pointer-events: none;
+}
+.pk-badge > i {
+  flex: 1; display: flex; align-items: center; justify-content: center; font-style: normal;
+  padding: 0 var(--pk-s4); clip-path: var(--pk-clip-s); color: var(--pk-k-label);
+  background: linear-gradient(var(--b-hi) 0 var(--pk-s2), var(--b) var(--pk-s2));
+}
+.pk-badge--count { --b-hi: var(--pk-red-hi); --b: var(--pk-red); }
+.pk-badge--reward { --b-hi: var(--pk-gold-hi); --b: var(--pk-gold); }
+.pk-badge--reward > i { color: var(--pk-ink); }
+.pk-badge--ready { --b-hi: var(--pk-green-hi); --b: var(--pk-green); }
+.pk-badge--info { --b-hi: var(--pk-blue-hi); --b: var(--pk-blue); }
+@keyframes pk-badge-pop { 0% { transform: scale(0); } 66% { transform: scale(1.15); } 100% { transform: scale(1); } }
+
+/* ---- Tag ---- */
+.pk-tag {
+  display: inline-flex; box-sizing: border-box; flex: none; min-height: var(--pk-s24);
+  padding: var(--pk-s2); background: var(--pk-ink); clip-path: var(--pk-clip-s);
+}
+.pk-tag > i {
+  display: flex; align-items: center; font-style: normal; padding: 0 var(--pk-s6);
+  clip-path: var(--pk-clip-s); color: var(--pk-k-label);
+  background: linear-gradient(var(--v-hi) 0 var(--pk-s2), var(--v) var(--pk-s2));
+}

@@ -1,0 +1,57 @@
+{
+  "hash": "5580b4e4",
+  "outcome": {
+    "stars": 0,
+    "destructionPct": 0,
+    "keepDestroyed": false,
+    "vaultDestroyed": false,
+    "mineDestroyed": false,
+    "victory": false,
+    "buildings": [
+      {
+        "id": "keep",
+        "type": "keep",
+        "hp": 1875,
+        "maxHp": 1875,
+        "destroyed": false
+      },
+      {
+        "id": "c1",
+        "type": "cannon",
+        "hp": 656,
+        "maxHp": 656,
+        "destroyed": false
+      },
+      {
+        "id": "c2",
+        "type": "cannon",
+        "hp": 656,
+        "maxHp": 656,
+        "destroyed": false
+      },
+      {
+        "id": "a1",
+        "type": "archertower",
+        "hp": 563,
+        "maxHp": 563,
+        "destroyed": false
+      },
+      {
+        "id": "mortar",
+        "type": "mortar",
+        "hp": 460,
+        "maxHp": 469,
+        "destroyed": false
+      },
+      {
+        "id": "trap",
+        "type": "spiketrap",
+        "hp": 0,
+        "maxHp": 0,
+        "destroyed": false
+      }
+    ],
+    "ticks": 29,
+    "eventCount": 29
+  }
+}

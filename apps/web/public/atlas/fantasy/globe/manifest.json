@@ -1,0 +1,145 @@
+{
+  "version": "fantasy-world-v1",
+  "sourceCommit": "bec6fba6ce4da2f360d33877d36cc51663dcd371",
+  "kind": "geographic-raster",
+  "files": [
+    {
+      "path": "realm-texture.png",
+      "sha256": "144ed86116bb690c463707a30ff4c62ec2cacda99a9128b74a5107026f58cea3",
+      "width": 768,
+      "height": 384
+    },
+    {
+      "path": "realm-mask.png",
+      "sha256": "684922695e4a4e54d98bba6bdc3c9e03563962df922d85159e475f4f0d1af30c",
+      "width": 768,
+      "height": 384
+    },
+    {
+      "path": "surface-mask.png",
+      "sha256": "4a1bade6a91fc1dc0fd48b85489c720d7f630b1fd87800fe002e177e519766a8",
+      "width": 768,
+      "height": 384
+    },
+    {
+      "path": "generated/heartlands-detail.png",
+      "sha256": "267b9afa0dc69a4595e478b32546c25fba4c45a5f102e30ecb4ce88a27f98020",
+      "width": 2048,
+      "height": 1536
+    },
+    {
+      "path": "generated/solana-detail.png",
+      "sha256": "eecbdc1934b194be0ba1bfd9ff4b48030bd0fbb263acbec556792d9f70f38f27",
+      "width": 2048,
+      "height": 2048
+    },
+    {
+      "path": "generated/stormcairn-detail.png",
+      "sha256": "8f260b0c774af83db62d26edf55679daa680be99ab81d6f0718e23741d4030d3",
+      "width": 1536,
+      "height": 1536
+    },
+    {
+      "path": "generated/thornwake-detail.png",
+      "sha256": "365dd6bb697813a5a23392e6a25e2b1f6bd5f48e3fcc69daf64b3735032d1656",
+      "width": 1536,
+      "height": 1536
+    },
+    {
+      "path": "generated/cinderfall-detail.png",
+      "sha256": "da9e2cdfe93f69e4d2af82551cb6bd48eb9c3a52b8ffd586df65e0b68ed4bef0",
+      "width": 2048,
+      "height": 1152
+    },
+    {
+      "path": "generated/cloud-banks.png",
+      "sha256": "c19ee8547c39483dce42a677be0bd4d824bfde2e7bd266f154010c0dc8c93fa2",
+      "width": 192,
+      "height": 64
+    },
+    {
+      "path": "generated/glasswake-detail.png",
+      "sha256": "4ce157a666fee44a08a18a51b5f3323b187aa89b5a5601ed2aa6853f5ca2539a",
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "path": "generated/glasswake-detail-mask.png",
+      "sha256": "173cd23f55d9157f24bc62dabcd72f2b760226ec26cf84614d0020714aa000a2",
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "path": "generated/aurora-detail.png",
+      "sha256": "add75d2420ac4908c56950c303a892c9af6569bdafa1aa992b21fc5c8d4efc6d",
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "path": "generated/aurora-detail-mask.png",
+      "sha256": "09476e57dd4886e483437cfe0d573cb5ecaead761b5ad9c87183fbb20eac2999",
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "path": "generated/emberwake-detail.png",
+      "sha256": "92b5bb1b6f46187143c6e101402906be5f4a5670a3ee7aeb8473e00715299b00",
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "path": "generated/emberwake-detail-mask.png",
+      "sha256": "36315acf668005117885527848b4bf83816f34bc8c41e935ac6236034db0bfe3",
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "path": "generated/whispering-detail.png",
+      "sha256": "7f63e02b59a9405f98b63db5969bdebc5068c1058ad43a684ca07cc482d05746",
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "path": "generated/whispering-detail-mask.png",
+      "sha256": "7ef1eacc86003d2448deaa1e3f957d02b69fb1b2602a2e1a7823ff303c897e21",
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "path": "generated/mintwake-detail.png",
+      "sha256": "592d2fb0fc03c44ca9e7d473f7d5bb31d9c961845c86ab042ac9ad5923745950",
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "path": "generated/mintwake-detail-mask.png",
+      "sha256": "9b51639fa1923d8c0ea4c5702004d932e0183f62130e0f2dbdcda30a5e021f71",
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "path": "generated/prismforge-detail.png",
+      "sha256": "4d02de608f3a79f4fc4e8df43f8b5cf988e9f4bb314260c31b96fcb94c297391",
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "path": "generated/prismforge-detail-mask.png",
+      "sha256": "e70f692ce4bcf5a79ae34d146c0f4e470970f3d019862d778f4deaa61052c0e3",
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "path": "generated/lumenreef-detail.png",
+      "sha256": "e4f0e5b8e4dbbdbf98826f1a001a7ad96370b06175dd3b4d8fcdcfd04fb993c6",
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "path": "generated/lumenreef-detail-mask.png",
+      "sha256": "332d0dda1329878d711dc9978ac1cf5cedf96f618967e56369a51caaadb5dc6b",
+      "width": 1024,
+      "height": 1024
+    }
+  ]
+}

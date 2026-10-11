@@ -1,0 +1,55 @@
+/* Body dimensions only. The existing tall-sheet host owns placement, scrim and safe-area bounds. */
+.pk-goldforge { height: 100%; width: 100%; }
+.pk-goldforge .pk-frame__wood > .pk-plate__face { padding: 0; gap: 0; }
+.pk-goldforge .pk-frame__head { position: absolute; z-index: 2; top: 6px; left: 6px; right: 6px; }
+.pk-goldforge .pk-title-plate { max-width: calc(100% - 110px); }
+.pk-goldforge .pk-title-plate__name { overflow-wrap: anywhere; }
+.pk-goldforge .pk-frame__body { padding: 0; gap: 0; }
+.pk-goldforge .pk-frame__foot { padding: 8px 10px calc(14px + env(safe-area-inset-bottom, 0px)); background: var(--pk-parch); color: var(--pk-ink-text); border-top: 3px solid var(--pk-ink); }
+.pk-goldforge__hero { height: 204px; flex: none; position: relative; display: grid; place-items: center; overflow: hidden; background: var(--pk-surface); border-bottom: 3px solid var(--pk-ink); }
+.pk-goldforge__building { margin-top: 24px; image-rendering: pixelated; }
+.pk-goldforge__hero-status { position: absolute; bottom: 6px; left: 6px; max-width: calc(100% - 12px); }
+.pk-goldforge__hero-status .pk-plate__face { padding: 4px 6px; }
+.pk-goldforge__tabs { display: flex; gap: 4px; padding: 8px 8px 0; }
+.pk-goldforge__tab { position: relative; display: flex; align-items: center; justify-content: center; flex: 1 1 0; min-width: 0; min-height: 48px; gap: 4px; padding: 6px 2px; color: var(--pk-ink-text); background: var(--pk-cream); border: 3px solid var(--pk-ink); cursor: pointer; }
+.pk-goldforge__tab[aria-selected="true"] { background: var(--pk-parch); border-bottom-color: var(--pk-parch); transform: translateY(-2px); }
+.pk-goldforge__tab .pk-badge { position: absolute; top: -6px; right: -4px; }
+.pk-goldforge__tabs:has(> :nth-child(4)) .pk-goldforge__tab { flex-direction: column; }
+.pk-goldforge__content { display: flex; flex-direction: column; gap: 10px; padding: 10px; min-width: 0; }
+.pk-goldforge__content h2, .pk-goldforge__content h3, .pk-goldforge__content p { margin: 0; }
+.pk-goldforge__row { display: flex; align-items: center; justify-content: space-between; gap: 8px; flex-wrap: wrap; }
+.pk-goldforge__card > .pk-plate__face { gap: 8px; padding: 10px; }
+.pk-goldforge__claim-well > .pk-plate__face, .pk-goldforge__legacy-well > .pk-plate__face { align-items: center; justify-content: center; gap: 8px; padding: 20px 10px; text-align: center; }
+.pk-goldforge__claim-well { min-height: 286px; }
+.pk-goldforge__claim-number { font-family: var(--pk-font-display); font-size: 24px; color: var(--pk-gold-hi); overflow-wrap: anywhere; max-width: 100%; line-height: 1.7; }
+.pk-goldforge__legacy-well { min-height: 132px; }
+.pk-goldforge__load { min-height: 16px; border: 3px solid var(--pk-ink); background: var(--pk-cream-lo); }
+.pk-goldforge__load > span { display: block; height: 10px; background: var(--pk-gold); }
+.pk-goldforge__picker { display: flex; overflow-x: auto; gap: 8px; padding: 4px 0 8px; align-items: stretch; }
+.pk-goldforge__resource { width: 104px; flex: 0 0 104px; display: flex; flex-direction: column; gap: 4px; }
+.pk-goldforge__resource .pk-btn { width: 100%; min-height: 48px; }
+.pk-goldforge__tile > .pk-plate__face { min-height: 80px; align-items: center; text-align: center; gap: 4px; }
+.pk-goldforge__notice { color: var(--pk-danger); min-height: 1em; }
+.pk-goldforge__saved-lines { margin: 0; padding-left: 20px; }
+.pk-goldforge__action-row { display: flex; align-items: stretch; gap: 8px; }
+.pk-goldforge__action-row > .pk-primary { flex: 1 1 auto; min-width: 0; }
+.pk-goldforge__basket-worth { flex: 0 0 104px; }
+.pk-goldforge__basket-worth > .pk-plate__face { justify-content: center; text-align: center; overflow-wrap: anywhere; gap: 6px; }
+.pk-goldforge--claim .pk-frame__foot .pk-btn--primary { min-height: 72px; }
+.pk-goldforge__footnote { text-align: center; margin: 0; }
+.pk-goldforge__balance { display: flex; align-items: center; gap: 8px; overflow-wrap: anywhere; }
+.pk-goldforge__balance strong { min-width: 0; }
+.pk-goldforge__pay-get > .pk-plate__face { flex-direction: row; align-items: center; justify-content: space-around; gap: 8px; min-height: 104px; padding: 8px; }
+.pk-goldforge__pay-get .pk-plate__face > div { display: flex; flex-direction: column; align-items: center; min-width: 0; gap: 6px; text-align: center; overflow-wrap: anywhere; }
+.pk-goldforge__stepper { display: grid; grid-template-columns: 48px minmax(0, 1fr) 48px; gap: 6px; }
+.pk-goldforge__stepper > .pk-plate > .pk-plate__face { align-items: center; justify-content: center; gap: 4px; overflow-wrap: anywhere; }
+.pk-goldforge__quick { display: flex; gap: 6px; flex-wrap: wrap; }
+.pk-goldforge__quick > .pk-btn { flex: 1 1 48px; }
+@media (max-width: 380px) {
+  .pk-goldforge__tab { flex-direction: column; }
+  .pk-goldforge__action-row { flex-wrap: wrap; }
+  .pk-goldforge__basket-worth { flex: 1 1 100%; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .pk-goldforge__tab { transition: none; }
+}

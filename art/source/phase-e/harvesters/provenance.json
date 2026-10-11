@@ -1,0 +1,3165 @@
+{
+  "schemaVersion": 1,
+  "family": "harvester",
+  "zipSha256": "7a381d75251b280459dda151dba7d2ad7f3d1b8945d01af0f847528436e05aa3",
+  "indexSha256": "04f96c922ca04d93f1bf760e6385713908b971ce82c3aa022602f1fa199e2181",
+  "manifestSha256": "0a977cffac8af0f1cb34515b0782d39f9a7b21afe07606d9b3113737024b5320",
+  "docsCommit": "11504e2316bd33a6d092f87b8d114f159aa0249c",
+  "scope": "source preparation only; no runtime or owner visual acceptance",
+  "files": [
+    {
+      "path": "PLAN.md",
+      "bytes": 1560,
+      "sha256": "90fb77c2266c53228c12689bd9de36cf7e0bb735d05942c128b055adf3fd72d2",
+      "indexPath": null
+    },
+    {
+      "path": "QA.md",
+      "bytes": 3643,
+      "sha256": "daae57198398be053c04b61b696b7be0dac47d98fb9b4af923d4d0dd5d92b262",
+      "indexPath": null
+    },
+    {
+      "path": "derived/animations/cinderfall-t1-collapse-authored.json",
+      "bytes": 2281,
+      "sha256": "d5763b00e0ecba1e3c1ddf7524ddbbc67accdde051d76aa66b2aa6e14a144f57",
+      "indexPath": "production-assets/harvesters/derived/animations/cinderfall-t1-collapse-authored.json"
+    },
+    {
+      "path": "derived/animations/cinderfall-t1-collapse-authored.png",
+      "bytes": 22866,
+      "sha256": "e976f599169ed1e465e7d3b7cdd8712839d9ec5fa77ab8383ba14d8344e4bf4a",
+      "indexPath": "production-assets/harvesters/derived/animations/cinderfall-t1-collapse-authored.png",
+      "size": [
+        344,
+        344
+      ]
+    },
+    {
+      "path": "derived/animations/cinderfall-t1-construction-authored.json",
+      "bytes": 2285,
+      "sha256": "2864d0c563485779b7c2ed96015ee61a73149387494d93267ad359308a3f470a",
+      "indexPath": "production-assets/harvesters/derived/animations/cinderfall-t1-construction-authored.json"
+    },
+    {
+      "path": "derived/animations/cinderfall-t1-construction-authored.png",
+      "bytes": 25571,
+      "sha256": "d1c85965ffe53c59063e0cbbd4e460d219a47b36c4fee6d4b70f61ea56cb37e8",
+      "indexPath": "production-assets/harvesters/derived/animations/cinderfall-t1-construction-authored.png",
+      "size": [
+        344,
+        344
+      ]
+    },
+    {
+      "path": "derived/animations/cinderfall-t1-working-mechanical.json",
+      "bytes": 2282,
+      "sha256": "3c488e992f416d6faa21f8758891e0cf2bbf9c71edacce5993620f0270e4c30f",
+      "indexPath": "production-assets/harvesters/derived/animations/cinderfall-t1-working-mechanical.json"
+    },
+    {
+      "path": "derived/animations/cinderfall-t1-working-mechanical.png",
+      "bytes": 20009,
+      "sha256": "ac0d8954b335b480c42e646a0ee529ab76a04caab5b571c3ea7e012763dd3694",
+      "indexPath": "production-assets/harvesters/derived/animations/cinderfall-t1-working-mechanical.png",
+      "size": [
+        344,
+        344
+      ]
+    },
+    {
+      "path": "derived/animations/cinderfall-t2-collapse-authored.json",
+      "bytes": 2281,
+      "sha256": "77e0def7107104d4794c99d40b47d50e81daf0e67085f5f73598bde4a4c93a37",
+      "indexPath": "production-assets/harvesters/derived/animations/cinderfall-t2-collapse-authored.json"
+    },
+    {
+      "path": "derived/animations/cinderfall-t2-collapse-authored.png",
+      "bytes": 21026,
+      "sha256": "b9cb7953bca093bfe85c82fc21fba90f023814911ee08e126251d9b1e74e1591",
+      "indexPath": "production-assets/harvesters/derived/animations/cinderfall-t2-collapse-authored.png",
+      "size": [
+        344,
+        344
+      ]
+    },
+    {
+      "path": "derived/animations/cinderfall-t2-construction-authored.json",
+      "bytes": 2285,
+      "sha256": "6498fdae5316300c8a308e1c77f646ea57c7020b042bc2e37c3063bc13b42c11",
+      "indexPath": "production-assets/harvesters/derived/animations/cinderfall-t2-construction-authored.json"
+    },
+    {
+      "path": "derived/animations/cinderfall-t2-construction-authored.png",
+      "bytes": 26319,
+      "sha256": "43348dda63dc3f52e16f9cf20e2343ce7302e2f061746d524c29a17257373f6e",
+      "indexPath": "production-assets/harvesters/derived/animations/cinderfall-t2-construction-authored.png",
+      "size": [
+        344,
+        344
+      ]
+    },
+    {
+      "path": "derived/animations/cinderfall-t2-working-mechanical.json",
+      "bytes": 2282,
+      "sha256": "50a7217f233596dd8b9388a0dbdff24812e2f090c5febffa38623388c7f7b2db",
+      "indexPath": "production-assets/harvesters/derived/animations/cinderfall-t2-working-mechanical.json"
+    },
+    {
+      "path": "derived/animations/cinderfall-t2-working-mechanical.png",
+      "bytes": 21154,
+      "sha256": "ee9dae8b055cfabb8fc407882afac6a31762745c635398a8d85dccf4a8b21460",
+      "indexPath": "production-assets/harvesters/derived/animations/cinderfall-t2-working-mechanical.png",
+      "size": [
+        344,
+        344
+      ]
+    },
+    {
+      "path": "derived/animations/cinderfall-t3-collapse-authored.json",
+      "bytes": 2281,
+      "sha256": "1ba42a42a6bbe871cbb4e49f5bda272ebec67b58a0b9b29fdf7bf8af05534b50",
+      "indexPath": "production-assets/harvesters/derived/animations/cinderfall-t3-collapse-authored.json"
+    },
+    {
+      "path": "derived/animations/cinderfall-t3-collapse-authored.png",
+      "bytes": 27175,
+      "sha256": "83f1aaffad2aad8fb8ecb7f4be0dfc0c9591844e0c98fc2e72e9af0eb34ee444",
+      "indexPath": "production-assets/harvesters/derived/animations/cinderfall-t3-collapse-authored.png",
+      "size": [
+        344,
+        344
+      ]
+    },
+    {
+      "path": "derived/animations/cinderfall-t3-construction-authored.json",
+      "bytes": 2285,
+      "sha256": "4c4175a7bb34b8697f381ed92bac2e0186722a7666298f601156336c094c4d1f",
+      "indexPath": "production-assets/harvesters/derived/animations/cinderfall-t3-construction-authored.json"
+    },
+    {
+      "path": "derived/animations/cinderfall-t3-construction-authored.png",
+      "bytes": 27594,
+      "sha256": "f5f92f203a3e9b05a789c7efb338c0c3854773b40fbf61861491db8fb692f7f8",
+      "indexPath": "production-assets/harvesters/derived/animations/cinderfall-t3-construction-authored.png",
+      "size": [
+        344,
+        344
+      ]
+    },
+    {
+      "path": "derived/animations/cinderfall-t3-working-mechanical.json",
+      "bytes": 2282,
+      "sha256": "8dcbdef41f462cc12d7080c4367336e9432feb2a1ecde373bb4311b0dccf99c1",
+      "indexPath": "production-assets/harvesters/derived/animations/cinderfall-t3-working-mechanical.json"
+    },
+    {
+      "path": "derived/animations/cinderfall-t3-working-mechanical.png",
+      "bytes": 25278,
+      "sha256": "9e1f8646a377a2e99c161b175e0f54b15a11f7747afcbc057d208b2fecf54730",
+      "indexPath": "production-assets/harvesters/derived/animations/cinderfall-t3-working-mechanical.png",
+      "size": [
+        344,
+        344
+      ]
+    },
+    {
+      "path": "derived/animations/cinderfall-t4-collapse-authored.json",
+      "bytes": 2281,
+      "sha256": "216f5f7bb9f9c62d4ddbbe80288b998086399bdefe98e2fcc2f7603bf32569f7",
+      "indexPath": "production-assets/harvesters/derived/animations/cinderfall-t4-collapse-authored.json"
+    },
+    {
+      "path": "derived/animations/cinderfall-t4-collapse-authored.png",
+      "bytes": 28126,
+      "sha256": "7f31c7078e5ce02e4472b9ff30c2505342881af64b1dd074d5296bb340f28a60",
+      "indexPath": "production-assets/harvesters/derived/animations/cinderfall-t4-collapse-authored.png",
+      "size": [
+        344,
+        344
+      ]
+    },
+    {
+      "path": "derived/animations/cinderfall-t4-construction-authored.json",
+      "bytes": 2285,
+      "sha256": "39b85d843bc6accba61796a6ac562e6eeb4f829d3cec63e1693df55e98266d7b",
+      "indexPath": "production-assets/harvesters/derived/animations/cinderfall-t4-construction-authored.json"
+    },
+    {
+      "path": "derived/animations/cinderfall-t4-construction-authored.png",
+      "bytes": 29713,
+      "sha256": "6e7495902aff1a2dc607b327fa67ac55916eea3f8778f95f8198320bfcd9e64b",
+      "indexPath": "production-assets/harvesters/derived/animations/cinderfall-t4-construction-authored.png",
+      "size": [
+        344,
+        344
+      ]
+    },
+    {
+      "path": "derived/animations/cinderfall-t4-working-mechanical.json",
+      "bytes": 2282,
+      "sha256": "c62e7d6ca59e25c3ae59bfa183b20b2ff83513f648205d31917f18312fa26f3b",
+      "indexPath": "production-assets/harvesters/derived/animations/cinderfall-t4-working-mechanical.json"
+    },
+    {
+      "path": "derived/animations/cinderfall-t4-working-mechanical.png",
+      "bytes": 25753,
+      "sha256": "fc825efe3381f0c3e6ee049d4855a2e6cbc5415d665e412380479fdcbff57ddd",
+      "indexPath": "production-assets/harvesters/derived/animations/cinderfall-t4-working-mechanical.png",
+      "size": [
+        344,
+        344
+      ]
+    },
+    {
+      "path": "derived/animations/crownlands-t1-collapse-authored.json",
+      "bytes": 2281,
+      "sha256": "45057f581e43d0545b23e69b5c7be3dcd341c9470f6e0f719f38149ca012230e",
+      "indexPath": "production-assets/harvesters/derived/animations/crownlands-t1-collapse-authored.json"
+    },
+    {
+      "path": "derived/animations/crownlands-t1-collapse-authored.png",
+      "bytes": 22838,
+      "sha256": "3149518e7801312e38683ea61cb17e5316b9f6300e49f561320d75d3f8d476f4",
+      "indexPath": "production-assets/harvesters/derived/animations/crownlands-t1-collapse-authored.png",
+      "size": [
+        344,
+        344
+      ]
+    },
+    {
+      "path": "derived/animations/crownlands-t1-construction-authored.json",
+      "bytes": 2285,
+      "sha256": "27173a5c40c7f577177db09380f616fe8fde6fd86d5524285d7f8061cfe5dde5",
+      "indexPath": "production-assets/harvesters/derived/animations/crownlands-t1-construction-authored.json"
+    },
+    {
+      "path": "derived/animations/crownlands-t1-construction-authored.png",
+      "bytes": 23845,
+      "sha256": "ac88f983f4967cd27d6a30da78cf958ac0658dc5f86a0ca743a495931f6fb482",
+      "indexPath": "production-assets/harvesters/derived/animations/crownlands-t1-construction-authored.png",
+      "size": [
+        344,
+        344
+      ]
+    },
+    {
+      "path": "derived/animations/crownlands-t1-working-mechanical.json",
+      "bytes": 2282,
+      "sha256": "6c563a49f558d183087928a5a7bba3797592a049398cfc0241e3d72ef583e74e",
+      "indexPath": "production-assets/harvesters/derived/animations/crownlands-t1-working-mechanical.json"
+    },
+    {
+      "path": "derived/animations/crownlands-t1-working-mechanical.png",
+      "bytes": 19725,
+      "sha256": "b8bce1b74f060f5b624d85df6ef0b7a3cfd04ca0aaea756499cc2c7097041be1",
+      "indexPath": "production-assets/harvesters/derived/animations/crownlands-t1-working-mechanical.png",
+      "size": [
+        344,
+        344
+      ]
+    },
+    {
+      "path": "derived/animations/crownlands-t2-collapse-authored.json",
+      "bytes": 2281,
+      "sha256": "4f81de394901717f94259f87d7f1dd84b0a65fe90d45ab1f68624115e69993d4",
+      "indexPath": "production-assets/harvesters/derived/animations/crownlands-t2-collapse-authored.json"
+    },
+    {
+      "path": "derived/animations/crownlands-t2-collapse-authored.png",
+      "bytes": 21331,
+      "sha256": "95ffcbe715e19e3fe9b90364ffec45115b7f22ca180227f29387abfdcce70939",
+      "indexPath": "production-assets/harvesters/derived/animations/crownlands-t2-collapse-authored.png",
+      "size": [
+        344,
+        344
+      ]
+    },
+    {
+      "path": "derived/animations/crownlands-t2-construction-authored.json",
+      "bytes": 2285,
+      "sha256": "7b1a6456dfb45cb05ff378616c464ac0b5edd0de4a6514788b8ce4b8b7eb1d77",
+      "indexPath": "production-assets/harvesters/derived/animations/crownlands-t2-construction-authored.json"
+    },
+    {
+      "path": "derived/animations/crownlands-t2-construction-authored.png",
+      "bytes": 23783,
+      "sha256": "58bba4a476d1d81e523cb3d6b14ce02a35b7cdb468ff31cf1b565c18a7f487cb",
+      "indexPath": "production-assets/harvesters/derived/animations/crownlands-t2-construction-authored.png",
+      "size": [
+        344,
+        344
+      ]
+    },
+    {
+      "path": "derived/animations/crownlands-t2-working-mechanical.json",
+      "bytes": 2282,
+      "sha256": "a1f0a035e0ed223482c4e81a9359f11910b65217a8ced92bfb08932b71adad62",
+      "indexPath": "production-assets/harvesters/derived/animations/crownlands-t2-working-mechanical.json"
+    },
+    {
+      "path": "derived/animations/crownlands-t2-working-mechanical.png",
+      "bytes": 17381,
+      "sha256": "47d85290bc599c7ef7e2ebfa503cacd5356e0215a9c72613fae9057e388440c2",
+      "indexPath": "production-assets/harvesters/derived/animations/crownlands-t2-working-mechanical.png",
+      "size": [
+        344,
+        344
+      ]
+    },
+    {
+      "path": "derived/animations/crownlands-t3-collapse-authored.json",
+      "bytes": 2281,
+      "sha256": "212ba03ba2fa13b8e45fef03de5f03066d66cb1ef087a4d478d66e197be14d77",
+      "indexPath": "production-assets/harvesters/derived/animations/crownlands-t3-collapse-authored.json"
+    },
+    {
+      "path": "derived/animations/crownlands-t3-collapse-authored.png",
+      "bytes": 25512,
+      "sha256": "50e0aeb372e86b4bb173930f76ab3f497f369e8ac7a6a7a18873c3c2fb427559",
+      "indexPath": "production-assets/harvesters/derived/animations/crownlands-t3-collapse-authored.png",
+      "size": [
+        344,
+        344
+      ]
+    },
+    {
+      "path": "derived/animations/crownlands-t3-construction-authored.json",
+      "bytes": 2285,
+      "sha256": "3fcc3bd2f33cfac08e0299afa9b10ab78ef085f0b71c13812b74524b171fb088",
+      "indexPath": "production-assets/harvesters/derived/animations/crownlands-t3-construction-authored.json"
+    },
+    {
+      "path": "derived/animations/crownlands-t3-construction-authored.png",
+      "bytes": 26181,
+      "sha256": "ee7936705ab332a08dbe16ee7e8333457dc63b6a5be4a7cb1fd1f65311fff109",
+      "indexPath": "production-assets/harvesters/derived/animations/crownlands-t3-construction-authored.png",
+      "size": [
+        344,
+        344
+      ]
+    },
+    {
+      "path": "derived/animations/crownlands-t3-working-mechanical.json",
+      "bytes": 2282,
+      "sha256": "1015ffce96a0d5d68841b43277aa32b3ef8ff666cb7f47922a20135aaec34f54",
+      "indexPath": "production-assets/harvesters/derived/animations/crownlands-t3-working-mechanical.json"
+    },
+    {
+      "path": "derived/animations/crownlands-t3-working-mechanical.png",
+      "bytes": 24768,
+      "sha256": "62becfe18d8328e918acc4dc877d088322f46d18e5466d4c3d4d6fa09421cb96",
+      "indexPath": "production-assets/harvesters/derived/animations/crownlands-t3-working-mechanical.png",
+      "size": [
+        344,
+        344
+      ]
+    },
+    {
+      "path": "derived/animations/crownlands-t4-collapse-authored.json",
+      "bytes": 2281,
+      "sha256": "2919d031539d7ac83813e5ed1a9b311119524ba6d7b6ceb0de129575824a399a",
+      "indexPath": "production-assets/harvesters/derived/animations/crownlands-t4-collapse-authored.json"
+    },
+    {
+      "path": "derived/animations/crownlands-t4-collapse-authored.png",
+      "bytes": 26036,
+      "sha256": "18795be1e0a1146e50a2b4798acdaf7450b35b5a16aef4db3862dfc73f0a3548",
+      "indexPath": "production-assets/harvesters/derived/animations/crownlands-t4-collapse-authored.png",
+      "size": [
+        344,
+        344
+      ]
+    },
+    {
+      "path": "derived/animations/crownlands-t4-construction-authored.json",
+      "bytes": 2285,
+      "sha256": "bc5c4b3c80a1352a27375eb3265b4681d723f06885d09978ded48b44bc563af2",
+      "indexPath": "production-assets/harvesters/derived/animations/crownlands-t4-construction-authored.json"
+    },
+    {
+      "path": "derived/animations/crownlands-t4-construction-authored.png",
+      "bytes": 29141,
+      "sha256": "1c1b1cc86d08b97d6fffddefa529ebcc1a8d12cb17488bc9e04063d0821349a7",
+      "indexPath": "production-assets/harvesters/derived/animations/crownlands-t4-construction-authored.png",
+      "size": [
+        344,
+        344
+      ]
+    },
+    {
+      "path": "derived/animations/crownlands-t4-working-mechanical.json",
+      "bytes": 2282,
+      "sha256": "a713102bb43da541a80e8a64dfc1806c64fa5560e934dc538d08bbef2cc6d9c3",
+      "indexPath": "production-assets/harvesters/derived/animations/crownlands-t4-working-mechanical.json"
+    },
+    {
+      "path": "derived/animations/crownlands-t4-working-mechanical.png",
+      "bytes": 24661,
+      "sha256": "720533578faa299919eac8eddb9bfde5bd4359b0653b9dfed698848e24576aa7",
+      "indexPath": "production-assets/harvesters/derived/animations/crownlands-t4-working-mechanical.png",
+      "size": [
+        344,
+        344
+      ]
+    },
+    {
+      "path": "derived/animations/elderwood-t1-collapse-authored.json",
+      "bytes": 2280,
+      "sha256": "1396f3f3ea7904661e14772005433b43690bcd13044fda6a70d67b60734ff80c",
+      "indexPath": "production-assets/harvesters/derived/animations/elderwood-t1-collapse-authored.json"
+    },
+    {
+      "path": "derived/animations/elderwood-t1-collapse-authored.png",
+      "bytes": 22857,
+      "sha256": "c17139a7dc28b855c775fc73854bce60d5719a9d33f28b1ba5d9b4c4344634b6",
+      "indexPath": "production-assets/harvesters/derived/animations/elderwood-t1-collapse-authored.png",
+      "size": [
+        344,
+        344
+      ]
+    },
+    {
+      "path": "derived/animations/elderwood-t1-construction-authored.json",
+      "bytes": 2284,
+      "sha256": "c1933a1fc27c25da0800369dc2d93fe189e0d714fad3333e291e5edc0b47383d",
+      "indexPath": "production-assets/harvesters/derived/animations/elderwood-t1-construction-authored.json"
+    },
+    {
+      "path": "derived/animations/elderwood-t1-construction-authored.png",
+      "bytes": 25227,
+      "sha256": "b75c1ca69ccac16177ec36b44002fcad52ca38101356eaaebbd81a6d330159f0",
+      "indexPath": "production-assets/harvesters/derived/animations/elderwood-t1-construction-authored.png",
+      "size": [
+        344,
+        344
+      ]
+    },
+    {
+      "path": "derived/animations/elderwood-t1-working-mechanical.json",
+      "bytes": 2281,
+      "sha256": "594ed91e245102e376898d6d5974e81633181c25e6c99d5206b83ebfda9ba8c1",
+      "indexPath": "production-assets/harvesters/derived/animations/elderwood-t1-working-mechanical.json"
+    },
+    {
+      "path": "derived/animations/elderwood-t1-working-mechanical.png",
+      "bytes": 21094,
+      "sha256": "2d9b52812abf438773277d36ccbb2a406fc64a6d716017c97b29ea516cfb2266",
+      "indexPath": "production-assets/harvesters/derived/animations/elderwood-t1-working-mechanical.png",
+      "size": [
+        344,
+        344
+      ]
+    },
+    {
+      "path": "derived/animations/elderwood-t2-collapse-authored.json",
+      "bytes": 2280,
+      "sha256": "93733d34ab898cc5a0720ec28a3ad5c51067251b588e23620e4505595221224f",
+      "indexPath": "production-assets/harvesters/derived/animations/elderwood-t2-collapse-authored.json"
+    },
+    {
+      "path": "derived/animations/elderwood-t2-collapse-authored.png",
+      "bytes": 24221,
+      "sha256": "81611eeb72f70b272b0580ca6638f13cba1cccee21fa15a70a4985d0c720979c",
+      "indexPath": "production-assets/harvesters/derived/animations/elderwood-t2-collapse-authored.png",
+      "size": [
+        344,
+        344
+      ]
+    },
+    {
+      "path": "derived/animations/elderwood-t2-construction-authored.json",
+      "bytes": 2284,
+      "sha256": "53cde7cc7e01dcc456ff23827a38586e9497e1042e5bfee2a469490a96519181",
+      "indexPath": "production-assets/harvesters/derived/animations/elderwood-t2-construction-authored.json"
+    },
+    {
+      "path": "derived/animations/elderwood-t2-construction-authored.png",
+      "bytes": 26486,
+      "sha256": "c448a937cfe675993d23b85b47ab8f249071eb60d40209a5a175759ca49c7f72",
+      "indexPath": "production-assets/harvesters/derived/animations/elderwood-t2-construction-authored.png",
+      "size": [
+        344,
+        344
+      ]
+    },
+    {
+      "path": "derived/animations/elderwood-t2-working-mechanical.json",
+      "bytes": 2281,
+      "sha256": "eda97d415cb9b5132d41983435ef499bdb3072b313be1431525c773426ef69bb",
+      "indexPath": "production-assets/harvesters/derived/animations/elderwood-t2-working-mechanical.json"
+    },
+    {
+      "path": "derived/animations/elderwood-t2-working-mechanical.png",
+      "bytes": 19504,
+      "sha256": "e473b9998f3485028ce0d7a2b6c660d0ebd41ae05d07c1b8074337433946c721",
+      "indexPath": "production-assets/harvesters/derived/animations/elderwood-t2-working-mechanical.png",
+      "size": [
+        344,
+        344
+      ]
+    },
+    {
+      "path": "derived/animations/elderwood-t3-collapse-authored.json",
+      "bytes": 2280,
+      "sha256": "ff824efdd37b110eb9e4509b54ece034583f4e644833b14cc39df023b13ab689",
+      "indexPath": "production-assets/harvesters/derived/animations/elderwood-t3-collapse-authored.json"
+    },
+    {
+      "path": "derived/animations/elderwood-t3-collapse-authored.png",
+      "bytes": 26876,
+      "sha256": "1d1bfaf3a5c586e7d328c100d7779015137c592daee8dcc144d18b5d9078c8cf",
+      "indexPath": "production-assets/harvesters/derived/animations/elderwood-t3-collapse-authored.png",
+      "size": [
+        344,
+        344
+      ]
+    },
+    {
+      "path": "derived/animations/elderwood-t3-construction-authored.json",
+      "bytes": 2284,
+      "sha256": "68a928d4548ea6d83703a0a2313f783a62627d762936b16ed0d49757e765252a",
+      "indexPath": "production-assets/harvesters/derived/animations/elderwood-t3-construction-authored.json"
+    },
+    {
+      "path": "derived/animations/elderwood-t3-construction-authored.png",
+      "bytes": 27387,
+      "sha256": "1b006742532679c5e1b9600865b3d7b6f3fc86d43e28eb35dfb04550b9639a7b",
+      "indexPath": "production-assets/harvesters/derived/animations/elderwood-t3-construction-authored.png",
+      "size": [
+        344,
+        344
+      ]
+    },
+    {
+      "path": "derived/animations/elderwood-t3-working-mechanical.json",
+      "bytes": 2281,
+      "sha256": "b511d94ca64db82ff0b1dd522fb140b221e263bf13bacd716b5c5b5a09bb9973",
+      "indexPath": "production-assets/harvesters/derived/animations/elderwood-t3-working-mechanical.json"
+    },
+    {
+      "path": "derived/animations/elderwood-t3-working-mechanical.png",
+      "bytes": 24707,
+      "sha256": "c2c171d3542232120c0f8c58ae5030a4220c7bc56cc946771bc883a1f90b177a",
+      "indexPath": "production-assets/harvesters/derived/animations/elderwood-t3-working-mechanical.png",
+      "size": [
+        344,
+        344
+      ]
+    },
+    {
+      "path": "derived/animations/elderwood-t4-collapse-authored.json",
+      "bytes": 2280,
+      "sha256": "bfb2cb376869a75d442b1a0cc79ab6c6675a1497293ac319b86b9a7f1486384e",
+      "indexPath": "production-assets/harvesters/derived/animations/elderwood-t4-collapse-authored.json"
+    },
+    {
+      "path": "derived/animations/elderwood-t4-collapse-authored.png",
+      "bytes": 27398,
+      "sha256": "8ae0cb36feec322e38fbdfab3a43cfb1a5903c64ec8d60596f9b03bd83098612",
+      "indexPath": "production-assets/harvesters/derived/animations/elderwood-t4-collapse-authored.png",
+      "size": [
+        344,
+        344
+      ]
+    },
+    {
+      "path": "derived/animations/elderwood-t4-construction-authored.json",
+      "bytes": 2284,
+      "sha256": "8332f96d0b92f2a102f1eed583f6c3a68a8addb412ba6a4952d4f5be18758cd4",
+      "indexPath": "production-assets/harvesters/derived/animations/elderwood-t4-construction-authored.json"
+    },
+    {
+      "path": "derived/animations/elderwood-t4-construction-authored.png",
+      "bytes": 32492,
+      "sha256": "a8b5f777ac34c36cd36a8ca94af35a03eb3d81a17ef854d9f8e2e060e75cce55",
+      "indexPath": "production-assets/harvesters/derived/animations/elderwood-t4-construction-authored.png",
+      "size": [
+        344,
+        344
+      ]
+    },
+    {
+      "path": "derived/animations/elderwood-t4-working-mechanical.json",
+      "bytes": 2281,
+      "sha256": "90fa2ed8789c638313a99a09979c6b5d57fc4184af3da7e95aaa0189548fadac",
+      "indexPath": "production-assets/harvesters/derived/animations/elderwood-t4-working-mechanical.json"
+    },
+    {
+      "path": "derived/animations/elderwood-t4-working-mechanical.png",
+      "bytes": 27986,
+      "sha256": "de80a420175ea682aef40b326c1614b59deed6942c231a683d537d8e32c8156d",
+      "indexPath": "production-assets/harvesters/derived/animations/elderwood-t4-working-mechanical.png",
+      "size": [
+        344,
+        344
+      ]
+    },
+    {
+      "path": "derived/animations/frostveil-t1-collapse-authored.json",
+      "bytes": 2280,
+      "sha256": "2ade2005c400e5d58f923dd94721c0ef08b079227803877bc6408a6a25aea819",
+      "indexPath": "production-assets/harvesters/derived/animations/frostveil-t1-collapse-authored.json"
+    },
+    {
+      "path": "derived/animations/frostveil-t1-collapse-authored.png",
+      "bytes": 22079,
+      "sha256": "58acd8cbe0f421119a0e5c5e55cf89855169fe85b533f21a839373675058df5d",
+      "indexPath": "production-assets/harvesters/derived/animations/frostveil-t1-collapse-authored.png",
+      "size": [
+        344,
+        344
+      ]
+    },
+    {
+      "path": "derived/animations/frostveil-t1-construction-authored.json",
+      "bytes": 2284,
+      "sha256": "0aa8a02d1692322995a217b50ad3d0e8d07f5054329b605b84159644d2af671e",
+      "indexPath": "production-assets/harvesters/derived/animations/frostveil-t1-construction-authored.json"
+    },
+    {
+      "path": "derived/animations/frostveil-t1-construction-authored.png",
+      "bytes": 24245,
+      "sha256": "942a83192be377be1271998886740c607aaabc5f6f1cdc766532b2597d4e9dbb",
+      "indexPath": "production-assets/harvesters/derived/animations/frostveil-t1-construction-authored.png",
+      "size": [
+        344,
+        344
+      ]
+    },
+    {
+      "path": "derived/animations/frostveil-t1-working-mechanical.json",
+      "bytes": 2281,
+      "sha256": "64eec8c0e04d1c0048ccd6ce2db6e40bf54b806d5569f26f8cc124a65058e485",
+      "indexPath": "production-assets/harvesters/derived/animations/frostveil-t1-working-mechanical.json"
+    },
+    {
+      "path": "derived/animations/frostveil-t1-working-mechanical.png",
+      "bytes": 18778,
+      "sha256": "096c8ef2526b4f5a304413d7ba4d1b6760f5abaff8fd08f42697069b233c49c8",
+      "indexPath": "production-assets/harvesters/derived/animations/frostveil-t1-working-mechanical.png",
+      "size": [
+        344,
+        344
+      ]
+    },
+    {
+      "path": "derived/animations/frostveil-t2-collapse-authored.json",
+      "bytes": 2280,
+      "sha256": "d9c9d877cb06fe736ac76adc1689c2a3dd5abc1edf7e6d6e08ab2969523c5711",
+      "indexPath": "production-assets/harvesters/derived/animations/frostveil-t2-collapse-authored.json"
+    },
+    {
+      "path": "derived/animations/frostveil-t2-collapse-authored.png",
+      "bytes": 21992,
+      "sha256": "3273e222f76b397c6d158c500d81bd0184c688b74fc9fd40900ea5ea821913e2",
+      "indexPath": "production-assets/harvesters/derived/animations/frostveil-t2-collapse-authored.png",
+      "size": [
+        344,
+        344
+      ]
+    },
+    {
+      "path": "derived/animations/frostveil-t2-construction-authored.json",
+      "bytes": 2284,
+      "sha256": "16a1883fa827b8f5276945d6a61ba5a1563495c2280a28a4e10144fbe99fcc15",
+      "indexPath": "production-assets/harvesters/derived/animations/frostveil-t2-construction-authored.json"
+    },
+    {
+      "path": "derived/animations/frostveil-t2-construction-authored.png",
+      "bytes": 24971,
+      "sha256": "e7f190ba41c96418a846f7c4f877ebd012345a25efbec113d3a3add55b075426",
+      "indexPath": "production-assets/harvesters/derived/animations/frostveil-t2-construction-authored.png",
+      "size": [
+        344,
+        344
+      ]
+    },
+    {
+      "path": "derived/animations/frostveil-t2-working-mechanical.json",
+      "bytes": 2281,
+      "sha256": "ce1c85093f2b0db6c294c360abbb17957f15973c5b9ed665419cb0070b6f6e69",
+      "indexPath": "production-assets/harvesters/derived/animations/frostveil-t2-working-mechanical.json"
+    },
+    {
+      "path": "derived/animations/frostveil-t2-working-mechanical.png",
+      "bytes": 19055,
+      "sha256": "3c16b8bb0ee42ca1a838ecff422e5cb0337d16f4e7b7838d981d2224ef13e0f0",
+      "indexPath": "production-assets/harvesters/derived/animations/frostveil-t2-working-mechanical.png",
+      "size": [
+        344,
+        344
+      ]
+    },
+    {
+      "path": "derived/animations/frostveil-t3-collapse-authored.json",
+      "bytes": 2280,
+      "sha256": "e4122d5d6d68569cf1b12067016b0837037fa47d45a8a47b2a19594fa02bac7a",
+      "indexPath": "production-assets/harvesters/derived/animations/frostveil-t3-collapse-authored.json"
+    },
+    {
+      "path": "derived/animations/frostveil-t3-collapse-authored.png",
+      "bytes": 26399,
+      "sha256": "130fe24697b020d8779a76b0f72ec661d640347182b050bd12333700835a17d3",
+      "indexPath": "production-assets/harvesters/derived/animations/frostveil-t3-collapse-authored.png",
+      "size": [
+        344,
+        344
+      ]
+    },
+    {
+      "path": "derived/animations/frostveil-t3-construction-authored.json",
+      "bytes": 2284,
+      "sha256": "3623f0747d12cf41ee546444bf2dab7c621c392659ff0a2a0340ba4059462280",
+      "indexPath": "production-assets/harvesters/derived/animations/frostveil-t3-construction-authored.json"
+    },
+    {
+      "path": "derived/animations/frostveil-t3-construction-authored.png",
+      "bytes": 29881,
+      "sha256": "a4d3ac4a444d2b9317762d6a18f9bfdd05e171f78918319abe0b6ba047096ce3",
+      "indexPath": "production-assets/harvesters/derived/animations/frostveil-t3-construction-authored.png",
+      "size": [
+        344,
+        344
+      ]
+    },
+    {
+      "path": "derived/animations/frostveil-t3-working-mechanical.json",
+      "bytes": 2281,
+      "sha256": "94f50e2df316fbad832daf11b626a3d313086ed46697c6eee70486cb9284d39b",
+      "indexPath": "production-assets/harvesters/derived/animations/frostveil-t3-working-mechanical.json"
+    },
+    {
+      "path": "derived/animations/frostveil-t3-working-mechanical.png",
+      "bytes": 29044,
+      "sha256": "d49693f3509f27c724e064d1d9af8c9a21f04ee5cd0520dc234ee77f2f40c796",
+      "indexPath": "production-assets/harvesters/derived/animations/frostveil-t3-working-mechanical.png",
+      "size": [
+        344,
+        344
+      ]
+    },
+    {
+      "path": "derived/animations/frostveil-t4-collapse-authored.json",
+      "bytes": 2280,
+      "sha256": "9491f59ded2d13991eeaf043a414a24234d4b918ee1760f033e205b9ea0cc6bb",
+      "indexPath": "production-assets/harvesters/derived/animations/frostveil-t4-collapse-authored.json"
+    },
+    {
+      "path": "derived/animations/frostveil-t4-collapse-authored.png",
+      "bytes": 26927,
+      "sha256": "2805b29589510d5aac16f56a6beaef7b86cddadc32f19ad897e1a2899dd2a49b",
+      "indexPath": "production-assets/harvesters/derived/animations/frostveil-t4-collapse-authored.png",
+      "size": [
+        344,
+        344
+      ]
+    },
+    {
+      "path": "derived/animations/frostveil-t4-construction-authored.json",
+      "bytes": 2284,
+      "sha256": "35fbe47f108e13201dfe5f2d8e08f5c309136f27ea76efeb502363cc73cf14f6",
+      "indexPath": "production-assets/harvesters/derived/animations/frostveil-t4-construction-authored.json"
+    },
+    {
+      "path": "derived/animations/frostveil-t4-construction-authored.png",
+      "bytes": 31627,
+      "sha256": "a9e965b53ff3a2d91d2101a2345432622055e7d959922f2af14ff754e1f4559e",
+      "indexPath": "production-assets/harvesters/derived/animations/frostveil-t4-construction-authored.png",
+      "size": [
+        344,
+        344
+      ]
+    },
+    {
+      "path": "derived/animations/frostveil-t4-working-mechanical.json",
+      "bytes": 2281,
+      "sha256": "590cf6c73bdd90ee60ff60afd838c6d6812384648dd75d642bd4b29621522896",
+      "indexPath": "production-assets/harvesters/derived/animations/frostveil-t4-working-mechanical.json"
+    },
+    {
+      "path": "derived/animations/frostveil-t4-working-mechanical.png",
+      "bytes": 25696,
+      "sha256": "223004affae7633abb8626f5c4c6d2e0e2cd3552336ca049a788749d00480316",
+      "indexPath": "production-assets/harvesters/derived/animations/frostveil-t4-working-mechanical.png",
+      "size": [
+        344,
+        344
+      ]
+    },
+    {
+      "path": "derived/animations/seeker-reach-t1-collapse-authored.json",
+      "bytes": 2283,
+      "sha256": "07dc6cc9e8f5313704cdcac69ea6bbc92d7134cc1c9e57a8ccb2a95cf217406f",
+      "indexPath": "production-assets/harvesters/derived/animations/seeker-reach-t1-collapse-authored.json"
+    },
+    {
+      "path": "derived/animations/seeker-reach-t1-collapse-authored.png",
+      "bytes": 25070,
+      "sha256": "c98c76f30f9e3795abcaa83685f6cd5383e01cdc3a0c14e9735dd04bc4c50833",
+      "indexPath": "production-assets/harvesters/derived/animations/seeker-reach-t1-collapse-authored.png",
+      "size": [
+        344,
+        344
+      ]
+    },
+    {
+      "path": "derived/animations/seeker-reach-t1-construction-authored.json",
+      "bytes": 2287,
+      "sha256": "1343a78d4bb45c863913e5f1d5004e89b4f038a5fd6be99ae8bfcb8ed5eda4b6",
+      "indexPath": "production-assets/harvesters/derived/animations/seeker-reach-t1-construction-authored.json"
+    },
+    {
+      "path": "derived/animations/seeker-reach-t1-construction-authored.png",
+      "bytes": 25509,
+      "sha256": "7e73976d46567d905d94b5fe59fcf7c053f38ccc80855459601bf08724682c2e",
+      "indexPath": "production-assets/harvesters/derived/animations/seeker-reach-t1-construction-authored.png",
+      "size": [
+        344,
+        344
+      ]
+    },
+    {
+      "path": "derived/animations/seeker-reach-t1-working-mechanical.json",
+      "bytes": 2284,
+      "sha256": "b8163aafd19d9ef90d53161a71f0d745da8b4f1be4a2aa818fce0c7144ccea3c",
+      "indexPath": "production-assets/harvesters/derived/animations/seeker-reach-t1-working-mechanical.json"
+    },
+    {
+      "path": "derived/animations/seeker-reach-t1-working-mechanical.png",
+      "bytes": 19341,
+      "sha256": "fa83f261f5fed2e381f945cd68d40cc978eba82ca46b161fb23d550f0b9ab274",
+      "indexPath": "production-assets/harvesters/derived/animations/seeker-reach-t1-working-mechanical.png",
+      "size": [
+        344,
+        344
+      ]
+    },
+    {
+      "path": "derived/animations/seeker-reach-t2-collapse-authored.json",
+      "bytes": 2283,
+      "sha256": "9e475ba42ef47412fec3145c0507bba129bd5e863255024f3b0e2178271f18de",
+      "indexPath": "production-assets/harvesters/derived/animations/seeker-reach-t2-collapse-authored.json"
+    },
+    {
+      "path": "derived/animations/seeker-reach-t2-collapse-authored.png",
+      "bytes": 20160,
+      "sha256": "230d45e954749f7ff2c0bc18807af14e1a830414335a998fde5e19c44fe423eb",
+      "indexPath": "production-assets/harvesters/derived/animations/seeker-reach-t2-collapse-authored.png",
+      "size": [
+        344,
+        344
+      ]
+    },
+    {
+      "path": "derived/animations/seeker-reach-t2-construction-authored.json",
+      "bytes": 2287,
+      "sha256": "59f88b53f12a160f70cfdcbb54f465ad1194ae871080a04b811d50828128822f",
+      "indexPath": "production-assets/harvesters/derived/animations/seeker-reach-t2-construction-authored.json"
+    },
+    {
+      "path": "derived/animations/seeker-reach-t2-construction-authored.png",
+      "bytes": 24666,
+      "sha256": "cfeaf3220b8bd6faed8cdc621479004e8e9591de64098ffcd9da9cf91e4f33e6",
+      "indexPath": "production-assets/harvesters/derived/animations/seeker-reach-t2-construction-authored.png",
+      "size": [
+        344,
+        344
+      ]
+    },
+    {
+      "path": "derived/animations/seeker-reach-t2-working-mechanical.json",
+      "bytes": 2284,
+      "sha256": "bc4ac004a3c4c9304f2920f1cd036831b54c8100ce8f354ed3eb4d93b157d05c",
+      "indexPath": "production-assets/harvesters/derived/animations/seeker-reach-t2-working-mechanical.json"
+    },
+    {
+      "path": "derived/animations/seeker-reach-t2-working-mechanical.png",
+      "bytes": 17539,
+      "sha256": "64ad25a1e0b252eee588043bced284857dfcfbd83679f105821a7e4f46f3216b",
+      "indexPath": "production-assets/harvesters/derived/animations/seeker-reach-t2-working-mechanical.png",
+      "size": [
+        344,
+        344
+      ]
+    },
+    {
+      "path": "derived/animations/seeker-reach-t3-collapse-authored.json",
+      "bytes": 2283,
+      "sha256": "4c748fad1e7c2c1845ed5cb60567591c6cb2be7c9c67d2dbb9803013d3174387",
+      "indexPath": "production-assets/harvesters/derived/animations/seeker-reach-t3-collapse-authored.json"
+    },
+    {
+      "path": "derived/animations/seeker-reach-t3-collapse-authored.png",
+      "bytes": 25786,
+      "sha256": "0316632edc649a6d2b2b6ba4209696fa209f37ec6a2c46febd6addb816c3f5fc",
+      "indexPath": "production-assets/harvesters/derived/animations/seeker-reach-t3-collapse-authored.png",
+      "size": [
+        344,
+        344
+      ]
+    },
+    {
+      "path": "derived/animations/seeker-reach-t3-construction-authored.json",
+      "bytes": 2287,
+      "sha256": "66828c415e2a8e551522796cd67950390bbff5ed3b1fd7fde70ac68302b665cd",
+      "indexPath": "production-assets/harvesters/derived/animations/seeker-reach-t3-construction-authored.json"
+    },
+    {
+      "path": "derived/animations/seeker-reach-t3-construction-authored.png",
+      "bytes": 27802,
+      "sha256": "b4ef622a3721144fcbe5b4f39efed635fbb09bc8e983b87860e269f58143b6e3",
+      "indexPath": "production-assets/harvesters/derived/animations/seeker-reach-t3-construction-authored.png",
+      "size": [
+        344,
+        344
+      ]
+    },
+    {
+      "path": "derived/animations/seeker-reach-t3-working-mechanical.json",
+      "bytes": 2284,
+      "sha256": "1c96370778c726efd6c3e1bbaf1ee934551f467a5f705b377008127ebb2513b1",
+      "indexPath": "production-assets/harvesters/derived/animations/seeker-reach-t3-working-mechanical.json"
+    },
+    {
+      "path": "derived/animations/seeker-reach-t3-working-mechanical.png",
+      "bytes": 25236,
+      "sha256": "1e8f774a96be9600335d93b1b94ea01693f25780a0fd4241a590cb418788440a",
+      "indexPath": "production-assets/harvesters/derived/animations/seeker-reach-t3-working-mechanical.png",
+      "size": [
+        344,
+        344
+      ]
+    },
+    {
+      "path": "derived/animations/seeker-reach-t4-collapse-authored.json",
+      "bytes": 2283,
+      "sha256": "bbc094e361c545799cc70fed7c1466d5ab57780898f29a48f5cfccd2c4f9573c",
+      "indexPath": "production-assets/harvesters/derived/animations/seeker-reach-t4-collapse-authored.json"
+    },
+    {
+      "path": "derived/animations/seeker-reach-t4-collapse-authored.png",
+      "bytes": 27334,
+      "sha256": "41e9fee68bdd6e6498f3f5fb72b4bb09ccc7cd4b5416570ecb00b9a5315d2d75",
+      "indexPath": "production-assets/harvesters/derived/animations/seeker-reach-t4-collapse-authored.png",
+      "size": [
+        344,
+        344
+      ]
+    },
+    {
+      "path": "derived/animations/seeker-reach-t4-construction-authored.json",
+      "bytes": 2287,
+      "sha256": "ca2509ab03dec5c7a2e28a0aaf4bce21b6756c1e879c0f88a046aea664cda09c",
+      "indexPath": "production-assets/harvesters/derived/animations/seeker-reach-t4-construction-authored.json"
+    },
+    {
+      "path": "derived/animations/seeker-reach-t4-construction-authored.png",
+      "bytes": 29101,
+      "sha256": "982d322f7347c81f0fb95e9b4b7e9b39e91d2457b8ae5d5a41277a39d53b08c9",
+      "indexPath": "production-assets/harvesters/derived/animations/seeker-reach-t4-construction-authored.png",
+      "size": [
+        344,
+        344
+      ]
+    },
+    {
+      "path": "derived/animations/seeker-reach-t4-working-mechanical.json",
+      "bytes": 2284,
+      "sha256": "0bed5b392b420c66f48b02a4fd3ce35da6dad5766febce50b46b12a0ea462491",
+      "indexPath": "production-assets/harvesters/derived/animations/seeker-reach-t4-working-mechanical.json"
+    },
+    {
+      "path": "derived/animations/seeker-reach-t4-working-mechanical.png",
+      "bytes": 21839,
+      "sha256": "4b777ed133f7a0f2b760ff76ac388d3c2663050281d707048e3f6c2363c33d75",
+      "indexPath": "production-assets/harvesters/derived/animations/seeker-reach-t4-working-mechanical.png",
+      "size": [
+        344,
+        344
+      ]
+    },
+    {
+      "path": "derived/animations/stormcairn-t1-collapse-authored.json",
+      "bytes": 2281,
+      "sha256": "1a92b366d9bae81d2e201941877f9704237f6642e2d0ec7cf27700793b102297",
+      "indexPath": "production-assets/harvesters/derived/animations/stormcairn-t1-collapse-authored.json"
+    },
+    {
+      "path": "derived/animations/stormcairn-t1-collapse-authored.png",
+      "bytes": 22274,
+      "sha256": "d99ebfafaaba6d133a65a47b9e598da637b90baf5e8b7c7d8128296170ce9a03",
+      "indexPath": "production-assets/harvesters/derived/animations/stormcairn-t1-collapse-authored.png",
+      "size": [
+        344,
+        344
+      ]
+    },
+    {
+      "path": "derived/animations/stormcairn-t1-construction-authored.json",
+      "bytes": 2285,
+      "sha256": "ab358f50bdb6787d5fbc4db997494a8fd633bb1a87e1527d732774165dc3ec89",
+      "indexPath": "production-assets/harvesters/derived/animations/stormcairn-t1-construction-authored.json"
+    },
+    {
+      "path": "derived/animations/stormcairn-t1-construction-authored.png",
+      "bytes": 25263,
+      "sha256": "68a86bbe1d8e392bfa1ce808765489c81dd86d3687d889dde5be94d9dc055509",
+      "indexPath": "production-assets/harvesters/derived/animations/stormcairn-t1-construction-authored.png",
+      "size": [
+        344,
+        344
+      ]
+    },
+    {
+      "path": "derived/animations/stormcairn-t1-working-mechanical.json",
+      "bytes": 2282,
+      "sha256": "2c3ffbf8c8d11b59925815e7b1a2a60c366998542a317c07e973530016dfaba5",
+      "indexPath": "production-assets/harvesters/derived/animations/stormcairn-t1-working-mechanical.json"
+    },
+    {
+      "path": "derived/animations/stormcairn-t1-working-mechanical.png",
+      "bytes": 19019,
+      "sha256": "d693fa8a373b46fd24f7de8e0cc253e113ff4a710a7161bfae8ac35cf29b9c9c",
+      "indexPath": "production-assets/harvesters/derived/animations/stormcairn-t1-working-mechanical.png",
+      "size": [
+        344,
+        344
+      ]
+    },
+    {
+      "path": "derived/animations/stormcairn-t2-collapse-authored.json",
+      "bytes": 2281,
+      "sha256": "3401746d20a919c53a2bee3e6514fd00da17eb76ce00ca247f98d2b831e8965c",
+      "indexPath": "production-assets/harvesters/derived/animations/stormcairn-t2-collapse-authored.json"
+    },
+    {
+      "path": "derived/animations/stormcairn-t2-collapse-authored.png",
+      "bytes": 22962,
+      "sha256": "d5b4efe21e5d5b9542cff9dc546e0311df1f8245600c152af463a455662e6791",
+      "indexPath": "production-assets/harvesters/derived/animations/stormcairn-t2-collapse-authored.png",
+      "size": [
+        344,
+        344
+      ]
+    },
+    {
+      "path": "derived/animations/stormcairn-t2-construction-authored.json",
+      "bytes": 2285,
+      "sha256": "ba2abd9698845309b8b32e37933fe17c34bacd8ec00437ed9526a245dd0e5e94",
+      "indexPath": "production-assets/harvesters/derived/animations/stormcairn-t2-construction-authored.json"
+    },
+    {
+      "path": "derived/animations/stormcairn-t2-construction-authored.png",
+      "bytes": 26522,
+      "sha256": "e77dc3563f97b5ffb6e4b0fd9ec328ef7cb5d21b0021ae4368c42f5b3fff92cf",
+      "indexPath": "production-assets/harvesters/derived/animations/stormcairn-t2-construction-authored.png",
+      "size": [
+        344,
+        344
+      ]
+    },
+    {
+      "path": "derived/animations/stormcairn-t2-working-mechanical.json",
+      "bytes": 2282,
+      "sha256": "a2be84240c2b2ccfe4f2b2504d6e520e607c221030df00c67145ff4441bf5bf3",
+      "indexPath": "production-assets/harvesters/derived/animations/stormcairn-t2-working-mechanical.json"
+    },
+    {
+      "path": "derived/animations/stormcairn-t2-working-mechanical.png",
+      "bytes": 19904,
+      "sha256": "511fbe6079351c5cab9e40e7b879a5369257a945e89bc061619a7657b00b6aef",
+      "indexPath": "production-assets/harvesters/derived/animations/stormcairn-t2-working-mechanical.png",
+      "size": [
+        344,
+        344
+      ]
+    },
+    {
+      "path": "derived/animations/stormcairn-t3-collapse-authored.json",
+      "bytes": 2281,
+      "sha256": "c6cca671008badd51f9efd61eba36e7684fa1c41a9653af40fc272919b5d31d3",
+      "indexPath": "production-assets/harvesters/derived/animations/stormcairn-t3-collapse-authored.json"
+    },
+    {
+      "path": "derived/animations/stormcairn-t3-collapse-authored.png",
+      "bytes": 27586,
+      "sha256": "277ec85e1b8ec781af1a4706dfc5c3006aed3e49aff017fdfc2d766d48d554ec",
+      "indexPath": "production-assets/harvesters/derived/animations/stormcairn-t3-collapse-authored.png",
+      "size": [
+        344,
+        344
+      ]
+    },
+    {
+      "path": "derived/animations/stormcairn-t3-construction-authored.json",
+      "bytes": 2285,
+      "sha256": "fecbb9657758691e355573f4c77b74e6812b470ee2c60d10182209231bf0c6dd",
+      "indexPath": "production-assets/harvesters/derived/animations/stormcairn-t3-construction-authored.json"
+    },
+    {
+      "path": "derived/animations/stormcairn-t3-construction-authored.png",
+      "bytes": 27095,
+      "sha256": "6eb9cac45352ccbcd681be545f67bacb971ba2f51c88b9380376f48e4e81dd49",
+      "indexPath": "production-assets/harvesters/derived/animations/stormcairn-t3-construction-authored.png",
+      "size": [
+        344,
+        344
+      ]
+    },
+    {
+      "path": "derived/animations/stormcairn-t3-working-mechanical.json",
+      "bytes": 2282,
+      "sha256": "144af212ea08c526777027ffd176e13a106316591c5ec1de211406aede407acd",
+      "indexPath": "production-assets/harvesters/derived/animations/stormcairn-t3-working-mechanical.json"
+    },
+    {
+      "path": "derived/animations/stormcairn-t3-working-mechanical.png",
+      "bytes": 23910,
+      "sha256": "5a12cec2a0ec1279636661ebe6c3b79c9457bcddc6ee7bb9938cffbc8dd15de4",
+      "indexPath": "production-assets/harvesters/derived/animations/stormcairn-t3-working-mechanical.png",
+      "size": [
+        344,
+        344
+      ]
+    },
+    {
+      "path": "derived/animations/stormcairn-t4-collapse-authored.json",
+      "bytes": 2281,
+      "sha256": "0caf80ed10c517e5d1f6daf740f8a789e5858b96fccf21c65144f60db6cded82",
+      "indexPath": "production-assets/harvesters/derived/animations/stormcairn-t4-collapse-authored.json"
+    },
+    {
+      "path": "derived/animations/stormcairn-t4-collapse-authored.png",
+      "bytes": 27004,
+      "sha256": "f068d80c78019824620cc20e24bc55ab4319cbac0728d75c6376d201c52f28a1",
+      "indexPath": "production-assets/harvesters/derived/animations/stormcairn-t4-collapse-authored.png",
+      "size": [
+        344,
+        344
+      ]
+    },
+    {
+      "path": "derived/animations/stormcairn-t4-construction-authored.json",
+      "bytes": 2285,
+      "sha256": "e5358e14907f292b22cc60fdabcc22f5a3c407a773b1cacb6a788a628c80d560",
+      "indexPath": "production-assets/harvesters/derived/animations/stormcairn-t4-construction-authored.json"
+    },
+    {
+      "path": "derived/animations/stormcairn-t4-construction-authored.png",
+      "bytes": 31058,
+      "sha256": "1646dbcde9e17f47dc64d5deb4710c5d264e4b6879c6ba8d8c8b2cedce4b011e",
+      "indexPath": "production-assets/harvesters/derived/animations/stormcairn-t4-construction-authored.png",
+      "size": [
+        344,
+        344
+      ]
+    },
+    {
+      "path": "derived/animations/stormcairn-t4-working-mechanical.json",
+      "bytes": 2282,
+      "sha256": "a96a3dfc0e03f1e5d894884936ad8dde989b48ea4bfe025bf9f4f1c71c913f56",
+      "indexPath": "production-assets/harvesters/derived/animations/stormcairn-t4-working-mechanical.json"
+    },
+    {
+      "path": "derived/animations/stormcairn-t4-working-mechanical.png",
+      "bytes": 24728,
+      "sha256": "949e11963940d65b93985793982f55909950bfa05777bc55dc56f2872be1ebc3",
+      "indexPath": "production-assets/harvesters/derived/animations/stormcairn-t4-working-mechanical.png",
+      "size": [
+        344,
+        344
+      ]
+    },
+    {
+      "path": "derived/animations/sunscar-t1-collapse-authored.json",
+      "bytes": 2278,
+      "sha256": "16e2d3497589d48d4d38a7c149d96fff06efd175d985750c28164f9f9acca191",
+      "indexPath": "production-assets/harvesters/derived/animations/sunscar-t1-collapse-authored.json"
+    },
+    {
+      "path": "derived/animations/sunscar-t1-collapse-authored.png",
+      "bytes": 22496,
+      "sha256": "c7dbc425c3e3aadd7073f78b4b430b820e4b1ed74a53de6522fb5c0cf92783ff",
+      "indexPath": "production-assets/harvesters/derived/animations/sunscar-t1-collapse-authored.png",
+      "size": [
+        344,
+        344
+      ]
+    },
+    {
+      "path": "derived/animations/sunscar-t1-construction-authored.json",
+      "bytes": 2282,
+      "sha256": "46be1905f9775c3deca3407b56f4f53ab9feefae31b644c6ec5653b369661e1a",
+      "indexPath": "production-assets/harvesters/derived/animations/sunscar-t1-construction-authored.json"
+    },
+    {
+      "path": "derived/animations/sunscar-t1-construction-authored.png",
+      "bytes": 23552,
+      "sha256": "0337d7aee75ff3c7dd00fa01c19fe268ba7e6bc9adc06e7a90f77ce7d3b55f98",
+      "indexPath": "production-assets/harvesters/derived/animations/sunscar-t1-construction-authored.png",
+      "size": [
+        344,
+        344
+      ]
+    },
+    {
+      "path": "derived/animations/sunscar-t1-working-mechanical.json",
+      "bytes": 2279,
+      "sha256": "2e1d84b11ab8857c85cbeb67c9c8a3fc37dbb5c566b372fac3546bbcbba28f14",
+      "indexPath": "production-assets/harvesters/derived/animations/sunscar-t1-working-mechanical.json"
+    },
+    {
+      "path": "derived/animations/sunscar-t1-working-mechanical.png",
+      "bytes": 19029,
+      "sha256": "81484996a7de034ca3d9d5bcc94172c1ee575ea106f8c595d125e83964ed2e5c",
+      "indexPath": "production-assets/harvesters/derived/animations/sunscar-t1-working-mechanical.png",
+      "size": [
+        344,
+        344
+      ]
+    },
+    {
+      "path": "derived/animations/sunscar-t2-collapse-authored.json",
+      "bytes": 2278,
+      "sha256": "bae0acc7415af94eb709bb1a0b988fc0106f51c5102499c685ad1e5ba44a5419",
+      "indexPath": "production-assets/harvesters/derived/animations/sunscar-t2-collapse-authored.json"
+    },
+    {
+      "path": "derived/animations/sunscar-t2-collapse-authored.png",
+      "bytes": 22366,
+      "sha256": "d749679dbeaae91a617b5fb5aa4d82a24785dc3028d40f7de3904a9436ab2c34",
+      "indexPath": "production-assets/harvesters/derived/animations/sunscar-t2-collapse-authored.png",
+      "size": [
+        344,
+        344
+      ]
+    },
+    {
+      "path": "derived/animations/sunscar-t2-construction-authored.json",
+      "bytes": 2282,
+      "sha256": "f9a2fb4bedae5b3798bcfdc5bcdad94e7b0b1fc72e19cf3a1139f6e002cc5506",
+      "indexPath": "production-assets/harvesters/derived/animations/sunscar-t2-construction-authored.json"
+    },
+    {
+      "path": "derived/animations/sunscar-t2-construction-authored.png",
+      "bytes": 24794,
+      "sha256": "eaf0c2a4bf29b898739a927260b0c97bcda4e80dd2fb8eed95ae62dabb33f88d",
+      "indexPath": "production-assets/harvesters/derived/animations/sunscar-t2-construction-authored.png",
+      "size": [
+        344,
+        344
+      ]
+    },
+    {
+      "path": "derived/animations/sunscar-t2-working-mechanical.json",
+      "bytes": 2279,
+      "sha256": "000c9924732b5464ffe6414033823f06717d10bd7c74db53230141d9c2c04ce1",
+      "indexPath": "production-assets/harvesters/derived/animations/sunscar-t2-working-mechanical.json"
+    },
+    {
+      "path": "derived/animations/sunscar-t2-working-mechanical.png",
+      "bytes": 18572,
+      "sha256": "5b87c7d56a889e8648f84d35456844e33cf29702ac0a910d1781bde9f31f3525",
+      "indexPath": "production-assets/harvesters/derived/animations/sunscar-t2-working-mechanical.png",
+      "size": [
+        344,
+        344
+      ]
+    },
+    {
+      "path": "derived/animations/sunscar-t3-collapse-authored.json",
+      "bytes": 2278,
+      "sha256": "b0daf789a604c77315a91c4f2aa165bb5771a1650e65c776569c7d58888fc941",
+      "indexPath": "production-assets/harvesters/derived/animations/sunscar-t3-collapse-authored.json"
+    },
+    {
+      "path": "derived/animations/sunscar-t3-collapse-authored.png",
+      "bytes": 26141,
+      "sha256": "8f2f8864341f87b0888bae9acf93a5134f5b4727435b598b30026a9c9e3b4059",
+      "indexPath": "production-assets/harvesters/derived/animations/sunscar-t3-collapse-authored.png",
+      "size": [
+        344,
+        344
+      ]
+    },
+    {
+      "path": "derived/animations/sunscar-t3-construction-authored.json",
+      "bytes": 2282,
+      "sha256": "ddb3484f4a8c17a82f7a99af7bed588379cc5ada8724ed352573f4595aaa670d",
+      "indexPath": "production-assets/harvesters/derived/animations/sunscar-t3-construction-authored.json"
+    },
+    {
+      "path": "derived/animations/sunscar-t3-construction-authored.png",
+      "bytes": 26895,
+      "sha256": "b912218e38942211a8fc5d936306e7cb71cbc1ca92953d4cb7611f39c30dc487",
+      "indexPath": "production-assets/harvesters/derived/animations/sunscar-t3-construction-authored.png",
+      "size": [
+        344,
+        344
+      ]
+    },
+    {
+      "path": "derived/animations/sunscar-t3-working-mechanical.json",
+      "bytes": 2279,
+      "sha256": "9fc3deaff675f3d21cde5ddbb77eec1512516178aedb99b4e034fb6c93d95fba",
+      "indexPath": "production-assets/harvesters/derived/animations/sunscar-t3-working-mechanical.json"
+    },
+    {
+      "path": "derived/animations/sunscar-t3-working-mechanical.png",
+      "bytes": 25088,
+      "sha256": "07efdda1f5bf435d8c9daec9a06bc145e377a7ad7413b2a9fb5921e469e1c853",
+      "indexPath": "production-assets/harvesters/derived/animations/sunscar-t3-working-mechanical.png",
+      "size": [
+        344,
+        344
+      ]
+    },
+    {
+      "path": "derived/animations/sunscar-t4-collapse-authored.json",
+      "bytes": 2278,
+      "sha256": "8cb4933f4094370e6f844e7e877c13d2b3b3844f26fc2f4c00d85bd47e817e90",
+      "indexPath": "production-assets/harvesters/derived/animations/sunscar-t4-collapse-authored.json"
+    },
+    {
+      "path": "derived/animations/sunscar-t4-collapse-authored.png",
+      "bytes": 24935,
+      "sha256": "fb9a6c83ee7b28c4bff427fc70fe5574d84439f210b959aa259fd1e136d0b489",
+      "indexPath": "production-assets/harvesters/derived/animations/sunscar-t4-collapse-authored.png",
+      "size": [
+        344,
+        344
+      ]
+    },
+    {
+      "path": "derived/animations/sunscar-t4-construction-authored.json",
+      "bytes": 2282,
+      "sha256": "ec7b643a1d823af9b6892055c69b47d22c6219364d70346bd9568e6f527220a9",
+      "indexPath": "production-assets/harvesters/derived/animations/sunscar-t4-construction-authored.json"
+    },
+    {
+      "path": "derived/animations/sunscar-t4-construction-authored.png",
+      "bytes": 31074,
+      "sha256": "11f54210d528fbda92881149e8e42043bbf54bebb76ac828df5969aa5c5c8be8",
+      "indexPath": "production-assets/harvesters/derived/animations/sunscar-t4-construction-authored.png",
+      "size": [
+        344,
+        344
+      ]
+    },
+    {
+      "path": "derived/animations/sunscar-t4-working-mechanical.json",
+      "bytes": 2279,
+      "sha256": "097870b8042536c4fe2a3a7216f88477f302716f89df1fd3e4eaf682aef677c6",
+      "indexPath": "production-assets/harvesters/derived/animations/sunscar-t4-working-mechanical.json"
+    },
+    {
+      "path": "derived/animations/sunscar-t4-working-mechanical.png",
+      "bytes": 26415,
+      "sha256": "fb863a9ed0362985bb277e79c30271b8613564689cf270f644e74e85c6d2e96a",
+      "indexPath": "production-assets/harvesters/derived/animations/sunscar-t4-working-mechanical.png",
+      "size": [
+        344,
+        344
+      ]
+    },
+    {
+      "path": "derived/animations/thornwake-t1-collapse-authored.json",
+      "bytes": 2280,
+      "sha256": "708860b1fa9427ec4d32d7fc543601c494403972573c2d03a2bcdefbbe146c50",
+      "indexPath": "production-assets/harvesters/derived/animations/thornwake-t1-collapse-authored.json"
+    },
+    {
+      "path": "derived/animations/thornwake-t1-collapse-authored.png",
+      "bytes": 27953,
+      "sha256": "b69ab5fa5f990c0744ae5fc2b7e2658e45f14ed9e27e8adea6d3a237a8b2462f",
+      "indexPath": "production-assets/harvesters/derived/animations/thornwake-t1-collapse-authored.png",
+      "size": [
+        344,
+        344
+      ]
+    },
+    {
+      "path": "derived/animations/thornwake-t1-construction-authored.json",
+      "bytes": 2284,
+      "sha256": "54f8963edf9d455380861c45f8a253fe9bc1f3981b6e7b31503c1b0c713e0ded",
+      "indexPath": "production-assets/harvesters/derived/animations/thornwake-t1-construction-authored.json"
+    },
+    {
+      "path": "derived/animations/thornwake-t1-construction-authored.png",
+      "bytes": 27148,
+      "sha256": "c7c05b1b9a79508776b762d83830fbaa5e85bd92f93535af9bf6eaeb9d702a7a",
+      "indexPath": "production-assets/harvesters/derived/animations/thornwake-t1-construction-authored.png",
+      "size": [
+        344,
+        344
+      ]
+    },
+    {
+      "path": "derived/animations/thornwake-t1-working-mechanical.json",
+      "bytes": 2281,
+      "sha256": "07e67932fb4ff8312dd1869fddc9a1a1a4a968252ffff81097b06393c47f4397",
+      "indexPath": "production-assets/harvesters/derived/animations/thornwake-t1-working-mechanical.json"
+    },
+    {
+      "path": "derived/animations/thornwake-t1-working-mechanical.png",
+      "bytes": 21816,
+      "sha256": "7e9848eeff9a046eae3d161e28a60ba2b9a7a8bbc6a01fcf1a57258da42414e5",
+      "indexPath": "production-assets/harvesters/derived/animations/thornwake-t1-working-mechanical.png",
+      "size": [
+        344,
+        344
+      ]
+    },
+    {
+      "path": "derived/animations/thornwake-t2-collapse-authored.json",
+      "bytes": 2280,
+      "sha256": "8db501faefeca212609e98e07ef4cf28c1a3fac3eb1b9d1a8b55a20c02d126e6",
+      "indexPath": "production-assets/harvesters/derived/animations/thornwake-t2-collapse-authored.json"
+    },
+    {
+      "path": "derived/animations/thornwake-t2-collapse-authored.png",
+      "bytes": 22268,
+      "sha256": "f6f738b0951991787249ca38559451ac876c9afd74eee81518ffb971b6dd93c0",
+      "indexPath": "production-assets/harvesters/derived/animations/thornwake-t2-collapse-authored.png",
+      "size": [
+        344,
+        344
+      ]
+    },
+    {
+      "path": "derived/animations/thornwake-t2-construction-authored.json",
+      "bytes": 2284,
+      "sha256": "2f01c5cb260acfd071305335b5ff4b73e194ae0d805b2d2b958c66e51c6f8177",
+      "indexPath": "production-assets/harvesters/derived/animations/thornwake-t2-construction-authored.json"
+    },
+    {
+      "path": "derived/animations/thornwake-t2-construction-authored.png",
+      "bytes": 25899,
+      "sha256": "14875f50946f454e74cb4efe567f225ae2a19e2c89473ee953d489c7de3a0c18",
+      "indexPath": "production-assets/harvesters/derived/animations/thornwake-t2-construction-authored.png",
+      "size": [
+        344,
+        344
+      ]
+    },
+    {
+      "path": "derived/animations/thornwake-t2-working-mechanical.json",
+      "bytes": 2281,
+      "sha256": "255e753ed026d350cbb24b6cd752963b29e46201b441e8c8892711705f40b5d5",
+      "indexPath": "production-assets/harvesters/derived/animations/thornwake-t2-working-mechanical.json"
+    },
+    {
+      "path": "derived/animations/thornwake-t2-working-mechanical.png",
+      "bytes": 18768,
+      "sha256": "1e807ec5f8200d85d49aa67030e124b57611b37414303b94f467140cb6cc9bb0",
+      "indexPath": "production-assets/harvesters/derived/animations/thornwake-t2-working-mechanical.png",
+      "size": [
+        344,
+        344
+      ]
+    },
+    {
+      "path": "derived/animations/thornwake-t3-collapse-authored.json",
+      "bytes": 2280,
+      "sha256": "0860d21ccdb04630ad1d3ff98fa372dc160fd1c38262d95033620b5db0b4e553",
+      "indexPath": "production-assets/harvesters/derived/animations/thornwake-t3-collapse-authored.json"
+    },
+    {
+      "path": "derived/animations/thornwake-t3-collapse-authored.png",
+      "bytes": 25671,
+      "sha256": "6047f7346b5e342996d72b975eb782d5d8ab4eaa7e1625c01d48f2a449c0d596",
+      "indexPath": "production-assets/harvesters/derived/animations/thornwake-t3-collapse-authored.png",
+      "size": [
+        344,
+        344
+      ]
+    },
+    {
+      "path": "derived/animations/thornwake-t3-construction-authored.json",
+      "bytes": 2284,
+      "sha256": "038f09e1186c7baebff174d884788b6d4a55a9c72be9d81deb964278cc208ef8",
+      "indexPath": "production-assets/harvesters/derived/animations/thornwake-t3-construction-authored.json"
+    },
+    {
+      "path": "derived/animations/thornwake-t3-construction-authored.png",
+      "bytes": 27200,
+      "sha256": "21b8ffddedfec3185f702980f59f982b1efe3f937115636608a377c27dc1bf87",
+      "indexPath": "production-assets/harvesters/derived/animations/thornwake-t3-construction-authored.png",
+      "size": [
+        344,
+        344
+      ]
+    },
+    {
+      "path": "derived/animations/thornwake-t3-working-mechanical.json",
+      "bytes": 2281,
+      "sha256": "df510f4f2a120f3874d4d6bf5a90f0556cdec3e0c06102aa0ffc0e10904e6612",
+      "indexPath": "production-assets/harvesters/derived/animations/thornwake-t3-working-mechanical.json"
+    },
+    {
+      "path": "derived/animations/thornwake-t3-working-mechanical.png",
+      "bytes": 24054,
+      "sha256": "ec9442c2fa164ad9026e0dd3d94b501a37051071c2b738b046c8897680c37479",
+      "indexPath": "production-assets/harvesters/derived/animations/thornwake-t3-working-mechanical.png",
+      "size": [
+        344,
+        344
+      ]
+    },
+    {
+      "path": "derived/animations/thornwake-t4-collapse-authored.json",
+      "bytes": 2280,
+      "sha256": "95a360abd3377759c3987d4b74280c150db7a0e04c171d1b3867e69759f90e80",
+      "indexPath": "production-assets/harvesters/derived/animations/thornwake-t4-collapse-authored.json"
+    },
+    {
+      "path": "derived/animations/thornwake-t4-collapse-authored.png",
+      "bytes": 28159,
+      "sha256": "0cbe6038f2a8e657b15d5013e79d9cbe94c6a064f24163c0908aba40cc461a6e",
+      "indexPath": "production-assets/harvesters/derived/animations/thornwake-t4-collapse-authored.png",
+      "size": [
+        344,
+        344
+      ]
+    },
+    {
+      "path": "derived/animations/thornwake-t4-construction-authored.json",
+      "bytes": 2284,
+      "sha256": "0150d689120567f750809b1b3a4bbcc26778d70824d04ebaf4869f55055edbc1",
+      "indexPath": "production-assets/harvesters/derived/animations/thornwake-t4-construction-authored.json"
+    },
+    {
+      "path": "derived/animations/thornwake-t4-construction-authored.png",
+      "bytes": 32123,
+      "sha256": "e28bc0d1146152700d7ab5439bdedf59517a28e88a6df35d88f80401b3dec59c",
+      "indexPath": "production-assets/harvesters/derived/animations/thornwake-t4-construction-authored.png",
+      "size": [
+        344,
+        344
+      ]
+    },
+    {
+      "path": "derived/animations/thornwake-t4-working-mechanical.json",
+      "bytes": 2281,
+      "sha256": "30c31033822ac8ab9006e22fecccea907fe12e3c7e6f129b3f7f6f9b0ec4ae53",
+      "indexPath": "production-assets/harvesters/derived/animations/thornwake-t4-working-mechanical.json"
+    },
+    {
+      "path": "derived/animations/thornwake-t4-working-mechanical.png",
+      "bytes": 26730,
+      "sha256": "9596808a8f611391b1c8174970dfc41c391fad2f825c109d3abf88981056d21b",
+      "indexPath": "production-assets/harvesters/derived/animations/thornwake-t4-working-mechanical.png",
+      "size": [
+        344,
+        344
+      ]
+    },
+    {
+      "path": "derived/static/cinderfall-t1-construction.png",
+      "bytes": 6600,
+      "sha256": "9e546a251cee6324ada3a3a02b8d95607147088f4ee7f2734f056025bd3381a2",
+      "indexPath": "production-assets/harvesters/derived/static/cinderfall-t1-construction.png",
+      "size": [
+        112,
+        112
+      ]
+    },
+    {
+      "path": "derived/static/cinderfall-t1-damaged.png",
+      "bytes": 6310,
+      "sha256": "c26b774db95b6c502d1672eee5dce6b9b1604d0f477b274a1fdc36311e48b92e",
+      "indexPath": "production-assets/harvesters/derived/static/cinderfall-t1-damaged.png",
+      "size": [
+        112,
+        112
+      ]
+    },
+    {
+      "path": "derived/static/cinderfall-t1-destroyed.png",
+      "bytes": 5607,
+      "sha256": "3db88e664ca741c6555fdd469a3eefdd76396070821d17e479adb70b6e2dc4e9",
+      "indexPath": "production-assets/harvesters/derived/static/cinderfall-t1-destroyed.png",
+      "size": [
+        112,
+        112
+      ]
+    },
+    {
+      "path": "derived/static/cinderfall-t1-idle.png",
+      "bytes": 5723,
+      "sha256": "66c29d193be7d2388a18b972686d1c76f1e609ced7ae2268009212f74e2ada42",
+      "indexPath": "production-assets/harvesters/derived/static/cinderfall-t1-idle.png",
+      "size": [
+        112,
+        112
+      ]
+    },
+    {
+      "path": "derived/static/cinderfall-t1-ready.png",
+      "bytes": 7289,
+      "sha256": "c03c171c1cf1bbad4d6cdb3b2980b245b700b8422c38be40e97cea335bb89180",
+      "indexPath": "production-assets/harvesters/derived/static/cinderfall-t1-ready.png",
+      "size": [
+        112,
+        112
+      ]
+    },
+    {
+      "path": "derived/static/cinderfall-t2-construction.png",
+      "bytes": 6664,
+      "sha256": "fcb6dd3af4bdfe4598dbfee3126d5770c9994995553eb47301200a602c2fb3f1",
+      "indexPath": "production-assets/harvesters/derived/static/cinderfall-t2-construction.png",
+      "size": [
+        112,
+        112
+      ]
+    },
+    {
+      "path": "derived/static/cinderfall-t2-damaged.png",
+      "bytes": 5421,
+      "sha256": "2efce6f2677cb42e151328dffcd50c8ea55c40b5af9111633bf5cb92a300f005",
+      "indexPath": "production-assets/harvesters/derived/static/cinderfall-t2-damaged.png",
+      "size": [
+        112,
+        112
+      ]
+    },
+    {
+      "path": "derived/static/cinderfall-t2-destroyed.png",
+      "bytes": 5349,
+      "sha256": "964fd0bcd258eadf75a183747651019ece004ce93a79db0a05c353e38b9d1c82",
+      "indexPath": "production-assets/harvesters/derived/static/cinderfall-t2-destroyed.png",
+      "size": [
+        112,
+        112
+      ]
+    },
+    {
+      "path": "derived/static/cinderfall-t2-idle.png",
+      "bytes": 5652,
+      "sha256": "17c2b56cff35b3fbe55f0c1ea1dcf9cfaaf3ad3081e6752732f5963ae24cf917",
+      "indexPath": "production-assets/harvesters/derived/static/cinderfall-t2-idle.png",
+      "size": [
+        112,
+        112
+      ]
+    },
+    {
+      "path": "derived/static/cinderfall-t2-ready.png",
+      "bytes": 7197,
+      "sha256": "5a67c336b00fa564031e5019940df86f69bfd99d33eefe85e51444c9e8ed950e",
+      "indexPath": "production-assets/harvesters/derived/static/cinderfall-t2-ready.png",
+      "size": [
+        112,
+        112
+      ]
+    },
+    {
+      "path": "derived/static/cinderfall-t3-construction.png",
+      "bytes": 5985,
+      "sha256": "cead6e7968a5460219dbd269e0e2cef7401be6b92a1d500407acf684e8f88ffe",
+      "indexPath": "production-assets/harvesters/derived/static/cinderfall-t3-construction.png",
+      "size": [
+        112,
+        112
+      ]
+    },
+    {
+      "path": "derived/static/cinderfall-t3-damaged.png",
+      "bytes": 8268,
+      "sha256": "3350824156306c7311cb3550c569de15e9424d717eaaf83f45618b37ce7f0ed1",
+      "indexPath": "production-assets/harvesters/derived/static/cinderfall-t3-damaged.png",
+      "size": [
+        112,
+        112
+      ]
+    },
+    {
+      "path": "derived/static/cinderfall-t3-destroyed.png",
+      "bytes": 5026,
+      "sha256": "5eb600d816e71f47d2e29f354e5647987c65aa96db784e9fea3637cefb26e610",
+      "indexPath": "production-assets/harvesters/derived/static/cinderfall-t3-destroyed.png",
+      "size": [
+        112,
+        112
+      ]
+    },
+    {
+      "path": "derived/static/cinderfall-t3-idle.png",
+      "bytes": 7212,
+      "sha256": "9549f449f62e2eb3341fd7cf2465786a55580055f485f32557a612accf1dd0d4",
+      "indexPath": "production-assets/harvesters/derived/static/cinderfall-t3-idle.png",
+      "size": [
+        112,
+        112
+      ]
+    },
+    {
+      "path": "derived/static/cinderfall-t3-ready.png",
+      "bytes": 8718,
+      "sha256": "f07c9aaebc2eeb23c47266cfbf8ea966388f1a5eb961c64a69aec63f95958dfe",
+      "indexPath": "production-assets/harvesters/derived/static/cinderfall-t3-ready.png",
+      "size": [
+        112,
+        112
+      ]
+    },
+    {
+      "path": "derived/static/cinderfall-t4-construction.png",
+      "bytes": 7846,
+      "sha256": "3dc1bad0c91190090fdbdb8d1acbdc94f2f68cfd97530b830fa0dd6711a7cfc2",
+      "indexPath": "production-assets/harvesters/derived/static/cinderfall-t4-construction.png",
+      "size": [
+        112,
+        112
+      ]
+    },
+    {
+      "path": "derived/static/cinderfall-t4-damaged.png",
+      "bytes": 8865,
+      "sha256": "2a76f8ee7a1f68e5c8e00769eb6c23e7e0a77d6db434430a683c184d0791bccb",
+      "indexPath": "production-assets/harvesters/derived/static/cinderfall-t4-damaged.png",
+      "size": [
+        112,
+        112
+      ]
+    },
+    {
+      "path": "derived/static/cinderfall-t4-destroyed.png",
+      "bytes": 5976,
+      "sha256": "78136a68f1f2f4f045bed29b53b00f62adb4af83e88e712602dcb12a1ea439d0",
+      "indexPath": "production-assets/harvesters/derived/static/cinderfall-t4-destroyed.png",
+      "size": [
+        112,
+        112
+      ]
+    },
+    {
+      "path": "derived/static/cinderfall-t4-idle.png",
+      "bytes": 7286,
+      "sha256": "e1219c5ee9c34eccce99a930d7723ebde760e8a399f1c438b4d3aace12e448c5",
+      "indexPath": "production-assets/harvesters/derived/static/cinderfall-t4-idle.png",
+      "size": [
+        112,
+        112
+      ]
+    },
+    {
+      "path": "derived/static/cinderfall-t4-ready.png",
+      "bytes": 8743,
+      "sha256": "6a8c42dd8a5de5f6daa858b83dd47005eed7801a3cde63de7874b16ca8b55e9e",
+      "indexPath": "production-assets/harvesters/derived/static/cinderfall-t4-ready.png",
+      "size": [
+        112,
+        112
+      ]
+    },
+    {
+      "path": "derived/static/crownlands-t1-construction.png",
+      "bytes": 6600,
+      "sha256": "9e546a251cee6324ada3a3a02b8d95607147088f4ee7f2734f056025bd3381a2",
+      "indexPath": "production-assets/harvesters/derived/static/crownlands-t1-construction.png",
+      "size": [
+        112,
+        112
+      ]
+    },
+    {
+      "path": "derived/static/crownlands-t1-damaged.png",
+      "bytes": 6070,
+      "sha256": "d697af51a88b10c5899e26a3820516df67197481c18a7869ea1cc389e69baf00",
+      "indexPath": "production-assets/harvesters/derived/static/crownlands-t1-damaged.png",
+      "size": [
+        112,
+        112
+      ]
+    },
+    {
+      "path": "derived/static/crownlands-t1-destroyed.png",
+      "bytes": 5607,
+      "sha256": "3db88e664ca741c6555fdd469a3eefdd76396070821d17e479adb70b6e2dc4e9",
+      "indexPath": "production-assets/harvesters/derived/static/crownlands-t1-destroyed.png",
+      "size": [
+        112,
+        112
+      ]
+    },
+    {
+      "path": "derived/static/crownlands-t1-idle.png",
+      "bytes": 5198,
+      "sha256": "38f132d2a35310f9ea54556e4580e0cb6f582fa1ce8185312e9969d840805c1b",
+      "indexPath": "production-assets/harvesters/derived/static/crownlands-t1-idle.png",
+      "size": [
+        112,
+        112
+      ]
+    },
+    {
+      "path": "derived/static/crownlands-t1-ready.png",
+      "bytes": 6756,
+      "sha256": "b25f76b367c61aa72d2e51a4c24caec7287b00c2e2b3d7491dc6197e55a92fe2",
+      "indexPath": "production-assets/harvesters/derived/static/crownlands-t1-ready.png",
+      "size": [
+        112,
+        112
+      ]
+    },
+    {
+      "path": "derived/static/crownlands-t2-construction.png",
+      "bytes": 6664,
+      "sha256": "fcb6dd3af4bdfe4598dbfee3126d5770c9994995553eb47301200a602c2fb3f1",
+      "indexPath": "production-assets/harvesters/derived/static/crownlands-t2-construction.png",
+      "size": [
+        112,
+        112
+      ]
+    },
+    {
+      "path": "derived/static/crownlands-t2-damaged.png",
+      "bytes": 5520,
+      "sha256": "111bdfc2151bdff4e0ec92263eb2631b4839aab7b0f7fcdae93a37c38e7cc534",
+      "indexPath": "production-assets/harvesters/derived/static/crownlands-t2-damaged.png",
+      "size": [
+        112,
+        112
+      ]
+    },
+    {
+      "path": "derived/static/crownlands-t2-destroyed.png",
+      "bytes": 5349,
+      "sha256": "964fd0bcd258eadf75a183747651019ece004ce93a79db0a05c353e38b9d1c82",
+      "indexPath": "production-assets/harvesters/derived/static/crownlands-t2-destroyed.png",
+      "size": [
+        112,
+        112
+      ]
+    },
+    {
+      "path": "derived/static/crownlands-t2-idle.png",
+      "bytes": 4713,
+      "sha256": "3e6fc079a59ade71924a9e354a22b460c272012d6bffdfccab19b13c221c9574",
+      "indexPath": "production-assets/harvesters/derived/static/crownlands-t2-idle.png",
+      "size": [
+        112,
+        112
+      ]
+    },
+    {
+      "path": "derived/static/crownlands-t2-ready.png",
+      "bytes": 6259,
+      "sha256": "fbe3bb39f5f488610cc466536a86f2c4889f1b5af16c4ecc86b60e80d86c8fc4",
+      "indexPath": "production-assets/harvesters/derived/static/crownlands-t2-ready.png",
+      "size": [
+        112,
+        112
+      ]
+    },
+    {
+      "path": "derived/static/crownlands-t3-construction.png",
+      "bytes": 5985,
+      "sha256": "cead6e7968a5460219dbd269e0e2cef7401be6b92a1d500407acf684e8f88ffe",
+      "indexPath": "production-assets/harvesters/derived/static/crownlands-t3-construction.png",
+      "size": [
+        112,
+        112
+      ]
+    },
+    {
+      "path": "derived/static/crownlands-t3-damaged.png",
+      "bytes": 7761,
+      "sha256": "0039a0f7c0a445ecd1bea2f86eba0a882f2b61f66dc8de48cae269eea2766a74",
+      "indexPath": "production-assets/harvesters/derived/static/crownlands-t3-damaged.png",
+      "size": [
+        112,
+        112
+      ]
+    },
+    {
+      "path": "derived/static/crownlands-t3-destroyed.png",
+      "bytes": 5026,
+      "sha256": "5eb600d816e71f47d2e29f354e5647987c65aa96db784e9fea3637cefb26e610",
+      "indexPath": "production-assets/harvesters/derived/static/crownlands-t3-destroyed.png",
+      "size": [
+        112,
+        112
+      ]
+    },
+    {
+      "path": "derived/static/crownlands-t3-idle.png",
+      "bytes": 6620,
+      "sha256": "35e67c948e0848ca6e9c79ff862ceadf8f0ecc53f56a5c28f1fc68210d9cc6de",
+      "indexPath": "production-assets/harvesters/derived/static/crownlands-t3-idle.png",
+      "size": [
+        112,
+        112
+      ]
+    },
+    {
+      "path": "derived/static/crownlands-t3-ready.png",
+      "bytes": 8146,
+      "sha256": "a23169d80533d81ac96f631b83bd80d537e1a41505d6c80af18fcfe34dd87e4d",
+      "indexPath": "production-assets/harvesters/derived/static/crownlands-t3-ready.png",
+      "size": [
+        112,
+        112
+      ]
+    },
+    {
+      "path": "derived/static/crownlands-t4-construction.png",
+      "bytes": 7846,
+      "sha256": "3dc1bad0c91190090fdbdb8d1acbdc94f2f68cfd97530b830fa0dd6711a7cfc2",
+      "indexPath": "production-assets/harvesters/derived/static/crownlands-t4-construction.png",
+      "size": [
+        112,
+        112
+      ]
+    },
+    {
+      "path": "derived/static/crownlands-t4-damaged.png",
+      "bytes": 7478,
+      "sha256": "b0b5a8dc7d15911aec9d71f14c3ed776fd580a872fc6b0e1382fa58f9bb8d359",
+      "indexPath": "production-assets/harvesters/derived/static/crownlands-t4-damaged.png",
+      "size": [
+        112,
+        112
+      ]
+    },
+    {
+      "path": "derived/static/crownlands-t4-destroyed.png",
+      "bytes": 5976,
+      "sha256": "78136a68f1f2f4f045bed29b53b00f62adb4af83e88e712602dcb12a1ea439d0",
+      "indexPath": "production-assets/harvesters/derived/static/crownlands-t4-destroyed.png",
+      "size": [
+        112,
+        112
+      ]
+    },
+    {
+      "path": "derived/static/crownlands-t4-idle.png",
+      "bytes": 7020,
+      "sha256": "39c01e4384b0c342fb70755c7e59b6a6844f2f07eb71c9cadf975ca2f49391f2",
+      "indexPath": "production-assets/harvesters/derived/static/crownlands-t4-idle.png",
+      "size": [
+        112,
+        112
+      ]
+    },
+    {
+      "path": "derived/static/crownlands-t4-ready.png",
+      "bytes": 8476,
+      "sha256": "963ec9909c649e734951ad18bc9c110859335d360912e0660a4d515ea3d5e59a",
+      "indexPath": "production-assets/harvesters/derived/static/crownlands-t4-ready.png",
+      "size": [
+        112,
+        112
+      ]
+    },
+    {
+      "path": "derived/static/elderwood-t1-construction.png",
+      "bytes": 6600,
+      "sha256": "9e546a251cee6324ada3a3a02b8d95607147088f4ee7f2734f056025bd3381a2",
+      "indexPath": "production-assets/harvesters/derived/static/elderwood-t1-construction.png",
+      "size": [
+        112,
+        112
+      ]
+    },
+    {
+      "path": "derived/static/elderwood-t1-damaged.png",
+      "bytes": 6232,
+      "sha256": "382ebdf7d16a15a12c19898717ae3092dcb0ca0699f089b1012728f220c9d996",
+      "indexPath": "production-assets/harvesters/derived/static/elderwood-t1-damaged.png",
+      "size": [
+        112,
+        112
+      ]
+    },
+    {
+      "path": "derived/static/elderwood-t1-destroyed.png",
+      "bytes": 5607,
+      "sha256": "3db88e664ca741c6555fdd469a3eefdd76396070821d17e479adb70b6e2dc4e9",
+      "indexPath": "production-assets/harvesters/derived/static/elderwood-t1-destroyed.png",
+      "size": [
+        112,
+        112
+      ]
+    },
+    {
+      "path": "derived/static/elderwood-t1-idle.png",
+      "bytes": 5869,
+      "sha256": "cba64be3d24f27e5a1c424d84d3c374b61fe94f36affc97247343be1faab59c7",
+      "indexPath": "production-assets/harvesters/derived/static/elderwood-t1-idle.png",
+      "size": [
+        112,
+        112
+      ]
+    },
+    {
+      "path": "derived/static/elderwood-t1-ready.png",
+      "bytes": 7424,
+      "sha256": "049de220d682205f1dfbe006591a617e07db69fbbce3fb52daeb933a9717ef8f",
+      "indexPath": "production-assets/harvesters/derived/static/elderwood-t1-ready.png",
+      "size": [
+        112,
+        112
+      ]
+    },
+    {
+      "path": "derived/static/elderwood-t2-construction.png",
+      "bytes": 6664,
+      "sha256": "fcb6dd3af4bdfe4598dbfee3126d5770c9994995553eb47301200a602c2fb3f1",
+      "indexPath": "production-assets/harvesters/derived/static/elderwood-t2-construction.png",
+      "size": [
+        112,
+        112
+      ]
+    },
+    {
+      "path": "derived/static/elderwood-t2-damaged.png",
+      "bytes": 6934,
+      "sha256": "ce5f32467867c07936b833bb5a69cf88fd6129597ce886ffd85a1efba6c4655e",
+      "indexPath": "production-assets/harvesters/derived/static/elderwood-t2-damaged.png",
+      "size": [
+        112,
+        112
+      ]
+    },
+    {
+      "path": "derived/static/elderwood-t2-destroyed.png",
+      "bytes": 5349,
+      "sha256": "964fd0bcd258eadf75a183747651019ece004ce93a79db0a05c353e38b9d1c82",
+      "indexPath": "production-assets/harvesters/derived/static/elderwood-t2-destroyed.png",
+      "size": [
+        112,
+        112
+      ]
+    },
+    {
+      "path": "derived/static/elderwood-t2-idle.png",
+      "bytes": 5412,
+      "sha256": "211373dad5e7b8195f972cc8af278769d96daad52de5118cc80192dfcc96ca3d",
+      "indexPath": "production-assets/harvesters/derived/static/elderwood-t2-idle.png",
+      "size": [
+        112,
+        112
+      ]
+    },
+    {
+      "path": "derived/static/elderwood-t2-ready.png",
+      "bytes": 6977,
+      "sha256": "f44240aa010a8f8f4c127092926f7bd1c9e6159ae1c50999bd463814deacfa91",
+      "indexPath": "production-assets/harvesters/derived/static/elderwood-t2-ready.png",
+      "size": [
+        112,
+        112
+      ]
+    },
+    {
+      "path": "derived/static/elderwood-t3-construction.png",
+      "bytes": 5985,
+      "sha256": "cead6e7968a5460219dbd269e0e2cef7401be6b92a1d500407acf684e8f88ffe",
+      "indexPath": "production-assets/harvesters/derived/static/elderwood-t3-construction.png",
+      "size": [
+        112,
+        112
+      ]
+    },
+    {
+      "path": "derived/static/elderwood-t3-damaged.png",
+      "bytes": 8244,
+      "sha256": "b9eb867529a1d9c6af7d16ba823060d6a3119da4b3b89b4d2c1425a5c5ef9d42",
+      "indexPath": "production-assets/harvesters/derived/static/elderwood-t3-damaged.png",
+      "size": [
+        112,
+        112
+      ]
+    },
+    {
+      "path": "derived/static/elderwood-t3-destroyed.png",
+      "bytes": 5026,
+      "sha256": "5eb600d816e71f47d2e29f354e5647987c65aa96db784e9fea3637cefb26e610",
+      "indexPath": "production-assets/harvesters/derived/static/elderwood-t3-destroyed.png",
+      "size": [
+        112,
+        112
+      ]
+    },
+    {
+      "path": "derived/static/elderwood-t3-idle.png",
+      "bytes": 6983,
+      "sha256": "3b7329c57d714cb0f6221b81e328ef62e1d7cbe8190f27fe438c53a0c7949032",
+      "indexPath": "production-assets/harvesters/derived/static/elderwood-t3-idle.png",
+      "size": [
+        112,
+        112
+      ]
+    },
+    {
+      "path": "derived/static/elderwood-t3-ready.png",
+      "bytes": 8478,
+      "sha256": "834658ec892fe9d0da2ceaafada03a7d48b870ae5ac421686a88041789f19843",
+      "indexPath": "production-assets/harvesters/derived/static/elderwood-t3-ready.png",
+      "size": [
+        112,
+        112
+      ]
+    },
+    {
+      "path": "derived/static/elderwood-t4-construction.png",
+      "bytes": 7846,
+      "sha256": "3dc1bad0c91190090fdbdb8d1acbdc94f2f68cfd97530b830fa0dd6711a7cfc2",
+      "indexPath": "production-assets/harvesters/derived/static/elderwood-t4-construction.png",
+      "size": [
+        112,
+        112
+      ]
+    },
+    {
+      "path": "derived/static/elderwood-t4-damaged.png",
+      "bytes": 8358,
+      "sha256": "86ccf161535ee0fb46b0fcee7134ea8b8e84a553f59ba0e3d85c8a3f8b2640a3",
+      "indexPath": "production-assets/harvesters/derived/static/elderwood-t4-damaged.png",
+      "size": [
+        112,
+        112
+      ]
+    },
+    {
+      "path": "derived/static/elderwood-t4-destroyed.png",
+      "bytes": 5976,
+      "sha256": "78136a68f1f2f4f045bed29b53b00f62adb4af83e88e712602dcb12a1ea439d0",
+      "indexPath": "production-assets/harvesters/derived/static/elderwood-t4-destroyed.png",
+      "size": [
+        112,
+        112
+      ]
+    },
+    {
+      "path": "derived/static/elderwood-t4-idle.png",
+      "bytes": 8028,
+      "sha256": "2ed2d99238e200264eb8e87cc0f85019e39add57324dc45fa846253ccbc94b5b",
+      "indexPath": "production-assets/harvesters/derived/static/elderwood-t4-idle.png",
+      "size": [
+        112,
+        112
+      ]
+    },
+    {
+      "path": "derived/static/elderwood-t4-ready.png",
+      "bytes": 9557,
+      "sha256": "c5a41326bcf435a62d0d3054abc9250b304246495dbac22aeb914f13d3f3c57a",
+      "indexPath": "production-assets/harvesters/derived/static/elderwood-t4-ready.png",
+      "size": [
+        112,
+        112
+      ]
+    },
+    {
+      "path": "derived/static/frostveil-t1-construction.png",
+      "bytes": 6600,
+      "sha256": "9e546a251cee6324ada3a3a02b8d95607147088f4ee7f2734f056025bd3381a2",
+      "indexPath": "production-assets/harvesters/derived/static/frostveil-t1-construction.png",
+      "size": [
+        112,
+        112
+      ]
+    },
+    {
+      "path": "derived/static/frostveil-t1-damaged.png",
+      "bytes": 5838,
+      "sha256": "839dfbe36316df613d8852d8fd01b68356e2e0f636cd46ea73a98910b71a1419",
+      "indexPath": "production-assets/harvesters/derived/static/frostveil-t1-damaged.png",
+      "size": [
+        112,
+        112
+      ]
+    },
+    {
+      "path": "derived/static/frostveil-t1-destroyed.png",
+      "bytes": 5607,
+      "sha256": "3db88e664ca741c6555fdd469a3eefdd76396070821d17e479adb70b6e2dc4e9",
+      "indexPath": "production-assets/harvesters/derived/static/frostveil-t1-destroyed.png",
+      "size": [
+        112,
+        112
+      ]
+    },
+    {
+      "path": "derived/static/frostveil-t1-idle.png",
+      "bytes": 5200,
+      "sha256": "b77066c671b849edd69da3760bf8583d1b21cad6432eb5b5e5685a179e99240f",
+      "indexPath": "production-assets/harvesters/derived/static/frostveil-t1-idle.png",
+      "size": [
+        112,
+        112
+      ]
+    },
+    {
+      "path": "derived/static/frostveil-t1-ready.png",
+      "bytes": 6756,
+      "sha256": "1575bc3d1f90ad5151a4cadda6b093947bdbd42ee67109a15b833e106c65fb76",
+      "indexPath": "production-assets/harvesters/derived/static/frostveil-t1-ready.png",
+      "size": [
+        112,
+        112
+      ]
+    },
+    {
+      "path": "derived/static/frostveil-t2-construction.png",
+      "bytes": 6664,
+      "sha256": "fcb6dd3af4bdfe4598dbfee3126d5770c9994995553eb47301200a602c2fb3f1",
+      "indexPath": "production-assets/harvesters/derived/static/frostveil-t2-construction.png",
+      "size": [
+        112,
+        112
+      ]
+    },
+    {
+      "path": "derived/static/frostveil-t2-damaged.png",
+      "bytes": 5678,
+      "sha256": "0eecc5a3d95b4a810bec05e9926632f5f4aa878ef89d0a9accea6160ca26877f",
+      "indexPath": "production-assets/harvesters/derived/static/frostveil-t2-damaged.png",
+      "size": [
+        112,
+        112
+      ]
+    },
+    {
+      "path": "derived/static/frostveil-t2-destroyed.png",
+      "bytes": 5349,
+      "sha256": "964fd0bcd258eadf75a183747651019ece004ce93a79db0a05c353e38b9d1c82",
+      "indexPath": "production-assets/harvesters/derived/static/frostveil-t2-destroyed.png",
+      "size": [
+        112,
+        112
+      ]
+    },
+    {
+      "path": "derived/static/frostveil-t2-idle.png",
+      "bytes": 5362,
+      "sha256": "1053a24bd7383035fa3cf75d64142810e93608214471583b277fb5481afe879b",
+      "indexPath": "production-assets/harvesters/derived/static/frostveil-t2-idle.png",
+      "size": [
+        112,
+        112
+      ]
+    },
+    {
+      "path": "derived/static/frostveil-t2-ready.png",
+      "bytes": 6901,
+      "sha256": "b3e33ad5810c8c48db2e32ccfd7dce4f98e737dd9c2c254cd224928784bdc3cb",
+      "indexPath": "production-assets/harvesters/derived/static/frostveil-t2-ready.png",
+      "size": [
+        112,
+        112
+      ]
+    },
+    {
+      "path": "derived/static/frostveil-t3-construction.png",
+      "bytes": 5985,
+      "sha256": "cead6e7968a5460219dbd269e0e2cef7401be6b92a1d500407acf684e8f88ffe",
+      "indexPath": "production-assets/harvesters/derived/static/frostveil-t3-construction.png",
+      "size": [
+        112,
+        112
+      ]
+    },
+    {
+      "path": "derived/static/frostveil-t3-damaged.png",
+      "bytes": 7982,
+      "sha256": "9c3f1178aa4881b9b197d6067a96efe3c1a6d11929cbe908c5ff5ed184d0eec7",
+      "indexPath": "production-assets/harvesters/derived/static/frostveil-t3-damaged.png",
+      "size": [
+        112,
+        112
+      ]
+    },
+    {
+      "path": "derived/static/frostveil-t3-destroyed.png",
+      "bytes": 5026,
+      "sha256": "5eb600d816e71f47d2e29f354e5647987c65aa96db784e9fea3637cefb26e610",
+      "indexPath": "production-assets/harvesters/derived/static/frostveil-t3-destroyed.png",
+      "size": [
+        112,
+        112
+      ]
+    },
+    {
+      "path": "derived/static/frostveil-t3-idle.png",
+      "bytes": 8270,
+      "sha256": "6dcbef00e00a9fe0594eac1d0558f6909076202cd65249b685b5219ba636247c",
+      "indexPath": "production-assets/harvesters/derived/static/frostveil-t3-idle.png",
+      "size": [
+        112,
+        112
+      ]
+    },
+    {
+      "path": "derived/static/frostveil-t3-ready.png",
+      "bytes": 9723,
+      "sha256": "6431aaefa1aa064a59f5e5820e094679c6436fdd826a533ba454c0221bb141e4",
+      "indexPath": "production-assets/harvesters/derived/static/frostveil-t3-ready.png",
+      "size": [
+        112,
+        112
+      ]
+    },
+    {
+      "path": "derived/static/frostveil-t4-construction.png",
+      "bytes": 7846,
+      "sha256": "3dc1bad0c91190090fdbdb8d1acbdc94f2f68cfd97530b830fa0dd6711a7cfc2",
+      "indexPath": "production-assets/harvesters/derived/static/frostveil-t4-construction.png",
+      "size": [
+        112,
+        112
+      ]
+    },
+    {
+      "path": "derived/static/frostveil-t4-damaged.png",
+      "bytes": 7923,
+      "sha256": "1bf0934a0a5f3dadac9f8e7802d65313c65b96fa6048f91d5e7eaad84d8626e9",
+      "indexPath": "production-assets/harvesters/derived/static/frostveil-t4-damaged.png",
+      "size": [
+        112,
+        112
+      ]
+    },
+    {
+      "path": "derived/static/frostveil-t4-destroyed.png",
+      "bytes": 5976,
+      "sha256": "78136a68f1f2f4f045bed29b53b00f62adb4af83e88e712602dcb12a1ea439d0",
+      "indexPath": "production-assets/harvesters/derived/static/frostveil-t4-destroyed.png",
+      "size": [
+        112,
+        112
+      ]
+    },
+    {
+      "path": "derived/static/frostveil-t4-idle.png",
+      "bytes": 7522,
+      "sha256": "1542c66e205eb0eb0726bac5aabc9e6e93d2bbecff0ebe86ef8cc6ec1460b47d",
+      "indexPath": "production-assets/harvesters/derived/static/frostveil-t4-idle.png",
+      "size": [
+        112,
+        112
+      ]
+    },
+    {
+      "path": "derived/static/frostveil-t4-ready.png",
+      "bytes": 9072,
+      "sha256": "3cff2578e0e0cb6b6e11e565f63ada846bb4513a9d11ff097f0dbc40300a66da",
+      "indexPath": "production-assets/harvesters/derived/static/frostveil-t4-ready.png",
+      "size": [
+        112,
+        112
+      ]
+    },
+    {
+      "path": "derived/static/seeker-reach-t1-construction.png",
+      "bytes": 6600,
+      "sha256": "9e546a251cee6324ada3a3a02b8d95607147088f4ee7f2734f056025bd3381a2",
+      "indexPath": "production-assets/harvesters/derived/static/seeker-reach-t1-construction.png",
+      "size": [
+        112,
+        112
+      ]
+    },
+    {
+      "path": "derived/static/seeker-reach-t1-damaged.png",
+      "bytes": 7377,
+      "sha256": "ac04f9e07592b18e325d2992b76011829ab25fbc0b674bd0f4fe3cc28b63cf6c",
+      "indexPath": "production-assets/harvesters/derived/static/seeker-reach-t1-damaged.png",
+      "size": [
+        112,
+        112
+      ]
+    },
+    {
+      "path": "derived/static/seeker-reach-t1-destroyed.png",
+      "bytes": 5607,
+      "sha256": "3db88e664ca741c6555fdd469a3eefdd76396070821d17e479adb70b6e2dc4e9",
+      "indexPath": "production-assets/harvesters/derived/static/seeker-reach-t1-destroyed.png",
+      "size": [
+        112,
+        112
+      ]
+    },
+    {
+      "path": "derived/static/seeker-reach-t1-idle.png",
+      "bytes": 4983,
+      "sha256": "37b0975cfde4c425f21a71d1dd9f7be892b32867274ca8e399f843b43eee7a0d",
+      "indexPath": "production-assets/harvesters/derived/static/seeker-reach-t1-idle.png",
+      "size": [
+        112,
+        112
+      ]
+    },
+    {
+      "path": "derived/static/seeker-reach-t1-ready.png",
+      "bytes": 6549,
+      "sha256": "18e3b7611e7eb8a88b073ab2959e3aa1c3ea0a68a8b8e3505794282672c68071",
+      "indexPath": "production-assets/harvesters/derived/static/seeker-reach-t1-ready.png",
+      "size": [
+        112,
+        112
+      ]
+    },
+    {
+      "path": "derived/static/seeker-reach-t2-construction.png",
+      "bytes": 6664,
+      "sha256": "fcb6dd3af4bdfe4598dbfee3126d5770c9994995553eb47301200a602c2fb3f1",
+      "indexPath": "production-assets/harvesters/derived/static/seeker-reach-t2-construction.png",
+      "size": [
+        112,
+        112
+      ]
+    },
+    {
+      "path": "derived/static/seeker-reach-t2-damaged.png",
+      "bytes": 4693,
+      "sha256": "6b1722d4e0d321764897009d289d401bda3cce214d0c0b4212a256bc6df3f941",
+      "indexPath": "production-assets/harvesters/derived/static/seeker-reach-t2-damaged.png",
+      "size": [
+        112,
+        112
+      ]
+    },
+    {
+      "path": "derived/static/seeker-reach-t2-destroyed.png",
+      "bytes": 5349,
+      "sha256": "964fd0bcd258eadf75a183747651019ece004ce93a79db0a05c353e38b9d1c82",
+      "indexPath": "production-assets/harvesters/derived/static/seeker-reach-t2-destroyed.png",
+      "size": [
+        112,
+        112
+      ]
+    },
+    {
+      "path": "derived/static/seeker-reach-t2-idle.png",
+      "bytes": 4837,
+      "sha256": "a4ecbd0c0eedeaff93dd9f9049bf19bd901eaef07233282ed560228f85058343",
+      "indexPath": "production-assets/harvesters/derived/static/seeker-reach-t2-idle.png",
+      "size": [
+        112,
+        112
+      ]
+    },
+    {
+      "path": "derived/static/seeker-reach-t2-ready.png",
+      "bytes": 6403,
+      "sha256": "f91b77bf762a582ce6ec178b0a0f86ad19a01e564cb1655a63c98d2bde472c9e",
+      "indexPath": "production-assets/harvesters/derived/static/seeker-reach-t2-ready.png",
+      "size": [
+        112,
+        112
+      ]
+    },
+    {
+      "path": "derived/static/seeker-reach-t3-construction.png",
+      "bytes": 5985,
+      "sha256": "cead6e7968a5460219dbd269e0e2cef7401be6b92a1d500407acf684e8f88ffe",
+      "indexPath": "production-assets/harvesters/derived/static/seeker-reach-t3-construction.png",
+      "size": [
+        112,
+        112
+      ]
+    },
+    {
+      "path": "derived/static/seeker-reach-t3-damaged.png",
+      "bytes": 7793,
+      "sha256": "757d22447da9598d70219ea3e4bf345aefc0c3ff6bcf8ac4551f68501cfaec13",
+      "indexPath": "production-assets/harvesters/derived/static/seeker-reach-t3-damaged.png",
+      "size": [
+        112,
+        112
+      ]
+    },
+    {
+      "path": "derived/static/seeker-reach-t3-destroyed.png",
+      "bytes": 5026,
+      "sha256": "5eb600d816e71f47d2e29f354e5647987c65aa96db784e9fea3637cefb26e610",
+      "indexPath": "production-assets/harvesters/derived/static/seeker-reach-t3-destroyed.png",
+      "size": [
+        112,
+        112
+      ]
+    },
+    {
+      "path": "derived/static/seeker-reach-t3-idle.png",
+      "bytes": 7097,
+      "sha256": "1ca79f600074fbd371aac8c024bcb01509dcc222220e4d1ba95eb1d5af1b8a33",
+      "indexPath": "production-assets/harvesters/derived/static/seeker-reach-t3-idle.png",
+      "size": [
+        112,
+        112
+      ]
+    },
+    {
+      "path": "derived/static/seeker-reach-t3-ready.png",
+      "bytes": 8603,
+      "sha256": "6db4f965a1c7da6e09ea8f814dfc2967d73429c8305a44e608af7d2953c76633",
+      "indexPath": "production-assets/harvesters/derived/static/seeker-reach-t3-ready.png",
+      "size": [
+        112,
+        112
+      ]
+    },
+    {
+      "path": "derived/static/seeker-reach-t4-construction.png",
+      "bytes": 7846,
+      "sha256": "3dc1bad0c91190090fdbdb8d1acbdc94f2f68cfd97530b830fa0dd6711a7cfc2",
+      "indexPath": "production-assets/harvesters/derived/static/seeker-reach-t4-construction.png",
+      "size": [
+        112,
+        112
+      ]
+    },
+    {
+      "path": "derived/static/seeker-reach-t4-damaged.png",
+      "bytes": 7960,
+      "sha256": "c53892f643155e841c6b1dfc46e93e6d2eca28591ac01d8b66a1d7b93c310a58",
+      "indexPath": "production-assets/harvesters/derived/static/seeker-reach-t4-damaged.png",
+      "size": [
+        112,
+        112
+      ]
+    },
+    {
+      "path": "derived/static/seeker-reach-t4-destroyed.png",
+      "bytes": 5976,
+      "sha256": "78136a68f1f2f4f045bed29b53b00f62adb4af83e88e712602dcb12a1ea439d0",
+      "indexPath": "production-assets/harvesters/derived/static/seeker-reach-t4-destroyed.png",
+      "size": [
+        112,
+        112
+      ]
+    },
+    {
+      "path": "derived/static/seeker-reach-t4-idle.png",
+      "bytes": 6229,
+      "sha256": "a485b8a087599f4932caa1fe1168bf019cf679f029bbbd70973a3e7bdb82b5bb",
+      "indexPath": "production-assets/harvesters/derived/static/seeker-reach-t4-idle.png",
+      "size": [
+        112,
+        112
+      ]
+    },
+    {
+      "path": "derived/static/seeker-reach-t4-ready.png",
+      "bytes": 7783,
+      "sha256": "341a9cc1e7c8ffb393eb0063ea789472b48e42b396cd48efd4e934decb6c73d5",
+      "indexPath": "production-assets/harvesters/derived/static/seeker-reach-t4-ready.png",
+      "size": [
+        112,
+        112
+      ]
+    },
+    {
+      "path": "derived/static/stormcairn-t1-construction.png",
+      "bytes": 6600,
+      "sha256": "9e546a251cee6324ada3a3a02b8d95607147088f4ee7f2734f056025bd3381a2",
+      "indexPath": "production-assets/harvesters/derived/static/stormcairn-t1-construction.png",
+      "size": [
+        112,
+        112
+      ]
+    },
+    {
+      "path": "derived/static/stormcairn-t1-damaged.png",
+      "bytes": 5871,
+      "sha256": "5e18935e7b875c791a423397e867c658ee676e7c93f2321d881c36099692e358",
+      "indexPath": "production-assets/harvesters/derived/static/stormcairn-t1-damaged.png",
+      "size": [
+        112,
+        112
+      ]
+    },
+    {
+      "path": "derived/static/stormcairn-t1-destroyed.png",
+      "bytes": 5607,
+      "sha256": "3db88e664ca741c6555fdd469a3eefdd76396070821d17e479adb70b6e2dc4e9",
+      "indexPath": "production-assets/harvesters/derived/static/stormcairn-t1-destroyed.png",
+      "size": [
+        112,
+        112
+      ]
+    },
+    {
+      "path": "derived/static/stormcairn-t1-idle.png",
+      "bytes": 5123,
+      "sha256": "22af91178b5613f2f1c96ff9e292b2d953eb7b383b098076016fc5eeeec943d9",
+      "indexPath": "production-assets/harvesters/derived/static/stormcairn-t1-idle.png",
+      "size": [
+        112,
+        112
+      ]
+    },
+    {
+      "path": "derived/static/stormcairn-t1-ready.png",
+      "bytes": 6691,
+      "sha256": "9d141e096021065bd7db8eb3d976254d5aa80ad6ab842d96b0823e8a14a0940f",
+      "indexPath": "production-assets/harvesters/derived/static/stormcairn-t1-ready.png",
+      "size": [
+        112,
+        112
+      ]
+    },
+    {
+      "path": "derived/static/stormcairn-t2-construction.png",
+      "bytes": 6664,
+      "sha256": "fcb6dd3af4bdfe4598dbfee3126d5770c9994995553eb47301200a602c2fb3f1",
+      "indexPath": "production-assets/harvesters/derived/static/stormcairn-t2-construction.png",
+      "size": [
+        112,
+        112
+      ]
+    },
+    {
+      "path": "derived/static/stormcairn-t2-damaged.png",
+      "bytes": 6421,
+      "sha256": "8cd2d659887e41dc11053bdb15388b9e8554537dc7bf7bbf001f652ba44830cc",
+      "indexPath": "production-assets/harvesters/derived/static/stormcairn-t2-damaged.png",
+      "size": [
+        112,
+        112
+      ]
+    },
+    {
+      "path": "derived/static/stormcairn-t2-destroyed.png",
+      "bytes": 5349,
+      "sha256": "964fd0bcd258eadf75a183747651019ece004ce93a79db0a05c353e38b9d1c82",
+      "indexPath": "production-assets/harvesters/derived/static/stormcairn-t2-destroyed.png",
+      "size": [
+        112,
+        112
+      ]
+    },
+    {
+      "path": "derived/static/stormcairn-t2-idle.png",
+      "bytes": 5515,
+      "sha256": "4b1e0b4e3f28024ed1dfd64f0edde201c92b5227fd944c9ed35beeca04adf0eb",
+      "indexPath": "production-assets/harvesters/derived/static/stormcairn-t2-idle.png",
+      "size": [
+        112,
+        112
+      ]
+    },
+    {
+      "path": "derived/static/stormcairn-t2-ready.png",
+      "bytes": 7071,
+      "sha256": "59ea1a23f0702ae87323d7ca5881b68f036250ed567d23f8cd3f6a5d3d49bb30",
+      "indexPath": "production-assets/harvesters/derived/static/stormcairn-t2-ready.png",
+      "size": [
+        112,
+        112
+      ]
+    },
+    {
+      "path": "derived/static/stormcairn-t3-construction.png",
+      "bytes": 5985,
+      "sha256": "cead6e7968a5460219dbd269e0e2cef7401be6b92a1d500407acf684e8f88ffe",
+      "indexPath": "production-assets/harvesters/derived/static/stormcairn-t3-construction.png",
+      "size": [
+        112,
+        112
+      ]
+    },
+    {
+      "path": "derived/static/stormcairn-t3-damaged.png",
+      "bytes": 8959,
+      "sha256": "abefa38a01d3db7a2a1473df2b18fb76b71f5721a81984b4fa9596cd8903b5f6",
+      "indexPath": "production-assets/harvesters/derived/static/stormcairn-t3-damaged.png",
+      "size": [
+        112,
+        112
+      ]
+    },
+    {
+      "path": "derived/static/stormcairn-t3-destroyed.png",
+      "bytes": 5026,
+      "sha256": "5eb600d816e71f47d2e29f354e5647987c65aa96db784e9fea3637cefb26e610",
+      "indexPath": "production-assets/harvesters/derived/static/stormcairn-t3-destroyed.png",
+      "size": [
+        112,
+        112
+      ]
+    },
+    {
+      "path": "derived/static/stormcairn-t3-idle.png",
+      "bytes": 6612,
+      "sha256": "766aa1b41144d9f4ea39289d8d53ddf96b1652cc8314584d07963cac7ed7273e",
+      "indexPath": "production-assets/harvesters/derived/static/stormcairn-t3-idle.png",
+      "size": [
+        112,
+        112
+      ]
+    },
+    {
+      "path": "derived/static/stormcairn-t3-ready.png",
+      "bytes": 8169,
+      "sha256": "99e66c50955a95660a9f27341bac37b3f9c371eb069ea546f8e694712b04d16b",
+      "indexPath": "production-assets/harvesters/derived/static/stormcairn-t3-ready.png",
+      "size": [
+        112,
+        112
+      ]
+    },
+    {
+      "path": "derived/static/stormcairn-t4-construction.png",
+      "bytes": 7846,
+      "sha256": "3dc1bad0c91190090fdbdb8d1acbdc94f2f68cfd97530b830fa0dd6711a7cfc2",
+      "indexPath": "production-assets/harvesters/derived/static/stormcairn-t4-construction.png",
+      "size": [
+        112,
+        112
+      ]
+    },
+    {
+      "path": "derived/static/stormcairn-t4-damaged.png",
+      "bytes": 7810,
+      "sha256": "e9bcd91fe3436002d193100c25cd8967db17b4e191edaf8f4425858d2e7aace6",
+      "indexPath": "production-assets/harvesters/derived/static/stormcairn-t4-damaged.png",
+      "size": [
+        112,
+        112
+      ]
+    },
+    {
+      "path": "derived/static/stormcairn-t4-destroyed.png",
+      "bytes": 5976,
+      "sha256": "78136a68f1f2f4f045bed29b53b00f62adb4af83e88e712602dcb12a1ea439d0",
+      "indexPath": "production-assets/harvesters/derived/static/stormcairn-t4-destroyed.png",
+      "size": [
+        112,
+        112
+      ]
+    },
+    {
+      "path": "derived/static/stormcairn-t4-idle.png",
+      "bytes": 6982,
+      "sha256": "7ef9b747d9084efefd99d99abce34a12e8c30221f5f251f93a2dc7a978f1245e",
+      "indexPath": "production-assets/harvesters/derived/static/stormcairn-t4-idle.png",
+      "size": [
+        112,
+        112
+      ]
+    },
+    {
+      "path": "derived/static/stormcairn-t4-ready.png",
+      "bytes": 8544,
+      "sha256": "edf652b5ac3b21dd4d52f893c8e25bed5f34dea0358fdca5432a9de833668ae2",
+      "indexPath": "production-assets/harvesters/derived/static/stormcairn-t4-ready.png",
+      "size": [
+        112,
+        112
+      ]
+    },
+    {
+      "path": "derived/static/sunscar-t1-construction.png",
+      "bytes": 6600,
+      "sha256": "9e546a251cee6324ada3a3a02b8d95607147088f4ee7f2734f056025bd3381a2",
+      "indexPath": "production-assets/harvesters/derived/static/sunscar-t1-construction.png",
+      "size": [
+        112,
+        112
+      ]
+    },
+    {
+      "path": "derived/static/sunscar-t1-damaged.png",
+      "bytes": 5645,
+      "sha256": "8c9f4a4c08d21152bad4933ad3cc3b647262a07ee26a93643f82f36225c4b857",
+      "indexPath": "production-assets/harvesters/derived/static/sunscar-t1-damaged.png",
+      "size": [
+        112,
+        112
+      ]
+    },
+    {
+      "path": "derived/static/sunscar-t1-destroyed.png",
+      "bytes": 5607,
+      "sha256": "3db88e664ca741c6555fdd469a3eefdd76396070821d17e479adb70b6e2dc4e9",
+      "indexPath": "production-assets/harvesters/derived/static/sunscar-t1-destroyed.png",
+      "size": [
+        112,
+        112
+      ]
+    },
+    {
+      "path": "derived/static/sunscar-t1-idle.png",
+      "bytes": 5003,
+      "sha256": "cf7d58f3c21ba79933bd606c3c10b1ba0ea88f263aa21b4b61547e2d00c2d14f",
+      "indexPath": "production-assets/harvesters/derived/static/sunscar-t1-idle.png",
+      "size": [
+        112,
+        112
+      ]
+    },
+    {
+      "path": "derived/static/sunscar-t1-ready.png",
+      "bytes": 6560,
+      "sha256": "f320d6aeb7ca26b27e1eb7322e794f02bcce6c629fa8c794f8a08b3f81055684",
+      "indexPath": "production-assets/harvesters/derived/static/sunscar-t1-ready.png",
+      "size": [
+        112,
+        112
+      ]
+    },
+    {
+      "path": "derived/static/sunscar-t2-construction.png",
+      "bytes": 6664,
+      "sha256": "fcb6dd3af4bdfe4598dbfee3126d5770c9994995553eb47301200a602c2fb3f1",
+      "indexPath": "production-assets/harvesters/derived/static/sunscar-t2-construction.png",
+      "size": [
+        112,
+        112
+      ]
+    },
+    {
+      "path": "derived/static/sunscar-t2-damaged.png",
+      "bytes": 6040,
+      "sha256": "1897787248395cbf031d9042b04327aff7d9b152598f479392b408de6f9df36c",
+      "indexPath": "production-assets/harvesters/derived/static/sunscar-t2-damaged.png",
+      "size": [
+        112,
+        112
+      ]
+    },
+    {
+      "path": "derived/static/sunscar-t2-destroyed.png",
+      "bytes": 5349,
+      "sha256": "964fd0bcd258eadf75a183747651019ece004ce93a79db0a05c353e38b9d1c82",
+      "indexPath": "production-assets/harvesters/derived/static/sunscar-t2-destroyed.png",
+      "size": [
+        112,
+        112
+      ]
+    },
+    {
+      "path": "derived/static/sunscar-t2-idle.png",
+      "bytes": 5119,
+      "sha256": "83dd5f6db524d60e280ae2442f726f869233269d6e4c52dad907590048290afd",
+      "indexPath": "production-assets/harvesters/derived/static/sunscar-t2-idle.png",
+      "size": [
+        112,
+        112
+      ]
+    },
+    {
+      "path": "derived/static/sunscar-t2-ready.png",
+      "bytes": 6678,
+      "sha256": "d20d5a8efb1de97fd07b231e6cdd7f5d789d3cf4df7d8fd1f18cd2413ea13299",
+      "indexPath": "production-assets/harvesters/derived/static/sunscar-t2-ready.png",
+      "size": [
+        112,
+        112
+      ]
+    },
+    {
+      "path": "derived/static/sunscar-t3-construction.png",
+      "bytes": 5985,
+      "sha256": "cead6e7968a5460219dbd269e0e2cef7401be6b92a1d500407acf684e8f88ffe",
+      "indexPath": "production-assets/harvesters/derived/static/sunscar-t3-construction.png",
+      "size": [
+        112,
+        112
+      ]
+    },
+    {
+      "path": "derived/static/sunscar-t3-damaged.png",
+      "bytes": 8054,
+      "sha256": "51b9327d297e584e28fbe962db6ad5d544b1ecd7d51f546d929bf559acbb20fa",
+      "indexPath": "production-assets/harvesters/derived/static/sunscar-t3-damaged.png",
+      "size": [
+        112,
+        112
+      ]
+    },
+    {
+      "path": "derived/static/sunscar-t3-destroyed.png",
+      "bytes": 5026,
+      "sha256": "5eb600d816e71f47d2e29f354e5647987c65aa96db784e9fea3637cefb26e610",
+      "indexPath": "production-assets/harvesters/derived/static/sunscar-t3-destroyed.png",
+      "size": [
+        112,
+        112
+      ]
+    },
+    {
+      "path": "derived/static/sunscar-t3-idle.png",
+      "bytes": 6836,
+      "sha256": "3882d4b6f6a9bf6ce458f69039238d817c47eef2244a13cbe20a8b129094133a",
+      "indexPath": "production-assets/harvesters/derived/static/sunscar-t3-idle.png",
+      "size": [
+        112,
+        112
+      ]
+    },
+    {
+      "path": "derived/static/sunscar-t3-ready.png",
+      "bytes": 8337,
+      "sha256": "5a7434474de86e8a4295f3f51731740fd467fba8d8d889aacd2267af61f06fe6",
+      "indexPath": "production-assets/harvesters/derived/static/sunscar-t3-ready.png",
+      "size": [
+        112,
+        112
+      ]
+    },
+    {
+      "path": "derived/static/sunscar-t4-construction.png",
+      "bytes": 7846,
+      "sha256": "3dc1bad0c91190090fdbdb8d1acbdc94f2f68cfd97530b830fa0dd6711a7cfc2",
+      "indexPath": "production-assets/harvesters/derived/static/sunscar-t4-construction.png",
+      "size": [
+        112,
+        112
+      ]
+    },
+    {
+      "path": "derived/static/sunscar-t4-damaged.png",
+      "bytes": 6888,
+      "sha256": "d44841412f3689e65cdee2516652e27b605b28decfcb39e3a321f2878c3b5b09",
+      "indexPath": "production-assets/harvesters/derived/static/sunscar-t4-damaged.png",
+      "size": [
+        112,
+        112
+      ]
+    },
+    {
+      "path": "derived/static/sunscar-t4-destroyed.png",
+      "bytes": 5976,
+      "sha256": "78136a68f1f2f4f045bed29b53b00f62adb4af83e88e712602dcb12a1ea439d0",
+      "indexPath": "production-assets/harvesters/derived/static/sunscar-t4-destroyed.png",
+      "size": [
+        112,
+        112
+      ]
+    },
+    {
+      "path": "derived/static/sunscar-t4-idle.png",
+      "bytes": 7550,
+      "sha256": "8ab575f4a2a65708d1b0287417bbf97fee971dfef7c3a100a28a5bff10d10ec2",
+      "indexPath": "production-assets/harvesters/derived/static/sunscar-t4-idle.png",
+      "size": [
+        112,
+        112
+      ]
+    },
+    {
+      "path": "derived/static/sunscar-t4-ready.png",
+      "bytes": 9105,
+      "sha256": "238256ae4e3eb1343ed99d20ff81f10492dc4618dc48ab93d52ccd7f5bac2e1a",
+      "indexPath": "production-assets/harvesters/derived/static/sunscar-t4-ready.png",
+      "size": [
+        112,
+        112
+      ]
+    },
+    {
+      "path": "derived/static/thornwake-t1-construction.png",
+      "bytes": 6600,
+      "sha256": "9e546a251cee6324ada3a3a02b8d95607147088f4ee7f2734f056025bd3381a2",
+      "indexPath": "production-assets/harvesters/derived/static/thornwake-t1-construction.png",
+      "size": [
+        112,
+        112
+      ]
+    },
+    {
+      "path": "derived/static/thornwake-t1-damaged.png",
+      "bytes": 9119,
+      "sha256": "d6ac64387a70f779ab13c00a5eb8050586bc02c63364f5504d853152c803a79c",
+      "indexPath": "production-assets/harvesters/derived/static/thornwake-t1-damaged.png",
+      "size": [
+        112,
+        112
+      ]
+    },
+    {
+      "path": "derived/static/thornwake-t1-destroyed.png",
+      "bytes": 5607,
+      "sha256": "3db88e664ca741c6555fdd469a3eefdd76396070821d17e479adb70b6e2dc4e9",
+      "indexPath": "production-assets/harvesters/derived/static/thornwake-t1-destroyed.png",
+      "size": [
+        112,
+        112
+      ]
+    },
+    {
+      "path": "derived/static/thornwake-t1-idle.png",
+      "bytes": 5848,
+      "sha256": "7493b5520c84d77c25b88f330a622822b2e6a632de86e327a1675fcc3a642dda",
+      "indexPath": "production-assets/harvesters/derived/static/thornwake-t1-idle.png",
+      "size": [
+        112,
+        112
+      ]
+    },
+    {
+      "path": "derived/static/thornwake-t1-ready.png",
+      "bytes": 7403,
+      "sha256": "efbf6fc2ee0967e2f0feb2f1b8214a3d57e2b7b00887d54cfb8e69748ba55c97",
+      "indexPath": "production-assets/harvesters/derived/static/thornwake-t1-ready.png",
+      "size": [
+        112,
+        112
+      ]
+    },
+    {
+      "path": "derived/static/thornwake-t2-construction.png",
+      "bytes": 6664,
+      "sha256": "fcb6dd3af4bdfe4598dbfee3126d5770c9994995553eb47301200a602c2fb3f1",
+      "indexPath": "production-assets/harvesters/derived/static/thornwake-t2-construction.png",
+      "size": [
+        112,
+        112
+      ]
+    },
+    {
+      "path": "derived/static/thornwake-t2-damaged.png",
+      "bytes": 6182,
+      "sha256": "4834663e3cc807106d947d2f72f263b48b835a7af6de19d24a246f1ad2257ee3",
+      "indexPath": "production-assets/harvesters/derived/static/thornwake-t2-damaged.png",
+      "size": [
+        112,
+        112
+      ]
+    },
+    {
+      "path": "derived/static/thornwake-t2-destroyed.png",
+      "bytes": 5349,
+      "sha256": "964fd0bcd258eadf75a183747651019ece004ce93a79db0a05c353e38b9d1c82",
+      "indexPath": "production-assets/harvesters/derived/static/thornwake-t2-destroyed.png",
+      "size": [
+        112,
+        112
+      ]
+    },
+    {
+      "path": "derived/static/thornwake-t2-idle.png",
+      "bytes": 5255,
+      "sha256": "93a9b1238aa154169726bed19c5f1efe3ecc03e0e9b0bd996a9afaa14697b9e2",
+      "indexPath": "production-assets/harvesters/derived/static/thornwake-t2-idle.png",
+      "size": [
+        112,
+        112
+      ]
+    },
+    {
+      "path": "derived/static/thornwake-t2-ready.png",
+      "bytes": 6811,
+      "sha256": "5eafb8033924500158b6b1b00f9e1e3538c6e62617562b65fd96559f5e07f391",
+      "indexPath": "production-assets/harvesters/derived/static/thornwake-t2-ready.png",
+      "size": [
+        112,
+        112
+      ]
+    },
+    {
+      "path": "derived/static/thornwake-t3-construction.png",
+      "bytes": 5985,
+      "sha256": "cead6e7968a5460219dbd269e0e2cef7401be6b92a1d500407acf684e8f88ffe",
+      "indexPath": "production-assets/harvesters/derived/static/thornwake-t3-construction.png",
+      "size": [
+        112,
+        112
+      ]
+    },
+    {
+      "path": "derived/static/thornwake-t3-damaged.png",
+      "bytes": 8042,
+      "sha256": "23888ec4141fae2408a120e78ed3327a56091ad9a935553b4c566a9394f5890d",
+      "indexPath": "production-assets/harvesters/derived/static/thornwake-t3-damaged.png",
+      "size": [
+        112,
+        112
+      ]
+    },
+    {
+      "path": "derived/static/thornwake-t3-destroyed.png",
+      "bytes": 5026,
+      "sha256": "5eb600d816e71f47d2e29f354e5647987c65aa96db784e9fea3637cefb26e610",
+      "indexPath": "production-assets/harvesters/derived/static/thornwake-t3-destroyed.png",
+      "size": [
+        112,
+        112
+      ]
+    },
+    {
+      "path": "derived/static/thornwake-t3-idle.png",
+      "bytes": 6759,
+      "sha256": "f4c1bc529c63a2c6b55381bfec020d5336d9b0e7cea4142faf68315f20af68b6",
+      "indexPath": "production-assets/harvesters/derived/static/thornwake-t3-idle.png",
+      "size": [
+        112,
+        112
+      ]
+    },
+    {
+      "path": "derived/static/thornwake-t3-ready.png",
+      "bytes": 8320,
+      "sha256": "128740e40bc052011d6263a6dd15648ae2b9bc796b9fbb657a95dddfcc8d2612",
+      "indexPath": "production-assets/harvesters/derived/static/thornwake-t3-ready.png",
+      "size": [
+        112,
+        112
+      ]
+    },
+    {
+      "path": "derived/static/thornwake-t4-construction.png",
+      "bytes": 7846,
+      "sha256": "3dc1bad0c91190090fdbdb8d1acbdc94f2f68cfd97530b830fa0dd6711a7cfc2",
+      "indexPath": "production-assets/harvesters/derived/static/thornwake-t4-construction.png",
+      "size": [
+        112,
+        112
+      ]
+    },
+    {
+      "path": "derived/static/thornwake-t4-damaged.png",
+      "bytes": 8627,
+      "sha256": "7a95cb64dea20a43a74c7d5f1af67041f376abc8ac612b81b4fcad0ea03300ab",
+      "indexPath": "production-assets/harvesters/derived/static/thornwake-t4-damaged.png",
+      "size": [
+        112,
+        112
+      ]
+    },
+    {
+      "path": "derived/static/thornwake-t4-destroyed.png",
+      "bytes": 5976,
+      "sha256": "78136a68f1f2f4f045bed29b53b00f62adb4af83e88e712602dcb12a1ea439d0",
+      "indexPath": "production-assets/harvesters/derived/static/thornwake-t4-destroyed.png",
+      "size": [
+        112,
+        112
+      ]
+    },
+    {
+      "path": "derived/static/thornwake-t4-idle.png",
+      "bytes": 7631,
+      "sha256": "900df3e0342087d6ab17bf3af25a10f31b91ab0bb0785594c4271e50924e7b1d",
+      "indexPath": "production-assets/harvesters/derived/static/thornwake-t4-idle.png",
+      "size": [
+        112,
+        112
+      ]
+    },
+    {
+      "path": "derived/static/thornwake-t4-ready.png",
+      "bytes": 9180,
+      "sha256": "b847ac1a4f78e318251da55cc65e255e1174775f47303c2aedcced54cc380200",
+      "indexPath": "production-assets/harvesters/derived/static/thornwake-t4-ready.png",
+      "size": [
+        112,
+        112
+      ]
+    },
+    {
+      "path": "manifest.json",
+      "bytes": 1124244,
+      "sha256": "0a977cffac8af0f1cb34515b0782d39f9a7b21afe07606d9b3113737024b5320",
+      "indexPath": "production-assets/harvesters/manifest.json"
+    }
+  ]
+}

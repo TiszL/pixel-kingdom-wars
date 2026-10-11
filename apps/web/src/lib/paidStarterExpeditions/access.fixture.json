@@ -1,0 +1,60 @@
+{
+  "version": 1,
+  "wallet": "4vJ9JU1bJJE96FWSJKvHsmmFADCg4gpZQff4P3bkLKi",
+  "realm": 0,
+  "accessAddress": "Cn1LFDQ94qfq3nVGa6DBR4UbVqFY1tcp2wQCJZZgv3Q8",
+  "configAddress": "DaJtRqPP9TvLspdaX9QLfN4cRWroNUdj4TxnrFRqgH6C",
+  "expiresAt": "1468800",
+  "finality": {
+    "commitment": "finalized",
+    "contextSlot": "150",
+    "observedAt": "1970-01-11T00:00:00.000Z",
+    "chainUnixTimestamp": "864000"
+  },
+  "source": {
+    "trust": "trusted-finalized-rpc-reviewed-program",
+    "stateProvenance": "fresh-reviewed-deployment",
+    "genesisHash": "GgBaCs3NCBuZN12kCJgAW63ydqohFkHEdfdEXBPzLHq",
+    "programId": "27bgnruDhviykKK12k5t2imTEgLUYfAgZRwGiD4zxWDf",
+    "reviewedDeploymentSlot": 90,
+    "reviewedProgramDataSha256": "a5db34c78ceae707e1c8369da96d8705dfbc4477842b1276915a9573d32391a4",
+    "upgradeAuthority": "CktRuQ2mttgRGkXJtyksdKHjUdc2C4TgDzyB98oEzy8",
+    "accounts": [
+      {
+        "address": "27bgnruDhviykKK12k5t2imTEgLUYfAgZRwGiD4zxWDf",
+        "exists": true,
+        "owner": "BPFLoaderUpgradeab1e11111111111111111111111",
+        "executable": true,
+        "dataSha256": "6e3ccd238d321da8683ff67c89f5deb4f964c400c1124fc8c980d0e0d488bd28"
+      },
+      {
+        "address": "4hNHCop8CsMJ4jVMCpPnSEG4bS8fKRNmnRJWfVdWgMLv",
+        "exists": true,
+        "owner": "BPFLoaderUpgradeab1e11111111111111111111111",
+        "executable": false,
+        "dataSha256": "a5db34c78ceae707e1c8369da96d8705dfbc4477842b1276915a9573d32391a4"
+      },
+      {
+        "address": "DaJtRqPP9TvLspdaX9QLfN4cRWroNUdj4TxnrFRqgH6C",
+        "exists": true,
+        "owner": "27bgnruDhviykKK12k5t2imTEgLUYfAgZRwGiD4zxWDf",
+        "executable": false,
+        "dataSha256": "07f4876b2cca57e93f038aa7bc258f2ab11af8e8c957a94d0aec45538c809da5"
+      },
+      {
+        "address": "Cn1LFDQ94qfq3nVGa6DBR4UbVqFY1tcp2wQCJZZgv3Q8",
+        "exists": true,
+        "owner": "27bgnruDhviykKK12k5t2imTEgLUYfAgZRwGiD4zxWDf",
+        "executable": false,
+        "dataSha256": "5a28905ebf14ecfa0e0c9d4c5eca55c5c411ca08a7c4c9f51e84f72524d2667b"
+      },
+      {
+        "address": "SysvarC1ock11111111111111111111111111111111",
+        "exists": true,
+        "owner": "Sysvar1111111111111111111111111111111111111",
+        "executable": false,
+        "dataSha256": "ae7651165dcfcc0df0549e7f8ecf28fe5737589dabd4a912240676615cdbcc5b"
+      }
+    ]
+  }
+}

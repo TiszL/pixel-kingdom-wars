@@ -1,0 +1,16 @@
+{
+  "recordedAt": "2026-09-21T12:02:28.407687+00:00",
+  "sourceCandidate": "production-assets/currency/review/gems-pack-v1/frame_0.png",
+  "sourceSha256": "5e018e37d4a3ab376ba853cb7a9fa943b9abd00c58044a09e7f8e2ab4355b2e9",
+  "originalObjectId": "f1dba13f-fd31-4912-bfae-3bec99e35015",
+  "newChips": {
+    "24": "c69692b8-aa04-4584-b7cc-fcb7ffa8558f",
+    "32": "2521d7ed-fb06-4e2b-9c31-8d412671ae64",
+    "48": "901da3cf-4eb1-4493-855e-de9129fbb9ae"
+  },
+  "promptTemplate": "Re-render the selected emerald-green rectangular step-cut gem at native SIZE, centered with transparent margin, preserving silhouette/palette/upper-left lighting, simplifying pixel clusters; no text/frame/background/resampling.",
+  "rawProviderBytesPreserved": true,
+  "originalCandidateUnchanged": true,
+  "review": "All four native PNGs visually inspected, transparent bounds checked. 24/32/48 are provider renders, not downscales.",
+  "scope": "Currency only; no realm, buildings, renderer or owner masters changed."
+}

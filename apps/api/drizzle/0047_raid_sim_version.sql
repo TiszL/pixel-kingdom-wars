@@ -1,0 +1,1 @@
+ALTER TABLE "raids" ADD COLUMN "sim_version" integer DEFAULT 1 NOT NULL;

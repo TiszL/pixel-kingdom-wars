@@ -1,0 +1,3345 @@
+{
+  "schemaVersion": 1,
+  "sourceCommit": "427381a2adf934bbcc902baefc207a655b185eb6",
+  "simVersion": 18,
+  "snapshot": {
+    "keepLevel": 17,
+    "buildings": [
+      {
+        "id": "keep",
+        "type": "keep",
+        "level": 17,
+        "tx": 14,
+        "ty": 14
+      },
+      {
+        "id": "air",
+        "type": "airdefence",
+        "level": 17,
+        "tx": 10,
+        "ty": 10
+      }
+    ],
+    "surplusShards": 1000,
+    "claimMin": 2,
+    "claimMax": 16
+  },
+  "orders": {
+    "deploys": [
+      {
+        "troop": "giant",
+        "tx": 0,
+        "ty": 14,
+        "tMs": 0
+      },
+      {
+        "troop": "dragon",
+        "tx": 10,
+        "ty": 0,
+        "tMs": 0
+      }
+    ]
+  },
+  "seed": 141847,
+  "options": {},
+  "stars": 0,
+  "destructionPct": 27,
+  "keepDestroyed": false,
+  "vaultDestroyed": false,
+  "mineDestroyed": false,
+  "victory": false,
+  "buildings": [
+    {
+      "id": "keep",
+      "type": "keep",
+      "hp": 15358,
+      "maxHp": 15358,
+      "destroyed": false
+    },
+    {
+      "id": "air",
+      "type": "airdefence",
+      "hp": 0,
+      "maxHp": 5759,
+      "destroyed": true
+    }
+  ],
+  "ticks": 650,
+  "events": [
+    {
+      "t": 0,
+      "e": "deploy",
+      "id": 0,
+      "troop": "giant",
+      "x": 128,
+      "y": 3712
+    },
+    {
+      "t": 0,
+      "e": "deploy",
+      "id": 1,
+      "troop": "dragon",
+      "x": 2688,
+      "y": 128
+    },
+    {
+      "t": 0,
+      "e": "pos",
+      "id": 0,
+      "x": 148,
+      "y": 3707
+    },
+    {
+      "t": 0,
+      "e": "pos",
+      "id": 1,
+      "x": 2688,
+      "y": 153
+    },
+    {
+      "t": 5,
+      "e": "pos",
+      "id": 0,
+      "x": 248,
+      "y": 3682
+    },
+    {
+      "t": 5,
+      "e": "pos",
+      "id": 1,
+      "x": 2688,
+      "y": 278
+    },
+    {
+      "t": 10,
+      "e": "pos",
+      "id": 0,
+      "x": 348,
+      "y": 3657
+    },
+    {
+      "t": 10,
+      "e": "pos",
+      "id": 1,
+      "x": 2688,
+      "y": 403
+    },
+    {
+      "t": 15,
+      "e": "pos",
+      "id": 0,
+      "x": 448,
+      "y": 3632
+    },
+    {
+      "t": 15,
+      "e": "pos",
+      "id": 1,
+      "x": 2688,
+      "y": 528
+    },
+    {
+      "t": 20,
+      "e": "pos",
+      "id": 0,
+      "x": 548,
+      "y": 3607
+    },
+    {
+      "t": 20,
+      "e": "pos",
+      "id": 1,
+      "x": 2688,
+      "y": 653
+    },
+    {
+      "t": 25,
+      "e": "pos",
+      "id": 0,
+      "x": 648,
+      "y": 3582
+    },
+    {
+      "t": 25,
+      "e": "pos",
+      "id": 1,
+      "x": 2688,
+      "y": 778
+    },
+    {
+      "t": 30,
+      "e": "pos",
+      "id": 0,
+      "x": 748,
+      "y": 3557
+    },
+    {
+      "t": 30,
+      "e": "pos",
+      "id": 1,
+      "x": 2688,
+      "y": 903
+    },
+    {
+      "t": 35,
+      "e": "pos",
+      "id": 0,
+      "x": 848,
+      "y": 3532
+    },
+    {
+      "t": 35,
+      "e": "pos",
+      "id": 1,
+      "x": 2688,
+      "y": 1028
+    },
+    {
+      "t": 35,
+      "e": "fire",
+      "id": "air",
+      "target": 1,
+      "proj": "arrow",
+      "ix": 2688,
+      "iy": 1028,
+      "releaseOffsetMs": 0,
+      "flightMs": 650,
+      "impactOffsetTicks": 7
+    },
+    {
+      "t": 40,
+      "e": "pos",
+      "id": 0,
+      "x": 948,
+      "y": 3507
+    },
+    {
+      "t": 40,
+      "e": "pos",
+      "id": 1,
+      "x": 2688,
+      "y": 1153
+    },
+    {
+      "t": 42,
+      "e": "hit",
+      "target": 1,
+      "dmg": 2048
+    },
+    {
+      "t": 42,
+      "e": "troopDeath",
+      "id": 1
+    },
+    {
+      "t": 45,
+      "e": "pos",
+      "id": 0,
+      "x": 1048,
+      "y": 3482
+    },
+    {
+      "t": 50,
+      "e": "pos",
+      "id": 0,
+      "x": 1148,
+      "y": 3457
+    },
+    {
+      "t": 55,
+      "e": "pos",
+      "id": 0,
+      "x": 1248,
+      "y": 3432
+    },
+    {
+      "t": 60,
+      "e": "pos",
+      "id": 0,
+      "x": 1348,
+      "y": 3407
+    },
+    {
+      "t": 65,
+      "e": "pos",
+      "id": 0,
+      "x": 1448,
+      "y": 3382
+    },
+    {
+      "t": 70,
+      "e": "pos",
+      "id": 0,
+      "x": 1548,
+      "y": 3357
+    },
+    {
+      "t": 75,
+      "e": "pos",
+      "id": 0,
+      "x": 1648,
+      "y": 3332
+    },
+    {
+      "t": 80,
+      "e": "pos",
+      "id": 0,
+      "x": 1748,
+      "y": 3307
+    },
+    {
+      "t": 85,
+      "e": "pos",
+      "id": 0,
+      "x": 1848,
+      "y": 3282
+    },
+    {
+      "t": 90,
+      "e": "pos",
+      "id": 0,
+      "x": 1948,
+      "y": 3255
+    },
+    {
+      "t": 91,
+      "e": "attackRun",
+      "id": 0,
+      "side": "attacker",
+      "troop": "giant",
+      "targetKind": "building",
+      "target": "air",
+      "ix": 2560,
+      "iy": 3072,
+      "mode": "projectile",
+      "technique": "boulder",
+      "cycleMs": 500,
+      "releaseOffsetMs": 250,
+      "cycleTicks": 5,
+      "releaseOffsetTicks": 3,
+      "impactOffsetsTicks": [
+        13
+      ],
+      "cadenceTicks": 5,
+      "count": 1
+    },
+    {
+      "t": 96,
+      "e": "attackRun",
+      "id": 0,
+      "side": "attacker",
+      "troop": "giant",
+      "targetKind": "building",
+      "target": "air",
+      "ix": 2560,
+      "iy": 3072,
+      "mode": "projectile",
+      "technique": "boulder",
+      "cycleMs": 500,
+      "releaseOffsetMs": 250,
+      "cycleTicks": 5,
+      "releaseOffsetTicks": 3,
+      "impactOffsetsTicks": [
+        13
+      ],
+      "cadenceTicks": 5,
+      "count": 1
+    },
+    {
+      "t": 101,
+      "e": "attackRun",
+      "id": 0,
+      "side": "attacker",
+      "troop": "giant",
+      "targetKind": "building",
+      "target": "air",
+      "ix": 2560,
+      "iy": 3072,
+      "mode": "projectile",
+      "technique": "boulder",
+      "cycleMs": 500,
+      "releaseOffsetMs": 250,
+      "cycleTicks": 5,
+      "releaseOffsetTicks": 3,
+      "impactOffsetsTicks": [
+        13
+      ],
+      "cadenceTicks": 5,
+      "count": 1
+    },
+    {
+      "t": 104,
+      "e": "hit",
+      "target": "air",
+      "dmg": 55
+    },
+    {
+      "t": 106,
+      "e": "attackRun",
+      "id": 0,
+      "side": "attacker",
+      "troop": "giant",
+      "targetKind": "building",
+      "target": "air",
+      "ix": 2560,
+      "iy": 3072,
+      "mode": "projectile",
+      "technique": "boulder",
+      "cycleMs": 500,
+      "releaseOffsetMs": 250,
+      "cycleTicks": 5,
+      "releaseOffsetTicks": 3,
+      "impactOffsetsTicks": [
+        13
+      ],
+      "cadenceTicks": 5,
+      "count": 1
+    },
+    {
+      "t": 109,
+      "e": "hit",
+      "target": "air",
+      "dmg": 55
+    },
+    {
+      "t": 111,
+      "e": "attackRun",
+      "id": 0,
+      "side": "attacker",
+      "troop": "giant",
+      "targetKind": "building",
+      "target": "air",
+      "ix": 2560,
+      "iy": 3072,
+      "mode": "projectile",
+      "technique": "boulder",
+      "cycleMs": 500,
+      "releaseOffsetMs": 250,
+      "cycleTicks": 5,
+      "releaseOffsetTicks": 3,
+      "impactOffsetsTicks": [
+        13
+      ],
+      "cadenceTicks": 5,
+      "count": 1
+    },
+    {
+      "t": 114,
+      "e": "hit",
+      "target": "air",
+      "dmg": 55
+    },
+    {
+      "t": 116,
+      "e": "attackRun",
+      "id": 0,
+      "side": "attacker",
+      "troop": "giant",
+      "targetKind": "building",
+      "target": "air",
+      "ix": 2560,
+      "iy": 3072,
+      "mode": "projectile",
+      "technique": "boulder",
+      "cycleMs": 500,
+      "releaseOffsetMs": 250,
+      "cycleTicks": 5,
+      "releaseOffsetTicks": 3,
+      "impactOffsetsTicks": [
+        13
+      ],
+      "cadenceTicks": 5,
+      "count": 1
+    },
+    {
+      "t": 119,
+      "e": "hit",
+      "target": "air",
+      "dmg": 55
+    },
+    {
+      "t": 121,
+      "e": "attackRun",
+      "id": 0,
+      "side": "attacker",
+      "troop": "giant",
+      "targetKind": "building",
+      "target": "air",
+      "ix": 2560,
+      "iy": 3072,
+      "mode": "projectile",
+      "technique": "boulder",
+      "cycleMs": 500,
+      "releaseOffsetMs": 250,
+      "cycleTicks": 5,
+      "releaseOffsetTicks": 3,
+      "impactOffsetsTicks": [
+        13
+      ],
+      "cadenceTicks": 5,
+      "count": 1
+    },
+    {
+      "t": 124,
+      "e": "hit",
+      "target": "air",
+      "dmg": 55
+    },
+    {
+      "t": 126,
+      "e": "attackRun",
+      "id": 0,
+      "side": "attacker",
+      "troop": "giant",
+      "targetKind": "building",
+      "target": "air",
+      "ix": 2560,
+      "iy": 3072,
+      "mode": "projectile",
+      "technique": "boulder",
+      "cycleMs": 500,
+      "releaseOffsetMs": 250,
+      "cycleTicks": 5,
+      "releaseOffsetTicks": 3,
+      "impactOffsetsTicks": [
+        13
+      ],
+      "cadenceTicks": 5,
+      "count": 1
+    },
+    {
+      "t": 129,
+      "e": "hit",
+      "target": "air",
+      "dmg": 55
+    },
+    {
+      "t": 131,
+      "e": "attackRun",
+      "id": 0,
+      "side": "attacker",
+      "troop": "giant",
+      "targetKind": "building",
+      "target": "air",
+      "ix": 2560,
+      "iy": 3072,
+      "mode": "projectile",
+      "technique": "boulder",
+      "cycleMs": 500,
+      "releaseOffsetMs": 250,
+      "cycleTicks": 5,
+      "releaseOffsetTicks": 3,
+      "impactOffsetsTicks": [
+        13
+      ],
+      "cadenceTicks": 5,
+      "count": 1
+    },
+    {
+      "t": 134,
+      "e": "hit",
+      "target": "air",
+      "dmg": 55
+    },
+    {
+      "t": 136,
+      "e": "attackRun",
+      "id": 0,
+      "side": "attacker",
+      "troop": "giant",
+      "targetKind": "building",
+      "target": "air",
+      "ix": 2560,
+      "iy": 3072,
+      "mode": "projectile",
+      "technique": "boulder",
+      "cycleMs": 500,
+      "releaseOffsetMs": 250,
+      "cycleTicks": 5,
+      "releaseOffsetTicks": 3,
+      "impactOffsetsTicks": [
+        13
+      ],
+      "cadenceTicks": 5,
+      "count": 1
+    },
+    {
+      "t": 139,
+      "e": "hit",
+      "target": "air",
+      "dmg": 55
+    },
+    {
+      "t": 141,
+      "e": "attackRun",
+      "id": 0,
+      "side": "attacker",
+      "troop": "giant",
+      "targetKind": "building",
+      "target": "air",
+      "ix": 2560,
+      "iy": 3072,
+      "mode": "projectile",
+      "technique": "boulder",
+      "cycleMs": 500,
+      "releaseOffsetMs": 250,
+      "cycleTicks": 5,
+      "releaseOffsetTicks": 3,
+      "impactOffsetsTicks": [
+        13
+      ],
+      "cadenceTicks": 5,
+      "count": 1
+    },
+    {
+      "t": 144,
+      "e": "hit",
+      "target": "air",
+      "dmg": 55
+    },
+    {
+      "t": 146,
+      "e": "attackRun",
+      "id": 0,
+      "side": "attacker",
+      "troop": "giant",
+      "targetKind": "building",
+      "target": "air",
+      "ix": 2560,
+      "iy": 3072,
+      "mode": "projectile",
+      "technique": "boulder",
+      "cycleMs": 500,
+      "releaseOffsetMs": 250,
+      "cycleTicks": 5,
+      "releaseOffsetTicks": 3,
+      "impactOffsetsTicks": [
+        13
+      ],
+      "cadenceTicks": 5,
+      "count": 1
+    },
+    {
+      "t": 149,
+      "e": "hit",
+      "target": "air",
+      "dmg": 55
+    },
+    {
+      "t": 151,
+      "e": "attackRun",
+      "id": 0,
+      "side": "attacker",
+      "troop": "giant",
+      "targetKind": "building",
+      "target": "air",
+      "ix": 2560,
+      "iy": 3072,
+      "mode": "projectile",
+      "technique": "boulder",
+      "cycleMs": 500,
+      "releaseOffsetMs": 250,
+      "cycleTicks": 5,
+      "releaseOffsetTicks": 3,
+      "impactOffsetsTicks": [
+        13
+      ],
+      "cadenceTicks": 5,
+      "count": 1
+    },
+    {
+      "t": 154,
+      "e": "hit",
+      "target": "air",
+      "dmg": 55
+    },
+    {
+      "t": 156,
+      "e": "attackRun",
+      "id": 0,
+      "side": "attacker",
+      "troop": "giant",
+      "targetKind": "building",
+      "target": "air",
+      "ix": 2560,
+      "iy": 3072,
+      "mode": "projectile",
+      "technique": "boulder",
+      "cycleMs": 500,
+      "releaseOffsetMs": 250,
+      "cycleTicks": 5,
+      "releaseOffsetTicks": 3,
+      "impactOffsetsTicks": [
+        13
+      ],
+      "cadenceTicks": 5,
+      "count": 1
+    },
+    {
+      "t": 159,
+      "e": "hit",
+      "target": "air",
+      "dmg": 55
+    },
+    {
+      "t": 161,
+      "e": "attackRun",
+      "id": 0,
+      "side": "attacker",
+      "troop": "giant",
+      "targetKind": "building",
+      "target": "air",
+      "ix": 2560,
+      "iy": 3072,
+      "mode": "projectile",
+      "technique": "boulder",
+      "cycleMs": 500,
+      "releaseOffsetMs": 250,
+      "cycleTicks": 5,
+      "releaseOffsetTicks": 3,
+      "impactOffsetsTicks": [
+        13
+      ],
+      "cadenceTicks": 5,
+      "count": 1
+    },
+    {
+      "t": 164,
+      "e": "hit",
+      "target": "air",
+      "dmg": 55
+    },
+    {
+      "t": 166,
+      "e": "attackRun",
+      "id": 0,
+      "side": "attacker",
+      "troop": "giant",
+      "targetKind": "building",
+      "target": "air",
+      "ix": 2560,
+      "iy": 3072,
+      "mode": "projectile",
+      "technique": "boulder",
+      "cycleMs": 500,
+      "releaseOffsetMs": 250,
+      "cycleTicks": 5,
+      "releaseOffsetTicks": 3,
+      "impactOffsetsTicks": [
+        13
+      ],
+      "cadenceTicks": 5,
+      "count": 1
+    },
+    {
+      "t": 169,
+      "e": "hit",
+      "target": "air",
+      "dmg": 55
+    },
+    {
+      "t": 171,
+      "e": "attackRun",
+      "id": 0,
+      "side": "attacker",
+      "troop": "giant",
+      "targetKind": "building",
+      "target": "air",
+      "ix": 2560,
+      "iy": 3072,
+      "mode": "projectile",
+      "technique": "boulder",
+      "cycleMs": 500,
+      "releaseOffsetMs": 250,
+      "cycleTicks": 5,
+      "releaseOffsetTicks": 3,
+      "impactOffsetsTicks": [
+        13
+      ],
+      "cadenceTicks": 5,
+      "count": 1
+    },
+    {
+      "t": 174,
+      "e": "hit",
+      "target": "air",
+      "dmg": 55
+    },
+    {
+      "t": 176,
+      "e": "attackRun",
+      "id": 0,
+      "side": "attacker",
+      "troop": "giant",
+      "targetKind": "building",
+      "target": "air",
+      "ix": 2560,
+      "iy": 3072,
+      "mode": "projectile",
+      "technique": "boulder",
+      "cycleMs": 500,
+      "releaseOffsetMs": 250,
+      "cycleTicks": 5,
+      "releaseOffsetTicks": 3,
+      "impactOffsetsTicks": [
+        13
+      ],
+      "cadenceTicks": 5,
+      "count": 1
+    },
+    {
+      "t": 179,
+      "e": "hit",
+      "target": "air",
+      "dmg": 55
+    },
+    {
+      "t": 181,
+      "e": "attackRun",
+      "id": 0,
+      "side": "attacker",
+      "troop": "giant",
+      "targetKind": "building",
+      "target": "air",
+      "ix": 2560,
+      "iy": 3072,
+      "mode": "projectile",
+      "technique": "boulder",
+      "cycleMs": 500,
+      "releaseOffsetMs": 250,
+      "cycleTicks": 5,
+      "releaseOffsetTicks": 3,
+      "impactOffsetsTicks": [
+        13
+      ],
+      "cadenceTicks": 5,
+      "count": 1
+    },
+    {
+      "t": 184,
+      "e": "hit",
+      "target": "air",
+      "dmg": 55
+    },
+    {
+      "t": 186,
+      "e": "attackRun",
+      "id": 0,
+      "side": "attacker",
+      "troop": "giant",
+      "targetKind": "building",
+      "target": "air",
+      "ix": 2560,
+      "iy": 3072,
+      "mode": "projectile",
+      "technique": "boulder",
+      "cycleMs": 500,
+      "releaseOffsetMs": 250,
+      "cycleTicks": 5,
+      "releaseOffsetTicks": 3,
+      "impactOffsetsTicks": [
+        13
+      ],
+      "cadenceTicks": 5,
+      "count": 1
+    },
+    {
+      "t": 189,
+      "e": "hit",
+      "target": "air",
+      "dmg": 55
+    },
+    {
+      "t": 191,
+      "e": "attackRun",
+      "id": 0,
+      "side": "attacker",
+      "troop": "giant",
+      "targetKind": "building",
+      "target": "air",
+      "ix": 2560,
+      "iy": 3072,
+      "mode": "projectile",
+      "technique": "boulder",
+      "cycleMs": 500,
+      "releaseOffsetMs": 250,
+      "cycleTicks": 5,
+      "releaseOffsetTicks": 3,
+      "impactOffsetsTicks": [
+        13
+      ],
+      "cadenceTicks": 5,
+      "count": 1
+    },
+    {
+      "t": 194,
+      "e": "hit",
+      "target": "air",
+      "dmg": 55
+    },
+    {
+      "t": 196,
+      "e": "attackRun",
+      "id": 0,
+      "side": "attacker",
+      "troop": "giant",
+      "targetKind": "building",
+      "target": "air",
+      "ix": 2560,
+      "iy": 3072,
+      "mode": "projectile",
+      "technique": "boulder",
+      "cycleMs": 500,
+      "releaseOffsetMs": 250,
+      "cycleTicks": 5,
+      "releaseOffsetTicks": 3,
+      "impactOffsetsTicks": [
+        13
+      ],
+      "cadenceTicks": 5,
+      "count": 1
+    },
+    {
+      "t": 199,
+      "e": "hit",
+      "target": "air",
+      "dmg": 55
+    },
+    {
+      "t": 201,
+      "e": "attackRun",
+      "id": 0,
+      "side": "attacker",
+      "troop": "giant",
+      "targetKind": "building",
+      "target": "air",
+      "ix": 2560,
+      "iy": 3072,
+      "mode": "projectile",
+      "technique": "boulder",
+      "cycleMs": 500,
+      "releaseOffsetMs": 250,
+      "cycleTicks": 5,
+      "releaseOffsetTicks": 3,
+      "impactOffsetsTicks": [
+        13
+      ],
+      "cadenceTicks": 5,
+      "count": 1
+    },
+    {
+      "t": 204,
+      "e": "hit",
+      "target": "air",
+      "dmg": 55
+    },
+    {
+      "t": 206,
+      "e": "attackRun",
+      "id": 0,
+      "side": "attacker",
+      "troop": "giant",
+      "targetKind": "building",
+      "target": "air",
+      "ix": 2560,
+      "iy": 3072,
+      "mode": "projectile",
+      "technique": "boulder",
+      "cycleMs": 500,
+      "releaseOffsetMs": 250,
+      "cycleTicks": 5,
+      "releaseOffsetTicks": 3,
+      "impactOffsetsTicks": [
+        13
+      ],
+      "cadenceTicks": 5,
+      "count": 1
+    },
+    {
+      "t": 209,
+      "e": "hit",
+      "target": "air",
+      "dmg": 55
+    },
+    {
+      "t": 211,
+      "e": "attackRun",
+      "id": 0,
+      "side": "attacker",
+      "troop": "giant",
+      "targetKind": "building",
+      "target": "air",
+      "ix": 2560,
+      "iy": 3072,
+      "mode": "projectile",
+      "technique": "boulder",
+      "cycleMs": 500,
+      "releaseOffsetMs": 250,
+      "cycleTicks": 5,
+      "releaseOffsetTicks": 3,
+      "impactOffsetsTicks": [
+        13
+      ],
+      "cadenceTicks": 5,
+      "count": 1
+    },
+    {
+      "t": 214,
+      "e": "hit",
+      "target": "air",
+      "dmg": 55
+    },
+    {
+      "t": 216,
+      "e": "attackRun",
+      "id": 0,
+      "side": "attacker",
+      "troop": "giant",
+      "targetKind": "building",
+      "target": "air",
+      "ix": 2560,
+      "iy": 3072,
+      "mode": "projectile",
+      "technique": "boulder",
+      "cycleMs": 500,
+      "releaseOffsetMs": 250,
+      "cycleTicks": 5,
+      "releaseOffsetTicks": 3,
+      "impactOffsetsTicks": [
+        13
+      ],
+      "cadenceTicks": 5,
+      "count": 1
+    },
+    {
+      "t": 219,
+      "e": "hit",
+      "target": "air",
+      "dmg": 55
+    },
+    {
+      "t": 221,
+      "e": "attackRun",
+      "id": 0,
+      "side": "attacker",
+      "troop": "giant",
+      "targetKind": "building",
+      "target": "air",
+      "ix": 2560,
+      "iy": 3072,
+      "mode": "projectile",
+      "technique": "boulder",
+      "cycleMs": 500,
+      "releaseOffsetMs": 250,
+      "cycleTicks": 5,
+      "releaseOffsetTicks": 3,
+      "impactOffsetsTicks": [
+        13
+      ],
+      "cadenceTicks": 5,
+      "count": 1
+    },
+    {
+      "t": 224,
+      "e": "hit",
+      "target": "air",
+      "dmg": 55
+    },
+    {
+      "t": 226,
+      "e": "attackRun",
+      "id": 0,
+      "side": "attacker",
+      "troop": "giant",
+      "targetKind": "building",
+      "target": "air",
+      "ix": 2560,
+      "iy": 3072,
+      "mode": "projectile",
+      "technique": "boulder",
+      "cycleMs": 500,
+      "releaseOffsetMs": 250,
+      "cycleTicks": 5,
+      "releaseOffsetTicks": 3,
+      "impactOffsetsTicks": [
+        13
+      ],
+      "cadenceTicks": 5,
+      "count": 1
+    },
+    {
+      "t": 229,
+      "e": "hit",
+      "target": "air",
+      "dmg": 55
+    },
+    {
+      "t": 231,
+      "e": "attackRun",
+      "id": 0,
+      "side": "attacker",
+      "troop": "giant",
+      "targetKind": "building",
+      "target": "air",
+      "ix": 2560,
+      "iy": 3072,
+      "mode": "projectile",
+      "technique": "boulder",
+      "cycleMs": 500,
+      "releaseOffsetMs": 250,
+      "cycleTicks": 5,
+      "releaseOffsetTicks": 3,
+      "impactOffsetsTicks": [
+        13
+      ],
+      "cadenceTicks": 5,
+      "count": 1
+    },
+    {
+      "t": 234,
+      "e": "hit",
+      "target": "air",
+      "dmg": 55
+    },
+    {
+      "t": 236,
+      "e": "attackRun",
+      "id": 0,
+      "side": "attacker",
+      "troop": "giant",
+      "targetKind": "building",
+      "target": "air",
+      "ix": 2560,
+      "iy": 3072,
+      "mode": "projectile",
+      "technique": "boulder",
+      "cycleMs": 500,
+      "releaseOffsetMs": 250,
+      "cycleTicks": 5,
+      "releaseOffsetTicks": 3,
+      "impactOffsetsTicks": [
+        13
+      ],
+      "cadenceTicks": 5,
+      "count": 1
+    },
+    {
+      "t": 239,
+      "e": "hit",
+      "target": "air",
+      "dmg": 55
+    },
+    {
+      "t": 241,
+      "e": "attackRun",
+      "id": 0,
+      "side": "attacker",
+      "troop": "giant",
+      "targetKind": "building",
+      "target": "air",
+      "ix": 2560,
+      "iy": 3072,
+      "mode": "projectile",
+      "technique": "boulder",
+      "cycleMs": 500,
+      "releaseOffsetMs": 250,
+      "cycleTicks": 5,
+      "releaseOffsetTicks": 3,
+      "impactOffsetsTicks": [
+        13
+      ],
+      "cadenceTicks": 5,
+      "count": 1
+    },
+    {
+      "t": 244,
+      "e": "hit",
+      "target": "air",
+      "dmg": 55
+    },
+    {
+      "t": 246,
+      "e": "attackRun",
+      "id": 0,
+      "side": "attacker",
+      "troop": "giant",
+      "targetKind": "building",
+      "target": "air",
+      "ix": 2560,
+      "iy": 3072,
+      "mode": "projectile",
+      "technique": "boulder",
+      "cycleMs": 500,
+      "releaseOffsetMs": 250,
+      "cycleTicks": 5,
+      "releaseOffsetTicks": 3,
+      "impactOffsetsTicks": [
+        13
+      ],
+      "cadenceTicks": 5,
+      "count": 1
+    },
+    {
+      "t": 249,
+      "e": "hit",
+      "target": "air",
+      "dmg": 55
+    },
+    {
+      "t": 251,
+      "e": "attackRun",
+      "id": 0,
+      "side": "attacker",
+      "troop": "giant",
+      "targetKind": "building",
+      "target": "air",
+      "ix": 2560,
+      "iy": 3072,
+      "mode": "projectile",
+      "technique": "boulder",
+      "cycleMs": 500,
+      "releaseOffsetMs": 250,
+      "cycleTicks": 5,
+      "releaseOffsetTicks": 3,
+      "impactOffsetsTicks": [
+        13
+      ],
+      "cadenceTicks": 5,
+      "count": 1
+    },
+    {
+      "t": 254,
+      "e": "hit",
+      "target": "air",
+      "dmg": 55
+    },
+    {
+      "t": 256,
+      "e": "attackRun",
+      "id": 0,
+      "side": "attacker",
+      "troop": "giant",
+      "targetKind": "building",
+      "target": "air",
+      "ix": 2560,
+      "iy": 3072,
+      "mode": "projectile",
+      "technique": "boulder",
+      "cycleMs": 500,
+      "releaseOffsetMs": 250,
+      "cycleTicks": 5,
+      "releaseOffsetTicks": 3,
+      "impactOffsetsTicks": [
+        13
+      ],
+      "cadenceTicks": 5,
+      "count": 1
+    },
+    {
+      "t": 259,
+      "e": "hit",
+      "target": "air",
+      "dmg": 55
+    },
+    {
+      "t": 261,
+      "e": "attackRun",
+      "id": 0,
+      "side": "attacker",
+      "troop": "giant",
+      "targetKind": "building",
+      "target": "air",
+      "ix": 2560,
+      "iy": 3072,
+      "mode": "projectile",
+      "technique": "boulder",
+      "cycleMs": 500,
+      "releaseOffsetMs": 250,
+      "cycleTicks": 5,
+      "releaseOffsetTicks": 3,
+      "impactOffsetsTicks": [
+        13
+      ],
+      "cadenceTicks": 5,
+      "count": 1
+    },
+    {
+      "t": 264,
+      "e": "hit",
+      "target": "air",
+      "dmg": 55
+    },
+    {
+      "t": 266,
+      "e": "attackRun",
+      "id": 0,
+      "side": "attacker",
+      "troop": "giant",
+      "targetKind": "building",
+      "target": "air",
+      "ix": 2560,
+      "iy": 3072,
+      "mode": "projectile",
+      "technique": "boulder",
+      "cycleMs": 500,
+      "releaseOffsetMs": 250,
+      "cycleTicks": 5,
+      "releaseOffsetTicks": 3,
+      "impactOffsetsTicks": [
+        13
+      ],
+      "cadenceTicks": 5,
+      "count": 1
+    },
+    {
+      "t": 269,
+      "e": "hit",
+      "target": "air",
+      "dmg": 55
+    },
+    {
+      "t": 271,
+      "e": "attackRun",
+      "id": 0,
+      "side": "attacker",
+      "troop": "giant",
+      "targetKind": "building",
+      "target": "air",
+      "ix": 2560,
+      "iy": 3072,
+      "mode": "projectile",
+      "technique": "boulder",
+      "cycleMs": 500,
+      "releaseOffsetMs": 250,
+      "cycleTicks": 5,
+      "releaseOffsetTicks": 3,
+      "impactOffsetsTicks": [
+        13
+      ],
+      "cadenceTicks": 5,
+      "count": 1
+    },
+    {
+      "t": 274,
+      "e": "hit",
+      "target": "air",
+      "dmg": 55
+    },
+    {
+      "t": 276,
+      "e": "attackRun",
+      "id": 0,
+      "side": "attacker",
+      "troop": "giant",
+      "targetKind": "building",
+      "target": "air",
+      "ix": 2560,
+      "iy": 3072,
+      "mode": "projectile",
+      "technique": "boulder",
+      "cycleMs": 500,
+      "releaseOffsetMs": 250,
+      "cycleTicks": 5,
+      "releaseOffsetTicks": 3,
+      "impactOffsetsTicks": [
+        13
+      ],
+      "cadenceTicks": 5,
+      "count": 1
+    },
+    {
+      "t": 279,
+      "e": "hit",
+      "target": "air",
+      "dmg": 55
+    },
+    {
+      "t": 281,
+      "e": "attackRun",
+      "id": 0,
+      "side": "attacker",
+      "troop": "giant",
+      "targetKind": "building",
+      "target": "air",
+      "ix": 2560,
+      "iy": 3072,
+      "mode": "projectile",
+      "technique": "boulder",
+      "cycleMs": 500,
+      "releaseOffsetMs": 250,
+      "cycleTicks": 5,
+      "releaseOffsetTicks": 3,
+      "impactOffsetsTicks": [
+        13
+      ],
+      "cadenceTicks": 5,
+      "count": 1
+    },
+    {
+      "t": 284,
+      "e": "hit",
+      "target": "air",
+      "dmg": 55
+    },
+    {
+      "t": 286,
+      "e": "attackRun",
+      "id": 0,
+      "side": "attacker",
+      "troop": "giant",
+      "targetKind": "building",
+      "target": "air",
+      "ix": 2560,
+      "iy": 3072,
+      "mode": "projectile",
+      "technique": "boulder",
+      "cycleMs": 500,
+      "releaseOffsetMs": 250,
+      "cycleTicks": 5,
+      "releaseOffsetTicks": 3,
+      "impactOffsetsTicks": [
+        13
+      ],
+      "cadenceTicks": 5,
+      "count": 1
+    },
+    {
+      "t": 289,
+      "e": "hit",
+      "target": "air",
+      "dmg": 55
+    },
+    {
+      "t": 291,
+      "e": "attackRun",
+      "id": 0,
+      "side": "attacker",
+      "troop": "giant",
+      "targetKind": "building",
+      "target": "air",
+      "ix": 2560,
+      "iy": 3072,
+      "mode": "projectile",
+      "technique": "boulder",
+      "cycleMs": 500,
+      "releaseOffsetMs": 250,
+      "cycleTicks": 5,
+      "releaseOffsetTicks": 3,
+      "impactOffsetsTicks": [
+        13
+      ],
+      "cadenceTicks": 5,
+      "count": 1
+    },
+    {
+      "t": 294,
+      "e": "hit",
+      "target": "air",
+      "dmg": 55
+    },
+    {
+      "t": 296,
+      "e": "attackRun",
+      "id": 0,
+      "side": "attacker",
+      "troop": "giant",
+      "targetKind": "building",
+      "target": "air",
+      "ix": 2560,
+      "iy": 3072,
+      "mode": "projectile",
+      "technique": "boulder",
+      "cycleMs": 500,
+      "releaseOffsetMs": 250,
+      "cycleTicks": 5,
+      "releaseOffsetTicks": 3,
+      "impactOffsetsTicks": [
+        13
+      ],
+      "cadenceTicks": 5,
+      "count": 1
+    },
+    {
+      "t": 299,
+      "e": "hit",
+      "target": "air",
+      "dmg": 55
+    },
+    {
+      "t": 301,
+      "e": "attackRun",
+      "id": 0,
+      "side": "attacker",
+      "troop": "giant",
+      "targetKind": "building",
+      "target": "air",
+      "ix": 2560,
+      "iy": 3072,
+      "mode": "projectile",
+      "technique": "boulder",
+      "cycleMs": 500,
+      "releaseOffsetMs": 250,
+      "cycleTicks": 5,
+      "releaseOffsetTicks": 3,
+      "impactOffsetsTicks": [
+        13
+      ],
+      "cadenceTicks": 5,
+      "count": 1
+    },
+    {
+      "t": 304,
+      "e": "hit",
+      "target": "air",
+      "dmg": 55
+    },
+    {
+      "t": 306,
+      "e": "attackRun",
+      "id": 0,
+      "side": "attacker",
+      "troop": "giant",
+      "targetKind": "building",
+      "target": "air",
+      "ix": 2560,
+      "iy": 3072,
+      "mode": "projectile",
+      "technique": "boulder",
+      "cycleMs": 500,
+      "releaseOffsetMs": 250,
+      "cycleTicks": 5,
+      "releaseOffsetTicks": 3,
+      "impactOffsetsTicks": [
+        13
+      ],
+      "cadenceTicks": 5,
+      "count": 1
+    },
+    {
+      "t": 309,
+      "e": "hit",
+      "target": "air",
+      "dmg": 55
+    },
+    {
+      "t": 311,
+      "e": "attackRun",
+      "id": 0,
+      "side": "attacker",
+      "troop": "giant",
+      "targetKind": "building",
+      "target": "air",
+      "ix": 2560,
+      "iy": 3072,
+      "mode": "projectile",
+      "technique": "boulder",
+      "cycleMs": 500,
+      "releaseOffsetMs": 250,
+      "cycleTicks": 5,
+      "releaseOffsetTicks": 3,
+      "impactOffsetsTicks": [
+        13
+      ],
+      "cadenceTicks": 5,
+      "count": 1
+    },
+    {
+      "t": 314,
+      "e": "hit",
+      "target": "air",
+      "dmg": 55
+    },
+    {
+      "t": 316,
+      "e": "attackRun",
+      "id": 0,
+      "side": "attacker",
+      "troop": "giant",
+      "targetKind": "building",
+      "target": "air",
+      "ix": 2560,
+      "iy": 3072,
+      "mode": "projectile",
+      "technique": "boulder",
+      "cycleMs": 500,
+      "releaseOffsetMs": 250,
+      "cycleTicks": 5,
+      "releaseOffsetTicks": 3,
+      "impactOffsetsTicks": [
+        13
+      ],
+      "cadenceTicks": 5,
+      "count": 1
+    },
+    {
+      "t": 319,
+      "e": "hit",
+      "target": "air",
+      "dmg": 55
+    },
+    {
+      "t": 321,
+      "e": "attackRun",
+      "id": 0,
+      "side": "attacker",
+      "troop": "giant",
+      "targetKind": "building",
+      "target": "air",
+      "ix": 2560,
+      "iy": 3072,
+      "mode": "projectile",
+      "technique": "boulder",
+      "cycleMs": 500,
+      "releaseOffsetMs": 250,
+      "cycleTicks": 5,
+      "releaseOffsetTicks": 3,
+      "impactOffsetsTicks": [
+        13
+      ],
+      "cadenceTicks": 5,
+      "count": 1
+    },
+    {
+      "t": 324,
+      "e": "hit",
+      "target": "air",
+      "dmg": 55
+    },
+    {
+      "t": 326,
+      "e": "attackRun",
+      "id": 0,
+      "side": "attacker",
+      "troop": "giant",
+      "targetKind": "building",
+      "target": "air",
+      "ix": 2560,
+      "iy": 3072,
+      "mode": "projectile",
+      "technique": "boulder",
+      "cycleMs": 500,
+      "releaseOffsetMs": 250,
+      "cycleTicks": 5,
+      "releaseOffsetTicks": 3,
+      "impactOffsetsTicks": [
+        13
+      ],
+      "cadenceTicks": 5,
+      "count": 1
+    },
+    {
+      "t": 329,
+      "e": "hit",
+      "target": "air",
+      "dmg": 55
+    },
+    {
+      "t": 331,
+      "e": "attackRun",
+      "id": 0,
+      "side": "attacker",
+      "troop": "giant",
+      "targetKind": "building",
+      "target": "air",
+      "ix": 2560,
+      "iy": 3072,
+      "mode": "projectile",
+      "technique": "boulder",
+      "cycleMs": 500,
+      "releaseOffsetMs": 250,
+      "cycleTicks": 5,
+      "releaseOffsetTicks": 3,
+      "impactOffsetsTicks": [
+        13
+      ],
+      "cadenceTicks": 5,
+      "count": 1
+    },
+    {
+      "t": 334,
+      "e": "hit",
+      "target": "air",
+      "dmg": 55
+    },
+    {
+      "t": 336,
+      "e": "attackRun",
+      "id": 0,
+      "side": "attacker",
+      "troop": "giant",
+      "targetKind": "building",
+      "target": "air",
+      "ix": 2560,
+      "iy": 3072,
+      "mode": "projectile",
+      "technique": "boulder",
+      "cycleMs": 500,
+      "releaseOffsetMs": 250,
+      "cycleTicks": 5,
+      "releaseOffsetTicks": 3,
+      "impactOffsetsTicks": [
+        13
+      ],
+      "cadenceTicks": 5,
+      "count": 1
+    },
+    {
+      "t": 339,
+      "e": "hit",
+      "target": "air",
+      "dmg": 55
+    },
+    {
+      "t": 341,
+      "e": "attackRun",
+      "id": 0,
+      "side": "attacker",
+      "troop": "giant",
+      "targetKind": "building",
+      "target": "air",
+      "ix": 2560,
+      "iy": 3072,
+      "mode": "projectile",
+      "technique": "boulder",
+      "cycleMs": 500,
+      "releaseOffsetMs": 250,
+      "cycleTicks": 5,
+      "releaseOffsetTicks": 3,
+      "impactOffsetsTicks": [
+        13
+      ],
+      "cadenceTicks": 5,
+      "count": 1
+    },
+    {
+      "t": 344,
+      "e": "hit",
+      "target": "air",
+      "dmg": 55
+    },
+    {
+      "t": 346,
+      "e": "attackRun",
+      "id": 0,
+      "side": "attacker",
+      "troop": "giant",
+      "targetKind": "building",
+      "target": "air",
+      "ix": 2560,
+      "iy": 3072,
+      "mode": "projectile",
+      "technique": "boulder",
+      "cycleMs": 500,
+      "releaseOffsetMs": 250,
+      "cycleTicks": 5,
+      "releaseOffsetTicks": 3,
+      "impactOffsetsTicks": [
+        13
+      ],
+      "cadenceTicks": 5,
+      "count": 1
+    },
+    {
+      "t": 349,
+      "e": "hit",
+      "target": "air",
+      "dmg": 55
+    },
+    {
+      "t": 351,
+      "e": "attackRun",
+      "id": 0,
+      "side": "attacker",
+      "troop": "giant",
+      "targetKind": "building",
+      "target": "air",
+      "ix": 2560,
+      "iy": 3072,
+      "mode": "projectile",
+      "technique": "boulder",
+      "cycleMs": 500,
+      "releaseOffsetMs": 250,
+      "cycleTicks": 5,
+      "releaseOffsetTicks": 3,
+      "impactOffsetsTicks": [
+        13
+      ],
+      "cadenceTicks": 5,
+      "count": 1
+    },
+    {
+      "t": 354,
+      "e": "hit",
+      "target": "air",
+      "dmg": 55
+    },
+    {
+      "t": 356,
+      "e": "attackRun",
+      "id": 0,
+      "side": "attacker",
+      "troop": "giant",
+      "targetKind": "building",
+      "target": "air",
+      "ix": 2560,
+      "iy": 3072,
+      "mode": "projectile",
+      "technique": "boulder",
+      "cycleMs": 500,
+      "releaseOffsetMs": 250,
+      "cycleTicks": 5,
+      "releaseOffsetTicks": 3,
+      "impactOffsetsTicks": [
+        13
+      ],
+      "cadenceTicks": 5,
+      "count": 1
+    },
+    {
+      "t": 359,
+      "e": "hit",
+      "target": "air",
+      "dmg": 55
+    },
+    {
+      "t": 361,
+      "e": "attackRun",
+      "id": 0,
+      "side": "attacker",
+      "troop": "giant",
+      "targetKind": "building",
+      "target": "air",
+      "ix": 2560,
+      "iy": 3072,
+      "mode": "projectile",
+      "technique": "boulder",
+      "cycleMs": 500,
+      "releaseOffsetMs": 250,
+      "cycleTicks": 5,
+      "releaseOffsetTicks": 3,
+      "impactOffsetsTicks": [
+        13
+      ],
+      "cadenceTicks": 5,
+      "count": 1
+    },
+    {
+      "t": 364,
+      "e": "hit",
+      "target": "air",
+      "dmg": 55
+    },
+    {
+      "t": 366,
+      "e": "attackRun",
+      "id": 0,
+      "side": "attacker",
+      "troop": "giant",
+      "targetKind": "building",
+      "target": "air",
+      "ix": 2560,
+      "iy": 3072,
+      "mode": "projectile",
+      "technique": "boulder",
+      "cycleMs": 500,
+      "releaseOffsetMs": 250,
+      "cycleTicks": 5,
+      "releaseOffsetTicks": 3,
+      "impactOffsetsTicks": [
+        13
+      ],
+      "cadenceTicks": 5,
+      "count": 1
+    },
+    {
+      "t": 369,
+      "e": "hit",
+      "target": "air",
+      "dmg": 55
+    },
+    {
+      "t": 371,
+      "e": "attackRun",
+      "id": 0,
+      "side": "attacker",
+      "troop": "giant",
+      "targetKind": "building",
+      "target": "air",
+      "ix": 2560,
+      "iy": 3072,
+      "mode": "projectile",
+      "technique": "boulder",
+      "cycleMs": 500,
+      "releaseOffsetMs": 250,
+      "cycleTicks": 5,
+      "releaseOffsetTicks": 3,
+      "impactOffsetsTicks": [
+        13
+      ],
+      "cadenceTicks": 5,
+      "count": 1
+    },
+    {
+      "t": 374,
+      "e": "hit",
+      "target": "air",
+      "dmg": 55
+    },
+    {
+      "t": 376,
+      "e": "attackRun",
+      "id": 0,
+      "side": "attacker",
+      "troop": "giant",
+      "targetKind": "building",
+      "target": "air",
+      "ix": 2560,
+      "iy": 3072,
+      "mode": "projectile",
+      "technique": "boulder",
+      "cycleMs": 500,
+      "releaseOffsetMs": 250,
+      "cycleTicks": 5,
+      "releaseOffsetTicks": 3,
+      "impactOffsetsTicks": [
+        13
+      ],
+      "cadenceTicks": 5,
+      "count": 1
+    },
+    {
+      "t": 379,
+      "e": "hit",
+      "target": "air",
+      "dmg": 55
+    },
+    {
+      "t": 381,
+      "e": "attackRun",
+      "id": 0,
+      "side": "attacker",
+      "troop": "giant",
+      "targetKind": "building",
+      "target": "air",
+      "ix": 2560,
+      "iy": 3072,
+      "mode": "projectile",
+      "technique": "boulder",
+      "cycleMs": 500,
+      "releaseOffsetMs": 250,
+      "cycleTicks": 5,
+      "releaseOffsetTicks": 3,
+      "impactOffsetsTicks": [
+        13
+      ],
+      "cadenceTicks": 5,
+      "count": 1
+    },
+    {
+      "t": 384,
+      "e": "hit",
+      "target": "air",
+      "dmg": 55
+    },
+    {
+      "t": 386,
+      "e": "attackRun",
+      "id": 0,
+      "side": "attacker",
+      "troop": "giant",
+      "targetKind": "building",
+      "target": "air",
+      "ix": 2560,
+      "iy": 3072,
+      "mode": "projectile",
+      "technique": "boulder",
+      "cycleMs": 500,
+      "releaseOffsetMs": 250,
+      "cycleTicks": 5,
+      "releaseOffsetTicks": 3,
+      "impactOffsetsTicks": [
+        13
+      ],
+      "cadenceTicks": 5,
+      "count": 1
+    },
+    {
+      "t": 389,
+      "e": "hit",
+      "target": "air",
+      "dmg": 55
+    },
+    {
+      "t": 391,
+      "e": "attackRun",
+      "id": 0,
+      "side": "attacker",
+      "troop": "giant",
+      "targetKind": "building",
+      "target": "air",
+      "ix": 2560,
+      "iy": 3072,
+      "mode": "projectile",
+      "technique": "boulder",
+      "cycleMs": 500,
+      "releaseOffsetMs": 250,
+      "cycleTicks": 5,
+      "releaseOffsetTicks": 3,
+      "impactOffsetsTicks": [
+        13
+      ],
+      "cadenceTicks": 5,
+      "count": 1
+    },
+    {
+      "t": 394,
+      "e": "hit",
+      "target": "air",
+      "dmg": 55
+    },
+    {
+      "t": 396,
+      "e": "attackRun",
+      "id": 0,
+      "side": "attacker",
+      "troop": "giant",
+      "targetKind": "building",
+      "target": "air",
+      "ix": 2560,
+      "iy": 3072,
+      "mode": "projectile",
+      "technique": "boulder",
+      "cycleMs": 500,
+      "releaseOffsetMs": 250,
+      "cycleTicks": 5,
+      "releaseOffsetTicks": 3,
+      "impactOffsetsTicks": [
+        13
+      ],
+      "cadenceTicks": 5,
+      "count": 1
+    },
+    {
+      "t": 399,
+      "e": "hit",
+      "target": "air",
+      "dmg": 55
+    },
+    {
+      "t": 401,
+      "e": "attackRun",
+      "id": 0,
+      "side": "attacker",
+      "troop": "giant",
+      "targetKind": "building",
+      "target": "air",
+      "ix": 2560,
+      "iy": 3072,
+      "mode": "projectile",
+      "technique": "boulder",
+      "cycleMs": 500,
+      "releaseOffsetMs": 250,
+      "cycleTicks": 5,
+      "releaseOffsetTicks": 3,
+      "impactOffsetsTicks": [
+        13
+      ],
+      "cadenceTicks": 5,
+      "count": 1
+    },
+    {
+      "t": 404,
+      "e": "hit",
+      "target": "air",
+      "dmg": 55
+    },
+    {
+      "t": 406,
+      "e": "attackRun",
+      "id": 0,
+      "side": "attacker",
+      "troop": "giant",
+      "targetKind": "building",
+      "target": "air",
+      "ix": 2560,
+      "iy": 3072,
+      "mode": "projectile",
+      "technique": "boulder",
+      "cycleMs": 500,
+      "releaseOffsetMs": 250,
+      "cycleTicks": 5,
+      "releaseOffsetTicks": 3,
+      "impactOffsetsTicks": [
+        13
+      ],
+      "cadenceTicks": 5,
+      "count": 1
+    },
+    {
+      "t": 409,
+      "e": "hit",
+      "target": "air",
+      "dmg": 55
+    },
+    {
+      "t": 411,
+      "e": "attackRun",
+      "id": 0,
+      "side": "attacker",
+      "troop": "giant",
+      "targetKind": "building",
+      "target": "air",
+      "ix": 2560,
+      "iy": 3072,
+      "mode": "projectile",
+      "technique": "boulder",
+      "cycleMs": 500,
+      "releaseOffsetMs": 250,
+      "cycleTicks": 5,
+      "releaseOffsetTicks": 3,
+      "impactOffsetsTicks": [
+        13
+      ],
+      "cadenceTicks": 5,
+      "count": 1
+    },
+    {
+      "t": 414,
+      "e": "hit",
+      "target": "air",
+      "dmg": 55
+    },
+    {
+      "t": 416,
+      "e": "attackRun",
+      "id": 0,
+      "side": "attacker",
+      "troop": "giant",
+      "targetKind": "building",
+      "target": "air",
+      "ix": 2560,
+      "iy": 3072,
+      "mode": "projectile",
+      "technique": "boulder",
+      "cycleMs": 500,
+      "releaseOffsetMs": 250,
+      "cycleTicks": 5,
+      "releaseOffsetTicks": 3,
+      "impactOffsetsTicks": [
+        13
+      ],
+      "cadenceTicks": 5,
+      "count": 1
+    },
+    {
+      "t": 419,
+      "e": "hit",
+      "target": "air",
+      "dmg": 55
+    },
+    {
+      "t": 421,
+      "e": "attackRun",
+      "id": 0,
+      "side": "attacker",
+      "troop": "giant",
+      "targetKind": "building",
+      "target": "air",
+      "ix": 2560,
+      "iy": 3072,
+      "mode": "projectile",
+      "technique": "boulder",
+      "cycleMs": 500,
+      "releaseOffsetMs": 250,
+      "cycleTicks": 5,
+      "releaseOffsetTicks": 3,
+      "impactOffsetsTicks": [
+        13
+      ],
+      "cadenceTicks": 5,
+      "count": 1
+    },
+    {
+      "t": 424,
+      "e": "hit",
+      "target": "air",
+      "dmg": 55
+    },
+    {
+      "t": 426,
+      "e": "attackRun",
+      "id": 0,
+      "side": "attacker",
+      "troop": "giant",
+      "targetKind": "building",
+      "target": "air",
+      "ix": 2560,
+      "iy": 3072,
+      "mode": "projectile",
+      "technique": "boulder",
+      "cycleMs": 500,
+      "releaseOffsetMs": 250,
+      "cycleTicks": 5,
+      "releaseOffsetTicks": 3,
+      "impactOffsetsTicks": [
+        13
+      ],
+      "cadenceTicks": 5,
+      "count": 1
+    },
+    {
+      "t": 429,
+      "e": "hit",
+      "target": "air",
+      "dmg": 55
+    },
+    {
+      "t": 431,
+      "e": "attackRun",
+      "id": 0,
+      "side": "attacker",
+      "troop": "giant",
+      "targetKind": "building",
+      "target": "air",
+      "ix": 2560,
+      "iy": 3072,
+      "mode": "projectile",
+      "technique": "boulder",
+      "cycleMs": 500,
+      "releaseOffsetMs": 250,
+      "cycleTicks": 5,
+      "releaseOffsetTicks": 3,
+      "impactOffsetsTicks": [
+        13
+      ],
+      "cadenceTicks": 5,
+      "count": 1
+    },
+    {
+      "t": 434,
+      "e": "hit",
+      "target": "air",
+      "dmg": 55
+    },
+    {
+      "t": 436,
+      "e": "attackRun",
+      "id": 0,
+      "side": "attacker",
+      "troop": "giant",
+      "targetKind": "building",
+      "target": "air",
+      "ix": 2560,
+      "iy": 3072,
+      "mode": "projectile",
+      "technique": "boulder",
+      "cycleMs": 500,
+      "releaseOffsetMs": 250,
+      "cycleTicks": 5,
+      "releaseOffsetTicks": 3,
+      "impactOffsetsTicks": [
+        13
+      ],
+      "cadenceTicks": 5,
+      "count": 1
+    },
+    {
+      "t": 439,
+      "e": "hit",
+      "target": "air",
+      "dmg": 55
+    },
+    {
+      "t": 441,
+      "e": "attackRun",
+      "id": 0,
+      "side": "attacker",
+      "troop": "giant",
+      "targetKind": "building",
+      "target": "air",
+      "ix": 2560,
+      "iy": 3072,
+      "mode": "projectile",
+      "technique": "boulder",
+      "cycleMs": 500,
+      "releaseOffsetMs": 250,
+      "cycleTicks": 5,
+      "releaseOffsetTicks": 3,
+      "impactOffsetsTicks": [
+        13
+      ],
+      "cadenceTicks": 5,
+      "count": 1
+    },
+    {
+      "t": 444,
+      "e": "hit",
+      "target": "air",
+      "dmg": 55
+    },
+    {
+      "t": 446,
+      "e": "attackRun",
+      "id": 0,
+      "side": "attacker",
+      "troop": "giant",
+      "targetKind": "building",
+      "target": "air",
+      "ix": 2560,
+      "iy": 3072,
+      "mode": "projectile",
+      "technique": "boulder",
+      "cycleMs": 500,
+      "releaseOffsetMs": 250,
+      "cycleTicks": 5,
+      "releaseOffsetTicks": 3,
+      "impactOffsetsTicks": [
+        13
+      ],
+      "cadenceTicks": 5,
+      "count": 1
+    },
+    {
+      "t": 449,
+      "e": "hit",
+      "target": "air",
+      "dmg": 55
+    },
+    {
+      "t": 451,
+      "e": "attackRun",
+      "id": 0,
+      "side": "attacker",
+      "troop": "giant",
+      "targetKind": "building",
+      "target": "air",
+      "ix": 2560,
+      "iy": 3072,
+      "mode": "projectile",
+      "technique": "boulder",
+      "cycleMs": 500,
+      "releaseOffsetMs": 250,
+      "cycleTicks": 5,
+      "releaseOffsetTicks": 3,
+      "impactOffsetsTicks": [
+        13
+      ],
+      "cadenceTicks": 5,
+      "count": 1
+    },
+    {
+      "t": 454,
+      "e": "hit",
+      "target": "air",
+      "dmg": 55
+    },
+    {
+      "t": 456,
+      "e": "attackRun",
+      "id": 0,
+      "side": "attacker",
+      "troop": "giant",
+      "targetKind": "building",
+      "target": "air",
+      "ix": 2560,
+      "iy": 3072,
+      "mode": "projectile",
+      "technique": "boulder",
+      "cycleMs": 500,
+      "releaseOffsetMs": 250,
+      "cycleTicks": 5,
+      "releaseOffsetTicks": 3,
+      "impactOffsetsTicks": [
+        13
+      ],
+      "cadenceTicks": 5,
+      "count": 1
+    },
+    {
+      "t": 459,
+      "e": "hit",
+      "target": "air",
+      "dmg": 55
+    },
+    {
+      "t": 461,
+      "e": "attackRun",
+      "id": 0,
+      "side": "attacker",
+      "troop": "giant",
+      "targetKind": "building",
+      "target": "air",
+      "ix": 2560,
+      "iy": 3072,
+      "mode": "projectile",
+      "technique": "boulder",
+      "cycleMs": 500,
+      "releaseOffsetMs": 250,
+      "cycleTicks": 5,
+      "releaseOffsetTicks": 3,
+      "impactOffsetsTicks": [
+        13
+      ],
+      "cadenceTicks": 5,
+      "count": 1
+    },
+    {
+      "t": 464,
+      "e": "hit",
+      "target": "air",
+      "dmg": 55
+    },
+    {
+      "t": 466,
+      "e": "attackRun",
+      "id": 0,
+      "side": "attacker",
+      "troop": "giant",
+      "targetKind": "building",
+      "target": "air",
+      "ix": 2560,
+      "iy": 3072,
+      "mode": "projectile",
+      "technique": "boulder",
+      "cycleMs": 500,
+      "releaseOffsetMs": 250,
+      "cycleTicks": 5,
+      "releaseOffsetTicks": 3,
+      "impactOffsetsTicks": [
+        13
+      ],
+      "cadenceTicks": 5,
+      "count": 1
+    },
+    {
+      "t": 469,
+      "e": "hit",
+      "target": "air",
+      "dmg": 55
+    },
+    {
+      "t": 471,
+      "e": "attackRun",
+      "id": 0,
+      "side": "attacker",
+      "troop": "giant",
+      "targetKind": "building",
+      "target": "air",
+      "ix": 2560,
+      "iy": 3072,
+      "mode": "projectile",
+      "technique": "boulder",
+      "cycleMs": 500,
+      "releaseOffsetMs": 250,
+      "cycleTicks": 5,
+      "releaseOffsetTicks": 3,
+      "impactOffsetsTicks": [
+        13
+      ],
+      "cadenceTicks": 5,
+      "count": 1
+    },
+    {
+      "t": 474,
+      "e": "hit",
+      "target": "air",
+      "dmg": 55
+    },
+    {
+      "t": 476,
+      "e": "attackRun",
+      "id": 0,
+      "side": "attacker",
+      "troop": "giant",
+      "targetKind": "building",
+      "target": "air",
+      "ix": 2560,
+      "iy": 3072,
+      "mode": "projectile",
+      "technique": "boulder",
+      "cycleMs": 500,
+      "releaseOffsetMs": 250,
+      "cycleTicks": 5,
+      "releaseOffsetTicks": 3,
+      "impactOffsetsTicks": [
+        13
+      ],
+      "cadenceTicks": 5,
+      "count": 1
+    },
+    {
+      "t": 479,
+      "e": "hit",
+      "target": "air",
+      "dmg": 55
+    },
+    {
+      "t": 481,
+      "e": "attackRun",
+      "id": 0,
+      "side": "attacker",
+      "troop": "giant",
+      "targetKind": "building",
+      "target": "air",
+      "ix": 2560,
+      "iy": 3072,
+      "mode": "projectile",
+      "technique": "boulder",
+      "cycleMs": 500,
+      "releaseOffsetMs": 250,
+      "cycleTicks": 5,
+      "releaseOffsetTicks": 3,
+      "impactOffsetsTicks": [
+        13
+      ],
+      "cadenceTicks": 5,
+      "count": 1
+    },
+    {
+      "t": 484,
+      "e": "hit",
+      "target": "air",
+      "dmg": 55
+    },
+    {
+      "t": 486,
+      "e": "attackRun",
+      "id": 0,
+      "side": "attacker",
+      "troop": "giant",
+      "targetKind": "building",
+      "target": "air",
+      "ix": 2560,
+      "iy": 3072,
+      "mode": "projectile",
+      "technique": "boulder",
+      "cycleMs": 500,
+      "releaseOffsetMs": 250,
+      "cycleTicks": 5,
+      "releaseOffsetTicks": 3,
+      "impactOffsetsTicks": [
+        13
+      ],
+      "cadenceTicks": 5,
+      "count": 1
+    },
+    {
+      "t": 489,
+      "e": "hit",
+      "target": "air",
+      "dmg": 55
+    },
+    {
+      "t": 491,
+      "e": "attackRun",
+      "id": 0,
+      "side": "attacker",
+      "troop": "giant",
+      "targetKind": "building",
+      "target": "air",
+      "ix": 2560,
+      "iy": 3072,
+      "mode": "projectile",
+      "technique": "boulder",
+      "cycleMs": 500,
+      "releaseOffsetMs": 250,
+      "cycleTicks": 5,
+      "releaseOffsetTicks": 3,
+      "impactOffsetsTicks": [
+        13
+      ],
+      "cadenceTicks": 5,
+      "count": 1
+    },
+    {
+      "t": 494,
+      "e": "hit",
+      "target": "air",
+      "dmg": 55
+    },
+    {
+      "t": 496,
+      "e": "attackRun",
+      "id": 0,
+      "side": "attacker",
+      "troop": "giant",
+      "targetKind": "building",
+      "target": "air",
+      "ix": 2560,
+      "iy": 3072,
+      "mode": "projectile",
+      "technique": "boulder",
+      "cycleMs": 500,
+      "releaseOffsetMs": 250,
+      "cycleTicks": 5,
+      "releaseOffsetTicks": 3,
+      "impactOffsetsTicks": [
+        13
+      ],
+      "cadenceTicks": 5,
+      "count": 1
+    },
+    {
+      "t": 499,
+      "e": "hit",
+      "target": "air",
+      "dmg": 55
+    },
+    {
+      "t": 501,
+      "e": "attackRun",
+      "id": 0,
+      "side": "attacker",
+      "troop": "giant",
+      "targetKind": "building",
+      "target": "air",
+      "ix": 2560,
+      "iy": 3072,
+      "mode": "projectile",
+      "technique": "boulder",
+      "cycleMs": 500,
+      "releaseOffsetMs": 250,
+      "cycleTicks": 5,
+      "releaseOffsetTicks": 3,
+      "impactOffsetsTicks": [
+        13
+      ],
+      "cadenceTicks": 5,
+      "count": 1
+    },
+    {
+      "t": 504,
+      "e": "hit",
+      "target": "air",
+      "dmg": 55
+    },
+    {
+      "t": 506,
+      "e": "attackRun",
+      "id": 0,
+      "side": "attacker",
+      "troop": "giant",
+      "targetKind": "building",
+      "target": "air",
+      "ix": 2560,
+      "iy": 3072,
+      "mode": "projectile",
+      "technique": "boulder",
+      "cycleMs": 500,
+      "releaseOffsetMs": 250,
+      "cycleTicks": 5,
+      "releaseOffsetTicks": 3,
+      "impactOffsetsTicks": [
+        13
+      ],
+      "cadenceTicks": 5,
+      "count": 1
+    },
+    {
+      "t": 509,
+      "e": "hit",
+      "target": "air",
+      "dmg": 55
+    },
+    {
+      "t": 511,
+      "e": "attackRun",
+      "id": 0,
+      "side": "attacker",
+      "troop": "giant",
+      "targetKind": "building",
+      "target": "air",
+      "ix": 2560,
+      "iy": 3072,
+      "mode": "projectile",
+      "technique": "boulder",
+      "cycleMs": 500,
+      "releaseOffsetMs": 250,
+      "cycleTicks": 5,
+      "releaseOffsetTicks": 3,
+      "impactOffsetsTicks": [
+        13
+      ],
+      "cadenceTicks": 5,
+      "count": 1
+    },
+    {
+      "t": 514,
+      "e": "hit",
+      "target": "air",
+      "dmg": 55
+    },
+    {
+      "t": 516,
+      "e": "attackRun",
+      "id": 0,
+      "side": "attacker",
+      "troop": "giant",
+      "targetKind": "building",
+      "target": "air",
+      "ix": 2560,
+      "iy": 3072,
+      "mode": "projectile",
+      "technique": "boulder",
+      "cycleMs": 500,
+      "releaseOffsetMs": 250,
+      "cycleTicks": 5,
+      "releaseOffsetTicks": 3,
+      "impactOffsetsTicks": [
+        13
+      ],
+      "cadenceTicks": 5,
+      "count": 1
+    },
+    {
+      "t": 519,
+      "e": "hit",
+      "target": "air",
+      "dmg": 55
+    },
+    {
+      "t": 521,
+      "e": "attackRun",
+      "id": 0,
+      "side": "attacker",
+      "troop": "giant",
+      "targetKind": "building",
+      "target": "air",
+      "ix": 2560,
+      "iy": 3072,
+      "mode": "projectile",
+      "technique": "boulder",
+      "cycleMs": 500,
+      "releaseOffsetMs": 250,
+      "cycleTicks": 5,
+      "releaseOffsetTicks": 3,
+      "impactOffsetsTicks": [
+        13
+      ],
+      "cadenceTicks": 5,
+      "count": 1
+    },
+    {
+      "t": 524,
+      "e": "hit",
+      "target": "air",
+      "dmg": 55
+    },
+    {
+      "t": 526,
+      "e": "attackRun",
+      "id": 0,
+      "side": "attacker",
+      "troop": "giant",
+      "targetKind": "building",
+      "target": "air",
+      "ix": 2560,
+      "iy": 3072,
+      "mode": "projectile",
+      "technique": "boulder",
+      "cycleMs": 500,
+      "releaseOffsetMs": 250,
+      "cycleTicks": 5,
+      "releaseOffsetTicks": 3,
+      "impactOffsetsTicks": [
+        13
+      ],
+      "cadenceTicks": 5,
+      "count": 1
+    },
+    {
+      "t": 529,
+      "e": "hit",
+      "target": "air",
+      "dmg": 55
+    },
+    {
+      "t": 531,
+      "e": "attackRun",
+      "id": 0,
+      "side": "attacker",
+      "troop": "giant",
+      "targetKind": "building",
+      "target": "air",
+      "ix": 2560,
+      "iy": 3072,
+      "mode": "projectile",
+      "technique": "boulder",
+      "cycleMs": 500,
+      "releaseOffsetMs": 250,
+      "cycleTicks": 5,
+      "releaseOffsetTicks": 3,
+      "impactOffsetsTicks": [
+        13
+      ],
+      "cadenceTicks": 5,
+      "count": 1
+    },
+    {
+      "t": 534,
+      "e": "hit",
+      "target": "air",
+      "dmg": 55
+    },
+    {
+      "t": 536,
+      "e": "attackRun",
+      "id": 0,
+      "side": "attacker",
+      "troop": "giant",
+      "targetKind": "building",
+      "target": "air",
+      "ix": 2560,
+      "iy": 3072,
+      "mode": "projectile",
+      "technique": "boulder",
+      "cycleMs": 500,
+      "releaseOffsetMs": 250,
+      "cycleTicks": 5,
+      "releaseOffsetTicks": 3,
+      "impactOffsetsTicks": [
+        13
+      ],
+      "cadenceTicks": 5,
+      "count": 1
+    },
+    {
+      "t": 539,
+      "e": "hit",
+      "target": "air",
+      "dmg": 55
+    },
+    {
+      "t": 541,
+      "e": "attackRun",
+      "id": 0,
+      "side": "attacker",
+      "troop": "giant",
+      "targetKind": "building",
+      "target": "air",
+      "ix": 2560,
+      "iy": 3072,
+      "mode": "projectile",
+      "technique": "boulder",
+      "cycleMs": 500,
+      "releaseOffsetMs": 250,
+      "cycleTicks": 5,
+      "releaseOffsetTicks": 3,
+      "impactOffsetsTicks": [
+        13
+      ],
+      "cadenceTicks": 5,
+      "count": 1
+    },
+    {
+      "t": 544,
+      "e": "hit",
+      "target": "air",
+      "dmg": 55
+    },
+    {
+      "t": 546,
+      "e": "attackRun",
+      "id": 0,
+      "side": "attacker",
+      "troop": "giant",
+      "targetKind": "building",
+      "target": "air",
+      "ix": 2560,
+      "iy": 3072,
+      "mode": "projectile",
+      "technique": "boulder",
+      "cycleMs": 500,
+      "releaseOffsetMs": 250,
+      "cycleTicks": 5,
+      "releaseOffsetTicks": 3,
+      "impactOffsetsTicks": [
+        13
+      ],
+      "cadenceTicks": 5,
+      "count": 1
+    },
+    {
+      "t": 549,
+      "e": "hit",
+      "target": "air",
+      "dmg": 55
+    },
+    {
+      "t": 551,
+      "e": "attackRun",
+      "id": 0,
+      "side": "attacker",
+      "troop": "giant",
+      "targetKind": "building",
+      "target": "air",
+      "ix": 2560,
+      "iy": 3072,
+      "mode": "projectile",
+      "technique": "boulder",
+      "cycleMs": 500,
+      "releaseOffsetMs": 250,
+      "cycleTicks": 5,
+      "releaseOffsetTicks": 3,
+      "impactOffsetsTicks": [
+        13
+      ],
+      "cadenceTicks": 5,
+      "count": 1
+    },
+    {
+      "t": 554,
+      "e": "hit",
+      "target": "air",
+      "dmg": 55
+    },
+    {
+      "t": 556,
+      "e": "attackRun",
+      "id": 0,
+      "side": "attacker",
+      "troop": "giant",
+      "targetKind": "building",
+      "target": "air",
+      "ix": 2560,
+      "iy": 3072,
+      "mode": "projectile",
+      "technique": "boulder",
+      "cycleMs": 500,
+      "releaseOffsetMs": 250,
+      "cycleTicks": 5,
+      "releaseOffsetTicks": 3,
+      "impactOffsetsTicks": [
+        13
+      ],
+      "cadenceTicks": 5,
+      "count": 1
+    },
+    {
+      "t": 559,
+      "e": "hit",
+      "target": "air",
+      "dmg": 55
+    },
+    {
+      "t": 561,
+      "e": "attackRun",
+      "id": 0,
+      "side": "attacker",
+      "troop": "giant",
+      "targetKind": "building",
+      "target": "air",
+      "ix": 2560,
+      "iy": 3072,
+      "mode": "projectile",
+      "technique": "boulder",
+      "cycleMs": 500,
+      "releaseOffsetMs": 250,
+      "cycleTicks": 5,
+      "releaseOffsetTicks": 3,
+      "impactOffsetsTicks": [
+        13
+      ],
+      "cadenceTicks": 5,
+      "count": 1
+    },
+    {
+      "t": 564,
+      "e": "hit",
+      "target": "air",
+      "dmg": 55
+    },
+    {
+      "t": 566,
+      "e": "attackRun",
+      "id": 0,
+      "side": "attacker",
+      "troop": "giant",
+      "targetKind": "building",
+      "target": "air",
+      "ix": 2560,
+      "iy": 3072,
+      "mode": "projectile",
+      "technique": "boulder",
+      "cycleMs": 500,
+      "releaseOffsetMs": 250,
+      "cycleTicks": 5,
+      "releaseOffsetTicks": 3,
+      "impactOffsetsTicks": [
+        13
+      ],
+      "cadenceTicks": 5,
+      "count": 1
+    },
+    {
+      "t": 569,
+      "e": "hit",
+      "target": "air",
+      "dmg": 55
+    },
+    {
+      "t": 571,
+      "e": "attackRun",
+      "id": 0,
+      "side": "attacker",
+      "troop": "giant",
+      "targetKind": "building",
+      "target": "air",
+      "ix": 2560,
+      "iy": 3072,
+      "mode": "projectile",
+      "technique": "boulder",
+      "cycleMs": 500,
+      "releaseOffsetMs": 250,
+      "cycleTicks": 5,
+      "releaseOffsetTicks": 3,
+      "impactOffsetsTicks": [
+        13
+      ],
+      "cadenceTicks": 5,
+      "count": 1
+    },
+    {
+      "t": 574,
+      "e": "hit",
+      "target": "air",
+      "dmg": 55
+    },
+    {
+      "t": 576,
+      "e": "attackRun",
+      "id": 0,
+      "side": "attacker",
+      "troop": "giant",
+      "targetKind": "building",
+      "target": "air",
+      "ix": 2560,
+      "iy": 3072,
+      "mode": "projectile",
+      "technique": "boulder",
+      "cycleMs": 500,
+      "releaseOffsetMs": 250,
+      "cycleTicks": 5,
+      "releaseOffsetTicks": 3,
+      "impactOffsetsTicks": [
+        13
+      ],
+      "cadenceTicks": 5,
+      "count": 1
+    },
+    {
+      "t": 579,
+      "e": "hit",
+      "target": "air",
+      "dmg": 55
+    },
+    {
+      "t": 581,
+      "e": "attackRun",
+      "id": 0,
+      "side": "attacker",
+      "troop": "giant",
+      "targetKind": "building",
+      "target": "air",
+      "ix": 2560,
+      "iy": 3072,
+      "mode": "projectile",
+      "technique": "boulder",
+      "cycleMs": 500,
+      "releaseOffsetMs": 250,
+      "cycleTicks": 5,
+      "releaseOffsetTicks": 3,
+      "impactOffsetsTicks": [
+        13
+      ],
+      "cadenceTicks": 5,
+      "count": 1
+    },
+    {
+      "t": 584,
+      "e": "hit",
+      "target": "air",
+      "dmg": 55
+    },
+    {
+      "t": 586,
+      "e": "attackRun",
+      "id": 0,
+      "side": "attacker",
+      "troop": "giant",
+      "targetKind": "building",
+      "target": "air",
+      "ix": 2560,
+      "iy": 3072,
+      "mode": "projectile",
+      "technique": "boulder",
+      "cycleMs": 500,
+      "releaseOffsetMs": 250,
+      "cycleTicks": 5,
+      "releaseOffsetTicks": 3,
+      "impactOffsetsTicks": [
+        13
+      ],
+      "cadenceTicks": 5,
+      "count": 1
+    },
+    {
+      "t": 589,
+      "e": "hit",
+      "target": "air",
+      "dmg": 55
+    },
+    {
+      "t": 591,
+      "e": "attackRun",
+      "id": 0,
+      "side": "attacker",
+      "troop": "giant",
+      "targetKind": "building",
+      "target": "air",
+      "ix": 2560,
+      "iy": 3072,
+      "mode": "projectile",
+      "technique": "boulder",
+      "cycleMs": 500,
+      "releaseOffsetMs": 250,
+      "cycleTicks": 5,
+      "releaseOffsetTicks": 3,
+      "impactOffsetsTicks": [
+        13
+      ],
+      "cadenceTicks": 5,
+      "count": 1
+    },
+    {
+      "t": 594,
+      "e": "hit",
+      "target": "air",
+      "dmg": 55
+    },
+    {
+      "t": 596,
+      "e": "attackRun",
+      "id": 0,
+      "side": "attacker",
+      "troop": "giant",
+      "targetKind": "building",
+      "target": "air",
+      "ix": 2560,
+      "iy": 3072,
+      "mode": "projectile",
+      "technique": "boulder",
+      "cycleMs": 500,
+      "releaseOffsetMs": 250,
+      "cycleTicks": 5,
+      "releaseOffsetTicks": 3,
+      "impactOffsetsTicks": [
+        13
+      ],
+      "cadenceTicks": 5,
+      "count": 1
+    },
+    {
+      "t": 599,
+      "e": "hit",
+      "target": "air",
+      "dmg": 55
+    },
+    {
+      "t": 601,
+      "e": "attackRun",
+      "id": 0,
+      "side": "attacker",
+      "troop": "giant",
+      "targetKind": "building",
+      "target": "air",
+      "ix": 2560,
+      "iy": 3072,
+      "mode": "projectile",
+      "technique": "boulder",
+      "cycleMs": 500,
+      "releaseOffsetMs": 250,
+      "cycleTicks": 5,
+      "releaseOffsetTicks": 3,
+      "impactOffsetsTicks": [
+        13
+      ],
+      "cadenceTicks": 5,
+      "count": 1
+    },
+    {
+      "t": 604,
+      "e": "hit",
+      "target": "air",
+      "dmg": 55
+    },
+    {
+      "t": 606,
+      "e": "attackRun",
+      "id": 0,
+      "side": "attacker",
+      "troop": "giant",
+      "targetKind": "building",
+      "target": "air",
+      "ix": 2560,
+      "iy": 3072,
+      "mode": "projectile",
+      "technique": "boulder",
+      "cycleMs": 500,
+      "releaseOffsetMs": 250,
+      "cycleTicks": 5,
+      "releaseOffsetTicks": 3,
+      "impactOffsetsTicks": [
+        13
+      ],
+      "cadenceTicks": 5,
+      "count": 1
+    },
+    {
+      "t": 609,
+      "e": "hit",
+      "target": "air",
+      "dmg": 55
+    },
+    {
+      "t": 611,
+      "e": "attackRun",
+      "id": 0,
+      "side": "attacker",
+      "troop": "giant",
+      "targetKind": "building",
+      "target": "air",
+      "ix": 2560,
+      "iy": 3072,
+      "mode": "projectile",
+      "technique": "boulder",
+      "cycleMs": 500,
+      "releaseOffsetMs": 250,
+      "cycleTicks": 5,
+      "releaseOffsetTicks": 3,
+      "impactOffsetsTicks": [
+        13
+      ],
+      "cadenceTicks": 5,
+      "count": 1
+    },
+    {
+      "t": 614,
+      "e": "hit",
+      "target": "air",
+      "dmg": 55
+    },
+    {
+      "t": 616,
+      "e": "attackRun",
+      "id": 0,
+      "side": "attacker",
+      "troop": "giant",
+      "targetKind": "building",
+      "target": "air",
+      "ix": 2560,
+      "iy": 3072,
+      "mode": "projectile",
+      "technique": "boulder",
+      "cycleMs": 500,
+      "releaseOffsetMs": 250,
+      "cycleTicks": 5,
+      "releaseOffsetTicks": 3,
+      "impactOffsetsTicks": [
+        13
+      ],
+      "cadenceTicks": 5,
+      "count": 1
+    },
+    {
+      "t": 619,
+      "e": "hit",
+      "target": "air",
+      "dmg": 55
+    },
+    {
+      "t": 621,
+      "e": "attackRun",
+      "id": 0,
+      "side": "attacker",
+      "troop": "giant",
+      "targetKind": "building",
+      "target": "air",
+      "ix": 2560,
+      "iy": 3072,
+      "mode": "projectile",
+      "technique": "boulder",
+      "cycleMs": 500,
+      "releaseOffsetMs": 250,
+      "cycleTicks": 5,
+      "releaseOffsetTicks": 3,
+      "impactOffsetsTicks": [
+        13
+      ],
+      "cadenceTicks": 5,
+      "count": 1
+    },
+    {
+      "t": 624,
+      "e": "hit",
+      "target": "air",
+      "dmg": 55
+    },
+    {
+      "t": 624,
+      "e": "destroyed",
+      "id": "air"
+    },
+    {
+      "t": 630,
+      "e": "pos",
+      "id": 0,
+      "x": 2048,
+      "y": 3275
+    },
+    {
+      "t": 635,
+      "e": "pos",
+      "id": 0,
+      "x": 2148,
+      "y": 3295
+    },
+    {
+      "t": 635,
+      "e": "fire",
+      "id": "keep",
+      "target": 0,
+      "proj": "shell",
+      "ix": 2148,
+      "iy": 3295,
+      "releaseOffsetMs": 143,
+      "flightMs": 1235,
+      "impactOffsetTicks": 14
+    },
+    {
+      "t": 640,
+      "e": "pos",
+      "id": 0,
+      "x": 2248,
+      "y": 3315
+    },
+    {
+      "t": 645,
+      "e": "pos",
+      "id": 0,
+      "x": 2348,
+      "y": 3335
+    },
+    {
+      "t": 649,
+      "e": "hit",
+      "target": 0,
+      "dmg": 4136
+    },
+    {
+      "t": 649,
+      "e": "troopDeath",
+      "id": 0
+    }
+  ]
+}

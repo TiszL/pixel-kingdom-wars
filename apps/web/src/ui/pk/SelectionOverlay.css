@@ -1,0 +1,49 @@
+/* SelectionOverlay.css — name plate + stem (paint only). Position comes inline from the namePlatePlacement port.
+ * Tokens only; per-class rules read [data-pk-vp]. The command bar's own look is CommandBar.css. */
+
+.pk-sel { position: fixed; inset: 0; pointer-events: none; z-index: var(--z-cmd); contain: layout style; }
+.pk-sel > .pk-cbar { z-index: var(--z-cmd); }
+
+.pk-sel__plateAt { position: absolute; pointer-events: none; }
+.pk-sel__stem { position: absolute; width: var(--pk-size-name-plate-stem-w); background: var(--pk-ink); pointer-events: none; }
+
+.pk-nplate {
+  display: flex;
+  min-width: var(--pk-size-name-plate-min-w);
+  /* 280 max; on the 320 floor the plate clamps to the screen less two 8 px margins (MAP-DESIGN §4.3 item 7). */
+  max-width: min(var(--pk-size-name-plate-max-w), calc(100vw - 2 * var(--pk-gutter)));
+  min-height: var(--pk-size-name-plate-h); width: max-content;
+}
+.pk-nplate[data-meter="true"] { min-height: calc(var(--pk-size-name-plate-h) + var(--pk-s12) + var(--pk-s2)); }
+/* The plate is P0's CHARCOAL <PkPlate> (Plate.css); P2 keeps its own content padding inside the 3 px rim. */
+.pk-nplate__plate { flex: 1 1 auto; }
+.pk-nplate > .pk-nplate__plate > .pk-plate__face { padding: 0; justify-content: center; }
+.pk-nplate__in { display: flex; flex-direction: column; justify-content: center; gap: var(--pk-s2); min-width: 0; padding: var(--pk-s6) var(--pk-s12) var(--pk-s8); }
+.pk-nplate__row { display: flex; align-items: center; gap: var(--pk-s8); min-width: 0; }
+.pk-nplate__name { color: var(--pk-gold-hi); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; min-width: 0; }
+.pk-nplate__tag {
+  position: relative; flex: none; display: flex; align-items: center; height: calc(var(--pk-size-badge-h) - var(--pk-s2));
+  padding: 0 var(--pk-s6); background: var(--pk-ink); clip-path: var(--pk-clip-s);
+}
+.pk-nplate__tag::before { content: ""; position: absolute; inset: var(--pk-outline-chip); clip-path: var(--pk-clip-s); background: var(--pk-blue); }
+.pk-nplate__tag[data-verb="GOLD"]::before { background: var(--pk-gold); }
+.pk-nplate__tag > span { position: relative; color: var(--pk-text); }
+.pk-nplate__tag[data-verb="GOLD"] > span { color: var(--pk-ink); }
+.pk-nplate__state { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; color: var(--pk-text-muted); }
+.pk-nplate__state [data-tone="VALUE"] { color: var(--pk-text); }
+.pk-nplate__state [data-tone="TIME"] { color: var(--pk-gold-hi); }
+.pk-nplate__state [data-tone="READY"] { color: var(--pk-green-hi); }
+.pk-nplate__state [data-tone="DANGER"] { color: var(--pk-danger); }
+.pk-nplate__meter { margin-top: var(--pk-s2); height: var(--pk-s12); background: var(--pk-ink); clip-path: var(--pk-clip-s); padding: var(--pk-s2); box-sizing: border-box; }
+.pk-nplate__track { height: 100%; background: var(--pk-stone-lo); position: relative; overflow: hidden; }
+.pk-nplate__track > i { position: absolute; left: 0; top: 0; bottom: 0; background: linear-gradient(var(--pk-green-hi) 0 var(--pk-s2), var(--pk-green) var(--pk-s2)); }
+
+/* Motion: plate drops 8 + fades in (plate-in); lifts 8 + fades out on deselect (120 ms cross-fade). */
+.pk-sel[data-motion="enter"] .pk-sel__plateAt, .pk-sel[data-motion="enter"] .pk-sel__stem { animation: pk-sel-plate-in var(--pk-dur-plate-in) var(--pk-ease-out) both; }
+.pk-sel[data-motion="swap"] .pk-sel__plateAt, .pk-sel[data-motion="swap"] .pk-sel__stem { animation: pk-sel-plate-fade var(--pk-dur-crossfade) var(--pk-ease-out) both; }
+.pk-sel[data-motion="exit"] .pk-sel__plateAt, .pk-sel[data-motion="exit"] .pk-sel__stem { animation: pk-sel-plate-out var(--pk-dur-crossfade) var(--pk-ease-in) both; }
+/* `pk-sel-*`: @keyframes names are global, and P0 NamePlate.css owns `pk-plate-in` (parity verdict B3). */
+@keyframes pk-sel-plate-in { from { opacity: 0; transform: translateY(calc(-1 * var(--pk-s8))); } }
+@keyframes pk-sel-plate-fade { from { opacity: 0; } }
+@keyframes pk-sel-plate-out { to { opacity: 0; transform: translateY(calc(-1 * var(--pk-s8))); } }
+/* Reduced motion (both triggers) lives in kitBase.css: one list for the whole kit. */

@@ -1,0 +1,50 @@
+/* ToastQueue.css — toast host + toast. Absolutely positioned in the overlay (no document flow, no canvas reflow).
+ * z: --z-toast (bridge 3000; below the Seal and the Celebration: a toast never covers a consent). Only --pk-* values.
+ * Width: min(396, 100% - 16) on every class (396 = Feedback.kt ToastHost widthIn(max = 396.dp); not in TOKENS, gap,
+ * spelled from bridge sizes). Transient, so not permanent HUD. */
+
+.pk-toast-host {
+  --pk-k-toast-w: calc(var(--pk-size-name-plate-max-w) + var(--pk-size-command-primary-w) - var(--pk-s4)); /* 396 */
+  position: absolute;
+  z-index: var(--z-toast);
+  display: flex;
+  flex-direction: column;
+  gap: var(--pk-s6);
+  width: min(var(--pk-k-toast-w), 100% - 2 * var(--pk-gutter));
+  pointer-events: none;
+}
+/* Bottom-centre, above the deck (deck height + its inset + the gesture inset), newest nearest the thumb. */
+.pk-toast-host--deck {
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: calc(var(--pk-size-deck-attack-h) + var(--pk-size-deck-bottom-inset) + var(--pk-s8) + env(safe-area-inset-bottom, 0px));
+}
+/* While a TALL sheet is open the bottom is covered: top-left zone under the top bar. */
+.pk-toast-host--tall-sheet {
+  left: var(--pk-hud-edge);
+  top: calc(var(--pk-min-tap) + var(--pk-s8) + env(safe-area-inset-top, 0px));
+}
+/* Desktop / tablet-landscape: a tall sheet is a 480 right side panel and never covers bottom-centre, so the host keeps
+ * zone 'deck' there (1440: toasts span x 522-918, the panel starts at 960). */
+/* Phone landscape: the deck is short (60), so the toasts sit lower. */
+:root[data-pk-vp="phone-landscape"] .pk-toast-host--deck {
+  bottom: calc(var(--pk-size-sheet-primary-h) + var(--pk-s8) + env(safe-area-inset-bottom, 0px));
+}
+
+.pk-toast {
+  pointer-events: auto;
+  animation:
+    pk-toast-in var(--pk-dur-toast-in) var(--pk-ease-out) both,
+    pk-toast-out var(--pk-dur-toast-in) var(--pk-ease-in) calc(var(--pk-dur-toast-hold) - var(--pk-dur-toast-in)) forwards;
+}
+.pk-toast__plate { min-height: var(--pk-size-toast-h); }
+.pk-toast__plate > .pk-plate__face { justify-content: center; padding-inline: var(--pk-s6); }
+.pk-toast__row { display: flex; align-items: center; gap: var(--pk-s8); min-width: 0; }
+.pk-toast__msg {
+  flex: 1 1 auto; min-width: 0; color: var(--pk-text);
+  display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;
+}
+
+/* KIT TOAST_SLIDE_DP 12: in from 12 px above; under reduced motion the bridge shortens the duration to 120 ms. */
+@keyframes pk-toast-in { from { opacity: 0; transform: translateY(calc(-1 * var(--pk-s12))); } to { opacity: 1; transform: none; } }
+@keyframes pk-toast-out { from { opacity: 1; } to { opacity: 0; visibility: hidden; } }

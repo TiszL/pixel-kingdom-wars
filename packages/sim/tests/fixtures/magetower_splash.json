@@ -1,0 +1,29 @@
+{
+  "hash": "ae82f3b5",
+  "outcome": {
+    "stars": 0,
+    "destructionPct": 0,
+    "keepDestroyed": false,
+    "vaultDestroyed": false,
+    "mineDestroyed": false,
+    "victory": false,
+    "buildings": [
+      {
+        "id": "keep",
+        "type": "keep",
+        "hp": 1200,
+        "maxHp": 1200,
+        "destroyed": false
+      },
+      {
+        "id": "magetower",
+        "type": "magetower",
+        "hp": 531,
+        "maxHp": 531,
+        "destroyed": false
+      }
+    ],
+    "ticks": 34,
+    "eventCount": 46
+  }
+}

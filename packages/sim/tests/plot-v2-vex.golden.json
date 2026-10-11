@@ -1,0 +1,472 @@
+{
+  "simVersion": 15,
+  "plotVersion": 2,
+  "hash": "be30432f",
+  "outcome": {
+    "stars": 2,
+    "destructionPct": 100,
+    "keepDestroyed": false,
+    "vaultDestroyed": false,
+    "mineDestroyed": false,
+    "victory": true,
+    "buildings": [
+      {
+        "id": "laser",
+        "type": "lasertower",
+        "hp": 0,
+        "maxHp": 500,
+        "destroyed": true
+      },
+      {
+        "id": "wall_6_6",
+        "type": "wall",
+        "hp": 13201,
+        "maxHp": 13201,
+        "destroyed": false
+      },
+      {
+        "id": "wall_6_22",
+        "type": "wall",
+        "hp": 13201,
+        "maxHp": 13201,
+        "destroyed": false
+      },
+      {
+        "id": "wall_7_6",
+        "type": "wall",
+        "hp": 13201,
+        "maxHp": 13201,
+        "destroyed": false
+      },
+      {
+        "id": "wall_7_22",
+        "type": "wall",
+        "hp": 13201,
+        "maxHp": 13201,
+        "destroyed": false
+      },
+      {
+        "id": "wall_8_6",
+        "type": "wall",
+        "hp": 13201,
+        "maxHp": 13201,
+        "destroyed": false
+      },
+      {
+        "id": "wall_8_22",
+        "type": "wall",
+        "hp": 13201,
+        "maxHp": 13201,
+        "destroyed": false
+      },
+      {
+        "id": "wall_9_6",
+        "type": "wall",
+        "hp": 13201,
+        "maxHp": 13201,
+        "destroyed": false
+      },
+      {
+        "id": "wall_9_22",
+        "type": "wall",
+        "hp": 13201,
+        "maxHp": 13201,
+        "destroyed": false
+      },
+      {
+        "id": "wall_10_6",
+        "type": "wall",
+        "hp": 13201,
+        "maxHp": 13201,
+        "destroyed": false
+      },
+      {
+        "id": "wall_10_22",
+        "type": "wall",
+        "hp": 13201,
+        "maxHp": 13201,
+        "destroyed": false
+      },
+      {
+        "id": "wall_11_6",
+        "type": "wall",
+        "hp": 13201,
+        "maxHp": 13201,
+        "destroyed": false
+      },
+      {
+        "id": "wall_11_22",
+        "type": "wall",
+        "hp": 13201,
+        "maxHp": 13201,
+        "destroyed": false
+      },
+      {
+        "id": "wall_12_6",
+        "type": "wall",
+        "hp": 13201,
+        "maxHp": 13201,
+        "destroyed": false
+      },
+      {
+        "id": "wall_12_22",
+        "type": "wall",
+        "hp": 13201,
+        "maxHp": 13201,
+        "destroyed": false
+      },
+      {
+        "id": "wall_13_6",
+        "type": "wall",
+        "hp": 13201,
+        "maxHp": 13201,
+        "destroyed": false
+      },
+      {
+        "id": "wall_13_22",
+        "type": "wall",
+        "hp": 13201,
+        "maxHp": 13201,
+        "destroyed": false
+      },
+      {
+        "id": "wall_14_6",
+        "type": "wall",
+        "hp": 13201,
+        "maxHp": 13201,
+        "destroyed": false
+      },
+      {
+        "id": "wall_14_22",
+        "type": "wall",
+        "hp": 13201,
+        "maxHp": 13201,
+        "destroyed": false
+      },
+      {
+        "id": "wall_15_6",
+        "type": "wall",
+        "hp": 13201,
+        "maxHp": 13201,
+        "destroyed": false
+      },
+      {
+        "id": "wall_15_22",
+        "type": "wall",
+        "hp": 13201,
+        "maxHp": 13201,
+        "destroyed": false
+      },
+      {
+        "id": "wall_16_6",
+        "type": "wall",
+        "hp": 13201,
+        "maxHp": 13201,
+        "destroyed": false
+      },
+      {
+        "id": "wall_16_22",
+        "type": "wall",
+        "hp": 13201,
+        "maxHp": 13201,
+        "destroyed": false
+      },
+      {
+        "id": "wall_17_6",
+        "type": "wall",
+        "hp": 13201,
+        "maxHp": 13201,
+        "destroyed": false
+      },
+      {
+        "id": "wall_17_22",
+        "type": "wall",
+        "hp": 13201,
+        "maxHp": 13201,
+        "destroyed": false
+      },
+      {
+        "id": "wall_18_6",
+        "type": "wall",
+        "hp": 13201,
+        "maxHp": 13201,
+        "destroyed": false
+      },
+      {
+        "id": "wall_18_22",
+        "type": "wall",
+        "hp": 13201,
+        "maxHp": 13201,
+        "destroyed": false
+      },
+      {
+        "id": "wall_19_6",
+        "type": "wall",
+        "hp": 13201,
+        "maxHp": 13201,
+        "destroyed": false
+      },
+      {
+        "id": "wall_19_22",
+        "type": "wall",
+        "hp": 13201,
+        "maxHp": 13201,
+        "destroyed": false
+      },
+      {
+        "id": "wall_20_6",
+        "type": "wall",
+        "hp": 13201,
+        "maxHp": 13201,
+        "destroyed": false
+      },
+      {
+        "id": "wall_20_22",
+        "type": "wall",
+        "hp": 13201,
+        "maxHp": 13201,
+        "destroyed": false
+      },
+      {
+        "id": "wall_21_6",
+        "type": "wall",
+        "hp": 13201,
+        "maxHp": 13201,
+        "destroyed": false
+      },
+      {
+        "id": "wall_21_22",
+        "type": "wall",
+        "hp": 13201,
+        "maxHp": 13201,
+        "destroyed": false
+      },
+      {
+        "id": "wall_22_6",
+        "type": "wall",
+        "hp": 13201,
+        "maxHp": 13201,
+        "destroyed": false
+      },
+      {
+        "id": "wall_22_22",
+        "type": "wall",
+        "hp": 13201,
+        "maxHp": 13201,
+        "destroyed": false
+      },
+      {
+        "id": "wall_6_7",
+        "type": "wall",
+        "hp": 13201,
+        "maxHp": 13201,
+        "destroyed": false
+      },
+      {
+        "id": "wall_22_7",
+        "type": "wall",
+        "hp": 13201,
+        "maxHp": 13201,
+        "destroyed": false
+      },
+      {
+        "id": "wall_6_8",
+        "type": "wall",
+        "hp": 13201,
+        "maxHp": 13201,
+        "destroyed": false
+      },
+      {
+        "id": "wall_22_8",
+        "type": "wall",
+        "hp": 13201,
+        "maxHp": 13201,
+        "destroyed": false
+      },
+      {
+        "id": "wall_6_9",
+        "type": "wall",
+        "hp": 13201,
+        "maxHp": 13201,
+        "destroyed": false
+      },
+      {
+        "id": "wall_22_9",
+        "type": "wall",
+        "hp": 13201,
+        "maxHp": 13201,
+        "destroyed": false
+      },
+      {
+        "id": "wall_6_10",
+        "type": "wall",
+        "hp": 13201,
+        "maxHp": 13201,
+        "destroyed": false
+      },
+      {
+        "id": "wall_22_10",
+        "type": "wall",
+        "hp": 13201,
+        "maxHp": 13201,
+        "destroyed": false
+      },
+      {
+        "id": "wall_6_11",
+        "type": "wall",
+        "hp": 13201,
+        "maxHp": 13201,
+        "destroyed": false
+      },
+      {
+        "id": "wall_22_11",
+        "type": "wall",
+        "hp": 13201,
+        "maxHp": 13201,
+        "destroyed": false
+      },
+      {
+        "id": "wall_6_12",
+        "type": "wall",
+        "hp": 13201,
+        "maxHp": 13201,
+        "destroyed": false
+      },
+      {
+        "id": "wall_22_12",
+        "type": "wall",
+        "hp": 13201,
+        "maxHp": 13201,
+        "destroyed": false
+      },
+      {
+        "id": "wall_6_13",
+        "type": "wall",
+        "hp": 13123,
+        "maxHp": 13201,
+        "destroyed": false
+      },
+      {
+        "id": "wall_22_13",
+        "type": "wall",
+        "hp": 13201,
+        "maxHp": 13201,
+        "destroyed": false
+      },
+      {
+        "id": "wall_6_14",
+        "type": "wall",
+        "hp": 6218,
+        "maxHp": 13201,
+        "destroyed": false
+      },
+      {
+        "id": "wall_22_14",
+        "type": "wall",
+        "hp": 13201,
+        "maxHp": 13201,
+        "destroyed": false
+      },
+      {
+        "id": "wall_6_15",
+        "type": "wall",
+        "hp": 13123,
+        "maxHp": 13201,
+        "destroyed": false
+      },
+      {
+        "id": "wall_22_15",
+        "type": "wall",
+        "hp": 13201,
+        "maxHp": 13201,
+        "destroyed": false
+      },
+      {
+        "id": "wall_6_16",
+        "type": "wall",
+        "hp": 13201,
+        "maxHp": 13201,
+        "destroyed": false
+      },
+      {
+        "id": "wall_22_16",
+        "type": "wall",
+        "hp": 13201,
+        "maxHp": 13201,
+        "destroyed": false
+      },
+      {
+        "id": "wall_6_17",
+        "type": "wall",
+        "hp": 13201,
+        "maxHp": 13201,
+        "destroyed": false
+      },
+      {
+        "id": "wall_22_17",
+        "type": "wall",
+        "hp": 13201,
+        "maxHp": 13201,
+        "destroyed": false
+      },
+      {
+        "id": "wall_6_18",
+        "type": "wall",
+        "hp": 13201,
+        "maxHp": 13201,
+        "destroyed": false
+      },
+      {
+        "id": "wall_22_18",
+        "type": "wall",
+        "hp": 13201,
+        "maxHp": 13201,
+        "destroyed": false
+      },
+      {
+        "id": "wall_6_19",
+        "type": "wall",
+        "hp": 13201,
+        "maxHp": 13201,
+        "destroyed": false
+      },
+      {
+        "id": "wall_22_19",
+        "type": "wall",
+        "hp": 13201,
+        "maxHp": 13201,
+        "destroyed": false
+      },
+      {
+        "id": "wall_6_20",
+        "type": "wall",
+        "hp": 13201,
+        "maxHp": 13201,
+        "destroyed": false
+      },
+      {
+        "id": "wall_22_20",
+        "type": "wall",
+        "hp": 13201,
+        "maxHp": 13201,
+        "destroyed": false
+      },
+      {
+        "id": "wall_6_21",
+        "type": "wall",
+        "hp": 13201,
+        "maxHp": 13201,
+        "destroyed": false
+      },
+      {
+        "id": "wall_22_21",
+        "type": "wall",
+        "hp": 13201,
+        "maxHp": 13201,
+        "destroyed": false
+      }
+    ],
+    "ticks": 159
+  },
+  "eventCount": 262
+}

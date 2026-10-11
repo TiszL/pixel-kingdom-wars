@@ -1,0 +1,29 @@
+{
+  "hash": "37325a11",
+  "outcome": {
+    "stars": 0,
+    "destructionPct": 0,
+    "keepDestroyed": false,
+    "vaultDestroyed": false,
+    "mineDestroyed": false,
+    "victory": false,
+    "buildings": [
+      {
+        "id": "keep",
+        "type": "keep",
+        "hp": 1200,
+        "maxHp": 1200,
+        "destroyed": false
+      },
+      {
+        "id": "laser",
+        "type": "lasertower",
+        "hp": 500,
+        "maxHp": 500,
+        "destroyed": false
+      }
+    ],
+    "ticks": 17,
+    "eventCount": 10
+  }
+}

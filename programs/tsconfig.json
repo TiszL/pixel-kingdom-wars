@@ -1,0 +1,33 @@
+{
+  "compilerOptions": {
+    "types": [
+      "mocha",
+      "chai",
+      "node"
+    ],
+    "typeRoots": [
+      "./node_modules/@types"
+    ],
+    "lib": [
+      "es2022"
+    ],
+    "target": "es2022",
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+    "strict": true,
+    "skipLibCheck": true
+  },
+  "include": [
+    "tests/**/*.ts",
+    "target/types/**/*.ts",
+    "seeker-local-*.ts",
+    "mining-local-*.ts",
+    "charter-local-*.ts",
+    "vehicle-local-*.ts"
+  ],
+  "exclude": [
+    "mining-local-ordered.fixture.ts"
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "$comment": [
+    "Inputs for the Android shell. Everything the TWA build and the dApp Store",
+    "listing need that is NOT already in apps/web/public/manifest.webmanifest.",
+    "",
+    "SET `domain` BEFORE BUILDING. It is baked into the APK in two places that",
+    "must agree \u2014 the URL the shell opens, and the Digital Asset Links check that",
+    "removes the browser chrome \u2014 so it cannot be changed after publishing without",
+    "shipping a new APK. build-apk.sh refuses to run while it is the placeholder.",
+    "",
+    "`applicationId` is the permanent Android identity of the app. Changing it",
+    "later means a NEW listing, not an update: users would have to uninstall and",
+    "reinstall, losing nothing on-chain but every local setting. Choose once."
+  ],
+  "domain": "play.pixelkingdomwars.com",
+  "applicationId": "gg.pixelkingdomwars.twa",
+  "name": "Pixel Kingdom Wars",
+  "launcherName": "Kingdom Wars",
+  "themeColor": "#100E14",
+  "backgroundColor": "#100E14",
+  "navigationColor": "#100E14",
+  "orientation": "default",
+  "display": "fullscreen",
+  "startUrl": "/?client=solana-mobile",
+  "iconUrl": "/icons/icon-512.png",
+  "maskableIconUrl": "/icons/icon-512.png",
+  "appVersionName": "0.7.1",
+  "appVersionCode": 25,
+  "language": "en-US",
+  "signingKey": {
+    "path": "./keystore/pkw-release.keystore",
+    "alias": "pkw"
+  },
+  "enableNotifications": true
+}

@@ -1,0 +1,86 @@
+/* SheetHost.css — sheet position, slide and scrim. Layout picks read [data-layout] (set from the viewport class by
+ * sheetLayout), never a pixel width. Transforms only: nothing here can reflow the document or the canvas. */
+
+:root {
+  /* KIT SheetGeometry.FULL_TOP_DP 60 / FULL_BOTTOM_DP 14 (not in the bridge; composed from token steps). */
+  --pkc-full-top: calc(var(--pk-s32) + var(--pk-s24) + var(--pk-s4));
+  --pkc-full-bottom: calc(var(--pk-s12) + var(--pk-s2));
+  /* Side panel min(480, 50 %) (MAP-DESIGN §4.2 ← ARCH:210). The bridge does not emit --pk-side* yet
+   * (pk-tokens.generated.md §4 item 3); 480 = --pk-size-command-primary-w × 4. */
+  --pkc-side-w: min(calc(4 * var(--pk-size-command-primary-w)), 50vw);
+  /* Full card ≤ 720 (MAP-DESIGN §4.2 ← ARCH:210) = 6 × 120. */
+  /* Side panels start under the resource stack (4 rows + 3 gaps from its 10 px top, + an 8 px margin), so the panel's
+   * header and close square never sit under the lifted stack (CommandBarMetrics.STACK_BOTTOM + MARGIN on Android). */
+  --pkc-side-top: calc(4 * var(--pk-size-resource-row-h) + 3 * var(--pk-size-resource-gap) + var(--pk-s12) + var(--pk-s8));
+  --pkc-card-w: min(calc(6 * var(--pk-size-command-primary-w)), calc(100vw - 2 * var(--pk-gutter)));
+}
+
+.pk-sheethost { position: fixed; inset: 0; pointer-events: none; z-index: var(--z-sheet); contain: layout style; }
+
+.pk-sheethost__scrim { position: absolute; inset: 0; pointer-events: auto; animation: pk-sheet-fade var(--pk-dur-sheet-in) var(--pk-ease-out) both; }
+.pk-sheethost__scrim[data-scrim="tall"] { background: var(--pk-scrim-tall); }
+.pk-sheethost__scrim[data-scrim="full"] { background: var(--pk-scrim-full); }
+.pk-sheethost[data-phase="out"] .pk-sheethost__scrim { animation: pk-sheet-fade-out var(--pk-dur-sheet-out) var(--pk-ease-in) both; pointer-events: none; }
+
+.pk-sheethost__panel {
+  position: absolute; pointer-events: auto; box-sizing: border-box; display: flex; flex-direction: column;
+  overflow: hidden; outline: none; will-change: transform;
+  --pk-sheet-in: var(--pk-dur-sheet-in); --pk-sheet-out: var(--pk-dur-sheet-out);
+}
+.pk-sheethost[data-size="HALF"] .pk-sheethost__panel { --pk-sheet-in: var(--pk-dur-half-sheet-in); --pk-sheet-out: var(--pk-dur-half-sheet-out); }
+.pk-sheethost__panel > * { flex: 1 1 auto; min-height: 0; }
+/* Living-header height the hosted frame reads (Android SheetFrame(headerHeight); LANE §4): 136 / 96 / Compact 60. */
+.pk-sheethost__panel { --pk-sheet-header-h: var(--pk-size-sheet-header-h); }
+.pk-sheethost[data-header="medium"] .pk-sheethost__panel { --pk-sheet-header-h: calc(3 * var(--pk-s32)); }
+.pk-sheethost[data-header="compact"] .pk-sheethost__panel { --pk-sheet-header-h: var(--pkc-full-top); }
+
+/* ---- bottom sheets (phone-portrait, tablet-portrait) ---- */
+.pk-sheethost[data-layout="bottom"] .pk-sheethost__panel {
+  left: 0; right: 0; bottom: 0; padding-bottom: env(safe-area-inset-bottom);
+  animation: pk-sheet-up var(--pk-sheet-in) var(--pk-ease-out) both;
+}
+.pk-sheethost[data-layout="bottom"][data-size="HALF"] .pk-sheethost__panel { max-height: 50%; }
+.pk-sheethost[data-layout="bottom"][data-size="HALF"] .pk-sheethost__panel > * { flex: 0 1 auto; }
+.pk-sheethost[data-layout="bottom"][data-size="TALL"] .pk-sheethost__panel { top: var(--pk-size-tall-sheet-top); }
+.pk-sheethost[data-layout="bottom"][data-size="FULL"] .pk-sheethost__panel {
+  top: calc(var(--pkc-full-top) + env(safe-area-inset-top)); bottom: calc(var(--pkc-full-bottom) + env(safe-area-inset-bottom));
+  left: var(--pk-sheet-gutter); right: var(--pk-sheet-gutter); padding-bottom: 0;
+}
+.pk-sheethost[data-layout="bottom"][data-phase="out"] .pk-sheethost__panel { animation: pk-sheet-down var(--pk-sheet-out) var(--pk-ease-in) both; }
+
+/* ---- side panels (desktop, tablet-landscape, phone-landscape) ---- */
+.pk-sheethost[data-layout="side"] .pk-sheethost__panel {
+  right: var(--pk-hud-edge); width: var(--pkc-side-w); bottom: var(--pk-hud-edge);
+  animation: pk-sheet-left var(--pk-sheet-in) var(--pk-ease-out) both;
+}
+.pk-sheethost[data-layout="side"][data-size="TALL"] .pk-sheethost__panel { top: var(--pkc-side-top); }
+.pk-sheethost[data-layout="side"][data-size="HALF"] .pk-sheethost__panel { max-height: calc(100% - var(--pkc-side-top) - var(--pk-hud-edge)); }
+.pk-sheethost[data-layout="side"][data-size="HALF"] .pk-sheethost__panel > * { flex: 0 1 auto; }
+/* Phone landscape has no room for the 104 drop: the panel runs edge to edge vertically (LANE §4 land row). */
+.pk-sheethost[data-pk-vp="phone-landscape"][data-layout="side"][data-size="TALL"] .pk-sheethost__panel,
+.pk-sheethost[data-pk-vp="phone-landscape"][data-layout="side"][data-size="FULL"] .pk-sheethost__panel { top: var(--pk-hud-edge); }
+.pk-sheethost[data-pk-vp="phone-landscape"][data-layout="side"][data-size="HALF"] .pk-sheethost__panel { max-height: calc(100% - 2 * var(--pk-hud-edge)); }
+.pk-sheethost[data-layout="side"][data-phase="out"] .pk-sheethost__panel { animation: pk-sheet-right var(--pk-sheet-out) var(--pk-ease-in) both; }
+
+/* ---- centred full card (desktop, tablets landscape, phone-landscape) ---- */
+.pk-sheethost[data-layout="center"] .pk-sheethost__panel {
+  left: 50%; width: var(--pkc-card-w); margin-left: calc(var(--pkc-card-w) / -2);
+  top: var(--pkc-full-top); bottom: var(--pkc-full-bottom);
+  animation: pk-sheet-rise var(--pk-sheet-in) var(--pk-ease-out) both;
+}
+.pk-sheethost[data-pk-vp="phone-landscape"][data-layout="center"] .pk-sheethost__panel { top: var(--pk-hud-edge); bottom: var(--pk-hud-edge); }
+.pk-sheethost[data-layout="center"][data-phase="out"] .pk-sheethost__panel { animation: pk-sheet-sink var(--pk-sheet-out) var(--pk-ease-in) both; }
+
+/* Exit = paint only. `!important` on the root and EVERY descendant: the host's `#overlay-root .interactive
+ * { pointer-events: auto }` (1,1,0) would otherwise revive the scrim, the panel or the hosted sheet's own buttons. */
+.pk-sheethost[data-phase="out"], .pk-sheethost[data-phase="out"] * { pointer-events: none !important; }
+
+@keyframes pk-sheet-up { from { transform: translateY(100%); } }
+@keyframes pk-sheet-down { to { transform: translateY(100%); } }
+@keyframes pk-sheet-left { from { transform: translateX(calc(100% + var(--pk-hud-edge))); } }
+@keyframes pk-sheet-right { to { transform: translateX(calc(100% + var(--pk-hud-edge))); } }
+@keyframes pk-sheet-rise { from { opacity: 0; transform: translateY(var(--pk-s24)); } }
+@keyframes pk-sheet-sink { to { opacity: 0; transform: translateY(var(--pk-s24)); } }
+@keyframes pk-sheet-fade { from { opacity: 0; } }
+@keyframes pk-sheet-fade-out { to { opacity: 0; } }
+/* Reduced motion (both triggers) lives in kitBase.css: one list for the whole kit. */

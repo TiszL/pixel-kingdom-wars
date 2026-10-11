@@ -1,0 +1,14 @@
+{
+ "_source": "pkw-android-globe world-shaders.lock.json at globe-native 7b5075b (native's release lock; do not edit, re-copy on a re-pin)",
+ "commit": "02e9da8414156b9e0000df1653de6273b196cca6",
+ "flatModuleSha256": "402dfcf7cd9c0c85c5bc5d74a9a026c69226887e1ff62f2c1e172986e5be4e04",
+ "preambleSha256": "26ee68bb4ce89eea9468e3e81e759f9ec172efe275bfce0bce4d300eeab8920e",
+ "stages": {
+  "globe-flat.fs.glsl": "8f7b17790aa6a8dea4da853204f9af11ed560c12d230e24db3637b6c1c9904b1",
+  "globe-flat.vs.glsl": "64bed743a370b92f59b37ae0a97ed9dca56dd0e3a1c28abc9ea556384d18ad79",
+  "globe-fx.fs.glsl": "76ab6c0709b4f0ad5ee2fc70194a05eef0fddacb5e25e10a028ba5cedc25ebc8",
+  "globe-fx.vs.glsl": "68e7f623796f46679d0a5235453feb27e28b10db7ed44b74b8d1af1bc72cc060",
+  "globe-isles.fs.glsl": "01ff2782129bd6cf44b664984ba288b0723b65733b2af70055d9aea7e16dbccd",
+  "globe-isles.vs.glsl": "4b62daf51e2a38fdb330f1420299270bfb741cecf9c0a0b85723736efccd7daa"
+ }
+}

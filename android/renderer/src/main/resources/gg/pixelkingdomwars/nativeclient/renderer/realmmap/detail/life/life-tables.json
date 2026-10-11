@@ -1,0 +1,4801 @@
+{
+ "schema": 1,
+ "pin": "02e9da8414156b9e0000df1653de6273b196cca6",
+ "generator": "e0af2a2f70adeedd0578d5bd3951b358a91d0f21008f730540f148482e6c6f20",
+ "sources": {
+  "concepts/globe3d-2026-09-23/src/realm/contracts.js": "3d3215dee2273b456c98b6684f5dc6835c1aaea1c3f7ea98e55fa462cb693eb0",
+  "concepts/globe3d-2026-09-23/src/realm/scatter.js": "969f0a75f67509f393ad48c252a7a1ea2ac149991be3c1df2424b682fb393cae",
+  "concepts/globe3d-2026-09-23/src/realm/decor.js": "5c8eb39e2fe633ab67cd01193b38d3b07aaadf2dc4d9fcc558f3101ef1d1b59b",
+  "concepts/globe3d-2026-09-23/src/realm/bases.js": "7e3db4e21e3c9b1e9a5bec2c5f717d859876ee5b4e9e29f28710e9f58ad1cad6",
+  "concepts/globe3d-2026-09-23/src/realm/life.js": "716142c459c8ccb8cc8d0a1e7d980cf502d5deda7480ed43a99d0b6f3f5ac169",
+  "concepts/globe3d-2026-09-23/src/realm/demo-bases.js": "e4441307fc9e0129614fb083b4661ff6e828ca1dbd4f7bbd17b733a3c5165c02",
+  "concepts/globe3d-2026-09-23/src/realm/camera.js": "879c4d6aabda484b36b3ceeea69108692131a5c222579c7983c9a282d8e5c4a9",
+  "concepts/globe3d-2026-09-23/src/realm/loader.js": "3aedcb60d54c73c883f5f8d4032ed1959d2e9f0febad0441f6ca3a9cd37668cb",
+  "concepts/globe3d-2026-09-23/src/realm/glsl/common.glsl.js": "7492ff9f85f283d3263fa3671907a9116ba646b5fdb56b100ae7cad73c35d52c",
+  "packages/shared/src/constants.ts": "360f8c643ee0211b5a7d8a81eedb60dc5fb3c47a67c9202109c424794d4821d6",
+  "packages/shared/src/wallConnect.ts": "ff7784ca91d3069b6f0ef217c6543eb002445fdbadb7d10bd50823097ee5b45b"
+ },
+ "kind": "pkw-life-tables",
+ "constants": {
+  "MIN_SPRITE_PX": 6,
+  "LIFE_CAPS": {
+   "sway": 6000,
+   "props": 200,
+   "creatures": 120,
+   "birds": 24,
+   "particles": 300,
+   "herds": 60,
+   "mapobj": 4000,
+   "submitted": {
+    "phone": 40000,
+    "desktop": 60000
+   }
+  },
+  "PHONE_CSS_MAX": 600,
+  "THIN_MAX": 8,
+  "THIN_ORDER": ["litter","rocks","scrub","crops","grove","lone","features","landmarks"],
+  "SWAY": {
+   "ampArt": 1,
+   "periodMinMs": 3000,
+   "periodMaxMs": 5000
+  },
+  "PLOT_CLEAR": 2,
+  "MAX_SPECIES": 64,
+  "FACINGS": ["down","left","right","up"],
+  "HERD_MAX": 4,
+  "LOOP_RADIUS_TILES": 3,
+  "WAYPOINT_SNAP": 16,
+  "FLOCK_MAX": 8,
+  "RANK_N": 2,
+  "STAND": {
+   "pitch": 8,
+   "jitter": 0.5,
+   "members": 16,
+   "edgeFlat": 8,
+   "edgeTiles": 6,
+   "mergeFrom": 60,
+   "mergeCap": 10000,
+   "splitFrom": 150,
+   "splitFull": 210,
+   "merge": 2
+  },
+  "THIN_SPREAD": 3,
+  "THIN_EPS": 0.1,
+  "MAPOBJ_ROLES": {
+   "peak": ["ROCK","SNOW"],
+   "massif": ["ROCK","SNOW"],
+   "range": ["ROCK","SNOW"],
+   "crag": ["ROCK"],
+   "mesa": ["ROCK"],
+   "arch": ["ROCK"],
+   "hoodoos": ["ROCK"],
+   "canyon_mouth": ["ROCK"],
+   "hill": ["ROCK","GROUND2"],
+   "dune_crest": ["SPECIAL"],
+   "oasis_pool": ["WILD","FIELD"],
+   "serac": ["SPECIAL","ROCK"],
+   "ice_floe": ["SPECIAL"],
+   "crater": ["ROCK","SPECIAL"],
+   "fumarole": ["SPECIAL","ROCK"],
+   "sea_stack": ["SHORE","ROCK"],
+   "stone_ring": ["WILD","SPECIAL"],
+   "lake_reeds": ["SHORE","WILD"],
+   "ruin_mound": ["WILD","GROUND2"],
+   "clump": ["WILD","GROUND2","SHORE"],
+   "scrub": ["WILD","GROUND2"],
+   "orchard": ["FIELD","WILD"],
+   "wildflowers": ["WILD","SPECIAL","FIELD"],
+   "heather": ["SPECIAL","WILD"],
+   "peat_bog": ["GROUND2","SPECIAL","WILD"],
+   "loch": ["WILD","GROUND2"],
+   "cairn": ["WILD","ROCK","SPECIAL"],
+   "frozen_pond": ["SPECIAL","WILD"],
+   "ice_cliff": ["ROCK","SPECIAL","SNOW"],
+   "hot_spring": ["WILD","GROUND2","ROCK"],
+   "lava_vent": ["SPECIAL","GROUND2","ROCK"],
+   "lava_pool": ["SPECIAL","GROUND2"],
+   "spire": ["ROCK","SPECIAL","GROUND2"],
+   "rubble": ["ROCK","GROUND2","WILD"],
+   "waterfall": ["ROCK"],
+   "giant_tree": ["WILD","FOREST"],
+   "great_stump": ["WILD"],
+   "fern_brake": ["WILD","FOREST"],
+   "fallen_log": ["WILD","FOREST"],
+   "root_arch": ["WILD","ROCK"],
+   "lumen_grove": ["SPECIAL","WILD","FOREST"],
+   "glowcaps": ["SPECIAL","WILD","GROUND2"],
+   "monolith": ["WILD","ROCK","SPECIAL"],
+   "beacon": ["WILD","ROCK","SHORE"],
+   "shard_ridge": ["ROCK","WILD"],
+   "gate": ["WILD","ROAD"],
+   "geode": ["ROCK","WILD"],
+   "braziers": ["WILD"],
+   "lilies": ["WATER","SHORE"],
+   "quay": ["SHORE","SEA","DEEP"],
+   "boats": ["SEA","WATER","DEEP"],
+   "buoys": ["SEA","WATER","DEEP"],
+   "gem_shoal": ["SEA","WATER","SHORE","DEEP"],
+   "gem_shards": ["SEA","WATER","DEEP"],
+   "crystal_reef": ["SEA","WATER","DEEP"],
+   "islets": ["SEA","DEEP"],
+   "sea_arch": ["SEA","SHORE","DEEP"],
+   "lanterns": ["WATER","SEA","DEEP"],
+   "whirl": ["SEA","DEEP"]
+  },
+  "GLOW": {
+   "radiusMap": 9,
+   "periodMs": 2400,
+   "lo": 0.3,
+   "rest": 0.6
+  },
+  "FALL": {
+   "w": 0.08,
+   "coast": true
+  },
+  "STAND_MARGIN": 256,
+  "CLASS": {
+   "DEEP": 0,
+   "SEA": 1,
+   "WATER": 2,
+   "SHORE": 3,
+   "WILD": 4,
+   "GROUND2": 5,
+   "FIELD": 6,
+   "ROCK": 7,
+   "SNOW": 8,
+   "SPECIAL": 9,
+   "ROAD": 10,
+   "TURF": 11,
+   "RING": 12,
+   "FOREST": 13
+  },
+  "pinnedGeometry": {
+   "ART": 32,
+   "TILES": 98,
+   "DEED_ART": 3136,
+   "CELL": 7,
+   "MAP_ART": 448
+  },
+  "SIZE_CLASSES": [
+   [32,32],
+   [64,64],
+   [96,96],
+   [160,128]
+  ],
+  "TWIN_CLASSES": [
+   [16,16],
+   [32,32],
+   [64,64],
+   [128,128]
+  ],
+  "NO_ARRAY": 15,
+  "MAX_LAYERS": 256,
+  "SPT": 6,
+  "PUFFS": 3,
+  "PUFF_LIFE_MS": 2600
+ },
+ "tables": {
+  "sunscar": {
+   "wind": [7,1],
+   "fields": {
+    "veg": [104,142],
+    "rock": [124,166]
+   },
+   "stands": {
+    "mixes": [
+     {
+      "id": "palms",
+      "field": "veg",
+      "variants": 10,
+      "R": [2.5,4.5],
+      "spacing": 1.93,
+      "cluster": 0.75,
+      "sway": true,
+      "density": {
+       "WILD": 0.81,
+       "SHORE": 0.95,
+       "GROUND2": 0.47,
+       "SPECIAL": 0.54,
+       "FIELD": 0.41
+      },
+      "species": [
+       ["canopy_date_palm",6],
+       ["canopy_date_palm_b",5],
+       ["canopy_fan_palm",4],
+       ["canopy_palm_young",2],
+       ["canopy_olive",2],
+       ["canopy_fig",2],
+       ["canopy_tamarisk",2],
+       ["canopy_acacia",1]
+      ]
+     },
+     {
+      "id": "acacias",
+      "field": "veg",
+      "variants": 6,
+      "R": [1.5,3.5],
+      "spacing": 2.21,
+      "cluster": 0.6,
+      "sway": true,
+      "density": {
+       "WILD": 0.74,
+       "SPECIAL": 0.68,
+       "GROUND2": 0.54,
+       "ROCK": 0.16
+      },
+      "species": [
+       ["canopy_acacia",5],
+       ["canopy_acacia_b",3],
+       ["canopy_olive",3],
+       ["canopy_fig",2],
+       ["canopy_tamarisk",2],
+       ["canopy_thornbush",2],
+       ["canopy_saguaro",1],
+       ["canopy_joshua",1]
+      ]
+     },
+     {
+      "id": "boulders",
+      "field": "rock",
+      "variants": 8,
+      "R": [1.5,3],
+      "spacing": 1.56,
+      "cluster": 0.35,
+      "density": {
+       "WILD": 0.47,
+       "GROUND2": 0.68,
+       "ROCK": 0.95,
+       "SNOW": 0.94,
+       "SPECIAL": 0.47
+      },
+      "species": [
+       ["boulder_sand",3],
+       ["boulder_sand_b",3],
+       ["rock_l_sand",3],
+       ["mesa_rock",2],
+       ["rock_s_sand",2],
+       ["dune_crest_rock",1],
+       ["cactus_cluster",1],
+       ["agave",1],
+       ["dry_bush",1]
+      ]
+     }
+    ]
+   },
+   "groups": [
+    {
+     "id": "grove",
+     "kind": "tree",
+     "pitch": 1.75,
+     "density": {
+      "FOREST": 0.9
+     },
+     "species": [
+      ["canopy_date_palm",5],
+      ["canopy_date_palm_b",5],
+      ["canopy_fan_palm",3],
+      ["canopy_palm_young",3],
+      ["canopy_olive",2],
+      ["canopy_fig",2],
+      ["canopy_tamarisk",2],
+      ["great_palm",0.35],
+      ["great_palm_b",0.35]
+     ],
+     "jitter": 0.85,
+     "twin": false,
+     "sway": true,
+     "mapOnly": false,
+     "cluster": 0.8
+    },
+    {
+     "id": "lone",
+     "kind": "tree",
+     "pitch": 5,
+     "density": {
+      "WILD": 0.2,
+      "GROUND2": 0.24,
+      "SHORE": 0.44,
+      "FIELD": 0.1,
+      "SPECIAL": 0.06,
+      "ROCK": 0.08
+     },
+     "species": [
+      ["canopy_acacia",5],
+      ["canopy_acacia_b",4],
+      ["canopy_saguaro",3],
+      ["canopy_joshua",2],
+      ["canopy_acacia_dead",2],
+      ["canopy_dragon_tree",1],
+      ["canopy_tamarisk",1],
+      [
+       "canopy_date_palm",
+       3,
+       {
+        "on": ["SHORE","FIELD"]
+       }
+      ]
+     ],
+     "jitter": 0.85,
+     "twin": true,
+     "sway": true,
+     "mapOnly": false,
+     "mod": {
+      "field": "veg",
+      "out": 1,
+      "in": 1.4,
+      "edge": 1.8
+     }
+    },
+    {
+     "id": "scrub",
+     "kind": "scrub",
+     "pitch": 3,
+     "density": {
+      "WILD": 0.105,
+      "GROUND2": 0.225,
+      "FOREST": 0.075,
+      "SPECIAL": 0.045,
+      "ROCK": 0.09,
+      "FIELD": 0.03,
+      "SHORE": 0.075
+     },
+     "species": [
+      ["canopy_thornbush",3],
+      ["canopy_dead_scrub_low",2],
+      ["dry_bush",3],
+      ["agave",2],
+      ["cactus_cluster",2],
+      ["dead_scrub",2],
+      ["tumbleweed",1],
+      ["desert_flowers",1]
+     ],
+     "jitter": 0.85,
+     "twin": false,
+     "sway": false,
+     "mapOnly": false,
+     "mod": {
+      "field": "veg",
+      "out": 0.7,
+      "in": 2.4,
+      "edge": 3
+     }
+    },
+    {
+     "id": "rocks",
+     "kind": "rock",
+     "pitch": 4,
+     "density": {
+      "ROCK": 0.45,
+      "SNOW": 0.3,
+      "GROUND2": 0.05,
+      "WILD": 0.015,
+      "SPECIAL": 0.05
+     },
+     "species": [
+      ["rock_l_sand",3],
+      ["boulder_sand",2],
+      ["boulder_sand_b",2],
+      [
+       "mesa_rock",
+       2,
+       {
+        "on": ["ROCK","SNOW"]
+       }
+      ],
+      ["rock_s_sand",3],
+      [
+       "dune_crest_rock",
+       2,
+       {
+        "on": ["SPECIAL","WILD"]
+       }
+      ]
+     ],
+     "jitter": 0.85,
+     "twin": false,
+     "sway": false,
+     "mapOnly": false,
+     "mod": {
+      "field": "rock",
+      "out": 0.4,
+      "in": 2.6,
+      "edge": 1.6
+     }
+    },
+    {
+     "id": "litter",
+     "kind": "litter",
+     "pitch": 5,
+     "density": {
+      "WILD": 0.02,
+      "SHORE": 0.08,
+      "FOREST": 0.05,
+      "GROUND2": 0.02
+     },
+     "species": [
+      ["bones_skull",1],
+      [
+       "driftwood",
+       2,
+       {
+        "on": ["SHORE"]
+       }
+      ],
+      ["stump_palm",2],
+      [
+       "palm_frond_pile",
+       2,
+       {
+        "on": ["FOREST","SHORE"]
+       }
+      ]
+     ],
+     "jitter": 0.85,
+     "twin": false,
+     "sway": false,
+     "mapOnly": false,
+     "mod": {
+      "field": "veg",
+      "out": 0.5,
+      "in": 2.2,
+      "edge": 2
+     }
+    },
+    {
+     "id": "crops",
+     "kind": "crop",
+     "pitch": 2.5,
+     "density": {
+      "FIELD": 0.38
+     },
+     "species": [
+      ["millet_bed",3],
+      ["melon_patch",3],
+      ["water_jars",0.4],
+      ["irrigation_gate",0.4]
+     ],
+     "jitter": 0.85,
+     "twin": false,
+     "sway": false,
+     "mapOnly": false
+    },
+    {
+     "id": "features",
+     "kind": "feature",
+     "pitch": 30,
+     "density": {
+      "WILD": 0.16,
+      "GROUND2": 0.2,
+      "FIELD": 0.22,
+      "ROCK": 0.18,
+      "SPECIAL": 0.14,
+      "SHORE": 0.25
+     },
+     "species": [
+      [
+       "clay_granary",
+       2,
+       {
+        "on": ["FIELD","GROUND2","WILD"]
+       }
+      ],
+      [
+       "mud_boathouse",
+       2,
+       {
+        "coast": true
+       }
+      ],
+      [
+       "temple_ruin",
+       2,
+       {
+        "on": ["WILD","GROUND2","SPECIAL"]
+       }
+      ],
+      [
+       "caravanserai_gate",
+       1.5,
+       {
+        "on": ["WILD","GROUND2"]
+       }
+      ],
+      [
+       "sand_mesa",
+       2.5,
+       {
+        "on": ["ROCK","SPECIAL"]
+       }
+      ],
+      ["obelisk",1],
+      ["sun_shrine",1],
+      ["broken_column_sand",1],
+      [
+       "buried_statue",
+       1,
+       {
+        "on": ["SPECIAL","WILD"]
+       }
+      ],
+      ["cairn_sand",1],
+      [
+       "well_stone",
+       1,
+       {
+        "on": ["FIELD","WILD"]
+       }
+      ],
+      [
+       "shadoof",
+       1.5,
+       {
+        "on": ["FIELD","SHORE"]
+       }
+      ],
+      [
+       "kiln",
+       1,
+       {
+        "emit": {
+         "fx": "smoke_drift",
+         "dx": 0,
+         "dy": -44,
+         "rise": 28,
+         "puffs": 3
+        }
+       }
+      ],
+      [
+       "tent_desert",
+       1,
+       {
+        "on": ["WILD","GROUND2"]
+       }
+      ],
+      [
+       "campfire_desert",
+       0.6,
+       {
+        "emit": {
+         "fx": "smoke_drift",
+         "dx": 0,
+         "dy": -20,
+         "rise": 28,
+         "puffs": 3
+        }
+       }
+      ],
+      [
+       "market_stall",
+       0.5,
+       {
+        "on": ["WILD","GROUND2"]
+       }
+      ]
+     ],
+     "jitter": 0.5,
+     "twin": true,
+     "sway": false,
+     "mapOnly": false
+    },
+    {
+     "id": "landmarks",
+     "kind": "landmark",
+     "pitch": 196,
+     "density": {
+      "ROCK": 0.5,
+      "WILD": 0.3,
+      "SPECIAL": 0.4,
+      "GROUND2": 0.3
+     },
+     "species": [
+      ["spring_cliff",1]
+     ],
+     "jitter": 0.4,
+     "twin": true,
+     "sway": false,
+     "mapOnly": false
+    },
+    {
+     "id": "mapobj",
+     "kind": "mapobj",
+     "pitch": 15,
+     "density": {
+      "ROCK": 0.55,
+      "SNOW": 0.55,
+      "SPECIAL": 0.3,
+      "GROUND2": 0.08,
+      "WILD": 0.05,
+      "FIELD": 0.05,
+      "SHORE": 0.05
+     },
+     "species": [],
+     "jitter": 0.6,
+     "twin": true,
+     "sway": false,
+     "mapOnly": true
+    }
+   ],
+   "creatures": {
+    "pitch": 14,
+    "density": {
+     "WILD": 0.18,
+     "GROUND2": 0.22,
+     "SPECIAL": 0.14,
+     "FIELD": 0.2,
+     "ROCK": 0.25,
+     "SNOW": 0.2,
+     "SHORE": 0.35,
+     "FOREST": 0.12,
+     "WATER": 0.06
+    },
+    "species": [
+     [
+      "camel",
+      3,
+      [2,3],
+      ["WILD","GROUND2","SPECIAL","FIELD"]
+     ],
+     [
+      "desert_goat",
+      3,
+      [2,4],
+      ["GROUND2","ROCK","WILD"]
+     ],
+     [
+      "fennec",
+      1.5,
+      [1,1],
+      ["WILD","SPECIAL","FOREST"]
+     ],
+     [
+      "jerboa",
+      1.5,
+      [1,2],
+      ["WILD","SPECIAL","GROUND2"]
+     ],
+     [
+      "ibex",
+      2,
+      [1,3],
+      ["ROCK","SNOW"]
+     ],
+     [
+      "lizard",
+      1.5,
+      [1,1],
+      ["ROCK","GROUND2","WILD"]
+     ],
+     [
+      "tortoise",
+      1,
+      [1,1],
+      ["WILD","FOREST","FIELD"]
+     ],
+     [
+      "ibis",
+      2,
+      [1,3],
+      ["SHORE","WATER"]
+     ]
+    ]
+   },
+   "birds": {
+    "pitch": 150,
+    "p": 0.45,
+    "species": [
+     [
+      "vulture_flight",
+      1,
+      [1,3],
+      ["ROCK","WILD","SPECIAL","GROUND2"],
+      {
+       "speed": 40,
+       "alt": 84
+      }
+     ]
+    ]
+   },
+   "ambience": [
+    {
+     "id": "dust_devil",
+     "kind": "wander",
+     "pitch": 30,
+     "density": {
+      "WILD": 0.2,
+      "SPECIAL": 0.3,
+      "GROUND2": 0.25
+     },
+     "lifeMs": 14000,
+     "windK": 1.8
+    },
+    {
+     "id": "heat_sparkle",
+     "shared": true,
+     "kind": "wander",
+     "pitch": 7,
+     "minD": 1800,
+     "density": {
+      "WILD": 0.3,
+      "SPECIAL": 0.35,
+      "GROUND2": 0.3,
+      "ROCK": 0.3
+     },
+     "lifeMs": 1600,
+     "windK": 0
+    }
+   ]
+  },
+  "frostveil": {
+   "wind": [-5,2],
+   "fields": {
+    "veg": [100,138],
+    "rock": [124,166]
+   },
+   "stands": {
+    "mixes": [
+     {
+      "id": "spruce",
+      "field": "veg",
+      "variants": 10,
+      "R": [2.5,4.5],
+      "spacing": 1.75,
+      "cluster": 0.8,
+      "sway": true,
+      "density": {
+       "WILD": 0.81,
+       "GROUND2": 0.54,
+       "SHORE": 0.47,
+       "FIELD": 0.27,
+       "SPECIAL": 0.14
+      },
+      "species": [
+       ["canopy_spruce",6],
+       ["canopy_spruce_b",5],
+       ["canopy_fir_snow",5],
+       ["canopy_blue_spruce",3],
+       ["canopy_pine_frost",2],
+       ["canopy_spruce_old",1],
+       ["canopy_holly_snow",1]
+      ]
+     },
+     {
+      "id": "birches",
+      "field": "veg",
+      "variants": 6,
+      "R": [1.5,3.5],
+      "spacing": 2.02,
+      "cluster": 0.5,
+      "sway": true,
+      "density": {
+       "WILD": 0.68,
+       "GROUND2": 0.61,
+       "SHORE": 0.61,
+       "FIELD": 0.34
+      },
+      "species": [
+       ["canopy_larch_bare",3],
+       ["canopy_birch_white",3],
+       ["canopy_spruce_young",2],
+       ["canopy_juniper",2],
+       ["canopy_pine_leaning",2],
+       ["canopy_sapling_snow",2],
+       ["bush_snow",2],
+       ["berry_bush_frost",1]
+      ]
+     },
+     {
+      "id": "boulders",
+      "field": "rock",
+      "variants": 8,
+      "R": [1.5,3],
+      "spacing": 1.56,
+      "cluster": 0.35,
+      "density": {
+       "ROCK": 0.95,
+       "SNOW": 0.74,
+       "SPECIAL": 0.68,
+       "GROUND2": 0.47,
+       "WILD": 0.3
+      },
+      "species": [
+       ["boulder_snow",3],
+       ["boulder_snow_b",2],
+       ["rock_l_frost",3],
+       ["rock_s_frost",2],
+       ["snow_mound",2],
+       ["ice_boulder",1],
+       ["icicle_rock",1]
+      ]
+     }
+    ]
+   },
+   "groups": [
+    {
+     "id": "grove",
+     "kind": "tree",
+     "pitch": 1.75,
+     "density": {
+      "FOREST": 0.9
+     },
+     "species": [
+      ["canopy_spruce",5],
+      ["canopy_spruce_b",4],
+      ["canopy_fir_snow",4],
+      ["canopy_pine_frost",3],
+      ["canopy_blue_spruce",2],
+      ["canopy_spruce_old",2],
+      ["canopy_spruce_young",2],
+      ["great_spruce",0.35],
+      ["great_spruce_b",0.35]
+     ],
+     "jitter": 0.85,
+     "twin": false,
+     "sway": true,
+     "mapOnly": false,
+     "cluster": 0.8
+    },
+    {
+     "id": "lone",
+     "kind": "tree",
+     "pitch": 5,
+     "density": {
+      "WILD": 0.18,
+      "GROUND2": 0.2,
+      "SHORE": 0.16,
+      "FIELD": 0.08,
+      "SPECIAL": 0.02,
+      "ROCK": 0.08
+     },
+     "species": [
+      ["canopy_larch_bare",3],
+      ["canopy_birch_white",3],
+      ["canopy_pine_leaning",2],
+      ["canopy_juniper",2],
+      ["canopy_holly_snow",1],
+      ["canopy_spruce_young",3],
+      ["canopy_sapling_snow",2]
+     ],
+     "jitter": 0.85,
+     "twin": true,
+     "sway": true,
+     "mapOnly": false,
+     "mod": {
+      "field": "veg",
+      "out": 1,
+      "in": 1.4,
+      "edge": 1.8
+     }
+    },
+    {
+     "id": "scrub",
+     "kind": "scrub",
+     "pitch": 3,
+     "density": {
+      "WILD": 0.09,
+      "GROUND2": 0.18,
+      "FOREST": 0.09,
+      "ROCK": 0.075,
+      "SHORE": 0.12,
+      "FIELD": 0.03
+     },
+     "species": [
+      ["bush_snow",3],
+      ["berry_bush_frost",2],
+      ["juniper_low",2],
+      ["frosted_shrub",2],
+      ["holly_snow",1],
+      ["canopy_bramble_frost",1],
+      [
+       "reeds_frozen",
+       2,
+       {
+        "on": ["SHORE"]
+       }
+      ],
+      ["snow_mound",2]
+     ],
+     "jitter": 0.85,
+     "twin": false,
+     "sway": false,
+     "mapOnly": false,
+     "mod": {
+      "field": "veg",
+      "out": 0.7,
+      "in": 2.4,
+      "edge": 3
+     }
+    },
+    {
+     "id": "rocks",
+     "kind": "rock",
+     "pitch": 4,
+     "density": {
+      "ROCK": 0.45,
+      "SNOW": 0.25,
+      "SPECIAL": 0.12,
+      "GROUND2": 0.05,
+      "WILD": 0.015
+     },
+     "species": [
+      ["boulder_snow",3],
+      ["boulder_snow_b",2],
+      ["rock_l_frost",3],
+      ["rock_s_frost",3],
+      [
+       "ice_boulder",
+       2,
+       {
+        "on": ["SPECIAL","ROCK","SHORE"]
+       }
+      ],
+      ["icicle_rock",1],
+      [
+       "ice_shard_cluster",
+       2,
+       {
+        "on": ["SPECIAL"]
+       }
+      ]
+     ],
+     "jitter": 0.85,
+     "twin": false,
+     "sway": false,
+     "mapOnly": false,
+     "mod": {
+      "field": "rock",
+      "out": 0.4,
+      "in": 2.6,
+      "edge": 1.6
+     }
+    },
+    {
+     "id": "litter",
+     "kind": "litter",
+     "pitch": 5,
+     "density": {
+      "WILD": 0.02,
+      "FOREST": 0.06,
+      "GROUND2": 0.02
+     },
+     "species": [
+      ["stump_snow",2],
+      ["log_snow",2],
+      ["canopy_log_snow",1],
+      ["dead_larch",1]
+     ],
+     "jitter": 0.85,
+     "twin": false,
+     "sway": false,
+     "mapOnly": false,
+     "mod": {
+      "field": "veg",
+      "out": 0.5,
+      "in": 2.2,
+      "edge": 2
+     }
+    },
+    {
+     "id": "crops",
+     "kind": "crop",
+     "pitch": 2.5,
+     "density": {
+      "FIELD": 0.38
+     },
+     "species": [
+      ["cabbage_bed_snow",3],
+      ["turnip_clamp",2],
+      ["hay_bale_snow",2],
+      ["hay_feeder",0.6]
+     ],
+     "jitter": 0.85,
+     "twin": false,
+     "sway": false,
+     "mapOnly": false
+    },
+    {
+     "id": "features",
+     "kind": "feature",
+     "pitch": 30,
+     "density": {
+      "WILD": 0.16,
+      "GROUND2": 0.2,
+      "FIELD": 0.22,
+      "ROCK": 0.12,
+      "SPECIAL": 0.1,
+      "SHORE": 0.25,
+      "FOREST": 0.05
+     },
+     "species": [
+      [
+       "snow_barn",
+       2,
+       {
+        "on": ["FIELD","WILD","GROUND2"],
+        "emit": {
+         "fx": "smoke_drift",
+         "dx": 0,
+         "dy": -60,
+         "rise": 28,
+         "puffs": 3
+        }
+       }
+      ],
+      [
+       "smokehouse",
+       1.5,
+       {
+        "emit": {
+         "fx": "smoke_drift",
+         "dx": 0,
+         "dy": -44,
+         "rise": 28,
+         "puffs": 3
+        }
+       }
+      ],
+      [
+       "boathouse_ice",
+       2,
+       {
+        "coast": true
+       }
+      ],
+      ["watchtower_frost",1.5],
+      ["watchtower_frost_b",1.5],
+      [
+       "hot_spring",
+       1.5,
+       {
+        "on": ["WILD","GROUND2","ROCK"],
+        "emit": {
+         "fx": "steam_drift",
+         "dx": 0,
+         "dy": -30,
+         "rise": 24,
+         "puffs": 3
+        }
+       }
+      ],
+      ["rune_stone_b",1],
+      ["rune_stone_c",1],
+      ["shrine_ice",1],
+      ["cairn_snow",1],
+      ["ruin_wall_frost",1],
+      ["broken_column_ice",1],
+      [
+       "tent_snow",
+       1,
+       {
+        "on": ["WILD","GROUND2"]
+       }
+      ],
+      [
+       "campfire_snow",
+       0.6,
+       {
+        "emit": {
+         "fx": "smoke_drift",
+         "dx": 0,
+         "dy": -20,
+         "rise": 28,
+         "puffs": 3
+        }
+       }
+      ],
+      [
+       "well_frozen",
+       0.8,
+       {
+        "on": ["FIELD","WILD"]
+       }
+      ]
+     ],
+     "jitter": 0.5,
+     "twin": true,
+     "sway": false,
+     "mapOnly": false
+    },
+    {
+     "id": "landmarks",
+     "kind": "landmark",
+     "pitch": 196,
+     "density": {
+      "ROCK": 0.5,
+      "SPECIAL": 0.5,
+      "WILD": 0.2
+     },
+     "species": [
+      ["glacier_cliff",1]
+     ],
+     "jitter": 0.4,
+     "twin": true,
+     "sway": false,
+     "mapOnly": false
+    },
+    {
+     "id": "mapobj",
+     "kind": "mapobj",
+     "pitch": 15,
+     "density": {
+      "ROCK": 0.55,
+      "SNOW": 0.55,
+      "SPECIAL": 0.3,
+      "GROUND2": 0.08,
+      "WILD": 0.05,
+      "FIELD": 0.05,
+      "SHORE": 0.05
+     },
+     "species": [],
+     "jitter": 0.6,
+     "twin": true,
+     "sway": false,
+     "mapOnly": true
+    }
+   ],
+   "creatures": {
+    "pitch": 14,
+    "density": {
+     "WILD": 0.18,
+     "GROUND2": 0.2,
+     "FIELD": 0.18,
+     "ROCK": 0.22,
+     "SNOW": 0.18,
+     "FOREST": 0.2,
+     "SHORE": 0.3,
+     "SPECIAL": 0.06,
+     "SEA": 0.03
+    },
+    "species": [
+     [
+      "reindeer",
+      3,
+      [2,4],
+      ["WILD","GROUND2","FIELD"]
+     ],
+     [
+      "arctic_fox",
+      1.5,
+      [1,1],
+      ["WILD","FOREST"]
+     ],
+     [
+      "snow_hare",
+      1.5,
+      [1,2],
+      ["WILD","FOREST","GROUND2"]
+     ],
+     [
+      "wolf",
+      1.5,
+      [2,3],
+      ["FOREST","WILD"]
+     ],
+     [
+      "moose",
+      1.5,
+      [1,2],
+      ["FOREST","SHORE","WILD"]
+     ],
+     [
+      "ptarmigan",
+      1.5,
+      [2,3],
+      ["WILD","GROUND2","ROCK"]
+     ],
+     [
+      "mountain_goat",
+      2,
+      [1,3],
+      ["ROCK","SNOW"]
+     ],
+     [
+      "seal",
+      2,
+      [1,3],
+      ["SHORE","SEA"]
+     ]
+    ]
+   },
+   "birds": {
+    "pitch": 150,
+    "p": 0.4,
+    "species": [
+     [
+      "raven_flight",
+      1,
+      [2,4],
+      null,
+      {
+       "speed": 38,
+       "alt": 72
+      }
+     ]
+    ]
+   },
+   "ambience": [
+    {
+     "id": "snowflake_drift",
+     "kind": "fall",
+     "pitch": 6,
+     "density": {
+      "WILD": 0.45,
+      "GROUND2": 0.45,
+      "FOREST": 0.45,
+      "ROCK": 0.45,
+      "SNOW": 0.45,
+      "FIELD": 0.45,
+      "SPECIAL": 0.45,
+      "SHORE": 0.4,
+      "SEA": 0.3,
+      "WATER": 0.3,
+      "ROAD": 0.45
+     },
+     "lifeMs": 7000,
+     "alt": 96,
+     "windK": 1.2
+    },
+    {
+     "id": "ice_motes",
+     "shared": true,
+     "kind": "fall",
+     "pitch": 8,
+     "minD": 1800,
+     "density": {
+      "SPECIAL": 0.5,
+      "SNOW": 0.35,
+      "ROCK": 0.2
+     },
+     "lifeMs": 5000,
+     "alt": 48,
+     "windK": 0.6
+    }
+   ]
+  },
+  "cinderfall": {
+   "wind": [3,-2],
+   "fields": {
+    "veg": [104,142],
+    "rock": [120,162]
+   },
+   "stands": {
+    "mixes": [
+     {
+      "id": "embers",
+      "field": "veg",
+      "variants": 8,
+      "R": [2.5,4.5],
+      "spacing": 2.02,
+      "cluster": 0.75,
+      "sway": true,
+      "density": {
+       "WILD": 0.74,
+       "GROUND2": 0.41,
+       "SHORE": 0.27,
+       "FIELD": 0.2,
+       "SPECIAL": 0.2
+      },
+      "species": [
+       ["canopy_ember_maple",6],
+       ["canopy_ember_maple_b",4],
+       ["canopy_red_rowan",3],
+       ["canopy_ash_birch",2],
+       ["canopy_dead_burnt_oak",1],
+       ["canopy_half_burnt_pine",1]
+      ]
+     },
+     {
+      "id": "pines",
+      "field": "veg",
+      "variants": 8,
+      "R": [2.5,4],
+      "spacing": 1.93,
+      "cluster": 0.75,
+      "sway": true,
+      "density": {
+       "WILD": 0.68,
+       "GROUND2": 0.54,
+       "ROCK": 0.2,
+       "SPECIAL": 0.2
+      },
+      "species": [
+       ["canopy_half_burnt_pine",5],
+       ["canopy_black_spruce",5],
+       ["canopy_ember_maple",3],
+       ["canopy_ash_snag",2],
+       ["canopy_twisted_juniper",2],
+       ["canopy_dead_burnt_oak",1]
+      ]
+     },
+     {
+      "id": "basalt",
+      "field": "rock",
+      "variants": 8,
+      "R": [1.5,3],
+      "spacing": 1.56,
+      "cluster": 0.35,
+      "density": {
+       "ROCK": 0.95,
+       "SNOW": 0.94,
+       "GROUND2": 0.61,
+       "SPECIAL": 0.54,
+       "WILD": 0.34
+      },
+      "species": [
+       ["rock_s_basalt_columns",3],
+       ["rock_s_basalt_column_shard",2],
+       ["boulder_basalt",2],
+       ["boulder_basalt_b",2],
+       ["rock_l_basalt",2],
+       ["rock_s_basalt",2],
+       ["canopy_lava_shrub",1],
+       ["canopy_red_fern",1]
+      ]
+     }
+    ]
+   },
+   "groups": [
+    {
+     "id": "grove",
+     "kind": "tree",
+     "pitch": 1.75,
+     "density": {
+      "FOREST": 0.9
+     },
+     "species": [
+      ["canopy_ember_maple",5],
+      ["canopy_ember_maple_b",4],
+      ["canopy_red_rowan",3],
+      ["canopy_black_spruce",3],
+      ["canopy_half_burnt_pine",2],
+      ["canopy_twisted_juniper",2],
+      ["canopy_ash_birch",2],
+      ["canopy_great_maple",0.35],
+      ["canopy_great_maple_b",0.35]
+     ],
+     "jitter": 0.85,
+     "twin": false,
+     "sway": true,
+     "mapOnly": false,
+     "cluster": 0.8
+    },
+    {
+     "id": "lone",
+     "kind": "tree",
+     "pitch": 5,
+     "density": {
+      "WILD": 0.18,
+      "GROUND2": 0.16,
+      "SHORE": 0.1,
+      "FIELD": 0.1,
+      "SPECIAL": 0.04,
+      "ROCK": 0.06
+     },
+     "species": [
+      ["canopy_dead_burnt_oak",3],
+      ["canopy_ash_snag",3],
+      ["canopy_ash_snag_b",2],
+      ["canopy_red_sapling",2],
+      ["canopy_black_thorn",2],
+      ["canopy_twisted_juniper",2]
+     ],
+     "jitter": 0.85,
+     "twin": true,
+     "sway": true,
+     "mapOnly": false,
+     "mod": {
+      "field": "veg",
+      "out": 1,
+      "in": 1.4,
+      "edge": 1.8
+     }
+    },
+    {
+     "id": "scrub",
+     "kind": "scrub",
+     "pitch": 3,
+     "density": {
+      "WILD": 0.09,
+      "GROUND2": 0.15,
+      "FOREST": 0.09,
+      "SPECIAL": 0.075,
+      "ROCK": 0.06,
+      "FIELD": 0.18
+     },
+     "species": [
+      ["canopy_lava_shrub",2],
+      ["canopy_red_fern",3],
+      ["canopy_burnt_bramble",2],
+      ["dead_shrub",2],
+      ["mushroom_cluster_ember",1],
+      ["ash_drift",1]
+     ],
+     "jitter": 0.85,
+     "twin": false,
+     "sway": false,
+     "mapOnly": false,
+     "mod": {
+      "field": "veg",
+      "out": 0.7,
+      "in": 2.4,
+      "edge": 3
+     }
+    },
+    {
+     "id": "rocks",
+     "kind": "rock",
+     "pitch": 4,
+     "density": {
+      "ROCK": 0.45,
+      "SNOW": 0.3,
+      "SPECIAL": 0.1,
+      "GROUND2": 0.06,
+      "WILD": 0.015
+     },
+     "species": [
+      ["rock_s_basalt",3],
+      ["rock_l_basalt",3],
+      ["boulder_basalt",2],
+      ["boulder_basalt_b",2],
+      ["rock_s_basalt_columns",2],
+      ["rock_s_basalt_column_shard",1],
+      [
+       "slag_lump",
+       1,
+       {
+        "on": ["SPECIAL","GROUND2"]
+       }
+      ],
+      ["obsidian_pile_low",1],
+      [
+       "slag_glass_shard",
+       1,
+       {
+        "on": ["SPECIAL","GROUND2"]
+       }
+      ]
+     ],
+     "jitter": 0.85,
+     "twin": false,
+     "sway": false,
+     "mapOnly": false,
+     "mod": {
+      "field": "rock",
+      "out": 0.4,
+      "in": 2.6,
+      "edge": 1.6
+     }
+    },
+    {
+     "id": "litter",
+     "kind": "litter",
+     "pitch": 5,
+     "density": {
+      "WILD": 0.025,
+      "FOREST": 0.06,
+      "GROUND2": 0.03,
+      "SPECIAL": 0.03
+     },
+     "species": [
+      ["stump_burnt",2],
+      ["charred_log",2],
+      ["canopy_charred_log",1],
+      ["stump_smoulder",1],
+      ["bones_scatter",1],
+      ["bones_skull",0.5],
+      [
+       "ember_ground",
+       1.5,
+       {
+        "on": ["SPECIAL","GROUND2"]
+       }
+      ]
+     ],
+     "jitter": 0.85,
+     "twin": false,
+     "sway": false,
+     "mapOnly": false,
+     "mod": {
+      "field": "veg",
+      "out": 0.5,
+      "in": 2.2,
+      "edge": 2
+     }
+    },
+    {
+     "id": "crops",
+     "kind": "crop",
+     "pitch": 2.5,
+     "density": {
+      "FIELD": 0.3
+     },
+     "species": [
+      ["mushroom_cluster_ember",2],
+      ["charcoal_sack_open",0.6],
+      ["cordwood_row_ew",0.6],
+      ["ember_ground_bank",1]
+     ],
+     "jitter": 0.85,
+     "twin": false,
+     "sway": false,
+     "mapOnly": false
+    },
+    {
+     "id": "features",
+     "kind": "feature",
+     "pitch": 30,
+     "density": {
+      "WILD": 0.16,
+      "GROUND2": 0.2,
+      "FIELD": 0.18,
+      "ROCK": 0.14,
+      "SPECIAL": 0.14,
+      "SHORE": 0.25
+     },
+     "species": [
+      [
+       "kiln_house",
+       2,
+       {
+        "emit": {
+         "fx": "smoke_drift",
+         "dx": 0,
+         "dy": -64,
+         "rise": 28,
+         "puffs": 3
+        }
+       }
+      ],
+      [
+       "kiln_clay",
+       1,
+       {
+        "emit": {
+         "fx": "smoke_drift",
+         "dx": 0,
+         "dy": -36,
+         "rise": 28,
+         "puffs": 3
+        }
+       }
+      ],
+      [
+       "kiln_turf",
+       1,
+       {
+        "emit": {
+         "fx": "smoke_drift",
+         "dx": 0,
+         "dy": -36,
+         "rise": 28,
+         "puffs": 3
+        }
+       }
+      ],
+      [
+       "smelter_gate",
+       1.5,
+       {
+        "emit": {
+         "fx": "smoke_drift",
+         "dx": 0,
+         "dy": -70,
+         "rise": 28,
+         "puffs": 3
+        }
+       }
+      ],
+      [
+       "smelter_furnace",
+       1,
+       {
+        "emit": {
+         "fx": "smoke_drift",
+         "dx": 0,
+         "dy": -44,
+         "rise": 28,
+         "puffs": 3
+        }
+       }
+      ],
+      [
+       "quay_shed",
+       2,
+       {
+        "coast": true
+       }
+      ],
+      ["slag_ruin",1.5],
+      [
+       "slag_glass_mass",
+       1,
+       {
+        "on": ["SPECIAL","GROUND2"]
+       }
+      ],
+      ["ruin_arch_broken",1],
+      ["watchtower_burnt",1],
+      ["ember_shrine",1],
+      ["obsidian_slab",1],
+      [
+       "ember_vent_small",
+       1.5,
+       {
+        "on": ["SPECIAL","GROUND2","ROCK"],
+        "emit": {
+         "fx": "steam_drift",
+         "dx": 0,
+         "dy": -20,
+         "rise": 24,
+         "puffs": 3
+        }
+       }
+      ],
+      [
+       "basalt_spire",
+       1.5,
+       {
+        "on": ["ROCK","SPECIAL","GROUND2"]
+       }
+      ],
+      [
+       "basalt_spire_b",
+       1.5,
+       {
+        "on": ["ROCK","SPECIAL","GROUND2"]
+       }
+      ],
+      ["cordwood_stack",0.8]
+     ],
+     "jitter": 0.5,
+     "twin": true,
+     "sway": false,
+     "mapOnly": false
+    },
+    {
+     "id": "landmarks",
+     "kind": "landmark",
+     "pitch": 196,
+     "density": {
+      "ROCK": 0.4,
+      "SPECIAL": 0.5,
+      "GROUND2": 0.3,
+      "WILD": 0.2
+     },
+     "species": [
+      [
+       "fissure_vent",
+       1,
+       {
+        "emit": {
+         "fx": "steam_drift",
+         "dx": 0,
+         "dy": -40,
+         "rise": 24,
+         "puffs": 3
+        }
+       }
+      ]
+     ],
+     "jitter": 0.4,
+     "twin": true,
+     "sway": false,
+     "mapOnly": false
+    },
+    {
+     "id": "mapobj",
+     "kind": "mapobj",
+     "pitch": 15,
+     "density": {
+      "ROCK": 0.55,
+      "SNOW": 0.55,
+      "SPECIAL": 0.3,
+      "GROUND2": 0.08,
+      "WILD": 0.05,
+      "FIELD": 0.05,
+      "SHORE": 0.05
+     },
+     "species": [],
+     "jitter": 0.6,
+     "twin": true,
+     "sway": false,
+     "mapOnly": true
+    }
+   ],
+   "creatures": {
+    "pitch": 14,
+    "density": {
+     "WILD": 0.18,
+     "GROUND2": 0.2,
+     "FIELD": 0.18,
+     "ROCK": 0.22,
+     "SNOW": 0.15,
+     "FOREST": 0.2,
+     "SHORE": 0.2,
+     "SPECIAL": 0.15,
+     "WATER": 0.08
+    },
+    "species": [
+     [
+      "obsidian_goat",
+      3,
+      [2,4],
+      ["ROCK","GROUND2","SNOW"]
+     ],
+     [
+      "ash_hare",
+      1.5,
+      [1,2],
+      ["WILD","FOREST","FIELD"]
+     ],
+     [
+      "cinder_beetle",
+      1.5,
+      [1,2],
+      ["GROUND2","SPECIAL"]
+     ],
+     [
+      "salamander",
+      2,
+      [1,2],
+      ["WATER","SHORE"]
+     ],
+     [
+      "soot_crow",
+      1.5,
+      [1,3],
+      ["WILD","GROUND2","FIELD"]
+     ],
+     [
+      "magma_slug",
+      1,
+      [1,1],
+      ["SPECIAL","GROUND2"]
+     ],
+     [
+      "vulture",
+      1.5,
+      [1,2],
+      ["ROCK","WILD"]
+     ],
+     [
+      "ember_moth",
+      1.5,
+      [1,2],
+      ["FOREST","FIELD"]
+     ]
+    ]
+   },
+   "birds": {
+    "pitch": 150,
+    "p": 0.4,
+    "species": [
+     [
+      "soot_crow_flight",
+      1,
+      [2,5],
+      null,
+      {
+       "speed": 34,
+       "alt": 70
+      }
+     ]
+    ]
+   },
+   "ambience": [
+    {
+     "id": "ember_drift",
+     "kind": "fall",
+     "rise": true,
+     "pitch": 8,
+     "minD": 1800,
+     "density": {
+      "SPECIAL": 0.6,
+      "GROUND2": 0.35,
+      "SHORE": 0.5,
+      "WATER": 0.5,
+      "WILD": 0.2,
+      "FOREST": 0.25,
+      "ROCK": 0.25
+     },
+     "lifeMs": 6000,
+     "alt": 80,
+     "windK": 1.4
+    },
+    {
+     "id": "spark_rise",
+     "kind": "fall",
+     "rise": true,
+     "pitch": 10,
+     "minD": 1800,
+     "density": {
+      "WATER": 0.6,
+      "SHORE": 0.5,
+      "SPECIAL": 0.35
+     },
+     "lifeMs": 2400,
+     "alt": 56,
+     "windK": 0.6
+    },
+    {
+     "id": "ash_devil",
+     "kind": "wander",
+     "pitch": 32,
+     "density": {
+      "WILD": 0.2,
+      "GROUND2": 0.25,
+      "SPECIAL": 0.2
+     },
+     "lifeMs": 14000,
+     "windK": 1.8
+    }
+   ]
+  },
+  "stormcairn": {
+   "wind": [8,-1],
+   "fields": {
+    "veg": [104,142],
+    "rock": [118,160]
+   },
+   "stands": {
+    "mixes": [
+     {
+      "id": "pinewood",
+      "field": "veg",
+      "variants": 8,
+      "R": [2.5,4.5],
+      "spacing": 1.75,
+      "cluster": 0.7,
+      "sway": true,
+      "density": {
+       "WILD": 0.68,
+       "SPECIAL": 0.61,
+       "GROUND2": 0.41
+      },
+      "species": [
+       ["canopy_scots_pine",7],
+       ["canopy_scots_pine_b",4],
+       ["canopy_birch_downy",3],
+       ["canopy_rowan_wind",1],
+       ["canopy_rowan_young",1]
+      ]
+     },
+     {
+      "id": "oakwood",
+      "field": "veg",
+      "variants": 6,
+      "R": [1.5,3.5],
+      "spacing": 1.84,
+      "cluster": 0.8,
+      "sway": true,
+      "density": {
+       "WILD": 0.61,
+       "SHORE": 0.47,
+       "GROUND2": 0.41,
+       "SPECIAL": 0.41
+      },
+      "species": [
+       ["canopy_stunted_oak",5],
+       ["canopy_scots_pine",3],
+       ["canopy_birch_downy",3],
+       ["canopy_alder",2]
+      ]
+     },
+     {
+      "id": "gorse",
+      "field": "veg",
+      "variants": 6,
+      "R": [1.5,3],
+      "spacing": 1.38,
+      "cluster": 0.4,
+      "density": {
+       "WILD": 0.61,
+       "SPECIAL": 0.74,
+       "SHORE": 0.61,
+       "GROUND2": 0.47,
+       "ROCK": 0.34
+      },
+      "species": [
+       ["canopy_gorse",4],
+       ["canopy_broom",3],
+       ["canopy_sea_buckthorn",3],
+       ["canopy_thorn_scrub",2],
+       ["canopy_heather_clump",2],
+       ["canopy_bracken",2]
+      ]
+     },
+     {
+      "id": "crags",
+      "field": "rock",
+      "variants": 8,
+      "R": [1.5,3],
+      "spacing": 1.56,
+      "cluster": 0.35,
+      "density": {
+       "ROCK": 0.95,
+       "SNOW": 0.88,
+       "WILD": 0.27,
+       "GROUND2": 0.34,
+       "SHORE": 0.27
+      },
+      "species": [
+       ["boulder_granite",2],
+       ["boulder_granite_b",2],
+       ["rock_l_granite",3],
+       ["rock_s_granite",3],
+       ["canopy_heather_clump",1],
+       ["canopy_juniper",1]
+      ]
+     }
+    ]
+   },
+   "groups": [
+    {
+     "id": "grove",
+     "kind": "tree",
+     "pitch": 1.75,
+     "density": {
+      "FOREST": 0.9
+     },
+     "species": [
+      ["canopy_scots_pine",5],
+      ["canopy_scots_pine_b",4],
+      ["canopy_alder",2],
+      ["canopy_birch_downy",2],
+      ["canopy_stunted_oak",2],
+      ["canopy_rowan_wind",1],
+      ["canopy_great_pine",0.35],
+      ["canopy_great_pine_b",0.35]
+     ],
+     "jitter": 0.85,
+     "twin": false,
+     "sway": true,
+     "mapOnly": false,
+     "cluster": 0.8
+    },
+    {
+     "id": "lone",
+     "kind": "tree",
+     "pitch": 5,
+     "density": {
+      "WILD": 0.16,
+      "GROUND2": 0.1,
+      "SHORE": 0.08,
+      "FIELD": 0.08,
+      "SPECIAL": 0.1,
+      "ROCK": 0.06
+     },
+     "species": [
+      ["canopy_hawthorn_wind",3],
+      ["canopy_rowan_wind",2],
+      ["canopy_rowan_young",2],
+      ["canopy_stunted_oak",2],
+      ["canopy_birch_downy",2],
+      ["canopy_great_thorn",0.3]
+     ],
+     "jitter": 0.85,
+     "twin": true,
+     "sway": true,
+     "mapOnly": false,
+     "mod": {
+      "field": "veg",
+      "out": 1,
+      "in": 1.4,
+      "edge": 1.8
+     }
+    },
+    {
+     "id": "scrub",
+     "kind": "scrub",
+     "pitch": 3,
+     "density": {
+      "WILD": 0.12,
+      "GROUND2": 0.15,
+      "FOREST": 0.075,
+      "SPECIAL": 0.21,
+      "ROCK": 0.075,
+      "SHORE": 0.12,
+      "FIELD": 0.03
+     },
+     "species": [
+      ["canopy_juniper",2],
+      ["canopy_gorse",3],
+      ["canopy_broom",2],
+      [
+       "canopy_sea_buckthorn",
+       2,
+       {
+        "on": ["SHORE","WILD"]
+       }
+      ],
+      [
+       "canopy_heather_clump",
+       3,
+       {
+        "on": ["SPECIAL","WILD","GROUND2"]
+       }
+      ],
+      ["canopy_bracken",2],
+      ["canopy_thorn_scrub",1],
+      [
+       "bog_cotton",
+       2,
+       {
+        "on": ["GROUND2","SPECIAL"]
+       }
+      ],
+      [
+       "thrift_rock",
+       1,
+       {
+        "on": ["SHORE","ROCK"]
+       }
+      ]
+     ],
+     "jitter": 0.85,
+     "twin": false,
+     "sway": false,
+     "mapOnly": false,
+     "mod": {
+      "field": "veg",
+      "out": 0.7,
+      "in": 2.4,
+      "edge": 3
+     }
+    },
+    {
+     "id": "rocks",
+     "kind": "rock",
+     "pitch": 4,
+     "density": {
+      "ROCK": 0.45,
+      "SNOW": 0.3,
+      "GROUND2": 0.04,
+      "WILD": 0.02,
+      "SPECIAL": 0.03,
+      "SHORE": 0.04
+     },
+     "species": [
+      ["rock_s_granite",3],
+      ["rock_l_granite",3],
+      ["boulder_granite",2],
+      ["boulder_granite_b",2],
+      [
+       "crag_columns",
+       1.5,
+       {
+        "on": ["ROCK","SNOW"]
+       }
+      ],
+      [
+       "crag_columns_b",
+       1.5,
+       {
+        "on": ["ROCK","SNOW"]
+       }
+      ],
+      [
+       "standing_stone",
+       0.4,
+       {
+        "on": ["WILD","SPECIAL"]
+       }
+      ],
+      [
+       "standing_stone_lean",
+       0.3,
+       {
+        "on": ["WILD","SPECIAL"]
+       }
+      ]
+     ],
+     "jitter": 0.85,
+     "twin": false,
+     "sway": false,
+     "mapOnly": false,
+     "mod": {
+      "field": "rock",
+      "out": 0.4,
+      "in": 2.6,
+      "edge": 1.6
+     }
+    },
+    {
+     "id": "litter",
+     "kind": "litter",
+     "pitch": 5,
+     "density": {
+      "WILD": 0.02,
+      "FOREST": 0.05,
+      "GROUND2": 0.02,
+      "SHORE": 0.1
+     },
+     "species": [
+      ["stump_pine",2],
+      ["canopy_log_pine",1],
+      [
+       "driftwood",
+       2,
+       {
+        "on": ["SHORE"]
+       }
+      ],
+      [
+       "kelp_heap",
+       2,
+       {
+        "on": ["SHORE"]
+       }
+      ],
+      [
+       "shingle_bank",
+       1.5,
+       {
+        "on": ["SHORE"]
+       }
+      ]
+     ],
+     "jitter": 0.85,
+     "twin": false,
+     "sway": false,
+     "mapOnly": false,
+     "mod": {
+      "field": "veg",
+      "out": 0.5,
+      "in": 2.2,
+      "edge": 2
+     }
+    },
+    {
+     "id": "crops",
+     "kind": "crop",
+     "pitch": 2.5,
+     "density": {
+      "FIELD": 0.38,
+      "GROUND2": 0.02
+     },
+     "species": [
+      ["oat_rig",3],
+      ["oat_rig_b",2],
+      ["kale_bed",2],
+      ["lazybed",2],
+      ["hay_stook",1],
+      ["oat_stook",1.5],
+      [
+       "peat_stack",
+       1,
+       {
+        "on": ["GROUND2","FIELD"]
+       }
+      ],
+      [
+       "peat_stack_b",
+       0.8,
+       {
+        "on": ["GROUND2","FIELD"]
+       }
+      ]
+     ],
+     "jitter": 0.85,
+     "twin": false,
+     "sway": false,
+     "mapOnly": false
+    },
+    {
+     "id": "features",
+     "kind": "feature",
+     "pitch": 30,
+     "density": {
+      "WILD": 0.16,
+      "GROUND2": 0.18,
+      "FIELD": 0.22,
+      "ROCK": 0.12,
+      "SPECIAL": 0.14,
+      "SHORE": 0.25
+     },
+     "species": [
+      ["broch_ruin",2],
+      [
+       "harbour_house",
+       2,
+       {
+        "coast": true,
+        "emit": {
+         "fx": "smoke_drift",
+         "dx": 0,
+         "dy": -60,
+         "rise": 28,
+         "puffs": 3
+        }
+       }
+      ],
+      [
+       "boat_shed",
+       2,
+       {
+        "coast": true
+       }
+      ],
+      [
+       "blackhouse_byre",
+       2,
+       {
+        "on": ["FIELD","WILD","GROUND2"],
+        "emit": {
+         "fx": "smoke_drift",
+         "dx": 0,
+         "dy": -52,
+         "rise": 28,
+         "puffs": 3
+        }
+       }
+      ],
+      [
+       "cairn_circle",
+       1.5,
+       {
+        "on": ["WILD","SPECIAL","GROUND2"]
+       }
+      ],
+      ["broch_wall",1],
+      ["chapel_gable",1],
+      ["road_cairn",1],
+      [
+       "bothy_tent",
+       0.8,
+       {
+        "on": ["WILD","SPECIAL"]
+       }
+      ],
+      [
+       "peat_fire",
+       0.6,
+       {
+        "emit": {
+         "fx": "smoke_drift",
+         "dx": 0,
+         "dy": -20,
+         "rise": 28,
+         "puffs": 3
+        }
+       }
+      ]
+     ],
+     "jitter": 0.5,
+     "twin": true,
+     "sway": false,
+     "mapOnly": false
+    },
+    {
+     "id": "landmarks",
+     "kind": "landmark",
+     "pitch": 196,
+     "density": {
+      "SHORE": 0.5,
+      "ROCK": 0.4,
+      "WILD": 0.2,
+      "SPECIAL": 0.3
+     },
+     "species": [
+      [
+       "sea_stack",
+       1,
+       {
+        "coast": true
+       }
+      ],
+      [
+       "cliff_burn",
+       1,
+       {
+        "on": ["ROCK","WILD","SPECIAL"]
+       }
+      ]
+     ],
+     "jitter": 0.4,
+     "twin": true,
+     "sway": false,
+     "mapOnly": false
+    },
+    {
+     "id": "mapobj",
+     "kind": "mapobj",
+     "pitch": 15,
+     "density": {
+      "ROCK": 0.55,
+      "SNOW": 0.55,
+      "SPECIAL": 0.3,
+      "GROUND2": 0.08,
+      "WILD": 0.05,
+      "FIELD": 0.05,
+      "SHORE": 0.05
+     },
+     "species": [],
+     "jitter": 0.6,
+     "twin": true,
+     "sway": false,
+     "mapOnly": true
+    }
+   ],
+   "creatures": {
+    "pitch": 14,
+    "density": {
+     "WILD": 0.2,
+     "GROUND2": 0.2,
+     "FIELD": 0.22,
+     "ROCK": 0.18,
+     "SNOW": 0.1,
+     "FOREST": 0.18,
+     "SHORE": 0.3,
+     "SPECIAL": 0.18,
+     "SEA": 0.03
+    },
+    "species": [
+     [
+      "highland_cow",
+      3,
+      [2,3],
+      ["WILD","SPECIAL","FIELD","GROUND2"]
+     ],
+     [
+      "blackface_sheep",
+      3,
+      [3,4],
+      ["WILD","SPECIAL","ROCK","FIELD"]
+     ],
+     [
+      "grey_seal",
+      2,
+      [1,3],
+      ["SHORE"]
+     ],
+     [
+      "otter",
+      1,
+      [1,1],
+      ["SHORE"]
+     ],
+     [
+      "gannet",
+      1.5,
+      [1,3],
+      ["SHORE","SEA"]
+     ],
+     [
+      "brown_hare",
+      1.5,
+      [1,2],
+      ["WILD","FIELD","SPECIAL"]
+     ],
+     [
+      "pine_marten",
+      1,
+      [1,1],
+      ["FOREST"]
+     ],
+     [
+      "raven",
+      1.5,
+      [1,2],
+      ["ROCK","WILD","GROUND2"]
+     ]
+    ]
+   },
+   "birds": {
+    "pitch": 140,
+    "p": 0.5,
+    "species": [
+     [
+      "gull_flight",
+      3,
+      [2,5],
+      null,
+      {
+       "speed": 44,
+       "alt": 80
+      }
+     ],
+     [
+      "gull_far_flight",
+      2,
+      [3,6],
+      null,
+      {
+       "speed": 36,
+       "alt": 120
+      }
+     ]
+    ]
+   },
+   "ambience": [
+    {
+     "id": "mist_drift",
+     "kind": "wander",
+     "pitch": 26,
+     "density": {
+      "WILD": 0.18,
+      "SPECIAL": 0.22,
+      "GROUND2": 0.22,
+      "SEA": 0.1,
+      "SHORE": 0.2,
+      "FOREST": 0.12
+     },
+     "lifeMs": 20000,
+     "windK": 1
+    },
+    {
+     "id": "spray_burst",
+     "kind": "spray",
+     "pitch": 7,
+     "density": {
+      "SEA": 0.5,
+      "DEEP": 0.2
+     },
+     "lifeMs": 2600
+    },
+    {
+     "id": "sea_spray",
+     "shared": true,
+     "kind": "spray",
+     "pitch": 9,
+     "density": {
+      "SEA": 0.35
+     },
+     "lifeMs": 2000
+    }
+   ]
+  },
+  "crownlands": {
+   "wind": [5,2],
+   "fields": {
+    "veg": [94,132],
+    "rock": [124,166]
+   },
+   "stands": {
+    "mixes": [
+     {
+      "id": "woods",
+      "field": "veg",
+      "variants": 10,
+      "R": [2.5,4.5],
+      "spacing": 1.93,
+      "cluster": 0.75,
+      "sway": true,
+      "density": {
+       "WILD": 0.74,
+       "SHORE": 0.54,
+       "GROUND2": 0.41,
+       "SPECIAL": 0.47,
+       "FIELD": 0.16
+      },
+      "species": [
+       ["canopy_oak",6],
+       ["canopy_oak_b",5],
+       ["canopy_fir",4],
+       ["canopy_pine",3],
+       ["canopy_beech",3],
+       ["canopy_elm",2],
+       ["canopy_ash",2],
+       ["canopy_holly",1],
+       ["canopy_oak_old",1]
+      ]
+     },
+     {
+      "id": "copses",
+      "field": "veg",
+      "variants": 6,
+      "R": [1.5,3.5],
+      "spacing": 2.02,
+      "cluster": 0.5,
+      "sway": true,
+      "density": {
+       "WILD": 0.68,
+       "FIELD": 0.27,
+       "SPECIAL": 0.61,
+       "SHORE": 0.47,
+       "GROUND2": 0.41
+      },
+      "species": [
+       ["canopy_oak_young",3],
+       ["canopy_hawthorn",3],
+       ["canopy_rowan",2],
+       ["canopy_sapling",2],
+       ["birch",2],
+       ["canopy_oak_autumn",1],
+       ["bush",2],
+       ["berry_bush",1]
+      ]
+     },
+     {
+      "id": "stones",
+      "field": "rock",
+      "variants": 8,
+      "R": [1.5,3],
+      "spacing": 1.56,
+      "cluster": 0.35,
+      "density": {
+       "ROCK": 0.95,
+       "SNOW": 0.88,
+       "GROUND2": 0.41,
+       "WILD": 0.2
+      },
+      "species": [
+       ["boulder_mossy",3],
+       ["rock_l",3],
+       ["rock_s",2],
+       ["bush",1]
+      ]
+     }
+    ]
+   },
+   "groups": [
+    {
+     "id": "grove",
+     "kind": "tree",
+     "pitch": 1.75,
+     "density": {
+      "FOREST": 0.9
+     },
+     "species": [
+      ["canopy_oak",5],
+      ["canopy_oak_b",4],
+      ["canopy_beech",4],
+      ["canopy_elm",2],
+      ["canopy_ash",2],
+      ["canopy_oak_old",2],
+      ["canopy_fir",1],
+      ["canopy_pine",1],
+      ["canopy_oak_autumn",1],
+      ["hero_oak",0.3],
+      ["hero_oak_b",0.3]
+     ],
+     "jitter": 0.85,
+     "twin": false,
+     "sway": true,
+     "mapOnly": false,
+     "cluster": 0.8
+    },
+    {
+     "id": "lone",
+     "kind": "tree",
+     "pitch": 5,
+     "density": {
+      "WILD": 0.34,
+      "GROUND2": 0.16,
+      "SHORE": 0.24,
+      "FIELD": 0.1,
+      "SPECIAL": 0.1,
+      "ROCK": 0.06
+     },
+     "species": [
+      ["canopy_oak_young",3],
+      ["canopy_hawthorn",2],
+      ["canopy_rowan",2],
+      ["canopy_holly",1],
+      ["canopy_sapling",2],
+      ["oak",2],
+      ["birch",2],
+      [
+       "willow",
+       2,
+       {
+        "on": ["SHORE"]
+       }
+      ],
+      [
+       "willow_b",
+       2,
+       {
+        "on": ["SHORE"]
+       }
+      ],
+      ["dead_tree",0.5]
+     ],
+     "jitter": 0.85,
+     "twin": true,
+     "sway": true,
+     "mapOnly": false,
+     "mod": {
+      "field": "veg",
+      "out": 1,
+      "in": 1.4,
+      "edge": 1.8
+     }
+    },
+    {
+     "id": "scrub",
+     "kind": "scrub",
+     "pitch": 3,
+     "density": {
+      "WILD": 0.105,
+      "GROUND2": 0.15,
+      "FOREST": 0.09,
+      "SPECIAL": 0.21,
+      "ROCK": 0.075,
+      "SHORE": 0.12,
+      "FIELD": 0.03
+     },
+     "species": [
+      ["bush",3],
+      ["berry_bush",2],
+      ["canopy_bramble",1.5],
+      [
+       "flowers",
+       3,
+       {
+        "on": ["SPECIAL","WILD"]
+       }
+      ],
+      ["dry_grass",1.5],
+      [
+       "mushrooms",
+       1,
+       {
+        "on": ["FOREST"]
+       }
+      ],
+      [
+       "reeds",
+       2,
+       {
+        "on": ["SHORE"]
+       }
+      ]
+     ],
+     "jitter": 0.85,
+     "twin": false,
+     "sway": false,
+     "mapOnly": false,
+     "mod": {
+      "field": "veg",
+      "out": 0.7,
+      "in": 2.4,
+      "edge": 3
+     }
+    },
+    {
+     "id": "rocks",
+     "kind": "rock",
+     "pitch": 4,
+     "density": {
+      "ROCK": 0.45,
+      "SNOW": 0.3,
+      "GROUND2": 0.04,
+      "WILD": 0.015,
+      "SHORE": 0.02
+     },
+     "species": [
+      ["boulder_mossy",3],
+      ["rock_l",3],
+      ["rock_s",3],
+      [
+       "standing_stone",
+       0.3,
+       {
+        "on": ["WILD","SPECIAL"]
+       }
+      ]
+     ],
+     "jitter": 0.85,
+     "twin": false,
+     "sway": false,
+     "mapOnly": false,
+     "mod": {
+      "field": "rock",
+      "out": 0.4,
+      "in": 2.6,
+      "edge": 1.6
+     }
+    },
+    {
+     "id": "litter",
+     "kind": "litter",
+     "pitch": 5,
+     "density": {
+      "WILD": 0.02,
+      "FOREST": 0.06,
+      "GROUND2": 0.02
+     },
+     "species": [
+      ["stump",2],
+      ["log",2],
+      ["canopy_log",1],
+      ["log_pile",0.5]
+     ],
+     "jitter": 0.85,
+     "twin": false,
+     "sway": false,
+     "mapOnly": false,
+     "mod": {
+      "field": "veg",
+      "out": 0.5,
+      "in": 2.2,
+      "edge": 2
+     }
+    },
+    {
+     "id": "crops",
+     "kind": "crop",
+     "pitch": 2.5,
+     "density": {
+      "FIELD": 0.38
+     },
+     "species": [
+      ["wheat_ripe",3],
+      ["wheat_young",3],
+      ["hay_bale",1.5],
+      ["scarecrow",0.5],
+      ["beehive",0.5],
+      ["cart_hay",0.3]
+     ],
+     "jitter": 0.85,
+     "twin": false,
+     "sway": false,
+     "mapOnly": false
+    },
+    {
+     "id": "features",
+     "kind": "feature",
+     "pitch": 30,
+     "density": {
+      "WILD": 0.16,
+      "GROUND2": 0.2,
+      "FIELD": 0.24,
+      "ROCK": 0.12,
+      "SPECIAL": 0.14,
+      "SHORE": 0.25
+     },
+     "species": [
+      [
+       "windmill",
+       2,
+       {
+        "on": ["FIELD","WILD"]
+       }
+      ],
+      [
+       "watermill",
+       1.5,
+       {
+        "coast": true
+       }
+      ],
+      [
+       "boathouse",
+       2,
+       {
+        "coast": true
+       }
+      ],
+      ["watchtower_ruin",1.5],
+      ["watchtower_ruin_b",1.5],
+      ["ruin_wall",1],
+      ["shrine",1],
+      [
+       "well",
+       1,
+       {
+        "on": ["FIELD","WILD"]
+       }
+      ],
+      ["cairn",1],
+      ["watchtower_wood",1],
+      [
+       "tent",
+       0.8,
+       {
+        "on": ["WILD","GROUND2"]
+       }
+      ],
+      [
+       "campfire",
+       0.6,
+       {
+        "emit": {
+         "fx": "smoke_drift",
+         "dx": 0,
+         "dy": -20,
+         "rise": 28,
+         "puffs": 3
+        }
+       }
+      ]
+     ],
+     "jitter": 0.5,
+     "twin": true,
+     "sway": false,
+     "mapOnly": false
+    },
+    {
+     "id": "landmarks",
+     "kind": "landmark",
+     "pitch": 196,
+     "density": {
+      "ROCK": 0.5,
+      "WILD": 0.3,
+      "SPECIAL": 0.3
+     },
+     "species": [
+      ["waterfall_cliff",1]
+     ],
+     "jitter": 0.4,
+     "twin": true,
+     "sway": false,
+     "mapOnly": false
+    },
+    {
+     "id": "mapobj",
+     "kind": "mapobj",
+     "pitch": 15,
+     "density": {
+      "ROCK": 0.55,
+      "SNOW": 0.55,
+      "SPECIAL": 0.3,
+      "GROUND2": 0.08,
+      "WILD": 0.05,
+      "FIELD": 0.05,
+      "SHORE": 0.05
+     },
+     "species": [],
+     "jitter": 0.6,
+     "twin": true,
+     "sway": false,
+     "mapOnly": true
+    }
+   ],
+   "creatures": {
+    "pitch": 14,
+    "density": {
+     "WILD": 0.22,
+     "GROUND2": 0.2,
+     "FIELD": 0.25,
+     "ROCK": 0.18,
+     "SNOW": 0.1,
+     "FOREST": 0.2,
+     "SHORE": 0.2,
+     "SPECIAL": 0.2,
+     "WATER": 0.1
+    },
+    "species": [
+     [
+      "sheep",
+      3,
+      [3,4],
+      ["WILD","FIELD","SPECIAL"]
+     ],
+     [
+      "chicken",
+      1.5,
+      [2,4],
+      ["FIELD"]
+     ],
+     [
+      "pig",
+      1,
+      [1,2],
+      ["FIELD"]
+     ],
+     [
+      "goat",
+      1.5,
+      [2,3],
+      ["GROUND2","ROCK"]
+     ],
+     [
+      "deer",
+      2,
+      [1,3],
+      ["FOREST","WILD"]
+     ],
+     [
+      "rabbit",
+      1.5,
+      [1,2],
+      ["WILD","SPECIAL","FIELD"]
+     ],
+     [
+      "fox",
+      1,
+      [1,1],
+      ["FOREST","WILD"]
+     ],
+     [
+      "duck",
+      2,
+      [2,3],
+      ["WATER","SHORE"]
+     ]
+    ]
+   },
+   "birds": {
+    "pitch": 140,
+    "p": 0.45,
+    "species": [
+     [
+      "sparrow_flight",
+      3,
+      [3,6],
+      ["WILD","FIELD","FOREST","SPECIAL","GROUND2"],
+      {
+       "speed": 48,
+       "alt": 56
+      }
+     ],
+     [
+      "gull_flight",
+      2,
+      [2,4],
+      ["SHORE","SEA","DEEP","WATER"],
+      {
+       "speed": 42,
+       "alt": 80
+      }
+     ]
+    ]
+   },
+   "ambience": [
+    {
+     "id": "leaf_drift_green",
+     "shared": true,
+     "kind": "fall",
+     "pitch": 9,
+     "density": {
+      "FOREST": 0.5,
+      "WILD": 0.08,
+      "SHORE": 0.1
+     },
+     "lifeMs": 6500,
+     "alt": 72,
+     "windK": 1.4
+    },
+    {
+     "id": "leaf_drift_gold",
+     "shared": true,
+     "kind": "fall",
+     "pitch": 13,
+     "density": {
+      "FOREST": 0.35,
+      "FIELD": 0.08
+     },
+     "lifeMs": 6500,
+     "alt": 72,
+     "windK": 1.4
+    },
+    {
+     "id": "petals",
+     "shared": true,
+     "kind": "fall",
+     "pitch": 10,
+     "density": {
+      "SPECIAL": 0.5,
+      "FIELD": 0.12,
+      "WILD": 0.06
+     },
+     "lifeMs": 5500,
+     "alt": 48,
+     "windK": 1.2
+    },
+    {
+     "id": "pollen",
+     "shared": true,
+     "kind": "wander",
+     "pitch": 8,
+     "minD": 1800,
+     "density": {
+      "SPECIAL": 0.45,
+      "FIELD": 0.3,
+      "WILD": 0.15
+     },
+     "lifeMs": 4000,
+     "windK": 0.8
+    }
+   ]
+  },
+  "elderwood": {
+   "wind": [3,0],
+   "fields": {
+    "veg": [92,130],
+    "rock": [124,166]
+   },
+   "stands": {
+    "mixes": [
+     {
+      "id": "oakwood",
+      "field": "veg",
+      "variants": 10,
+      "R": [2.5,4.5],
+      "spacing": 1.6,
+      "cluster": 0.6,
+      "sway": true,
+      "density": {
+       "WILD": 0.81,
+       "ROCK": 0.2
+      },
+      "species": [
+       ["canopy_elder_oak",5],
+       ["canopy_elder_oak_b",4],
+       ["canopy_hollow_oak",2],
+       ["canopy_ancient_yew",3],
+       ["canopy_ancient_yew_b",2],
+       ["canopy_moss_beech",2],
+       ["canopy_moss_beech_b",1],
+       ["canopy_twisted_beech",2]
+      ]
+     },
+     {
+      "id": "hazel",
+      "field": "veg",
+      "variants": 6,
+      "R": [1.5,3],
+      "spacing": 1.6,
+      "cluster": 0.4,
+      "sway": true,
+      "density": {
+       "WILD": 0.6,
+       "ROCK": 0.1
+      },
+      "species": [
+       ["canopy_hazel_coppice",3],
+       ["canopy_hazel_coppice_small",3],
+       ["canopy_sapling",1],
+       ["canopy_holly",1],
+       ["canopy_gnarled_elder",1],
+       ["canopy_elder_bush",1]
+      ]
+     },
+     {
+      "id": "mossrocks",
+      "field": "rock",
+      "variants": 8,
+      "R": [1.5,3],
+      "spacing": 1.56,
+      "cluster": 0.35,
+      "density": {
+       "ROCK": 0.95,
+       "WILD": 0.34
+      },
+      "species": [
+       ["boulder_moss",3],
+       ["rock_l_moss",3],
+       ["rock_l_moss_block",2],
+       ["rock_l_moss_blocks",2],
+       ["rock_s_moss",2],
+       ["rock_s_moss_b",2],
+       ["canopy_fern_bush",1],
+       ["fern_tall",1]
+      ]
+     }
+    ]
+   },
+   "groups": [
+    {
+     "id": "grove",
+     "kind": "tree",
+     "pitch": 1.75,
+     "density": {
+      "FOREST": 0.92
+     },
+     "species": [
+      ["canopy_elder_oak",5],
+      ["canopy_elder_oak_b",4],
+      ["canopy_ancient_yew",3],
+      ["canopy_ancient_yew_b",2],
+      ["canopy_hollow_oak",2],
+      ["canopy_moss_beech",2],
+      ["canopy_moss_beech_b",1],
+      ["canopy_twisted_beech",2],
+      ["canopy_gnarled_elder",1],
+      ["canopy_great_oak",0.35],
+      ["canopy_great_oak_b",0.35]
+     ],
+     "jitter": 0.85,
+     "twin": false,
+     "sway": true,
+     "mapOnly": false,
+     "cluster": 0.7
+    },
+    {
+     "id": "lone",
+     "kind": "tree",
+     "pitch": 5,
+     "density": {
+      "WILD": 0.3,
+      "ROCK": 0.06
+     },
+     "species": [
+      ["canopy_hazel_coppice",2],
+      ["canopy_hazel_coppice_small",2],
+      ["canopy_holly",2],
+      ["canopy_gnarled_elder",2],
+      ["canopy_sapling",1],
+      ["canopy_sapling_beech",1],
+      ["canopy_twisted_beech_b",1],
+      ["canopy_elder_oak",1],
+      [
+       "canopy_old_willow",
+       3,
+       {
+        "coast": true
+       }
+      ],
+      [
+       "canopy_old_willow_b",
+       2,
+       {
+        "coast": true
+       }
+      ]
+     ],
+     "jitter": 0.85,
+     "twin": true,
+     "sway": true,
+     "mapOnly": false,
+     "mod": {
+      "field": "veg",
+      "out": 1,
+      "in": 1.4,
+      "edge": 1.8
+     }
+    },
+    {
+     "id": "scrub",
+     "kind": "scrub",
+     "pitch": 3,
+     "density": {
+      "WILD": 0.12,
+      "FOREST": 0.12,
+      "ROCK": 0.06
+     },
+     "species": [
+      ["canopy_fern_bush",4],
+      ["canopy_fern_small",2],
+      ["canopy_bramble",3],
+      ["canopy_bramble_small",1],
+      ["canopy_elder_bush",2],
+      ["canopy_elder_bush_small",2],
+      ["fern_tall",2],
+      ["fern_low",2],
+      ["foxgloves",1],
+      ["foxgloves_b",1],
+      ["bluebell_clump_b",2],
+      ["toadstools",1],
+      ["toadstools_b",1],
+      [
+       "reeds_stream",
+       2,
+       {
+        "coast": true
+       }
+      ]
+     ],
+     "jitter": 0.85,
+     "twin": false,
+     "sway": false,
+     "mapOnly": false,
+     "mod": {
+      "field": "veg",
+      "out": 0.7,
+      "in": 2.4,
+      "edge": 3
+     }
+    },
+    {
+     "id": "rocks",
+     "kind": "rock",
+     "pitch": 4,
+     "density": {
+      "ROCK": 0.45,
+      "WILD": 0.02,
+      "FOREST": 0.01
+     },
+     "species": [
+      ["rock_l_moss",3],
+      ["rock_s_moss",3],
+      ["rock_s_moss_b",2],
+      ["boulder_moss",2],
+      ["rock_l_moss_block",1.5],
+      ["rock_l_moss_blocks",1.5],
+      ["fallen_stone",1],
+      [
+       "standing_stone_moss",
+       0.4,
+       {
+        "on": ["WILD"]
+       }
+      ],
+      [
+       "standing_stone_b",
+       0.3,
+       {
+        "on": ["WILD"]
+       }
+      ]
+     ],
+     "jitter": 0.85,
+     "twin": false,
+     "sway": false,
+     "mapOnly": false,
+     "mod": {
+      "field": "rock",
+      "out": 0.4,
+      "in": 2.6,
+      "edge": 1.6
+     }
+    },
+    {
+     "id": "litter",
+     "kind": "litter",
+     "pitch": 5,
+     "density": {
+      "WILD": 0.03,
+      "FOREST": 0.07
+     },
+     "species": [
+      ["canopy_log_mossy",3],
+      ["fallen_oak",1],
+      ["fallen_oak_hollow",1],
+      ["stump_oak",2],
+      ["stump_oak_low",1],
+      ["canopy_mushroom_ring",1],
+      ["canopy_mushroom_ring_b",1],
+      ["mushroom_logs",1],
+      ["mushroom_logs_b",0.5],
+      ["root_knot",1]
+     ],
+     "jitter": 0.85,
+     "twin": false,
+     "sway": false,
+     "mapOnly": false,
+     "mod": {
+      "field": "veg",
+      "out": 0.5,
+      "in": 2.2,
+      "edge": 2
+     }
+    },
+    {
+     "id": "features",
+     "kind": "feature",
+     "pitch": 30,
+     "density": {
+      "WILD": 0.18,
+      "ROCK": 0.1,
+      "FOREST": 0.04
+     },
+     "species": [
+      [
+       "woodcutters_hall",
+       2,
+       {
+        "on": ["WILD"],
+        "emit": {
+         "fx": "smoke_drift",
+         "dx": 0,
+         "dy": -60,
+         "rise": 28,
+         "puffs": 3
+        }
+       }
+      ],
+      [
+       "root_boathouse",
+       1.5,
+       {
+        "coast": true
+       }
+      ],
+      [
+       "well_mossy",
+       1,
+       {
+        "on": ["WILD"]
+       }
+      ],
+      [
+       "tent_hide",
+       1,
+       {
+        "on": ["WILD"]
+       }
+      ],
+      [
+       "tent_hide_b",
+       0.8,
+       {
+        "on": ["WILD"]
+       }
+      ],
+      [
+       "campfire",
+       0.6,
+       {
+        "emit": {
+         "fx": "smoke_drift",
+         "dx": 0,
+         "dy": -20,
+         "rise": 28,
+         "puffs": 3
+        }
+       }
+      ],
+      ["firewood_lean_to",1],
+      [
+       "deer_stand",
+       1,
+       {
+        "on": ["WILD","FOREST"]
+       }
+      ],
+      ["mossy_statue",1],
+      ["offering_stone",1],
+      ["spiral_stone",1],
+      ["standing_stone_b",1],
+      [
+       "goose_house",
+       0.8,
+       {
+        "on": ["WILD"]
+       }
+      ],
+      [
+       "bee_skep",
+       0.8,
+       {
+        "on": ["WILD"]
+       }
+      ],
+      [
+       "honey_stall",
+       0.5,
+       {
+        "on": ["WILD"]
+       }
+      ],
+      [
+       "mushroom_stall",
+       0.5,
+       {
+        "on": ["WILD"]
+       }
+      ],
+      ["timber_cart",0.6],
+      ["signpost_wood",0.5],
+      ["lantern_post_wood",0.5],
+      [
+       "eel_trap",
+       0.8,
+       {
+        "coast": true
+       }
+      ]
+     ],
+     "jitter": 0.5,
+     "twin": true,
+     "sway": false,
+     "mapOnly": false
+    },
+    {
+     "id": "landmarks",
+     "kind": "landmark",
+     "pitch": 196,
+     "density": {
+      "ROCK": 0.4,
+      "WILD": 0.3,
+      "FOREST": 0.15
+     },
+     "species": [
+      [
+       "root_ledge_falls",
+       1,
+       {
+        "on": ["ROCK","WILD"],
+        "emit": {
+         "fx": "spray_drift",
+         "dx": 0,
+         "dy": -24,
+         "rise": 16,
+         "puffs": 3
+        }
+       }
+      ],
+      [
+       "elder_arch",
+       1,
+       {
+        "on": ["WILD","FOREST"]
+       }
+      ],
+      [
+       "great_stump",
+       1,
+       {
+        "on": ["WILD","FOREST"]
+       }
+      ],
+      [
+       "moot_oak",
+       1,
+       {
+        "on": ["WILD"]
+       }
+      ]
+     ],
+     "jitter": 0.4,
+     "twin": true,
+     "sway": false,
+     "mapOnly": false
+    },
+    {
+     "id": "mapobj",
+     "kind": "mapobj",
+     "pitch": 15,
+     "density": {
+      "ROCK": 0.55,
+      "SNOW": 0.55,
+      "WILD": 0.08,
+      "FOREST": 0.08
+     },
+     "species": [],
+     "jitter": 0.6,
+     "twin": true,
+     "sway": false,
+     "mapOnly": true
+    }
+   ],
+   "creatures": {
+    "pitch": 14,
+    "density": {
+     "WILD": 0.22,
+     "FOREST": 0.2,
+     "ROCK": 0.15,
+     "WATER": 0.12
+    },
+    "species": [
+     [
+      "stag",
+      2,
+      [1,3],
+      ["WILD","FOREST"]
+     ],
+     [
+      "wild_boar",
+      2,
+      [2,3],
+      ["FOREST","WILD"]
+     ],
+     [
+      "grey_wolf",
+      1,
+      [2,3],
+      ["FOREST","ROCK"]
+     ],
+     [
+      "goose",
+      1.5,
+      [2,4],
+      ["WILD"]
+     ],
+     [
+      "badger",
+      1,
+      [1,1],
+      ["FOREST","WILD"]
+     ],
+     [
+      "hedgehog",
+      1,
+      [1,1],
+      ["WILD","FOREST"]
+     ],
+     [
+      "red_squirrel",
+      1.5,
+      [1,2],
+      ["FOREST"]
+     ],
+     [
+      "kingfisher",
+      1.5,
+      [1,1],
+      ["WATER"]
+     ]
+    ]
+   },
+   "birds": {
+    "pitch": 150,
+    "p": 0.35,
+    "species": [
+     [
+      "owl_flight",
+      1,
+      [1,2],
+      null,
+      {
+       "speed": 30,
+       "alt": 64
+      }
+     ]
+    ]
+   },
+   "ambience": [
+    {
+     "id": "leaf_drift",
+     "kind": "fall",
+     "pitch": 12,
+     "density": {
+      "FOREST": 0.8,
+      "WILD": 0.1
+     },
+     "lifeMs": 6500,
+     "alt": 72,
+     "windK": 1.3
+    },
+    {
+     "id": "firefly_drift",
+     "kind": "wander",
+     "pitch": 11,
+     "density": {
+      "FOREST": 0.55,
+      "WILD": 0.38
+     },
+     "lifeMs": 5000,
+     "windK": 0.2
+    },
+    {
+     "id": "bee_drift",
+     "kind": "wander",
+     "pitch": 16,
+     "density": {
+      "WILD": 0.16
+     },
+     "lifeMs": 6000,
+     "windK": 0.3
+    },
+    {
+     "id": "dust_motes",
+     "shared": true,
+     "kind": "wander",
+     "pitch": 8,
+     "minD": 1800,
+     "density": {
+      "FOREST": 0.4,
+      "WILD": 0.1
+     },
+     "lifeMs": 5000,
+     "windK": 0.4
+    },
+    {
+     "id": "leaf_drift_green",
+     "shared": true,
+     "kind": "fall",
+     "pitch": 14,
+     "minD": 1800,
+     "density": {
+      "FOREST": 0.57
+     },
+     "lifeMs": 6500,
+     "alt": 72,
+     "windK": 1.3
+    }
+   ]
+  },
+  "thornwake": {
+   "wind": [-2,-1],
+   "fields": {
+    "veg": [94,132],
+    "rock": [122,164]
+   },
+   "stands": {
+    "mixes": [
+     {
+      "id": "jungle",
+      "field": "veg",
+      "variants": 10,
+      "R": [2.5,4.5],
+      "spacing": 1.6,
+      "cluster": 0.55,
+      "sway": true,
+      "density": {
+       "WILD": 0.78,
+       "ROCK": 0.16
+      },
+      "species": [
+       ["canopy_kapok",5],
+       ["canopy_kapok_b",4],
+       ["canopy_banyan",3],
+       ["canopy_banyan_b",2],
+       ["canopy_liana_hardwood",5],
+       ["canopy_liana_hardwood_b",3],
+       ["canopy_rubber_tree",3],
+       ["canopy_rubber_tree_b",3],
+       ["canopy_strangler_fig",4],
+       ["canopy_strangler_fig_b",3]
+      ]
+     },
+     {
+      "id": "palms",
+      "field": "veg",
+      "variants": 6,
+      "R": [1.5,3.5],
+      "spacing": 2,
+      "cluster": 0.5,
+      "sway": true,
+      "density": {
+       "WILD": 0.6,
+       "ROCK": 0.1
+      },
+      "species": [
+       ["canopy_jungle_palm",4],
+       ["canopy_jungle_palm_slender",4],
+       ["canopy_bamboo",4],
+       ["canopy_tree_fern",3],
+       ["canopy_banana_young",2],
+       ["canopy_tree_fern_young",1]
+      ]
+     },
+     {
+      "id": "ferns",
+      "field": "veg",
+      "variants": 6,
+      "R": [1.5,3],
+      "spacing": 1.4,
+      "cluster": 0.4,
+      "sway": true,
+      "density": {
+       "WILD": 0.55,
+       "ROCK": 0.2
+      },
+      "species": [
+       ["canopy_giant_fern",6],
+       ["canopy_fern_small",5],
+       ["canopy_cycad",2],
+       ["canopy_cycad_small",3],
+       ["canopy_vine_tangle",4],
+       ["heliconia",2],
+       ["canopy_orchid_bush",1],
+       ["pitcher_plants",1]
+      ]
+     },
+     {
+      "id": "jrocks",
+      "field": "rock",
+      "variants": 8,
+      "R": [1.5,3],
+      "spacing": 1.56,
+      "cluster": 0.35,
+      "density": {
+       "ROCK": 0.95,
+       "WILD": 0.3
+      },
+      "species": [
+       ["boulder_jungle",3],
+       ["boulder_jungle_b",3],
+       ["rock_l_jungle",3],
+       ["rock_s_jungle",2],
+       ["canopy_log_mossy",1],
+       ["canopy_giant_fern",1],
+       ["canopy_cycad_small",1]
+      ]
+     }
+    ]
+   },
+   "groups": [
+    {
+     "id": "grove",
+     "kind": "tree",
+     "pitch": 1.75,
+     "density": {
+      "FOREST": 0.92
+     },
+     "species": [
+      ["canopy_kapok",5],
+      ["canopy_kapok_b",4],
+      ["canopy_liana_hardwood",5],
+      ["canopy_liana_hardwood_b",3],
+      ["canopy_strangler_fig",4],
+      ["canopy_strangler_fig_b",3],
+      ["canopy_banyan",3],
+      ["canopy_banyan_b",2],
+      ["canopy_rubber_tree",3],
+      ["canopy_rubber_tree_b",3],
+      ["canopy_great_kapok",0.35],
+      ["canopy_great_kapok_b",0.35]
+     ],
+     "jitter": 0.85,
+     "twin": false,
+     "sway": true,
+     "mapOnly": false,
+     "cluster": 0.7
+    },
+    {
+     "id": "lone",
+     "kind": "tree",
+     "pitch": 5,
+     "density": {
+      "WILD": 0.26,
+      "ROCK": 0.06
+     },
+     "species": [
+      ["canopy_jungle_palm",3],
+      ["canopy_jungle_palm_slender",3],
+      ["canopy_bamboo",2],
+      ["canopy_banana",2],
+      ["canopy_banana_young",1],
+      ["canopy_mango",1],
+      ["canopy_mango_b",1],
+      ["canopy_tree_fern",2],
+      ["canopy_cycad",1],
+      ["canopy_dead_palm",0.5]
+     ],
+     "jitter": 0.85,
+     "twin": true,
+     "sway": true,
+     "mapOnly": false,
+     "mod": {
+      "field": "veg",
+      "out": 1,
+      "in": 1.4,
+      "edge": 1.8
+     }
+    },
+    {
+     "id": "scrub",
+     "kind": "scrub",
+     "pitch": 3,
+     "density": {
+      "WILD": 0.13,
+      "FOREST": 0.12,
+      "ROCK": 0.07
+     },
+     "species": [
+      ["canopy_giant_fern",4],
+      ["canopy_fern_small",4],
+      ["canopy_cycad_small",2],
+      ["canopy_vine_tangle",3],
+      ["heliconia",2],
+      ["canopy_orchid_bush",1],
+      ["pitcher_plants",1],
+      ["canopy_tree_fern_young",1],
+      [
+       "reeds_jungle",
+       2,
+       {
+        "coast": true
+       }
+      ]
+     ],
+     "jitter": 0.85,
+     "twin": false,
+     "sway": false,
+     "mapOnly": false,
+     "mod": {
+      "field": "veg",
+      "out": 0.7,
+      "in": 2.4,
+      "edge": 3
+     }
+    },
+    {
+     "id": "rocks",
+     "kind": "rock",
+     "pitch": 4,
+     "density": {
+      "ROCK": 0.45,
+      "WILD": 0.02,
+      "FOREST": 0.01
+     },
+     "species": [
+      ["rock_s_jungle",3],
+      ["rock_l_jungle",3],
+      ["boulder_jungle",2],
+      ["boulder_jungle_b",2],
+      [
+       "termite_mound",
+       0.6,
+       {
+        "on": ["WILD"]
+       }
+      ],
+      ["temple_block_fallen",0.5]
+     ],
+     "jitter": 0.85,
+     "twin": false,
+     "sway": false,
+     "mapOnly": false,
+     "mod": {
+      "field": "rock",
+      "out": 0.4,
+      "in": 2.6,
+      "edge": 1.6
+     }
+    },
+    {
+     "id": "litter",
+     "kind": "litter",
+     "pitch": 5,
+     "density": {
+      "WILD": 0.04,
+      "FOREST": 0.07
+     },
+     "species": [
+      ["canopy_log_mossy",4],
+      ["stump_jungle",1.5],
+      ["root_arch",1],
+      ["fallen_fruit_pile",0.5]
+     ],
+     "jitter": 0.85,
+     "twin": false,
+     "sway": false,
+     "mapOnly": false,
+     "mod": {
+      "field": "veg",
+      "out": 0.5,
+      "in": 2.2,
+      "edge": 2
+     }
+    },
+    {
+     "id": "features",
+     "kind": "feature",
+     "pitch": 30,
+     "density": {
+      "WILD": 0.18,
+      "ROCK": 0.1,
+      "FOREST": 0.04
+     },
+     "species": [
+      [
+       "stilt_longhouse",
+       2,
+       {
+        "on": ["WILD"],
+        "emit": {
+         "fx": "smoke_drift",
+         "dx": 0,
+         "dy": -56,
+         "rise": 28,
+         "puffs": 3
+        }
+       }
+      ],
+      [
+       "stilt_boathouse",
+       1.5,
+       {
+        "coast": true
+       }
+      ],
+      [
+       "stilt_granary",
+       1.2,
+       {
+        "on": ["WILD"]
+       }
+      ],
+      [
+       "fowl_coop",
+       0.8,
+       {
+        "on": ["WILD"]
+       }
+      ],
+      [
+       "fruit_stall",
+       0.6,
+       {
+        "on": ["WILD"]
+       }
+      ],
+      [
+       "market_stall_thatch",
+       0.6,
+       {
+        "on": ["WILD"]
+       }
+      ],
+      ["drying_rack",0.8],
+      [
+       "fish_smoking_rack",
+       0.8,
+       {
+        "coast": true,
+        "emit": {
+         "fx": "smoke_drift",
+         "dx": 0,
+         "dy": -30,
+         "rise": 28,
+         "puffs": 3
+        }
+       }
+      ],
+      [
+       "cookfire",
+       0.6,
+       {
+        "emit": {
+         "fx": "smoke_drift",
+         "dx": 0,
+         "dy": -20,
+         "rise": 28,
+         "puffs": 3
+        }
+       }
+      ],
+      ["idol_mossy",1],
+      ["carved_post",0.8],
+      ["offering_bowls",0.6],
+      ["hammock_posts",0.6],
+      [
+       "water_wheel",
+       0.8,
+       {
+        "coast": true
+       }
+      ],
+      ["bamboo_torch",0.5],
+      ["signpost_bamboo",0.5],
+      ["pottery_jars",0.5],
+      [
+       "termite_mound",
+       0.8,
+       {
+        "on": ["WILD"]
+       }
+      ],
+      [
+       "dugout_canoe_beached",
+       0.8,
+       {
+        "coast": true
+       }
+      ],
+      [
+       "fish_trap_bamboo",
+       0.6,
+       {
+        "coast": true
+       }
+      ]
+     ],
+     "jitter": 0.5,
+     "twin": true,
+     "sway": false,
+     "mapOnly": false
+    },
+    {
+     "id": "landmarks",
+     "kind": "landmark",
+     "pitch": 196,
+     "density": {
+      "ROCK": 0.4,
+      "WILD": 0.3,
+      "FOREST": 0.15
+     },
+     "species": [
+      [
+       "mossy_falls",
+       1,
+       {
+        "on": ["ROCK","WILD"],
+        "emit": {
+         "fx": "spray_drift",
+         "dx": 0,
+         "dy": -30,
+         "rise": 16,
+         "puffs": 3
+        }
+       }
+      ],
+      [
+       "temple_head",
+       1,
+       {
+        "on": ["WILD","FOREST"]
+       }
+      ],
+      [
+       "red_mud_bluff",
+       1,
+       {
+        "on": ["ROCK","WILD"]
+       }
+      ],
+      [
+       "vine_arch",
+       1,
+       {
+        "on": ["WILD","FOREST"]
+       }
+      ]
+     ],
+     "jitter": 0.4,
+     "twin": true,
+     "sway": false,
+     "mapOnly": false
+    },
+    {
+     "id": "mapobj",
+     "kind": "mapobj",
+     "pitch": 15,
+     "density": {
+      "ROCK": 0.55,
+      "SNOW": 0.55,
+      "WILD": 0.07,
+      "FOREST": 0.07
+     },
+     "species": [],
+     "jitter": 0.6,
+     "twin": true,
+     "sway": false,
+     "mapOnly": true
+    }
+   ],
+   "mapobjs": {
+    "map_massif_1": {
+     "w": 0.08,
+     "coast": true
+    },
+    "map_massif_2": {
+     "w": 0.08,
+     "coast": true
+    },
+    "map_massif_3": {
+     "w": 0.08,
+     "coast": true
+    },
+    "map_range_1": {
+     "w": 0.08,
+     "coast": true
+    },
+    "map_waterfall_1": {
+     "w": 0.08,
+     "coast": true
+    },
+    "peak": 2,
+    "hill": 1.5,
+    "crag": 1.5,
+    "spire": 1.5
+   },
+   "creatures": {
+    "pitch": 14,
+    "density": {
+     "WILD": 0.22,
+     "FOREST": 0.22,
+     "ROCK": 0.15,
+     "WATER": 0.15
+    },
+    "species": [
+     [
+      "crocodile",
+      1.5,
+      [1,2],
+      ["WATER"]
+     ],
+     [
+      "tapir",
+      1.5,
+      [1,2],
+      ["FOREST","WILD"]
+     ],
+     [
+      "monitor_lizard",
+      1.5,
+      [1,1],
+      ["ROCK","WILD"]
+     ],
+     [
+      "jungle_boar",
+      2,
+      [2,3],
+      ["FOREST","WILD"]
+     ],
+     [
+      "hornbill",
+      1,
+      [1,2],
+      ["FOREST"]
+     ],
+     [
+      "macaque",
+      2,
+      [2,4],
+      ["FOREST","WILD","ROCK"]
+     ],
+     [
+      "jungle_fowl",
+      1.5,
+      [2,4],
+      ["WILD","FOREST"]
+     ],
+     [
+      "giant_frog",
+      1,
+      [1,2],
+      ["WILD"]
+     ]
+    ]
+   },
+   "birds": {
+    "pitch": 140,
+    "p": 0.45,
+    "species": [
+     [
+      "parrot_flight",
+      1,
+      [3,6],
+      null,
+      {
+       "speed": 46,
+       "alt": 70
+      }
+     ]
+    ]
+   },
+   "ambience": [
+    {
+     "id": "butterfly_drift",
+     "kind": "wander",
+     "pitch": 10,
+     "density": {
+      "WILD": 0.25,
+      "FOREST": 0.15
+     },
+     "lifeMs": 6000,
+     "windK": 0.4
+    },
+    {
+     "id": "spray_drift",
+     "kind": "wander",
+     "pitch": 22,
+     "density": {
+      "WATER": 0.35,
+      "FOREST": 0.08
+     },
+     "lifeMs": 16000,
+     "windK": 0.5
+    },
+    {
+     "id": "fireflies",
+     "shared": true,
+     "kind": "wander",
+     "pitch": 8,
+     "minD": 1800,
+     "density": {
+      "FOREST": 0.35,
+      "WILD": 0.1
+     },
+     "lifeMs": 4500,
+     "windK": 0.3
+    }
+   ]
+  },
+  "seeker-reach": {
+   "wind": [5,-3],
+   "fields": {
+    "veg": [146,160],
+    "rock": [140,162]
+   },
+   "stands": {
+    "mixes": [
+     {
+      "id": "amethyst",
+      "field": "veg",
+      "variants": 10,
+      "R": [2.5,4.5],
+      "spacing": 2.4,
+      "cluster": 0.85,
+      "density": {
+       "WILD": 1,
+       "SPECIAL": 0.4,
+       "ROCK": 0.12
+      },
+      "species": [
+       ["canopy_crystal_amethyst_l",6],
+       ["canopy_crystal_amethyst_l_b",4],
+       ["canopy_crystal_teal_l",4],
+       ["canopy_crystal_teal_l_b",2],
+       ["canopy_silver_birch",3],
+       ["canopy_silver_birch_b",2]
+      ]
+     },
+     {
+      "id": "umbral",
+      "field": "veg",
+      "variants": 8,
+      "R": [2,4],
+      "spacing": 2.4,
+      "cluster": 0.85,
+      "density": {
+       "WILD": 0.9,
+       "ROCK": 0.3,
+       "SPECIAL": 0.3
+      },
+      "species": [
+       ["canopy_petrified_pine",4],
+       ["canopy_petrified_oak",3],
+       ["canopy_petrified_oak_b",2],
+       ["canopy_void_pine",2],
+       ["canopy_void_pine_b",1],
+       ["canopy_silver_birch_b",2],
+       ["canopy_crystal_amethyst_l",2]
+      ]
+     },
+     {
+      "id": "lumen",
+      "field": "veg",
+      "variants": 6,
+      "R": [2,4],
+      "spacing": 2.8,
+      "cluster": 0.8,
+      "density": {
+       "SPECIAL": 0.74,
+       "WILD": 0.12
+      },
+      "species": [
+       ["canopy_lumen_tree",2],
+       ["canopy_lumen_tree_b",2],
+       ["canopy_crystal_teal_l",3],
+       ["canopy_crystal_teal_l_b",2],
+       ["canopy_silver_birch",2]
+      ]
+     },
+     {
+      "id": "glowcaps",
+      "field": "veg",
+      "variants": 4,
+      "R": [1.5,3],
+      "spacing": 2.6,
+      "cluster": 0.85,
+      "density": {
+       "SPECIAL": 0.15,
+       "WILD": 0.05
+      },
+      "species": [
+       ["canopy_glowcap_l",5],
+       ["canopy_glowcap_l_b",3],
+       ["canopy_crystal_teal_l",3],
+       ["canopy_silver_birch",3]
+      ]
+     },
+     {
+      "id": "slate",
+      "field": "rock",
+      "variants": 8,
+      "R": [1.5,3],
+      "spacing": 1.8,
+      "cluster": 0.35,
+      "density": {
+       "ROCK": 0.9,
+       "SNOW": 0.8,
+       "WILD": 0.1,
+       "SPECIAL": 0.2
+      },
+      "species": [
+       ["rock_l_slate_block",3],
+       ["boulder_slate",2],
+       ["boulder_slate_b",2],
+       ["rock_l_slate",2],
+       ["rock_s_slate",2],
+       ["crystal_cluster_violet",2],
+       ["crystal_cluster_teal",2],
+       ["geode_split",1],
+       ["silver_fern",1]
+      ]
+     },
+     {
+      "id": "shards",
+      "field": "rock",
+      "variants": 6,
+      "R": [1.5,3],
+      "spacing": 1.6,
+      "cluster": 0.4,
+      "density": {
+       "ROCK": 0.4,
+       "WILD": 0.3,
+       "SPECIAL": 0.3
+      },
+      "species": [
+       ["crystal_cluster_violet",4],
+       ["crystal_cluster_teal",4],
+       ["crystal_cluster_small_violet",3],
+       ["crystal_cluster_small_teal",3],
+       ["canopy_shard_cluster",2],
+       ["canopy_shard_cluster_b",1],
+       ["geode_split",1]
+      ]
+     }
+    ]
+   },
+   "groups": [
+    {
+     "id": "grove",
+     "kind": "tree",
+     "pitch": 2.5,
+     "density": {
+      "FOREST": 0.9
+     },
+     "species": [
+      ["canopy_crystal_teal_l",5],
+      ["canopy_crystal_teal_l_b",4],
+      ["canopy_crystal_amethyst_l",3],
+      ["canopy_crystal_amethyst_l_b",2],
+      ["canopy_void_pine",2],
+      ["canopy_void_pine_b",1],
+      ["canopy_silver_birch",2],
+      ["canopy_silver_birch_b",1],
+      ["canopy_petrified_oak",1],
+      ["canopy_lumen_tree",0.35],
+      ["canopy_lumen_tree_b",0.35]
+     ],
+     "jitter": 0.85,
+     "twin": false,
+     "sway": false,
+     "mapOnly": false,
+     "cluster": 0.85
+    },
+    {
+     "id": "lone",
+     "kind": "tree",
+     "pitch": 5,
+     "density": {
+      "WILD": 0.26,
+      "SPECIAL": 0.12,
+      "ROCK": 0.06
+     },
+     "species": [
+      ["canopy_crystal_amethyst_s",3],
+      ["canopy_crystal_teal_s",3],
+      ["canopy_silver_birch",2],
+      ["canopy_void_pine_b",2],
+      ["canopy_petrified_pine",2],
+      ["canopy_crystal_amethyst_l",1],
+      ["canopy_crystal_teal_l",1],
+      ["canopy_glowcap_l",0.5]
+     ],
+     "jitter": 0.85,
+     "twin": true,
+     "sway": false,
+     "mapOnly": false,
+     "mod": {
+      "field": "veg",
+      "out": 1,
+      "in": 1.4,
+      "edge": 1.8
+     }
+    },
+    {
+     "id": "scrub",
+     "kind": "scrub",
+     "pitch": 3,
+     "density": {
+      "WILD": 0.115,
+      "FOREST": 0.08,
+      "SPECIAL": 0.14,
+      "ROCK": 0.06,
+      "SNOW": 0.04
+     },
+     "species": [
+      ["canopy_crystal_shrub",3],
+      ["canopy_crystal_shrub_teal",2],
+      ["canopy_lichen_bush",3],
+      ["canopy_lichen_bush_b",2],
+      ["silver_fern",2],
+      ["canopy_shard_cluster",2],
+      ["canopy_shard_cluster_b",1],
+      ["canopy_thorn_violet",1],
+      ["canopy_glowcap_s",0.6],
+      [
+       "glowcap_cluster",
+       0.5,
+       {
+        "on": ["SPECIAL","FOREST"]
+       }
+      ],
+      [
+       "lumen_reeds_b",
+       2,
+       {
+        "coast": true
+       }
+      ]
+     ],
+     "jitter": 0.85,
+     "twin": false,
+     "sway": false,
+     "mapOnly": false,
+     "mod": {
+      "field": "veg",
+      "out": 0.7,
+      "in": 2.4,
+      "edge": 3
+     }
+    },
+    {
+     "id": "rocks",
+     "kind": "rock",
+     "pitch": 4,
+     "density": {
+      "ROCK": 0.45,
+      "SNOW": 0.3,
+      "SPECIAL": 0.08,
+      "WILD": 0.02
+     },
+     "species": [
+      ["rock_s_slate",3],
+      ["rock_s_slate_b",2],
+      ["rock_l_slate",2],
+      ["rock_l_slate_block",3],
+      ["boulder_slate",2],
+      ["boulder_slate_b",2],
+      ["crystal_cluster_violet",2],
+      ["crystal_cluster_teal",2],
+      ["crystal_cluster_small_violet",1],
+      ["crystal_cluster_small_teal",1],
+      ["geode_split",1]
+     ],
+     "jitter": 0.85,
+     "twin": false,
+     "sway": false,
+     "mapOnly": false,
+     "mod": {
+      "field": "rock",
+      "out": 0.4,
+      "in": 2.6,
+      "edge": 1.6
+     }
+    },
+    {
+     "id": "litter",
+     "kind": "litter",
+     "pitch": 5,
+     "density": {
+      "WILD": 0.025,
+      "FOREST": 0.05,
+      "SPECIAL": 0.02
+     },
+     "species": [
+      ["canopy_log_petrified",2],
+      ["stump_petrified",1],
+      ["stump_petrified_flat",2],
+      ["fallen_petrified",1],
+      ["fallen_monolith",0.4]
+     ],
+     "jitter": 0.85,
+     "twin": false,
+     "sway": false,
+     "mapOnly": false,
+     "mod": {
+      "field": "veg",
+      "out": 0.5,
+      "in": 2.2,
+      "edge": 2
+     }
+    },
+    {
+     "id": "features",
+     "kind": "feature",
+     "pitch": 30,
+     "density": {
+      "WILD": 0.18,
+      "ROCK": 0.12,
+      "SPECIAL": 0.14,
+      "FOREST": 0.03
+     },
+     "species": [
+      [
+       "harvest_shed",
+       1.5,
+       {
+        "on": ["WILD","SPECIAL"]
+       }
+      ],
+      [
+       "quay_house",
+       1.5,
+       {
+        "coast": true
+       }
+      ],
+      [
+       "tent_teal",
+       1,
+       {
+        "on": ["WILD"]
+       }
+      ],
+      [
+       "tent_violet",
+       1,
+       {
+        "on": ["WILD"]
+       }
+      ],
+      ["observatory_arc",1],
+      ["glow_brazier",1],
+      ["lantern_crystal",0.8],
+      ["beacon_lamp",0.8],
+      [
+       "beacon_lamp_post",
+       1,
+       {
+        "emit": {
+         "fx": "wisp_drift",
+         "dx": 0,
+         "dy": -54,
+         "rise": 10,
+         "puffs": 3
+        }
+       }
+      ],
+      [
+       "beacon_lens",
+       1,
+       {
+        "emit": {
+         "fx": "wisp_drift",
+         "dx": 0,
+         "dy": -48,
+         "rise": 10,
+         "puffs": 3
+        }
+       }
+      ],
+      ["rune_stone",1],
+      ["resonance_post",0.8],
+      ["resonance_post_b",0.8],
+      ["monolith_shard",1],
+      ["monolith_shard_b",0.8],
+      ["monolith_shard_c",0.8],
+      ["pedestal_lens",0.8],
+      ["broken_pillar_obsidian",0.8],
+      ["refinery_still",0.6],
+      ["crystal_cart",0.5],
+      ["signpost_obsidian",0.5],
+      [
+       "market_stall_teal",
+       0.4,
+       {
+        "on": ["WILD"]
+       }
+      ],
+      [
+       "market_stall_violet",
+       0.4,
+       {
+        "on": ["WILD"]
+       }
+      ]
+     ],
+     "jitter": 0.5,
+     "twin": true,
+     "sway": false,
+     "mapOnly": false
+    },
+    {
+     "id": "landmarks",
+     "kind": "landmark",
+     "pitch": 196,
+     "density": {
+      "ROCK": 0.4,
+      "WILD": 0.3,
+      "SPECIAL": 0.4
+     },
+     "species": [
+      [
+       "crystal_spring_cliff",
+       1,
+       {
+        "on": ["ROCK","SPECIAL","WILD"],
+        "emit": {
+         "fx": "vapour_drift",
+         "dx": 0,
+         "dy": -30,
+         "rise": 20,
+         "puffs": 3
+        }
+       }
+      ],
+      [
+       "broken_monolith",
+       1,
+       {
+        "on": ["WILD","ROCK","SPECIAL"]
+       }
+      ],
+      [
+       "resonance_gate_b_wide",
+       1,
+       {
+        "on": ["WILD"]
+       }
+      ],
+      [
+       "shard_ridge",
+       1,
+       {
+        "on": ["ROCK"]
+       }
+      ],
+      [
+       "shard_ridge_b",
+       1,
+       {
+        "on": ["ROCK"]
+       }
+      ],
+      [
+       "geode_hall",
+       1,
+       {
+        "on": ["ROCK","WILD"]
+       }
+      ]
+     ],
+     "jitter": 0.4,
+     "twin": true,
+     "sway": false,
+     "mapOnly": false
+    },
+    {
+     "id": "mapobj",
+     "kind": "mapobj",
+     "pitch": 15,
+     "density": {
+      "ROCK": 0.55,
+      "SNOW": 0.55,
+      "SPECIAL": 0.3,
+      "WILD": 0.08,
+      "FOREST": 0.06,
+      "WATER": 0.25,
+      "SEA": 0.12
+     },
+     "species": [],
+     "jitter": 0.6,
+     "twin": true,
+     "sway": false,
+     "mapOnly": true
+    }
+   ],
+   "mapobjs": {
+    "map_waterfall_1": {
+     "w": 0.08,
+     "coast": true
+    },
+    "map_mesa_3": 2,
+    "map_mesa_4": 2,
+    "map_mesa_5": 2,
+    "map_mesa_6": 2
+   },
+   "creatures": {
+    "pitch": 14,
+    "density": {
+     "WILD": 0.2,
+     "FOREST": 0.18,
+     "ROCK": 0.2,
+     "SPECIAL": 0.2,
+     "SNOW": 0.1,
+     "WATER": 0.15
+    },
+    "species": [
+     [
+      "phase_deer",
+      2.5,
+      [1,3],
+      ["WILD","FOREST","SPECIAL"]
+     ],
+     [
+      "shadow_cat",
+      1,
+      [1,1],
+      ["ROCK","FOREST"]
+     ],
+     [
+      "void_fox",
+      1.5,
+      [1,1],
+      ["WILD","FOREST"]
+     ],
+     [
+      "rock_tortoise",
+      1.5,
+      [1,2],
+      ["ROCK","WILD"]
+     ],
+     [
+      "glow_lizard",
+      1.5,
+      [1,2],
+      ["ROCK","SPECIAL","SNOW"]
+     ],
+     [
+      "shard_crab",
+      1,
+      [1,3],
+      ["ROCK","WILD"]
+     ],
+     [
+      "crystal_beetle",
+      1.5,
+      [1,2],
+      ["WILD","SPECIAL","FOREST"]
+     ],
+     [
+      "lumen_koi",
+      2,
+      [2,3],
+      ["WATER"]
+     ]
+    ]
+   },
+   "birds": {
+    "pitch": 150,
+    "p": 0.4,
+    "species": [
+     [
+      "echo_bats",
+      1,
+      [3,6],
+      null,
+      {
+       "speed": 40,
+       "alt": 60
+      }
+     ]
+    ]
+   },
+   "ambience": [
+    {
+     "id": "spark_drift",
+     "kind": "wander",
+     "pitch": 10,
+     "density": {
+      "ROCK": 0.6,
+      "SNOW": 0.6,
+      "SPECIAL": 0.4,
+      "FOREST": 0.24
+     },
+     "lifeMs": 1200,
+     "windK": 0
+    },
+    {
+     "id": "mote_swarm",
+     "kind": "wander",
+     "pitch": 14,
+     "density": {
+      "SPECIAL": 0.48,
+      "FOREST": 0.27,
+      "WILD": 0.16
+     },
+     "lifeMs": 9000,
+     "windK": 0.5
+    },
+    {
+     "id": "wisp_drift",
+     "kind": "wander",
+     "pitch": 16,
+     "density": {
+      "SPECIAL": 0.46,
+      "FOREST": 0.33
+     },
+     "lifeMs": 7000,
+     "windK": 0.3
+    },
+    {
+     "id": "vapour_drift",
+     "kind": "wander",
+     "pitch": 18,
+     "density": {
+      "WATER": 0.5,
+      "SEA": 0.06
+     },
+     "lifeMs": 12000,
+     "windK": 0.8
+    }
+   ],
+   "glow": {
+    "map_beacon_1": [32,20],
+    "map_beacon_2": [31,18]
+   }
+  }
+ }
+}

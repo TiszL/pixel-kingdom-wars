@@ -1,0 +1,239 @@
+{
+  "fixtureOnly": true,
+  "provenance": "Migration journal/signing grammar fixture using an existing public purpose-5 registration vector; not backend migration evidence.",
+  "prepared": {
+    "version": 1,
+    "id": "12345678-1234-4678-9abc-000000000211",
+    "actor": "D7UfZTmNs6QBbuXAuPTTXRnYMMobMrQvkk6eBazXxLEX",
+    "request": {
+      "clanId": "12345678-1234-4678-9abc-000000000201",
+      "idempotencyKey": "12345678-1234-4678-9abc-000000000211"
+    },
+    "snapshot": {
+      "clan": {
+        "id": "12345678-1234-4678-9abc-000000000201",
+        "name": "XXXXXXXXXXXXXXXXXXXXXXXX",
+        "tag": "LEGAC",
+        "inviteMode": "open"
+      },
+      "memberCount": 2,
+      "chestShards": "7",
+      "capturedAt": "2026-09-30T00:00:00.000Z",
+      "commitment": "abababababababababababababababababababababababababababababababab"
+    },
+    "original": {
+      "creationIntentId": "12345678-1234-4678-9abc-000000000211",
+      "clanId": "12345678-1234-4678-9abc-000000000201",
+      "payer": "D7UfZTmNs6QBbuXAuPTTXRnYMMobMrQvkk6eBazXxLEX",
+      "metadata": {
+        "name": "XXXXXXXXXXXXXXXXXXXXXXXX",
+        "uri": "https://invalid.example/xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx/12345678-1234-4678-9abc-000000000201",
+        "hash": "16d616f93349285fa16467cbbe7a47edd3327ce04cb789feace79294bc667f0f"
+      },
+      "chain": {
+        "genesisHash": "k7FaK87WHGVXzkaoHb7CdVPgkKDQhZ29VLDeBVbDfYn",
+        "economyProgram": "YMN9Qj5jPNp7j14VPcML1B6xGgcPWVZUGLFU3Mnyfaf",
+        "craftProgram": "cGfHiC6Kgg3FpFZvgwGcswsCRtp4aBP2fzuXRQPizuN",
+        "config": "9CNAWDPg4zcpyAvkm4DGSWDeoekVT1YC9Nycw3HfmFyL",
+        "craftControl": "4r1UBxBzT1fXfi9ktj6wJGo3F63DsFXvyKMrNoHPf4CQ",
+        "collection": "6k1xZbVr1duH2FcWnMjPAwbAiyTL94ke8ZcaAdqhzkWS",
+        "collectionAuthority": "5dkxi2XeXHSfMoxdgSMiM82Qod8xcHxG9bx5gL6Gih4v",
+        "charter": "EVBS9t96R1yJGkuiMDXg6D74VAc9RmiDnE98QghpSHFc",
+        "asset": "6Af9X7AUgdmaQmnHRFC8PXX1aaJhq4VS171mcyQFMAag",
+        "assetBinding": "6XRE3imaBpUbfVoeLxKa89CatomPR84utTDEEAqhMDjP",
+        "freezeAuthority": "4hp6yWyGYiN6faHVxxipYtk1TgjDxkpreeVByMQJVXTX",
+        "executor": "DVnKyVUCoi3YzMgLBo4hQrEFnazLVPS2pqxgCeYSLwVe",
+        "creationReceipt": "FoRsG4BpUBduHFMpkooDzz36oi4TT5joAsMzQkznCuvr"
+      },
+      "admissionCommitment": "abababababababababababababababababababababababababababababababab"
+    },
+    "status": "prepared",
+    "signing": {
+      "version": 1,
+      "deployment": {
+        "expectedGenesisHash": "k7FaK87WHGVXzkaoHb7CdVPgkKDQhZ29VLDeBVbDfYn",
+        "economy": {
+          "programId": "YMN9Qj5jPNp7j14VPcML1B6xGgcPWVZUGLFU3Mnyfaf",
+          "reviewedDeploymentSlot": 90,
+          "reviewedProgramDataSha256": "f5a0b160e4f5a449677561ea8650e46b18d84b698fff6375a13d250d81eb25b0",
+          "upgradeAuthority": "p2Yicb86aZig616Eav2VWG9vuXR5mEqhtzshZYBxzsV"
+        },
+        "craft": {
+          "programId": "cGfHiC6Kgg3FpFZvgwGcswsCRtp4aBP2fzuXRQPizuN",
+          "reviewedDeploymentSlot": 90,
+          "reviewedProgramDataSha256": "938c89fe46328aed9e477639354a925840713200a40d1d0ee3a83e238b383deb",
+          "upgradeAuthority": "p2Yicb86aZig616Eav2VWG9vuXR5mEqhtzshZYBxzsV"
+        },
+        "core": {
+          "programId": "CoREENxT6tW1HoK8ypY1SxRMZTcVPm7R94rH4PZNhX7d",
+          "reviewedDeploymentSlot": 90,
+          "reviewedProgramDataSha256": "1e3539aa2e2420ee5dd5a2a9ab5c2bdf44af1110b01669d82f6013cfdc33f0bd",
+          "upgradeAuthority": "p2Yicb86aZig616Eav2VWG9vuXR5mEqhtzshZYBxzsV"
+        },
+        "stateProvenance": "fresh-reviewed-deployment"
+      },
+      "lookupTable": {
+        "address": "99STgcvLsYtED75ErtN3h21JexzVXg5yJexDCsMG5dzQ",
+        "owner": "AddressLookupTab1e1111111111111111111111111",
+        "executable": false,
+        "dataHex": "01000000ffffffffffffffff6400000000000000000000000000000000000000000000000000000000000000000000000000000000000000438ec835567903a075f2da87a5de6da4ded9c19b8702a28554c83a336104a6cb79c6d079def99d819c8945785161e84e6631d2347ce3cd61a71811c765c8887bb8d7e58651ea55302ad72de4033e6ebba1ea93f71bbaf6f211091d12e7de88f4090909090909090909090909090909090909090909090909090909090909090939210ceb640218a9a290e1c1a80d348edd1a14f92944f7ea2ef89c79cb209251554f7e1ad0464be7d8aefea57b6186c6280ea4afcef521c522fada21703f5d9f44d95cf3d84bf8609893707210c028876d5c0d8510a7ef41559162a09432b13baf54ab10bd97a542a09ef7b39889dd0cd394a4cce9dfa6cdc97ebe2d235ba74806a7d517187bd16635dad40455fdc2c0c124c68f215675a5dbbacb5f0800000000000000000000000000000000000000000000000000000000000000000000000808080808080808080808080808080808080808080808080808080808080808448873224477fb493aea019747413c63bc197212d64e3cd99317c276cf001fae",
+        "slot": 150
+      },
+      "lookupPin": {
+        "address": "99STgcvLsYtED75ErtN3h21JexzVXg5yJexDCsMG5dzQ",
+        "dataSha256": "debc91fc46757266e021d34abf4e28ebba27ae87a7e5c7ae4d6be8cae06d619f"
+      },
+      "blockhash": "BCh42yLAG59SjSuy5EMJUujSLecc6XYTrDHPadDnS8ge",
+      "blockhashSlot": 150,
+      "lastValidBlockHeight": 300,
+      "observedSlot": 150,
+      "observedUnixTimestamp": "1800000000",
+      "context": {
+        "feeSlot": 150,
+        "closingSlot": 150,
+        "closingGenesisHash": "k7FaK87WHGVXzkaoHb7CdVPgkKDQhZ29VLDeBVbDfYn"
+      },
+      "signingAuthorized": false,
+      "relayAuthorized": false,
+      "kind": "creation",
+      "attemptId": "12345678-1234-4678-9abc-000000000221",
+      "original": {
+        "creationIntentId": "12345678-1234-4678-9abc-000000000211",
+        "clanId": "12345678-1234-4678-9abc-000000000201",
+        "payer": "D7UfZTmNs6QBbuXAuPTTXRnYMMobMrQvkk6eBazXxLEX",
+        "metadata": {
+          "name": "XXXXXXXXXXXXXXXXXXXXXXXX",
+          "uri": "https://invalid.example/xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx/12345678-1234-4678-9abc-000000000201",
+          "hash": "16d616f93349285fa16467cbbe7a47edd3327ce04cb789feace79294bc667f0f"
+        },
+        "chain": {
+          "genesisHash": "k7FaK87WHGVXzkaoHb7CdVPgkKDQhZ29VLDeBVbDfYn",
+          "economyProgram": "YMN9Qj5jPNp7j14VPcML1B6xGgcPWVZUGLFU3Mnyfaf",
+          "craftProgram": "cGfHiC6Kgg3FpFZvgwGcswsCRtp4aBP2fzuXRQPizuN",
+          "config": "9CNAWDPg4zcpyAvkm4DGSWDeoekVT1YC9Nycw3HfmFyL",
+          "craftControl": "4r1UBxBzT1fXfi9ktj6wJGo3F63DsFXvyKMrNoHPf4CQ",
+          "collection": "6k1xZbVr1duH2FcWnMjPAwbAiyTL94ke8ZcaAdqhzkWS",
+          "collectionAuthority": "5dkxi2XeXHSfMoxdgSMiM82Qod8xcHxG9bx5gL6Gih4v",
+          "charter": "EVBS9t96R1yJGkuiMDXg6D74VAc9RmiDnE98QghpSHFc",
+          "asset": "6Af9X7AUgdmaQmnHRFC8PXX1aaJhq4VS171mcyQFMAag",
+          "assetBinding": "6XRE3imaBpUbfVoeLxKa89CatomPR84utTDEEAqhMDjP",
+          "freezeAuthority": "4hp6yWyGYiN6faHVxxipYtk1TgjDxkpreeVByMQJVXTX",
+          "executor": "DVnKyVUCoi3YzMgLBo4hQrEFnazLVPS2pqxgCeYSLwVe",
+          "creationReceipt": "FoRsG4BpUBduHFMpkooDzz36oi4TT5joAsMzQkznCuvr"
+        },
+        "admissionCommitment": "abababababababababababababababababababababababababababababababab"
+      },
+      "policy": {
+        "signer": "97RPtF8J9g9HuoZbGHfQN9iJNMPDCjZ48JomfJDsmBeS",
+        "candidateHex": "534b5045524d54320b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b080808080808080808080808080808080808080808080808080808080808080805c9c9c9c9c9c9c9c9c9c9c9c9c9c9c9c9b3f502392985f5bbd1aae8042fca9208644ea119270a9b9ad5de1d3b7183661426d4496b0000000093abb0bbe0fc15c09af5ff1f6997006f34450091c089e2d32298cc4f6038cb73",
+        "signatureHex": "7b05a82a315c4ab5de9d26b88b4bda21dc1f8273475c425558a91fa7aa10d15f3723d45fe1cd7068c935efbad31ea968b6a28ba4e06d68712013cb468e711304"
+      },
+      "packet": {
+        "version": 1,
+        "messageHex": "800100050bb3f502392985f5bbd1aae8042fca9208644ea119270a9b9ad5de1d3b71836614c85ffd768e9053e05a22f06fbc946b1e0bc9eb60148a6abfba83a0cb470e82a75215400911ba66fffdbba6b5f5a0c27cf3f2ec2d4829e9357b2c7058d576b0aadbe8736cb774a31a762ed58a48335c5027692b3dec2f0d4fd23645220d5d82eb97c09427055f0e1c0441e1d5adcbb1f065e936d167f431aebf42178607a749564cc3cb7359058bdb49d39b62a96805359340bf4ceaf8d85187c17f59c06752c50306466fe5211732ffecadba72c39be7bc8ce5bbc5f7126b2c439b3a40000000037d46d67c93fbbe12f9428f838d40ff0570744927f48a64fcca7044800000000808080808080808080808080808080808080808080808080808080808080808b9abc1e042ac6975a07b413ffa57627937565028a987d2f598ff711f8192a1bd37078d7c95b8e43fca3831ea91bf7031719a128054dbd3bebb02ae8f666e530a97938ba2ec7d7d1961b4cc77d05244fa53d0bbf869a8eac9782d454c9f99ebaf0306000502801a06000700910201003000ffff1000ffff7000a100ffff7882903205a7eab2e3a953fba468c375326707382418ea90526477c174f278a37b05a82a315c4ab5de9d26b88b4bda21dc1f8273475c425558a91fa7aa10d15f3723d45fe1cd7068c935efbad31ea968b6a28ba4e06d68712013cb468e711304534b5045524d54320b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b080808080808080808080808080808080808080808080808080808080808080805c9c9c9c9c9c9c9c9c9c9c9c9c9c9c9c9b3f502392985f5bbd1aae8042fca9208644ea119270a9b9ad5de1d3b7183661426d4496b0000000093abb0bbe0fc15c09af5ff1f6997006f34450091c089e2d32298cc4f6038cb730812000c0d01020304090e0f050b100a11121308a6037a9a2afb48305bf712345678123446789abc00000000020112345678123446789abc000000000211abababababababababababababababababababababababababababababababab180000005858585858585858585858585858585858585858585858582401000068747470733a2f2f696e76616c69642e6578616d706c652f7878787878787878787878787878787878787878787878787878787878787878787878787878787878787878787878787878787878787878787878787878787878787878787878787878787878787878787878787878787878787878787878787878787878787878787878787878787878787878787878787878787878787878787878787878787878787878787878787878787878787878787878787878787878787878787878787878787878787878787878787878787878787878787878787878787878787878787878787878787878787878787878787878787878787878787878787878782f31323334353637382d313233342d343637382d396162632d303030303030303030323031c9c9c9c9c9c9c9c9c9c9c9c9c9c9c9c926d4496b000000000100017906edfe0813f6da6d7dacd718f30061978b239fb9d5472298768da9ada3cd210105080001030406070809",
+        "unsignedTransactionHex": "0100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000800100050bb3f502392985f5bbd1aae8042fca9208644ea119270a9b9ad5de1d3b71836614c85ffd768e9053e05a22f06fbc946b1e0bc9eb60148a6abfba83a0cb470e82a75215400911ba66fffdbba6b5f5a0c27cf3f2ec2d4829e9357b2c7058d576b0aadbe8736cb774a31a762ed58a48335c5027692b3dec2f0d4fd23645220d5d82eb97c09427055f0e1c0441e1d5adcbb1f065e936d167f431aebf42178607a749564cc3cb7359058bdb49d39b62a96805359340bf4ceaf8d85187c17f59c06752c50306466fe5211732ffecadba72c39be7bc8ce5bbc5f7126b2c439b3a40000000037d46d67c93fbbe12f9428f838d40ff0570744927f48a64fcca7044800000000808080808080808080808080808080808080808080808080808080808080808b9abc1e042ac6975a07b413ffa57627937565028a987d2f598ff711f8192a1bd37078d7c95b8e43fca3831ea91bf7031719a128054dbd3bebb02ae8f666e530a97938ba2ec7d7d1961b4cc77d05244fa53d0bbf869a8eac9782d454c9f99ebaf0306000502801a06000700910201003000ffff1000ffff7000a100ffff7882903205a7eab2e3a953fba468c375326707382418ea90526477c174f278a37b05a82a315c4ab5de9d26b88b4bda21dc1f8273475c425558a91fa7aa10d15f3723d45fe1cd7068c935efbad31ea968b6a28ba4e06d68712013cb468e711304534b5045524d54320b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b080808080808080808080808080808080808080808080808080808080808080805c9c9c9c9c9c9c9c9c9c9c9c9c9c9c9c9b3f502392985f5bbd1aae8042fca9208644ea119270a9b9ad5de1d3b7183661426d4496b0000000093abb0bbe0fc15c09af5ff1f6997006f34450091c089e2d32298cc4f6038cb730812000c0d01020304090e0f050b100a11121308a6037a9a2afb48305bf712345678123446789abc00000000020112345678123446789abc000000000211abababababababababababababababababababababababababababababababab180000005858585858585858585858585858585858585858585858582401000068747470733a2f2f696e76616c69642e6578616d706c652f7878787878787878787878787878787878787878787878787878787878787878787878787878787878787878787878787878787878787878787878787878787878787878787878787878787878787878787878787878787878787878787878787878787878787878787878787878787878787878787878787878787878787878787878787878787878787878787878787878787878787878787878787878787878787878787878787878787878787878787878787878787878787878787878787878787878787878787878787878787878787878787878787878787878787878787878787878782f31323334353637382d313233342d343637382d396162632d303030303030303030323031c9c9c9c9c9c9c9c9c9c9c9c9c9c9c9c926d4496b000000000100017906edfe0813f6da6d7dacd718f30061978b239fb9d5472298768da9ada3cd210105080001030406070809",
+        "messageSha256": "f8d3ebbe1c815e8ce98d4d678c3e5c191568e5c33f4901c24b6438841594e3c6",
+        "packetBytes": 1228,
+        "nativeInstructionIndex": 1,
+        "signingAuthorized": false,
+        "relayAuthorized": false,
+        "mintAuthorized": false
+      },
+      "costs": {
+        "allocations": [
+          {
+            "kind": "charter",
+            "address": "EVBS9t96R1yJGkuiMDXg6D74VAc9RmiDnE98QghpSHFc",
+            "bytes": 280,
+            "minimumBalanceLamports": "1000"
+          },
+          {
+            "kind": "assetBinding",
+            "address": "6XRE3imaBpUbfVoeLxKa89CatomPR84utTDEEAqhMDjP",
+            "bytes": 90,
+            "minimumBalanceLamports": "1000"
+          },
+          {
+            "kind": "creationReceipt",
+            "address": "FoRsG4BpUBduHFMpkooDzz36oi4TT5joAsMzQkznCuvr",
+            "bytes": 154,
+            "minimumBalanceLamports": "1000"
+          },
+          {
+            "kind": "permitReceipt",
+            "address": "BDNt3BUFuRSVjhq6zA3raNEb8Ymmg9TrpBSEqioGLjoT",
+            "bytes": 107,
+            "minimumBalanceLamports": "1000"
+          },
+          {
+            "kind": "asset",
+            "address": "6Af9X7AUgdmaQmnHRFC8PXX1aaJhq4VS171mcyQFMAag",
+            "bytes": 453,
+            "minimumBalanceLamports": "1000"
+          }
+        ],
+        "networkFeeLamports": "10000",
+        "rentLamports": "5000",
+        "coreCreateFeeLamports": "1500000",
+        "totalLamports": "1515000"
+      },
+      "costLimits": {
+        "maxNetworkFeeLamports": "100000",
+        "maxRentLamports": "100000",
+        "maxTotalLamports": "2000000"
+      },
+      "coreCostProfile": {
+        "version": 1,
+        "profile": "mpl-core-0.15.2-charter-pfd-seq-none",
+        "reviewedProgramDataSha256": "1e3539aa2e2420ee5dd5a2a9ab5c2bdf44af1110b01669d82f6013cfdc33f0bd"
+      }
+    },
+    "wire": null,
+    "terminal": null,
+    "signingAuthorized": false,
+    "relayAuthorized": false,
+    "migrationAuthorized": false,
+    "fenceReleaseAuthorized": false
+  },
+  "wire": {
+    "signedTransaction": "AQr6G3Q25jebbYWcfuK3m+ufSj9LqaFzX3NALqp5K3zxK6E8qgwVJ/PXMmkXNbRGhjyKz7ApDE5NsfGjHREj0g+AAQAFC7P1AjkphfW70aroBC/KkghkTqEZJwqbmtXeHTtxg2YUyF/9do6QU+BaIvBvvJRrHgvJ62AUimq/uoOgy0cOgqdSFUAJEbpm//27prX1oMJ88/LsLUgp6TV7LHBY1Xawqtvoc2y3dKMadi7VikgzXFAnaSs97C8NT9I2RSINXYLrl8CUJwVfDhwEQeHVrcux8GXpNtFn9DGuv0IXhgenSVZMw8tzWQWL20nTm2KpaAU1k0C/TOr42FGHwX9ZwGdSxQMGRm/lIRcy/+ytunLDm+e8jOW7xfcSayxDmzpAAAAAA31G1nyT+74S+UKPg41A/wVwdEkn9Ipk/MpwRIAAAAAICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICLmrweBCrGl1oHtBP/pXYnk3VlAoqYfS9Zj/cR+BkqG9NweNfJW45D/KODHqkb9wMXGaEoBU29O+uwKuj2ZuUwqXk4ui7H19GWG0zHfQUkT6U9C7+Gmo6sl4LUVMn5nrrwMGAAUCgBoGAAcAkQIBADAA//8QAP//cAChAP//eIKQMgWn6rLjqVP7pGjDdTJnBzgkGOqQUmR3wXTyeKN7BagqMVxKtd6dJriLS9oh3B+Cc0dcQlVYqR+nqhDRXzcj1F/hzXBoyTXvutMeqWi2oouk4G1ocSATy0aOcRMEU0tQRVJNVDILCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIBcnJycnJycnJycnJycnJycmz9QI5KYX1u9Gq6AQvypIIZE6hGScKm5rV3h07cYNmFCbUSWsAAAAAk6uwu+D8FcCa9f8faZcAbzRFAJHAieLTIpjMT2A4y3MIEgAMDQECAwQJDg8FCxAKERITCKYDepoq+0gwW/cSNFZ4EjRGeJq8AAAAAAIBEjRWeBI0RniavAAAAAACEaurq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urGAAAAFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWCQBAABodHRwczovL2ludmFsaWQuZXhhbXBsZS94eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHgvMTIzNDU2NzgtMTIzNC00Njc4LTlhYmMtMDAwMDAwMDAwMjAxycnJycnJycnJycnJycnJySbUSWsAAAAAAQABeQbt/ggT9tptfazXGPMAYZeLI5+51UcimHaNqa2jzSEBBQgAAQMEBgcICQ==",
+    "signature": "DjHFzRjYqV4huZ3KimPbmM1jQ8tnNkyZyFjd8n9X6iUqaHwMXz3gq7fhyPd435FiH1UVb9YyXVJg1MVA33AtyLS",
+    "messageSha256": "f8d3ebbe1c815e8ce98d4d678c3e5c191568e5c33f4901c24b6438841594e3c6",
+    "wireSha256": "1fe8e654fb30a0681b1194e41b05c5e849d2eeb7df8c8eb944aeb6240e5d41c7"
+  },
+  "trust": {
+    "version": 1,
+    "revision": "fixture-d180",
+    "deployment": {
+      "expectedGenesisHash": "k7FaK87WHGVXzkaoHb7CdVPgkKDQhZ29VLDeBVbDfYn",
+      "economy": {
+        "programId": "YMN9Qj5jPNp7j14VPcML1B6xGgcPWVZUGLFU3Mnyfaf",
+        "reviewedDeploymentSlot": 90,
+        "reviewedProgramDataSha256": "f5a0b160e4f5a449677561ea8650e46b18d84b698fff6375a13d250d81eb25b0",
+        "upgradeAuthority": "p2Yicb86aZig616Eav2VWG9vuXR5mEqhtzshZYBxzsV"
+      },
+      "craft": {
+        "programId": "cGfHiC6Kgg3FpFZvgwGcswsCRtp4aBP2fzuXRQPizuN",
+        "reviewedDeploymentSlot": 90,
+        "reviewedProgramDataSha256": "938c89fe46328aed9e477639354a925840713200a40d1d0ee3a83e238b383deb",
+        "upgradeAuthority": "p2Yicb86aZig616Eav2VWG9vuXR5mEqhtzshZYBxzsV"
+      },
+      "core": {
+        "programId": "CoREENxT6tW1HoK8ypY1SxRMZTcVPm7R94rH4PZNhX7d",
+        "reviewedDeploymentSlot": 90,
+        "reviewedProgramDataSha256": "1e3539aa2e2420ee5dd5a2a9ab5c2bdf44af1110b01669d82f6013cfdc33f0bd",
+        "upgradeAuthority": "p2Yicb86aZig616Eav2VWG9vuXR5mEqhtzshZYBxzsV"
+      },
+      "stateProvenance": "fresh-reviewed-deployment"
+    },
+    "policySigner": "97RPtF8J9g9HuoZbGHfQN9iJNMPDCjZ48JomfJDsmBeS",
+    "treasury": "5cXQDaaFXZ846BdLKBs8736iDtBm79UYWQ4ePPhScz1b",
+    "royaltyBps": 500,
+    "lookupTables": [
+      {
+        "address": "99STgcvLsYtED75ErtN3h21JexzVXg5yJexDCsMG5dzQ",
+        "dataSha256": "debc91fc46757266e021d34abf4e28ebba27ae87a7e5c7ae4d6be8cae06d619f"
+      }
+    ]
+  }
+}

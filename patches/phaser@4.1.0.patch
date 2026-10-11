@@ -1,0 +1,149 @@
+diff --git a/dist/phaser.esm.js b/dist/phaser.esm.js
+index bb71b9c77475aa99f9f0d0532e36aa3018ddc897..028b46dac8906d9e61bc1e6482357152c24fccff 100644
+--- a/dist/phaser.esm.js
++++ b/dist/phaser.esm.js
+@@ -19009,7 +19009,9 @@ var TimeStep = new Class({
+ 
+         if (this.delta >= this._limitRate)
+         {
+-            this.callback(time, this.delta);
++            // The remainder stays queued below; delivering it here as well
++            // counts the same elapsed time again on the next limited step.
++            this.callback(time, this.delta - (this.delta % this._limitRate));
+ 
+             this.delta %= this._limitRate;
+         }
+@@ -204569,6 +204571,12 @@ module.exports = [
+     '{',
+     '    vec2 layerTexCoord = outTexCoord;',
+     '    Tile tile = getLayerData(layerTexCoord);',
++    '    /* An empty tile has no tileset texel: getTileTexelCoord answers (0, 0), which */',
++    '    /* samples the sheet corner (its bottom-left pixel under flipY and REPEAT wrap). */',
++    '    if (tile.empty)',
++    '    {',
++    '        discard;',
++    '    }',
+     '    Samples samples = getFinalSamples(tile, layerTexCoord);',
+     '    vec4 fragColor = samples.color;',
+     '    #pragma phaserTemplate(declareSamples)',
+@@ -242623,7 +242631,17 @@ var Tileset = new Class({
+                 var animationDuration = tileDatum.animationDuration;
+ 
+                 // This index maps to an animation, not a single tile.
+-                indexToAnimMap.set(i, animations.length);
++                // The layer data texture stores this value and the shader reads it as a
++
++                // texel index (duration at n, frame offset at n + 1). Animation records
++
++                // are two texels wide, so the n-th animation lives at texel 2n; the bare
++
++                // ordinal resolves every animation after the first to another record's
++
++                // frame offset.
++
++                indexToAnimMap.set(i, animations.length * 2);
+ 
+                 // This animation points to a run of frames.
+                 animations.push([ animationDuration, animFrames.length ]);
+diff --git a/dist/phaser.js b/dist/phaser.js
+index 875acb20c849c5937b88338a337113812f7a2300..dd3edf4b077a8343a3a50f40e59f86fd70e5953f 100644
+--- a/dist/phaser.js
++++ b/dist/phaser.js
+@@ -19021,7 +19021,9 @@ var TimeStep = new Class({
+ 
+         if (this.delta >= this._limitRate)
+         {
+-            this.callback(time, this.delta);
++            // The remainder stays queued below; delivering it here as well
++            // counts the same elapsed time again on the next limited step.
++            this.callback(time, this.delta - (this.delta % this._limitRate));
+ 
+             this.delta %= this._limitRate;
+         }
+@@ -204679,6 +204681,12 @@ module.exports = [
+     '{',
+     '    vec2 layerTexCoord = outTexCoord;',
+     '    Tile tile = getLayerData(layerTexCoord);',
++    '    /* An empty tile has no tileset texel: getTileTexelCoord answers (0, 0), which */',
++    '    /* samples the sheet corner (its bottom-left pixel under flipY and REPEAT wrap). */',
++    '    if (tile.empty)',
++    '    {',
++    '        discard;',
++    '    }',
+     '    Samples samples = getFinalSamples(tile, layerTexCoord);',
+     '    vec4 fragColor = samples.color;',
+     '    #pragma phaserTemplate(declareSamples)',
+@@ -242733,7 +242741,17 @@ var Tileset = new Class({
+                 var animationDuration = tileDatum.animationDuration;
+ 
+                 // This index maps to an animation, not a single tile.
+-                indexToAnimMap.set(i, animations.length);
++                // The layer data texture stores this value and the shader reads it as a
++
++                // texel index (duration at n, frame offset at n + 1). Animation records
++
++                // are two texels wide, so the n-th animation lives at texel 2n; the bare
++
++                // ordinal resolves every animation after the first to another record's
++
++                // frame offset.
++
++                indexToAnimMap.set(i, animations.length * 2);
+ 
+                 // This animation points to a run of frames.
+                 animations.push([ animationDuration, animFrames.length ]);
+diff --git a/src/core/TimeStep.js b/src/core/TimeStep.js
+index ea43014159cde6f28ef7b4fea6745748daefaccb..59695cad60a3a97f8808e7d2f37161228a8335d1 100644
+--- a/src/core/TimeStep.js
++++ b/src/core/TimeStep.js
+@@ -687,7 +687,9 @@ var TimeStep = new Class({
+ 
+         if (this.delta >= this._limitRate)
+         {
+-            this.callback(time, this.delta);
++            // The remainder stays queued below; delivering it here as well
++            // counts the same elapsed time again on the next limited step.
++            this.callback(time, this.delta - (this.delta % this._limitRate));
+ 
+             this.delta %= this._limitRate;
+         }
+diff --git a/src/renderer/webgl/shaders/TilemapGPULayer-frag.js b/src/renderer/webgl/shaders/TilemapGPULayer-frag.js
+index 862dfd8564b9f404e67c4bbd2e6304b320819f84..0b42f0c9e51d693696f26786513c9498ec72f6b7 100644
+--- a/src/renderer/webgl/shaders/TilemapGPULayer-frag.js
++++ b/src/renderer/webgl/shaders/TilemapGPULayer-frag.js
+@@ -227,6 +227,12 @@ module.exports = [
+     '{',
+     '    vec2 layerTexCoord = outTexCoord;',
+     '    Tile tile = getLayerData(layerTexCoord);',
++    '    /* An empty tile has no tileset texel: getTileTexelCoord answers (0, 0), which */',
++    '    /* samples the sheet corner (its bottom-left pixel under flipY and REPEAT wrap). */',
++    '    if (tile.empty)',
++    '    {',
++    '        discard;',
++    '    }',
+     '    Samples samples = getFinalSamples(tile, layerTexCoord);',
+     '    vec4 fragColor = samples.color;',
+     '    #pragma phaserTemplate(declareSamples)',
+diff --git a/src/tilemaps/Tileset.js b/src/tilemaps/Tileset.js
+index bc7521419822a7399e9b3bd0e610abcdf68ba7bd..f712c06c5439ce787f954e78a53f2b6bde7044ac 100644
+--- a/src/tilemaps/Tileset.js
++++ b/src/tilemaps/Tileset.js
+@@ -614,7 +614,17 @@ var Tileset = new Class({
+                 var animationDuration = tileDatum.animationDuration;
+ 
+                 // This index maps to an animation, not a single tile.
+-                indexToAnimMap.set(i, animations.length);
++                // The layer data texture stores this value and the shader reads it as a
++
++                // texel index (duration at n, frame offset at n + 1). Animation records
++
++                // are two texels wide, so the n-th animation lives at texel 2n; the bare
++
++                // ordinal resolves every animation after the first to another record's
++
++                // frame offset.
++
++                indexToAnimMap.set(i, animations.length * 2);
+ 
+                 // This animation points to a run of frames.
+                 animations.push([ animationDuration, animFrames.length ]);

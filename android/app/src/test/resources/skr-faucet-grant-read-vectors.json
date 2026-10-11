@@ -1,0 +1,67 @@
+{
+  "_provenance": {
+    "source": "FIXTURE-DERIVED, not a live capture (night 2026-10-06, K-night-A1)",
+    "what": "GET /devnet-skr-faucet/grants/:grantId for the api-vectors claim once cosigned (submitted) and once finalized (sent), and the next day's status.",
+    "server": "TiszL server night/server ca7fe4d7d: apps/api/test/skr-faucet-fixtures.ts through apps/api/src/devnet-only/skrFaucet.ts; checked by apps/api/test/skr-faucet-native-decoder.ts",
+    "generator": "tools/skr-faucet-fixture-vectors.mts",
+    "recapture": "Re-capture from a live chain lane with scripts/candidate/capture-skr-faucet-vectors.mjs (server repo) and the tester phone; newerPage cannot come from a live server and stays fixture-derived.",
+    "pin": {
+      "mint": "Bincuik5v411CXzJaptVZu2xsMwQrcfc4D5epovrRa3R",
+      "decimals": 6,
+      "grantSkr": 1000,
+      "grantReadPageSize": 20
+    }
+  },
+  "submitted": {
+    "grant": {
+      "id": "2d2e8255-1236-4b18-bb4d-468ba15545be",
+      "status": "requested",
+      "mint": "Bincuik5v411CXzJaptVZu2xsMwQrcfc4D5epovrRa3R",
+      "decimals": 6,
+      "amountRaw": "1000000000",
+      "error": null,
+      "requestedAt": "2026-10-06T12:00:00.000Z",
+      "sentAt": null,
+      "attempt": {
+        "id": "a1172e23-3397-4c9f-8e4a-d2996c1e013d",
+        "phase": "submitted",
+        "signature": "5eMt4VE4PaTNTya7At4EyXr98RKXBzhJBmC9LXsmKo3EpTt8nHWMdGVeiyrc5XkNJQoht9im7VosvWiUH7b19upB",
+        "lastValidBlockHeight": "200"
+      }
+    }
+  },
+  "sent": {
+    "grant": {
+      "id": "2d2e8255-1236-4b18-bb4d-468ba15545be",
+      "status": "sent",
+      "mint": "Bincuik5v411CXzJaptVZu2xsMwQrcfc4D5epovrRa3R",
+      "decimals": 6,
+      "amountRaw": "1000000000",
+      "error": null,
+      "requestedAt": "2026-10-06T12:00:00.000Z",
+      "sentAt": "2026-10-06T12:00:00.000Z",
+      "attempt": {
+        "id": "a1172e23-3397-4c9f-8e4a-d2996c1e013d",
+        "phase": "finalized",
+        "signature": "5eMt4VE4PaTNTya7At4EyXr98RKXBzhJBmC9LXsmKo3EpTt8nHWMdGVeiyrc5XkNJQoht9im7VosvWiUH7b19upB",
+        "lastValidBlockHeight": "200"
+      }
+    }
+  },
+  "nextDayStatus": {
+    "enabled": true,
+    "cluster": "devnet",
+    "isTestToken": true,
+    "label": "Devnet Test SKR — not official SKR",
+    "symbol": "tSKR",
+    "mint": "Bincuik5v411CXzJaptVZu2xsMwQrcfc4D5epovrRa3R",
+    "decimals": 6,
+    "grantSkr": "1000",
+    "grantRaw": "1000000000",
+    "day": "2026-10-07",
+    "nextEligibleAt": "2026-10-08T00:00:00.000Z",
+    "eligible": true,
+    "reason": "ok",
+    "today": null
+  }
+}

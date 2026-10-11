@@ -1,0 +1,420 @@
+{
+  "status": "REVIEW_PROPOSAL_ONLY_NOT_SOURCE_OR_ACCEPTANCE",
+  "names": 46,
+  "aliases": [
+    {
+      "name": "--pk-edge",
+      "legacy_value": "8px",
+      "candidate_value": null,
+      "proposed_normal_value": "8px",
+      "source_or_authority": "space.screenGutter",
+      "status": "proposed_semantic_alias",
+      "note": "Re-emit legacy name; mirror JS duration in the same admitted source change where applicable."
+    },
+    {
+      "name": "--pk-gap",
+      "legacy_value": "8px",
+      "candidate_value": "8px",
+      "proposed_normal_value": "8px",
+      "source_or_authority": "space.sheetGutter",
+      "status": "proposed_semantic_alias",
+      "note": "Re-emit legacy name; mirror JS duration in the same admitted source change where applicable."
+    },
+    {
+      "name": "--pk-tap",
+      "legacy_value": "48px",
+      "candidate_value": null,
+      "proposed_normal_value": "48px",
+      "source_or_authority": "size.minTap",
+      "status": "proposed_semantic_alias",
+      "note": "Re-emit legacy name; mirror JS duration in the same admitted source change where applicable."
+    },
+    {
+      "name": "--pk-medal",
+      "legacy_value": "64px",
+      "candidate_value": null,
+      "proposed_normal_value": "64px",
+      "source_or_authority": null,
+      "status": "proposed_legacy_fallback_no_design_source",
+      "note": "Retain exact legacy compatibility value unless Beacon supplies a semantic counterpart; no rename/removal in P0."
+    },
+    {
+      "name": "--pk-medal-desk",
+      "legacy_value": "72px",
+      "candidate_value": null,
+      "proposed_normal_value": "72px",
+      "source_or_authority": null,
+      "status": "proposed_legacy_fallback_no_design_source",
+      "note": "Retain exact legacy compatibility value unless Beacon supplies a semantic counterpart; no rename/removal in P0."
+    },
+    {
+      "name": "--pk-medal-land",
+      "legacy_value": "56px",
+      "candidate_value": null,
+      "proposed_normal_value": "56px",
+      "source_or_authority": null,
+      "status": "proposed_legacy_fallback_no_design_source",
+      "note": "Retain exact legacy compatibility value unless Beacon supplies a semantic counterpart; no rename/removal in P0."
+    },
+    {
+      "name": "--pk-medal-icon",
+      "legacy_value": "48px",
+      "candidate_value": null,
+      "proposed_normal_value": "48px",
+      "source_or_authority": null,
+      "status": "proposed_legacy_fallback_no_design_source",
+      "note": "Retain exact legacy compatibility value unless Beacon supplies a semantic counterpart; no rename/removal in P0."
+    },
+    {
+      "name": "--pk-cmd-title",
+      "legacy_value": "48px",
+      "candidate_value": null,
+      "proposed_normal_value": "48px",
+      "source_or_authority": null,
+      "status": "proposed_legacy_fallback_no_design_source",
+      "note": "Retain exact legacy compatibility value unless Beacon supplies a semantic counterpart; no rename/removal in P0."
+    },
+    {
+      "name": "--pk-cmd-line",
+      "legacy_value": "20px",
+      "candidate_value": null,
+      "proposed_normal_value": "20px",
+      "source_or_authority": null,
+      "status": "proposed_legacy_fallback_no_design_source",
+      "note": "Retain exact legacy compatibility value unless Beacon supplies a semantic counterpart; no rename/removal in P0."
+    },
+    {
+      "name": "--pk-deck-w",
+      "legacy_value": "64px",
+      "candidate_value": null,
+      "proposed_normal_value": "64px",
+      "source_or_authority": null,
+      "status": "proposed_legacy_fallback_no_design_source",
+      "note": "Retain exact legacy compatibility value unless Beacon supplies a semantic counterpart; no rename/removal in P0."
+    },
+    {
+      "name": "--pk-deck-w-compact",
+      "legacy_value": "56px",
+      "candidate_value": null,
+      "proposed_normal_value": "56px",
+      "source_or_authority": null,
+      "status": "proposed_legacy_fallback_no_design_source",
+      "note": "Retain exact legacy compatibility value unless Beacon supplies a semantic counterpart; no rename/removal in P0."
+    },
+    {
+      "name": "--pk-deck-h",
+      "legacy_value": "56px",
+      "candidate_value": null,
+      "proposed_normal_value": "56px",
+      "source_or_authority": null,
+      "status": "proposed_legacy_fallback_no_design_source",
+      "note": "Retain exact legacy compatibility value unless Beacon supplies a semantic counterpart; no rename/removal in P0."
+    },
+    {
+      "name": "--pk-sheet-peek",
+      "legacy_value": "144px",
+      "candidate_value": null,
+      "proposed_normal_value": "144px",
+      "source_or_authority": null,
+      "status": "proposed_legacy_fallback_no_design_source",
+      "note": "Retain exact legacy compatibility value unless Beacon supplies a semantic counterpart; no rename/removal in P0."
+    },
+    {
+      "name": "--pk-side",
+      "legacy_value": "440px",
+      "candidate_value": null,
+      "proposed_normal_value": "440px",
+      "source_or_authority": null,
+      "status": "proposed_legacy_fallback_no_design_source",
+      "note": "Retain exact legacy compatibility value unless Beacon supplies a semantic counterpart; no rename/removal in P0."
+    },
+    {
+      "name": "--pk-side-wide",
+      "legacy_value": "560px",
+      "candidate_value": null,
+      "proposed_normal_value": "560px",
+      "source_or_authority": null,
+      "status": "proposed_legacy_fallback_no_design_source",
+      "note": "Retain exact legacy compatibility value unless Beacon supplies a semantic counterpart; no rename/removal in P0."
+    },
+    {
+      "name": "--pk-dialog-max",
+      "legacy_value": "520px",
+      "candidate_value": null,
+      "proposed_normal_value": "520px",
+      "source_or_authority": null,
+      "status": "proposed_legacy_fallback_no_design_source",
+      "note": "Retain exact legacy compatibility value unless Beacon supplies a semantic counterpart; no rename/removal in P0."
+    },
+    {
+      "name": "--pk-page-max",
+      "legacy_value": "560px",
+      "candidate_value": null,
+      "proposed_normal_value": "560px",
+      "source_or_authority": null,
+      "status": "proposed_legacy_fallback_no_design_source",
+      "note": "Retain exact legacy compatibility value unless Beacon supplies a semantic counterpart; no rename/removal in P0."
+    },
+    {
+      "name": "--pk-glass-flat",
+      "legacy_value": "rgba(29,26,36,.94)",
+      "candidate_value": "#221D27",
+      "proposed_normal_value": "rgba(29,26,36,.94)",
+      "source_or_authority": null,
+      "status": "directive_bound_legacy_fallback",
+      "note": "d601 section2d explicitly permits unsourced glass; reject candidate veil guess."
+    },
+    {
+      "name": "--pk-page",
+      "legacy_value": "rgba(20,18,26,.94)",
+      "candidate_value": "#100E14",
+      "proposed_normal_value": "#100E14",
+      "source_or_authority": "color.bg.hex",
+      "status": "proposed_semantic_alias",
+      "note": "Re-emit legacy name; mirror JS duration in the same admitted source change where applicable."
+    },
+    {
+      "name": "--pk-seal",
+      "legacy_value": "rgba(29,26,36,.97)",
+      "candidate_value": "#E3AE3C",
+      "proposed_normal_value": "rgba(29,26,36,.97)",
+      "source_or_authority": null,
+      "status": "beacon_body_material_decision_pending",
+      "note": "Retained body fallback proposed; candidate gold belongs to primary button, not whole shell. Beacon binds body/foreground."
+    },
+    {
+      "name": "--pk-scrim-seal",
+      "legacy_value": "linear-gradient(180deg,rgba(16,14,20,.62),rgba(16,14,20,.38))",
+      "candidate_value": "rgba(14,9,20,0.55)",
+      "proposed_normal_value": "rgba(14,9,20,0.55)",
+      "source_or_authority": "color.scrim.seal",
+      "status": "proposed_semantic_alias",
+      "note": "Re-emit legacy name; mirror JS duration in the same admitted source change where applicable."
+    },
+    {
+      "name": "--pk-scrim-menu",
+      "legacy_value": "rgba(16,14,20,.25)",
+      "candidate_value": null,
+      "proposed_normal_value": "rgba(16,14,20,.25)",
+      "source_or_authority": null,
+      "status": "proposed_legacy_fallback_no_design_source",
+      "note": "Retain token compatibility in P0; remove nonmodal legacy scrim uses when consumer is re-hosted in P2."
+    },
+    {
+      "name": "--pk-light-edge",
+      "legacy_value": "linear-gradient(90deg,transparent,var(--hud-acc) 22%,var(--hud-acc-hi) 50%,var(--hud-acc) 78%,transparent)",
+      "candidate_value": null,
+      "proposed_normal_value": "linear-gradient(90deg,transparent,var(--hud-acc) 22%,var(--hud-acc-hi) 50%,var(--hud-acc) 78%,transparent)",
+      "source_or_authority": null,
+      "status": "proposed_legacy_fallback_no_design_source",
+      "note": "Retain exact legacy compatibility value unless Beacon supplies a semantic counterpart; no rename/removal in P0."
+    },
+    {
+      "name": "--pk-aura",
+      "legacy_value": "0 0 48px -10px var(--hud-acc-a)",
+      "candidate_value": null,
+      "proposed_normal_value": "0 0 48px -10px var(--hud-acc-a)",
+      "source_or_authority": null,
+      "status": "proposed_legacy_fallback_no_design_source",
+      "note": "Retain exact legacy compatibility value unless Beacon supplies a semantic counterpart; no rename/removal in P0."
+    },
+    {
+      "name": "--pk-lift",
+      "legacy_value": "0 18px 48px rgba(0,0,0,.55)",
+      "candidate_value": null,
+      "proposed_normal_value": "0 18px 48px rgba(0,0,0,.55)",
+      "source_or_authority": null,
+      "status": "proposed_legacy_fallback_no_design_source",
+      "note": "Retain exact legacy compatibility value unless Beacon supplies a semantic counterpart; no rename/removal in P0."
+    },
+    {
+      "name": "--pk-lift-sm",
+      "legacy_value": "0 6px 18px rgba(0,0,0,.5)",
+      "candidate_value": null,
+      "proposed_normal_value": "0 6px 18px rgba(0,0,0,.5)",
+      "source_or_authority": null,
+      "status": "proposed_legacy_fallback_no_design_source",
+      "note": "Retain exact legacy compatibility value unless Beacon supplies a semantic counterpart; no rename/removal in P0."
+    },
+    {
+      "name": "--pk-step",
+      "legacy_value": "steps(4,end)",
+      "candidate_value": null,
+      "proposed_normal_value": "steps(4,end)",
+      "source_or_authority": null,
+      "status": "proposed_legacy_fallback_no_design_source",
+      "note": "Retain exact legacy compatibility value unless Beacon supplies a semantic counterpart; no rename/removal in P0."
+    },
+    {
+      "name": "--pk-t-press",
+      "legacy_value": "90ms",
+      "candidate_value": null,
+      "proposed_normal_value": "60ms",
+      "source_or_authority": "motion.durationMs.press",
+      "status": "proposed_semantic_alias",
+      "note": "Re-emit legacy name; mirror JS duration in the same admitted source change where applicable."
+    },
+    {
+      "name": "--pk-t-swap",
+      "legacy_value": "80ms",
+      "candidate_value": null,
+      "proposed_normal_value": "80ms",
+      "source_or_authority": null,
+      "status": "proposed_legacy_fallback_no_design_source",
+      "note": "Retain exact legacy compatibility value unless Beacon supplies a semantic counterpart; no rename/removal in P0."
+    },
+    {
+      "name": "--pk-t-disclose",
+      "legacy_value": "120ms",
+      "candidate_value": null,
+      "proposed_normal_value": "160ms",
+      "source_or_authority": "motion.durationMs.toastIn",
+      "status": "proposed_semantic_alias",
+      "note": "Re-emit legacy name; mirror JS duration in the same admitted source change where applicable."
+    },
+    {
+      "name": "--pk-t-pop",
+      "legacy_value": "160ms",
+      "candidate_value": null,
+      "proposed_normal_value": "160ms",
+      "source_or_authority": null,
+      "status": "proposed_legacy_fallback_no_design_source",
+      "note": "Retain exact legacy compatibility value unless Beacon supplies a semantic counterpart; no rename/removal in P0."
+    },
+    {
+      "name": "--pk-stagger",
+      "legacy_value": "30ms",
+      "candidate_value": "30ms",
+      "proposed_normal_value": "30ms",
+      "source_or_authority": "motion.durationMs.commandStagger",
+      "status": "proposed_semantic_alias",
+      "note": "Re-emit legacy name; mirror JS duration in the same admitted source change where applicable."
+    },
+    {
+      "name": "--pk-stagger-section",
+      "legacy_value": "50ms",
+      "candidate_value": null,
+      "proposed_normal_value": "50ms",
+      "source_or_authority": null,
+      "status": "proposed_legacy_fallback_no_design_source",
+      "note": "Retain exact legacy compatibility value unless Beacon supplies a semantic counterpart; no rename/removal in P0."
+    },
+    {
+      "name": "--pk-t-sheet",
+      "legacy_value": "240ms",
+      "candidate_value": "220ms",
+      "proposed_normal_value": "220ms",
+      "source_or_authority": "motion.durationMs.sheetIn",
+      "status": "proposed_semantic_alias",
+      "note": "Re-emit legacy name; mirror JS duration in the same admitted source change where applicable."
+    },
+    {
+      "name": "--pk-t-snap",
+      "legacy_value": "200ms",
+      "candidate_value": "220ms",
+      "proposed_normal_value": "120ms",
+      "source_or_authority": "motion.durationMs.snapHint; explicit d601 section2a",
+      "status": "directive_bound_alias",
+      "note": "Re-emit legacy name; mirror JS duration in the same admitted source change where applicable."
+    },
+    {
+      "name": "--pk-t-close",
+      "legacy_value": "160ms",
+      "candidate_value": null,
+      "proposed_normal_value": "160ms",
+      "source_or_authority": "motion.durationMs.sheetOut",
+      "status": "proposed_semantic_alias",
+      "note": "Re-emit legacy name; mirror JS duration in the same admitted source change where applicable."
+    },
+    {
+      "name": "--pk-t-seal",
+      "legacy_value": "180ms",
+      "candidate_value": "160ms",
+      "proposed_normal_value": "180ms",
+      "source_or_authority": "explicit user instruction; entrance only, not sealArm",
+      "status": "explicit_user_entrance_exception",
+      "note": "Normal visual entrance180ms; reduced visual crossfade120ms is separate; security arming remains450ms."
+    },
+    {
+      "name": "--pk-t-fly",
+      "legacy_value": "480ms",
+      "candidate_value": null,
+      "proposed_normal_value": "450ms",
+      "source_or_authority": "motion.durationMs.coinFly",
+      "status": "proposed_semantic_alias",
+      "note": "Re-emit legacy name; mirror JS duration in the same admitted source change where applicable."
+    },
+    {
+      "name": "--pk-t-glint",
+      "legacy_value": "320ms",
+      "candidate_value": null,
+      "proposed_normal_value": "320ms",
+      "source_or_authority": null,
+      "status": "proposed_legacy_fallback_no_design_source",
+      "note": "Retain exact legacy compatibility value unless Beacon supplies a semantic counterpart; no rename/removal in P0."
+    },
+    {
+      "name": "--pk-beat",
+      "legacy_value": "2400ms",
+      "candidate_value": "120ms",
+      "proposed_normal_value": "2400ms",
+      "source_or_authority": null,
+      "status": "proposed_legacy_fallback_no_design_source",
+      "note": "Normal timing has no established counterpart; reject reduced crossfade120ms as normal beat source."
+    },
+    {
+      "name": "--pk-t-celebrate",
+      "legacy_value": "1600ms",
+      "candidate_value": null,
+      "proposed_normal_value": "900ms",
+      "source_or_authority": "motion.durationMs.celebrate",
+      "status": "proposed_semantic_alias",
+      "note": "Re-emit legacy name; mirror JS duration in the same admitted source change where applicable."
+    },
+    {
+      "name": "--pk-t-ribbon",
+      "legacy_value": "2400ms",
+      "candidate_value": null,
+      "proposed_normal_value": "2400ms",
+      "source_or_authority": null,
+      "status": "proposed_legacy_fallback_no_design_source",
+      "note": "Retain exact legacy compatibility value unless Beacon supplies a semantic counterpart; no rename/removal in P0."
+    },
+    {
+      "name": "--pk-t-toast",
+      "legacy_value": "4000ms",
+      "candidate_value": "160ms",
+      "proposed_normal_value": "4000ms",
+      "source_or_authority": "motion.durationMs.toastHold; ToastQueue dismissal",
+      "status": "proposed_semantic_alias",
+      "note": "Re-emit legacy name; mirror JS duration in the same admitted source change where applicable."
+    },
+    {
+      "name": "--pk-rise-quick",
+      "legacy_value": "280ms",
+      "candidate_value": null,
+      "proposed_normal_value": "280ms",
+      "source_or_authority": null,
+      "status": "proposed_legacy_fallback_no_design_source",
+      "note": "Retain exact legacy compatibility value unless Beacon supplies a semantic counterpart; no rename/removal in P0."
+    },
+    {
+      "name": "--pk-stagger-quick",
+      "legacy_value": "24ms",
+      "candidate_value": null,
+      "proposed_normal_value": "24ms",
+      "source_or_authority": null,
+      "status": "proposed_legacy_fallback_no_design_source",
+      "note": "Retain exact legacy compatibility value unless Beacon supplies a semantic counterpart; no rename/removal in P0."
+    },
+    {
+      "name": "--pk-phase",
+      "legacy_value": "0",
+      "candidate_value": null,
+      "proposed_normal_value": "0",
+      "source_or_authority": null,
+      "status": "proposed_legacy_fallback_no_design_source",
+      "note": "Retain exact legacy compatibility value unless Beacon supplies a semantic counterpart; no rename/removal in P0."
+    }
+  ]
+}

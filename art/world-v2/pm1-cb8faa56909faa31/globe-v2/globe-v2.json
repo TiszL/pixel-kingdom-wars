@@ -1,0 +1,363 @@
+{
+ "schema": 1,
+ "kind": "shardkeep-globe-v2-pack",
+ "builder": "concepts/globe3d-2026-09-23/art-prep/globe-v2/build.mjs",
+ "builderCommit": "785a8079790a79af6c2693ec8af07fe21d4dce56",
+ "builderDirty": false,
+ "tools": {
+  "sharp": "0.35.1",
+  "libvips": "8.18.3",
+  "libwebp": "1.6.0"
+ },
+ "decisions": {
+  "phaseE": "Seeker, Solana and Divine are not in any core file (RG-3); their selection fields live in phase-e/ only, for the flag-gated globe-v2-phase-e group.",
+  "islets": "The 32 exploration islet slots are plain sea under ExplorationIslandLayer (reasons: art-prep/globe-v2/LANE-NB.md)."
+ },
+ "formats": {
+  "albedo": "face-{f}.png lossless RGB 1024² (test and QA master), a1024-{f}.webp q90, a256-{f}.webp (lanczos3) q90; GL cube-face order +X −X +Y −Y +Z −Z, row 0 = t = −1",
+  "ssg": "ssg512-{f}.png RGB8 → texture RG8 (B unused). R = round(255·clamp(0.5 − h/(2·0.0016), 0, 1)): sea ⇔ R > 127; shore = 1 − smoothstep(0.5, 1, R/255) = smoothstep(−0.0016, 0, h). G = glow (BAKE_HINT_FS alpha): the prototype export where nothing was removed, the bit-exact CPU port over the island-free albedo where it was.",
+  "sel": "sel-*.png RGB8 → texture RG16F. R channel half bits = (R << 8) | G: signed outline distance, geography px of arc (0.46875°), + inside, clamped ±25.9. G channel = B / 128: |∇distance| (geography px per geography px of arc; SEL_GLSL selFw rate = G·(|dFdx d| + |dFdy d|)·0.635/h for an isotropic pixel)."
+ },
+ "inputs": {
+  "src/geo.js": "64ad9fadde34213d57a131a5d5d127730b6825a87cb6230182f63d7d40f9746a",
+  "src/main.js": "7e2ab091aae288932a5bb4a05f239b2c2800142aff3b1fd3d48212b4d7bdcfc6",
+  "art-prep/composite.mjs": "0f3a94b73ae489eec7774bbdd963ed0aedda90f289faf3d3bf3284345b2c27a9",
+  "apps/web/src/ui/fantasy/runtime/geography/frozen-runs.mjs": "368a15bd09b3aef9cedbe98ee8ee9a106a1de583f8da894281fe98c43454db57",
+  "pack/seeker-island.webp": "66de932f0cd3e634823b69aa0dfcf82ea5d5fa2aac8e704341711ae4879a9d99",
+  "pack/solana-island.webp": "c3eaa948d8c219b02036c0e62706a5e2ab417fd137107b485a0d02815086fddf",
+  "pack/divine-isle.webp": "91945dfd20b3c13f84bd9b65a155d1915e9f512e580ddc8925eefdc31da470ec",
+  "pack/face-0.png": "a9f1931b25138fd90bd461413b9e48261b4d038e78178d139d75f435a68820d3",
+  "pack/face-1.png": "092ddcd2c4ac666bb1c7aa1e2de39583b56c9a7aac83fe0ea458ff6aea4b85a6",
+  "pack/face-2.png": "a6d40403ceac9abd37f3b5345d64580ce06471e87b48dea9075d982decca38a0",
+  "pack/face-3.png": "324bf49b6210faa73f1361f31a383c6e264a7d54ce7a9169a384fce461385def",
+  "pack/face-4.png": "d5696dfad6270f4c38b5530d66b6dae644dc6cce02e3382f780c49a2c098d0e6",
+  "pack/face-5.png": "a443e548b1d450a5556bb1df2679ee398b90f6900b66982a359714868f3fcbb8",
+  "pack/baked/h512-0.webp": "a1d8e0fb190ffdba532c893e16207edd504ed3f5a71c1bf5246b4afdc6e8a9e3",
+  "pack/baked/h512-1.webp": "6fed32d61c2961fbba12164171af2fd98cbbe3d59fc116ee87e8d1ac382aebaa",
+  "pack/baked/h512-2.webp": "679d4bde043385af850b83948ebffb6682c09dbe05529de67f4d4506fd485ad1",
+  "pack/baked/h512-3.webp": "ab724a90d0bb4b40b865c9897ffdf2ec341b57ac56b5a7782528b28331e5d0c1",
+  "pack/baked/h512-4.webp": "729cd44b14db882a11c43e7569bab8429f95114f68f316502cdacfdf75b966b7",
+  "pack/baked/h512-5.webp": "1108f915a44dde6badebb7b201e2eda62d271ca0453f5168bc333a4a2832834e"
+ },
+ "outputs": {
+  "a1024-0.webp": {
+   "sha256": "7467b8df4c99078b6f47dd2e7acf277762c34cf7ef62906f873a4a051b3421fd",
+   "bytes": 278076
+  },
+  "a1024-1.webp": {
+   "sha256": "209c29c3b7fc32442c79e89e8071dc3e42cc582f4d1c2840b88d588271900159",
+   "bytes": 359198
+  },
+  "a1024-2.webp": {
+   "sha256": "9742bd58bc68d00b5262c1ca9b072c4bea473cf0a315d601f7eae80a1b22c6cb",
+   "bytes": 317012
+  },
+  "a1024-3.webp": {
+   "sha256": "5ab64cf98a00b009dc32110ea0d147a9d01a3476be666fa7a39dd317fce8d2d7",
+   "bytes": 166520
+  },
+  "a1024-4.webp": {
+   "sha256": "ae515bee270407170f035f7d6ce159f807cae923f4d0044615108b8099d8c13c",
+   "bytes": 448442
+  },
+  "a1024-5.webp": {
+   "sha256": "54fccc0c105bf32308a6ff151bb05fa3f376a6443b8072cafbf9df270d31b88c",
+   "bytes": 340810
+  },
+  "a256-0.webp": {
+   "sha256": "31216dc134e2ffba132074812547c0e030d5f1620a004b9a7125e1e30b2a5685",
+   "bytes": 19114
+  },
+  "a256-1.webp": {
+   "sha256": "d7bd6d263b73ea3844100c25f241e3c3480564f740dedd3562d0ec3023c33a9c",
+   "bytes": 23510
+  },
+  "a256-2.webp": {
+   "sha256": "49be99d9668a24c1cfb5bab5a3b72f28d166b1c8bc56e9393bed4104a9a0c81c",
+   "bytes": 21960
+  },
+  "a256-3.webp": {
+   "sha256": "0beeaaf47179124e72173655352e64814098dc4cc9c56f86693a9390e79d576f",
+   "bytes": 12260
+  },
+  "a256-4.webp": {
+   "sha256": "0c22bc8766052e93e8f46c984b21fb7382396c16e120bb012e4691e3b02ed157",
+   "bytes": 31342
+  },
+  "a256-5.webp": {
+   "sha256": "f02a81e269286421dffe3a81f885ac65697f7c1bac7721a78bc61d48a11abc4b",
+   "bytes": 21690
+  },
+  "face-0.png": {
+   "sha256": "1f5243b783780efba4d82a1e72b9151cb76b6dd8263cdce767f29e3b9060a7b2",
+   "bytes": 1483208
+  },
+  "face-1.png": {
+   "sha256": "3f1a40e9351531d9be7cd024262e4271c1eaaa71360d16ad75d1d2e77fa68f8c",
+   "bytes": 1769521
+  },
+  "face-2.png": {
+   "sha256": "ca4a29153f8dff24f4ed8ae3282f4122a2c69ae0d248ff2e4b6689274da8b879",
+   "bytes": 1558548
+  },
+  "face-3.png": {
+   "sha256": "e01d419abb579f4b94389c3f96cbb60205a51be3f6e62b0b06869994a5df9f62",
+   "bytes": 901495
+  },
+  "face-4.png": {
+   "sha256": "d5696dfad6270f4c38b5530d66b6dae644dc6cce02e3382f780c49a2c098d0e6",
+   "bytes": 2305014
+  },
+  "face-5.png": {
+   "sha256": "7b397d30bffd88219f983093c871decc34f74eb7b2e41b8466ba14f9242d302b",
+   "bytes": 1716389
+  },
+  "phase-e/sel-divine-isle.png": {
+   "sha256": "f6e67680e12d8b5219abb67f49bfc4c61e2228308b7845a586b0a9562642a508",
+   "bytes": 409196
+  },
+  "phase-e/sel-seeker-island.png": {
+   "sha256": "d52c1ec5300c5a2ba4240995edeffad8ecd2a1da40d9fdb8dd0a03af77715372",
+   "bytes": 651322
+  },
+  "phase-e/sel-solana-island.png": {
+   "sha256": "13bcfad752ffcbdc976bc80dbf67e12f209a984dc4e61cc98e241ea9920d43c6",
+   "bytes": 346280
+  },
+  "sel-cinderfall.png": {
+   "sha256": "765445d91d3441e4bc3a73fc31d3d448527b9fe3d03d3eec227c0270d5813dfa",
+   "bytes": 48380
+  },
+  "sel-crownlands.png": {
+   "sha256": "695db79cc67b537465235d1ddddb9454682b17aaaa676a8178a51c446daa8e78",
+   "bytes": 76544
+  },
+  "sel-elderwood.png": {
+   "sha256": "cdb00d8389f991342af80dc4f98aae664b4c7c4040fb9b841bbd4e5abe98ff45",
+   "bytes": 79808
+  },
+  "sel-frostveil.png": {
+   "sha256": "04b11afb178eac8b5e213e95c7733e4d97d266acf2a26bb20f0163351ace51e1",
+   "bytes": 131102
+  },
+  "sel-seeker-reach.png": {
+   "sha256": "65c5fcf630ce70dc7b6f11aacd88056ed55f79500d521fb00aa7001ae63038da",
+   "bytes": 51098
+  },
+  "sel-stormcairn.png": {
+   "sha256": "22d3152d05216692538eba6999cf0c68daa51b3513bc58f064afc009bb6490b1",
+   "bytes": 91845
+  },
+  "sel-sunscar.png": {
+   "sha256": "b177e89f05101ce2f01ee3d7f1c6cd539f87e8c63b97bebb5421d816236d5248",
+   "bytes": 85531
+  },
+  "sel-thornwake.png": {
+   "sha256": "283791178a0403a928ef06cf0dab95920497ad1c222fb64a444bc8c3fdd0cf93",
+   "bytes": 51579
+  },
+  "ssg512-0.png": {
+   "sha256": "f4948593f9f45dc860df594b22da3f202444b5236837c762d67c50de95efbe42",
+   "bytes": 118661
+  },
+  "ssg512-1.png": {
+   "sha256": "a5c0f45064c77930b15f8422514a64d10513ae87b7a992a77442df7af995cca6",
+   "bytes": 82298
+  },
+  "ssg512-2.png": {
+   "sha256": "70c4656d1c225cfb0fff26eccfbb23d79e6a33370e1fd93600a2d757ec477d51",
+   "bytes": 83513
+  },
+  "ssg512-3.png": {
+   "sha256": "1efd30fd1c5f691e60bb26bed3605095825362453444d3ea9126dc0062e3d6a9",
+   "bytes": 84525
+  },
+  "ssg512-4.png": {
+   "sha256": "ad28b9edff06f0342cb182d6671d32b310a38e4d5123cf4692e26e85e50c72ad",
+   "bytes": 150206
+  },
+  "ssg512-5.png": {
+   "sha256": "3769aa57cbb78ff704f60c670ab567b21d2f4766431e05f8bb0dca957711f275",
+   "bytes": 51438
+  }
+ },
+ "selection": {
+  "realms": [
+   {
+    "id": "frostveil",
+    "file": "sel-frostveil.png",
+    "w": 768,
+    "h": 384,
+    "sampling": "geoUV(d), wrap S repeat, T clamp, LINEAR"
+   },
+   {
+    "id": "elderwood",
+    "file": "sel-elderwood.png",
+    "w": 768,
+    "h": 384,
+    "sampling": "geoUV(d), wrap S repeat, T clamp, LINEAR"
+   },
+   {
+    "id": "sunscar",
+    "file": "sel-sunscar.png",
+    "w": 768,
+    "h": 384,
+    "sampling": "geoUV(d), wrap S repeat, T clamp, LINEAR"
+   },
+   {
+    "id": "crownlands",
+    "file": "sel-crownlands.png",
+    "w": 768,
+    "h": 384,
+    "sampling": "geoUV(d), wrap S repeat, T clamp, LINEAR"
+   },
+   {
+    "id": "seeker-reach",
+    "file": "sel-seeker-reach.png",
+    "w": 768,
+    "h": 384,
+    "sampling": "geoUV(d), wrap S repeat, T clamp, LINEAR"
+   },
+   {
+    "id": "stormcairn",
+    "file": "sel-stormcairn.png",
+    "w": 768,
+    "h": 384,
+    "sampling": "geoUV(d), wrap S repeat, T clamp, LINEAR"
+   },
+   {
+    "id": "thornwake",
+    "file": "sel-thornwake.png",
+    "w": 768,
+    "h": 384,
+    "sampling": "geoUV(d), wrap S repeat, T clamp, LINEAR"
+   },
+   {
+    "id": "cinderfall",
+    "file": "sel-cinderfall.png",
+    "w": 768,
+    "h": 384,
+    "sampling": "geoUV(d), wrap S repeat, T clamp, LINEAR"
+   }
+  ],
+  "phaseE": [
+   {
+    "id": "seeker-island",
+    "file": "phase-e/sel-seeker-island.png",
+    "w": 467,
+    "h": 583,
+    "lon": -83.25,
+    "lat": 32.25,
+    "hu": 0.16301375213627037,
+    "hv": 0.20350539078253882,
+    "resDeg": 0.04,
+    "marginDeg": 3,
+    "sampling": "per-axis angles a = (atan(d·E, d·C), atan(d·N, d·C)) with E = normalize(cross(Y, C)), N = cross(C, E); uv = (.5 + .5·a.x/hu, .5 − .5·a.y/hv); CLAMP_TO_EDGE, LINEAR"
+   },
+   {
+    "id": "solana-island",
+    "file": "phase-e/sel-solana-island.png",
+    "w": 384,
+    "h": 384,
+    "lon": -141,
+    "lat": 38.25,
+    "hu": 0.1340412865531645,
+    "hv": 0.1340412865531645,
+    "resDeg": 0.04,
+    "marginDeg": 3,
+    "sampling": "per-axis angles a = (atan(d·E, d·C), atan(d·N, d·C)) with E = normalize(cross(Y, C)), N = cross(C, E); uv = (.5 + .5·a.x/hu, .5 − .5·a.y/hv); CLAMP_TO_EDGE, LINEAR"
+   },
+   {
+    "id": "divine-isle",
+    "file": "phase-e/sel-divine-isle.png",
+    "w": 475,
+    "h": 378,
+    "lon": 94,
+    "lat": 4,
+    "hu": 0.16580627893946132,
+    "hv": 0.13194689145077132,
+    "resDeg": 0.04,
+    "marginDeg": 3,
+    "sampling": "per-axis angles a = (atan(d·E, d·C), atan(d·N, d·C)) with E = normalize(cross(Y, C)), N = cross(C, E); uv = (.5 + .5·a.x/hu, .5 − .5·a.y/hv); CLAMP_TO_EDGE, LINEAR"
+   }
+  ]
+ },
+ "stats": {
+  "faces": [
+   {
+    "face": 0,
+    "deepTexels": 11637,
+    "deepChanged": 8276,
+    "fillTexels": 0,
+    "changedTexels": 8276
+   },
+   {
+    "face": 1,
+    "deepTexels": 90525,
+    "deepChanged": 34673,
+    "fillTexels": 990,
+    "changedTexels": 35637
+   },
+   {
+    "face": 2,
+    "deepTexels": 37782,
+    "deepChanged": 16035,
+    "fillTexels": 228,
+    "changedTexels": 16220
+   },
+   {
+    "face": 3,
+    "deepTexels": 48087,
+    "deepChanged": 11426,
+    "fillTexels": 0,
+    "changedTexels": 11426
+   },
+   {
+    "face": 4,
+    "deepTexels": 0,
+    "deepChanged": 0,
+    "fillTexels": 0,
+    "changedTexels": 0
+   },
+   {
+    "face": 5,
+    "deepTexels": 16272,
+    "deepChanged": 9242,
+    "fillTexels": 18,
+    "changedTexels": 9254
+   }
+  ],
+  "ssg": [
+   {
+    "face": 0,
+    "removedTexels": 3078,
+    "removedLandTexels": 1594
+   },
+   {
+    "face": 1,
+    "removedTexels": 23824,
+    "removedLandTexels": 4257
+   },
+   {
+    "face": 2,
+    "removedTexels": 9912,
+    "removedLandTexels": 1946
+   },
+   {
+    "face": 3,
+    "removedTexels": 12478,
+    "removedLandTexels": 906
+   },
+   {
+    "face": 4,
+    "removedTexels": 0,
+    "removedLandTexels": 0
+   },
+   {
+    "face": 5,
+    "removedTexels": 4329,
+    "removedLandTexels": 1269
+   }
+  ]
+ }
+}

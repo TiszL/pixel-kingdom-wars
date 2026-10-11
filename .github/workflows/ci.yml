@@ -1,0 +1,279 @@
+# CI for Pixel Kingdom Wars.
+#
+# ARCHITECTURE.md has carried "no CI script exists yet" as a known gap since the
+# scaffold. This is that gap. It runs what a human would run before pushing, on
+# every push and PR, so a broken main is noticed in minutes rather than at deploy.
+#
+# The api suite needs real Postgres and Redis — it exercises transactions,
+# advisory locks and the double-entry ledger, and mocking those would test the
+# mocks. Services here mirror infra/docker-compose.yml, on the same ports, so the
+# same DATABASE_URL works locally and in CI.
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+concurrency:
+  # A newer push to the same branch makes the older run irrelevant. Cancel it —
+  # except on main, where every commit's result is worth keeping.
+  group: ci-${{ github.ref }}
+  cancel-in-progress: ${{ github.ref != 'refs/heads/main' }}
+
+env:
+  NODE_VERSION: '22'
+  PNPM_VERSION: '10.19.0'
+
+jobs:
+  verify:
+    name: typecheck · lint · test
+    runs-on: ubuntu-latest
+    # API tests have separate isolated shards below; every other check stays here.
+    # Without them this job measured 26.5-45.5 min on PR #165 (runs 38050662691,
+    # 38069074990, 38077589981; the spread is runner speed), so main's 60-minute
+    # limit holds.
+    timeout-minutes: 60
+
+    services:
+      postgres:
+        image: postgres:16-alpine
+        env:
+          POSTGRES_USER: shardkeep
+          POSTGRES_PASSWORD: shardkeep
+          POSTGRES_DB: shardkeep_test
+        ports: ['5433:5432']
+        # Without a health check the suite races the server's first accept() and
+        # fails roughly one run in five with a connection error that looks like a
+        # real bug.
+        options: >-
+          --health-cmd "pg_isready -U shardkeep"
+          --health-interval 5s
+          --health-timeout 5s
+          --health-retries 10
+
+      redis:
+        image: redis:7-alpine
+        ports: ['6380:6379']
+        options: >-
+          --health-cmd "redis-cli ping"
+          --health-interval 5s
+          --health-timeout 5s
+          --health-retries 10
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          # Full history: the SIM_VERSION check below compares this commit's sim
+          # behaviour against the merge base, which a shallow clone cannot see.
+          fetch-depth: 0
+
+      - uses: pnpm/action-setup@v4
+        with:
+          version: ${{ env.PNPM_VERSION }}
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: pnpm
+
+      - run: pnpm install --frozen-lockfile
+
+      # M47 §5: every deploy publishes release-notes/ fragments to the public
+      # changelog with no human in between, so the wording lint is the editor.
+      - name: release notes
+        run: pnpm --filter @shardkeep/scripts run --silent release-notes:lint
+
+      # The api and web typechecks ran out of the default heap on the hosted
+      # runner (run 37234370126). One package at a time keeps two 6 GB heaps
+      # from sharing one runner.
+      - name: typecheck
+        env:
+          NODE_OPTIONS: --max-old-space-size=6144
+        run: pnpm -r --workspace-concurrency=1 typecheck
+
+      - name: lint
+        run: pnpm -r lint
+
+      - name: migrate test database
+        working-directory: apps/api
+        env:
+          DATABASE_URL: postgres://shardkeep:shardkeep@localhost:5433/shardkeep_test
+        run: pnpm db:migrate
+
+      # Generated atlases are intentionally gitignored, while web tests fail
+      # loudly if their frame metadata is absent. Recreate the same deterministic
+      # asset contract a clean developer checkout uses before running tests.
+      - name: build generated assets (web tests read atlas meta)
+        run: pnpm assets
+
+      - name: test
+        env:
+          DATABASE_URL: postgres://shardkeep:shardkeep@localhost:5433/shardkeep_test
+          REDIS_URL: redis://localhost:6380
+        # Run the CPU-bound maximum-army replay before other workspace suites.
+        # All existing test assertions and per-test deadlines remain unchanged.
+        # The API suite runs in the api-tests shards below.
+        run: |
+          pnpm --filter @shardkeep/sim test --maxWorkers=1
+          pnpm -r --filter '!@shardkeep/sim' --filter '!@shardkeep/api' test
+
+      - name: build
+        env:
+          APP_VERSION: ci-${{ github.sha }}
+          GIT_SHA: ${{ github.sha }}
+          VITE_SOLANA_RPC_URL: https://play.pixelkingdomwars.com/api/rpc/solana/devnet
+          NODE_OPTIONS: --max-old-space-size=6144
+        run: pnpm -r --workspace-concurrency=1 build
+
+  # C7: separate hosted jobs provide separate service containers.
+  # Within each shard, the Vitest config serializes files because they share
+  # mutable database/Redis state. The job passes no test filter or timeout flag.
+  #
+  # 2026-10-10 (release/r2-j-ci-shard-harness): vitest's default --shard cut
+  # the files into equal COUNTS by path hash, so one run's shards took 32-115
+  # min and shard 5 was cancelled at the old 120-minute limit after 42 of 53
+  # files (CI run 38043546234). apps/api/vitest.config.ts now packs files by
+  # their measured CI duration (apps/api/test/ciShards.ts): ~69 min planned
+  # per shard instead of a 115-min tail, so the run gets shorter, not longer.
+  # The limit is 150 (since 2026-10-11 verify is back at 60, so this job bounds
+  # the run): the same file measured up to 1.7x slower on one hosted runner
+  # than on another (runs 38043546234 vs 38050662691), and 120 left a slow
+  # runner no margin.
+  api-tests:
+    name: API shard ${{ matrix.shard }}/16
+    runs-on: ubuntu-latest
+    timeout-minutes: 150
+    strategy:
+      fail-fast: false
+      matrix:
+        shard: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+    services:
+      postgres:
+        image: postgres:16-alpine
+        env:
+          POSTGRES_USER: shardkeep
+          POSTGRES_PASSWORD: shardkeep
+          POSTGRES_DB: shardkeep_test
+        ports: ['5433:5432']
+        # Without a health check the suite races the server's first accept() and
+        # fails roughly one run in five with a connection error that looks like a
+        # real bug.
+        options: >-
+          --health-cmd "pg_isready -U shardkeep"
+          --health-interval 5s
+          --health-timeout 5s
+          --health-retries 10
+
+      redis:
+        image: redis:7-alpine
+        ports: ['6380:6379']
+        options: >-
+          --health-cmd "redis-cli ping"
+          --health-interval 5s
+          --health-timeout 5s
+          --health-retries 10
+
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+        with:
+          version: ${{ env.PNPM_VERSION }}
+      - uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+      # 2026-10-10 (CI cluster F): 70864178a moved the API suite into these shard
+      # jobs but left `pnpm assets` behind in verify. Generated atlases are
+      # gitignored, so the eight API files that render bases, walls and deed PNGs
+      # (base-visual, baseRender, base-render-fleet, layered-ground-render,
+      # wall-render-integration, deed-direct-fleet-png, deed-fleet-cache, ...)
+      # failed here with ENOENT atlas/meta.json while passing on any checkout
+      # that has run the pipeline. Rebuild the same deterministic asset contract
+      # verify uses before any shard reads it.
+      - name: build generated assets (API render tests read atlas)
+        run: pnpm assets
+      - name: Run API shard
+        env:
+          DATABASE_URL: postgres://shardkeep:shardkeep@localhost:5433/shardkeep_test
+          TEST_DATABASE_URL: postgres://shardkeep:shardkeep@localhost:5433/shardkeep_test
+          TEST_ADMIN_DATABASE_URL: postgres://shardkeep:shardkeep@localhost:5433/postgres
+          REDIS_URL: redis://localhost:6380
+        run: |
+          mkdir -p apps/api/.reports
+          set -o pipefail
+          pnpm --filter @shardkeep/api test --shard=${{ matrix.shard }}/16 --reporter=default --reporter=json --outputFile=.reports/api-shard-${{ matrix.shard }}.json 2>&1 | tee apps/api/.reports/api-shard-${{ matrix.shard }}.log
+      - name: Preserve API shard results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: api-shard-${{ matrix.shard }}
+          path: apps/api/.reports/
+          if-no-files-found: warn
+
+  ci-result:
+    name: All CI checks
+    if: ${{ always() }}
+    needs: [verify, api-tests, replay-protocol]
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - name: Require every mandatory job to succeed
+        env:
+          VERIFY_RESULT: ${{ needs.verify.result }}
+          API_RESULT: ${{ needs.api-tests.result }}
+          REPLAY_RESULT: ${{ needs.replay-protocol.result }}
+          CI_EVENT: ${{ github.event_name }}
+        run: bash scripts/check-ci-results.sh "$VERIFY_RESULT" "$API_RESULT" "$REPLAY_RESULT" "$CI_EVENT"
+
+  replay-protocol:
+    name: SIM_VERSION moved if sim behaviour did
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    # PRs only: on main the comparison has no meaningful "before" to diff against,
+    # and the in-repo fingerprint test already guards the same invariant there.
+    if: github.event_name == 'pull_request'
+
+    steps:
+      - uses: actions/checkout@v4
+        with: { fetch-depth: 0 }
+
+      - uses: pnpm/action-setup@v4
+        with:
+          version: ${{ env.PNPM_VERSION }}
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: pnpm
+
+      - run: pnpm install --frozen-lockfile
+
+      # The in-repo test (packages/sim/tests/sim-version.test.ts) already fails
+      # when behaviour moves without the version. This adds the one thing a test
+      # inside the commit cannot see: whether the fingerprint was edited in the
+      # SAME commit that changed the sim, or quietly re-pinned on its own.
+      - name: compare against the base branch
+        run: |
+          base="origin/${{ github.base_ref }}"
+          sim_changed=$(git diff --name-only "$base"...HEAD -- packages/sim/src packages/shared/src/constants.ts | wc -l)
+          version_changed=$(git diff --name-only "$base"...HEAD -- packages/sim/src/version.ts | wc -l)
+          fixtures_changed=$(git diff --name-only "$base"...HEAD -- packages/sim/tests/fixtures | wc -l)
+
+          if [ "$fixtures_changed" -gt 0 ] && [ "$version_changed" -eq 0 ]; then
+            echo "::error::Golden fixtures changed but packages/sim/src/version.ts did not."
+            echo "Regenerated fixtures mean simulator BEHAVIOUR changed. Bump SIM_VERSION,"
+            echo "add a line to its History block, and re-pin the fingerprint in"
+            echo "packages/sim/tests/sim-version.test.ts — see docs/CONTRIBUTING.md §3."
+            exit 1
+          fi
+
+          echo "sim sources touched: $sim_changed file(s)"
+          echo "fixtures touched:    $fixtures_changed file(s)"
+          echo "version.ts touched:  $version_changed file(s)"
+
+      - name: fingerprint gate
+        run: pnpm --filter @shardkeep/sim test sim-version

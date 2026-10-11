@@ -1,0 +1,979 @@
+{
+  "version": "7",
+  "dialect": "postgresql",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "7",
+      "when": 1781283360915,
+      "tag": "0000_heavy_the_santerians",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "7",
+      "when": 1781288277647,
+      "tag": "0001_obstacles_tombstone",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "7",
+      "when": 1781288428831,
+      "tag": "0002_emission_activity",
+      "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "7",
+      "when": 1781288652104,
+      "tag": "0003_training_queue",
+      "breakpoints": true
+    },
+    {
+      "idx": 4,
+      "version": "7",
+      "when": 1781292316753,
+      "tag": "0004_escrow_entrypaid",
+      "breakpoints": true
+    },
+    {
+      "idx": 5,
+      "version": "7",
+      "when": 1781292772301,
+      "tag": "0005_merkle_snapshots",
+      "breakpoints": true
+    },
+    {
+      "idx": 6,
+      "version": "7",
+      "when": 1784377011277,
+      "tag": "0006_typical_sersi",
+      "breakpoints": true
+    },
+    {
+      "idx": 7,
+      "version": "7",
+      "when": 1784378542826,
+      "tag": "0007_raid_resolving_status",
+      "breakpoints": true
+    },
+    {
+      "idx": 8,
+      "version": "7",
+      "when": 1784382621604,
+      "tag": "0008_league_sol_pool",
+      "breakpoints": true
+    },
+    {
+      "idx": 9,
+      "version": "7",
+      "when": 1784445433872,
+      "tag": "0009_dark_banshee",
+      "breakpoints": true
+    },
+    {
+      "idx": 10,
+      "version": "7",
+      "when": 1784447424421,
+      "tag": "0010_funny_komodo",
+      "breakpoints": true
+    },
+    {
+      "idx": 11,
+      "version": "7",
+      "when": 1784452250495,
+      "tag": "0011_condemned_zaran",
+      "breakpoints": true
+    },
+    {
+      "idx": 12,
+      "version": "7",
+      "when": 1784455325029,
+      "tag": "0012_skinny_susan_delgado",
+      "breakpoints": true
+    },
+    {
+      "idx": 13,
+      "version": "7",
+      "when": 1784459939022,
+      "tag": "0013_overrated_solo",
+      "breakpoints": true
+    },
+    {
+      "idx": 14,
+      "version": "7",
+      "when": 1784462345597,
+      "tag": "0014_stiff_molten_man",
+      "breakpoints": true
+    },
+    {
+      "idx": 15,
+      "version": "7",
+      "when": 1784467274209,
+      "tag": "0015_naive_moonstone",
+      "breakpoints": true
+    },
+    {
+      "idx": 16,
+      "version": "7",
+      "when": 1784471201342,
+      "tag": "0016_goofy_living_lightning",
+      "breakpoints": true
+    },
+    {
+      "idx": 17,
+      "version": "7",
+      "when": 1784494977879,
+      "tag": "0017_silky_carmella_unuscione",
+      "breakpoints": true
+    },
+    {
+      "idx": 18,
+      "version": "7",
+      "when": 1784560000000,
+      "tag": "0018_recenter_bases",
+      "breakpoints": true
+    },
+    {
+      "idx": 19,
+      "version": "7",
+      "when": 1784560000001,
+      "tag": "0019_orange_marten_broadcloak",
+      "breakpoints": true
+    },
+    {
+      "idx": 20,
+      "version": "7",
+      "when": 1784560000002,
+      "tag": "0020_yielding_champions",
+      "breakpoints": true
+    },
+    {
+      "idx": 21,
+      "version": "7",
+      "when": 1784560000003,
+      "tag": "0021_overjoyed_starfox",
+      "breakpoints": true
+    },
+    {
+      "idx": 22,
+      "version": "7",
+      "when": 1784560000004,
+      "tag": "0022_pretty_cassandra_nova",
+      "breakpoints": true
+    },
+    {
+      "idx": 23,
+      "version": "7",
+      "when": 1784882520004,
+      "tag": "0023_groovy_squadron_sinister",
+      "breakpoints": true
+    },
+    {
+      "idx": 24,
+      "version": "7",
+      "when": 1784883815160,
+      "tag": "0024_natural_praxagora",
+      "breakpoints": true
+    },
+    {
+      "idx": 25,
+      "version": "7",
+      "when": 1784884466520,
+      "tag": "0025_gorgeous_tomas",
+      "breakpoints": true
+    },
+    {
+      "idx": 26,
+      "version": "7",
+      "when": 1784886445357,
+      "tag": "0026_low_weapon_omega",
+      "breakpoints": true
+    },
+    {
+      "idx": 27,
+      "version": "7",
+      "when": 1784889870254,
+      "tag": "0027_petite_pet_avengers",
+      "breakpoints": true
+    },
+    {
+      "idx": 28,
+      "version": "7",
+      "when": 1784894661036,
+      "tag": "0028_goldforge_building",
+      "breakpoints": true
+    },
+    {
+      "idx": 29,
+      "version": "7",
+      "when": 1784895463188,
+      "tag": "0029_forge_item_drops",
+      "breakpoints": true
+    },
+    {
+      "idx": 30,
+      "version": "7",
+      "when": 1784909649167,
+      "tag": "0030_item_market",
+      "breakpoints": true
+    },
+    {
+      "idx": 31,
+      "version": "7",
+      "when": 1784909649168,
+      "tag": "0031_item_market_sol",
+      "breakpoints": true
+    },
+    {
+      "idx": 32,
+      "version": "7",
+      "when": 1784909649169,
+      "tag": "0032_item_market_txsig_unique",
+      "breakpoints": true
+    },
+    {
+      "idx": 33,
+      "version": "7",
+      "when": 1784909649170,
+      "tag": "0033_item_market_payment_sig",
+      "breakpoints": true
+    },
+    {
+      "idx": 34,
+      "version": "7",
+      "when": 1785026531638,
+      "tag": "0034_brown_tyrannus",
+      "breakpoints": true
+    },
+    {
+      "idx": 35,
+      "version": "7",
+      "when": 1785084391162,
+      "tag": "0035_reflective_ghost_rider",
+      "breakpoints": true
+    },
+    {
+      "idx": 36,
+      "version": "7",
+      "when": 1785086394691,
+      "tag": "0036_curious_retro_girl",
+      "breakpoints": true
+    },
+    {
+      "idx": 37,
+      "version": "7",
+      "when": 1785091268074,
+      "tag": "0037_free_kabuki",
+      "breakpoints": true
+    },
+    {
+      "idx": 38,
+      "version": "7",
+      "when": 1785093705440,
+      "tag": "0038_yielding_black_crow",
+      "breakpoints": true
+    },
+    {
+      "idx": 39,
+      "version": "7",
+      "when": 1785096937284,
+      "tag": "0039_loving_madame_web",
+      "breakpoints": true
+    },
+    {
+      "idx": 40,
+      "version": "7",
+      "when": 1785097533730,
+      "tag": "0040_sloppy_stardust",
+      "breakpoints": true
+    },
+    {
+      "idx": 41,
+      "version": "7",
+      "when": 1785100285712,
+      "tag": "0041_omniscient_magma",
+      "breakpoints": true
+    },
+    {
+      "idx": 42,
+      "version": "7",
+      "when": 1785269700273,
+      "tag": "0042_oval_omega_sentinel",
+      "breakpoints": true
+    },
+    {
+      "idx": 43,
+      "version": "7",
+      "when": 1785269701273,
+      "tag": "0043_hero_level_range",
+      "breakpoints": true
+    },
+    {
+      "idx": 44,
+      "version": "7",
+      "when": 1785316975016,
+      "tag": "0044_usernames_seeker",
+      "breakpoints": true
+    },
+    {
+      "idx": 45,
+      "version": "7",
+      "when": 1785324741766,
+      "tag": "0045_forge_claimable",
+      "breakpoints": true
+    },
+    {
+      "idx": 46,
+      "version": "7",
+      "when": 1785329255700,
+      "tag": "0046_mint_dimension",
+      "breakpoints": true
+    },
+    {
+      "idx": 47,
+      "version": "7",
+      "when": 1785340853182,
+      "tag": "0047_raid_sim_version",
+      "breakpoints": true
+    },
+    {
+      "idx": 48,
+      "version": "7",
+      "when": 1785348465007,
+      "tag": "0048_deed_mint_claim",
+      "breakpoints": true
+    },
+    {
+      "idx": 49,
+      "version": "7",
+      "when": 1785919144479,
+      "tag": "0049_closed_alpha",
+      "breakpoints": true
+    },
+    {
+      "idx": 50,
+      "version": "7",
+      "when": 1786190111275,
+      "tag": "0050_seeker_alpha",
+      "breakpoints": true
+    },
+    {
+      "idx": 51,
+      "version": "7",
+      "when": 1786283334097,
+      "tag": "0051_base_abandons",
+      "breakpoints": true
+    },
+    {
+      "idx": 52,
+      "version": "7",
+      "when": 1786305449883,
+      "tag": "0052_valley_site_id",
+      "breakpoints": true
+    },
+    {
+      "idx": 53,
+      "version": "7",
+      "when": 1786356096778,
+      "tag": "0053_parcel_earth_cell",
+      "breakpoints": true
+    },
+    {
+      "idx": 54,
+      "version": "7",
+      "when": 1786363289834,
+      "tag": "0054_parcel_country",
+      "breakpoints": true
+    },
+    {
+      "idx": 55,
+      "version": "7",
+      "when": 1786424171691,
+      "tag": "0055_dark_attacker_troops",
+      "breakpoints": true
+    },
+    {
+      "idx": 56,
+      "version": "7",
+      "when": 1786433533783,
+      "tag": "0056_raid_simulation_lease",
+      "breakpoints": true
+    },
+    {
+      "idx": 57,
+      "version": "7",
+      "when": 1786436133166,
+      "tag": "0057_raid_simulation_admission",
+      "breakpoints": true
+    },
+    {
+      "idx": 58,
+      "version": "7",
+      "when": 1786436994209,
+      "tag": "0058_raid_simulation_system_attempt",
+      "breakpoints": true
+    },
+    {
+      "idx": 59,
+      "version": "7",
+      "when": 1786446276485,
+      "tag": "0059_new_blazing_skull",
+      "breakpoints": true
+    },
+    {
+      "idx": 60,
+      "version": "7",
+      "when": 1786446526891,
+      "tag": "0060_sturdy_epoch",
+      "breakpoints": true
+    },
+    {
+      "idx": 61,
+      "version": "7",
+      "when": 1786449688753,
+      "tag": "0061_high_pandemic",
+      "breakpoints": true
+    },
+    {
+      "idx": 62,
+      "version": "7",
+      "when": 1786476452400,
+      "tag": "0062_lying_felicia_hardy",
+      "breakpoints": true
+    },
+    {
+      "idx": 63,
+      "version": "7",
+      "when": 1786478806451,
+      "tag": "0063_secret_cargill",
+      "breakpoints": true
+    },
+    {
+      "idx": 64,
+      "version": "7",
+      "when": 1786479330716,
+      "tag": "0064_burly_shinko_yamashiro",
+      "breakpoints": true
+    },
+    {
+      "idx": 65,
+      "version": "7",
+      "when": 1786479365404,
+      "tag": "0065_yummy_tony_stark",
+      "breakpoints": true
+    },
+    {
+      "idx": 66,
+      "version": "7",
+      "when": 1786480284286,
+      "tag": "0066_boring_pixie",
+      "breakpoints": true
+    },
+    {
+      "idx": 67,
+      "version": "7",
+      "when": 1786482265410,
+      "tag": "0067_hero_recovery",
+      "breakpoints": true
+    },
+    {
+      "idx": 68,
+      "version": "7",
+      "when": 1786482422808,
+      "tag": "0068_little_franklin_richards",
+      "breakpoints": true
+    },
+    {
+      "idx": 69,
+      "version": "7",
+      "when": 1786483324757,
+      "tag": "0069_young_red_hulk",
+      "breakpoints": true
+    },
+    {
+      "idx": 70,
+      "version": "7",
+      "when": 1786484256950,
+      "tag": "0070_right_big_bertha",
+      "breakpoints": true
+    },
+    {
+      "idx": 71,
+      "version": "7",
+      "when": 1786487698984,
+      "tag": "0071_earth_purchase_authority",
+      "breakpoints": true
+    },
+    {
+      "idx": 72,
+      "version": "7",
+      "when": 1786491081425,
+      "tag": "0072_colossal_grey_gargoyle",
+      "breakpoints": true
+    },
+    {
+      "idx": 73,
+      "version": "7",
+      "when": 1786553776806,
+      "tag": "0073_deed_economy_enums",
+      "breakpoints": true
+    },
+    {
+      "idx": 74,
+      "version": "7",
+      "when": 1786553776807,
+      "tag": "0074_deed_economy_foundation",
+      "breakpoints": true
+    },
+    {
+      "idx": 75,
+      "version": "7",
+      "when": 1786556498884,
+      "tag": "0075_outgoing_omega_red",
+      "breakpoints": true
+    },
+    {
+      "idx": 76,
+      "version": "7",
+      "when": 1786558824500,
+      "tag": "0076_watery_jane_foster",
+      "breakpoints": true
+    },
+    {
+      "idx": 77,
+      "version": "7",
+      "when": 1786564811271,
+      "tag": "0077_deed_cutover_fence",
+      "breakpoints": true
+    },
+    {
+      "idx": 78,
+      "version": "7",
+      "when": 1786569537477,
+      "tag": "0078_league_entitlement_snapshot",
+      "breakpoints": true
+    },
+    {
+      "idx": 79,
+      "version": "7",
+      "when": 1786623040472,
+      "tag": "0079_legal_titania",
+      "breakpoints": true
+    },
+    {
+      "idx": 80,
+      "version": "7",
+      "when": 1786640999341,
+      "tag": "0080_slimy_vector",
+      "breakpoints": true
+    },
+    {
+      "idx": 81,
+      "version": "7",
+      "when": 1786644824534,
+      "tag": "0081_fast_golden_guardian",
+      "breakpoints": true
+    },
+    {
+      "idx": 82,
+      "version": "7",
+      "when": 1786647601133,
+      "tag": "0082_complete_hemingway",
+      "breakpoints": true
+    },
+    {
+      "idx": 83,
+      "version": "7",
+      "when": 1786753672629,
+      "tag": "0083_last_kylun",
+      "breakpoints": true
+    },
+    {
+      "idx": 84,
+      "version": "7",
+      "when": 1786801176693,
+      "tag": "0084_classy_amazoness",
+      "breakpoints": true
+    },
+    {
+      "idx": 85,
+      "version": "7",
+      "when": 1786807249051,
+      "tag": "0085_yellow_night_nurse",
+      "breakpoints": true
+    },
+    {
+      "idx": 86,
+      "version": "7",
+      "when": 1786835938241,
+      "tag": "0086_green_kabuki",
+      "breakpoints": true
+    },
+    {
+      "idx": 87,
+      "version": "7",
+      "when": 1787057020018,
+      "tag": "0087_tricky_tana_nile",
+      "breakpoints": true
+    },
+    {
+      "idx": 88,
+      "version": "7",
+      "when": 1787059545387,
+      "tag": "0088_complex_black_tarantula",
+      "breakpoints": true
+    },
+    {
+      "idx": 89,
+      "version": "7",
+      "when": 1787061832692,
+      "tag": "0089_daily_karen_page",
+      "breakpoints": true
+    },
+    {
+      "idx": 90,
+      "version": "7",
+      "when": 1787325354529,
+      "tag": "0090_aspiring_blue_marvel",
+      "breakpoints": true
+    },
+    {
+      "idx": 91,
+      "version": "7",
+      "when": 1787378606020,
+      "tag": "0091_violet_silverclaw",
+      "breakpoints": true
+    },
+    {
+      "idx": 92,
+      "version": "7",
+      "when": 1787558629026,
+      "tag": "0092_rainy_the_captain",
+      "breakpoints": true
+    },
+    {
+      "idx": 93,
+      "version": "7",
+      "when": 1788010105120,
+      "tag": "0093_quest_onboarding_scope",
+      "breakpoints": true
+    },
+    {
+      "idx": 94,
+      "version": "7",
+      "when": 1788030484374,
+      "tag": "0094_tutorial_guide_skip",
+      "breakpoints": true
+    },
+    {
+      "idx": 95,
+      "version": "7",
+      "when": 1788121279622,
+      "tag": "0095_league_reward_receipts",
+      "breakpoints": true
+    },
+    {
+      "idx": 96,
+      "version": "7",
+      "when": 1788121294156,
+      "tag": "0096_league_participation_index",
+      "breakpoints": true
+    },
+    {
+      "idx": 97,
+      "version": "7",
+      "when": 1788287591147,
+      "tag": "0097_refundable_troop_training",
+      "breakpoints": true
+    },
+    {
+      "idx": 98,
+      "version": "7",
+      "when": 1788287591148,
+      "tag": "0098_totp_recovery",
+      "breakpoints": true
+    },
+    {
+      "idx": 99,
+      "version": "7",
+      "when": 1788358160823,
+      "tag": "0099_batch_raid_journal",
+      "breakpoints": true
+    },
+    {
+      "idx": 100,
+      "version": "7",
+      "when": 1788403416119,
+      "tag": "0100_push_notifications",
+      "breakpoints": true
+    },
+    {
+      "idx": 101,
+      "version": "7",
+      "when": 1788465597707,
+      "tag": "0101_mine_full_notifications",
+      "breakpoints": true
+    },
+    {
+      "idx": 102,
+      "version": "7",
+      "when": 1788465630276,
+      "tag": "0102_live_raid_clock",
+      "breakpoints": true
+    },
+    {
+      "idx": 103,
+      "version": "7",
+      "when": 1788512257063,
+      "tag": "0103_founding_kingdoms",
+      "breakpoints": true
+    },
+    {
+      "idx": 104,
+      "version": "7",
+      "when": 1788522829694,
+      "tag": "0104_cancellable_jobs",
+      "breakpoints": true
+    },
+    {
+      "idx": 105,
+      "version": "7",
+      "when": 1788529749558,
+      "tag": "0105_feedback_fixed_flag_export",
+      "breakpoints": true
+    },
+    {
+      "idx": 106,
+      "version": "7",
+      "when": 1788584400000,
+      "tag": "0106_onboarding_training",
+      "breakpoints": true
+    },
+    {
+      "idx": 107,
+      "version": "7",
+      "when": 1788595200000,
+      "tag": "0107_social_login_protection",
+      "breakpoints": true
+    },
+    {
+      "idx": 108,
+      "version": "7",
+      "when": 1788595200001,
+      "tag": "0108_training_presets",
+      "breakpoints": true
+    },
+    {
+      "idx": 109,
+      "version": "7",
+      "when": 1788672000000,
+      "tag": "0109_training_batch_closures",
+      "breakpoints": true
+    },
+    {
+      "idx": 110,
+      "version": "7",
+      "when": 1788672000001,
+      "tag": "0110_sequential_training",
+      "breakpoints": true
+    },
+    {
+      "idx": 111,
+      "version": "7",
+      "when": 1788739200000,
+      "tag": "0111_chat_mentions",
+      "breakpoints": true
+    },
+    {
+      "idx": 112,
+      "version": "7",
+      "when": 1788739200001,
+      "tag": "0112_private_feedback",
+      "breakpoints": true
+    },
+    {
+      "idx": 113,
+      "version": "7",
+      "when": 1788796800000,
+      "tag": "0113_feedback_report_admin_controls",
+      "breakpoints": true
+    },
+    {
+      "idx": 114,
+      "version": "7",
+      "when": 1788800400000,
+      "tag": "0114_open_playtest_campaigns",
+      "breakpoints": true
+    },
+    {
+      "idx": 115,
+      "version": "7",
+      "when": 1788854400000,
+      "tag": "0115_founding_player_eligibility",
+      "breakpoints": true
+    },
+    {
+      "idx": 116,
+      "version": "7",
+      "when": 1788889237657,
+      "tag": "0116_onboarding_training_finish",
+      "breakpoints": true
+    },
+    {
+      "idx": 117,
+      "version": "7",
+      "when": 1788889417694,
+      "tag": "0117_playtest_mint_status",
+      "breakpoints": true
+    },
+    {
+      "idx": 118,
+      "version": "7",
+      "when": 1789009200000,
+      "tag": "0118_fantasy_world",
+      "breakpoints": true
+    },
+    {
+      "idx": 119,
+      "version": "7",
+      "when": 1789009300000,
+      "tag": "0119_fantasy_addresses",
+      "breakpoints": true
+    },
+    {
+      "idx": 120,
+      "version": "7",
+      "when": 1789009400000,
+      "tag": "0120_raid_visual_context",
+      "breakpoints": true
+    },
+    {
+      "idx": 121,
+      "version": "7",
+      "when": 1789009500000,
+      "tag": "0121_fantasy_purchase_cutover",
+      "breakpoints": true
+    },
+    {
+      "idx": 122,
+      "version": "7",
+      "when": 1789012800000,
+      "tag": "0122_full_world_ground",
+      "breakpoints": true
+    },
+    {
+      "idx": 123,
+      "version": "7",
+      "when": 1789242256616,
+      "tag": "0123_item_market_receipts",
+      "breakpoints": true
+    },
+    {
+      "idx": 124,
+      "version": "7",
+      "when": 1789260923273,
+      "tag": "0124_clan_command_receipts",
+      "breakpoints": true
+    },
+    {
+      "idx": 125,
+      "version": "7",
+      "when": 1789270817562,
+      "tag": "0125_forge_claim_commands",
+      "breakpoints": true
+    },
+    {
+      "idx": 126,
+      "version": "7",
+      "when": 1789276800000,
+      "tag": "0126_hero_recruitment_commands",
+      "breakpoints": true
+    },
+    {
+      "idx": 127,
+      "version": "7",
+      "when": 1789286400000,
+      "tag": "0127_base_purchase_v1",
+      "breakpoints": true
+    },
+    {
+      "idx": 128,
+      "version": "7",
+      "when": 1789286971992,
+      "tag": "0128_native_push_subscriptions",
+      "breakpoints": true
+    },
+    {
+      "idx": 129,
+      "version": "7",
+      "when": 1789289213104,
+      "tag": "0129_shield_purchase_v1",
+      "breakpoints": true
+    },
+    {
+      "idx": 130,
+      "version": "7",
+      "when": 1789291479924,
+      "tag": "0130_base_claim_commands",
+      "breakpoints": true
+    },
+    {
+      "idx": 131,
+      "version": "7",
+      "when": 1789322367707,
+      "tag": "0131_energy_purchase_v1",
+      "breakpoints": true
+    },
+    {
+      "idx": 132,
+      "version": "7",
+      "when": 1789516800000,
+      "tag": "0132_base_expansions_50",
+      "breakpoints": true
+    },
+    {
+      "idx": 133,
+      "version": "7",
+      "when": 1789670452000,
+      "tag": "0133_item_market_reconcile_attempt",
+      "breakpoints": true
+    },
+    {
+      "idx": 134,
+      "version": "7",
+      "when": 1789914108000,
+      "tag": "0134_gems_currency",
+      "breakpoints": true
+    },
+    {
+      "idx": 135,
+      "version": "7",
+      "when": 1789920000000,
+      "tag": "0135_phase_e_building_types",
+      "breakpoints": true
+    },
+    {
+      "idx": 136,
+      "version": "7",
+      "when": 1790006400000,
+      "tag": "0136_gems_reserve_identity",
+      "breakpoints": true
+    },
+    {
+      "idx": 137,
+      "version": "7",
+      "when": 1790006460000,
+      "tag": "0137_welcome_gems_obligations",
+      "breakpoints": true
+    },
+    {
+      "idx": 138,
+      "version": "7",
+      "when": 1790006520000,
+      "tag": "0138_workshop_allowance",
+      "breakpoints": true
+    }
+  ]
+}

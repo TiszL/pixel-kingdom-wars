@@ -1,0 +1,8 @@
+.pk-workshop-adapter { display: grid; gap: 12px; min-width: 0; }
+.pk-workshop-adapter > section { display: grid; gap: 8px; min-width: 0; }
+.pk-workshop-adapter p, .pk-workshop-adapter dd { overflow-wrap: anywhere; }
+.pk-workshop-adapter dl { margin: 0; display: grid; gap: 8px; }
+.pk-workshop-adapter dl > div { display: flex; justify-content: space-between; gap: 12px; }
+.pk-workshop-adapter dd { margin: 0; font-variant-numeric: tabular-nums; }
+.pk-workshop-adapter summary { cursor: pointer; min-height: 44px; padding-block: 10px; }
+.pk-workshop-adapter button { min-height: 44px; }

@@ -1,0 +1,2608 @@
+{
+  "simVersion": 14,
+  "snapshot": {
+    "claimMax": 28,
+    "claimMin": 2,
+    "buildings": [
+      {
+        "id": "pve-keep-0",
+        "tx": 14,
+        "ty": 14,
+        "type": "keep",
+        "level": 20
+      },
+      {
+        "id": "pve-wall-1",
+        "tx": 4,
+        "ty": 25,
+        "type": "wall",
+        "level": 20
+      },
+      {
+        "id": "pve-wall-2",
+        "tx": 5,
+        "ty": 25,
+        "type": "wall",
+        "level": 20
+      },
+      {
+        "id": "pve-wall-3",
+        "tx": 6,
+        "ty": 25,
+        "type": "wall",
+        "level": 20
+      },
+      {
+        "id": "pve-wall-4",
+        "tx": 7,
+        "ty": 25,
+        "type": "wall",
+        "level": 20
+      },
+      {
+        "id": "pve-wall-5",
+        "tx": 8,
+        "ty": 25,
+        "type": "wall",
+        "level": 20
+      },
+      {
+        "id": "pve-wall-6",
+        "tx": 9,
+        "ty": 25,
+        "type": "wall",
+        "level": 20
+      },
+      {
+        "id": "pve-wall-7",
+        "tx": 10,
+        "ty": 25,
+        "type": "wall",
+        "level": 20
+      },
+      {
+        "id": "pve-wall-8",
+        "tx": 11,
+        "ty": 25,
+        "type": "wall",
+        "level": 20
+      },
+      {
+        "id": "pve-wall-9",
+        "tx": 12,
+        "ty": 25,
+        "type": "wall",
+        "level": 20
+      },
+      {
+        "id": "pve-wall-10",
+        "tx": 13,
+        "ty": 25,
+        "type": "wall",
+        "level": 20
+      },
+      {
+        "id": "pve-wall-11",
+        "tx": 14,
+        "ty": 25,
+        "type": "wall",
+        "level": 20
+      },
+      {
+        "id": "pve-wall-12",
+        "tx": 15,
+        "ty": 25,
+        "type": "wall",
+        "level": 20
+      },
+      {
+        "id": "pve-wall-13",
+        "tx": 16,
+        "ty": 25,
+        "type": "wall",
+        "level": 20
+      },
+      {
+        "id": "pve-wall-14",
+        "tx": 17,
+        "ty": 25,
+        "type": "wall",
+        "level": 20
+      },
+      {
+        "id": "pve-wall-15",
+        "tx": 18,
+        "ty": 25,
+        "type": "wall",
+        "level": 20
+      },
+      {
+        "id": "pve-wall-16",
+        "tx": 19,
+        "ty": 25,
+        "type": "wall",
+        "level": 20
+      },
+      {
+        "id": "pve-wall-17",
+        "tx": 20,
+        "ty": 25,
+        "type": "wall",
+        "level": 20
+      },
+      {
+        "id": "pve-wall-18",
+        "tx": 21,
+        "ty": 25,
+        "type": "wall",
+        "level": 20
+      },
+      {
+        "id": "pve-wall-19",
+        "tx": 22,
+        "ty": 25,
+        "type": "wall",
+        "level": 20
+      },
+      {
+        "id": "pve-wall-20",
+        "tx": 23,
+        "ty": 25,
+        "type": "wall",
+        "level": 20
+      },
+      {
+        "id": "pve-wall-21",
+        "tx": 24,
+        "ty": 25,
+        "type": "wall",
+        "level": 20
+      },
+      {
+        "id": "pve-wall-22",
+        "tx": 25,
+        "ty": 25,
+        "type": "wall",
+        "level": 20
+      },
+      {
+        "id": "pve-wall-23",
+        "tx": 25,
+        "ty": 24,
+        "type": "wall",
+        "level": 20
+      },
+      {
+        "id": "pve-wall-24",
+        "tx": 25,
+        "ty": 23,
+        "type": "wall",
+        "level": 20
+      },
+      {
+        "id": "pve-wall-25",
+        "tx": 25,
+        "ty": 22,
+        "type": "wall",
+        "level": 20
+      },
+      {
+        "id": "pve-wall-26",
+        "tx": 25,
+        "ty": 21,
+        "type": "wall",
+        "level": 20
+      },
+      {
+        "id": "pve-wall-27",
+        "tx": 25,
+        "ty": 20,
+        "type": "wall",
+        "level": 20
+      },
+      {
+        "id": "pve-wall-28",
+        "tx": 25,
+        "ty": 19,
+        "type": "wall",
+        "level": 20
+      },
+      {
+        "id": "pve-wall-29",
+        "tx": 25,
+        "ty": 18,
+        "type": "wall",
+        "level": 20
+      },
+      {
+        "id": "pve-wall-30",
+        "tx": 25,
+        "ty": 17,
+        "type": "wall",
+        "level": 20
+      },
+      {
+        "id": "pve-wall-31",
+        "tx": 25,
+        "ty": 16,
+        "type": "wall",
+        "level": 20
+      },
+      {
+        "id": "pve-wall-32",
+        "tx": 25,
+        "ty": 15,
+        "type": "wall",
+        "level": 20
+      },
+      {
+        "id": "pve-wall-33",
+        "tx": 25,
+        "ty": 14,
+        "type": "wall",
+        "level": 20
+      },
+      {
+        "id": "pve-wall-34",
+        "tx": 25,
+        "ty": 13,
+        "type": "wall",
+        "level": 20
+      },
+      {
+        "id": "pve-wall-35",
+        "tx": 25,
+        "ty": 12,
+        "type": "wall",
+        "level": 20
+      },
+      {
+        "id": "pve-wall-36",
+        "tx": 25,
+        "ty": 11,
+        "type": "wall",
+        "level": 20
+      },
+      {
+        "id": "pve-wall-37",
+        "tx": 25,
+        "ty": 10,
+        "type": "wall",
+        "level": 20
+      },
+      {
+        "id": "pve-wall-38",
+        "tx": 25,
+        "ty": 9,
+        "type": "wall",
+        "level": 20
+      },
+      {
+        "id": "pve-wall-39",
+        "tx": 25,
+        "ty": 8,
+        "type": "wall",
+        "level": 20
+      },
+      {
+        "id": "pve-wall-40",
+        "tx": 25,
+        "ty": 7,
+        "type": "wall",
+        "level": 20
+      },
+      {
+        "id": "pve-wall-41",
+        "tx": 25,
+        "ty": 6,
+        "type": "wall",
+        "level": 20
+      },
+      {
+        "id": "pve-wall-42",
+        "tx": 25,
+        "ty": 5,
+        "type": "wall",
+        "level": 20
+      },
+      {
+        "id": "pve-wall-43",
+        "tx": 25,
+        "ty": 4,
+        "type": "wall",
+        "level": 20
+      },
+      {
+        "id": "pve-wall-44",
+        "tx": 24,
+        "ty": 4,
+        "type": "wall",
+        "level": 20
+      },
+      {
+        "id": "pve-wall-45",
+        "tx": 23,
+        "ty": 4,
+        "type": "wall",
+        "level": 20
+      },
+      {
+        "id": "pve-wall-46",
+        "tx": 22,
+        "ty": 4,
+        "type": "wall",
+        "level": 20
+      },
+      {
+        "id": "pve-wall-47",
+        "tx": 21,
+        "ty": 4,
+        "type": "wall",
+        "level": 20
+      },
+      {
+        "id": "pve-wall-48",
+        "tx": 20,
+        "ty": 4,
+        "type": "wall",
+        "level": 20
+      },
+      {
+        "id": "pve-wall-49",
+        "tx": 19,
+        "ty": 4,
+        "type": "wall",
+        "level": 20
+      },
+      {
+        "id": "pve-wall-50",
+        "tx": 18,
+        "ty": 4,
+        "type": "wall",
+        "level": 20
+      },
+      {
+        "id": "pve-wall-51",
+        "tx": 17,
+        "ty": 4,
+        "type": "wall",
+        "level": 20
+      },
+      {
+        "id": "pve-wall-52",
+        "tx": 16,
+        "ty": 4,
+        "type": "wall",
+        "level": 20
+      },
+      {
+        "id": "pve-wall-53",
+        "tx": 15,
+        "ty": 4,
+        "type": "wall",
+        "level": 20
+      },
+      {
+        "id": "pve-wall-54",
+        "tx": 14,
+        "ty": 4,
+        "type": "wall",
+        "level": 20
+      },
+      {
+        "id": "pve-wall-55",
+        "tx": 13,
+        "ty": 4,
+        "type": "wall",
+        "level": 20
+      },
+      {
+        "id": "pve-wall-56",
+        "tx": 12,
+        "ty": 4,
+        "type": "wall",
+        "level": 20
+      },
+      {
+        "id": "pve-wall-57",
+        "tx": 11,
+        "ty": 4,
+        "type": "wall",
+        "level": 20
+      },
+      {
+        "id": "pve-wall-58",
+        "tx": 10,
+        "ty": 4,
+        "type": "wall",
+        "level": 20
+      },
+      {
+        "id": "pve-wall-59",
+        "tx": 9,
+        "ty": 4,
+        "type": "wall",
+        "level": 20
+      },
+      {
+        "id": "pve-wall-60",
+        "tx": 8,
+        "ty": 4,
+        "type": "wall",
+        "level": 20
+      },
+      {
+        "id": "pve-wall-61",
+        "tx": 7,
+        "ty": 4,
+        "type": "wall",
+        "level": 20
+      },
+      {
+        "id": "pve-wall-62",
+        "tx": 6,
+        "ty": 4,
+        "type": "wall",
+        "level": 20
+      },
+      {
+        "id": "pve-wall-63",
+        "tx": 5,
+        "ty": 4,
+        "type": "wall",
+        "level": 20
+      },
+      {
+        "id": "pve-wall-64",
+        "tx": 4,
+        "ty": 4,
+        "type": "wall",
+        "level": 20
+      },
+      {
+        "id": "pve-wall-65",
+        "tx": 4,
+        "ty": 5,
+        "type": "wall",
+        "level": 20
+      },
+      {
+        "id": "pve-wall-66",
+        "tx": 4,
+        "ty": 6,
+        "type": "wall",
+        "level": 20
+      },
+      {
+        "id": "pve-wall-67",
+        "tx": 4,
+        "ty": 7,
+        "type": "wall",
+        "level": 20
+      },
+      {
+        "id": "pve-wall-68",
+        "tx": 4,
+        "ty": 8,
+        "type": "wall",
+        "level": 20
+      },
+      {
+        "id": "pve-wall-69",
+        "tx": 4,
+        "ty": 9,
+        "type": "wall",
+        "level": 20
+      },
+      {
+        "id": "pve-wall-70",
+        "tx": 4,
+        "ty": 10,
+        "type": "wall",
+        "level": 20
+      },
+      {
+        "id": "pve-wall-71",
+        "tx": 4,
+        "ty": 11,
+        "type": "wall",
+        "level": 20
+      },
+      {
+        "id": "pve-wall-72",
+        "tx": 4,
+        "ty": 12,
+        "type": "wall",
+        "level": 20
+      },
+      {
+        "id": "pve-wall-73",
+        "tx": 4,
+        "ty": 13,
+        "type": "wall",
+        "level": 20
+      },
+      {
+        "id": "pve-wall-74",
+        "tx": 4,
+        "ty": 14,
+        "type": "wall",
+        "level": 20
+      },
+      {
+        "id": "pve-wall-75",
+        "tx": 4,
+        "ty": 15,
+        "type": "wall",
+        "level": 20
+      },
+      {
+        "id": "pve-wall-76",
+        "tx": 4,
+        "ty": 16,
+        "type": "wall",
+        "level": 20
+      },
+      {
+        "id": "pve-wall-77",
+        "tx": 4,
+        "ty": 17,
+        "type": "wall",
+        "level": 20
+      },
+      {
+        "id": "pve-wall-78",
+        "tx": 4,
+        "ty": 18,
+        "type": "wall",
+        "level": 20
+      },
+      {
+        "id": "pve-wall-79",
+        "tx": 4,
+        "ty": 19,
+        "type": "wall",
+        "level": 20
+      },
+      {
+        "id": "pve-wall-80",
+        "tx": 4,
+        "ty": 20,
+        "type": "wall",
+        "level": 20
+      },
+      {
+        "id": "pve-wall-81",
+        "tx": 4,
+        "ty": 21,
+        "type": "wall",
+        "level": 20
+      },
+      {
+        "id": "pve-wall-82",
+        "tx": 4,
+        "ty": 22,
+        "type": "wall",
+        "level": 20
+      },
+      {
+        "id": "pve-wall-83",
+        "tx": 4,
+        "ty": 23,
+        "type": "wall",
+        "level": 20
+      },
+      {
+        "id": "pve-wall-84",
+        "tx": 4,
+        "ty": 24,
+        "type": "wall",
+        "level": 20
+      },
+      {
+        "id": "pve-wall-85",
+        "tx": 5,
+        "ty": 24,
+        "type": "wall",
+        "level": 20
+      },
+      {
+        "id": "pve-wall-86",
+        "tx": 6,
+        "ty": 24,
+        "type": "wall",
+        "level": 20
+      },
+      {
+        "id": "pve-wall-87",
+        "tx": 7,
+        "ty": 24,
+        "type": "wall",
+        "level": 20
+      },
+      {
+        "id": "pve-wall-88",
+        "tx": 8,
+        "ty": 24,
+        "type": "wall",
+        "level": 20
+      },
+      {
+        "id": "pve-wall-89",
+        "tx": 9,
+        "ty": 24,
+        "type": "wall",
+        "level": 20
+      },
+      {
+        "id": "pve-wall-90",
+        "tx": 10,
+        "ty": 24,
+        "type": "wall",
+        "level": 20
+      },
+      {
+        "id": "pve-wall-91",
+        "tx": 11,
+        "ty": 24,
+        "type": "wall",
+        "level": 20
+      },
+      {
+        "id": "pve-wall-92",
+        "tx": 12,
+        "ty": 24,
+        "type": "wall",
+        "level": 20
+      },
+      {
+        "id": "pve-wall-93",
+        "tx": 13,
+        "ty": 24,
+        "type": "wall",
+        "level": 20
+      },
+      {
+        "id": "pve-wall-94",
+        "tx": 14,
+        "ty": 24,
+        "type": "wall",
+        "level": 20
+      },
+      {
+        "id": "pve-wall-95",
+        "tx": 15,
+        "ty": 24,
+        "type": "wall",
+        "level": 20
+      },
+      {
+        "id": "pve-wall-96",
+        "tx": 16,
+        "ty": 24,
+        "type": "wall",
+        "level": 20
+      },
+      {
+        "id": "pve-wall-97",
+        "tx": 17,
+        "ty": 24,
+        "type": "wall",
+        "level": 20
+      },
+      {
+        "id": "pve-wall-98",
+        "tx": 18,
+        "ty": 24,
+        "type": "wall",
+        "level": 20
+      },
+      {
+        "id": "pve-wall-99",
+        "tx": 19,
+        "ty": 24,
+        "type": "wall",
+        "level": 20
+      },
+      {
+        "id": "pve-wall-100",
+        "tx": 20,
+        "ty": 24,
+        "type": "wall",
+        "level": 20
+      },
+      {
+        "id": "pve-wall-101",
+        "tx": 21,
+        "ty": 24,
+        "type": "wall",
+        "level": 20
+      },
+      {
+        "id": "pve-wall-102",
+        "tx": 22,
+        "ty": 24,
+        "type": "wall",
+        "level": 20
+      },
+      {
+        "id": "pve-wall-103",
+        "tx": 23,
+        "ty": 24,
+        "type": "wall",
+        "level": 20
+      },
+      {
+        "id": "pve-wall-104",
+        "tx": 24,
+        "ty": 24,
+        "type": "wall",
+        "level": 20
+      },
+      {
+        "id": "pve-wall-105",
+        "tx": 24,
+        "ty": 23,
+        "type": "wall",
+        "level": 20
+      },
+      {
+        "id": "pve-wall-106",
+        "tx": 24,
+        "ty": 22,
+        "type": "wall",
+        "level": 20
+      },
+      {
+        "id": "pve-wall-107",
+        "tx": 24,
+        "ty": 21,
+        "type": "wall",
+        "level": 20
+      },
+      {
+        "id": "pve-wall-108",
+        "tx": 24,
+        "ty": 20,
+        "type": "wall",
+        "level": 20
+      },
+      {
+        "id": "pve-wall-109",
+        "tx": 24,
+        "ty": 19,
+        "type": "wall",
+        "level": 20
+      },
+      {
+        "id": "pve-wall-110",
+        "tx": 24,
+        "ty": 18,
+        "type": "wall",
+        "level": 20
+      },
+      {
+        "id": "pve-wall-111",
+        "tx": 24,
+        "ty": 17,
+        "type": "wall",
+        "level": 20
+      },
+      {
+        "id": "pve-wall-112",
+        "tx": 24,
+        "ty": 16,
+        "type": "wall",
+        "level": 20
+      },
+      {
+        "id": "pve-wall-113",
+        "tx": 24,
+        "ty": 15,
+        "type": "wall",
+        "level": 20
+      },
+      {
+        "id": "pve-wall-114",
+        "tx": 24,
+        "ty": 14,
+        "type": "wall",
+        "level": 20
+      },
+      {
+        "id": "pve-wall-115",
+        "tx": 24,
+        "ty": 13,
+        "type": "wall",
+        "level": 20
+      },
+      {
+        "id": "pve-wall-116",
+        "tx": 24,
+        "ty": 12,
+        "type": "wall",
+        "level": 20
+      },
+      {
+        "id": "pve-wall-117",
+        "tx": 24,
+        "ty": 11,
+        "type": "wall",
+        "level": 20
+      },
+      {
+        "id": "pve-wall-118",
+        "tx": 24,
+        "ty": 10,
+        "type": "wall",
+        "level": 20
+      },
+      {
+        "id": "pve-wall-119",
+        "tx": 24,
+        "ty": 9,
+        "type": "wall",
+        "level": 20
+      },
+      {
+        "id": "pve-wall-120",
+        "tx": 24,
+        "ty": 8,
+        "type": "wall",
+        "level": 20
+      },
+      {
+        "id": "pve-wall-121",
+        "tx": 24,
+        "ty": 7,
+        "type": "wall",
+        "level": 20
+      },
+      {
+        "id": "pve-wall-122",
+        "tx": 24,
+        "ty": 6,
+        "type": "wall",
+        "level": 20
+      },
+      {
+        "id": "pve-wall-123",
+        "tx": 24,
+        "ty": 5,
+        "type": "wall",
+        "level": 20
+      },
+      {
+        "id": "pve-wall-124",
+        "tx": 23,
+        "ty": 5,
+        "type": "wall",
+        "level": 20
+      },
+      {
+        "id": "pve-wall-125",
+        "tx": 22,
+        "ty": 5,
+        "type": "wall",
+        "level": 20
+      },
+      {
+        "id": "pve-wall-126",
+        "tx": 21,
+        "ty": 5,
+        "type": "wall",
+        "level": 20
+      },
+      {
+        "id": "pve-wall-127",
+        "tx": 20,
+        "ty": 5,
+        "type": "wall",
+        "level": 20
+      },
+      {
+        "id": "pve-wall-128",
+        "tx": 19,
+        "ty": 5,
+        "type": "wall",
+        "level": 20
+      },
+      {
+        "id": "pve-wall-129",
+        "tx": 18,
+        "ty": 5,
+        "type": "wall",
+        "level": 20
+      },
+      {
+        "id": "pve-wall-130",
+        "tx": 17,
+        "ty": 5,
+        "type": "wall",
+        "level": 20
+      },
+      {
+        "id": "pve-wall-131",
+        "tx": 16,
+        "ty": 5,
+        "type": "wall",
+        "level": 20
+      },
+      {
+        "id": "pve-wall-132",
+        "tx": 15,
+        "ty": 5,
+        "type": "wall",
+        "level": 20
+      },
+      {
+        "id": "pve-wall-133",
+        "tx": 14,
+        "ty": 5,
+        "type": "wall",
+        "level": 20
+      },
+      {
+        "id": "pve-wall-134",
+        "tx": 13,
+        "ty": 5,
+        "type": "wall",
+        "level": 20
+      },
+      {
+        "id": "pve-wall-135",
+        "tx": 12,
+        "ty": 5,
+        "type": "wall",
+        "level": 20
+      },
+      {
+        "id": "pve-wall-136",
+        "tx": 11,
+        "ty": 5,
+        "type": "wall",
+        "level": 20
+      },
+      {
+        "id": "pve-wall-137",
+        "tx": 10,
+        "ty": 5,
+        "type": "wall",
+        "level": 20
+      },
+      {
+        "id": "pve-wall-138",
+        "tx": 9,
+        "ty": 5,
+        "type": "wall",
+        "level": 20
+      },
+      {
+        "id": "pve-wall-139",
+        "tx": 8,
+        "ty": 5,
+        "type": "wall",
+        "level": 20
+      },
+      {
+        "id": "pve-wall-140",
+        "tx": 7,
+        "ty": 5,
+        "type": "wall",
+        "level": 20
+      },
+      {
+        "id": "pve-wall-141",
+        "tx": 6,
+        "ty": 5,
+        "type": "wall",
+        "level": 20
+      },
+      {
+        "id": "pve-wall-142",
+        "tx": 5,
+        "ty": 5,
+        "type": "wall",
+        "level": 20
+      },
+      {
+        "id": "pve-wall-143",
+        "tx": 5,
+        "ty": 6,
+        "type": "wall",
+        "level": 20
+      },
+      {
+        "id": "pve-wall-144",
+        "tx": 5,
+        "ty": 7,
+        "type": "wall",
+        "level": 20
+      },
+      {
+        "id": "pve-wall-145",
+        "tx": 5,
+        "ty": 8,
+        "type": "wall",
+        "level": 20
+      },
+      {
+        "id": "pve-wall-146",
+        "tx": 5,
+        "ty": 9,
+        "type": "wall",
+        "level": 20
+      },
+      {
+        "id": "pve-wall-147",
+        "tx": 5,
+        "ty": 10,
+        "type": "wall",
+        "level": 20
+      },
+      {
+        "id": "pve-wall-148",
+        "tx": 5,
+        "ty": 11,
+        "type": "wall",
+        "level": 20
+      },
+      {
+        "id": "pve-wall-149",
+        "tx": 5,
+        "ty": 12,
+        "type": "wall",
+        "level": 20
+      },
+      {
+        "id": "pve-wall-150",
+        "tx": 5,
+        "ty": 13,
+        "type": "wall",
+        "level": 20
+      },
+      {
+        "id": "pve-wall-151",
+        "tx": 5,
+        "ty": 14,
+        "type": "wall",
+        "level": 20
+      },
+      {
+        "id": "pve-wall-152",
+        "tx": 5,
+        "ty": 15,
+        "type": "wall",
+        "level": 20
+      },
+      {
+        "id": "pve-wall-153",
+        "tx": 5,
+        "ty": 16,
+        "type": "wall",
+        "level": 20
+      },
+      {
+        "id": "pve-wall-154",
+        "tx": 5,
+        "ty": 17,
+        "type": "wall",
+        "level": 20
+      },
+      {
+        "id": "pve-wall-155",
+        "tx": 5,
+        "ty": 18,
+        "type": "wall",
+        "level": 20
+      },
+      {
+        "id": "pve-wall-156",
+        "tx": 5,
+        "ty": 19,
+        "type": "wall",
+        "level": 20
+      },
+      {
+        "id": "pve-wall-157",
+        "tx": 5,
+        "ty": 20,
+        "type": "wall",
+        "level": 20
+      },
+      {
+        "id": "pve-wall-158",
+        "tx": 5,
+        "ty": 21,
+        "type": "wall",
+        "level": 20
+      },
+      {
+        "id": "pve-wall-159",
+        "tx": 5,
+        "ty": 22,
+        "type": "wall",
+        "level": 20
+      },
+      {
+        "id": "pve-wall-160",
+        "tx": 5,
+        "ty": 23,
+        "type": "wall",
+        "level": 20
+      },
+      {
+        "id": "pve-wall-161",
+        "tx": 11,
+        "ty": 18,
+        "type": "wall",
+        "level": 20
+      },
+      {
+        "id": "pve-wall-162",
+        "tx": 12,
+        "ty": 18,
+        "type": "wall",
+        "level": 20
+      },
+      {
+        "id": "pve-wall-163",
+        "tx": 13,
+        "ty": 18,
+        "type": "wall",
+        "level": 20
+      },
+      {
+        "id": "pve-wall-164",
+        "tx": 14,
+        "ty": 18,
+        "type": "wall",
+        "level": 20
+      },
+      {
+        "id": "pve-wall-165",
+        "tx": 15,
+        "ty": 18,
+        "type": "wall",
+        "level": 20
+      },
+      {
+        "id": "pve-wall-166",
+        "tx": 16,
+        "ty": 18,
+        "type": "wall",
+        "level": 20
+      },
+      {
+        "id": "pve-wall-167",
+        "tx": 17,
+        "ty": 18,
+        "type": "wall",
+        "level": 20
+      },
+      {
+        "id": "pve-wall-168",
+        "tx": 18,
+        "ty": 18,
+        "type": "wall",
+        "level": 20
+      },
+      {
+        "id": "pve-wall-169",
+        "tx": 18,
+        "ty": 17,
+        "type": "wall",
+        "level": 20
+      },
+      {
+        "id": "pve-wall-170",
+        "tx": 18,
+        "ty": 16,
+        "type": "wall",
+        "level": 20
+      },
+      {
+        "id": "pve-wall-171",
+        "tx": 18,
+        "ty": 15,
+        "type": "wall",
+        "level": 20
+      },
+      {
+        "id": "pve-wall-172",
+        "tx": 18,
+        "ty": 14,
+        "type": "wall",
+        "level": 20
+      },
+      {
+        "id": "pve-wall-173",
+        "tx": 18,
+        "ty": 13,
+        "type": "wall",
+        "level": 20
+      },
+      {
+        "id": "pve-wall-174",
+        "tx": 18,
+        "ty": 12,
+        "type": "wall",
+        "level": 20
+      },
+      {
+        "id": "pve-wall-175",
+        "tx": 18,
+        "ty": 11,
+        "type": "wall",
+        "level": 20
+      },
+      {
+        "id": "pve-wall-176",
+        "tx": 17,
+        "ty": 11,
+        "type": "wall",
+        "level": 20
+      },
+      {
+        "id": "pve-wall-177",
+        "tx": 16,
+        "ty": 11,
+        "type": "wall",
+        "level": 20
+      },
+      {
+        "id": "pve-wall-178",
+        "tx": 15,
+        "ty": 11,
+        "type": "wall",
+        "level": 20
+      },
+      {
+        "id": "pve-wall-179",
+        "tx": 14,
+        "ty": 11,
+        "type": "wall",
+        "level": 20
+      },
+      {
+        "id": "pve-wall-180",
+        "tx": 13,
+        "ty": 11,
+        "type": "wall",
+        "level": 20
+      },
+      {
+        "id": "pve-wall-181",
+        "tx": 12,
+        "ty": 11,
+        "type": "wall",
+        "level": 20
+      },
+      {
+        "id": "pve-wall-182",
+        "tx": 11,
+        "ty": 11,
+        "type": "wall",
+        "level": 20
+      },
+      {
+        "id": "pve-wall-183",
+        "tx": 11,
+        "ty": 12,
+        "type": "wall",
+        "level": 20
+      },
+      {
+        "id": "pve-wall-184",
+        "tx": 11,
+        "ty": 13,
+        "type": "wall",
+        "level": 20
+      },
+      {
+        "id": "pve-wall-185",
+        "tx": 11,
+        "ty": 14,
+        "type": "wall",
+        "level": 20
+      },
+      {
+        "id": "pve-wall-186",
+        "tx": 11,
+        "ty": 15,
+        "type": "wall",
+        "level": 20
+      },
+      {
+        "id": "pve-wall-187",
+        "tx": 11,
+        "ty": 16,
+        "type": "wall",
+        "level": 20
+      },
+      {
+        "id": "pve-wall-188",
+        "tx": 11,
+        "ty": 17,
+        "type": "wall",
+        "level": 20
+      },
+      {
+        "id": "pve-wall-189",
+        "tx": 11,
+        "ty": 7,
+        "type": "wall",
+        "level": 20
+      },
+      {
+        "id": "pve-wall-190",
+        "tx": 11,
+        "ty": 8,
+        "type": "wall",
+        "level": 20
+      },
+      {
+        "id": "pve-wall-191",
+        "tx": 11,
+        "ty": 9,
+        "type": "wall",
+        "level": 20
+      },
+      {
+        "id": "pve-wall-192",
+        "tx": 11,
+        "ty": 10,
+        "type": "wall",
+        "level": 20
+      },
+      {
+        "id": "pve-wall-193",
+        "tx": 11,
+        "ty": 19,
+        "type": "wall",
+        "level": 20
+      },
+      {
+        "id": "pve-wall-194",
+        "tx": 11,
+        "ty": 20,
+        "type": "wall",
+        "level": 20
+      },
+      {
+        "id": "pve-wall-195",
+        "tx": 11,
+        "ty": 21,
+        "type": "wall",
+        "level": 20
+      },
+      {
+        "id": "pve-wall-196",
+        "tx": 11,
+        "ty": 22,
+        "type": "wall",
+        "level": 20
+      },
+      {
+        "id": "pve-wall-197",
+        "tx": 18,
+        "ty": 7,
+        "type": "wall",
+        "level": 20
+      },
+      {
+        "id": "pve-wall-198",
+        "tx": 18,
+        "ty": 8,
+        "type": "wall",
+        "level": 20
+      },
+      {
+        "id": "pve-wall-199",
+        "tx": 18,
+        "ty": 9,
+        "type": "wall",
+        "level": 20
+      },
+      {
+        "id": "pve-wall-200",
+        "tx": 18,
+        "ty": 10,
+        "type": "wall",
+        "level": 20
+      },
+      {
+        "id": "pve-wall-201",
+        "tx": 18,
+        "ty": 19,
+        "type": "wall",
+        "level": 20
+      },
+      {
+        "id": "pve-wall-202",
+        "tx": 18,
+        "ty": 20,
+        "type": "wall",
+        "level": 20
+      },
+      {
+        "id": "pve-wall-203",
+        "tx": 18,
+        "ty": 21,
+        "type": "wall",
+        "level": 20
+      },
+      {
+        "id": "pve-wall-204",
+        "tx": 18,
+        "ty": 22,
+        "type": "wall",
+        "level": 20
+      },
+      {
+        "id": "pve-wall-205",
+        "tx": 7,
+        "ty": 11,
+        "type": "wall",
+        "level": 20
+      },
+      {
+        "id": "pve-wall-206",
+        "tx": 8,
+        "ty": 11,
+        "type": "wall",
+        "level": 20
+      },
+      {
+        "id": "pve-wall-207",
+        "tx": 9,
+        "ty": 11,
+        "type": "wall",
+        "level": 20
+      },
+      {
+        "id": "pve-wall-208",
+        "tx": 10,
+        "ty": 11,
+        "type": "wall",
+        "level": 20
+      },
+      {
+        "id": "pve-wall-209",
+        "tx": 19,
+        "ty": 11,
+        "type": "wall",
+        "level": 20
+      },
+      {
+        "id": "pve-wall-210",
+        "tx": 20,
+        "ty": 11,
+        "type": "wall",
+        "level": 20
+      },
+      {
+        "id": "pve-wall-211",
+        "tx": 21,
+        "ty": 11,
+        "type": "wall",
+        "level": 20
+      },
+      {
+        "id": "pve-wall-212",
+        "tx": 22,
+        "ty": 11,
+        "type": "wall",
+        "level": 20
+      },
+      {
+        "id": "pve-wall-213",
+        "tx": 7,
+        "ty": 18,
+        "type": "wall",
+        "level": 20
+      },
+      {
+        "id": "pve-wall-214",
+        "tx": 8,
+        "ty": 18,
+        "type": "wall",
+        "level": 20
+      },
+      {
+        "id": "pve-wall-215",
+        "tx": 9,
+        "ty": 18,
+        "type": "wall",
+        "level": 20
+      },
+      {
+        "id": "pve-wall-216",
+        "tx": 10,
+        "ty": 18,
+        "type": "wall",
+        "level": 20
+      },
+      {
+        "id": "pve-wall-217",
+        "tx": 19,
+        "ty": 18,
+        "type": "wall",
+        "level": 20
+      },
+      {
+        "id": "pve-wall-218",
+        "tx": 20,
+        "ty": 18,
+        "type": "wall",
+        "level": 20
+      },
+      {
+        "id": "pve-wall-219",
+        "tx": 21,
+        "ty": 18,
+        "type": "wall",
+        "level": 20
+      },
+      {
+        "id": "pve-wall-220",
+        "tx": 22,
+        "ty": 18,
+        "type": "wall",
+        "level": 20
+      },
+      {
+        "id": "pve-siegestool-221",
+        "tx": 14,
+        "ty": 9,
+        "type": "siegestool",
+        "level": 1
+      },
+      {
+        "id": "pve-airdefence-222",
+        "tx": 14,
+        "ty": 19,
+        "type": "airdefence",
+        "level": 20
+      },
+      {
+        "id": "pve-airdefence-223",
+        "tx": 9,
+        "ty": 14,
+        "type": "airdefence",
+        "level": 20
+      },
+      {
+        "id": "pve-airdefence-224",
+        "tx": 16,
+        "ty": 9,
+        "type": "airdefence",
+        "level": 20
+      },
+      {
+        "id": "pve-airdefence-225",
+        "tx": 19,
+        "ty": 14,
+        "type": "airdefence",
+        "level": 20
+      },
+      {
+        "id": "pve-mortar-226",
+        "tx": 9,
+        "ty": 9,
+        "type": "mortar",
+        "level": 20
+      },
+      {
+        "id": "pve-mortar-227",
+        "tx": 19,
+        "ty": 9,
+        "type": "mortar",
+        "level": 20
+      },
+      {
+        "id": "pve-mortar-228",
+        "tx": 19,
+        "ty": 19,
+        "type": "mortar",
+        "level": 20
+      },
+      {
+        "id": "pve-mortar-229",
+        "tx": 9,
+        "ty": 19,
+        "type": "mortar",
+        "level": 20
+      },
+      {
+        "id": "pve-mortar-230",
+        "tx": 9,
+        "ty": 7,
+        "type": "mortar",
+        "level": 20
+      },
+      {
+        "id": "pve-dragonnest-231",
+        "tx": 7,
+        "ty": 16,
+        "type": "dragonnest",
+        "level": 20
+      },
+      {
+        "id": "pve-dragonnest-232",
+        "tx": 19,
+        "ty": 16,
+        "type": "dragonnest",
+        "level": 20
+      },
+      {
+        "id": "pve-magetower-233",
+        "tx": 13,
+        "ty": 13,
+        "type": "magetower",
+        "level": 20
+      },
+      {
+        "id": "pve-magetower-234",
+        "tx": 16,
+        "ty": 16,
+        "type": "magetower",
+        "level": 20
+      },
+      {
+        "id": "pve-magetower-235",
+        "tx": 16,
+        "ty": 13,
+        "type": "magetower",
+        "level": 20
+      },
+      {
+        "id": "pve-electrictower-236",
+        "tx": 13,
+        "ty": 16,
+        "type": "electrictower",
+        "level": 20
+      },
+      {
+        "id": "pve-electrictower-237",
+        "tx": 16,
+        "ty": 15,
+        "type": "electrictower",
+        "level": 20
+      },
+      {
+        "id": "pve-electrictower-238",
+        "tx": 13,
+        "ty": 14,
+        "type": "electrictower",
+        "level": 20
+      },
+      {
+        "id": "pve-electrictower-239",
+        "tx": 12,
+        "ty": 17,
+        "type": "electrictower",
+        "level": 20
+      },
+      {
+        "id": "pve-lasertower-240",
+        "tx": 7,
+        "ty": 7,
+        "type": "lasertower",
+        "level": 20
+      },
+      {
+        "id": "pve-lasertower-241",
+        "tx": 21,
+        "ty": 7,
+        "type": "lasertower",
+        "level": 20
+      },
+      {
+        "id": "pve-lasertower-242",
+        "tx": 21,
+        "ty": 21,
+        "type": "lasertower",
+        "level": 20
+      },
+      {
+        "id": "pve-archertower-243",
+        "tx": 8,
+        "ty": 21,
+        "type": "archertower",
+        "level": 20
+      },
+      {
+        "id": "pve-archertower-244",
+        "tx": 13,
+        "ty": 20,
+        "type": "archertower",
+        "level": 20
+      },
+      {
+        "id": "pve-archertower-245",
+        "tx": 17,
+        "ty": 20,
+        "type": "archertower",
+        "level": 20
+      },
+      {
+        "id": "pve-archertower-246",
+        "tx": 21,
+        "ty": 19,
+        "type": "archertower",
+        "level": 20
+      },
+      {
+        "id": "pve-archertower-247",
+        "tx": 21,
+        "ty": 15,
+        "type": "archertower",
+        "level": 20
+      },
+      {
+        "id": "pve-archertower-248",
+        "tx": 21,
+        "ty": 10,
+        "type": "archertower",
+        "level": 20
+      },
+      {
+        "id": "pve-archertower-249",
+        "tx": 17,
+        "ty": 8,
+        "type": "archertower",
+        "level": 20
+      },
+      {
+        "id": "pve-archertower-250",
+        "tx": 12,
+        "ty": 9,
+        "type": "archertower",
+        "level": 20
+      },
+      {
+        "id": "pve-archertower-251",
+        "tx": 8,
+        "ty": 12,
+        "type": "archertower",
+        "level": 20
+      },
+      {
+        "id": "pve-archertower-252",
+        "tx": 9,
+        "ty": 16,
+        "type": "archertower",
+        "level": 20
+      },
+      {
+        "id": "pve-cannon-253",
+        "tx": 6,
+        "ty": 23,
+        "type": "cannon",
+        "level": 20
+      },
+      {
+        "id": "pve-cannon-254",
+        "tx": 12,
+        "ty": 23,
+        "type": "cannon",
+        "level": 20
+      },
+      {
+        "id": "pve-cannon-255",
+        "tx": 19,
+        "ty": 23,
+        "type": "cannon",
+        "level": 20
+      },
+      {
+        "id": "pve-cannon-256",
+        "tx": 23,
+        "ty": 20,
+        "type": "cannon",
+        "level": 20
+      },
+      {
+        "id": "pve-cannon-257",
+        "tx": 23,
+        "ty": 13,
+        "type": "cannon",
+        "level": 20
+      },
+      {
+        "id": "pve-cannon-258",
+        "tx": 23,
+        "ty": 6,
+        "type": "cannon",
+        "level": 20
+      },
+      {
+        "id": "pve-cannon-259",
+        "tx": 17,
+        "ty": 6,
+        "type": "cannon",
+        "level": 20
+      },
+      {
+        "id": "pve-cannon-260",
+        "tx": 10,
+        "ty": 6,
+        "type": "cannon",
+        "level": 20
+      },
+      {
+        "id": "pve-cannon-261",
+        "tx": 6,
+        "ty": 9,
+        "type": "cannon",
+        "level": 20
+      },
+      {
+        "id": "pve-cannon-262",
+        "tx": 6,
+        "ty": 16,
+        "type": "cannon",
+        "level": 20
+      },
+      {
+        "id": "pve-vault-263",
+        "tx": 7,
+        "ty": 14,
+        "type": "vault",
+        "level": 20
+      },
+      {
+        "id": "pve-vault-264",
+        "tx": 14,
+        "ty": 21,
+        "type": "vault",
+        "level": 20
+      },
+      {
+        "id": "pve-vault-265",
+        "tx": 21,
+        "ty": 14,
+        "type": "vault",
+        "level": 20
+      },
+      {
+        "id": "pve-vault-266",
+        "tx": 14,
+        "ty": 7,
+        "type": "vault",
+        "level": 20
+      },
+      {
+        "id": "pve-vault-267",
+        "tx": 7,
+        "ty": 21,
+        "type": "vault",
+        "level": 20
+      },
+      {
+        "id": "pve-spiketrap-268",
+        "tx": 13,
+        "ty": 23,
+        "type": "spiketrap",
+        "level": 20
+      },
+      {
+        "id": "pve-powdermine-269",
+        "tx": 14,
+        "ty": 23,
+        "type": "powdermine",
+        "level": 20
+      },
+      {
+        "id": "pve-pitfall-270",
+        "tx": 15,
+        "ty": 23,
+        "type": "pitfall",
+        "level": 20
+      },
+      {
+        "id": "pve-spiketrap-271",
+        "tx": 16,
+        "ty": 23,
+        "type": "spiketrap",
+        "level": 20
+      },
+      {
+        "id": "pve-airmine-272",
+        "tx": 6,
+        "ty": 13,
+        "type": "airmine",
+        "level": 20
+      },
+      {
+        "id": "pve-pitfall-273",
+        "tx": 6,
+        "ty": 14,
+        "type": "pitfall",
+        "level": 20
+      },
+      {
+        "id": "pve-spiketrap-274",
+        "tx": 6,
+        "ty": 15,
+        "type": "spiketrap",
+        "level": 20
+      },
+      {
+        "id": "pve-powdermine-275",
+        "tx": 13,
+        "ty": 6,
+        "type": "powdermine",
+        "level": 20
+      },
+      {
+        "id": "pve-pitfall-276",
+        "tx": 14,
+        "ty": 6,
+        "type": "pitfall",
+        "level": 20
+      },
+      {
+        "id": "pve-airmine-277",
+        "tx": 15,
+        "ty": 6,
+        "type": "airmine",
+        "level": 20
+      },
+      {
+        "id": "pve-powdermine-278",
+        "tx": 16,
+        "ty": 6,
+        "type": "powdermine",
+        "level": 20
+      },
+      {
+        "id": "pve-pitfall-279",
+        "tx": 23,
+        "ty": 14,
+        "type": "pitfall",
+        "level": 20
+      },
+      {
+        "id": "pve-spiketrap-280",
+        "tx": 23,
+        "ty": 15,
+        "type": "spiketrap",
+        "level": 20
+      },
+      {
+        "id": "pve-powdermine-281",
+        "tx": 23,
+        "ty": 16,
+        "type": "powdermine",
+        "level": 20
+      },
+      {
+        "id": "pve-airmine-282",
+        "tx": 7,
+        "ty": 23,
+        "type": "airmine",
+        "level": 20
+      },
+      {
+        "id": "pve-spiketrap-283",
+        "tx": 8,
+        "ty": 23,
+        "type": "spiketrap",
+        "level": 20
+      },
+      {
+        "id": "pve-powdermine-284",
+        "tx": 9,
+        "ty": 23,
+        "type": "powdermine",
+        "level": 20
+      },
+      {
+        "id": "pve-pitfall-285",
+        "tx": 10,
+        "ty": 23,
+        "type": "pitfall",
+        "level": 20
+      },
+      {
+        "id": "pve-spiketrap-286",
+        "tx": 11,
+        "ty": 23,
+        "type": "spiketrap",
+        "level": 20
+      },
+      {
+        "id": "pve-airmine-287",
+        "tx": 17,
+        "ty": 23,
+        "type": "airmine",
+        "level": 20
+      },
+      {
+        "id": "pve-camp-288",
+        "tx": 3,
+        "ty": 26,
+        "type": "camp",
+        "level": 20
+      },
+      {
+        "id": "pve-camp-289",
+        "tx": 8,
+        "ty": 26,
+        "type": "camp",
+        "level": 20
+      },
+      {
+        "id": "pve-camp-290",
+        "tx": 14,
+        "ty": 26,
+        "type": "camp",
+        "level": 20
+      },
+      {
+        "id": "pve-camp-291",
+        "tx": 19,
+        "ty": 26,
+        "type": "camp",
+        "level": 20
+      },
+      {
+        "id": "pve-goldforge-292",
+        "tx": 25,
+        "ty": 26,
+        "type": "goldforge",
+        "level": 20
+      },
+      {
+        "id": "pve-barracks-293",
+        "tx": 26,
+        "ty": 24,
+        "type": "barracks",
+        "level": 20
+      },
+      {
+        "id": "pve-barracks-294",
+        "tx": 26,
+        "ty": 20,
+        "type": "barracks",
+        "level": 20
+      },
+      {
+        "id": "pve-barracks-295",
+        "tx": 26,
+        "ty": 15,
+        "type": "barracks",
+        "level": 20
+      },
+      {
+        "id": "pve-barracks-296",
+        "tx": 26,
+        "ty": 9,
+        "type": "barracks",
+        "level": 20
+      },
+      {
+        "id": "pve-forge-297",
+        "tx": 27,
+        "ty": 2,
+        "type": "forge",
+        "level": 20
+      },
+      {
+        "id": "pve-mine-298",
+        "tx": 22,
+        "ty": 2,
+        "type": "mine",
+        "level": 20
+      },
+      {
+        "id": "pve-mine-299",
+        "tx": 16,
+        "ty": 2,
+        "type": "mine",
+        "level": 20
+      },
+      {
+        "id": "pve-mine-300",
+        "tx": 11,
+        "ty": 2,
+        "type": "mine",
+        "level": 20
+      },
+      {
+        "id": "pve-mine-301",
+        "tx": 5,
+        "ty": 2,
+        "type": "mine",
+        "level": 20
+      },
+      {
+        "id": "pve-mine-302",
+        "tx": 2,
+        "ty": 4,
+        "type": "mine",
+        "level": 20
+      },
+      {
+        "id": "pve-mine-303",
+        "tx": 2,
+        "ty": 10,
+        "type": "mine",
+        "level": 20
+      },
+      {
+        "id": "pve-mine-304",
+        "tx": 2,
+        "ty": 15,
+        "type": "mine",
+        "level": 20
+      },
+      {
+        "id": "pve-mine-305",
+        "tx": 2,
+        "ty": 21,
+        "type": "mine",
+        "level": 20
+      }
+    ],
+    "keepLevel": 20,
+    "surplusShards": 0,
+    "defenderHeroes": [
+      {
+        "hero": "theodor",
+        "level": 18,
+        "guardTx": 15,
+        "guardTy": 10
+      }
+    ]
+  },
+  "seed": 1433009071,
+  "army": {
+    "levels": {
+      "mage": 20,
+      "giant": 16,
+      "troll": 1,
+      "bowman": 20,
+      "dragon": 19,
+      "tunneler": 1,
+      "turrider": 16,
+      "wyrmling": 1,
+      "gloamfang": 8,
+      "hexbarrow": 7,
+      "kegrunner": 1,
+      "plunderer": 1,
+      "barrowling": 1,
+      "direwyvern": 11,
+      "highlander": 6,
+      "bilgewraith": 2
+    },
+    "heroLevels": {
+      "vex": 20,
+      "theodor": 20
+    },
+    "heroLoadouts": {
+      "theodor": {
+        "hash": "3d69a7d39e26abf0cb40914dffb45e190127101f6e558c3a0706c3994540c6d3",
+        "version": 6,
+        "modifiers": {
+          "hero_hp_bps": 1200,
+          "move_speed_bps": -500,
+          "hero_damage_bps": 0,
+          "wall_damage_bps": 0,
+          "ability_damage_bps": 0,
+          "allied_troop_hp_bps": 600,
+          "cooldown_reduction_bps": 0,
+          "allied_troop_damage_bps": 600,
+          "first_hit_reduction_bps": 0,
+          "incoming_damage_reduction_bps": 0
+        },
+        "catalogRevision": 2
+      }
+    }
+  },
+  "orders": {
+    "deploys": [
+      {
+        "tx": 31,
+        "ty": 4,
+        "tMs": 0,
+        "troop": "hexbarrow"
+      },
+      {
+        "tx": 31,
+        "ty": 6,
+        "tMs": 0,
+        "troop": "hexbarrow"
+      },
+      {
+        "tx": 31,
+        "ty": 6,
+        "tMs": 0,
+        "troop": "hexbarrow"
+      },
+      {
+        "tx": 31,
+        "ty": 7,
+        "tMs": 0,
+        "troop": "hexbarrow"
+      },
+      {
+        "tx": 30,
+        "ty": 10,
+        "tMs": 0,
+        "troop": "hexbarrow"
+      },
+      {
+        "tx": 30,
+        "ty": 12,
+        "tMs": 0,
+        "troop": "hexbarrow"
+      },
+      {
+        "tx": 30,
+        "ty": 15,
+        "tMs": 0,
+        "troop": "hexbarrow"
+      },
+      {
+        "tx": 30,
+        "ty": 17,
+        "tMs": 0,
+        "troop": "hexbarrow"
+      },
+      {
+        "tx": 29,
+        "ty": 20,
+        "tMs": 0,
+        "troop": "hexbarrow"
+      },
+      {
+        "tx": 29,
+        "ty": 23,
+        "tMs": 0,
+        "troop": "hexbarrow"
+      },
+      {
+        "tx": 29,
+        "ty": 4,
+        "tMs": 0,
+        "troop": "hexbarrow"
+      },
+      {
+        "tx": 29,
+        "ty": 4,
+        "tMs": 0,
+        "troop": "hexbarrow"
+      },
+      {
+        "tx": 12,
+        "ty": 0,
+        "tMs": 0,
+        "troop": "direwyvern"
+      },
+      {
+        "tx": 16,
+        "ty": -1,
+        "tMs": 401,
+        "troop": "direwyvern"
+      },
+      {
+        "tx": 17,
+        "ty": -1,
+        "tMs": 3295,
+        "troop": "direwyvern"
+      },
+      {
+        "tx": 17,
+        "ty": -1,
+        "tMs": 5178,
+        "troop": "direwyvern"
+      },
+      {
+        "tx": 18,
+        "ty": -1,
+        "tMs": 6685,
+        "troop": "direwyvern"
+      },
+      {
+        "tx": 28,
+        "ty": 7,
+        "tMs": 28707,
+        "troop": "direwyvern"
+      }
+    ],
+    "heroDeploys": [
+      {
+        "tx": 30,
+        "ty": 2,
+        "tMs": 0,
+        "hero": "vex",
+        "level": 20
+      },
+      {
+        "tx": 28,
+        "ty": 26,
+        "tMs": 0,
+        "hero": "theodor",
+        "level": 20,
+        "loadout": {
+          "hash": "3d69a7d39e26abf0cb40914dffb45e190127101f6e558c3a0706c3994540c6d3",
+          "version": 6,
+          "modifiers": {
+            "hero_hp_bps": 1200,
+            "move_speed_bps": -500,
+            "hero_damage_bps": 0,
+            "wall_damage_bps": 0,
+            "ability_damage_bps": 0,
+            "allied_troop_hp_bps": 600,
+            "cooldown_reduction_bps": 0,
+            "allied_troop_damage_bps": 600,
+            "first_hit_reduction_bps": 0,
+            "incoming_damage_reduction_bps": 0
+          },
+          "catalogRevision": 2
+        }
+      }
+    ]
+  },
+  "expected": {
+    "destructionPct": 89,
+    "stars": 2,
+    "events": 18812
+  },
+  "commands": [
+    {
+      "sequence": 0,
+      "clientCommandId": "archived-command-0",
+      "serverOffsetMs": 0,
+      "acceptedAt": "2026-09-05T13:59:49.844Z",
+      "kind": "deploy",
+      "payload": {
+        "tx": 31,
+        "ty": 4,
+        "troop": "hexbarrow"
+      }
+    },
+    {
+      "sequence": 1,
+      "clientCommandId": "archived-command-1",
+      "serverOffsetMs": 0,
+      "acceptedAt": "2026-09-05T13:59:50.136Z",
+      "kind": "deploy",
+      "payload": {
+        "tx": 31,
+        "ty": 6,
+        "troop": "hexbarrow"
+      }
+    },
+    {
+      "sequence": 2,
+      "clientCommandId": "archived-command-2",
+      "serverOffsetMs": 0,
+      "acceptedAt": "2026-09-05T13:59:50.355Z",
+      "kind": "deploy",
+      "payload": {
+        "tx": 31,
+        "ty": 6,
+        "troop": "hexbarrow"
+      }
+    },
+    {
+      "sequence": 3,
+      "clientCommandId": "archived-command-3",
+      "serverOffsetMs": 0,
+      "acceptedAt": "2026-09-05T13:59:50.506Z",
+      "kind": "deploy",
+      "payload": {
+        "tx": 31,
+        "ty": 7,
+        "troop": "hexbarrow"
+      }
+    },
+    {
+      "sequence": 4,
+      "clientCommandId": "archived-command-4",
+      "serverOffsetMs": 0,
+      "acceptedAt": "2026-09-05T13:59:50.623Z",
+      "kind": "deploy",
+      "payload": {
+        "tx": 30,
+        "ty": 10,
+        "troop": "hexbarrow"
+      }
+    },
+    {
+      "sequence": 5,
+      "clientCommandId": "archived-command-5",
+      "serverOffsetMs": 0,
+      "acceptedAt": "2026-09-05T13:59:50.765Z",
+      "kind": "deploy",
+      "payload": {
+        "tx": 30,
+        "ty": 12,
+        "troop": "hexbarrow"
+      }
+    },
+    {
+      "sequence": 6,
+      "clientCommandId": "archived-command-6",
+      "serverOffsetMs": 0,
+      "acceptedAt": "2026-09-05T13:59:50.870Z",
+      "kind": "deploy",
+      "payload": {
+        "tx": 30,
+        "ty": 15,
+        "troop": "hexbarrow"
+      }
+    },
+    {
+      "sequence": 7,
+      "clientCommandId": "archived-command-7",
+      "serverOffsetMs": 0,
+      "acceptedAt": "2026-09-05T13:59:51.104Z",
+      "kind": "deploy",
+      "payload": {
+        "tx": 30,
+        "ty": 17,
+        "troop": "hexbarrow"
+      }
+    },
+    {
+      "sequence": 8,
+      "clientCommandId": "archived-command-8",
+      "serverOffsetMs": 0,
+      "acceptedAt": "2026-09-05T13:59:51.350Z",
+      "kind": "deploy",
+      "payload": {
+        "tx": 29,
+        "ty": 20,
+        "troop": "hexbarrow"
+      }
+    },
+    {
+      "sequence": 9,
+      "clientCommandId": "archived-command-9",
+      "serverOffsetMs": 0,
+      "acceptedAt": "2026-09-05T13:59:51.560Z",
+      "kind": "deploy",
+      "payload": {
+        "tx": 29,
+        "ty": 23,
+        "troop": "hexbarrow"
+      }
+    },
+    {
+      "sequence": 10,
+      "clientCommandId": "archived-command-10",
+      "serverOffsetMs": 0,
+      "acceptedAt": "2026-09-05T13:59:53.232Z",
+      "kind": "hero",
+      "payload": {
+        "tx": 30,
+        "ty": 2,
+        "hero": "vex"
+      }
+    },
+    {
+      "sequence": 11,
+      "clientCommandId": "archived-command-11",
+      "serverOffsetMs": 0,
+      "acceptedAt": "2026-09-05T13:59:56.389Z",
+      "kind": "hero",
+      "payload": {
+        "tx": 28,
+        "ty": 26,
+        "hero": "theodor"
+      }
+    },
+    {
+      "sequence": 12,
+      "clientCommandId": "archived-command-12",
+      "serverOffsetMs": 0,
+      "acceptedAt": "2026-09-05T13:59:58.297Z",
+      "kind": "deploy",
+      "payload": {
+        "tx": 29,
+        "ty": 4,
+        "troop": "hexbarrow"
+      }
+    },
+    {
+      "sequence": 13,
+      "clientCommandId": "archived-command-13",
+      "serverOffsetMs": 0,
+      "acceptedAt": "2026-09-05T13:59:58.492Z",
+      "kind": "deploy",
+      "payload": {
+        "tx": 29,
+        "ty": 4,
+        "troop": "hexbarrow"
+      }
+    },
+    {
+      "sequence": 14,
+      "clientCommandId": "archived-command-14",
+      "serverOffsetMs": 0,
+      "acceptedAt": "2026-09-05T14:00:11.546Z",
+      "kind": "deploy",
+      "payload": {
+        "tx": 12,
+        "ty": 0,
+        "troop": "direwyvern"
+      }
+    },
+    {
+      "sequence": 15,
+      "clientCommandId": "archived-command-15",
+      "serverOffsetMs": 401,
+      "acceptedAt": "2026-09-05T14:00:11.971Z",
+      "kind": "start",
+      "payload": {
+        "automatic": true,
+        "expectedClockRevision": 0
+      }
+    },
+    {
+      "sequence": 16,
+      "clientCommandId": "archived-command-16",
+      "serverOffsetMs": 401,
+      "acceptedAt": "2026-09-05T14:00:11.971Z",
+      "kind": "deploy",
+      "payload": {
+        "tx": 16,
+        "ty": -1,
+        "troop": "direwyvern"
+      }
+    },
+    {
+      "sequence": 17,
+      "clientCommandId": "archived-command-17",
+      "serverOffsetMs": 3295,
+      "acceptedAt": "2026-09-05T14:00:14.865Z",
+      "kind": "deploy",
+      "payload": {
+        "tx": 17,
+        "ty": -1,
+        "troop": "direwyvern"
+      }
+    },
+    {
+      "sequence": 18,
+      "clientCommandId": "archived-command-18",
+      "serverOffsetMs": 5178,
+      "acceptedAt": "2026-09-05T14:00:16.748Z",
+      "kind": "deploy",
+      "payload": {
+        "tx": 17,
+        "ty": -1,
+        "troop": "direwyvern"
+      }
+    },
+    {
+      "sequence": 19,
+      "clientCommandId": "archived-command-19",
+      "serverOffsetMs": 6685,
+      "acceptedAt": "2026-09-05T14:00:18.255Z",
+      "kind": "deploy",
+      "payload": {
+        "tx": 18,
+        "ty": -1,
+        "troop": "direwyvern"
+      }
+    },
+    {
+      "sequence": 20,
+      "clientCommandId": "archived-command-20",
+      "serverOffsetMs": 28707,
+      "acceptedAt": "2026-09-05T14:00:40.277Z",
+      "kind": "deploy",
+      "payload": {
+        "tx": 28,
+        "ty": 7,
+        "troop": "direwyvern"
+      }
+    }
+  ]
+}

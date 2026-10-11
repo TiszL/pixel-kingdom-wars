@@ -1,0 +1,33 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "noEmit": true
+  },
+  "include": [
+    "src",
+    "test",
+    "drizzle.config.ts",
+    "vitest.config.ts"
+  ],
+  "exclude": [
+    "test/clan-charter-client-core.fixture.ts",
+    "test/clan-charter-migration-core.fixture.ts",
+    "test/clan-charter-retirement-core.fixture.ts",
+    "test/clan-charter-sales-core.fixture.ts",
+    "test/clan-charter-tournament-core.fixture.ts",
+    "test/fixtures/charterSalesCore.ts",
+    "test/fixtures/charterTournamentCore.ts",
+    "test/fixtures/fundedMiningProgram.fixture.ts",
+    "test/fixtures/fundedMiningProgramArtifact.ts",
+    "test/fixtures/resourceMiningProgram.fixture.ts",
+    "test/fixtures/resourceMiningProgramArtifact.ts",
+    "test/fixtures/vehicleClientCore.ts",
+    "test/fixtures/vehicleIssuance.ts",
+    "test/fixtures/vehicleMaterialCore.ts",
+    "test/fixtures/vehicleRequestCore.ts",
+    "test/vehicle-client-core.fixture.ts",
+    "test/vehicle-issuance-core.fixture.ts",
+    "test/vehicle-material-core.fixture.ts",
+    "test/vehicle-request-core.fixture.ts"
+  ]
+}

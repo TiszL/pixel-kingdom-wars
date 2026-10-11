@@ -1,0 +1,34 @@
+import { randomUUID } from 'node:crypto';
+import { FEEDBACK_ISSUES as LIMIT } from '@shardkeep/shared/feedback';
+import { sql } from 'drizzle-orm';
+import { afterAll, expect, it } from 'vitest';
+import { createDb } from '../src/db/client';
+import { feedbackIssueActions, feedbackIssues } from '../src/db/schema';
+import { getAdminFeedbackIssueHistory, listAdminFeedbackIssues } from '../src/game/feedbackIssueHistory';
+import { TEST_DATABASE_URL } from './db-url';
+const conn=createDb(TEST_DATABASE_URL);
+afterAll(async()=>{await conn.sql.end();});
+it('traverses more than200 filtered draft issues without timestamp gaps or repetitions',async()=>{
+ const admin=randomUUID(),config={ADMIN_WALLETS:[admin]},query=`needle${randomUUID().replaceAll('-', '')}`;
+ const count=LIMIT.adminPageSize*4+3;
+ const inserted=await conn.db.insert(feedbackIssues).values(Array.from({length:count},(_,i)=>({title:`${query} ${i}`,body:'curated',approvedBy:admin,createdAt:sql`${i % 2 ? '2026-01-12T12:00:00.123987Z' : '2026-01-12T12:00:00.123123Z'}::timestamptz`}))).returning({id:feedbackIssues.id});
+ const ids:string[]=[];let cursor:string|null=null;
+ do{const page=await listAdminFeedbackIssues(conn.db,config,admin,{query,published:'false',...(cursor?{cursor}:{})});ids.push(...page.issues.map(i=>i.id));cursor=page.nextCursor;}while(cursor);
+ expect(ids).toHaveLength(count);expect(new Set(ids)).toEqual(new Set(inserted.map(i=>i.id)));
+ await expect(listAdminFeedbackIssues(conn.db,config,'other',{query})).rejects.toMatchObject({statusCode:404});
+ expect((await listAdminFeedbackIssues(conn.db,config,admin,{query,published:'true'})).issues).toHaveLength(0);
+});
+it('paginates private immutable history, refuses invalid/cross-mode cursors, and excludes another issue',async()=>{
+ const admin=randomUUID(),config={ADMIN_WALLETS:[admin]};
+ const [issue]=await conn.db.insert(feedbackIssues).values({title:'history',body:'curated',approvedBy:admin}).returning();
+ const total=LIMIT.adminPageSize+1;
+ await conn.db.insert(feedbackIssueActions).values(Array.from({length:total},()=>({admin,requestId:randomUUID(),requestHash:'hash',action:'update',reason:'Private audit reason',receipt:{issueId:issue!.id},createdAt:new Date('2026-01-12T12:00:00.123Z')})));
+ await conn.db.insert(feedbackIssueActions).values({admin,requestId:randomUUID(),requestHash:'hash',action:'update',reason:'Other private issue',receipt:{issueId:randomUUID()}});
+ const page=await getAdminFeedbackIssueHistory(conn.db,config,admin,issue!.id);expect(page.actions).toHaveLength(LIMIT.adminPageSize);
+ const next=await getAdminFeedbackIssueHistory(conn.db,config,admin,issue!.id,{cursor:page.nextCursor!});expect(next.actions).toHaveLength(1);
+ expect(new Set([...page.actions,...next.actions].map(a=>a.id)).size).toBe(total);
+ expect(JSON.stringify(page)).not.toContain('Other private issue');
+ await expect(getAdminFeedbackIssueHistory(conn.db,config,'other',issue!.id)).rejects.toMatchObject({statusCode:404});
+ for(const cursor of ['bad','!!',page.nextCursor!.repeat(LIMIT.cursorMaxLen)])await expect(getAdminFeedbackIssueHistory(conn.db,config,admin,issue!.id,{cursor})).rejects.toMatchObject({statusCode:400});
+ await expect(listAdminFeedbackIssues(conn.db,config,admin,{cursor:page.nextCursor!})).rejects.toMatchObject({statusCode:400});
+});

@@ -1,0 +1,5631 @@
+{
+  "schemaVersion": 1,
+  "sourceCommit": "427381a2adf934bbcc902baefc207a655b185eb6",
+  "coverage": "curated-foundation-and-canonical-native-presentation",
+  "schemaSources": {
+    "curated": "tools/wire-contracts.mjs",
+    "native": "apps/api/src/native/contracts.ts",
+    "zod": [
+      "apps/api/src/game/trainingRecovery.ts",
+      "apps/api/src/game/constructionReceipt.ts",
+      "apps/api/src/game/trainingCancellationReceipt.ts",
+      "apps/api/src/game/trainingSchedule.ts",
+      "apps/api/src/game/researchConsent.ts",
+      "apps/api/src/game/heroConsent.ts",
+      "apps/api/src/game/heroReceipt.ts",
+      "apps/api/src/money/withdrawalReceipt.ts",
+      "apps/api/src/game/conversionReceipt.ts",
+      "apps/api/src/game/forgeContributionReceipt.ts"
+    ]
+  },
+  "endpoints": [
+    {
+      "method": "GET",
+      "path": "/version",
+      "response": "Version"
+    },
+    {
+      "method": "GET",
+      "path": "/auth/challenge",
+      "response": "AuthChallenge"
+    },
+    {
+      "method": "GET",
+      "path": "/auth/login/status",
+      "response": "LoginStatus"
+    },
+    {
+      "method": "POST",
+      "path": "/auth/verify",
+      "response": "AuthSession"
+    },
+    {
+      "method": "POST",
+      "path": "/auth/login/verify",
+      "response": "AuthSession"
+    },
+    {
+      "method": "GET",
+      "path": "/playtest/access",
+      "response": "PlaytestAccess"
+    },
+    {
+      "method": "GET",
+      "path": "/base",
+      "response": "Base"
+    },
+    {
+      "method": "GET",
+      "path": "/bases",
+      "response": "BasesDirectory"
+    },
+    {
+      "method": "GET",
+      "path": "/army",
+      "response": "ArmyState"
+    },
+    {
+      "method": "POST",
+      "path": "/army/training/quote",
+      "body": "TrainingQuoteBody",
+      "response": "TrainingQuote"
+    },
+    {
+      "method": "POST",
+      "path": "/army/training/batch",
+      "body": "TrainingBatchBody",
+      "response": "TrainingBatchResult"
+    },
+    {
+      "method": "POST",
+      "path": "/army/train/speedup",
+      "body": "TrainingSpeedupBody",
+      "response": "TrainingSpeedupResult"
+    },
+    {
+      "method": "POST",
+      "path": "/army/research",
+      "body": "ResearchStartBody"
+    },
+    {
+      "method": "POST",
+      "path": "/army/research/speedup",
+      "body": "ResearchFinishBody"
+    },
+    {
+      "method": "POST",
+      "path": "/army/research/:troop/cancel",
+      "body": "ResearchCancelBody"
+    },
+    {
+      "method": "GET",
+      "path": "/heroes",
+      "response": "HeroesState"
+    },
+    {
+      "method": "POST",
+      "path": "/heroes/:hero/upgrade",
+      "body": "HeroUpgradeBody"
+    },
+    {
+      "method": "POST",
+      "path": "/heroes/:hero/recovery/speedup",
+      "body": "HeroRecoveryBody"
+    },
+    {
+      "method": "POST",
+      "path": "/raids",
+      "response": "RaidCreatedEnvelope"
+    },
+    {
+      "method": "POST",
+      "path": "/campaign/:stage/raid",
+      "response": "RaidCreatedEnvelope"
+    },
+    {
+      "method": "GET",
+      "path": "/raids/pending",
+      "response": "PendingRaidResumes"
+    },
+    {
+      "method": "GET",
+      "path": "/raids/pending/:id",
+      "response": "PendingRaidResumeEnvelope"
+    },
+    {
+      "method": "GET",
+      "path": "/bases/:baseId/battles/:raidId/replay",
+      "response": "BattleReplay"
+    },
+    {
+      "method": "GET",
+      "path": "/battles/participated/:raidId/replay",
+      "response": "BattleReplay"
+    },
+    {
+      "method": "GET",
+      "path": "/campaign/:stage/preview",
+      "response": "CampaignPreview"
+    },
+    {
+      "method": "GET",
+      "path": "/globe/fantasy",
+      "response": "FantasyGlobe"
+    },
+    {
+      "method": "GET",
+      "path": "/globe/fantasy/search",
+      "response": "FantasySearch"
+    },
+    {
+      "method": "GET",
+      "path": "/globe/fantasy/parcels",
+      "response": "FantasyViewport"
+    },
+    {
+      "method": "GET",
+      "path": "/globe/fantasy/parcels/:tileId",
+      "response": "FantasyParcel"
+    },
+    {
+      "method": "GET",
+      "path": "/native/capabilities",
+      "response": "NativeCapabilities"
+    },
+    {
+      "method": "GET",
+      "path": "/raids/:raidId/presentation",
+      "protocolVersion": 1,
+      "response": "NativePresentation"
+    },
+    {
+      "method": "GET",
+      "path": "/raids/:raidId/presentation",
+      "protocolVersion": 2,
+      "response": "NativePresentationPage"
+    },
+    {
+      "method": "GET",
+      "path": "/army/training/receipt",
+      "query": "TrainingReceiptQuery",
+      "response": "TrainingRecovery"
+    },
+    {
+      "method": "POST",
+      "path": "/army/training/close",
+      "body": "TrainingCloseBody",
+      "response": "TrainingRecovery"
+    },
+    {
+      "method": "GET",
+      "path": "/base/buildings/receipt",
+      "response": "ConstructionReceipt"
+    },
+    {
+      "method": "POST",
+      "path": "/army/train/:queueId/cancel",
+      "params": "TrainingCancellationPath",
+      "body": "TrainingCancellationBody",
+      "response": "TrainingCancellationResult"
+    },
+    {
+      "method": "GET",
+      "path": "/army/train/:queueId/cancel/receipt",
+      "params": "TrainingCancellationPath",
+      "query": "TrainingCancellationReceiptQuery",
+      "response": "TrainingCancellationReceipt"
+    },
+    {
+      "method": "GET",
+      "path": "/heroes/:hero/upgrade/receipt",
+      "query": "HeroUpgradeReceiptQuery",
+      "response": "HeroUpgradeReceipt"
+    },
+    {
+      "method": "GET",
+      "path": "/heroes/:hero/recovery/speedup/receipt",
+      "query": "HeroRecoveryReceiptQuery",
+      "response": "HeroRecoveryReceipt"
+    },
+    {
+      "method": "GET",
+      "path": "/withdrawals/receipt",
+      "query": "WithdrawalReceiptQuery",
+      "response": "WithdrawalReceipt"
+    },
+    {
+      "method": "GET",
+      "path": "/forge/convert/receipt",
+      "query": "ConversionReceiptQuery",
+      "response": "ConversionReceipt"
+    },
+    {
+      "method": "GET",
+      "path": "/forge/contribute/receipt",
+      "query": "ForgeContributionReceiptQuery",
+      "response": "ForgeContributionReceipt"
+    }
+  ],
+  "schemas": {
+    "Version": {
+      "type": "object",
+      "properties": {
+        "version": {
+          "type": "string"
+        },
+        "gitSha": {
+          "type": "string"
+        },
+        "builtAt": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "simVersion": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "version",
+        "gitSha",
+        "builtAt",
+        "simVersion"
+      ],
+      "additionalProperties": true
+    },
+    "AuthChallenge": {
+      "type": "object",
+      "properties": {
+        "nonce": {
+          "type": "string"
+        },
+        "message": {
+          "type": "string"
+        },
+        "expiresAt": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "nonce",
+        "message",
+        "expiresAt"
+      ],
+      "additionalProperties": true
+    },
+    "LoginStatus": {
+      "type": "object",
+      "properties": {
+        "loginRequired": {
+          "type": "boolean"
+        },
+        "wallet": {
+          "type": "string"
+        },
+        "expired": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "loginRequired"
+      ],
+      "additionalProperties": true
+    },
+    "AuthSession": {
+      "type": "object",
+      "properties": {
+        "wallet": {
+          "type": "string"
+        },
+        "expiresAt": {
+          "type": "string"
+        },
+        "loginRequired": {
+          "type": "boolean"
+        },
+        "entryPaid": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "wallet"
+      ],
+      "additionalProperties": true
+    },
+    "Building": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "type": {
+          "type": "string"
+        },
+        "level": {
+          "type": "integer"
+        },
+        "tx": {
+          "type": "integer"
+        },
+        "ty": {
+          "type": "integer"
+        },
+        "underConstruction": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "id",
+        "type",
+        "level",
+        "tx",
+        "ty",
+        "underConstruction"
+      ],
+      "additionalProperties": true
+    },
+    "BaseVisualContext": {
+      "type": "object",
+      "properties": {
+        "version": {
+          "type": "integer",
+          "const": 1
+        },
+        "realmId": {
+          "type": "string",
+          "enum": [
+            "frostveil",
+            "elderwood",
+            "sunscar",
+            "crownlands",
+            "seeker-reach",
+            "stormcairn",
+            "thornwake",
+            "cinderfall"
+          ]
+        },
+        "artVersion": {
+          "type": "integer",
+          "enum": [
+            1,
+            2
+          ]
+        },
+        "groundRevision": {
+          "type": "integer",
+          "enum": [
+            1,
+            2,
+            3
+          ]
+        }
+      },
+      "required": [
+        "version",
+        "realmId",
+        "artVersion"
+      ],
+      "additionalProperties": true
+    },
+    "Base": {
+      "type": "object",
+      "properties": {
+        "plotVersion": {
+          "type": "integer",
+          "enum": [
+            1,
+            2
+          ]
+        },
+        "baseId": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "visualContext": {
+          "$ref": "#/schemas/BaseVisualContext"
+        },
+        "player": {
+          "type": "object"
+        },
+        "claim": {
+          "type": "object"
+        },
+        "buildings": {
+          "type": "array",
+          "items": {
+            "$ref": "#/schemas/Building"
+          }
+        },
+        "jobs": {
+          "type": "array"
+        },
+        "army": {
+          "type": "array"
+        },
+        "freeBuilders": {
+          "type": "integer"
+        },
+        "obstacles": {
+          "type": "array"
+        },
+        "heroes": {
+          "type": "array"
+        },
+        "armyStatus": {
+          "type": "object"
+        },
+        "energy": {
+          "type": "object"
+        },
+        "shield": {
+          "type": [
+            "object",
+            "null"
+          ]
+        },
+        "warzone": {
+          "type": "object"
+        },
+        "defences": {
+          "type": "object"
+        }
+      },
+      "required": [
+        "visualContext",
+        "player",
+        "claim",
+        "buildings",
+        "jobs",
+        "army",
+        "freeBuilders"
+      ],
+      "additionalProperties": true
+    },
+    "FantasyTile": {
+      "type": "object",
+      "properties": {
+        "worldId": {
+          "type": "string"
+        },
+        "tileId": {
+          "type": "integer"
+        },
+        "realmId": {
+          "type": "string"
+        },
+        "allocation": {
+          "type": "string",
+          "enum": [
+            "ordinary",
+            "genesis",
+            "seeker"
+          ]
+        },
+        "lon": {
+          "type": "number"
+        },
+        "lat": {
+          "type": "number"
+        }
+      },
+      "required": [
+        "worldId",
+        "tileId",
+        "realmId",
+        "allocation",
+        "lon",
+        "lat"
+      ],
+      "additionalProperties": true
+    },
+    "BaseSummary": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "deedAssetId": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "status": {
+          "type": "string"
+        },
+        "keepLevel": {
+          "type": "integer"
+        },
+        "builders": {
+          "type": "integer"
+        },
+        "expansions": {
+          "type": "integer"
+        },
+        "landPaidAt": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "slot": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "earthCell": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "countryA3": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "fantasyLocation": {
+          "anyOf": [
+            {
+              "$ref": "#/schemas/FantasyTile"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      },
+      "required": [
+        "id",
+        "deedAssetId",
+        "status",
+        "keepLevel",
+        "builders",
+        "expansions",
+        "landPaidAt",
+        "slot",
+        "earthCell",
+        "countryA3",
+        "fantasyLocation"
+      ],
+      "additionalProperties": true
+    },
+    "BasesDirectory": {
+      "type": "object",
+      "properties": {
+        "enabled": {
+          "type": "boolean"
+        },
+        "worldId": {
+          "type": "string",
+          "enum": [
+            "fantasy-v1",
+            "legacy-earth"
+          ]
+        },
+        "maxActive": {
+          "type": "integer"
+        },
+        "capabilities": {
+          "type": "object",
+          "properties": {
+            "baseScopedReads": {
+              "type": "boolean"
+            },
+            "baseScopedMutations": {
+              "type": "boolean"
+            },
+            "cellReservations": {
+              "type": "boolean"
+            }
+          },
+          "required": [
+            "baseScopedReads",
+            "baseScopedMutations",
+            "cellReservations"
+          ],
+          "additionalProperties": true
+        },
+        "nextLandPurchaseKind": {},
+        "bases": {
+          "type": "array",
+          "items": {
+            "$ref": "#/schemas/BaseSummary"
+          }
+        }
+      },
+      "required": [
+        "enabled",
+        "worldId",
+        "maxActive",
+        "capabilities",
+        "bases"
+      ],
+      "additionalProperties": true
+    },
+    "TrainingCompositionItem": {
+      "type": "object",
+      "properties": {
+        "troop": {
+          "type": "string"
+        },
+        "count": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "troop",
+        "count"
+      ],
+      "additionalProperties": true
+    },
+    "ArmyQueueRow": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "troop": {
+          "type": "string"
+        },
+        "startedAt": {
+          "type": "string"
+        },
+        "finishesAt": {
+          "type": "string"
+        },
+        "scheduleVersion": {
+          "type": "integer"
+        },
+        "canCancel": {
+          "type": "boolean"
+        },
+        "refundShards": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "required": [
+        "id",
+        "troop",
+        "startedAt",
+        "finishesAt",
+        "scheduleVersion",
+        "canCancel",
+        "refundShards"
+      ],
+      "additionalProperties": true
+    },
+    "ArmyResearchRow": {
+      "type": "object",
+      "properties": {
+        "troop": {
+          "type": "string"
+        },
+        "toLevel": {
+          "type": "integer"
+        },
+        "finishesAt": {
+          "type": "string"
+        },
+        "episodeId": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "canCancel": {
+          "type": "boolean"
+        },
+        "refundShards": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "required": [
+        "troop",
+        "toLevel",
+        "finishesAt",
+        "episodeId",
+        "canCancel",
+        "refundShards"
+      ],
+      "additionalProperties": true
+    },
+    "ArmyFeatures": {
+      "type": "object",
+      "properties": {
+        "trainingScheduling": {
+          "type": "object",
+          "properties": {
+            "version": {
+              "type": "integer"
+            },
+            "mode": {
+              "type": "string",
+              "enum": [
+                "sequential"
+              ]
+            },
+            "lanes": {
+              "type": "integer"
+            },
+            "consentRequired": {
+              "type": "boolean"
+            }
+          },
+          "required": [
+            "version",
+            "mode",
+            "lanes",
+            "consentRequired"
+          ],
+          "additionalProperties": true
+        },
+        "researchConsent": {
+          "type": "object",
+          "properties": {
+            "version": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "version"
+          ],
+          "additionalProperties": true
+        },
+        "darkAttackerRoster": {
+          "type": "object",
+          "properties": {
+            "enabled": {
+              "type": "boolean"
+            },
+            "code": {
+              "type": "string"
+            },
+            "message": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "enabled",
+            "code",
+            "message"
+          ],
+          "additionalProperties": true
+        }
+      },
+      "required": [
+        "trainingScheduling",
+        "researchConsent",
+        "darkAttackerRoster"
+      ],
+      "additionalProperties": true
+    },
+    "TrainingFreeFinishOffer": {
+      "type": "object",
+      "properties": {
+        "offer": {
+          "type": "string",
+          "enum": [
+            "first_troops"
+          ]
+        },
+        "consent": {
+          "$ref": "#/schemas/TrainingFinishAllConsent"
+        }
+      },
+      "required": [
+        "offer",
+        "consent"
+      ],
+      "additionalProperties": true
+    },
+    "TrainingFreeFinishReceipt": {
+      "type": "object",
+      "properties": {
+        "idempotencyKey": {
+          "type": "string"
+        },
+        "baseId": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "consent": {
+          "$ref": "#/schemas/TrainingFinishAllConsent"
+        },
+        "completed": {
+          "type": "array",
+          "items": {
+            "$ref": "#/schemas/TrainingCompositionItem"
+          }
+        }
+      },
+      "required": [
+        "idempotencyKey",
+        "baseId",
+        "consent",
+        "completed"
+      ],
+      "additionalProperties": true
+    },
+    "ArmyState": {
+      "type": "object",
+      "properties": {
+        "counts": {
+          "type": "object"
+        },
+        "levels": {
+          "type": "object"
+        },
+        "research": {
+          "type": "array",
+          "items": {
+            "$ref": "#/schemas/ArmyResearchRow"
+          }
+        },
+        "queue": {
+          "type": "array",
+          "items": {
+            "$ref": "#/schemas/ArmyQueueRow"
+          }
+        },
+        "rosterPts": {
+          "type": "integer"
+        },
+        "queuedPts": {
+          "type": "integer"
+        },
+        "campCapacityPts": {
+          "type": "integer"
+        },
+        "barracksQueuePts": {
+          "type": "integer"
+        },
+        "unsupportedTroops": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "eliteUnlocks": {},
+        "finishAllQuote": {
+          "$ref": "#/schemas/TrainingFinishAllConsent"
+        },
+        "features": {
+          "$ref": "#/schemas/ArmyFeatures"
+        },
+        "freeFinishAllOffer": {
+          "anyOf": [
+            {
+              "$ref": "#/schemas/TrainingFreeFinishOffer"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "freeFinishAllReceipt": {
+          "anyOf": [
+            {
+              "$ref": "#/schemas/TrainingFreeFinishReceipt"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "freeFinishAllReviewRequired": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "counts",
+        "levels",
+        "research",
+        "queue",
+        "rosterPts",
+        "queuedPts",
+        "campCapacityPts",
+        "barracksQueuePts",
+        "unsupportedTroops",
+        "eliteUnlocks",
+        "finishAllQuote",
+        "features",
+        "freeFinishAllOffer",
+        "freeFinishAllReceipt",
+        "freeFinishAllReviewRequired"
+      ],
+      "additionalProperties": true
+    },
+    "TrainingQuoteBody": {
+      "type": "object",
+      "properties": {
+        "composition": {
+          "type": "array",
+          "items": {
+            "$ref": "#/schemas/TrainingCompositionItem"
+          }
+        },
+        "baseId": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "composition"
+      ],
+      "additionalProperties": true
+    },
+    "TrainingQuoteRemaining": {
+      "type": "object",
+      "properties": {
+        "troop": {
+          "type": "string"
+        },
+        "count": {
+          "type": "integer"
+        },
+        "reason": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "troop",
+        "count",
+        "reason"
+      ],
+      "additionalProperties": true
+    },
+    "TrainingCapacity": {
+      "type": "object",
+      "properties": {
+        "used": {
+          "type": "integer"
+        },
+        "capacity": {
+          "type": "integer"
+        },
+        "after": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "used",
+        "capacity",
+        "after"
+      ],
+      "additionalProperties": true
+    },
+    "TrainingSchedule": {
+      "type": "object",
+      "properties": {
+        "version": {
+          "type": "integer"
+        },
+        "mode": {
+          "type": "string",
+          "enum": [
+            "sequential"
+          ]
+        },
+        "serverNow": {
+          "type": "string"
+        },
+        "startsAt": {
+          "type": "string"
+        },
+        "finishesAt": {
+          "type": "string"
+        },
+        "waitMs": {
+          "type": "integer"
+        },
+        "durationMs": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "version",
+        "mode",
+        "serverNow",
+        "startsAt",
+        "finishesAt",
+        "waitMs",
+        "durationMs"
+      ],
+      "additionalProperties": true
+    },
+    "TrainingQuote": {
+      "type": "object",
+      "properties": {
+        "requested": {
+          "type": "array",
+          "items": {
+            "$ref": "#/schemas/TrainingCompositionItem"
+          }
+        },
+        "queueable": {
+          "type": "array",
+          "items": {
+            "$ref": "#/schemas/TrainingCompositionItem"
+          }
+        },
+        "remaining": {
+          "type": "array",
+          "items": {
+            "$ref": "#/schemas/TrainingQuoteRemaining"
+          }
+        },
+        "costShards": {
+          "type": "string"
+        },
+        "availableShards": {
+          "type": "string"
+        },
+        "camp": {
+          "$ref": "#/schemas/TrainingCapacity"
+        },
+        "barracks": {
+          "$ref": "#/schemas/TrainingCapacity"
+        },
+        "completionSec": {
+          "type": "number"
+        },
+        "consent": {
+          "$ref": "#/schemas/TrainingScheduleConsent"
+        },
+        "schedule": {
+          "$ref": "#/schemas/TrainingSchedule"
+        }
+      },
+      "required": [
+        "requested",
+        "queueable",
+        "remaining",
+        "costShards",
+        "availableShards",
+        "camp",
+        "barracks",
+        "completionSec",
+        "consent",
+        "schedule"
+      ],
+      "additionalProperties": true
+    },
+    "TrainingBatchBody": {
+      "type": "object",
+      "properties": {
+        "composition": {
+          "type": "array",
+          "items": {
+            "$ref": "#/schemas/TrainingCompositionItem"
+          }
+        },
+        "confirmedCostShards": {
+          "type": "string"
+        },
+        "idempotencyKey": {
+          "type": "string"
+        },
+        "baseId": {
+          "type": "string"
+        },
+        "consent": {
+          "$ref": "#/schemas/TrainingScheduleConsent"
+        }
+      },
+      "required": [
+        "composition",
+        "confirmedCostShards",
+        "idempotencyKey"
+      ],
+      "additionalProperties": true
+    },
+    "TrainingBatchQueueItem": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "troop": {
+          "type": "string"
+        },
+        "finishesAt": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "troop",
+        "finishesAt"
+      ],
+      "additionalProperties": true
+    },
+    "TrainingBatchResult": {
+      "type": "object",
+      "properties": {
+        "queue": {
+          "type": "array",
+          "items": {
+            "$ref": "#/schemas/TrainingBatchQueueItem"
+          }
+        },
+        "costShards": {
+          "type": "string"
+        },
+        "replayed": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "queue",
+        "costShards",
+        "replayed"
+      ],
+      "additionalProperties": true
+    },
+    "TrainingSpeedupBody": {
+      "type": "object",
+      "properties": {
+        "idempotencyKey": {
+          "type": "string"
+        },
+        "baseId": {
+          "type": "string"
+        },
+        "consent": {
+          "$ref": "#/schemas/TrainingFinishAllConsent"
+        },
+        "freeOffer": {
+          "type": "string",
+          "enum": [
+            "first_troops"
+          ]
+        }
+      },
+      "required": [
+        "idempotencyKey"
+      ],
+      "additionalProperties": true
+    },
+    "TrainingSpeedupResult": {
+      "type": "object",
+      "properties": {
+        "cost": {
+          "type": "string"
+        },
+        "completed": {
+          "type": "array",
+          "items": {
+            "$ref": "#/schemas/TrainingCompositionItem"
+          }
+        }
+      },
+      "required": [
+        "cost",
+        "completed"
+      ],
+      "additionalProperties": true
+    },
+    "ResearchStartBody": {
+      "type": "object",
+      "properties": {
+        "troop": {
+          "type": "string"
+        },
+        "idempotencyKey": {
+          "type": "string"
+        },
+        "baseId": {
+          "type": "string"
+        },
+        "consent": {
+          "$ref": "#/schemas/ResearchStartConsent"
+        }
+      },
+      "required": [
+        "troop",
+        "idempotencyKey"
+      ],
+      "additionalProperties": true
+    },
+    "ResearchFinishBody": {
+      "type": "object",
+      "properties": {
+        "troop": {
+          "type": "string"
+        },
+        "idempotencyKey": {
+          "type": "string"
+        },
+        "baseId": {
+          "type": "string"
+        },
+        "consent": {
+          "$ref": "#/schemas/ResearchFinishConsent"
+        }
+      },
+      "required": [
+        "troop",
+        "idempotencyKey"
+      ],
+      "additionalProperties": true
+    },
+    "ResearchCancelBody": {
+      "type": "object",
+      "properties": {
+        "idempotencyKey": {
+          "type": "string"
+        },
+        "baseId": {
+          "type": "string"
+        },
+        "consent": {
+          "$ref": "#/schemas/ResearchEpisodeConsent"
+        }
+      },
+      "required": [
+        "idempotencyKey"
+      ],
+      "additionalProperties": true
+    },
+    "HeroFeatures": {
+      "type": "object",
+      "properties": {
+        "heroConsent": {
+          "type": "object",
+          "properties": {
+            "version": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "version"
+          ],
+          "additionalProperties": true
+        },
+        "heroReceipts": {
+          "type": "object",
+          "properties": {
+            "version": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "version"
+          ],
+          "additionalProperties": true
+        }
+      },
+      "required": [
+        "heroConsent",
+        "heroReceipts"
+      ],
+      "additionalProperties": true
+    },
+    "HeroesState": {
+      "type": "object",
+      "properties": {
+        "heroes": {
+          "type": "array",
+          "items": {
+            "type": "object"
+          }
+        },
+        "keepBalance": {
+          "type": "string"
+        },
+        "keepLevel": {
+          "type": "integer"
+        },
+        "features": {
+          "$ref": "#/schemas/HeroFeatures"
+        }
+      },
+      "required": [
+        "heroes",
+        "keepBalance",
+        "keepLevel"
+      ],
+      "additionalProperties": true
+    },
+    "HeroUpgradeBody": {
+      "type": "object",
+      "properties": {
+        "idempotencyKey": {
+          "type": "string"
+        },
+        "baseId": {
+          "type": "string"
+        },
+        "consent": {
+          "$ref": "#/schemas/HeroUpgradeConsent"
+        }
+      },
+      "required": [
+        "idempotencyKey"
+      ],
+      "additionalProperties": true
+    },
+    "HeroRecoveryBody": {
+      "type": "object",
+      "properties": {
+        "idempotencyKey": {
+          "type": "string"
+        },
+        "baseId": {
+          "type": "string"
+        },
+        "consent": {
+          "$ref": "#/schemas/HeroRecoveryConsent"
+        }
+      },
+      "required": [
+        "idempotencyKey"
+      ],
+      "additionalProperties": true
+    },
+    "RaidCreated": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "defenderWallet": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "attackerBaseId": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "defenderBaseId": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "campaignStage": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "snapshot": {
+          "type": "object"
+        },
+        "visualContext": {
+          "$ref": "#/schemas/BaseVisualContext"
+        },
+        "armySnapshot": {
+          "type": "object"
+        },
+        "ordersDeadlineAt": {
+          "type": "string"
+        },
+        "seed": {
+          "type": "integer",
+          "maximum": 9007199254740991
+        },
+        "simVersion": {
+          "type": "integer"
+        },
+        "raidProtocolVersion": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "id",
+        "snapshot",
+        "visualContext",
+        "armySnapshot",
+        "ordersDeadlineAt",
+        "seed",
+        "simVersion"
+      ],
+      "additionalProperties": true
+    },
+    "RaidCreatedEnvelope": {
+      "type": "object",
+      "properties": {
+        "raid": {
+          "$ref": "#/schemas/RaidCreated"
+        }
+      },
+      "required": [
+        "raid"
+      ],
+      "additionalProperties": true
+    },
+    "PendingRaidResume": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "defenderWallet": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "attackerBaseId": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "defenderBaseId": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "pveCampId": {},
+        "campaignStage": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "snapshot": {
+          "type": "object"
+        },
+        "visualContext": {
+          "$ref": "#/schemas/BaseVisualContext"
+        },
+        "armySnapshot": {
+          "type": "object"
+        },
+        "ordersDeadlineAt": {
+          "type": "string"
+        },
+        "seed": {
+          "type": "integer",
+          "maximum": 9007199254740991
+        },
+        "simVersion": {
+          "type": "integer"
+        },
+        "heroReserved": {
+          "type": "boolean"
+        },
+        "raidProtocolVersion": {
+          "type": "integer"
+        },
+        "live": {
+          "type": [
+            "object",
+            "null"
+          ]
+        }
+      },
+      "required": [
+        "id",
+        "snapshot",
+        "visualContext",
+        "armySnapshot",
+        "ordersDeadlineAt",
+        "seed",
+        "simVersion",
+        "heroReserved"
+      ],
+      "additionalProperties": true
+    },
+    "PendingRaidResumes": {
+      "type": "object",
+      "properties": {
+        "raids": {
+          "type": "array",
+          "items": {
+            "$ref": "#/schemas/PendingRaidResume"
+          }
+        }
+      },
+      "required": [
+        "raids"
+      ],
+      "additionalProperties": true
+    },
+    "PendingRaidResumeEnvelope": {
+      "type": "object",
+      "properties": {
+        "raid": {
+          "$ref": "#/schemas/PendingRaidResume"
+        }
+      },
+      "required": [
+        "raid"
+      ],
+      "additionalProperties": true
+    },
+    "BattleReplay": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "snapshot": {
+          "type": "object"
+        },
+        "visualContext": {
+          "$ref": "#/schemas/BaseVisualContext"
+        },
+        "orders": {},
+        "seed": {
+          "type": "integer",
+          "maximum": 9007199254740991
+        },
+        "simVersion": {
+          "type": "integer"
+        },
+        "events": {
+          "type": "array"
+        },
+        "result": {},
+        "armySnapshot": {
+          "type": "object"
+        },
+        "buildingHealth": {
+          "type": "array"
+        }
+      },
+      "required": [
+        "id",
+        "snapshot",
+        "visualContext",
+        "seed",
+        "simVersion",
+        "events",
+        "armySnapshot"
+      ],
+      "additionalProperties": true
+    },
+    "CampaignPreview": {
+      "type": "object",
+      "properties": {
+        "stage": {
+          "type": "integer"
+        },
+        "snapshot": {
+          "type": "object"
+        },
+        "visualContext": {
+          "$ref": "#/schemas/BaseVisualContext"
+        }
+      },
+      "required": [
+        "stage",
+        "snapshot",
+        "visualContext"
+      ],
+      "additionalProperties": true
+    },
+    "FantasyRealmCount": {
+      "type": "object",
+      "properties": {
+        "realmId": {
+          "type": "string"
+        },
+        "total": {
+          "type": "integer"
+        },
+        "occupied": {
+          "type": "integer"
+        },
+        "held": {
+          "type": "integer"
+        },
+        "available": {
+          "type": "integer"
+        },
+        "anchorTileId": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        }
+      },
+      "required": [
+        "realmId",
+        "total",
+        "occupied",
+        "held",
+        "available",
+        "anchorTileId"
+      ],
+      "additionalProperties": true
+    },
+    "FantasyOwnedTile": {
+      "type": "object",
+      "properties": {
+        "baseId": {
+          "type": "string"
+        },
+        "tileId": {
+          "type": "integer"
+        },
+        "realmId": {
+          "type": "string"
+        },
+        "name": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "avatarUrl": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "keepLevel": {
+          "type": "integer"
+        },
+        "active": {
+          "type": "boolean"
+        },
+        "selected": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "baseId",
+        "tileId",
+        "realmId",
+        "name",
+        "avatarUrl",
+        "keepLevel",
+        "active",
+        "selected"
+      ],
+      "additionalProperties": true
+    },
+    "FantasyGlobeMe": {
+      "type": "object",
+      "properties": {
+        "baseId": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "selectedTileId": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "ownedTiles": {
+          "type": "array",
+          "items": {
+            "$ref": "#/schemas/FantasyOwnedTile"
+          }
+        }
+      },
+      "required": [
+        "baseId",
+        "selectedTileId",
+        "ownedTiles"
+      ],
+      "additionalProperties": true
+    },
+    "FantasyGlobe": {
+      "type": "object",
+      "properties": {
+        "worldId": {
+          "type": "string"
+        },
+        "catalogHash": {
+          "type": "string"
+        },
+        "ready": {
+          "type": "boolean"
+        },
+        "warzone": {
+          "type": "object"
+        },
+        "realms": {
+          "type": "array",
+          "items": {
+            "$ref": "#/schemas/FantasyRealmCount"
+          }
+        },
+        "me": {
+          "$ref": "#/schemas/FantasyGlobeMe"
+        }
+      },
+      "required": [
+        "worldId",
+        "catalogHash",
+        "ready",
+        "warzone",
+        "realms",
+        "me"
+      ],
+      "additionalProperties": true
+    },
+    "FantasySearchResult": {
+      "type": "object",
+      "properties": {
+        "tileId": {
+          "type": "integer"
+        },
+        "realmId": {
+          "type": "string"
+        },
+        "name": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "avatarUrl": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "keepLevel": {
+          "type": "integer"
+        },
+        "trophies": {
+          "type": "integer"
+        },
+        "seeker": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "tileId",
+        "realmId",
+        "name",
+        "avatarUrl",
+        "keepLevel",
+        "trophies",
+        "seeker"
+      ],
+      "additionalProperties": true
+    },
+    "FantasySearch": {
+      "type": "object",
+      "properties": {
+        "results": {
+          "type": "array",
+          "items": {
+            "$ref": "#/schemas/FantasySearchResult"
+          }
+        }
+      },
+      "required": [
+        "results"
+      ],
+      "additionalProperties": true
+    },
+    "FantasyMarker": {
+      "type": "object",
+      "properties": {
+        "tileId": {
+          "type": "integer"
+        },
+        "name": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "avatarUrl": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "keepLevel": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "tileId",
+        "name",
+        "avatarUrl",
+        "keepLevel"
+      ],
+      "additionalProperties": true
+    },
+    "FantasyViewport": {
+      "type": "object",
+      "properties": {
+        "worldId": {
+          "type": "string"
+        },
+        "scope": {
+          "type": "object",
+          "properties": {
+            "x0": {
+              "type": "integer"
+            },
+            "x1": {
+              "type": "integer"
+            },
+            "y0": {
+              "type": "integer"
+            },
+            "y1": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "x0",
+            "x1",
+            "y0",
+            "y1"
+          ],
+          "additionalProperties": true
+        },
+        "matched": {
+          "type": "integer"
+        },
+        "truncated": {
+          "type": "boolean"
+        },
+        "markers": {
+          "type": "array",
+          "items": {
+            "$ref": "#/schemas/FantasyMarker"
+          }
+        }
+      },
+      "required": [
+        "worldId",
+        "scope",
+        "matched",
+        "truncated",
+        "markers"
+      ],
+      "additionalProperties": true
+    },
+    "FantasyParcel": {
+      "type": "object",
+      "properties": {
+        "worldId": {
+          "type": "string"
+        },
+        "tile": {
+          "$ref": "#/schemas/FantasyTile"
+        },
+        "availability": {
+          "type": "string",
+          "enum": [
+            "reserved",
+            "available",
+            "held",
+            "occupied"
+          ]
+        },
+        "detail": {
+          "type": [
+            "object",
+            "null"
+          ]
+        }
+      },
+      "required": [
+        "worldId",
+        "tile",
+        "availability",
+        "detail"
+      ],
+      "additionalProperties": true
+    },
+    "PlaytestAccess": {
+      "type": "object",
+      "properties": {
+        "open": {
+          "type": "boolean"
+        },
+        "playUrl": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "open",
+        "playUrl"
+      ],
+      "additionalProperties": true
+    },
+    "NativeClock": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "type": "object",
+      "properties": {
+        "protocolVersion": {
+          "anyOf": [
+            {
+              "type": "number",
+              "const": 1
+            },
+            {
+              "type": "number",
+              "const": 2
+            }
+          ]
+        },
+        "revision": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 9007199254740991
+        },
+        "rate": {
+          "anyOf": [
+            {
+              "type": "number",
+              "const": 1
+            },
+            {
+              "type": "number",
+              "const": 2
+            }
+          ]
+        },
+        "anchorWallAt": {
+          "anyOf": [
+            {
+              "type": "string",
+              "format": "date-time",
+              "pattern": "^(?:(?:\\d\\d[2468][048]|\\d\\d[13579][26]|\\d\\d0[48]|[02468][048]00|[13579][26]00)-02-29|\\d{4}-(?:(?:0[13578]|1[02])-(?:0[1-9]|[12]\\d|3[01])|(?:0[469]|11)-(?:0[1-9]|[12]\\d|30)|(?:02)-(?:0[1-9]|1\\d|2[0-8])))T(?:(?:[01]\\d|2[0-3]):[0-5]\\d(?::[0-5]\\d(?:\\.\\d+)?)?(?:Z))$"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "anchorSimMs": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 9007199254740991
+        },
+        "serverNow": {
+          "type": "string",
+          "format": "date-time",
+          "pattern": "^(?:(?:\\d\\d[2468][048]|\\d\\d[13579][26]|\\d\\d0[48]|[02468][048]00|[13579][26]00)-02-29|\\d{4}-(?:(?:0[13578]|1[02])-(?:0[1-9]|[12]\\d|3[01])|(?:0[469]|11)-(?:0[1-9]|[12]\\d|30)|(?:02)-(?:0[1-9]|1\\d|2[0-8])))T(?:(?:[01]\\d|2[0-3]):[0-5]\\d(?::[0-5]\\d(?:\\.\\d+)?)?(?:Z))$"
+        },
+        "simNowMs": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 9007199254740991
+        },
+        "battleEndsAt": {
+          "anyOf": [
+            {
+              "type": "string",
+              "format": "date-time",
+              "pattern": "^(?:(?:\\d\\d[2468][048]|\\d\\d[13579][26]|\\d\\d0[48]|[02468][048]00|[13579][26]00)-02-29|\\d{4}-(?:(?:0[13578]|1[02])-(?:0[1-9]|[12]\\d|3[01])|(?:0[469]|11)-(?:0[1-9]|[12]\\d|30)|(?:02)-(?:0[1-9]|1\\d|2[0-8])))T(?:(?:[01]\\d|2[0-3]):[0-5]\\d(?::[0-5]\\d(?:\\.\\d+)?)?(?:Z))$"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "durationMs": {
+          "type": "integer",
+          "exclusiveMinimum": 0,
+          "maximum": 9007199254740991
+        }
+      },
+      "required": [
+        "protocolVersion",
+        "revision",
+        "rate",
+        "anchorWallAt",
+        "anchorSimMs",
+        "serverNow",
+        "simNowMs",
+        "battleEndsAt",
+        "durationMs"
+      ]
+    },
+    "NativeCommand": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "type": "object",
+      "properties": {
+        "sequence": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 9007199254740991
+        },
+        "clientCommandId": {
+          "type": "string"
+        },
+        "kind": {
+          "type": "string",
+          "enum": [
+            "deploy",
+            "hero",
+            "rally",
+            "buff",
+            "start",
+            "speed",
+            "retreat"
+          ]
+        },
+        "payload": {
+          "type": "object",
+          "propertyNames": {
+            "type": "string"
+          },
+          "additionalProperties": {
+            "$ref": "#/schemas/__shared/$defs/schema0"
+          }
+        },
+        "serverOffsetMs": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 9007199254740991
+        },
+        "acceptedAt": {
+          "type": "string",
+          "format": "date-time",
+          "pattern": "^(?:(?:\\d\\d[2468][048]|\\d\\d[13579][26]|\\d\\d0[48]|[02468][048]00|[13579][26]00)-02-29|\\d{4}-(?:(?:0[13578]|1[02])-(?:0[1-9]|[12]\\d|3[01])|(?:0[469]|11)-(?:0[1-9]|[12]\\d|30)|(?:02)-(?:0[1-9]|1\\d|2[0-8])))T(?:(?:[01]\\d|2[0-3]):[0-5]\\d(?::[0-5]\\d(?:\\.\\d+)?)?(?:Z))$"
+        }
+      },
+      "required": [
+        "sequence",
+        "clientCommandId",
+        "kind",
+        "payload",
+        "serverOffsetMs",
+        "acceptedAt"
+      ]
+    },
+    "NativePresentation": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "type": "object",
+      "properties": {
+        "protocolVersion": {
+          "type": "number",
+          "const": 1
+        },
+        "raidId": {
+          "type": "string",
+          "format": "uuid",
+          "pattern": "^([0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[1-8][0-9a-fA-F]{3}-[89abAB][0-9a-fA-F]{3}-[0-9a-fA-F]{12}|00000000-0000-0000-0000-000000000000|ffffffff-ffff-ffff-ffff-ffffffffffff)$"
+        },
+        "revision": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "source": {
+          "type": "string",
+          "enum": [
+            "live",
+            "archive"
+          ]
+        },
+        "status": {
+          "type": "string"
+        },
+        "simVersion": {
+          "type": "integer",
+          "exclusiveMinimum": 0,
+          "maximum": 9007199254740991
+        },
+        "raidProtocolVersion": {
+          "anyOf": [
+            {
+              "type": "integer",
+              "minimum": -9007199254740991,
+              "maximum": 9007199254740991
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "clock": {
+          "anyOf": [
+            {
+              "$ref": "#/schemas/NativeClock"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "lastSequence": {
+          "type": "integer",
+          "minimum": -1,
+          "maximum": 9007199254740991
+        },
+        "snapshot": {
+          "type": "object",
+          "propertyNames": {
+            "type": "string"
+          },
+          "additionalProperties": {
+            "$ref": "#/schemas/__shared/$defs/schema0"
+          }
+        },
+        "armySnapshot": {
+          "type": "object",
+          "propertyNames": {
+            "type": "string"
+          },
+          "additionalProperties": {
+            "$ref": "#/schemas/__shared/$defs/schema0"
+          }
+        },
+        "orders": {
+          "type": "object",
+          "properties": {
+            "heroDeploys": {
+              "maxItems": 2,
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "hero": {
+                    "type": "string",
+                    "enum": [
+                      "vex",
+                      "theodor"
+                    ]
+                  },
+                  "tx": {
+                    "type": "integer",
+                    "minimum": -9007199254740991,
+                    "maximum": 9007199254740991
+                  },
+                  "ty": {
+                    "type": "integer",
+                    "minimum": -9007199254740991,
+                    "maximum": 9007199254740991
+                  },
+                  "tMs": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 9007199254740991
+                  },
+                  "level": {
+                    "type": "integer",
+                    "minimum": 1,
+                    "maximum": 20
+                  },
+                  "loadout": {
+                    "type": "object",
+                    "properties": {
+                      "catalogRevision": {
+                        "type": "integer",
+                        "minimum": 0,
+                        "maximum": 9007199254740991
+                      },
+                      "version": {
+                        "type": "integer",
+                        "minimum": 0,
+                        "maximum": 9007199254740991
+                      },
+                      "hash": {
+                        "type": "string",
+                        "minLength": 1,
+                        "maxLength": 128
+                      },
+                      "modifiers": {
+                        "type": "object",
+                        "properties": {
+                          "hero_hp_bps": {
+                            "type": "integer",
+                            "minimum": -9007199254740991,
+                            "maximum": 9007199254740991
+                          },
+                          "hero_damage_bps": {
+                            "type": "integer",
+                            "minimum": -9007199254740991,
+                            "maximum": 9007199254740991
+                          },
+                          "ability_damage_bps": {
+                            "type": "integer",
+                            "minimum": -9007199254740991,
+                            "maximum": 9007199254740991
+                          },
+                          "cooldown_reduction_bps": {
+                            "type": "integer",
+                            "minimum": -9007199254740991,
+                            "maximum": 9007199254740991
+                          },
+                          "move_speed_bps": {
+                            "type": "integer",
+                            "minimum": -9007199254740991,
+                            "maximum": 9007199254740991
+                          },
+                          "incoming_damage_reduction_bps": {
+                            "type": "integer",
+                            "minimum": -9007199254740991,
+                            "maximum": 9007199254740991
+                          },
+                          "first_hit_reduction_bps": {
+                            "type": "integer",
+                            "minimum": -9007199254740991,
+                            "maximum": 9007199254740991
+                          },
+                          "wall_damage_bps": {
+                            "type": "integer",
+                            "minimum": -9007199254740991,
+                            "maximum": 9007199254740991
+                          },
+                          "allied_troop_hp_bps": {
+                            "type": "integer",
+                            "minimum": -9007199254740991,
+                            "maximum": 9007199254740991
+                          },
+                          "allied_troop_damage_bps": {
+                            "type": "integer",
+                            "minimum": -9007199254740991,
+                            "maximum": 9007199254740991
+                          }
+                        },
+                        "additionalProperties": false
+                      }
+                    },
+                    "required": [
+                      "catalogRevision",
+                      "version",
+                      "hash",
+                      "modifiers"
+                    ],
+                    "additionalProperties": false
+                  }
+                },
+                "required": [
+                  "hero",
+                  "tx",
+                  "ty",
+                  "tMs"
+                ],
+                "additionalProperties": false
+              }
+            }
+          },
+          "required": [
+            "heroDeploys"
+          ],
+          "additionalProperties": false
+        },
+        "visualContext": {
+          "type": "object",
+          "properties": {
+            "version": {
+              "type": "number",
+              "const": 1
+            },
+            "realmId": {
+              "type": "string",
+              "enum": [
+                "frostveil",
+                "elderwood",
+                "sunscar",
+                "crownlands",
+                "seeker-reach",
+                "stormcairn",
+                "thornwake",
+                "cinderfall"
+              ]
+            },
+            "artVersion": {
+              "anyOf": [
+                {
+                  "type": "number",
+                  "const": 1
+                },
+                {
+                  "type": "number",
+                  "const": 2
+                }
+              ]
+            },
+            "groundRevision": {
+              "anyOf": [
+                {
+                  "type": "number",
+                  "const": 1
+                },
+                {
+                  "type": "number",
+                  "const": 2
+                },
+                {
+                  "type": "number",
+                  "const": 3
+                },
+                {
+                  "type": "number",
+                  "const": 4
+                },
+                {
+                  "type": "number",
+                  "const": 5
+                }
+              ]
+            }
+          },
+          "required": [
+            "version",
+            "realmId",
+            "artVersion"
+          ]
+        },
+        "servicePresentation": {
+          "anyOf": [
+            {
+              "type": "object",
+              "properties": {
+                "version": {
+                  "type": "number",
+                  "const": 1
+                },
+                "berths": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "buildingId": {
+                        "type": "string",
+                        "allOf": [
+                          {
+                            "pattern": "^([0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[1-8][0-9a-fA-F]{3}-[89abAB][0-9a-fA-F]{3}-[0-9a-fA-F]{12}|00000000-0000-0000-0000-000000000000|ffffffff-ffff-ffff-ffff-ffffffffffff)$"
+                          },
+                          {
+                            "pattern": "^[0-9a-f-]+$"
+                          }
+                        ]
+                      },
+                      "installation": {
+                        "anyOf": [
+                          {
+                            "type": "object",
+                            "properties": {
+                              "family": {
+                                "type": "string",
+                                "const": "starter"
+                              },
+                              "presence": {
+                                "type": "string",
+                                "enum": [
+                                  "occupied",
+                                  "away"
+                                ]
+                              }
+                            },
+                            "required": [
+                              "family",
+                              "presence"
+                            ],
+                            "additionalProperties": false
+                          },
+                          {
+                            "type": "null"
+                          }
+                        ]
+                      }
+                    },
+                    "required": [
+                      "buildingId",
+                      "installation"
+                    ],
+                    "additionalProperties": false
+                  }
+                }
+              },
+              "required": [
+                "version",
+                "berths"
+              ],
+              "additionalProperties": false
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "advancedServicePresentation": {
+          "anyOf": [
+            {
+              "type": "object",
+              "properties": {
+                "version": {
+                  "type": "number",
+                  "const": 1
+                },
+                "berths": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "buildingId": {
+                        "type": "string",
+                        "allOf": [
+                          {
+                            "pattern": "^([0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[1-8][0-9a-fA-F]{3}-[89abAB][0-9a-fA-F]{3}-[0-9a-fA-F]{12}|00000000-0000-0000-0000-000000000000|ffffffff-ffff-ffff-ffff-ffffffffffff)$"
+                          },
+                          {
+                            "pattern": "^[0-9a-f-]+$"
+                          }
+                        ]
+                      },
+                      "installation": {
+                        "anyOf": [
+                          {
+                            "type": "object",
+                            "properties": {
+                              "family": {
+                                "type": "string",
+                                "enum": [
+                                  "survey_balloon",
+                                  "cargo_cutter",
+                                  "courier_airship",
+                                  "expedition_barge"
+                                ]
+                              },
+                              "tier": {
+                                "type": "number",
+                                "enum": [
+                                  1,
+                                  2,
+                                  3,
+                                  4
+                                ]
+                              },
+                              "presence": {
+                                "type": "string",
+                                "enum": [
+                                  "occupied",
+                                  "away",
+                                  "exhausted"
+                                ]
+                              }
+                            },
+                            "required": [
+                              "family",
+                              "tier",
+                              "presence"
+                            ],
+                            "additionalProperties": false
+                          },
+                          {
+                            "type": "null"
+                          }
+                        ]
+                      }
+                    },
+                    "required": [
+                      "buildingId",
+                      "installation"
+                    ],
+                    "additionalProperties": false
+                  }
+                }
+              },
+              "required": [
+                "version",
+                "berths"
+              ],
+              "additionalProperties": false
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "buildingHealth": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string",
+                "minLength": 1
+              },
+              "initialHp": {
+                "type": "integer",
+                "minimum": -9007199254740991,
+                "maximum": 9007199254740991
+              },
+              "maxHp": {
+                "type": "integer",
+                "minimum": -9007199254740991,
+                "maximum": 9007199254740991
+              }
+            },
+            "required": [
+              "id",
+              "initialHp",
+              "maxHp"
+            ]
+          }
+        },
+        "commands": {
+          "type": "array",
+          "items": {
+            "$ref": "#/schemas/NativeCommand"
+          }
+        },
+        "events": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "t": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 9007199254740991
+              },
+              "e": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "t",
+              "e"
+            ],
+            "additionalProperties": {}
+          }
+        },
+        "result": {
+          "anyOf": [
+            {
+              "$ref": "#/schemas/__shared/$defs/schema1"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "replaceFromTick": {
+          "type": "number",
+          "const": 0
+        }
+      },
+      "required": [
+        "protocolVersion",
+        "raidId",
+        "revision",
+        "source",
+        "status",
+        "simVersion",
+        "raidProtocolVersion",
+        "clock",
+        "lastSequence",
+        "snapshot",
+        "armySnapshot",
+        "commands",
+        "events",
+        "result",
+        "replaceFromTick"
+      ]
+    },
+    "NativePresentationState": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "type": "object",
+      "properties": {
+        "source": {
+          "type": "string",
+          "enum": [
+            "live",
+            "archive"
+          ]
+        },
+        "status": {
+          "type": "string"
+        },
+        "simVersion": {
+          "type": "integer",
+          "exclusiveMinimum": 0,
+          "maximum": 9007199254740991
+        },
+        "raidProtocolVersion": {
+          "anyOf": [
+            {
+              "type": "integer",
+              "minimum": -9007199254740991,
+              "maximum": 9007199254740991
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "clock": {
+          "anyOf": [
+            {
+              "$ref": "#/schemas/NativeClock"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "lastSequence": {
+          "type": "integer",
+          "minimum": -1,
+          "maximum": 9007199254740991
+        },
+        "snapshot": {
+          "type": "object",
+          "propertyNames": {
+            "type": "string"
+          },
+          "additionalProperties": {
+            "$ref": "#/schemas/__shared/$defs/schema0"
+          }
+        },
+        "armySnapshot": {
+          "type": "object",
+          "propertyNames": {
+            "type": "string"
+          },
+          "additionalProperties": {
+            "$ref": "#/schemas/__shared/$defs/schema0"
+          }
+        },
+        "orders": {
+          "type": "object",
+          "properties": {
+            "heroDeploys": {
+              "maxItems": 2,
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "hero": {
+                    "type": "string",
+                    "enum": [
+                      "vex",
+                      "theodor"
+                    ]
+                  },
+                  "tx": {
+                    "type": "integer",
+                    "minimum": -9007199254740991,
+                    "maximum": 9007199254740991
+                  },
+                  "ty": {
+                    "type": "integer",
+                    "minimum": -9007199254740991,
+                    "maximum": 9007199254740991
+                  },
+                  "tMs": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 9007199254740991
+                  },
+                  "level": {
+                    "type": "integer",
+                    "minimum": 1,
+                    "maximum": 20
+                  },
+                  "loadout": {
+                    "type": "object",
+                    "properties": {
+                      "catalogRevision": {
+                        "type": "integer",
+                        "minimum": 0,
+                        "maximum": 9007199254740991
+                      },
+                      "version": {
+                        "type": "integer",
+                        "minimum": 0,
+                        "maximum": 9007199254740991
+                      },
+                      "hash": {
+                        "type": "string",
+                        "minLength": 1,
+                        "maxLength": 128
+                      },
+                      "modifiers": {
+                        "type": "object",
+                        "properties": {
+                          "hero_hp_bps": {
+                            "type": "integer",
+                            "minimum": -9007199254740991,
+                            "maximum": 9007199254740991
+                          },
+                          "hero_damage_bps": {
+                            "type": "integer",
+                            "minimum": -9007199254740991,
+                            "maximum": 9007199254740991
+                          },
+                          "ability_damage_bps": {
+                            "type": "integer",
+                            "minimum": -9007199254740991,
+                            "maximum": 9007199254740991
+                          },
+                          "cooldown_reduction_bps": {
+                            "type": "integer",
+                            "minimum": -9007199254740991,
+                            "maximum": 9007199254740991
+                          },
+                          "move_speed_bps": {
+                            "type": "integer",
+                            "minimum": -9007199254740991,
+                            "maximum": 9007199254740991
+                          },
+                          "incoming_damage_reduction_bps": {
+                            "type": "integer",
+                            "minimum": -9007199254740991,
+                            "maximum": 9007199254740991
+                          },
+                          "first_hit_reduction_bps": {
+                            "type": "integer",
+                            "minimum": -9007199254740991,
+                            "maximum": 9007199254740991
+                          },
+                          "wall_damage_bps": {
+                            "type": "integer",
+                            "minimum": -9007199254740991,
+                            "maximum": 9007199254740991
+                          },
+                          "allied_troop_hp_bps": {
+                            "type": "integer",
+                            "minimum": -9007199254740991,
+                            "maximum": 9007199254740991
+                          },
+                          "allied_troop_damage_bps": {
+                            "type": "integer",
+                            "minimum": -9007199254740991,
+                            "maximum": 9007199254740991
+                          }
+                        },
+                        "additionalProperties": false
+                      }
+                    },
+                    "required": [
+                      "catalogRevision",
+                      "version",
+                      "hash",
+                      "modifiers"
+                    ],
+                    "additionalProperties": false
+                  }
+                },
+                "required": [
+                  "hero",
+                  "tx",
+                  "ty",
+                  "tMs"
+                ],
+                "additionalProperties": false
+              }
+            }
+          },
+          "required": [
+            "heroDeploys"
+          ],
+          "additionalProperties": false
+        },
+        "visualContext": {
+          "type": "object",
+          "properties": {
+            "version": {
+              "type": "number",
+              "const": 1
+            },
+            "realmId": {
+              "type": "string",
+              "enum": [
+                "frostveil",
+                "elderwood",
+                "sunscar",
+                "crownlands",
+                "seeker-reach",
+                "stormcairn",
+                "thornwake",
+                "cinderfall"
+              ]
+            },
+            "artVersion": {
+              "anyOf": [
+                {
+                  "type": "number",
+                  "const": 1
+                },
+                {
+                  "type": "number",
+                  "const": 2
+                }
+              ]
+            },
+            "groundRevision": {
+              "anyOf": [
+                {
+                  "type": "number",
+                  "const": 1
+                },
+                {
+                  "type": "number",
+                  "const": 2
+                },
+                {
+                  "type": "number",
+                  "const": 3
+                },
+                {
+                  "type": "number",
+                  "const": 4
+                },
+                {
+                  "type": "number",
+                  "const": 5
+                }
+              ]
+            }
+          },
+          "required": [
+            "version",
+            "realmId",
+            "artVersion"
+          ]
+        },
+        "servicePresentation": {
+          "anyOf": [
+            {
+              "type": "object",
+              "properties": {
+                "version": {
+                  "type": "number",
+                  "const": 1
+                },
+                "berths": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "buildingId": {
+                        "type": "string",
+                        "allOf": [
+                          {
+                            "pattern": "^([0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[1-8][0-9a-fA-F]{3}-[89abAB][0-9a-fA-F]{3}-[0-9a-fA-F]{12}|00000000-0000-0000-0000-000000000000|ffffffff-ffff-ffff-ffff-ffffffffffff)$"
+                          },
+                          {
+                            "pattern": "^[0-9a-f-]+$"
+                          }
+                        ]
+                      },
+                      "installation": {
+                        "anyOf": [
+                          {
+                            "type": "object",
+                            "properties": {
+                              "family": {
+                                "type": "string",
+                                "const": "starter"
+                              },
+                              "presence": {
+                                "type": "string",
+                                "enum": [
+                                  "occupied",
+                                  "away"
+                                ]
+                              }
+                            },
+                            "required": [
+                              "family",
+                              "presence"
+                            ],
+                            "additionalProperties": false
+                          },
+                          {
+                            "type": "null"
+                          }
+                        ]
+                      }
+                    },
+                    "required": [
+                      "buildingId",
+                      "installation"
+                    ],
+                    "additionalProperties": false
+                  }
+                }
+              },
+              "required": [
+                "version",
+                "berths"
+              ],
+              "additionalProperties": false
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "advancedServicePresentation": {
+          "anyOf": [
+            {
+              "type": "object",
+              "properties": {
+                "version": {
+                  "type": "number",
+                  "const": 1
+                },
+                "berths": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "buildingId": {
+                        "type": "string",
+                        "allOf": [
+                          {
+                            "pattern": "^([0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[1-8][0-9a-fA-F]{3}-[89abAB][0-9a-fA-F]{3}-[0-9a-fA-F]{12}|00000000-0000-0000-0000-000000000000|ffffffff-ffff-ffff-ffff-ffffffffffff)$"
+                          },
+                          {
+                            "pattern": "^[0-9a-f-]+$"
+                          }
+                        ]
+                      },
+                      "installation": {
+                        "anyOf": [
+                          {
+                            "type": "object",
+                            "properties": {
+                              "family": {
+                                "type": "string",
+                                "enum": [
+                                  "survey_balloon",
+                                  "cargo_cutter",
+                                  "courier_airship",
+                                  "expedition_barge"
+                                ]
+                              },
+                              "tier": {
+                                "type": "number",
+                                "enum": [
+                                  1,
+                                  2,
+                                  3,
+                                  4
+                                ]
+                              },
+                              "presence": {
+                                "type": "string",
+                                "enum": [
+                                  "occupied",
+                                  "away",
+                                  "exhausted"
+                                ]
+                              }
+                            },
+                            "required": [
+                              "family",
+                              "tier",
+                              "presence"
+                            ],
+                            "additionalProperties": false
+                          },
+                          {
+                            "type": "null"
+                          }
+                        ]
+                      }
+                    },
+                    "required": [
+                      "buildingId",
+                      "installation"
+                    ],
+                    "additionalProperties": false
+                  }
+                }
+              },
+              "required": [
+                "version",
+                "berths"
+              ],
+              "additionalProperties": false
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "buildingHealth": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string",
+                "minLength": 1
+              },
+              "initialHp": {
+                "type": "integer",
+                "minimum": -9007199254740991,
+                "maximum": 9007199254740991
+              },
+              "maxHp": {
+                "type": "integer",
+                "minimum": -9007199254740991,
+                "maximum": 9007199254740991
+              }
+            },
+            "required": [
+              "id",
+              "initialHp",
+              "maxHp"
+            ]
+          }
+        },
+        "commands": {
+          "type": "array",
+          "items": {
+            "$ref": "#/schemas/NativeCommand"
+          }
+        },
+        "result": {
+          "anyOf": [
+            {
+              "$ref": "#/schemas/__shared/$defs/schema1"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      },
+      "required": [
+        "source",
+        "status",
+        "simVersion",
+        "raidProtocolVersion",
+        "clock",
+        "lastSequence",
+        "snapshot",
+        "armySnapshot",
+        "commands",
+        "result"
+      ]
+    },
+    "NativePresentationPage": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "type": "object",
+      "properties": {
+        "protocolVersion": {
+          "type": "number",
+          "const": 2
+        },
+        "raidId": {
+          "type": "string",
+          "format": "uuid",
+          "pattern": "^([0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[1-8][0-9a-fA-F]{3}-[89abAB][0-9a-fA-F]{3}-[0-9a-fA-F]{12}|00000000-0000-0000-0000-000000000000|ffffffff-ffff-ffff-ffff-ffffffffffff)$"
+        },
+        "revision": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "parentRevision": {
+          "anyOf": [
+            {
+              "type": "string",
+              "pattern": "^[0-9a-f]{64}$"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "replaceFromTick": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 9007199254740991
+        },
+        "generation": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{32}$"
+        },
+        "eventOffset": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 9007199254740991
+        },
+        "totalEvents": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 50000
+        },
+        "commandOffset": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 9007199254740991
+        },
+        "totalCommands": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 756
+        },
+        "commands": {
+          "type": "array",
+          "items": {
+            "$ref": "#/schemas/NativeCommand"
+          }
+        },
+        "events": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "t": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 9007199254740991
+              },
+              "e": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "t",
+              "e"
+            ],
+            "additionalProperties": {}
+          }
+        },
+        "nextCursor": {
+          "anyOf": [
+            {
+              "type": "string",
+              "maxLength": 160
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "state": {
+          "anyOf": [
+            {
+              "$ref": "#/schemas/NativePresentationState"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      },
+      "required": [
+        "protocolVersion",
+        "raidId",
+        "revision",
+        "parentRevision",
+        "replaceFromTick",
+        "generation",
+        "eventOffset",
+        "totalEvents",
+        "commandOffset",
+        "totalCommands",
+        "commands",
+        "events",
+        "nextCursor",
+        "state"
+      ]
+    },
+    "NativeCapabilities": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "type": "object",
+      "properties": {
+        "protocolVersion": {
+          "type": "number",
+          "const": 1
+        },
+        "sourceCommit": {
+          "type": "string"
+        },
+        "simVersion": {
+          "type": "integer",
+          "exclusiveMinimum": 0,
+          "maximum": 9007199254740991
+        },
+        "minimumVersionCode": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 9007199254740991
+        },
+        "contentManifestUrl": {
+          "anyOf": [
+            {
+              "type": "string",
+              "format": "uri"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "phaseEArt": {
+          "type": "object",
+          "properties": {
+            "version": {
+              "type": "number",
+              "const": 1
+            },
+            "enabled": {
+              "type": "boolean"
+            }
+          },
+          "required": [
+            "version",
+            "enabled"
+          ]
+        },
+        "presentation": {
+          "type": "object",
+          "properties": {
+            "enabled": {
+              "type": "boolean"
+            },
+            "protocolVersions": {
+              "type": "array",
+              "items": {
+                "anyOf": [
+                  {
+                    "type": "number",
+                    "const": 1
+                  },
+                  {
+                    "type": "number",
+                    "const": 2
+                  }
+                ]
+              }
+            },
+            "raidProtocolVersions": {
+              "type": "array",
+              "items": {
+                "type": "number",
+                "const": 2
+              }
+            },
+            "supportsStablePrefix": {
+              "type": "boolean"
+            },
+            "maxWaitMs": {
+              "type": "number",
+              "const": 15000
+            },
+            "maxPageBytes": {
+              "type": "number",
+              "const": 262144
+            },
+            "maxEvents": {
+              "type": "number",
+              "const": 50000
+            },
+            "maxCommands": {
+              "type": "number",
+              "const": 756
+            },
+            "maxPageAgeMs": {
+              "type": "number",
+              "const": 120000
+            }
+          },
+          "required": [
+            "enabled",
+            "protocolVersions",
+            "raidProtocolVersions",
+            "supportsStablePrefix",
+            "maxWaitMs",
+            "maxPageBytes",
+            "maxEvents",
+            "maxCommands",
+            "maxPageAgeMs"
+          ]
+        },
+        "notifications": {
+          "type": "object",
+          "properties": {
+            "enabled": {
+              "type": "boolean",
+              "const": false
+            }
+          },
+          "required": [
+            "enabled"
+          ]
+        },
+        "economy": {
+          "type": "object",
+          "properties": {
+            "gameCurrency": {
+              "type": "object",
+              "properties": {
+                "version": {
+                  "type": "number",
+                  "const": 1
+                },
+                "exactSpendCurrency": {
+                  "type": "number",
+                  "const": 1
+                }
+              },
+              "required": [
+                "version",
+                "exactSpendCurrency"
+              ]
+            },
+            "workshop": {
+              "type": "object",
+              "properties": {
+                "enabled": {
+                  "type": "boolean"
+                },
+                "recipeVersion": {
+                  "type": "number",
+                  "const": 1
+                }
+              },
+              "required": [
+                "enabled",
+                "recipeVersion"
+              ]
+            },
+            "gems": {
+              "type": "object",
+              "properties": {
+                "exactConsent": {
+                  "type": "number",
+                  "const": 1
+                },
+                "enabled": {
+                  "type": "boolean"
+                },
+                "sources": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "enum": [
+                      "ledger-keep",
+                      "wallet-keep",
+                      "store"
+                    ]
+                  }
+                },
+                "destinationAta": {
+                  "anyOf": [
+                    {
+                      "type": "string"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                },
+                "gemsPerKeep": {
+                  "type": "number",
+                  "const": 1
+                },
+                "shardsPerGem": {
+                  "type": "number",
+                  "const": 1
+                },
+                "minConvertKeep": {
+                  "type": "number",
+                  "const": 1
+                },
+                "maxConvertKeepPerTx": {
+                  "type": "number",
+                  "const": 1000000
+                }
+              },
+              "required": [
+                "enabled",
+                "sources",
+                "destinationAta",
+                "gemsPerKeep",
+                "shardsPerGem",
+                "minConvertKeep",
+                "maxConvertKeepPerTx"
+              ]
+            }
+          },
+          "required": [
+            "gameCurrency",
+            "workshop",
+            "gems"
+          ]
+        },
+        "update": {
+          "type": "object",
+          "properties": {
+            "latestVersionCode": {
+              "type": "integer",
+              "exclusiveMinimum": 0,
+              "maximum": 9007199254740991
+            },
+            "versionName": {
+              "type": "string",
+              "pattern": "^\\d+\\.\\d+\\.\\d+$"
+            },
+            "sourceCommit": {
+              "type": "string",
+              "pattern": "^[0-9a-f]{40}$"
+            },
+            "apkPath": {
+              "type": "string",
+              "pattern": "^\\/native\\/releases\\/\\d{1,6}-[0-9a-f]{64}\\.apk$"
+            },
+            "apkUrl": {
+              "type": "string",
+              "format": "uri"
+            },
+            "sha256": {
+              "type": "string",
+              "pattern": "^[0-9a-f]{64}$"
+            },
+            "sizeBytes": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 314572800
+            },
+            "signerSha256": {
+              "type": "string",
+              "pattern": "^[0-9a-f]{64}$"
+            },
+            "publishedAt": {
+              "type": "string",
+              "format": "date-time",
+              "pattern": "^(?:(?:\\d\\d[2468][048]|\\d\\d[13579][26]|\\d\\d0[48]|[02468][048]00|[13579][26]00)-02-29|\\d{4}-(?:(?:0[13578]|1[02])-(?:0[1-9]|[12]\\d|3[01])|(?:0[469]|11)-(?:0[1-9]|[12]\\d|30)|(?:02)-(?:0[1-9]|1\\d|2[0-8])))T(?:(?:[01]\\d|2[0-3]):[0-5]\\d(?::[0-5]\\d(?:\\.\\d+)?)?(?:Z))$"
+            },
+            "storeStatus": {
+              "type": "string",
+              "enum": [
+                "pending",
+                "published"
+              ]
+            },
+            "channel": {
+              "type": "string",
+              "enum": [
+                "tester",
+                "stable"
+              ]
+            },
+            "mandatory": {
+              "type": "boolean"
+            },
+            "notesUrl": {
+              "anyOf": [
+                {
+                  "type": "string",
+                  "format": "uri"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            }
+          },
+          "required": [
+            "latestVersionCode",
+            "versionName",
+            "sourceCommit",
+            "apkPath",
+            "apkUrl",
+            "sha256",
+            "sizeBytes",
+            "signerSha256",
+            "publishedAt",
+            "storeStatus",
+            "channel",
+            "mandatory",
+            "notesUrl"
+          ]
+        },
+        "worldV2": {
+          "type": "object",
+          "properties": {
+            "enabled": {
+              "type": "boolean"
+            }
+          },
+          "required": [
+            "enabled"
+          ]
+        }
+      },
+      "required": [
+        "protocolVersion",
+        "sourceCommit",
+        "simVersion",
+        "minimumVersionCode",
+        "contentManifestUrl",
+        "presentation",
+        "notifications",
+        "economy"
+      ]
+    },
+    "TrainingReceiptQuery": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "type": "object",
+      "properties": {
+        "idempotencyKey": {
+          "type": "string",
+          "minLength": 8,
+          "maxLength": 128
+        }
+      },
+      "required": [
+        "idempotencyKey"
+      ],
+      "additionalProperties": false
+    },
+    "TrainingCloseBody": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "type": "object",
+      "properties": {
+        "idempotencyKey": {
+          "type": "string",
+          "minLength": 8,
+          "maxLength": 128
+        },
+        "confirmed": {
+          "type": "boolean",
+          "const": true
+        }
+      },
+      "required": [
+        "idempotencyKey",
+        "confirmed"
+      ],
+      "additionalProperties": false
+    },
+    "TrainingRecovery": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "oneOf": [
+        {
+          "$ref": "#/schemas/TrainingRecoveryUnknown"
+        },
+        {
+          "$ref": "#/schemas/TrainingRecoveryClosed"
+        },
+        {
+          "$ref": "#/schemas/TrainingRecoveryAccepted"
+        }
+      ]
+    },
+    "ConstructionReceipt": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "oneOf": [
+        {
+          "$ref": "#/schemas/ConstructionReceiptUnknown"
+        },
+        {
+          "$ref": "#/schemas/ConstructionReceiptAccepted"
+        }
+      ]
+    },
+    "TrainingCancellationPath": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "type": "object",
+      "properties": {
+        "queueId": {
+          "type": "string",
+          "format": "uuid",
+          "pattern": "^([0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[1-8][0-9a-fA-F]{3}-[89abAB][0-9a-fA-F]{3}-[0-9a-fA-F]{12}|00000000-0000-0000-0000-000000000000|ffffffff-ffff-ffff-ffff-ffffffffffff)$"
+        }
+      },
+      "required": [
+        "queueId"
+      ]
+    },
+    "TrainingCancellationBody": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "type": "object",
+      "properties": {
+        "idempotencyKey": {
+          "type": "string",
+          "minLength": 8,
+          "maxLength": 128
+        },
+        "baseId": {
+          "type": "string",
+          "format": "uuid",
+          "pattern": "^([0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[1-8][0-9a-fA-F]{3}-[89abAB][0-9a-fA-F]{3}-[0-9a-fA-F]{12}|00000000-0000-0000-0000-000000000000|ffffffff-ffff-ffff-ffff-ffffffffffff)$"
+        }
+      },
+      "required": [
+        "idempotencyKey"
+      ]
+    },
+    "TrainingCancellationResult": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "format": "uuid",
+          "pattern": "^([0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[1-8][0-9a-fA-F]{3}-[89abAB][0-9a-fA-F]{3}-[0-9a-fA-F]{12}|00000000-0000-0000-0000-000000000000|ffffffff-ffff-ffff-ffff-ffffffffffff)$"
+        },
+        "troop": {
+          "type": "string",
+          "enum": [
+            "highlander",
+            "bowman",
+            "kegrunner",
+            "tunneler",
+            "turrider",
+            "plunderer",
+            "giant",
+            "troll",
+            "dragon",
+            "mage",
+            "bilgewraith",
+            "gloamfang",
+            "direwyvern",
+            "hexbarrow",
+            "barrowling",
+            "wyrmling"
+          ]
+        },
+        "refundShards": {
+          "type": "string",
+          "maxLength": 32,
+          "pattern": "^[1-9][0-9]*$"
+        },
+        "cancelledAt": {
+          "type": "string",
+          "format": "date-time",
+          "pattern": "^(?:(?:\\d\\d[2468][048]|\\d\\d[13579][26]|\\d\\d0[48]|[02468][048]00|[13579][26]00)-02-29|\\d{4}-(?:(?:0[13578]|1[02])-(?:0[1-9]|[12]\\d|3[01])|(?:0[469]|11)-(?:0[1-9]|[12]\\d|30)|(?:02)-(?:0[1-9]|1\\d|2[0-8])))T(?:(?:[01]\\d|2[0-3]):[0-5]\\d(?::[0-5]\\d(?:\\.\\d+)?)?(?:Z))$"
+        },
+        "replayed": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "id",
+        "troop",
+        "refundShards",
+        "cancelledAt",
+        "replayed"
+      ]
+    },
+    "TrainingCancellationReceiptQuery": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "type": "object",
+      "properties": {
+        "idempotencyKey": {
+          "type": "string",
+          "minLength": 8,
+          "maxLength": 128
+        },
+        "baseId": {
+          "type": "string",
+          "format": "uuid",
+          "pattern": "^([0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[1-8][0-9a-fA-F]{3}-[89abAB][0-9a-fA-F]{3}-[0-9a-fA-F]{12}|00000000-0000-0000-0000-000000000000|ffffffff-ffff-ffff-ffff-ffffffffffff)$"
+        }
+      },
+      "required": [
+        "idempotencyKey"
+      ],
+      "additionalProperties": false
+    },
+    "TrainingCancellationReceipt": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "oneOf": [
+        {
+          "$ref": "#/schemas/TrainingCancellationReceiptUnknown"
+        },
+        {
+          "$ref": "#/schemas/TrainingCancellationReceiptAccepted"
+        }
+      ]
+    },
+    "TrainingScheduleConsent": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "type": "object",
+      "properties": {
+        "version": {
+          "type": "number",
+          "const": 2
+        },
+        "queue": {
+          "maxItems": 1000,
+          "type": "array",
+          "items": {
+            "$ref": "#/schemas/TrainingQueueConsentRow"
+          }
+        },
+        "unitDurations": {
+          "maxItems": 16,
+          "type": "array",
+          "items": {
+            "$ref": "#/schemas/TrainingScheduleConsentUnitDurationsItem"
+          }
+        }
+      },
+      "required": [
+        "version",
+        "queue",
+        "unitDurations"
+      ],
+      "additionalProperties": false
+    },
+    "TrainingFinishAllConsent": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "type": "object",
+      "properties": {
+        "version": {
+          "type": "number",
+          "const": 2
+        },
+        "queue": {
+          "maxItems": 1000,
+          "type": "array",
+          "items": {
+            "$ref": "#/schemas/TrainingQueueConsentRow"
+          }
+        },
+        "maxCostKeep": {
+          "type": "string",
+          "maxLength": 32,
+          "pattern": "^(0|[1-9][0-9]*)$"
+        }
+      },
+      "required": [
+        "version",
+        "queue",
+        "maxCostKeep"
+      ],
+      "additionalProperties": false
+    },
+    "ResearchStartConsent": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "type": "object",
+      "properties": {
+        "currentLevel": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 20
+        },
+        "maxCostShards": {
+          "type": "string",
+          "maxLength": 32,
+          "pattern": "^(0|[1-9][0-9]*)$"
+        }
+      },
+      "required": [
+        "currentLevel",
+        "maxCostShards"
+      ],
+      "additionalProperties": false
+    },
+    "ResearchEpisodeConsent": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "type": "object",
+      "properties": {
+        "currentLevel": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 20
+        },
+        "toLevel": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 20
+        },
+        "finishesAt": {
+          "type": "string",
+          "format": "date-time",
+          "pattern": "^(?:(?:\\d\\d[2468][048]|\\d\\d[13579][26]|\\d\\d0[48]|[02468][048]00|[13579][26]00)-02-29|\\d{4}-(?:(?:0[13578]|1[02])-(?:0[1-9]|[12]\\d|3[01])|(?:0[469]|11)-(?:0[1-9]|[12]\\d|30)|(?:02)-(?:0[1-9]|1\\d|2[0-8])))T(?:(?:[01]\\d|2[0-3]):[0-5]\\d(?::[0-5]\\d(?:\\.\\d+)?)?(?:Z|([+-](?:[01]\\d|2[0-3]):[0-5]\\d)))$"
+        },
+        "episodeId": {
+          "anyOf": [
+            {
+              "type": "string",
+              "format": "uuid",
+              "pattern": "^([0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[1-8][0-9a-fA-F]{3}-[89abAB][0-9a-fA-F]{3}-[0-9a-fA-F]{12}|00000000-0000-0000-0000-000000000000|ffffffff-ffff-ffff-ffff-ffffffffffff)$"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      },
+      "required": [
+        "currentLevel",
+        "toLevel",
+        "finishesAt",
+        "episodeId"
+      ],
+      "additionalProperties": false
+    },
+    "ResearchFinishConsent": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "type": "object",
+      "properties": {
+        "currentLevel": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 20
+        },
+        "toLevel": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 20
+        },
+        "finishesAt": {
+          "type": "string",
+          "format": "date-time",
+          "pattern": "^(?:(?:\\d\\d[2468][048]|\\d\\d[13579][26]|\\d\\d0[48]|[02468][048]00|[13579][26]00)-02-29|\\d{4}-(?:(?:0[13578]|1[02])-(?:0[1-9]|[12]\\d|3[01])|(?:0[469]|11)-(?:0[1-9]|[12]\\d|30)|(?:02)-(?:0[1-9]|1\\d|2[0-8])))T(?:(?:[01]\\d|2[0-3]):[0-5]\\d(?::[0-5]\\d(?:\\.\\d+)?)?(?:Z|([+-](?:[01]\\d|2[0-3]):[0-5]\\d)))$"
+        },
+        "episodeId": {
+          "anyOf": [
+            {
+              "type": "string",
+              "format": "uuid",
+              "pattern": "^([0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[1-8][0-9a-fA-F]{3}-[89abAB][0-9a-fA-F]{3}-[0-9a-fA-F]{12}|00000000-0000-0000-0000-000000000000|ffffffff-ffff-ffff-ffff-ffffffffffff)$"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "maxCostKeep": {
+          "type": "string",
+          "maxLength": 32,
+          "pattern": "^(0|[1-9][0-9]*)$"
+        }
+      },
+      "required": [
+        "currentLevel",
+        "toLevel",
+        "finishesAt",
+        "episodeId",
+        "maxCostKeep"
+      ],
+      "additionalProperties": false
+    },
+    "HeroUpgradeConsent": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "type": "object",
+      "properties": {
+        "expectedLevel": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 20
+        },
+        "maxCostKeep": {
+          "type": "string",
+          "maxLength": 32,
+          "pattern": "^(0|[1-9][0-9]*)$"
+        }
+      },
+      "required": [
+        "expectedLevel",
+        "maxCostKeep"
+      ],
+      "additionalProperties": false
+    },
+    "HeroRecoveryConsent": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "type": "object",
+      "properties": {
+        "recoveryUntil": {
+          "type": "string",
+          "format": "date-time",
+          "pattern": "^(?:(?:\\d\\d[2468][048]|\\d\\d[13579][26]|\\d\\d0[48]|[02468][048]00|[13579][26]00)-02-29|\\d{4}-(?:(?:0[13578]|1[02])-(?:0[1-9]|[12]\\d|3[01])|(?:0[469]|11)-(?:0[1-9]|[12]\\d|30)|(?:02)-(?:0[1-9]|1\\d|2[0-8])))T(?:(?:[01]\\d|2[0-3]):[0-5]\\d(?::[0-5]\\d(?:\\.\\d+)?)?(?:Z|([+-](?:[01]\\d|2[0-3]):[0-5]\\d)))$"
+        },
+        "maxCostKeep": {
+          "type": "string",
+          "maxLength": 32,
+          "pattern": "^(0|[1-9][0-9]*)$"
+        }
+      },
+      "required": [
+        "recoveryUntil",
+        "maxCostKeep"
+      ],
+      "additionalProperties": false
+    },
+    "HeroUpgradeReceiptQuery": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "type": "object",
+      "properties": {
+        "idempotencyKey": {
+          "type": "string",
+          "minLength": 8,
+          "maxLength": 128
+        },
+        "baseId": {
+          "type": "string",
+          "format": "uuid",
+          "pattern": "^([0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[1-8][0-9a-fA-F]{3}-[89abAB][0-9a-fA-F]{3}-[0-9a-fA-F]{12}|00000000-0000-0000-0000-000000000000|ffffffff-ffff-ffff-ffff-ffffffffffff)$"
+        },
+        "expectedLevel": {
+          "type": "number"
+        },
+        "maxCostKeep": {
+          "type": "string",
+          "maxLength": 32,
+          "pattern": "^(0|[1-9][0-9]*)$"
+        }
+      },
+      "required": [
+        "idempotencyKey",
+        "expectedLevel",
+        "maxCostKeep"
+      ],
+      "additionalProperties": false
+    },
+    "HeroRecoveryReceiptQuery": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "type": "object",
+      "properties": {
+        "idempotencyKey": {
+          "type": "string",
+          "minLength": 8,
+          "maxLength": 128
+        },
+        "baseId": {
+          "type": "string",
+          "format": "uuid",
+          "pattern": "^([0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[1-8][0-9a-fA-F]{3}-[89abAB][0-9a-fA-F]{3}-[0-9a-fA-F]{12}|00000000-0000-0000-0000-000000000000|ffffffff-ffff-ffff-ffff-ffffffffffff)$"
+        },
+        "recoveryUntil": {
+          "type": "string",
+          "format": "date-time",
+          "pattern": "^(?:(?:\\d\\d[2468][048]|\\d\\d[13579][26]|\\d\\d0[48]|[02468][048]00|[13579][26]00)-02-29|\\d{4}-(?:(?:0[13578]|1[02])-(?:0[1-9]|[12]\\d|3[01])|(?:0[469]|11)-(?:0[1-9]|[12]\\d|30)|(?:02)-(?:0[1-9]|1\\d|2[0-8])))T(?:(?:[01]\\d|2[0-3]):[0-5]\\d(?::[0-5]\\d(?:\\.\\d+)?)?(?:Z|([+-](?:[01]\\d|2[0-3]):[0-5]\\d)))$"
+        },
+        "maxCostKeep": {
+          "type": "string",
+          "maxLength": 32,
+          "pattern": "^(0|[1-9][0-9]*)$"
+        }
+      },
+      "required": [
+        "idempotencyKey",
+        "recoveryUntil",
+        "maxCostKeep"
+      ],
+      "additionalProperties": false
+    },
+    "HeroUpgradeReceipt": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "oneOf": [
+        {
+          "$ref": "#/schemas/HeroUpgradeReceiptUnknown"
+        },
+        {
+          "$ref": "#/schemas/HeroUpgradeReceiptAccepted"
+        }
+      ]
+    },
+    "HeroRecoveryReceipt": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "oneOf": [
+        {
+          "$ref": "#/schemas/HeroUpgradeReceiptUnknown"
+        },
+        {
+          "$ref": "#/schemas/HeroRecoveryReceiptAccepted"
+        }
+      ]
+    },
+    "WithdrawalReceiptQuery": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "type": "object",
+      "properties": {
+        "idempotencyKey": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9._:-]{8,128}$"
+        },
+        "grossAmount": {
+          "type": "string",
+          "maxLength": 32,
+          "pattern": "^[1-9][0-9]*$"
+        },
+        "feeBurned": {
+          "type": "string",
+          "maxLength": 32,
+          "pattern": "^(0|[1-9][0-9]*)$"
+        },
+        "netAmount": {
+          "type": "string",
+          "maxLength": 32,
+          "pattern": "^(0|[1-9][0-9]*)$"
+        },
+        "destination": {
+          "type": "string",
+          "minLength": 32,
+          "maxLength": 44,
+          "pattern": "^[1-9A-HJ-NP-Za-km-z]+$"
+        },
+        "mode": {
+          "type": "string",
+          "enum": [
+            "standard",
+            "instant"
+          ]
+        },
+        "cluster": {
+          "type": "string",
+          "enum": [
+            "devnet",
+            "mainnet-beta"
+          ]
+        },
+        "keepMint": {
+          "type": "string",
+          "minLength": 32,
+          "maxLength": 44,
+          "pattern": "^[1-9A-HJ-NP-Za-km-z]+$"
+        }
+      },
+      "required": [
+        "idempotencyKey",
+        "grossAmount",
+        "feeBurned",
+        "netAmount",
+        "destination",
+        "mode",
+        "cluster",
+        "keepMint"
+      ],
+      "additionalProperties": false
+    },
+    "WithdrawalReceipt": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "oneOf": [
+        {
+          "$ref": "#/schemas/WithdrawalReceiptUnknown"
+        },
+        {
+          "$ref": "#/schemas/WithdrawalReceiptAccepted"
+        }
+      ]
+    },
+    "ConversionReceiptQuery": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "type": "object",
+      "properties": {
+        "idempotencyKey": {
+          "type": "string",
+          "minLength": 8,
+          "maxLength": 128
+        },
+        "keep": {
+          "type": "string",
+          "maxLength": 32,
+          "pattern": "^[1-9][0-9]*$"
+        },
+        "baseId": {
+          "type": "string",
+          "format": "uuid",
+          "pattern": "^([0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[1-8][0-9a-fA-F]{3}-[89abAB][0-9a-fA-F]{3}-[0-9a-fA-F]{12}|00000000-0000-0000-0000-000000000000|ffffffff-ffff-ffff-ffff-ffffffffffff)$"
+        }
+      },
+      "required": [
+        "idempotencyKey",
+        "keep"
+      ],
+      "additionalProperties": false
+    },
+    "ConversionReceipt": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "oneOf": [
+        {
+          "$ref": "#/schemas/ConversionReceiptUnknown"
+        },
+        {
+          "$ref": "#/schemas/ConversionReceiptAccepted"
+        }
+      ]
+    },
+    "ForgeContributionReceiptQuery": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "type": "object",
+      "properties": {
+        "idempotencyKey": {
+          "type": "string",
+          "minLength": 8,
+          "maxLength": 128
+        },
+        "shards": {
+          "type": "string",
+          "maxLength": 32,
+          "pattern": "^[1-9][0-9]*$"
+        },
+        "baseId": {
+          "type": "string",
+          "format": "uuid",
+          "pattern": "^([0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[1-8][0-9a-fA-F]{3}-[89abAB][0-9a-fA-F]{3}-[0-9a-fA-F]{12}|00000000-0000-0000-0000-000000000000|ffffffff-ffff-ffff-ffff-ffffffffffff)$"
+        }
+      },
+      "required": [
+        "idempotencyKey",
+        "shards"
+      ],
+      "additionalProperties": false
+    },
+    "ForgeContributionReceipt": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "oneOf": [
+        {
+          "$ref": "#/schemas/ForgeContributionReceiptUnknown"
+        },
+        {
+          "$ref": "#/schemas/ForgeContributionReceiptAccepted"
+        }
+      ]
+    },
+    "TrainingRecoveryUnknown": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "type": "object",
+      "properties": {
+        "version": {
+          "type": "number",
+          "const": 1
+        },
+        "idempotencyKey": {
+          "type": "string",
+          "minLength": 8,
+          "maxLength": 128
+        },
+        "status": {
+          "type": "string",
+          "const": "unknown"
+        }
+      },
+      "required": [
+        "version",
+        "idempotencyKey",
+        "status"
+      ]
+    },
+    "TrainingRecoveryClosed": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "type": "object",
+      "properties": {
+        "version": {
+          "type": "number",
+          "const": 1
+        },
+        "idempotencyKey": {
+          "type": "string",
+          "minLength": 8,
+          "maxLength": 128
+        },
+        "status": {
+          "type": "string",
+          "const": "closed"
+        },
+        "closedAt": {
+          "type": "string",
+          "format": "date-time",
+          "pattern": "^(?:(?:\\d\\d[2468][048]|\\d\\d[13579][26]|\\d\\d0[48]|[02468][048]00|[13579][26]00)-02-29|\\d{4}-(?:(?:0[13578]|1[02])-(?:0[1-9]|[12]\\d|3[01])|(?:0[469]|11)-(?:0[1-9]|[12]\\d|30)|(?:02)-(?:0[1-9]|1\\d|2[0-8])))T(?:(?:[01]\\d|2[0-3]):[0-5]\\d(?::[0-5]\\d(?:\\.\\d+)?)?(?:Z))$"
+        }
+      },
+      "required": [
+        "version",
+        "idempotencyKey",
+        "status",
+        "closedAt"
+      ]
+    },
+    "TrainingRecoveryAccepted": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "type": "object",
+      "properties": {
+        "version": {
+          "type": "number",
+          "const": 1
+        },
+        "idempotencyKey": {
+          "type": "string",
+          "minLength": 8,
+          "maxLength": 128
+        },
+        "status": {
+          "type": "string",
+          "const": "accepted"
+        },
+        "baseId": {
+          "anyOf": [
+            {
+              "type": "string",
+              "format": "uuid",
+              "pattern": "^([0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[1-8][0-9a-fA-F]{3}-[89abAB][0-9a-fA-F]{3}-[0-9a-fA-F]{12}|00000000-0000-0000-0000-000000000000|ffffffff-ffff-ffff-ffff-ffffffffffff)$"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "acceptedAt": {
+          "type": "string",
+          "format": "date-time",
+          "pattern": "^(?:(?:\\d\\d[2468][048]|\\d\\d[13579][26]|\\d\\d0[48]|[02468][048]00|[13579][26]00)-02-29|\\d{4}-(?:(?:0[13578]|1[02])-(?:0[1-9]|[12]\\d|3[01])|(?:0[469]|11)-(?:0[1-9]|[12]\\d|30)|(?:02)-(?:0[1-9]|1\\d|2[0-8])))T(?:(?:[01]\\d|2[0-3]):[0-5]\\d(?::[0-5]\\d(?:\\.\\d+)?)?(?:Z))$"
+        },
+        "request": {
+          "$ref": "#/schemas/TrainingRecoveryAcceptedRequest"
+        },
+        "result": {
+          "$ref": "#/schemas/TrainingRecoveryAcceptedResult"
+        }
+      },
+      "required": [
+        "version",
+        "idempotencyKey",
+        "status",
+        "baseId",
+        "acceptedAt",
+        "request",
+        "result"
+      ]
+    },
+    "TrainingRecoveryAcceptedRequest": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "type": "object",
+      "properties": {
+        "composition": {
+          "type": "array",
+          "items": {
+            "$ref": "#/schemas/TrainingRecoveryAcceptedRequestCompositionItem"
+          }
+        },
+        "confirmedCostShards": {
+          "type": "string",
+          "maxLength": 32,
+          "pattern": "^(0|[1-9][0-9]*)$"
+        }
+      },
+      "required": [
+        "composition",
+        "confirmedCostShards"
+      ]
+    },
+    "TrainingRecoveryAcceptedRequestCompositionItem": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "type": "object",
+      "properties": {
+        "troop": {
+          "type": "string",
+          "enum": [
+            "highlander",
+            "bowman",
+            "kegrunner",
+            "tunneler",
+            "turrider",
+            "plunderer",
+            "giant",
+            "troll",
+            "dragon",
+            "mage",
+            "bilgewraith",
+            "gloamfang",
+            "direwyvern",
+            "hexbarrow",
+            "barrowling",
+            "wyrmling"
+          ]
+        },
+        "count": {
+          "type": "integer",
+          "exclusiveMinimum": 0,
+          "maximum": 9007199254740991
+        }
+      },
+      "required": [
+        "troop",
+        "count"
+      ]
+    },
+    "TrainingRecoveryAcceptedResult": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "type": "object",
+      "properties": {
+        "queue": {
+          "type": "array",
+          "items": {
+            "$ref": "#/schemas/TrainingRecoveryAcceptedResultQueueItem"
+          }
+        },
+        "costShards": {
+          "type": "string",
+          "maxLength": 32,
+          "pattern": "^(0|[1-9][0-9]*)$"
+        },
+        "replayed": {
+          "type": "boolean",
+          "const": true
+        }
+      },
+      "required": [
+        "queue",
+        "costShards",
+        "replayed"
+      ]
+    },
+    "TrainingRecoveryAcceptedResultQueueItem": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "format": "uuid",
+          "pattern": "^([0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[1-8][0-9a-fA-F]{3}-[89abAB][0-9a-fA-F]{3}-[0-9a-fA-F]{12}|00000000-0000-0000-0000-000000000000|ffffffff-ffff-ffff-ffff-ffffffffffff)$"
+        },
+        "troop": {
+          "type": "string",
+          "enum": [
+            "highlander",
+            "bowman",
+            "kegrunner",
+            "tunneler",
+            "turrider",
+            "plunderer",
+            "giant",
+            "troll",
+            "dragon",
+            "mage",
+            "bilgewraith",
+            "gloamfang",
+            "direwyvern",
+            "hexbarrow",
+            "barrowling",
+            "wyrmling"
+          ]
+        },
+        "finishesAt": {
+          "type": "string",
+          "format": "date-time",
+          "pattern": "^(?:(?:\\d\\d[2468][048]|\\d\\d[13579][26]|\\d\\d0[48]|[02468][048]00|[13579][26]00)-02-29|\\d{4}-(?:(?:0[13578]|1[02])-(?:0[1-9]|[12]\\d|3[01])|(?:0[469]|11)-(?:0[1-9]|[12]\\d|30)|(?:02)-(?:0[1-9]|1\\d|2[0-8])))T(?:(?:[01]\\d|2[0-3]):[0-5]\\d(?::[0-5]\\d(?:\\.\\d+)?)?(?:Z))$"
+        }
+      },
+      "required": [
+        "id",
+        "troop",
+        "finishesAt"
+      ]
+    },
+    "ConstructionReceiptUnknown": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "type": "object",
+      "properties": {
+        "version": {
+          "type": "number",
+          "const": 1
+        },
+        "status": {
+          "type": "string",
+          "const": "unknown"
+        },
+        "idempotencyKey": {
+          "type": "string",
+          "minLength": 8,
+          "maxLength": 128
+        }
+      },
+      "required": [
+        "version",
+        "status",
+        "idempotencyKey"
+      ]
+    },
+    "ConstructionReceiptAccepted": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "type": "object",
+      "properties": {
+        "version": {
+          "type": "number",
+          "const": 1
+        },
+        "status": {
+          "type": "string",
+          "const": "accepted"
+        },
+        "request": {
+          "$ref": "#/schemas/ConstructionReceiptAcceptedRequest"
+        },
+        "baseId": {
+          "anyOf": [
+            {
+              "type": "string",
+              "format": "uuid",
+              "pattern": "^([0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[1-8][0-9a-fA-F]{3}-[89abAB][0-9a-fA-F]{3}-[0-9a-fA-F]{12}|00000000-0000-0000-0000-000000000000|ffffffff-ffff-ffff-ffff-ffffffffffff)$"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "receiptId": {
+          "type": "string",
+          "format": "uuid",
+          "pattern": "^([0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[1-8][0-9a-fA-F]{3}-[89abAB][0-9a-fA-F]{3}-[0-9a-fA-F]{12}|00000000-0000-0000-0000-000000000000|ffffffff-ffff-ffff-ffff-ffffffffffff)$"
+        },
+        "acceptedAt": {
+          "type": "string",
+          "format": "date-time",
+          "pattern": "^(?:(?:\\d\\d[2468][048]|\\d\\d[13579][26]|\\d\\d0[48]|[02468][048]00|[13579][26]00)-02-29|\\d{4}-(?:(?:0[13578]|1[02])-(?:0[1-9]|[12]\\d|3[01])|(?:0[469]|11)-(?:0[1-9]|[12]\\d|30)|(?:02)-(?:0[1-9]|1\\d|2[0-8])))T(?:(?:[01]\\d|2[0-3]):[0-5]\\d(?::[0-5]\\d(?:\\.\\d+)?)?(?:Z))$"
+        },
+        "funding": {
+          "$ref": "#/schemas/ConstructionReceiptAcceptedFunding"
+        },
+        "minePurchase": {
+          "$ref": "#/schemas/ConstructionReceiptAcceptedMinePurchase"
+        }
+      },
+      "required": [
+        "version",
+        "status",
+        "request",
+        "baseId",
+        "receiptId",
+        "acceptedAt",
+        "funding"
+      ]
+    },
+    "ConstructionReceiptAcceptedRequest": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "type": "object",
+      "properties": {
+        "idempotencyKey": {
+          "type": "string",
+          "minLength": 8,
+          "maxLength": 128
+        },
+        "type": {
+          "type": "string",
+          "enum": [
+            "keep",
+            "mine",
+            "vault",
+            "barracks",
+            "forge",
+            "camp",
+            "cannon",
+            "archertower",
+            "mortar",
+            "airdefence",
+            "spiketrap",
+            "powdermine",
+            "pitfall",
+            "airmine",
+            "wall",
+            "electrictower",
+            "magetower",
+            "lasertower",
+            "dragonnest",
+            "goldforge",
+            "heroaltar",
+            "siegestool",
+            "clanhall",
+            "workshop",
+            "lodge",
+            "market",
+            "harvester",
+            "berth"
+          ]
+        },
+        "tx": {
+          "type": "integer",
+          "minimum": -10,
+          "maximum": 39
+        },
+        "ty": {
+          "type": "integer",
+          "minimum": -10,
+          "maximum": 39
+        },
+        "baseId": {
+          "type": "string",
+          "format": "uuid",
+          "pattern": "^([0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[1-8][0-9a-fA-F]{3}-[89abAB][0-9a-fA-F]{3}-[0-9a-fA-F]{12}|00000000-0000-0000-0000-000000000000|ffffffff-ffff-ffff-ffff-ffffffffffff)$"
+        }
+      },
+      "required": [
+        "idempotencyKey",
+        "type",
+        "tx",
+        "ty"
+      ],
+      "additionalProperties": false
+    },
+    "ConstructionReceiptAcceptedFunding": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "type": "object",
+      "properties": {
+        "currency": {
+          "type": "string",
+          "enum": [
+            "SHARDS",
+            "KEEP",
+            "GEMS"
+          ]
+        },
+        "amount": {
+          "type": "string",
+          "pattern": "^[1-9][0-9]*$"
+        }
+      },
+      "required": [
+        "currency",
+        "amount"
+      ]
+    },
+    "ConstructionReceiptAcceptedMinePurchase": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "type": "object",
+      "properties": {
+        "version": {
+          "type": "number",
+          "const": 1
+        },
+        "wallet": {
+          "type": "string",
+          "pattern": "^[1-9A-HJ-NP-Za-km-z]{32,44}$"
+        },
+        "request": {
+          "$ref": "#/schemas/ConstructionReceiptAcceptedMinePurchaseRequest"
+        },
+        "receiptId": {
+          "type": "string",
+          "allOf": [
+            {
+              "pattern": "^([0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[1-8][0-9a-fA-F]{3}-[89abAB][0-9a-fA-F]{3}-[0-9a-fA-F]{12}|00000000-0000-0000-0000-000000000000|ffffffff-ffff-ffff-ffff-ffffffffffff)$"
+            },
+            {
+              "pattern": "^[0-9a-f-]+$"
+            }
+          ]
+        },
+        "acceptedAt": {
+          "type": "string",
+          "format": "date-time",
+          "pattern": "^(?:(?:\\d\\d[2468][048]|\\d\\d[13579][26]|\\d\\d0[48]|[02468][048]00|[13579][26]00)-02-29|\\d{4}-(?:(?:0[13578]|1[02])-(?:0[1-9]|[12]\\d|3[01])|(?:0[469]|11)-(?:0[1-9]|[12]\\d|30)|(?:02)-(?:0[1-9]|1\\d|2[0-8])))T(?:(?:[01]\\d|2[0-3]):[0-5]\\d(?::[0-5]\\d(?:\\.\\d+)?)?(?:Z))$"
+        },
+        "funding": {
+          "$ref": "#/schemas/ConstructionReceiptAcceptedMinePurchaseFunding"
+        }
+      },
+      "required": [
+        "version",
+        "wallet",
+        "request",
+        "receiptId",
+        "acceptedAt",
+        "funding"
+      ],
+      "additionalProperties": false
+    },
+    "ConstructionReceiptAcceptedMinePurchaseRequest": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "const": "mine"
+        },
+        "tx": {
+          "type": "integer",
+          "minimum": -10,
+          "maximum": 39
+        },
+        "ty": {
+          "type": "integer",
+          "minimum": -10,
+          "maximum": 39
+        },
+        "baseId": {
+          "anyOf": [
+            {
+              "type": "string",
+              "allOf": [
+                {
+                  "pattern": "^([0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[1-8][0-9a-fA-F]{3}-[89abAB][0-9a-fA-F]{3}-[0-9a-fA-F]{12}|00000000-0000-0000-0000-000000000000|ffffffff-ffff-ffff-ffff-ffffffffffff)$"
+                },
+                {
+                  "pattern": "^[0-9a-f-]+$"
+                }
+              ]
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "idempotencyKey": {
+          "type": "string",
+          "minLength": 8,
+          "maxLength": 128
+        },
+        "expectedCurrency": {
+          "type": "string",
+          "enum": [
+            "KEEP",
+            "GEMS"
+          ]
+        },
+        "mineConsent": {
+          "$ref": "#/schemas/ConstructionReceiptAcceptedMinePurchaseRequestMineConsent"
+        }
+      },
+      "required": [
+        "type",
+        "tx",
+        "ty",
+        "baseId",
+        "idempotencyKey",
+        "expectedCurrency",
+        "mineConsent"
+      ],
+      "additionalProperties": false
+    },
+    "ConstructionReceiptAcceptedMinePurchaseRequestMineConsent": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "type": "object",
+      "properties": {
+        "version": {
+          "type": "number",
+          "const": 1
+        },
+        "mineIndex": {
+          "type": "integer",
+          "exclusiveMinimum": 0,
+          "maximum": 9007199254740991
+        },
+        "maxCostKeep": {
+          "type": "string",
+          "pattern": "^[1-9][0-9]{0,18}$"
+        }
+      },
+      "required": [
+        "version",
+        "mineIndex",
+        "maxCostKeep"
+      ],
+      "additionalProperties": false
+    },
+    "ConstructionReceiptAcceptedMinePurchaseFunding": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "type": "object",
+      "properties": {
+        "currency": {
+          "type": "string",
+          "enum": [
+            "KEEP",
+            "GEMS"
+          ]
+        },
+        "amount": {
+          "type": "string",
+          "pattern": "^[1-9][0-9]{0,18}$"
+        }
+      },
+      "required": [
+        "currency",
+        "amount"
+      ],
+      "additionalProperties": false
+    },
+    "TrainingCancellationReceiptUnknown": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "type": "object",
+      "properties": {
+        "version": {
+          "type": "number",
+          "const": 1
+        },
+        "queueId": {
+          "type": "string",
+          "format": "uuid",
+          "pattern": "^([0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[1-8][0-9a-fA-F]{3}-[89abAB][0-9a-fA-F]{3}-[0-9a-fA-F]{12}|00000000-0000-0000-0000-000000000000|ffffffff-ffff-ffff-ffff-ffffffffffff)$"
+        },
+        "idempotencyKey": {
+          "type": "string",
+          "minLength": 8,
+          "maxLength": 128
+        },
+        "baseId": {
+          "anyOf": [
+            {
+              "type": "string",
+              "format": "uuid",
+              "pattern": "^([0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[1-8][0-9a-fA-F]{3}-[89abAB][0-9a-fA-F]{3}-[0-9a-fA-F]{12}|00000000-0000-0000-0000-000000000000|ffffffff-ffff-ffff-ffff-ffffffffffff)$"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "status": {
+          "type": "string",
+          "const": "unknown"
+        }
+      },
+      "required": [
+        "version",
+        "queueId",
+        "idempotencyKey",
+        "baseId",
+        "status"
+      ]
+    },
+    "TrainingCancellationReceiptAccepted": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "type": "object",
+      "properties": {
+        "version": {
+          "type": "number",
+          "const": 1
+        },
+        "queueId": {
+          "type": "string",
+          "format": "uuid",
+          "pattern": "^([0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[1-8][0-9a-fA-F]{3}-[89abAB][0-9a-fA-F]{3}-[0-9a-fA-F]{12}|00000000-0000-0000-0000-000000000000|ffffffff-ffff-ffff-ffff-ffffffffffff)$"
+        },
+        "idempotencyKey": {
+          "type": "string",
+          "minLength": 8,
+          "maxLength": 128
+        },
+        "baseId": {
+          "anyOf": [
+            {
+              "type": "string",
+              "format": "uuid",
+              "pattern": "^([0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[1-8][0-9a-fA-F]{3}-[89abAB][0-9a-fA-F]{3}-[0-9a-fA-F]{12}|00000000-0000-0000-0000-000000000000|ffffffff-ffff-ffff-ffff-ffffffffffff)$"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "status": {
+          "type": "string",
+          "const": "accepted"
+        },
+        "result": {
+          "$ref": "#/schemas/TrainingCancellationReceiptAcceptedResult"
+        }
+      },
+      "required": [
+        "version",
+        "queueId",
+        "idempotencyKey",
+        "baseId",
+        "status",
+        "result"
+      ]
+    },
+    "TrainingCancellationReceiptAcceptedResult": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "format": "uuid",
+          "pattern": "^([0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[1-8][0-9a-fA-F]{3}-[89abAB][0-9a-fA-F]{3}-[0-9a-fA-F]{12}|00000000-0000-0000-0000-000000000000|ffffffff-ffff-ffff-ffff-ffffffffffff)$"
+        },
+        "troop": {
+          "type": "string",
+          "enum": [
+            "highlander",
+            "bowman",
+            "kegrunner",
+            "tunneler",
+            "turrider",
+            "plunderer",
+            "giant",
+            "troll",
+            "dragon",
+            "mage",
+            "bilgewraith",
+            "gloamfang",
+            "direwyvern",
+            "hexbarrow",
+            "barrowling",
+            "wyrmling"
+          ]
+        },
+        "refundShards": {
+          "type": "string",
+          "maxLength": 32,
+          "pattern": "^[1-9][0-9]*$"
+        },
+        "cancelledAt": {
+          "type": "string",
+          "format": "date-time",
+          "pattern": "^(?:(?:\\d\\d[2468][048]|\\d\\d[13579][26]|\\d\\d0[48]|[02468][048]00|[13579][26]00)-02-29|\\d{4}-(?:(?:0[13578]|1[02])-(?:0[1-9]|[12]\\d|3[01])|(?:0[469]|11)-(?:0[1-9]|[12]\\d|30)|(?:02)-(?:0[1-9]|1\\d|2[0-8])))T(?:(?:[01]\\d|2[0-3]):[0-5]\\d(?::[0-5]\\d(?:\\.\\d+)?)?(?:Z))$"
+        },
+        "replayed": {
+          "type": "boolean",
+          "const": true
+        }
+      },
+      "required": [
+        "id",
+        "troop",
+        "refundShards",
+        "cancelledAt",
+        "replayed"
+      ]
+    },
+    "HeroUpgradeReceiptUnknown": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "type": "object",
+      "properties": {
+        "version": {
+          "type": "number",
+          "const": 1
+        },
+        "status": {
+          "type": "string",
+          "const": "unknown"
+        },
+        "idempotencyKey": {
+          "type": "string",
+          "minLength": 8,
+          "maxLength": 128
+        }
+      },
+      "required": [
+        "version",
+        "status",
+        "idempotencyKey"
+      ]
+    },
+    "HeroUpgradeReceiptAccepted": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "type": "object",
+      "properties": {
+        "version": {
+          "type": "number",
+          "const": 1
+        },
+        "status": {
+          "type": "string",
+          "const": "accepted"
+        },
+        "wallet": {
+          "type": "string"
+        },
+        "baseId": {
+          "anyOf": [
+            {
+              "type": "string",
+              "format": "uuid",
+              "pattern": "^([0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[1-8][0-9a-fA-F]{3}-[89abAB][0-9a-fA-F]{3}-[0-9a-fA-F]{12}|00000000-0000-0000-0000-000000000000|ffffffff-ffff-ffff-ffff-ffffffffffff)$"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "receiptId": {
+          "type": "string",
+          "format": "uuid",
+          "pattern": "^([0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[1-8][0-9a-fA-F]{3}-[89abAB][0-9a-fA-F]{3}-[0-9a-fA-F]{12}|00000000-0000-0000-0000-000000000000|ffffffff-ffff-ffff-ffff-ffffffffffff)$"
+        },
+        "acceptedAt": {
+          "type": "string",
+          "format": "date-time",
+          "pattern": "^(?:(?:\\d\\d[2468][048]|\\d\\d[13579][26]|\\d\\d0[48]|[02468][048]00|[13579][26]00)-02-29|\\d{4}-(?:(?:0[13578]|1[02])-(?:0[1-9]|[12]\\d|3[01])|(?:0[469]|11)-(?:0[1-9]|[12]\\d|30)|(?:02)-(?:0[1-9]|1\\d|2[0-8])))T(?:(?:[01]\\d|2[0-3]):[0-5]\\d(?::[0-5]\\d(?:\\.\\d+)?)?(?:Z))$"
+        },
+        "funding": {
+          "$ref": "#/schemas/HeroUpgradeReceiptAcceptedFunding"
+        },
+        "request": {
+          "$ref": "#/schemas/HeroUpgradeReceiptAcceptedRequest"
+        },
+        "result": {
+          "$ref": "#/schemas/HeroUpgradeReceiptAcceptedResult"
+        }
+      },
+      "required": [
+        "version",
+        "status",
+        "wallet",
+        "baseId",
+        "receiptId",
+        "acceptedAt",
+        "funding",
+        "request",
+        "result"
+      ]
+    },
+    "HeroUpgradeReceiptAcceptedFunding": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "type": "object",
+      "properties": {
+        "currency": {
+          "type": "string",
+          "enum": [
+            "KEEP",
+            "GEMS"
+          ]
+        },
+        "amount": {
+          "type": "string",
+          "pattern": "^[1-9][0-9]*$"
+        }
+      },
+      "required": [
+        "currency",
+        "amount"
+      ]
+    },
+    "HeroUpgradeReceiptAcceptedRequest": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "type": "object",
+      "properties": {
+        "idempotencyKey": {
+          "type": "string",
+          "minLength": 8,
+          "maxLength": 128
+        },
+        "baseId": {
+          "type": "string",
+          "format": "uuid",
+          "pattern": "^([0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[1-8][0-9a-fA-F]{3}-[89abAB][0-9a-fA-F]{3}-[0-9a-fA-F]{12}|00000000-0000-0000-0000-000000000000|ffffffff-ffff-ffff-ffff-ffffffffffff)$"
+        },
+        "hero": {
+          "type": "string",
+          "enum": [
+            "vex",
+            "theodor"
+          ]
+        },
+        "expectedLevel": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 20
+        },
+        "maxCostKeep": {
+          "type": "string",
+          "maxLength": 32,
+          "pattern": "^(0|[1-9][0-9]*)$"
+        }
+      },
+      "required": [
+        "idempotencyKey",
+        "hero",
+        "expectedLevel",
+        "maxCostKeep"
+      ],
+      "additionalProperties": false
+    },
+    "HeroUpgradeReceiptAcceptedResult": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "type": "object",
+      "properties": {
+        "fromLevel": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 20
+        },
+        "toLevel": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 20
+        }
+      },
+      "required": [
+        "fromLevel",
+        "toLevel"
+      ]
+    },
+    "HeroRecoveryReceiptAccepted": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "type": "object",
+      "properties": {
+        "version": {
+          "type": "number",
+          "const": 1
+        },
+        "status": {
+          "type": "string",
+          "const": "accepted"
+        },
+        "wallet": {
+          "type": "string"
+        },
+        "baseId": {
+          "anyOf": [
+            {
+              "type": "string",
+              "format": "uuid",
+              "pattern": "^([0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[1-8][0-9a-fA-F]{3}-[89abAB][0-9a-fA-F]{3}-[0-9a-fA-F]{12}|00000000-0000-0000-0000-000000000000|ffffffff-ffff-ffff-ffff-ffffffffffff)$"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "receiptId": {
+          "type": "string",
+          "format": "uuid",
+          "pattern": "^([0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[1-8][0-9a-fA-F]{3}-[89abAB][0-9a-fA-F]{3}-[0-9a-fA-F]{12}|00000000-0000-0000-0000-000000000000|ffffffff-ffff-ffff-ffff-ffffffffffff)$"
+        },
+        "acceptedAt": {
+          "type": "string",
+          "format": "date-time",
+          "pattern": "^(?:(?:\\d\\d[2468][048]|\\d\\d[13579][26]|\\d\\d0[48]|[02468][048]00|[13579][26]00)-02-29|\\d{4}-(?:(?:0[13578]|1[02])-(?:0[1-9]|[12]\\d|3[01])|(?:0[469]|11)-(?:0[1-9]|[12]\\d|30)|(?:02)-(?:0[1-9]|1\\d|2[0-8])))T(?:(?:[01]\\d|2[0-3]):[0-5]\\d(?::[0-5]\\d(?:\\.\\d+)?)?(?:Z))$"
+        },
+        "funding": {
+          "$ref": "#/schemas/HeroUpgradeReceiptAcceptedFunding"
+        },
+        "request": {
+          "$ref": "#/schemas/HeroRecoveryReceiptAcceptedRequest"
+        },
+        "result": {
+          "$ref": "#/schemas/HeroRecoveryReceiptAcceptedResult"
+        }
+      },
+      "required": [
+        "version",
+        "status",
+        "wallet",
+        "baseId",
+        "receiptId",
+        "acceptedAt",
+        "funding",
+        "request",
+        "result"
+      ]
+    },
+    "HeroRecoveryReceiptAcceptedRequest": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "type": "object",
+      "properties": {
+        "idempotencyKey": {
+          "type": "string",
+          "minLength": 8,
+          "maxLength": 128
+        },
+        "baseId": {
+          "type": "string",
+          "format": "uuid",
+          "pattern": "^([0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[1-8][0-9a-fA-F]{3}-[89abAB][0-9a-fA-F]{3}-[0-9a-fA-F]{12}|00000000-0000-0000-0000-000000000000|ffffffff-ffff-ffff-ffff-ffffffffffff)$"
+        },
+        "hero": {
+          "type": "string",
+          "enum": [
+            "vex",
+            "theodor"
+          ]
+        },
+        "recoveryUntil": {
+          "type": "string",
+          "format": "date-time",
+          "pattern": "^(?:(?:\\d\\d[2468][048]|\\d\\d[13579][26]|\\d\\d0[48]|[02468][048]00|[13579][26]00)-02-29|\\d{4}-(?:(?:0[13578]|1[02])-(?:0[1-9]|[12]\\d|3[01])|(?:0[469]|11)-(?:0[1-9]|[12]\\d|30)|(?:02)-(?:0[1-9]|1\\d|2[0-8])))T(?:(?:[01]\\d|2[0-3]):[0-5]\\d(?::[0-5]\\d(?:\\.\\d+)?)?(?:Z|([+-](?:[01]\\d|2[0-3]):[0-5]\\d)))$"
+        },
+        "maxCostKeep": {
+          "type": "string",
+          "maxLength": 32,
+          "pattern": "^(0|[1-9][0-9]*)$"
+        }
+      },
+      "required": [
+        "idempotencyKey",
+        "hero",
+        "recoveryUntil",
+        "maxCostKeep"
+      ],
+      "additionalProperties": false
+    },
+    "HeroRecoveryReceiptAcceptedResult": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "type": "object",
+      "properties": {
+        "recoveryUntil": {
+          "type": "string",
+          "format": "date-time",
+          "pattern": "^(?:(?:\\d\\d[2468][048]|\\d\\d[13579][26]|\\d\\d0[48]|[02468][048]00|[13579][26]00)-02-29|\\d{4}-(?:(?:0[13578]|1[02])-(?:0[1-9]|[12]\\d|3[01])|(?:0[469]|11)-(?:0[1-9]|[12]\\d|30)|(?:02)-(?:0[1-9]|1\\d|2[0-8])))T(?:(?:[01]\\d|2[0-3]):[0-5]\\d(?::[0-5]\\d(?:\\.\\d+)?)?(?:Z))$"
+        }
+      },
+      "required": [
+        "recoveryUntil"
+      ]
+    },
+    "WithdrawalReceiptUnknown": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "type": "object",
+      "properties": {
+        "version": {
+          "type": "number",
+          "const": 1
+        },
+        "status": {
+          "type": "string",
+          "const": "unknown"
+        },
+        "idempotencyKey": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9._:-]{8,128}$"
+        }
+      },
+      "required": [
+        "version",
+        "status",
+        "idempotencyKey"
+      ]
+    },
+    "WithdrawalReceiptAccepted": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "type": "object",
+      "properties": {
+        "version": {
+          "type": "number",
+          "const": 1
+        },
+        "status": {
+          "type": "string",
+          "const": "accepted"
+        },
+        "wallet": {
+          "type": "string",
+          "minLength": 32,
+          "maxLength": 44,
+          "pattern": "^[1-9A-HJ-NP-Za-km-z]+$"
+        },
+        "request": {
+          "$ref": "#/schemas/WithdrawalReceiptQuery"
+        },
+        "receiptId": {
+          "type": "string",
+          "format": "uuid",
+          "pattern": "^([0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[1-8][0-9a-fA-F]{3}-[89abAB][0-9a-fA-F]{3}-[0-9a-fA-F]{12}|00000000-0000-0000-0000-000000000000|ffffffff-ffff-ffff-ffff-ffffffffffff)$"
+        },
+        "acceptedAt": {
+          "type": "string",
+          "format": "date-time",
+          "pattern": "^(?:(?:\\d\\d[2468][048]|\\d\\d[13579][26]|\\d\\d0[48]|[02468][048]00|[13579][26]00)-02-29|\\d{4}-(?:(?:0[13578]|1[02])-(?:0[1-9]|[12]\\d|3[01])|(?:0[469]|11)-(?:0[1-9]|[12]\\d|30)|(?:02)-(?:0[1-9]|1\\d|2[0-8])))T(?:(?:[01]\\d|2[0-3]):[0-5]\\d(?::[0-5]\\d(?:\\.\\d+)?)?(?:Z))$"
+        },
+        "funding": {
+          "$ref": "#/schemas/WithdrawalReceiptAcceptedFunding"
+        },
+        "result": {
+          "$ref": "#/schemas/WithdrawalReceiptAcceptedResult"
+        }
+      },
+      "required": [
+        "version",
+        "status",
+        "wallet",
+        "request",
+        "receiptId",
+        "acceptedAt",
+        "funding",
+        "result"
+      ]
+    },
+    "WithdrawalReceiptAcceptedFunding": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "type": "object",
+      "properties": {
+        "currency": {
+          "type": "string",
+          "const": "KEEP"
+        },
+        "amount": {
+          "type": "string",
+          "maxLength": 32,
+          "pattern": "^(0|[1-9][0-9]*)$"
+        }
+      },
+      "required": [
+        "currency",
+        "amount"
+      ]
+    },
+    "WithdrawalReceiptAcceptedResult": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "type": "object",
+      "properties": {
+        "withdrawalId": {
+          "type": "string",
+          "format": "uuid",
+          "pattern": "^([0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[1-8][0-9a-fA-F]{3}-[89abAB][0-9a-fA-F]{3}-[0-9a-fA-F]{12}|00000000-0000-0000-0000-000000000000|ffffffff-ffff-ffff-ffff-ffffffffffff)$"
+        },
+        "unbondsAt": {
+          "type": "string",
+          "format": "date-time",
+          "pattern": "^(?:(?:\\d\\d[2468][048]|\\d\\d[13579][26]|\\d\\d0[48]|[02468][048]00|[13579][26]00)-02-29|\\d{4}-(?:(?:0[13578]|1[02])-(?:0[1-9]|[12]\\d|3[01])|(?:0[469]|11)-(?:0[1-9]|[12]\\d|30)|(?:02)-(?:0[1-9]|1\\d|2[0-8])))T(?:(?:[01]\\d|2[0-3]):[0-5]\\d(?::[0-5]\\d(?:\\.\\d+)?)?(?:Z))$"
+        }
+      },
+      "required": [
+        "withdrawalId",
+        "unbondsAt"
+      ]
+    },
+    "ConversionReceiptUnknown": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "type": "object",
+      "properties": {
+        "version": {
+          "type": "number",
+          "const": 1
+        },
+        "status": {
+          "type": "string",
+          "const": "unknown"
+        },
+        "idempotencyKey": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "version",
+        "status",
+        "idempotencyKey"
+      ]
+    },
+    "ConversionReceiptAccepted": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "type": "object",
+      "properties": {
+        "version": {
+          "type": "number",
+          "const": 1
+        },
+        "status": {
+          "type": "string",
+          "const": "accepted"
+        },
+        "wallet": {
+          "type": "string"
+        },
+        "baseId": {
+          "anyOf": [
+            {
+              "type": "string",
+              "format": "uuid",
+              "pattern": "^([0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[1-8][0-9a-fA-F]{3}-[89abAB][0-9a-fA-F]{3}-[0-9a-fA-F]{12}|00000000-0000-0000-0000-000000000000|ffffffff-ffff-ffff-ffff-ffffffffffff)$"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "request": {
+          "$ref": "#/schemas/ConversionReceiptQuery"
+        },
+        "receiptId": {
+          "type": "string",
+          "format": "uuid",
+          "pattern": "^([0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[1-8][0-9a-fA-F]{3}-[89abAB][0-9a-fA-F]{3}-[0-9a-fA-F]{12}|00000000-0000-0000-0000-000000000000|ffffffff-ffff-ffff-ffff-ffffffffffff)$"
+        },
+        "acceptedAt": {
+          "type": "string",
+          "format": "date-time",
+          "pattern": "^(?:(?:\\d\\d[2468][048]|\\d\\d[13579][26]|\\d\\d0[48]|[02468][048]00|[13579][26]00)-02-29|\\d{4}-(?:(?:0[13578]|1[02])-(?:0[1-9]|[12]\\d|3[01])|(?:0[469]|11)-(?:0[1-9]|[12]\\d|30)|(?:02)-(?:0[1-9]|1\\d|2[0-8])))T(?:(?:[01]\\d|2[0-3]):[0-5]\\d(?::[0-5]\\d(?:\\.\\d+)?)?(?:Z))$"
+        },
+        "funding": {
+          "$ref": "#/schemas/ConversionReceiptAcceptedFunding"
+        },
+        "result": {
+          "$ref": "#/schemas/ConversionReceiptAcceptedResult"
+        }
+      },
+      "required": [
+        "version",
+        "status",
+        "wallet",
+        "baseId",
+        "request",
+        "receiptId",
+        "acceptedAt",
+        "funding",
+        "result"
+      ]
+    },
+    "ConversionReceiptAcceptedFunding": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "type": "object",
+      "properties": {
+        "currency": {
+          "type": "string",
+          "const": "KEEP"
+        },
+        "amount": {
+          "type": "string",
+          "maxLength": 32,
+          "pattern": "^[1-9][0-9]*$"
+        }
+      },
+      "required": [
+        "currency",
+        "amount"
+      ]
+    },
+    "ConversionReceiptAcceptedResult": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "type": "object",
+      "properties": {
+        "converted": {
+          "type": "string",
+          "maxLength": 32,
+          "pattern": "^[1-9][0-9]*$"
+        },
+        "shards": {
+          "type": "string",
+          "maxLength": 32,
+          "pattern": "^[1-9][0-9]*$"
+        },
+        "rate": {
+          "type": "integer",
+          "exclusiveMinimum": 0,
+          "maximum": 9007199254740991
+        }
+      },
+      "required": [
+        "converted",
+        "shards",
+        "rate"
+      ]
+    },
+    "ForgeContributionReceiptUnknown": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "type": "object",
+      "properties": {
+        "version": {
+          "type": "number",
+          "const": 1
+        },
+        "status": {
+          "type": "string",
+          "const": "unknown"
+        },
+        "idempotencyKey": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "version",
+        "status",
+        "idempotencyKey"
+      ]
+    },
+    "ForgeContributionReceiptAccepted": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "type": "object",
+      "properties": {
+        "version": {
+          "type": "number",
+          "const": 1
+        },
+        "status": {
+          "type": "string",
+          "const": "accepted"
+        },
+        "wallet": {
+          "type": "string"
+        },
+        "baseId": {
+          "anyOf": [
+            {
+              "type": "string",
+              "format": "uuid",
+              "pattern": "^([0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[1-8][0-9a-fA-F]{3}-[89abAB][0-9a-fA-F]{3}-[0-9a-fA-F]{12}|00000000-0000-0000-0000-000000000000|ffffffff-ffff-ffff-ffff-ffffffffffff)$"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "request": {
+          "$ref": "#/schemas/ForgeContributionReceiptQuery"
+        },
+        "receiptId": {
+          "type": "string",
+          "format": "uuid",
+          "pattern": "^([0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[1-8][0-9a-fA-F]{3}-[89abAB][0-9a-fA-F]{3}-[0-9a-fA-F]{12}|00000000-0000-0000-0000-000000000000|ffffffff-ffff-ffff-ffff-ffffffffffff)$"
+        },
+        "acceptedAt": {
+          "type": "string",
+          "format": "date-time",
+          "pattern": "^(?:(?:\\d\\d[2468][048]|\\d\\d[13579][26]|\\d\\d0[48]|[02468][048]00|[13579][26]00)-02-29|\\d{4}-(?:(?:0[13578]|1[02])-(?:0[1-9]|[12]\\d|3[01])|(?:0[469]|11)-(?:0[1-9]|[12]\\d|30)|(?:02)-(?:0[1-9]|1\\d|2[0-8])))T(?:(?:[01]\\d|2[0-3]):[0-5]\\d(?::[0-5]\\d(?:\\.\\d+)?)?(?:Z))$"
+        },
+        "funding": {
+          "$ref": "#/schemas/ForgeContributionReceiptAcceptedFunding"
+        },
+        "result": {
+          "$ref": "#/schemas/ForgeContributionReceiptAcceptedResult"
+        }
+      },
+      "required": [
+        "version",
+        "status",
+        "wallet",
+        "baseId",
+        "request",
+        "receiptId",
+        "acceptedAt",
+        "funding",
+        "result"
+      ]
+    },
+    "ForgeContributionReceiptAcceptedFunding": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "type": "object",
+      "properties": {
+        "currency": {
+          "type": "string",
+          "const": "SHARDS"
+        },
+        "amount": {
+          "type": "string",
+          "maxLength": 32,
+          "pattern": "^[1-9][0-9]*$"
+        }
+      },
+      "required": [
+        "currency",
+        "amount"
+      ]
+    },
+    "ForgeContributionReceiptAcceptedResult": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "type": "object",
+      "properties": {
+        "day": {
+          "type": "string",
+          "format": "date",
+          "pattern": "^(?:(?:\\d\\d[2468][048]|\\d\\d[13579][26]|\\d\\d0[48]|[02468][048]00|[13579][26]00)-02-29|\\d{4}-(?:(?:0[13578]|1[02])-(?:0[1-9]|[12]\\d|3[01])|(?:0[469]|11)-(?:0[1-9]|[12]\\d|30)|(?:02)-(?:0[1-9]|1\\d|2[0-8])))$"
+        },
+        "contributedShards": {
+          "type": "string",
+          "maxLength": 32,
+          "pattern": "^[1-9][0-9]*$"
+        }
+      },
+      "required": [
+        "day",
+        "contributedShards"
+      ]
+    },
+    "TrainingQueueConsentRow": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "format": "uuid",
+          "pattern": "^([0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[1-8][0-9a-fA-F]{3}-[89abAB][0-9a-fA-F]{3}-[0-9a-fA-F]{12}|00000000-0000-0000-0000-000000000000|ffffffff-ffff-ffff-ffff-ffffffffffff)$"
+        },
+        "startedAt": {
+          "type": "string",
+          "format": "date-time",
+          "pattern": "^(?:(?:\\d\\d[2468][048]|\\d\\d[13579][26]|\\d\\d0[48]|[02468][048]00|[13579][26]00)-02-29|\\d{4}-(?:(?:0[13578]|1[02])-(?:0[1-9]|[12]\\d|3[01])|(?:0[469]|11)-(?:0[1-9]|[12]\\d|30)|(?:02)-(?:0[1-9]|1\\d|2[0-8])))T(?:(?:[01]\\d|2[0-3]):[0-5]\\d(?::[0-5]\\d(?:\\.\\d+)?)?(?:Z))$"
+        },
+        "finishesAt": {
+          "type": "string",
+          "format": "date-time",
+          "pattern": "^(?:(?:\\d\\d[2468][048]|\\d\\d[13579][26]|\\d\\d0[48]|[02468][048]00|[13579][26]00)-02-29|\\d{4}-(?:(?:0[13578]|1[02])-(?:0[1-9]|[12]\\d|3[01])|(?:0[469]|11)-(?:0[1-9]|[12]\\d|30)|(?:02)-(?:0[1-9]|1\\d|2[0-8])))T(?:(?:[01]\\d|2[0-3]):[0-5]\\d(?::[0-5]\\d(?:\\.\\d+)?)?(?:Z))$"
+        }
+      },
+      "required": [
+        "id",
+        "startedAt",
+        "finishesAt"
+      ],
+      "additionalProperties": false
+    },
+    "TrainingScheduleConsentUnitDurationsItem": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "type": "object",
+      "properties": {
+        "troop": {
+          "type": "string",
+          "enum": [
+            "highlander",
+            "bowman",
+            "kegrunner",
+            "tunneler",
+            "turrider",
+            "plunderer",
+            "giant",
+            "troll",
+            "dragon",
+            "mage",
+            "bilgewraith",
+            "gloamfang",
+            "direwyvern",
+            "hexbarrow",
+            "barrowling",
+            "wyrmling"
+          ]
+        },
+        "durationMs": {
+          "type": "integer",
+          "exclusiveMinimum": 0,
+          "maximum": 9007199254740991
+        }
+      },
+      "required": [
+        "troop",
+        "durationMs"
+      ],
+      "additionalProperties": false
+    },
+    "__shared": {
+      "$defs": {
+        "schema0": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "number"
+            },
+            {
+              "type": "boolean"
+            },
+            {
+              "type": "null"
+            },
+            {
+              "type": "array",
+              "items": {
+                "$ref": "#/schemas/__shared/$defs/schema0"
+              }
+            },
+            {
+              "type": "object",
+              "propertyNames": {
+                "type": "string"
+              },
+              "additionalProperties": {
+                "$ref": "#/schemas/__shared/$defs/schema0"
+              }
+            }
+          ]
+        },
+        "schema1": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "number"
+            },
+            {
+              "type": "boolean"
+            },
+            {
+              "type": "null"
+            },
+            {
+              "type": "array",
+              "items": {
+                "$ref": "#/schemas/__shared/$defs/schema1"
+              }
+            },
+            {
+              "type": "object",
+              "propertyNames": {
+                "type": "string"
+              },
+              "additionalProperties": {
+                "$ref": "#/schemas/__shared/$defs/schema1"
+              }
+            }
+          ]
+        }
+      }
+    }
+  }
+}

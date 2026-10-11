@@ -1,0 +1,53 @@
+{
+  "schema": 1,
+  "id": "alpha",
+  "name": "Alpha",
+  "status": "ready",
+  "packVersion": "fixture-1",
+  "synthetic": true,
+  "grid": {
+    "x0": 40,
+    "y0": 100,
+    "cols": 12,
+    "rows": 8,
+    "deeds": 60
+  },
+  "frame": {
+    "id": "alpha",
+    "lon": -159.75,
+    "lat": 38.25,
+    "half": 4,
+    "projection": "gnomonic",
+    "size": 256
+  },
+  "first": [
+    "realm.json",
+    "chart8.png",
+    "deeds.png"
+  ],
+  "files": {
+    "chart8.png": {
+      "sha256": "6a27b7cb440b287c416783a7b779acfb8822c88a71e1f04be5f159378cd5e761",
+      "bytes": 18564,
+      "stage": "first"
+    },
+    "deeds.png": {
+      "sha256": "3795df843dd8b5e16a5d2912aa6f697eae2a4d2b00980e516a7e64dca2c9d93b",
+      "bytes": 364,
+      "stage": "first"
+    }
+  },
+  "chart8": {
+    "file": "chart8.png",
+    "pxPerDeed": 8,
+    "w": 96,
+    "h": 64
+  },
+  "deeds": {
+    "file": "deeds.png",
+    "w": 12,
+    "h": 8,
+    "thisRealm": 255,
+    "otherRealm": 96
+  }
+}

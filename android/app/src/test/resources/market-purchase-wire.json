@@ -1,0 +1,67 @@
+{
+  "sourceCommit": "8c4753732e670ab1f8eee859a34f8cf905d7d17a",
+  "sourceFile": "apps/web/src/lib/chain.ts",
+  "sourceFileSha256": "8ec9eae90b864f7b78c62c54358cc7281f59849fe5568fea0ddef0c6de2948fa",
+  "functionSha256": "9fa0b029145c53d15d7a534981c973a08202243c63c584d5d98de75fa6a23831",
+  "quote": {
+    "version": 1,
+    "idempotencyKey": "00000000-0000-4000-8000-000000000001",
+    "reservationId": "00000000-0000-4000-8000-000000000003",
+    "listingId": "00000000-0000-4000-8000-000000000002",
+    "itemId": "sword",
+    "buyer": "DnF3JgFtAEdF7Gkcdne5DMtwyLE1S25Uyb9ip4FEfVUX",
+    "seller": "6Ckm2BrnXxsSjyG5b17kQQRjoECVrts92RKXVGT8XeqS",
+    "sourceBaseId": "00000000-0000-4000-8000-000000000004",
+    "buyerBaseId": "00000000-0000-4000-8000-000000000005",
+    "cluster": "devnet",
+    "reference": "6ws1bVyu3F8wGy1fPHhrc2v8UyWiGbRAAuek8SwikKPD",
+    "priceLamports": "200000",
+    "feeBps": 500,
+    "sellerLamports": "190000",
+    "feeLamports": "10000",
+    "feeTreasury": "D37fYaEdaF9BcUJ65gojUC4ChS9r9k9fVRHK2fdxvbk8",
+    "createdAt": "2026-09-13T00:00:00Z",
+    "payableUntil": "2026-09-13T00:02:00Z"
+  },
+  "blockhash": "7gyGAp71YXQRoxmFBaHxofQXAipvgHyBKPyxmdSJxyvz",
+  "unsigned": "AQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAIFveNBGjjf2RYtW6hJE5sW9pK8gHeOt66j4rbm9jfmIexNTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTbLW8Lxba5LX5w4xJUY5XxOQQskIjjIFtrqDFyoKUHXFAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWGNjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjAgMDAAEEDAIAAAAw5gIAAAAAAAMCAAIMAgAAABAnAAAAAAAA",
+  "instructions": [
+    {
+      "program": "11111111111111111111111111111111",
+      "keys": [
+        {
+          "address": "DnF3JgFtAEdF7Gkcdne5DMtwyLE1S25Uyb9ip4FEfVUX",
+          "signer": true,
+          "writable": true
+        },
+        {
+          "address": "6Ckm2BrnXxsSjyG5b17kQQRjoECVrts92RKXVGT8XeqS",
+          "signer": false,
+          "writable": true
+        },
+        {
+          "address": "6ws1bVyu3F8wGy1fPHhrc2v8UyWiGbRAAuek8SwikKPD",
+          "signer": false,
+          "writable": false
+        }
+      ],
+      "data": "0200000030e6020000000000"
+    },
+    {
+      "program": "11111111111111111111111111111111",
+      "keys": [
+        {
+          "address": "DnF3JgFtAEdF7Gkcdne5DMtwyLE1S25Uyb9ip4FEfVUX",
+          "signer": true,
+          "writable": true
+        },
+        {
+          "address": "D37fYaEdaF9BcUJ65gojUC4ChS9r9k9fVRHK2fdxvbk8",
+          "signer": false,
+          "writable": true
+        }
+      ],
+      "data": "020000001027000000000000"
+    }
+  ]
+}

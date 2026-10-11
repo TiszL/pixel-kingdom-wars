@@ -1,0 +1,63 @@
+{
+  "source": "Backend server planner via web miningClaimFixture; generated disposable signer; public preparation and wire only.",
+  "preparation": {
+    "version": 1,
+    "wallet": "4hQX6oB5zGaq3YqYw2KM2HFMWdySd76ey23a4mo3EoXA",
+    "idempotencyKey": "08a6c239-a09e-472f-86e0-d138930942d0",
+    "claimId": "f437f207-4f3e-4bf5-9cb2-379c5d0f503a",
+    "quoteId": "f437f207-4f3e-4bf5-9cb2-379c5d0f503a",
+    "quoteVersion": 1,
+    "rootSequence": "1",
+    "day": "1",
+    "root": "a194ed9330f64b5fff46410fe353718743a187908068926603bfcb62404a4a51",
+    "totalCumulativeBaseUnits": "80",
+    "identity": {
+      "genesisHash": "HbEYXGmtgT6jZr3GcLM1CeJkHuW1arAAyX4iZZ9aM1uS",
+      "programId": "27bgnruDhviykKK12k5t2imTEgLUYfAgZRwGiD4zxWDf",
+      "keepMint": "AyhDYEuJScLRchVvnFbcfypDjs7KcewWUcvyoiM8iUMA",
+      "reserveOwner": "9BDFKNgPFm2KKWfHAkdqYyUNqKNGuSPd8EwDZe1C2N5h",
+      "configAddress": "EP9bGacnLjV6xb5mYaeHBr9qbRm2mQLMwvd3KLYxRxAB"
+    },
+    "leaf": {
+      "wallet": "4hQX6oB5zGaq3YqYw2KM2HFMWdySd76ey23a4mo3EoXA",
+      "rootSequence": "1",
+      "cumulativeKeepBaseUnits": "80",
+      "cumulativeRenown": "1",
+      "cumulativeDays": "1"
+    },
+    "proof": [],
+    "needsAta": true,
+    "needsMinerRecords": true,
+    "fees": {
+      "feeLamports": "5000",
+      "rentLamports": "10000",
+      "totalLamports": "15000",
+      "payerBalanceLamports": "1000000"
+    },
+    "transactions": [
+      {
+        "ordinal": 0,
+        "kind": "combined",
+        "version": "legacy",
+        "message": "AQAFDDbs4ti/7ywKRszsb8R5zwnsIheMlrhp3E71qOcoeK+1M1O547016D0UATtYsXfDb3TzBR1XDc4MbpUWdewrD3ZcQvj+u1jcKhnAvKchjDGfOffz+Eu4J/ZcApNEqQtTX5SlczIJBaZvrXeVl0nV2LiXQU9hKUNIm3NeT9u8Vdr+xtRr6aWXEYgwTxOPTCmWk2Aus2dNXo7tUzUAOGtsdyDBlHkKoL21O1oh15tFtpU1nCDIt0aWjNV5eT6U9Izi0FqlYSzajobH8tSKh72mpQu7QyM44mH/eAvHZkZsTviljJclj04kifG7PRApFI4NgwtaE5na/xCEBI572Nvp+FmUPy4jdDpAxzm5+wxRQDPI1A6pzuXJsr47ePAepUWU9QAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABt324ddloZPZy+FGzut5rBy0he1fWzeROoz1hX7/AKkQjGQ0Ajb+AJCwT6JTPSLxW9bZyBbbb4d/Fh8cu/IcejIpGpJiAbkfr5cA2ygWnyW4jpLcOFdCEuyEWHKe/fWoAwcGAAEACAkKAQELBAACAwkodw6+ptC1nmQ27OLYv+8sCkbM7G/Eec8J7CIXjJa4adxO9ajnKHivtQsJAAQFAgMGAQgKLN4kQHsgEdsIAQAAAAAAAABQAAAAAAAAAAEAAAAAAAAAAQAAAAAAAAAAAAAA",
+        "lookupTables": [],
+        "feePayer": "4hQX6oB5zGaq3YqYw2KM2HFMWdySd76ey23a4mo3EoXA",
+        "blockhash": "4NojmFrW4VuX3VzzsTMXao2Ry5xoaibnbdM34L4Apqq1",
+        "lastValidBlockHeight": 250,
+        "feeLamports": "5000",
+        "rentLamports": "10000"
+      }
+    ],
+    "preparedAt": "2035-01-01T00:00:00.000Z",
+    "expiresAt": "2035-01-01T00:02:00.000Z",
+    "serverNow": "2035-01-01T00:00:00.000Z",
+    "state": "prepared",
+    "currentSigningAuthorized": false,
+    "claimSubmissionAuthorized": false
+  },
+  "signed": {
+    "ordinal": 0,
+    "wire": "AfLqumVcd4ZDiN7Y6oxpeN7VI8pdW72U5GlUqWVrRcgozvHPxCK5u1MwGJG4X0C/oIawosPQ2NW9Qo0lBShgBgABAAUMNuzi2L/vLApGzOxvxHnPCewiF4yWuGncTvWo5yh4r7UzU7njvTXoPRQBO1ixd8NvdPMFHVcNzgxulRZ17CsPdlxC+P67WNwqGcC8pyGMMZ859/P4S7gn9lwCk0SpC1NflKVzMgkFpm+td5WXSdXYuJdBT2EpQ0ibc15P27xV2v7G1GvppZcRiDBPE49MKZaTYC6zZ01eju1TNQA4a2x3IMGUeQqgvbU7WiHXm0W2lTWcIMi3RpaM1Xl5PpT0jOLQWqVhLNqOhsfy1IqHvaalC7tDIzjiYf94C8dmRmxO+KWMlyWPTiSJ8bs9ECkUjg2DC1oTmdr/EIQEjnvY2+n4WZQ/LiN0OkDHObn7DFFAM8jUDqnO5cmyvjt48B6lRZT1AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAG3fbh12Whk9nL4UbO63msHLSF7V9bN5E6jPWFfv8AqRCMZDQCNv4AkLBPolM9IvFb1tnIFttvh38WHxy78hx6MikakmIBuR+vlwDbKBafJbiOktw4V0IS7IRYcp799agDBwYAAQAICQoBAQsEAAIDCSh3Dr6m0LWeZDbs4ti/7ywKRszsb8R5zwnsIheMlrhp3E71qOcoeK+1CwkABAUCAwYBCAos3iRAeyAR2wgBAAAAAAAAAFAAAAAAAAAAAQAAAAAAAAABAAAAAAAAAAAAAAA=",
+    "signature": "5rgtvCdKAKkAhPh8ZbTEBY892YAKYCxLpArA9f5ibgKuKevY9pgt35k13tRoh26r7HUYkLEK1H8LjiX95EJejhaf"
+  }
+}

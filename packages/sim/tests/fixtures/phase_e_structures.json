@@ -1,0 +1,57 @@
+{
+  "hash": "b26e3eac",
+  "outcome": {
+    "stars": 3,
+    "destructionPct": 100,
+    "keepDestroyed": true,
+    "vaultDestroyed": false,
+    "mineDestroyed": false,
+    "victory": true,
+    "buildings": [
+      {
+        "id": "keep",
+        "type": "keep",
+        "hp": 0,
+        "maxHp": 1200,
+        "destroyed": true
+      },
+      {
+        "id": "workshop",
+        "type": "workshop",
+        "hp": 0,
+        "maxHp": 600,
+        "destroyed": true
+      },
+      {
+        "id": "lodge",
+        "type": "lodge",
+        "hp": 0,
+        "maxHp": 600,
+        "destroyed": true
+      },
+      {
+        "id": "market",
+        "type": "market",
+        "hp": 0,
+        "maxHp": 600,
+        "destroyed": true
+      },
+      {
+        "id": "harvester",
+        "type": "harvester",
+        "hp": 0,
+        "maxHp": 600,
+        "destroyed": true
+      },
+      {
+        "id": "berth",
+        "type": "berth",
+        "hp": 0,
+        "maxHp": 600,
+        "destroyed": true
+      }
+    ],
+    "ticks": 320,
+    "eventCount": 550
+  }
+}

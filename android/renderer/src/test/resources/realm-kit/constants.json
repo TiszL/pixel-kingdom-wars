@@ -1,0 +1,93 @@
+{
+  "GRID": {
+    "claimTiles": 14,
+    "plotTiles": 30,
+    "deployRingTiles": 2,
+    "tilePx": 32
+  },
+  "REALM_KIT": {
+    "tilePixels": 32,
+    "fieldOriginTiles": -34,
+    "fieldTiles": 98,
+    "frameMinTile": -10,
+    "frameMaxTile": 40,
+    "edgeRingTiles": 1,
+    "overviewMaxZoom": 0.35,
+    "meadowRingsOutsideFrame": 2,
+    "edgeExtendTiles": 64,
+    "airLayer": 2
+  },
+  "LAYERED_GROUND_LIMITS_R5": {
+    "compressedBytes": 4194304,
+    "manifestBytes": 524288,
+    "rgbaBytes": 16777216,
+    "residentRealms": 2,
+    "assets": 32,
+    "dimension": 2048,
+    "placements": 2048,
+    "cells": 4096,
+    "layers": 4,
+    "paths": 96,
+    "pathPoints": 64,
+    "bakedTiles": 16384,
+    "floorTiles": 110000,
+    "footprintTiles": 8,
+    "edgeVariants": 512
+  },
+  "OBSTACLES": {
+    "tiers": {
+      "small": {
+        "costKeep": 10,
+        "clearSec": 60,
+        "sizeTiles": 1,
+        "kinds": [
+          "bush",
+          "stump",
+          "rock_s"
+        ]
+      },
+      "medium": {
+        "costKeep": 25,
+        "clearSec": 180,
+        "sizeTiles": 1,
+        "kinds": [
+          "pine1",
+          "pine2",
+          "rock_l"
+        ]
+      },
+      "large": {
+        "costKeep": 60,
+        "clearSec": 600,
+        "sizeTiles": 2,
+        "kinds": [
+          "tree_old",
+          "boulder"
+        ]
+      }
+    },
+    "clearRewardShards": 15,
+    "generation": {
+      "outsideDensityPct": 34,
+      "fringeStarterMax": 8,
+      "largeThreshold": 6
+    }
+  },
+  "OBSTACLE_REMNANT_DAYS": 7,
+  "KIT_OBSTACLES": {
+    "byProp": {
+      "rock-l": "rock_l",
+      "rock-s": "rock_s",
+      "stump": "stump",
+      "canopy-log": "stump",
+      "boulder": "boulder"
+    },
+    "tallByParity": [
+      "pine1",
+      "pine2"
+    ],
+    "tallLarge": "tree_old",
+    "low": "bush",
+    "creatureCellPixels": 32
+  }
+}

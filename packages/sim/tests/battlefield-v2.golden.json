@@ -1,0 +1,318 @@
+{
+  "simVersion": 15,
+  "hash": "0969bc83",
+  "outcome": {
+    "stars": 0,
+    "destructionPct": 22,
+    "keepDestroyed": false,
+    "vaultDestroyed": false,
+    "mineDestroyed": false,
+    "victory": false,
+    "buildings": [
+      {
+        "id": "keep",
+        "type": "keep",
+        "hp": 17442,
+        "maxHp": 20627,
+        "destroyed": false
+      },
+      {
+        "id": "airmine",
+        "type": "airmine",
+        "hp": 0,
+        "maxHp": 0,
+        "destroyed": false
+      },
+      {
+        "id": "cannon",
+        "type": "cannon",
+        "hp": 4083,
+        "maxHp": 7219,
+        "destroyed": false
+      },
+      {
+        "id": "wall_10_10",
+        "type": "wall",
+        "hp": 13201,
+        "maxHp": 13201,
+        "destroyed": false
+      },
+      {
+        "id": "wall_10_20",
+        "type": "wall",
+        "hp": 13201,
+        "maxHp": 13201,
+        "destroyed": false
+      },
+      {
+        "id": "wall_11_10",
+        "type": "wall",
+        "hp": 13201,
+        "maxHp": 13201,
+        "destroyed": false
+      },
+      {
+        "id": "wall_11_20",
+        "type": "wall",
+        "hp": 13201,
+        "maxHp": 13201,
+        "destroyed": false
+      },
+      {
+        "id": "wall_12_10",
+        "type": "wall",
+        "hp": 13201,
+        "maxHp": 13201,
+        "destroyed": false
+      },
+      {
+        "id": "wall_12_20",
+        "type": "wall",
+        "hp": 13201,
+        "maxHp": 13201,
+        "destroyed": false
+      },
+      {
+        "id": "wall_13_10",
+        "type": "wall",
+        "hp": 13201,
+        "maxHp": 13201,
+        "destroyed": false
+      },
+      {
+        "id": "wall_13_20",
+        "type": "wall",
+        "hp": 13201,
+        "maxHp": 13201,
+        "destroyed": false
+      },
+      {
+        "id": "wall_14_10",
+        "type": "wall",
+        "hp": 13123,
+        "maxHp": 13201,
+        "destroyed": false
+      },
+      {
+        "id": "wall_14_20",
+        "type": "wall",
+        "hp": 13201,
+        "maxHp": 13201,
+        "destroyed": false
+      },
+      {
+        "id": "wall_15_10",
+        "type": "wall",
+        "hp": 13201,
+        "maxHp": 13201,
+        "destroyed": false
+      },
+      {
+        "id": "wall_15_20",
+        "type": "wall",
+        "hp": 13201,
+        "maxHp": 13201,
+        "destroyed": false
+      },
+      {
+        "id": "wall_16_10",
+        "type": "wall",
+        "hp": 13201,
+        "maxHp": 13201,
+        "destroyed": false
+      },
+      {
+        "id": "wall_16_20",
+        "type": "wall",
+        "hp": 13201,
+        "maxHp": 13201,
+        "destroyed": false
+      },
+      {
+        "id": "wall_17_10",
+        "type": "wall",
+        "hp": 13201,
+        "maxHp": 13201,
+        "destroyed": false
+      },
+      {
+        "id": "wall_17_20",
+        "type": "wall",
+        "hp": 13201,
+        "maxHp": 13201,
+        "destroyed": false
+      },
+      {
+        "id": "wall_18_10",
+        "type": "wall",
+        "hp": 13201,
+        "maxHp": 13201,
+        "destroyed": false
+      },
+      {
+        "id": "wall_18_20",
+        "type": "wall",
+        "hp": 13201,
+        "maxHp": 13201,
+        "destroyed": false
+      },
+      {
+        "id": "wall_19_10",
+        "type": "wall",
+        "hp": 13201,
+        "maxHp": 13201,
+        "destroyed": false
+      },
+      {
+        "id": "wall_19_20",
+        "type": "wall",
+        "hp": 13201,
+        "maxHp": 13201,
+        "destroyed": false
+      },
+      {
+        "id": "wall_20_10",
+        "type": "wall",
+        "hp": 13201,
+        "maxHp": 13201,
+        "destroyed": false
+      },
+      {
+        "id": "wall_20_20",
+        "type": "wall",
+        "hp": 13201,
+        "maxHp": 13201,
+        "destroyed": false
+      },
+      {
+        "id": "wall_10_11",
+        "type": "wall",
+        "hp": 13201,
+        "maxHp": 13201,
+        "destroyed": false
+      },
+      {
+        "id": "wall_20_11",
+        "type": "wall",
+        "hp": 13201,
+        "maxHp": 13201,
+        "destroyed": false
+      },
+      {
+        "id": "wall_10_12",
+        "type": "wall",
+        "hp": 13201,
+        "maxHp": 13201,
+        "destroyed": false
+      },
+      {
+        "id": "wall_20_12",
+        "type": "wall",
+        "hp": 13201,
+        "maxHp": 13201,
+        "destroyed": false
+      },
+      {
+        "id": "wall_10_13",
+        "type": "wall",
+        "hp": 13201,
+        "maxHp": 13201,
+        "destroyed": false
+      },
+      {
+        "id": "wall_20_13",
+        "type": "wall",
+        "hp": 13201,
+        "maxHp": 13201,
+        "destroyed": false
+      },
+      {
+        "id": "wall_10_14",
+        "type": "wall",
+        "hp": 13201,
+        "maxHp": 13201,
+        "destroyed": false
+      },
+      {
+        "id": "wall_20_14",
+        "type": "wall",
+        "hp": 12301,
+        "maxHp": 13201,
+        "destroyed": false
+      },
+      {
+        "id": "wall_10_15",
+        "type": "wall",
+        "hp": 13201,
+        "maxHp": 13201,
+        "destroyed": false
+      },
+      {
+        "id": "wall_20_15",
+        "type": "wall",
+        "hp": 12301,
+        "maxHp": 13201,
+        "destroyed": false
+      },
+      {
+        "id": "wall_10_16",
+        "type": "wall",
+        "hp": 13201,
+        "maxHp": 13201,
+        "destroyed": false
+      },
+      {
+        "id": "wall_20_16",
+        "type": "wall",
+        "hp": 12301,
+        "maxHp": 13201,
+        "destroyed": false
+      },
+      {
+        "id": "wall_10_17",
+        "type": "wall",
+        "hp": 13201,
+        "maxHp": 13201,
+        "destroyed": false
+      },
+      {
+        "id": "wall_20_17",
+        "type": "wall",
+        "hp": 13201,
+        "maxHp": 13201,
+        "destroyed": false
+      },
+      {
+        "id": "wall_10_18",
+        "type": "wall",
+        "hp": 13201,
+        "maxHp": 13201,
+        "destroyed": false
+      },
+      {
+        "id": "wall_20_18",
+        "type": "wall",
+        "hp": 13201,
+        "maxHp": 13201,
+        "destroyed": false
+      },
+      {
+        "id": "wall_10_19",
+        "type": "wall",
+        "hp": 13201,
+        "maxHp": 13201,
+        "destroyed": false
+      },
+      {
+        "id": "wall_20_19",
+        "type": "wall",
+        "hp": 13201,
+        "maxHp": 13201,
+        "destroyed": false
+      }
+    ],
+    "ticks": 905
+  },
+  "ticks": 905,
+  "eventCount": 753
+}

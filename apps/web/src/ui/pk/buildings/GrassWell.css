@@ -1,0 +1,33 @@
+/* Android drawGrassWell: 2 dp S ink rim, whole-device-pixel cells, 4 dp lower band, optional 3 dp gold inner rim.
+ * Size and child layout belong to the caller; this fills that box. All numeric values are presentation geometry. */
+.pk-grass-well {
+  position: relative;
+  isolation: isolate;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  min-width: 0;
+  min-height: 0;
+  background: var(--pk-ink);
+  clip-path: var(--pk-clip-s);
+}
+.pk-grass-well::before {
+  content: '';
+  position: absolute;
+  inset: var(--pk-s2);
+  z-index: -1;
+  pointer-events: none;
+  clip-path: var(--pk-clip-s);
+  background-image: var(--pk-grass-image);
+  background-repeat: repeat;
+  background-size: var(--pk-grass-tile-size) var(--pk-grass-tile-size);
+  /* Native insideStepped clips but does not translate; keep the tile's origin at the outer well's origin. */
+  background-position: calc(-1 * var(--pk-s2)) calc(-1 * var(--pk-s2));
+  image-rendering: pixelated;
+  box-shadow: inset 0 calc(-1 * var(--pk-s4)) 0 var(--pk-grass-band);
+}
+.pk-grass-well[data-gold-rim='true']::before {
+  /* Native gold is painted after the bottom band, so this first shadow sits above the band. */
+  box-shadow: inset 0 0 0 var(--pk-outline-plate) var(--pk-gold),
+    inset 0 calc(-1 * var(--pk-s4)) 0 var(--pk-grass-band);
+}

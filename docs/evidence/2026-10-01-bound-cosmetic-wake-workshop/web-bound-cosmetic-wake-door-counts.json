@@ -1,0 +1,24 @@
+{
+  "newTests": 3,
+  "distinctAffectedPasses": 9,
+  "runs": [
+    {
+      "log": "/tmp/web-bound-cosmetic-wake-door-tests1.log",
+      "selected": 9,
+      "passed": 9,
+      "failed": 0,
+      "filtered": 11,
+      "reason": "six existing Door tests plus3 new Wake entry cases; unselected Screen cases excluded"
+    },
+    {
+      "log": "/tmp/web-bound-cosmetic-wake-door-tests2.log",
+      "selected": 1,
+      "passed": 1,
+      "failed": 0,
+      "filtered": 19,
+      "reason": "unknown Wake case strengthened to assert no HTTP fetch, then only this changed case rerun"
+    }
+  ],
+  "lint": "/tmp/web-bound-cosmetic-wake-door-lint2.log PASS",
+  "skipsNote": "Vitest labels name-filtered cases skipped; no test source skipped/deleted."
+}

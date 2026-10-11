@@ -1,0 +1,120 @@
+{
+  "hash": "82428246",
+  "outcome": {
+    "stars": 0,
+    "destructionPct": 10,
+    "keepDestroyed": false,
+    "vaultDestroyed": false,
+    "mineDestroyed": true,
+    "victory": false,
+    "buildings": [
+      {
+        "id": "keep",
+        "type": "keep",
+        "hp": 1500,
+        "maxHp": 1500,
+        "destroyed": false
+      },
+      {
+        "id": "vault",
+        "type": "vault",
+        "hp": 625,
+        "maxHp": 625,
+        "destroyed": false
+      },
+      {
+        "id": "mine",
+        "type": "mine",
+        "hp": 0,
+        "maxHp": 375,
+        "destroyed": true
+      },
+      {
+        "id": "cannon",
+        "type": "cannon",
+        "hp": 525,
+        "maxHp": 525,
+        "destroyed": false
+      },
+      {
+        "id": "tower",
+        "type": "archertower",
+        "hp": 450,
+        "maxHp": 450,
+        "destroyed": false
+      },
+      {
+        "id": "mortar",
+        "type": "mortar",
+        "hp": 277,
+        "maxHp": 300,
+        "destroyed": false
+      },
+      {
+        "id": "wall_0",
+        "type": "wall",
+        "hp": 600,
+        "maxHp": 600,
+        "destroyed": false
+      },
+      {
+        "id": "wall_1",
+        "type": "wall",
+        "hp": 600,
+        "maxHp": 600,
+        "destroyed": false
+      },
+      {
+        "id": "wall_2",
+        "type": "wall",
+        "hp": 600,
+        "maxHp": 600,
+        "destroyed": false
+      },
+      {
+        "id": "wall_3",
+        "type": "wall",
+        "hp": 0,
+        "maxHp": 600,
+        "destroyed": true
+      },
+      {
+        "id": "wall_4",
+        "type": "wall",
+        "hp": 0,
+        "maxHp": 600,
+        "destroyed": true
+      },
+      {
+        "id": "wall_5",
+        "type": "wall",
+        "hp": 0,
+        "maxHp": 600,
+        "destroyed": true
+      },
+      {
+        "id": "wall_6",
+        "type": "wall",
+        "hp": 600,
+        "maxHp": 600,
+        "destroyed": false
+      },
+      {
+        "id": "wall_7",
+        "type": "wall",
+        "hp": 600,
+        "maxHp": 600,
+        "destroyed": false
+      },
+      {
+        "id": "wall_8",
+        "type": "wall",
+        "hp": 600,
+        "maxHp": 600,
+        "destroyed": false
+      }
+    ],
+    "ticks": 180,
+    "eventCount": 154
+  }
+}

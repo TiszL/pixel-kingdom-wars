@@ -1,0 +1,8 @@
+/* Owned sheet body. The host classifies viewport and owns overlay/focus. */
+.pk-voyage-adapter input { width:100%; min-height:var(--pk-min-tap); box-sizing:border-box; border:var(--pk-s2) solid currentColor; color:inherit; background:var(--pk-parch-lo); font:inherit; }
+.pk-voyage-adapter article { padding:var(--pk-s12); margin-block:var(--pk-s12); border:var(--pk-s2) solid var(--pk-gold); }
+.pk-voyage-adapter article h3 { overflow-wrap:anywhere; }
+.pk-voyage-adapter [aria-label="Saved vehicle requests"] { display:grid; gap:var(--pk-s8); }
+.pk-voyage-adapter [aria-label="Vehicle NFT selection"] > button { margin-block:var(--pk-s4); }
+html[data-pk-vp="phone-portrait"] .pk-voyage-adapter article,
+html[data-pk-vp="phone-landscape"] .pk-voyage-adapter article { padding:var(--pk-s8); }

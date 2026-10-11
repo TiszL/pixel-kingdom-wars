@@ -1,0 +1,463 @@
+{
+  "version": 1,
+  "policy": {
+    "equipment": {
+      "recipeVersion": 1,
+      "maxBatch": 1,
+      "policyVersion": 1,
+      "recipe": {
+        "prismstoneLens": 2,
+        "crownsteel": 2,
+        "durationSec": 300,
+        "outputQuantity": 1
+      },
+      "durationNumerator": 4,
+      "durationDenominator": 5,
+      "cargoNumerator": 3,
+      "cargoDenominator": 4
+    },
+    "tax": {
+      "basisPoints": 10000,
+      "islandPoolBps": 2000
+    }
+  },
+  "request": {
+    "idempotencyKey": "00000000-0000-4000-8000-000000000002",
+    "baseId": "00000000-0000-4000-8000-000000000001",
+    "recipeId": "craft_route_compass",
+    "recipeVersion": 1,
+    "quantity": 1
+  },
+  "view": {
+    "wallet": "11111111111111111111111111111112",
+    "baseId": "00000000-0000-4000-8000-000000000001",
+    "serverNow": "2035-01-01T00:00:00.000Z",
+    "features": {
+      "ordinaryEquipment": {
+        "version": 1,
+        "receipts": 1
+      }
+    },
+    "acceptingJobs": true,
+    "recipeVersion": 1,
+    "maxBatch": 1,
+    "recipes": [
+      {
+        "recipeVersion": 1,
+        "recipeId": "craft_route_compass",
+        "quantity": 1,
+        "durationSec": 300,
+        "inputs": [
+          {
+            "kind": "crafting",
+            "itemId": "prismstone_lens",
+            "quantity": "2"
+          },
+          {
+            "kind": "crafting",
+            "itemId": "crownsteel",
+            "quantity": "2"
+          }
+        ],
+        "output": {
+          "itemId": "route_compass",
+          "quantity": "1"
+        }
+      }
+    ],
+    "craftingStock": [
+      {
+        "itemId": "frostglass",
+        "available": "0",
+        "pendingOutput": "0"
+      },
+      {
+        "itemId": "heartwood_beams",
+        "available": "0",
+        "pendingOutput": "0"
+      },
+      {
+        "itemId": "sunstone_blocks",
+        "available": "0",
+        "pendingOutput": "0"
+      },
+      {
+        "itemId": "crownsteel",
+        "available": "0",
+        "pendingOutput": "0"
+      },
+      {
+        "itemId": "prismstone_lens",
+        "available": "0",
+        "pendingOutput": "0"
+      },
+      {
+        "itemId": "stormalloy",
+        "available": "0",
+        "pendingOutput": "0"
+      },
+      {
+        "itemId": "thornsilk",
+        "available": "0",
+        "pendingOutput": "0"
+      },
+      {
+        "itemId": "embercore",
+        "available": "0",
+        "pendingOutput": "0"
+      },
+      {
+        "itemId": "navigation_kit",
+        "available": "0",
+        "pendingOutput": "0"
+      }
+    ],
+    "equipmentStock": [
+      {
+        "itemId": "route_compass",
+        "available": "0",
+        "reserved": "0",
+        "pendingOutput": "1"
+      }
+    ],
+    "pendingJobs": [
+      {
+        "jobId": "00000000-0000-4000-8000-000000000002",
+        "recipe": {
+          "recipeVersion": 1,
+          "recipeId": "craft_route_compass",
+          "quantity": 1,
+          "durationSec": 300,
+          "inputs": [
+            {
+              "kind": "crafting",
+              "itemId": "prismstone_lens",
+              "quantity": "2"
+            },
+            {
+              "kind": "crafting",
+              "itemId": "crownsteel",
+              "quantity": "2"
+            }
+          ],
+          "output": {
+            "itemId": "route_compass",
+            "quantity": "1"
+          }
+        },
+        "startedAt": "2035-01-01T00:00:00.000Z",
+        "readyAt": "2035-01-01T00:05:00.000Z"
+      }
+    ]
+  },
+  "envelope": {
+    "wallet": "11111111111111111111111111111112",
+    "idempotencyKey": "00000000-0000-4000-8000-000000000002",
+    "serverNow": "2035-01-01T00:00:00.000Z",
+    "status": "accepted",
+    "receipt": {
+      "wallet": "11111111111111111111111111111112",
+      "request": {
+        "idempotencyKey": "00000000-0000-4000-8000-000000000002",
+        "baseId": "00000000-0000-4000-8000-000000000001",
+        "recipeId": "craft_route_compass",
+        "recipeVersion": 1,
+        "quantity": 1
+      },
+      "jobId": "00000000-0000-4000-8000-000000000002",
+      "recipe": {
+        "recipeVersion": 1,
+        "recipeId": "craft_route_compass",
+        "quantity": 1,
+        "durationSec": 300,
+        "inputs": [
+          {
+            "kind": "crafting",
+            "itemId": "prismstone_lens",
+            "quantity": "2"
+          },
+          {
+            "kind": "crafting",
+            "itemId": "crownsteel",
+            "quantity": "2"
+          }
+        ],
+        "output": {
+          "itemId": "route_compass",
+          "quantity": "1"
+        }
+      },
+      "startedAt": "2035-01-01T00:00:00.000Z",
+      "readyAt": "2035-01-01T00:05:00.000Z"
+    },
+    "completion": null
+  },
+  "starterView": {
+    "wallet": "11111111111111111111111111111112",
+    "baseId": "00000000-0000-4000-8000-000000000001",
+    "serverNow": "2035-01-01T00:00:00.000Z",
+    "features": {
+      "starterExpeditions": {
+        "version": 1,
+        "receipts": 1
+      }
+    },
+    "acceptingDepartures": true,
+    "home": {
+      "source": "free_assignment",
+      "version": 1,
+      "realmId": "crownlands"
+    },
+    "routes": [
+      {
+        "routeCatalogueVersion": 2,
+        "rewardTableVersion": 2,
+        "routeId": "coastal_survey",
+        "realmId": "crownlands",
+        "resourceId": "crown_iron_ore",
+        "vehicleFamily": "starter",
+        "durationSec": 1440,
+        "grossQuantity": "15",
+        "islandPoolQuantity": "3",
+        "netQuantity": "12",
+        "fitting": {
+          "itemId": "route_compass",
+          "policyVersion": 1,
+          "originalDurationSec": 1800,
+          "originalGrossQuantity": "25",
+          "originalNetQuantity": "20",
+          "originalIslandPoolQuantity": "5"
+        }
+      },
+      {
+        "routeCatalogueVersion": 2,
+        "rewardTableVersion": 2,
+        "routeId": "long_survey",
+        "realmId": "crownlands",
+        "resourceId": "crown_iron_ore",
+        "vehicleFamily": "starter",
+        "durationSec": 5760,
+        "grossQuantity": "60",
+        "islandPoolQuantity": "12",
+        "netQuantity": "48",
+        "fitting": {
+          "itemId": "route_compass",
+          "policyVersion": 1,
+          "originalDurationSec": 7200,
+          "originalGrossQuantity": "80",
+          "originalNetQuantity": "64",
+          "originalIslandPoolQuantity": "16"
+        }
+      }
+    ],
+    "fitting": {
+      "itemId": "route_compass",
+      "policyVersion": 1
+    },
+    "installation": {
+      "baseId": "00000000-0000-4000-8000-000000000001",
+      "installationId": "00000000-0000-4000-8000-000000000003",
+      "family": "starter",
+      "berthId": "00000000-0000-4000-8000-000000000005",
+      "completedBuildJobId": "00000000-0000-4000-8000-000000000006",
+      "berthCompletedAt": "2035-01-01T00:00:00.000Z",
+      "installedAt": "2035-01-01T00:00:00.000Z"
+    },
+    "flight": null,
+    "lodgeCompletedAt": "2035-01-01T00:00:00.000Z",
+    "rawStock": [
+      {
+        "resourceId": "frost_quartz",
+        "available": "0",
+        "reserved": "0",
+        "total": "0"
+      },
+      {
+        "resourceId": "heartwood_logs",
+        "available": "0",
+        "reserved": "0",
+        "total": "0"
+      },
+      {
+        "resourceId": "sunstone_rubble",
+        "available": "0",
+        "reserved": "0",
+        "total": "0"
+      },
+      {
+        "resourceId": "crown_iron_ore",
+        "available": "0",
+        "reserved": "0",
+        "total": "0"
+      },
+      {
+        "resourceId": "rough_prism",
+        "available": "0",
+        "reserved": "0",
+        "total": "0"
+      },
+      {
+        "resourceId": "storm_ore",
+        "available": "0",
+        "reserved": "0",
+        "total": "0"
+      },
+      {
+        "resourceId": "thorn_fibre",
+        "available": "0",
+        "reserved": "0",
+        "total": "0"
+      },
+      {
+        "resourceId": "ember_nodules",
+        "available": "0",
+        "reserved": "0",
+        "total": "0"
+      }
+    ]
+  },
+  "starterEnvelope": {
+    "wallet": "11111111111111111111111111111112",
+    "idempotencyKey": "00000000-0000-4000-8000-000000000002",
+    "serverNow": "2035-01-01T00:00:00.000Z",
+    "status": "accepted",
+    "receipt": {
+      "wallet": "11111111111111111111111111111112",
+      "expeditionId": "00000000-0000-4000-8000-000000000002",
+      "installationId": "00000000-0000-4000-8000-000000000003",
+      "departedAt": "2035-01-01T00:00:00.000Z",
+      "termId": "00000000-0000-4000-8000-000000000004",
+      "termHash": "abababababababababababababababababababababababababababababababab",
+      "request": {
+        "idempotencyKey": "00000000-0000-4000-8000-000000000002",
+        "baseId": "00000000-0000-4000-8000-000000000001",
+        "installationId": "00000000-0000-4000-8000-000000000003",
+        "routeId": "coastal_survey",
+        "routeVersion": 2,
+        "rewardVersion": 2,
+        "fitting": {
+          "itemId": "route_compass",
+          "policyVersion": 1
+        }
+      },
+      "route": {
+        "routeCatalogueVersion": 2,
+        "rewardTableVersion": 2,
+        "routeId": "coastal_survey",
+        "realmId": "crownlands",
+        "resourceId": "crown_iron_ore",
+        "vehicleFamily": "starter",
+        "durationSec": 1440,
+        "grossQuantity": "15",
+        "islandPoolQuantity": "3",
+        "netQuantity": "12",
+        "fitting": {
+          "itemId": "route_compass",
+          "policyVersion": 1,
+          "originalDurationSec": 1800,
+          "originalGrossQuantity": "25",
+          "originalNetQuantity": "20",
+          "originalIslandPoolQuantity": "5"
+        }
+      },
+      "returnsAt": "2035-01-01T00:24:00.000Z"
+    },
+    "return": null
+  },
+  "advancedView": {
+    "version": 1,
+    "wallet": "11111111111111111111111111111112",
+    "baseId": "00000000-0000-4000-8000-000000000001",
+    "items": [
+      {
+        "installationId": "00000000-0000-4000-8000-000000000003",
+        "previews": [
+          {
+            "policyVersion": 1,
+            "family": "survey_balloon",
+            "tier": 1,
+            "homeRealmId": "crownlands",
+            "routeId": "coastal_survey",
+            "realmId": "crownlands",
+            "resourceId": "crown_iron_ore",
+            "accessRequirement": "home",
+            "durationSec": 1440,
+            "grossQuantity": "20",
+            "netQuantity": "16",
+            "islandPoolQuantity": "4",
+            "supplies": [
+              {
+                "resourceId": "rough_prism",
+                "quantity": "1"
+              }
+            ],
+            "fitting": {
+              "itemId": "route_compass",
+              "policyVersion": 1,
+              "originalDurationSec": 1800,
+              "originalGrossQuantity": "30",
+              "originalNetQuantity": "24",
+              "originalIslandPoolQuantity": "6"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "advancedEnvelope": {
+    "wallet": "11111111111111111111111111111112",
+    "idempotencyKey": "00000000-0000-4000-8000-000000000002",
+    "serverNow": "2035-01-01T00:00:00.000Z",
+    "status": "accepted",
+    "receipt": {
+      "wallet": "11111111111111111111111111111112",
+      "expeditionId": "00000000-0000-4000-8000-000000000002",
+      "installationId": "00000000-0000-4000-8000-000000000003",
+      "departedAt": "2035-01-01T00:00:00.000Z",
+      "termId": "00000000-0000-4000-8000-000000000004",
+      "termHash": "abababababababababababababababababababababababababababababababab",
+      "request": {
+        "idempotencyKey": "00000000-0000-4000-8000-000000000002",
+        "baseId": "00000000-0000-4000-8000-000000000001",
+        "installationId": "00000000-0000-4000-8000-000000000003",
+        "routeId": "coastal_survey",
+        "policyVersion": 1,
+        "fitting": {
+          "itemId": "route_compass",
+          "policyVersion": 1
+        }
+      },
+      "route": {
+        "policyVersion": 1,
+        "family": "survey_balloon",
+        "tier": 1,
+        "homeRealmId": "crownlands",
+        "routeId": "coastal_survey",
+        "realmId": "crownlands",
+        "resourceId": "crown_iron_ore",
+        "accessRequirement": "home",
+        "durationSec": 1440,
+        "grossQuantity": "20",
+        "netQuantity": "16",
+        "islandPoolQuantity": "4",
+        "supplies": [
+          {
+            "resourceId": "rough_prism",
+            "quantity": "1"
+          }
+        ],
+        "fitting": {
+          "itemId": "route_compass",
+          "policyVersion": 1,
+          "originalDurationSec": 1800,
+          "originalGrossQuantity": "30",
+          "originalNetQuantity": "24",
+          "originalIslandPoolQuantity": "6"
+        }
+      },
+      "completedBefore": "0",
+      "returnsAt": "2035-01-01T00:24:00.000Z"
+    },
+    "return": null
+  }
+}

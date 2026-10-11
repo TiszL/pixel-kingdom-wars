@@ -1,0 +1,48 @@
+{
+  "protocolVersion": 1,
+  "sourceCommit": "dev",
+  "simVersion": 17,
+  "minimumVersionCode": 0,
+  "contentManifestUrl": null,
+  "presentation": {
+    "enabled": false,
+    "protocolVersions": [
+      1,
+      2
+    ],
+    "raidProtocolVersions": [
+      2
+    ],
+    "supportsStablePrefix": true,
+    "maxWaitMs": 15000,
+    "maxPageBytes": 262144,
+    "maxEvents": 50000,
+    "maxCommands": 756,
+    "maxPageAgeMs": 120000
+  },
+  "notifications": {
+    "enabled": false
+  },
+  "economy": {
+    "gameCurrency": {
+      "version": 1,
+      "exactSpendCurrency": 1
+    },
+    "workshop": {
+      "enabled": false,
+      "recipeVersion": 1
+    },
+    "gems": {
+      "enabled": false,
+      "sources": [],
+      "destinationAta": null,
+      "gemsPerKeep": 1,
+      "shardsPerGem": 1,
+      "minConvertKeep": 1,
+      "maxConvertKeepPerTx": 1000000
+    }
+  },
+  "worldV2": {
+    "enabled": true
+  }
+}

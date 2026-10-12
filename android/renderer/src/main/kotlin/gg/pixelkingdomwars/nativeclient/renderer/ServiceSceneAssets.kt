@@ -32,6 +32,8 @@ internal data class ServicePackedAtlas(val path: String, val texture: String, va
 internal class ServiceTexturePixels(val data: TextureData, private val dispose: () -> Unit) : Closeable {
     private var references = 1
     @Synchronized fun retain(): ServiceTexturePixels { check(references > 0); references++; return this }
+    /** Another owner only while one still holds these pixels; null once the last owner has left (they are disposed). */
+    @Synchronized fun retainIfOwned(): ServiceTexturePixels? = if (references > 0) { references++; this } else null
     @Synchronized override fun close() { check(references > 0); if (--references == 0) dispose() }
     companion object {
         fun decode(file: FileHandle): ServiceTexturePixels {
@@ -41,6 +43,28 @@ internal class ServiceTexturePixels(val data: TextureData, private val dispose: 
                 ServiceTexturePixels(PixmapTextureData(pixmap,Pixmap.Format.RGBA8888,false,false,true)) { pixmap.dispose() }
             } catch (error: Exception) { pixmap.dispose(); throw error }
         }
+    }
+}
+
+/** Owner report 2026-10-11 ("so laggy it is not playable"): with Phase E art on, every /base-driven Home refresh (each
+ * resume, each poll) decoded every selected PNG again (up to the 64 MiB selected-pixel cap) only for the renderer to skip
+ * uploading textures that were already resident, so each refresh was a burst of large allocations and GC pauses.
+ * A selected picture is now decoded at most once while any owner (a pending/staged bundle or a resident texture) still
+ * holds its pixels: a later preparation of the same picture becomes one more owner of the SAME pixels. This index owns
+ * NO reference itself, so residency, the selected-pixel cap and eviction stay exactly the existing owners' (the last
+ * close disposes the pixels and unindexes them; the next preparation decodes afresh). Keyed by the leased image's
+ * canonical path, the identity the renderer's texture residency already uses; leased directories are content-addressed
+ * (one verified generation per content version), so one path is one set of bytes. What is drawn never changes. */
+internal class ServicePixelCache(private val decoder: (FileHandle) -> ServiceTexturePixels = ServiceTexturePixels::decode) {
+    private val owned = java.util.concurrent.ConcurrentHashMap<String, ServiceTexturePixels>()
+    fun decode(file: FileHandle): ServiceTexturePixels {
+        val key = file.file().canonicalPath
+        owned[key]?.retainIfOwned()?.let { return it }
+        val decoded = decoder(file)
+        lateinit var shared: ServiceTexturePixels
+        shared = ServiceTexturePixels(decoded.data) { owned.remove(key, shared); decoded.close() }
+        owned[key] = shared
+        return shared
     }
 }
 

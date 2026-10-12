@@ -33,7 +33,9 @@ class HeroRecruitmentRepository(private val session: AccountSession, private val
     private val api: ApiClient, private val store: PendingIntentStore, private val observer: ReceiptObserver,
     private val selectedBaseId: () -> String?, private val directory: () -> BaseDirectory?,
     private val refreshAccount: suspend () -> Unit, private val catalogue: () -> JsonObject?,
-    private val refreshSelected: suspend () -> Unit, cluster: String) {
+    private val refreshSelected: suspend () -> Unit, cluster: String,
+    /** The Home read the base repository has in flight or published for this base (BaseRepository.sharedHome), or null. */
+    private val sharedHome: suspend (String?) -> HomeSnapshot? = { null }) {
     private val mutable = MutableStateFlow(HeroRecruitmentState()); val state = mutable.asStateFlow()
     private val admission = Mutex(); @Volatile private var epoch = 0L; @Volatile private var actionEpoch: Long? = null
     @Volatile private var selection: String? = null; @Volatile private var requireSelection = false; private var permittedKey: String? = null
@@ -74,9 +76,10 @@ class HeroRecruitmentRepository(private val session: AccountSession, private val
         }
     }
     private fun definitions(plotVersion: Int?) = HeroAltarDefinition.all(requireNotNull(catalogue()) { "Load the verified hero catalogue first." }, plotVersion)
-    private suspend fun home(base: String?): HomeSnapshot = bounded { readHome(api, base) }.also {
-        ForgeClaimContract.amount(it.balances.keep); ForgeClaimContract.amount(it.balances.shards)
-    }
+    private suspend fun home(base: String?, shared: Boolean = false): HomeSnapshot =
+        ((if (shared) bounded { sharedHome(base) } else null) ?: bounded { readHome(api, base) }).also {
+            ForgeClaimContract.amount(it.balances.keep); ForgeClaimContract.amount(it.balances.shards)
+        }
     private suspend fun probe(): Boolean {
         mutable.update { it.copy(supported = false, enabled = false) }
         val key = UUID.randomUUID().toString()
@@ -93,9 +96,9 @@ class HeroRecruitmentRepository(private val session: AccountSession, private val
         check(if (base == null) !dir.enabled else dir.bases.any { it.id == base && it.selectable }
             && (!dir.enabled || dir.stableMutations)) { "The original recruitment base is unavailable. Its saved destination cannot change." }
     }
-    private suspend fun readOffers(base: String?): List<HeroAltarOffer> {
+    private suspend fun readOffers(base: String?, shared: Boolean = false): List<HeroAltarOffer> {
         requireOriginal(base)
-        val home = home(base)
+        val home = home(base, shared)
         val query = base?.let { mapOf("baseId" to it) }.orEmpty()
         val items = bounded { api.get("/items", query) }; val roster = bounded { api.get("/heroes", query) }
         val defs = definitions(home.base.plotVersion); val offers = defs.map { heroOffer(it, items, roster) }
@@ -105,9 +108,13 @@ class HeroRecruitmentRepository(private val session: AccountSession, private val
         val observed = op.observe(session.wallet, ::hydrate)
         val unknownKey = op.pending(session.wallet)?.idempotencyKey?.takeIf { observed != null && op.closable(session.wallet) }
         mutable.update { it.copy(serverUnknownKey = unknownKey) }
-        bounded { refreshAccount() }; probe()
+        bounded { refreshAccount() }; val open = probe()
         val dir = directory()
-        if (dir != null && (selection == null && !dir.enabled || selection != null && dir.bases.any { it.id == selection && it.selectable })) readOffers(selection)
+        // Owner report 2026-10-11 ("so laggy it is not playable"): this runs on every Home resume. Offers are read only when the
+        // server can take a recruitment (a closed or unsupported probe shows its reason with no cards), and their base is the
+        // Home read already in flight or published for this base instead of a second GET /base queued behind it on the
+        // server's base lock. Review and confirm still read Home themselves.
+        if (open && dir != null && (selection == null && !dir.enabled || selection != null && dir.bases.any { it.id == selection && it.selectable })) readOffers(selection, shared = true)
         else mutable.update { it.copy(offers = emptyList(), base = null) }
         Unit
     }

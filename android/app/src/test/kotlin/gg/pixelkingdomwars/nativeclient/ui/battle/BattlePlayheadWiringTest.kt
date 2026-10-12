@@ -34,6 +34,10 @@ class BattlePlayheadWiringTest {
             Regex("""floor\(playback\.shown / it\)""").findAll(source).count())
         assertFalse("No progress index reads the server clock (it would run L ahead of the field)",
             source.contains("floor(playback.playhead /"))
+        // K-night-L2, 2026-10-12: the presentation-lag cap lives in livePresentationLagMs, so it reaches the defender's
+        // WATCH LIVE only while both views share this one playback path.
+        assertEquals("Attacker and defender share the one playback path (and so the lag cap)", 2,
+            Regex("""val playback = rememberBattlePlayback\(""").findAll(source).count())
         assertTrue("The lag is fixed with the accepted scene, in the same snapshot",
             source.contains("lag = livePresentationLagMs(lag, candidate.takeIf { accepted === it }"))
     }

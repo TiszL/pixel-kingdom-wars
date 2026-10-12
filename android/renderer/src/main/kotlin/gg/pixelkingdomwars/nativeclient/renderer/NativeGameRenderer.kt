@@ -142,6 +142,9 @@ class NativeGameRenderer(
     private val retiringServiceAssets = mutableListOf<ServiceSceneAssets>()
     private val serviceTextureFiles = java.util.concurrent.ConcurrentHashMap<String, FileHandle>()
     private val serviceTexturePixels = mutableMapOf<String,ServiceTexturePixels>() // GL texture ownership
+    /** Home preparations decode a selected picture once while its pixels are owned (ServicePixelCache, 2026-10-11); battle
+     *  preparation keeps its own decode unchanged. */
+    private val homeServicePixels = ServicePixelCache()
     private val serviceSprites = mutableListOf<BaseVisualSprite>()
     private var observedServiceDrawn = 0
     private var observedServiceLayers = 0
@@ -430,7 +433,8 @@ class NativeGameRenderer(
             val battle = (update as? SceneUpdate.Battle)?.prepared
             val walls = battle?.walls ?: (update as SceneUpdate.Base).walls
             val services = ServiceSceneAssets.prepare(serviceArt, base, serviceSource, serviceArtEnabled && !layeredPaused,
-                reducedMotion, battle != null, { checkPreparation(update.token) }, onDiagnostic, fleet = fleetCapability).also { ownedServices = it }
+                reducedMotion, battle != null, { checkPreparation(update.token) }, onDiagnostic,
+                decode = if (battle == null) homeServicePixels::decode else ServiceTexturePixels::decode, fleet = fleetCapability).also { ownedServices = it }
             val serviceViews = ServiceSceneVisuals(services, base, System.currentTimeMillis(), decodedServices)
             val keys = base.buildings.filter { it.service == null }.map { it.frameKey } + base.terrainFrameKey + walls.requiredFrames +
                 (if(battle == null) base.obstacles.map { it.frameKey } else battle.scene.actorFrames.values + battle.scene.deploymentFrames.values)

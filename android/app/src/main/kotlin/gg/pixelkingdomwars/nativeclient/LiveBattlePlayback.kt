@@ -83,14 +83,17 @@ private fun PreparedLiveBattle.coldBoundaryMs(): Double =
 
 /** L is fixed once, by the first live (non-terminal) revision with events accepted after the clock started, as the
  * server playhead then minus where that revision's battle begins: its first event, never before its cold boundary
- * (0 for staged troops; a reopened battle continues from where it opened). Afterwards [fixed] is returned unchanged. */
+ * (0 for staged troops; a reopened battle continues from where it opened). Afterwards [fixed] is returned unchanged.
+ * L is at most [LIVE_BATTLE_MAX_PRESENTATION_LAG_MS] (K-night-L2, 2026-10-12): a first revision that arrives very late
+ * (app backgrounded after ATTACK, dropped connection, slow server) opens once at server time minus the cap instead of
+ * holding the whole battle that far behind; the cap is then held like any other L. */
 internal fun livePresentationLagMs(fixed: Double?, accepted: PreparedLiveBattle?, serverPlayheadMs: Double,
     clockStarted: Boolean): Double? {
     if (fixed != null) return fixed
     val prepared = accepted?.takeIf { clockStarted && !it.terminal } ?: return null
     val first = prepared.scene.revision.events.firstOrNull() ?: return null
     val startMs = maxOf(first.t * prepared.scene.tickDurationMs.toDouble(), prepared.coldBoundaryMs())
-    return (serverPlayheadMs - startMs).coerceAtLeast(0.0)
+    return (serverPlayheadMs - startMs).coerceIn(0.0, LIVE_BATTLE_MAX_PRESENTATION_LAG_MS)
 }
 
 /** The time the field and its progress show, never ahead of the server clock. Before L exists an accepted scene holds

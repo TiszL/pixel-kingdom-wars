@@ -9,6 +9,14 @@ internal const val MAX_BATTLE_FRAME_MS = 100f
 /** A live clock correction under this eases in; a larger one (resume, reconnect) is still a seek. */
 internal const val LIVE_EASE_LIMIT_MS = 1_000f
 
+/** The longest held presentation lag a live battle may show (K-night-L2, 2026-10-12). The field runs a held lag L behind
+ * the server clock (app LiveBattlePlayback.livePresentationLagMs); L is what elapsed between ATTACK and the first
+ * simulated revision reaching the phone. The server's first page takes about 3-10 s today, so 6 s covers a normal
+ * start, while a backgrounded app, a dropped connection or a slow server could otherwise hold the whole battle tens of
+ * seconds behind. Above the cap the field jumps once to server time minus the cap and holds that (never speeds up).
+ * Presentation only, so it lives with the renderer's battle constants, not in packages/shared. */
+const val LIVE_BATTLE_MAX_PRESENTATION_LAG_MS = 6_000.0
+
 /** The largest share of a frame's own advance an easing correction adds or removes: a live battle runs within 10%
  * of its clock's rate while it corrects, and never backwards. */
 internal const val LIVE_EASE_SHARE = 0.1f

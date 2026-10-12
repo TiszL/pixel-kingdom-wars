@@ -2,7 +2,7 @@
 
 The native Android client for [Pixel Kingdom Wars](../README.md): Kotlin, Jetpack Compose for menus and sheets, a libGDX renderer for the base, battle and globe scenes, and Solana Mobile wallet integration (Mobile Wallet Adapter, with an optional Privy social sign-in path). It talks to the same authoritative API as the web client at `https://play.pixelkingdomwars.com`, so an account, base and economy are shared across both clients.
 
-The shipped release line is **0.7.1 (version code 34)**, published through the Solana dApp Store for Seeker and other Android devices (API 28+).
+The shipped release line is **0.7.2 (version code 35)**, published through the Solana dApp Store for Seeker and other Android devices (API 28+). The accepted devnet chain identities the release verifies signed quotes against live in `app/chain-pins.release.properties` (public values only).
 
 ## Modules
 
@@ -32,7 +32,7 @@ The shipped content pack (`app/src/main/assets/native`) and world bundle (`app/s
 
 Optional:
 
-- `-PnativeVersionCode=34 -PnativeVersionName=0.7.1` stamps a specific version (the defaults are `1` / `0.1.0-foundation`).
+- `-PnativeVersionCode=35 -PnativeVersionName=0.7.2` stamps a specific version (the defaults are `1` / `0.1.0-foundation`).
 - `app/google-services.json` enables Firebase Cloud Messaging; without it the build simply reports `NATIVE_FCM_CONFIGURED=false`.
 - `:app:assembleRelease` produces an **unsigned** release APK. Signing material is never part of the repository.
 
@@ -47,7 +47,7 @@ node tools/check-compatibility.mjs
 
 ## Content pack and world bundle
 
-The content pack is exported from the monorepo at the root of this repository by `tools/export-client-pack.mjs` (reads the web client's atlases, animation clips and shared constants, and checks the simulator goldens) and imported with `tools/sync-client-pack.mjs`, which writes the assets and regenerates `network/.../generated/NativeContracts.kt`. The world bundle is produced by `tools/world-debug-content.mjs` from the web client's world pack. Both steps are only needed when the game content changes; the committed output is the one shipped in 0.7.1.
+The content pack is exported from the monorepo at the root of this repository by `tools/export-client-pack.mjs` (reads the web client's atlases, animation clips and shared constants, and checks the simulator goldens) and imported with `tools/sync-client-pack.mjs`, which writes the assets and regenerates `network/.../generated/NativeContracts.kt`. The world bundle is produced by `tools/world-debug-content.mjs` from the web client's world pack. Both steps are only needed when the game content changes; the committed output is the one shipped in 0.7.2.
 
 ## Authority
 

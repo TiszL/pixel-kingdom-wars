@@ -83,7 +83,7 @@ class HomeRequests {
             val head = queue.firstOrNull() as? HomeRequest.Open ?: break
             if (head !== deferredOpen && request.homeTab == head.hostTab) break
             finishOpen(head)
-        }
+        } else supersedeDeferredOpen(request.featureId)
         // A rapid repeat has the same destination. Keeping it would leave an equal StateFlow head
         // after consume(), so the destination's LaunchedEffect could not observe the second request.
         if (queue.lastOrNull() == request) return
@@ -103,6 +103,17 @@ class HomeRequests {
         if (queue.firstOrNull() !== deferredOpen) deferredOpen = null
         _pending.value = queue.firstOrNull()
         select(tab)
+    }
+
+    /** Owner report 2026-10-11 (Seeker, code 34): one tap on the level badge opened a Gold Forge INFO request that had been
+     * waiting since long before. The rule: a later door for a different feature expires a deferred head (one Home has already
+     * seen and could not dispatch), whatever that later tap then does (queue, fall back to a standalone screen, explain a
+     * refusal). A waiting door is never replayed behind a different door. A repeat of the same door keeps its head, and
+     * an undeferred head keeps FIFO order. No clock: age is irrelevant once the player has asked for something else. */
+    @Synchronized internal fun supersedeDeferredOpen(featureId: FeatureId) {
+        val head = queue.firstOrNull() as? HomeRequest.Open ?: return
+        if (dispatchingOpen || head !== deferredOpen || head.featureId == featureId) return
+        finishOpen(head)
     }
 
     @Synchronized internal fun deferOpen(request: HomeRequest.Open) {

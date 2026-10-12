@@ -16,6 +16,7 @@ import gg.pixelkingdomwars.nativeclient.renderer.BaseScene
 import gg.pixelkingdomwars.nativeclient.scene.BuildingRooflines
 import gg.pixelkingdomwars.nativeclient.ui.kingdom.KingdomUiState
 import gg.pixelkingdomwars.nativeclient.ui.kingdom.buildingSelectionAnchor
+import gg.pixelkingdomwars.nativeclient.ui.kingdom.sheetBuildingPortrait
 import gg.pixelkingdomwars.nativeclient.ui.sheets.buildings.BuildingMarkerActions
 import gg.pixelkingdomwars.nativeclient.ui.sheets.buildings.BuildingMarkerLayer
 import gg.pixelkingdomwars.nativeclient.ui.sheets.buildings.BuildingMarkerUi
@@ -33,13 +34,17 @@ import java.io.File
  * the drawn camera, nothing while the camera moves or the base is another one).
  * - The Mine: a green READY bubble while the server's `mine/status` buffer holds Shards (above zero; an unread status is
  *   unknown and shows nothing). One tap collects through the existing owner, without selecting.
- * - A spent trap: a cream NOTICE bubble; a tap selects it, where REARM lives.
+ * - A spent trap: a cream NOTICE bubble wearing the REARM command's icon and a REARM caption; a tap selects it, where REARM lives.
  * A building with a running job carries its TimerPlate instead, so two markers never stack on one roof.
  */
 
 /** One bubble the Home world may show: which building, READY (tap collects) or NOTICE (tap opens), its 32 dp icon, the
  *  amount for READY (spoken; the 48 dp bubble draws its icon only, as the frames do) and what a screen reader says. */
-internal data class ReadyMarkerFact(val buildingId: String, val kind: MarkerKind, val icon: String, val text: String?, val description: String)
+internal data class ReadyMarkerFact(val buildingId: String, val kind: MarkerKind, val icon: String, val text: String?, val description: String,
+    val caption: String? = null)
+
+/** The caption a spent trap's bubble wears: the name of the command its tap leads to. */
+internal const val SPENT_TRAP_CAPTION = "REARM"
 
 /** The bubbles for [state]'s own Home (see the file comment). None for another base: a base other than the selected
  *  one, or one the signed-in wallet does not own. */
@@ -58,7 +63,12 @@ internal fun liveReadyMarkers(state: KingdomUiState): List<ReadyMarkerFact> {
         markers += ReadyMarkerFact(mine.id, MarkerKind.READY, "shards", "+$amount", "Mine: $amount Shards ready to collect")
     }
     base.buildings.filter { it.trapSpentAt != null && it.id !in working }.forEach { trap ->
-        markers += ReadyMarkerFact(trap.id, MarkerKind.NOTICE, "ui:exhausted-status", null, "${titleCase(trayLabel(trap.type))}: spent, rearm it")
+        // Owner report 2026-10-11 (Seeker, code 34): the torn-sail `ui:exhausted-status` icon was taken for a Phase E boat. The
+        // bubble now wears the REARM command's own icon (BuildingCommandAdapter.rearmCommand: the trap's tier art from the pack,
+        // the hammer glyph before the catalogue arrives) and the REARM caption. No art is made.
+        val icon = state.catalogue?.let { sheetBuildingPortrait(it, trap.type, trap.level) } ?: "shape:hammer"
+        markers += ReadyMarkerFact(trap.id, MarkerKind.NOTICE, icon, null, "${titleCase(trayLabel(trap.type))}: spent, rearm it",
+            caption = SPENT_TRAP_CAPTION)
     }
     return markers
 }
@@ -73,7 +83,7 @@ internal fun readyMarkersUi(markers: List<ReadyMarkerFact>, scene: BaseScene, ro
         val building = scene.buildings.firstOrNull { it.id == fact.buildingId } ?: return@mapNotNull null
         val anchor = buildingSelectionAnchor(building, roofs[building.id], scene.baseId, scene.tilePixels, view)
             ?.takeIf { it.right > 0 && it.bottom > 0 && it.left < view.width && it.top < view.height } ?: return@mapNotNull null
-        BuildingMarkerUi(fact.buildingId, anchor, fact.kind, fact.icon, fact.text, null, fact.description)
+        BuildingMarkerUi(fact.buildingId, anchor, fact.kind, fact.icon, fact.text, null, fact.description, fact.caption)
     }
     return BuildingMarkersUi(placed, visible = true)
 }

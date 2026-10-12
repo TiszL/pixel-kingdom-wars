@@ -92,10 +92,25 @@ class HomeOwnerProjectionTest {
         assertEquals(0, f.calls)
     }
 
+    // WHY (rewritten 2026-10-11, owner report on the Seeker, code 34): this asserted that a projection with no current owner
+    // counts as reviewBlocked. That held Home's body-review gate shut with nothing on screen, so the level badge (and every
+    // other HUD door) deferred silently. A projection that is not current is now "not mine": still no snapshot and no read
+    // (the safety this test exists for), but no longer a review that blocks the current kingdom.
     @Test fun `missing current owner cannot expose a retained snapshot or run reads`() {
-        val f = Fixture(); f.current = null
+        val f = Fixture(); f.current = null; f.review = true
         assertNull(f.projection.currentState())
-        assertTrue(f.projection.reviewBlocked)
+        assertFalse("a projection with no current owner is ignored, not a blocking review", f.projection.reviewBlocked)
+        assertFalse(f.read.invoke(Unit))
+        assertEquals(0, f.calls)
+    }
+
+    // Owner report 2026-10-11: the stale-identity case of the same rule, with the owner's own review still saved.
+    @Test fun `a projection captured for an older base generation does not block the current one`() {
+        val f = Fixture(); f.review = true
+        assertTrue("the current owner's saved review still blocks", f.projection.reviewBlocked)
+        f.current = HomeRouteIdentity(f.session, "base", 2)
+        assertFalse("not mine once its identity is stale", f.projection.reviewBlocked)
+        assertNull(f.projection.currentState())
         assertFalse(f.read.invoke(Unit))
         assertEquals(0, f.calls)
     }

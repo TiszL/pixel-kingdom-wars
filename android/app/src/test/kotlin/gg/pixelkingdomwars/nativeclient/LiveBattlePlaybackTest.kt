@@ -209,6 +209,60 @@ class LiveBattlePlaybackTest {
             2000.0,requireNotNull(livePresentationLagMs(null,prepareLiveStart(null,live(300,400),29_000.0),32_000.0,true)),0.0)
     }
 
+    // K-night-L2, 2026-10-12: L is fixed by whenever the first simulated revision reaches the phone. If that is very late
+    // (app backgrounded right after ATTACK, a dropped connection, a slow server) an uncapped L held the whole battle tens
+    // of seconds behind the server, so the player watched a fight the server had long since moved past. Above the cap the
+    // field jumps once to server time minus the cap and then holds the cap: one seek, never a speed-up.
+    private fun assertHeldFrom(server: Long, lag: Double, scene: PreparedLiveBattle) {
+        val running=clock(server)
+        var previous=liveShownPlayheadMs(running,0,lag,scene)
+        for(step in 1..40) {
+            val now=seconds(step*0.5)
+            val shown=liveShownPlayheadMs(running,now,lag,scene)
+            assertEquals("No further jump: the field advances exactly as the server clock does",500.0,shown-previous,1e-6)
+            assertEquals("and stays exactly the held lag behind it",running.playheadMs(now)-lag,shown,1e-6)
+            previous=shown
+        }
+    }
+
+    @Test fun `a late first scene jumps once to server time minus the cap and then holds the cap`() {
+        val staging=prepareLiveStart(null,live(),0.0)
+        assertEquals("Until the first eventful revision arrives the troops wait at their deploy points",
+            0.0,liveShownPlayheadMs(clock(25_000),0,null,staging),0.0)
+        val first=prepareLiveStart(staging,live(0,40),0.0)
+        val lag=requireNotNull(livePresentationLagMs(null,first,25_000.0,true))
+        assertEquals("25 s late is capped, not held for the whole battle",LIVE_BATTLE_MAX_PRESENTATION_LAG_MS,lag,0.0)
+        assertEquals("The single jump lands at server time minus the cap",
+            25_000.0-LIVE_BATTLE_MAX_PRESENTATION_LAG_MS,liveShownPlayheadMs(clock(25_000),0,lag,first),0.0)
+        val later=prepareLiveStart(first,live(0,40,900),30_000.0-LIVE_BATTLE_MAX_PRESENTATION_LAG_MS)
+        assertEquals("Later revisions keep the capped lag",lag,requireNotNull(livePresentationLagMs(lag,later,30_000.0,true)),0.0)
+        assertHeldFrom(25_000,lag,later)
+    }
+
+    @Test fun `an early first scene keeps its own lag under the cap`() {
+        val staging=prepareLiveStart(null,live(),0.0)
+        for(arrival in listOf(2500.0,LIVE_BATTLE_MAX_PRESENTATION_LAG_MS-1,LIVE_BATTLE_MAX_PRESENTATION_LAG_MS)) {
+            val first=prepareLiveStart(staging,live(0,40),0.0)
+            val lag=requireNotNull(livePresentationLagMs(null,first,arrival,true))
+            assertEquals("A first scene ${arrival} ms after ATTACK still starts at the deploy tick",arrival,lag,0.0)
+            assertEquals(0.0,liveShownPlayheadMs(clock(arrival.toLong()),0,lag,first),0.0)
+        }
+    }
+
+    @Test fun `the defender watch path caps a late first scene the same way`() {
+        // WATCH LIVE opens mid-battle: its first scene is prepared at the server clock (a cold boundary there).
+        val openedAt=liveShownPlayheadMs(clock(60_000),0,null,null)
+        val quick=prepareLiveStart(null,live(0,40,900),openedAt)
+        assertEquals("A quick preparation keeps its own small lag",1000.0,
+            requireNotNull(livePresentationLagMs(null,quick,61_000.0,true)),0.0)
+        val slow=prepareLiveStart(null,live(0,40,900),openedAt)
+        val lag=requireNotNull(livePresentationLagMs(null,slow,80_000.0,true))
+        assertEquals("A 20 s preparation is capped",LIVE_BATTLE_MAX_PRESENTATION_LAG_MS,lag,0.0)
+        assertEquals("The field jumps once to server time minus the cap",
+            80_000.0-LIVE_BATTLE_MAX_PRESENTATION_LAG_MS,liveShownPlayheadMs(clock(80_000),0,lag,slow),0.0)
+        assertHeldFrom(80_000,lag,slow)
+    }
+
     @Test fun `the result hold plays the remaining lag at normal pace after the server clock ends`() {
         val lag=2500.0
         val first=prepareLiveStart(prepareLiveStart(null,live(),0.0),live(0,1790),2500.0)

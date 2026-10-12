@@ -11,7 +11,9 @@ import org.junit.Test
 import java.io.IOException
 import java.util.UUID
 
-internal class HeroRecruitmentFixture(val disk: MemoryStore = MemoryStore(), val failWrite: (String) -> Boolean = { false }) {
+internal class HeroRecruitmentFixture(val disk: MemoryStore = MemoryStore(), val failWrite: (String) -> Boolean = { false },
+    /** Wire the hero resume refresh to a real Home repository's shared read, as AppGraph does. */
+    shareHome: Boolean = false) {
     val holder = testHolder(); val session = signedIn(holder)
     val store = PendingIntentStore(object : SecretStore {
         override fun read() = disk.read()
@@ -62,7 +64,10 @@ internal class HeroRecruitmentFixture(val disk: MemoryStore = MemoryStore(), val
         override suspend fun put(path: String, body: JsonObject): JsonObject = error("No PUT")
         override suspend fun delete(path: String): JsonObject = error("No DELETE")
     }
-    val repo = HeroRecruitmentRepository(session, holder, api, store, observer, { base }, { directory }, { onAccount() }, { catalogue }, { refreshed++ }, "devnet")
+    var generation = 0L; var onSharedHome: suspend () -> Unit = {}
+    val home by lazy { LiveBaseRepository(session, holder, api, store, observer, { base }, baseGeneration = { generation }) }
+    val repo = HeroRecruitmentRepository(session, holder, api, store, observer, { base }, { directory }, { onAccount() }, { catalogue }, { refreshed++ }, "devnet",
+        sharedHome = { id -> if (shareHome) { onSharedHome(); home.sharedHome(id) } else null })
     fun saved() = store.get(IntentKind.HERO_RECRUITMENT, WALLET)
     fun proof(i: PendingIntent): JsonObject {
         val d = HeroRecruitmentSpec("devnet").definition(i)
@@ -262,5 +267,46 @@ class HeroRecruitmentRepositoryTest {
         try { withContext(scope.capture()!!) { f.recruit() }; fail() } catch (_: IOException) { }
         assertEquals(listOf(gg.pixelkingdomwars.nativeclient.audio.UiAudioCue.PLACE), cues); assertNotNull(f.saved()!!.receipt)
         f.beforeGet = {}; withContext(scope.capture()!!) { f.repo.refresh() }; assertEquals(1, cues.size); scope.close()
+    }
+    // ---- Owner report 2026-10-11 "so laggy it is not playable": one Home resume, one GET /base ----
+    // WHY: on production GET /base costs ~3.4 s and takes the server's base lock. Every Home resume read it for Home AND again
+    // from this resume refresh, so the two serialised; and the offers chain ran even when the server could not take a
+    // recruitment. The resume refresh must take Home's own read (in flight or published), never across a base switch or
+    // sign-in, and must read nothing for offers the probe has closed.
+    private fun HeroRecruitmentFixture.reads(path: String) = gets.count { it.first == path }
+    @Test fun `one Home resume issues one GET base while Home's read is in flight and the offers show that same base`() = runBlocking {
+        withTimeout(5_000) {
+            val f = HeroRecruitmentFixture(shareHome = true); val joined = CompletableDeferred<Unit>(); val release = CompletableDeferred<Unit>()
+            f.onSharedHome = { joined.complete(Unit) }; f.beforeGet = { if (it == "/base") release.await() }
+            val home = launch { f.home.refreshWithoutJourneys() } // PkwApp's RESUMED Home hydration
+            val heroes = launch { f.repo.refresh() } // KingdomScreen's RESUMED refreshConstructionReceipts
+            joined.await(); release.complete(Unit); home.join(); heroes.join()
+            assertEquals(1, f.reads("/base")); assertEquals(1, f.reads("/balances")); assertEquals(1, f.reads("/tutorial"))
+            assertSame(f.home.state.value.base, f.repo.state.value.base); assertEquals(2, f.repo.state.value.offers.size)
+        }
+    }
+    @Test fun `a published Home read is reused only for the same session base generation and read ticket`() = runBlocking {
+        val f = HeroRecruitmentFixture(shareHome = true)
+        f.home.refreshWithoutJourneys(); f.repo.refresh()
+        assertEquals("Home's read had already answered: still one GET /base", 1, f.reads("/base"))
+        assertSame(f.home.state.value.base, f.repo.state.value.base)
+        f.generation++; f.repo.refresh() // the same deed selected again is a new selection generation
+        assertEquals(2, f.reads("/base"))
+        f.home.refreshWithoutJourneys(); f.home.invalidateForgeBalance(); f.repo.refresh() // a superseded read is not reused
+        assertEquals(4, f.reads("/base"))
+        f.home.refreshWithoutJourneys(); f.base = CLAN_OTHER; f.repo.refresh() // another deed selected: never the old base
+        assertEquals(mapOf("baseId" to CLAN_OTHER), f.gets.last { it.first == "/base" }.second)
+        assertEquals(CLAN_OTHER, f.repo.state.value.base!!.baseId)
+        signedIn(f.holder) // a sign-in replaces the session: the old repository's snapshot is refused outright
+        assertThrows(Exception::class.java) { runBlocking { f.home.sharedHome(CLAN_OTHER) } }; Unit
+    }
+    @Test fun `a closed or unsupported recruitment probe reads no offers base balances items or heroes`() = runBlocking {
+        for (supported in listOf(false, true)) {
+            val f = HeroRecruitmentFixture(shareHome = true); f.supported = supported; f.enabled = false
+            f.repo.refresh()
+            assertTrue(f.gets.none { it.first in setOf("/base", "/balances", "/tutorial", "/items", "/heroes") })
+            assertTrue(f.repo.state.value.offers.isEmpty()); assertNull(f.repo.state.value.base)
+            assertEquals(supported, f.repo.state.value.supported); assertFalse(f.repo.state.value.enabled)
+        }
     }
 }

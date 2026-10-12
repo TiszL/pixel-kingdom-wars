@@ -43,9 +43,11 @@ class GoldForgeInPlaceMountTest {
 
     // WHY: closing the sheet or opening another door under a consent Seal or a wallet payment would strand the review.
     @Test fun `an open forge Seal holds the sheet and every other door until it closes`() {
-        val blocked = app.substringAfter("val bodyReviewBlocked = rememberUpdatedState<() -> Boolean> {")
-            .substringBefore("val starterReviewController")
-        assertTrue(blocked.contains("goldForgeReviewOpen.value"))
+        // Updated 2026-10-11 (owner report, Seeker code 34): bodyReviewBlocked is now built from named terms so a deferred
+        // door can log which one held. The pin follows the new shape; the rule is unchanged: the forge Seal is one of the terms.
+        val terms = app.substringAfter("val bodyReviewTerms = rememberUpdatedState(").substringBefore("val bodyReviewBlocked")
+        assertTrue(terms.contains("\"goldForge.review\" to { goldForgeReviewOpen.value }"))
+        assertTrue(app.contains("val bodyReviewBlocked = rememberUpdatedState<() -> Boolean> { bodyReviewTerms.value.any { (_, held) -> held() } }"))
         assertTrue(app.contains("SideEffect { goldForgeReviewOpen.value = forgeSmelt?.reviewOpen == true || forgeGems?.reviewOpen == true }"))
         var sealOpen = true
         val reasons = mutableListOf<String>()

@@ -31,6 +31,17 @@ Both clients talk to the same Fastify API. The server validates every order, run
 
 The world spans eight realms (Frostveil, Elderwood, Sunscar, Crownlands, Solana Reach, Stormcairn, Thornwake and Cinderfall) on a fantasy globe with 85,414 deed tiles. Daily and weekly quests, inventory and item trading, chat, mail, referrals, leaderboards and replay history are live. See [Gameplay](docs/GAMEPLAY.md) for the full feature set and [Playtest Economy](docs/ECONOMY.md) for the numbers.
 
+### Phase E (live on devnet since October 2026)
+
+Phase E is the economy expansion that moved the game from "build and raid" to a working production chain:
+
+- **Phase E buildings** — Workshop, Lodge, Market, Harvesters and the Berth — with ordinary crafting (raw to refined resources), Forge ingots, starter expeditions and Harvester source selection.
+- **Gems** — the in-game spend currency, converted from KEEP at 1:1 through the ledger, with exact-consent spend receipts on both clients.
+- **On-chain Seeker auctions and realm land sales** through the `shardkeep-economy` program, paid in the devnet test SKR mint, with a signed-quote flow that both clients verify against the same public pins (`android/app/chain-pins.release.properties`).
+- **Crafting program** (`shardkeep-craft`) deployed with its accepted identity; the league program identity is accepted but not yet deployed; KEEP mining claims and the mining tax stay dark until the KEEP reserve identity is served.
+
+Every Phase E family is behind a server switch (`PHASE_E_*`, `GEMS_*`, `HARVESTERS_ENABLED`, …) and the web client additionally gates its new screens behind `VITE_PHASE_E_WEB_ENABLED`. The production server reports what is on through `GET /native/capabilities`.
+
 ## Architecture
 
 ```text
@@ -64,7 +75,7 @@ Read [Architecture](docs/ARCHITECTURE.md), [Diagrams](docs/DIAGRAMS.md) and [Sol
 | tSKR mint (SPL) | [`GhGdHTMAorprWg1YNtjw7z72owJyGKE5KbFi1fW1j9eB`](https://explorer.solana.com/address/GhGdHTMAorprWg1YNtjw7z72owJyGKE5KbFi1fW1j9eB?cluster=devnet) | Devnet test SKR used by the Seeker auction flow |
 | Land Deed collection (Metaplex Core) | [`56RemMwZRxL7xMMV8TbiErZX2YfrnuY65x3t7sTQxKrT`](https://explorer.solana.com/address/56RemMwZRxL7xMMV8TbiErZX2YfrnuY65x3t7sTQxKrT?cluster=devnet) | Transferable base ownership |
 
-The published address registry is [`infra/devnet.addresses.json`](infra/devnet.addresses.json). Program IDs are also declared in [`programs/Anchor.toml`](programs/Anchor.toml).
+The published address registry is [`infra/devnet.addresses.json`](infra/devnet.addresses.json). Program IDs are also declared in [`programs/Anchor.toml`](programs/Anchor.toml). The accepted production deployment of `shardkeep-economy` is pinned in [`android/app/chain-pins.release.properties`](android/app/chain-pins.release.properties): deployment slot `509790748`, ProgramData sha256 `f1a4e173…0688cd`, upgrade authority `Ce5HrbPJ2naKQAbQ6Xga55WeFwVDavHhBzc2AsWd6KY8`, realm-sale policy revision `phase-e-devnet-r12-2026-10`; both clients verify every signed quote against these values.
 
 ## Quickstart — API + web client
 
@@ -86,6 +97,8 @@ DATABASE_URL=postgres://shardkeep:shardkeep@localhost:5433/shardkeep pnpm --filt
 ```
 
 Signing in with a Solana wallet (devnet) works out of the box. For local exploration without a wallet set `DEV_LOGIN=true` in `.env` (a signature-less development login that the server refuses in production).
+
+The template switches on the same Phase E families production runs (Phase E buildings, Workshop crafting, Forge ingots, starter expeditions, Harvesters, Gems, and the web screens behind `VITE_PHASE_E_WEB_ENABLED=1`); `GET http://localhost:8787/native/capabilities` reports what the running server has enabled. The on-chain Seeker auction and realm-sale families need the accepted program pins and an RPC-funded crank, so they stay off locally.
 
 Runtime atlases, audio and brand files under `apps/web/public/{atlas,audio,brand}` are committed, so no asset generation step is needed. The original art masters and the rasterisation pipeline that produces them are not part of this repository.
 

@@ -51,9 +51,11 @@ import gg.pixelkingdomwars.nativeclient.ui.kit.PkwText
 import gg.pixelkingdomwars.nativeclient.ui.kit.PkwTokens
 import gg.pixelkingdomwars.nativeclient.ui.kit.Plate
 import gg.pixelkingdomwars.nativeclient.ui.kit.PlateKind
+import gg.pixelkingdomwars.nativeclient.ui.kit.Tag
 import gg.pixelkingdomwars.nativeclient.ui.kit.UNKNOWN
 import gg.pixelkingdomwars.nativeclient.ui.kit.drawPlate
 import gg.pixelkingdomwars.nativeclient.ui.kit.fillStepped
+import gg.pixelkingdomwars.nativeclient.ui.model.Verb
 import kotlin.math.roundToInt
 import kotlinx.coroutines.delay
 
@@ -99,6 +101,8 @@ enum class MarkerKind {
     val progress: Float?,
     /** What a screen reader says ("Mine: 8,400 Shards ready to collect", "Workshop: building, 1 hour 12 minutes left"). */
     val description: String,
+    /** Bubbles: an optional kit Tag under the face naming what the tap leads to (a spent trap's "REARM"); null draws none. */
+    val caption: String? = null,
 )
 
 /** The marker layer's state. */
@@ -179,6 +183,9 @@ private fun Modifier.above(anchor: PxRect, gapPx: Float): Modifier = layout { me
             // Icon only: an amount under a 32 dp icon cannot fit the 48 dp face and was clipped; the frames draw none.
             PkwIcon(ui.icon, 32.dp)
         }
+        // Owner report 2026-10-11 (Seeker, code 34): a spent trap's cream bubble was read as a Phase E boat. Its caption is a
+        // kit Tag under the face (outside it, so nothing clips); paint only, the face above keeps the one tap target and label.
+        ui.caption?.let { Tag(it, Verb.GOLD, Modifier.clearAndSetSemantics {}) }
         Canvas(Modifier.size(12.dp, 8.dp)) {
             val path = Path().apply { moveTo(0f, 0f); lineTo(size.width, 0f); lineTo(size.width / 2f, size.height); close() }
             drawPath(path, PkwTokens.Colors.ink)
@@ -256,6 +263,6 @@ private fun Modifier.above(anchor: PxRect, gapPx: Float): Modifier = layout { me
 @Composable private fun MarkersUnknownPreview() {
     MarkerPreviewFrame(listOf(
         BuildingMarkerUi("workshop-1", sampleAnchor(60f, 220f), MarkerKind.UPGRADING, "builder", null, null, "Workshop: upgrading, time unknown"),
-        BuildingMarkerUi("trap-1", sampleAnchor(260f, 220f), MarkerKind.NOTICE, "ui:exhausted-status", null, null, "Spike trap: spent, rearm it"),
+        BuildingMarkerUi("trap-1", sampleAnchor(260f, 220f), MarkerKind.NOTICE, "pack:spiketrap-t1", null, null, "Spike trap: spent, rearm it", "REARM"),
     ))
 }

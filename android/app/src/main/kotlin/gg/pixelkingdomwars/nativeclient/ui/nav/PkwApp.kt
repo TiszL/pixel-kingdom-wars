@@ -1545,14 +1545,19 @@ internal fun homeRouteContext(
     // payment) is up. While it is, the sheet refuses close (scrim tap, Back) and the dispatcher defers every other door.
     val gemsShortfall = remember(session) { gg.pixelkingdomwars.nativeclient.ui.goldforge.GoldForgeGemsShortfallBox() }
     val goldForgeReviewOpen = remember(session) { mutableStateOf(false) }
-    val bodyReviewBlocked = rememberUpdatedState<() -> Boolean> {
-        val owners = currentOwners.value
-        owners.harvester?.projection?.reviewBlocked == true || owners.vehicle?.projection?.reviewBlocked == true ||
-            owners.starter?.projection?.reviewBlocked == true || owners.starterFleet?.projection?.reviewBlocked == true ||
-            workshopOwnerRepository?.state?.value?.review != null || starterReviewPresence.painted || voyageOverlays.presence.painted ||
-            harvesterReviewController?.holding == true || harvesterReviewPresence.painted ||
-            goldForgeReviewOpen.value
-    }
+    // Owner report 2026-10-11 (Seeker, code 34): each term is named, so a deferred door's PKWHome line says which one held.
+    val bodyReviewTerms = rememberUpdatedState(listOf<Pair<String, () -> Boolean>>(
+        "harvester.review" to { currentOwners.value.harvester?.projection?.reviewBlocked == true },
+        "vehicle.review" to { currentOwners.value.vehicle?.projection?.reviewBlocked == true },
+        "starter.review" to { currentOwners.value.starter?.projection?.reviewBlocked == true },
+        "starterFleet.review" to { currentOwners.value.starterFleet?.projection?.reviewBlocked == true },
+        "workshop.review" to { workshopOwnerRepository?.state?.value?.review != null },
+        "starter.painted" to { starterReviewPresence.painted },
+        "voyage.painted" to { voyageOverlays.presence.painted },
+        "harvester.holding" to { harvesterReviewController?.holding == true },
+        "harvester.painted" to { harvesterReviewPresence.painted },
+        "goldForge.review" to { goldForgeReviewOpen.value }))
+    val bodyReviewBlocked = rememberUpdatedState<() -> Boolean> { bodyReviewTerms.value.any { (_, held) -> held() } }
     val starterReviewController = remember(session, presentationIdentity, starterFleetOwnerRepository) {
         presentationIdentity?.let { identity -> starterFleetOwnerRepository?.let { repository ->
             gg.pixelkingdomwars.nativeclient.ui.home.HomeStarterFleetReviewController(identity,
@@ -1566,7 +1571,10 @@ internal fun homeRouteContext(
         } }
     }
     val legacyFeatureOpen = rememberUpdatedState<(gg.pixelkingdomwars.nativeclient.ui.features.FeatureId) -> Boolean> { id ->
-        if (routeAdmissionBlocked.value() || bodyReviewBlocked.value() || currentRouteIdentity.value() == null) false
+        // The Menu stays reachable in every state (review bc22f635): a deferred badge request opens the standalone Profile,
+        // exactly as HomeScaffold's fallback does at the tap (owner report 2026-10-11).
+        if (id.value == "hud.profile") { navController.navigate(ProfileRoute) { launchSingleTop = true }; true }
+        else if (routeAdmissionBlocked.value() || bodyReviewBlocked.value() || currentRouteIdentity.value() == null) false
         else when (id.value) {
             "harvester.harvest" -> {
                 homeHarvesterLegacyNotice(harvesterRead?.status)?.let {
@@ -1614,7 +1622,12 @@ internal fun homeRouteContext(
                 else homeFeatureReadResult(proof, graph.homeRequests.pending.value as? HomeRequest.Open,
                     if (id.value == "harvester.harvest") currentOwners.value.harvester?.projection?.currentState()?.busy
                     else currentOwners.value.starterFleet?.projection?.currentState()?.busy)
-            }, legacyFeature = { legacyFeatureOpen.value(it) }, bodyUnavailable = { destination -> when {
+            }, legacyFeature = { legacyFeatureOpen.value(it) },
+            deferralDetail = { gg.pixelkingdomwars.nativeclient.ui.home.homeHeldTerms(bodyReviewTerms.value) },
+            debugLog = { line ->
+                if (gg.pixelkingdomwars.nativeclient.BuildConfig.DEBUG || gg.pixelkingdomwars.nativeclient.BuildConfig.NATIVE_CANDIDATE)
+                    gg.pixelkingdomwars.nativeclient.diagnostics.DeviceLog.debug("PKWHome", line)
+            }, bodyUnavailable = { destination -> when {
                 destination is Destination.Harvester && harvesterOwnerRepository == null -> "Saved Harvester storage is unavailable. Open Harvester controls to recover it."
                 destination is Destination.Lodge && destination.tab == "PASSPORT" && currentPassportOwner.value?.current() != true -> "Passport records are unavailable for this session."
                 destination is Destination.Lodge && destination.tab != "PASSPORT" && starterFleetOwnerRepository == null -> "Saved fleet storage is unavailable. Open the existing fleet controls to recover it."

@@ -11,6 +11,7 @@ import java.util.UUID
 import gg.pixelkingdomwars.nativeclient.audio.BaseAudioAction
 import gg.pixelkingdomwars.nativeclient.audio.UiAudioCue
 import kotlinx.coroutines.currentCoroutineContext
+import kotlinx.coroutines.ensureActive
 import kotlinx.coroutines.isActive
 import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -111,6 +112,11 @@ interface BaseRepository {
     suspend fun refresh()
     /** Accepted-domain/history hydration updates Home without warming or publishing journeys. */
     suspend fun refreshWithoutJourneys() = refresh()
+    /** The Home read this repository has in flight, or last published and not since superseded, for exactly [baseId] under the
+     *  current session and base-selection generation; null when there is none (the caller then reads Home itself). Never
+     *  starts a read. Owner report 2026-10-11 ("so laggy it is not playable"): a resume's second GET /base waited behind the
+     *  first on the server's base lock. */
+    suspend fun sharedHome(baseId: String?): HomeSnapshot? = null
     suspend fun refreshQuests()
     suspend fun refreshMine()
     suspend fun collectMine()
@@ -160,6 +166,12 @@ class LiveBaseRepository(
     private val balanceReads = java.util.concurrent.atomic.AtomicLong()
     override val balanceRevision: Long get() = balanceReads.get()
     private val homeReads = java.util.concurrent.atomic.AtomicLong()
+    /** One [hydrate]'s Home read, identified by the base, selection generation and read ticket it was made for. Its result
+     *  completes only once that read is PUBLISHED; a failed or superseded read completes with a failure instead. */
+    private class SharedHomeRead(val baseId: String?, val generation: Long, val ticket: Long) {
+        val result = kotlinx.coroutines.CompletableDeferred<HomeSnapshot>()
+    }
+    @Volatile private var sharedRead: SharedHomeRead? = null
     private val builderRevision = java.util.concurrent.atomic.AtomicLong()
     private val builderAdmission = Mutex()
     private var builderEnqueueGuard: (() -> Unit)? = null
@@ -205,28 +217,51 @@ class LiveBaseRepository(
                 check(ticket == homeReads.get())
             }
         } else null
-        val home = readHome(api, requestedBaseId)
-        holder.requireCurrent(session)
-        requireSelectedBase(requestedBaseId)
-        if (ticket != homeReads.get()) throw CancellationException("Home balances superseded")
-        _state.update {
-            holder.requireCurrent(session); requireSelectedBase(requestedBaseId)
+        val shared = SharedHomeRead(requestedBaseId, baseGeneration(), ticket).also { sharedRead = it }
+        try {
+            val home = readHome(api, requestedBaseId)
+            holder.requireCurrent(session)
+            requireSelectedBase(requestedBaseId)
             if (ticket != homeReads.get()) throw CancellationException("Home balances superseded")
-            // update may retry its CAS. Check original Workshop authority on every publication
-            // attempt, not only after the network read or after the caller has already published.
-            publicationGuard?.let { guard ->
-                guard(); holder.requireCurrent(session); requireSelectedBase(requestedBaseId)
+            _state.update {
+                holder.requireCurrent(session); requireSelectedBase(requestedBaseId)
                 if (ticket != homeReads.get()) throw CancellationException("Home balances superseded")
+                // update may retry its CAS. Check original Workshop authority on every publication
+                // attempt, not only after the network read or after the caller has already published.
+                publicationGuard?.let { guard ->
+                    guard(); holder.requireCurrent(session); requireSelectedBase(requestedBaseId)
+                    if (ticket != homeReads.get()) throw CancellationException("Home balances superseded")
+                }
+                balanceReads.incrementAndGet()
+                it.copy(base = home.base, balances = home.balances, tutorial = home.tutorial, error = null,
+                    loading = if (publicationGuard != null) false else it.loading)
             }
-            balanceReads.incrementAndGet()
-            it.copy(base = home.base, balances = home.balances, tutorial = home.tutorial, error = null,
-                loading = if (publicationGuard != null) false else it.loading)
+            shared.result.complete(home)
+            // StateFlow's CAS lambda may retry; optional effects only follow its winning
+            // publication and still bind the exact clean snapshot that actually survived.
+            fleetJourneys?.publishReturns(home.fleetJourneyEvents, home.base, journeyCapture) {
+                ticket == homeReads.get() && _state.value.base === home.base
+            }
+        } finally { shared.result.completeExceptionally(IllegalStateException("This Home read was not published")) } // no-op once published
+    }
+    /** Joins the read in flight (or reuses the last published one) only while the session, the selected base, its selection
+     *  generation and the read ticket all still match; a read superseded while awaited hands over to the newer read once. A
+     *  sign-in replaces this repository's session (requireCurrent throws), and a base switch changes the base or generation,
+     *  so a snapshot is never reused across either. */
+    override suspend fun sharedHome(baseId: String?): HomeSnapshot? {
+        repeat(2) {
+            holder.requireCurrent(session)
+            val read = sharedRead ?: return null
+            if (!read.baseId.equals(baseId, ignoreCase = true) || read.generation != baseGeneration()) return null
+            val home = try { read.result.await() }
+                catch (error: CancellationException) { currentCoroutineContext().ensureActive(); null }
+                catch (_: Exception) { null }
+            holder.requireCurrent(session)
+            if (home != null && read.generation == baseGeneration() && read.ticket == homeReads.get()
+                && this.baseId().equals(baseId, ignoreCase = true)) return home
+            if (sharedRead === read) return null // nothing newer to join
         }
-        // StateFlow's CAS lambda may retry; optional effects only follow its winning
-        // publication and still bind the exact clean snapshot that actually survived.
-        fleetJourneys?.publishReturns(home.fleetJourneyEvents, home.base, journeyCapture) {
-            ticket == homeReads.get() && _state.value.base === home.base
-        }
+        return null
     }
     /** Workshop history keeps its original proof until this guarded snapshot is published.
      * Invalidate older Home reads before fetching post-acceptance values. Unlike the ordinary

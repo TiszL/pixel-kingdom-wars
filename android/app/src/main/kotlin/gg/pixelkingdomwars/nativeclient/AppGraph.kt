@@ -641,7 +641,8 @@ class AppGraph(val application: Application, val mode: LaunchMode) {
             { SeekerBounds.from(content.state.value.catalogue) }, account::refreshIdentity)
         val heroRecruitment = HeroRecruitmentRepository(session, holder, api, intents, observer, baseId,
             { account.state.value.directory }, { account.refreshIdentity(); account.refreshDirectory() },
-            { content.state.value.catalogue }, { base.refreshWithoutJourneys(); army.refreshInventory(); army.refreshHeroes() }, cluster.id)
+            { content.state.value.catalogue }, { base.refreshWithoutJourneys(); army.refreshInventory(); army.refreshHeroes() }, cluster.id,
+            sharedHome = base::sharedHome)
         val wallBatch = WallBatchRepository(session, holder, api, intents, observer, baseId,
             { account.state.value.directory }, { account.refreshIdentity(); account.refreshDirectory() },
             { content.state.value.catalogue }, { content.state.value.renderCatalogue },

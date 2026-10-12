@@ -1060,7 +1060,11 @@ class HomeRouteDispatcherTest {
         assertFalse(f.host.dispatchBlocked.value)
         assertEquals(HomeRouteDispatchResult.DEFERRED, dispatcher.consume(request))
         assertSame(request, requests.pending.value)
-        assertTrue(f.opened.isEmpty()); assertTrue(f.reasons.isEmpty())
+        // WHY (rewritten 2026-10-11, owner report on the Seeker, code 34): this asserted no reason at all. Leagues is a HUD door,
+        // and a HUD door deferred with no word looked dead to the player; it now says it is waiting. Still no refusal: the
+        // same head is kept and opens exactly once below.
+        assertTrue(f.opened.isEmpty())
+        assertEquals(listOf("Leagues is waiting for the current review or read to finish."), f.reasons)
         f.blocked = false
         assertEquals(HomeRouteDispatchResult.DISPATCHED, dispatcher.consume(request))
         assertEquals(listOf(Destination.Leagues()), f.opened)

@@ -7,10 +7,19 @@ import gg.pixelkingdomwars.nativeclient.model.Building
 import gg.pixelkingdomwars.nativeclient.model.MineStatus
 import gg.pixelkingdomwars.nativeclient.model.Mining
 import gg.pixelkingdomwars.nativeclient.model.PlayerSummary
+import gg.pixelkingdomwars.nativeclient.renderer.BaseCameraView
+import gg.pixelkingdomwars.nativeclient.renderer.BaseScene
+import gg.pixelkingdomwars.nativeclient.renderer.RenderBuilding
+import gg.pixelkingdomwars.nativeclient.ui.command.PxRect
 import gg.pixelkingdomwars.nativeclient.ui.kingdom.KingdomUiState
+import gg.pixelkingdomwars.nativeclient.ui.kingdom.sheetBuildingPortrait
+import gg.pixelkingdomwars.nativeclient.ui.sheets.buildings.BuildingMarkerUi
 import gg.pixelkingdomwars.nativeclient.ui.sheets.buildings.MarkerKind
 import kotlinx.serialization.json.buildJsonObject
+import kotlinx.serialization.json.put
+import kotlinx.serialization.json.putJsonObject
 import org.junit.Assert.assertEquals
+import org.junit.Assert.assertNotEquals
 import org.junit.Assert.assertNull
 import org.junit.Assert.assertTrue
 import org.junit.Test
@@ -68,6 +77,26 @@ class LiveReadyMarkersTest {
         assertEquals("Powder Mine: spent, rearm it", notices.single().description)
         val repairing = BaseJob("job-2", "repair", buildingId = "trap-1")
         assertTrue("a rearm already running shows its timer", liveReadyMarkers(state(jobs = listOf(repairing))).none { it.kind == MarkerKind.NOTICE })
+    }
+
+    // Owner report 2026-10-11 (Seeker, code 34): beige cards with a torn-sail icon were taken for Phase E boats. They were the
+    // spent-trap notices wearing `ui:exhausted-status`. The bubble must say what the tap is for and look like the trap.
+    @Test fun `a spent trap's bubble reads as a trap to rearm and no other marker carries that caption`() {
+        val markers = liveReadyMarkers(state())
+        val notice = markers.single { it.kind == MarkerKind.NOTICE }
+        assertEquals("REARM", notice.caption)
+        assertNull("the Mine's READY bubble has no caption", markers.single { it.kind == MarkerKind.READY }.caption)
+        assertEquals("before the catalogue arrives: the REARM command's own fallback glyph", "shape:hammer", notice.icon)
+        val catalogue = buildJsonObject { putJsonObject("constants") { putJsonObject("ART_V2") { put("tiers", "4"); put("levelsPerTier", "5") } } }
+        val drawn = liveReadyMarkers(state().copy(catalogue = catalogue)).single { it.kind == MarkerKind.NOTICE }
+        assertEquals("the REARM command's own icon: the trap's tier art", sheetBuildingPortrait(catalogue, "powdermine", 1), drawn.icon)
+        assertNotEquals("never the voyage's torn sail", "ui:exhausted-status", drawn.icon)
+
+        // The caption survives to the drawn bubble; a notice that is not a spent trap carries none.
+        val scene = BaseScene(listOf(RenderBuilding("trap-1", "trap", 4f, 4f, 1f, 1f, type = "powdermine")), 16, 16, 64f, baseId = "b1")
+        val ui = readyMarkersUi(listOf(drawn), scene, emptyMap(), BaseCameraView("b1", 320f, 320f, 1f, 640, 640), hidden = false)
+        assertEquals(listOf("REARM"), ui.markers.map { it.caption })
+        assertNull(BuildingMarkerUi("market-1", PxRect(0f, 0f, 1f, 1f), MarkerKind.NOTICE, "ui:market-menu", null, null, "Market: 1 sale to collect").caption)
     }
 
     @Test fun `no marker is ever drawn over a base that is not the player's selected Home`() {

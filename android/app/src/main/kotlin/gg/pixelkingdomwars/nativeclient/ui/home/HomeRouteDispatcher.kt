@@ -154,6 +154,8 @@ interface HomeRouteHost {
     /** Used only after legacy also refused; capture restrictions must not block access to recovery. */
     fun legacyRefusalReason(id: FeatureId): String? = null
     fun didEnqueue(request: HomeRequest.Open) {}
+    /** Diagnostics only (owner report 2026-10-11): [request] stayed at the head, deferred. No effect and no explanation. */
+    fun deferred(request: HomeRequest.Open) {}
     /** A partial mount must decline capture for bodies it does not own, preserving the legacy door. */
     fun canOpen(id: FeatureId, tab: HomeTab): Boolean = true
     /** A terminal, truthful refusal independent of warming owner admission. Legacy Bases doors are separate. */
@@ -231,10 +233,15 @@ class HomeRouteDispatcher(
     /** True means this door belongs to the typed host, including while its identity is unknown.
      * Falling through in that case would bypass currentness/review gates through a legacy route. */
     fun handleFeatureDoor(id: FeatureId, hostTab: HomeTab = HomeTab.KINGDOM): Boolean {
+        // Owner report 2026-10-11: this tap retires an older deferred door before anything else (HomeRequests.supersedeDeferredOpen),
+        // including when it falls back to a standalone screen or is refused, so the old door cannot replay behind it.
+        requests.supersedeDeferredOpen(id)
         if (entry == HomeRequestEntry.ECONOMY) return openFeatureOrLegacy(id, hostTab)
         host.refusalReason(id)?.let { host.locked(it); return true }
         if (!host.canOpen(id, hostTab)) return false
         if (!openFeature(id, hostTab)) host.locked("This feature is waiting for your kingdom to finish loading.")
+        // A HUD door queued while Home cannot admit it says so now, never waits silently (owner report 2026-10-11).
+        else if (host.dispatchBlocked.value) homeHudDoorWaiting(id)?.let(host::locked)
         return true
     }
 
@@ -344,22 +351,35 @@ class HomeRouteDispatcher(
     }
 
     fun consume(request: HomeRequest.Open): HomeRouteDispatchResult = requests.dispatchOpen(request) {
+        dispatchHead(request).let { if (it == HomeRouteDispatchResult.DEFERRED) deferred(request) else it }
+    }
+
+    /** Owner report 2026-10-11 (Seeker, code 34): a tap on the level badge did nothing; its request was deferred with no word.
+     * The four HUD doors are never deferred silently: Profile (the Menu, which must stay reachable) falls back to its standalone
+     * screen through the host's display-only legacy door, consuming the head; Mail, Leagues and Quests say they are waiting
+     * and keep the head for a fresh gate check. Every other door keeps its silent wait. */
+    private fun deferred(request: HomeRequest.Open): HomeRouteDispatchResult {
+        host.deferred(request)
+        if (request.featureId.value == "hud.profile" && host.openLegacyFeature(request.featureId)) return HomeRouteDispatchResult.DISPATCHED
+        homeHudDoorWaiting(request.featureId)?.let(host::locked)
+        return HomeRouteDispatchResult.DEFERRED
+    }
+
+    private fun dispatchHead(request: HomeRequest.Open): HomeRouteDispatchResult {
         val fresh = context()
         if (fresh == null || request.identity != fresh.identity ||
             (request.entry == HomeRequestEntry.HOME && request.selection != fresh.gates.selection)) {
-            return@dispatchOpen HomeRouteDispatchResult.STALE
+            return HomeRouteDispatchResult.STALE
         }
-        host.refusalReason(request.featureId)?.let { return@dispatchOpen locked(it) }
-        if (host.dispatchBlocked.value) {
-            if (request.featureId.value == "hud.quests") host.locked("Quests is waiting for the current review or read to finish.")
-            return@dispatchOpen HomeRouteDispatchResult.DEFERRED
-        }
+        host.refusalReason(request.featureId)?.let { return locked(it) }
+        // The HUD doors' explanation (formerly Quests only) is in deferred(), shared by every deferral below.
+        if (host.dispatchBlocked.value) return HomeRouteDispatchResult.DEFERRED
         when (host.prepareFeature(request.featureId)) {
-            HomeNavigationResult.DEFERRED -> return@dispatchOpen HomeRouteDispatchResult.DEFERRED
-            HomeNavigationResult.REFUSED -> return@dispatchOpen locked("Feature details could not be refreshed. Open the door again to retry.")
+            HomeNavigationResult.DEFERRED -> return HomeRouteDispatchResult.DEFERRED
+            HomeNavigationResult.REFUSED -> return locked("Feature details could not be refreshed. Open the door again to retry.")
             HomeNavigationResult.DISPATCHED -> Unit
         }
-        when (val resolution = registry.resolve(request.featureId, fresh.gates)) {
+        return when (val resolution = registry.resolve(request.featureId, fresh.gates)) {
             FeatureResolution.Hidden -> HomeRouteDispatchResult.HIDDEN
             is FeatureResolution.Locked -> locked(resolution.reason)
             else -> {
@@ -367,12 +387,12 @@ class HomeRouteDispatcher(
                 // In particular it cannot turn an action, scene or aggregate destination into a drawer.
                 if (request.resources != null &&
                     (resolution !is FeatureResolution.Navigate || resolution.destination !is Destination.Resources)) {
-                    return@dispatchOpen locked("This feature does not open resources")
+                    return locked("This feature does not open resources")
                 }
                 val accepted = when (resolution) {
                     is FeatureResolution.Navigate -> when (host.navigateResult(request.resources ?: resolution.destination, request.hostTab)) {
                         HomeNavigationResult.DISPATCHED -> true
-                        HomeNavigationResult.DEFERRED -> return@dispatchOpen HomeRouteDispatchResult.DEFERRED
+                        HomeNavigationResult.DEFERRED -> return HomeRouteDispatchResult.DEFERRED
                         HomeNavigationResult.REFUSED -> false
                     }
                     is FeatureResolution.Action -> host.action(resolution.action)
@@ -411,9 +431,26 @@ internal class HomeSheetRouteHost(
     private val bodyUnavailable: (Destination) -> String? = { null },
     private val legacyFeature: (FeatureId) -> Boolean = { false },
     private val enqueued: (HomeRequest.Open) -> Unit = {},
+    /** Owner report 2026-10-11: which body-review terms hold now, for the deferral line only (e.g. "body=harvester.holding"). */
+    private val deferralDetail: () -> String = { "" },
+    /** The caller's gated debug log (PkwApp: DeviceLog, debug and candidate builds only). */
+    private val debugLog: (String) -> Unit = {},
 ) : HomeRouteHost {
     override fun openLegacyFeature(id: FeatureId): Boolean = legacyFeature(id)
     override fun didEnqueue(request: HomeRequest.Open) = enqueued(request)
+    private var lastDeferral: Pair<HomeRequest.Open, String>? = null
+
+    /** Owner report 2026-10-11 (Seeker, code 34): the badge request waited with nothing on screen, so the field could not tell
+     * which blocker held. One line per request and distinct cause (the consume effect re-runs on many keys). */
+    override fun deferred(request: HomeRequest.Open) {
+        val mount = attachment?.let { if (!isCurrent(it.owner)) "stale" else if (it.blocked) "blocked" else "clear" } ?: "none"
+        val line = "deferred ${request.featureId.value} mount=$mount admission=${admissionBlocked()} " +
+            "kingdomReview=${reviewBlocked()} ${deferralDetail()}".trimEnd()
+        val last = lastDeferral
+        if (last != null && last.first === request && last.second == line) return
+        lastDeferral = request to line
+        debugLog(line)
+    }
     private class Attachment(
         val identity: HomeRouteIdentity,
         val openLeague: (Destination.Leagues) -> Unit,
@@ -509,7 +546,8 @@ internal class HomeSheetRouteHost(
     // Menu must retain its standalone recovery doors when Home cannot admit a sheet.
     override fun canOpen(id: FeatureId, tab: HomeTab): Boolean =
         id.value in HOME_MOUNTED_FEATURES && tab == HomeTab.KINGDOM &&
-            (id.value != "hud.profile" || (current() != null && !admissionBlocked())) &&
+            // Profile mirrors Quests (owner report 2026-10-11): while dispatch would defer, false keeps HomeScaffold's ProfileRoute fallback.
+            (id.value != "hud.profile" || (current() != null && !admissionBlocked() && !dispatchBlocked.value)) &&
             (id.value != "hud.quests" || (current() != null && !admissionBlocked() && !dispatchBlocked.value))
 
     override fun prepareFeature(id: FeatureId): HomeNavigationResult = featureRead(id)
@@ -546,6 +584,19 @@ internal class HomeSheetRouteHost(
     override fun homeHandoff(destination: Destination.FocusBuilding): Boolean = false
     override fun locked(reason: String) = explain(reason)
 }
+
+/** The four HUD doors' deferral line (owner report 2026-10-11); null for every other door, whose wait stays silent. */
+internal fun homeHudDoorWaiting(id: FeatureId): String? = when (id.value) {
+    "hud.profile" -> "Profile"
+    "hud.mail" -> "Mail"
+    "hud.leagues" -> "Leagues"
+    "hud.quests" -> "Quests"
+    else -> null
+}?.let { "$it is waiting for the current review or read to finish." }
+
+/** The named terms that hold, for the deferral log line: "body=a,b" or "body=none". */
+internal fun homeHeldTerms(terms: List<Pair<String, () -> Boolean>>): String =
+    "body=" + terms.filter { (_, held) -> held() }.joinToString(",") { it.first }.ifEmpty { "none" }
 
 internal val HOME_LEAGUE_TABS = gg.pixelkingdomwars.nativeclient.ui.sheets.hub.leaguesTabs().map { it.id }.toSet()
 // The designed MailHub's chips, ARCHIVE included (the old raw archive strip is retired).

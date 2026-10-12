@@ -33,7 +33,10 @@ class HomeOwnerProjection<S>(
 ) {
     private fun isCurrent(): Boolean = current() == identity
     fun currentState(): S? = state.value.takeIf { isCurrent() }
-    val reviewBlocked: Boolean get() = !isCurrent() || ownerReviewBlocked()
+    /** Owner report 2026-10-11 (Seeker, code 34): a projection whose identity is no longer current is not mine. It cannot read
+     * or expose state ([currentState], [canRead]), and it no longer counts as a review: counting it held Home's body-review gate,
+     * and so every HUD door and sheet close, shut with nothing on screen until the projection happened to be replaced. */
+    val reviewBlocked: Boolean get() = isCurrent() && ownerReviewBlocked()
     fun canRead(): Boolean = isCurrent() && admitted() && !ownerReviewBlocked()
 
     /** Export only reads already implemented by the owner. No command callback belongs here. */

@@ -48,6 +48,22 @@ class HomeOpenRequestsTest {
         assertEquals(HomeRouteDispatchResult.NOT_HEAD, queue.dispatchOpen(open) { error("expired callback") })
     }
 
+    // Owner report 2026-10-11 (Seeker, code 34): one badge tap opened a Gold Forge request deferred long before. A later
+    // door for another feature retires a deferred head; the same door, and a head Home has not seen yet, keep FIFO.
+    @Test fun `a later open for another door supersedes a deferred open without replay`() {
+        val queue = HomeRequests(); val open = request()
+        queue.request(open)
+        assertEquals(HomeRouteDispatchResult.DEFERRED, queue.dispatchOpen(open) { HomeRouteDispatchResult.DEFERRED })
+        val later = open.copy(featureId = FeatureId("hud.profile"))
+        queue.request(later)
+        assertSame(later, queue.pending.value)
+        assertEquals(HomeRouteDispatchResult.NOT_HEAD, queue.dispatchOpen(open) { error("expired callback") })
+
+        val same = HomeRequests(); same.request(open); same.deferOpen(open)
+        same.request(open.copy(resources = Destination.Resources("shards")))
+        assertSame("the same door keeps its waiting head", open, same.pending.value)
+    }
+
     @Test fun `reselecting the current host tab keeps its pending open`() {
         val queue = HomeRequests(); val open = request(); queue.request(open)
         queue.selectHomeTab(HomeTab.KINGDOM) {}

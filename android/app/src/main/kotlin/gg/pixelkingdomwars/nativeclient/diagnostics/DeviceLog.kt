@@ -18,4 +18,6 @@ internal object DeviceLog {
     }.getOrNull()
 
     fun info(tag: String, line: String) { runCatching { printlnHandle?.invoke(null, Log.INFO, tag, line) } }
+    /** Field diagnosis lines below INFO (PKWHome door deferrals, owner report 2026-10-11); callers gate them the same way. */
+    fun debug(tag: String, line: String) { runCatching { printlnHandle?.invoke(null, Log.DEBUG, tag, line) } }
 }

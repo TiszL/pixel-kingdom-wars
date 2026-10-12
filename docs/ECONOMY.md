@@ -191,11 +191,11 @@ to the emission pool, and credits the same number of SHARDS to the selected
 base. It has no unlimited reverse exchange: SHARDS can reach KEEP only through
 the bounded daily Gold Forge.
 
-### Phase E target (specified, not live) — Gems
+### Phase E — Gems
 
-Status: **specified** only, by D-152 and
-`phase-e/GEMS-CURRENCY.md`; nothing in this subsection is
-implemented at runtime or deployed, and every rule above stays current. In Phase E
+Specified by D-152; the Gems ledger, the KEEP → Gems conversion and the
+Workshop spend path are live on devnet since October 2026 (the production server
+reports them under `economy.gems` and `economy.workshop` in `GET /native/capabilities`). In Phase E
 the sinks in the table above charge **Gems**, an in-game currency obtained only by
 converting KEEP → Gems at 1:1 (LOCKED, D-152), with the KEEP recycled to the emission
 reserve exactly as spent KEEP is today. **Gems → SHARDS at 1:1**, unlimited, replaces

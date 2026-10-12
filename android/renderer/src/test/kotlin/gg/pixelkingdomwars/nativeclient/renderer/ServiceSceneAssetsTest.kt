@@ -54,7 +54,8 @@ class ServiceSceneAssetsTest {
         return Fixture(PhaseEServiceArt.parse(raw),root,ids.toSet())
     }
     private fun prepare(f: Fixture,b: BaseScene=base(),enabled: Boolean=true,battle: Boolean=false,reduced: Boolean=false,
-        source: ServiceAssetSource=f,check:()->Unit={}):ServiceSceneAssets = ServiceSceneAssets.prepare(f.art,b,source,enabled,reduced,battle,check,decode={ serviceTestPixels() })
+        source: ServiceAssetSource=f,check:()->Unit={},decode:(FileHandle)->ServiceTexturePixels={ serviceTestPixels() }):ServiceSceneAssets =
+        ServiceSceneAssets.prepare(f.art,b,source,enabled,reduced,battle,check,decode=decode)
 
     @Test fun `absent source metadata or positive current permission never acquires optional files`() {
         val f=fixture("pe_workshop_t1")
@@ -237,6 +238,40 @@ class ServiceSceneAssetsTest {
         }
         prepare(f,source=source).use { assertTrue(it.plans.isEmpty());assertTrue(it.atlases.isEmpty()) }
         assertTrue(f.acquired.isEmpty())
+    }
+
+    // ---- Owner report 2026-10-11 "so laggy it is not playable": Home refreshes stop re-decoding resident pictures ----
+    // WHY: GET /base drives a Home preparation on every resume and every poll. Each one decoded every selected PNG again
+    // (workshop/harvester 1.94 MB, lodge/market 1.61 MB, berths 3.01 MB of PNG; MiBs of RGBA each) although the renderer then
+    // skipped uploading the already-resident texture, so every refresh was an allocation burst and a GC pause. An unchanged
+    // selection must cost no decode; a changed one decodes only its new pictures; and the cache must never be what keeps
+    // pixels alive (the existing owners and the selected-pixel cap still decide residency).
+    @Test fun `an unchanged Home selection decodes each picture once and a changed selection decodes only the new picture`() {
+        val f=fixture("pe_workshop_t1","pe_lodge_t1"); val decoded=mutableListOf<String>()
+        val cache=ServicePixelCache { file -> decoded += file.name(); serviceTestPixels() }
+        val lodge=workshop.copy(id="lodge",tileX=6f,type="lodge",service=RenderServiceIdentity("lodge",1))
+        val both=BaseScene(listOf(workshop,lodge),columns=12,rows=12,tilePixels=32f,baseId="original",services=RenderServiceFacts(true,
+            activity=listOf(RenderServiceActivity(workshop.id,RenderServiceState.WORKING),RenderServiceActivity(lodge.id,RenderServiceState.WORKING))))
+        val first=prepare(f,decode=cache::decode); val second=prepare(f,decode=cache::decode)
+        assertEquals(listOf("pe_workshop_t1@1x.png"),decoded,"two consecutive unchanged refreshes decode the workshop once")
+        assertSame(first.atlases.values.single().pixels,second.atlases.values.single().pixels)
+        assertEquals(first.atlases.values.single().cells,second.atlases.values.single().cells,"what is drawn is unchanged")
+        val third=prepare(f,both,decode=cache::decode)
+        assertEquals(listOf("pe_workshop_t1@1x.png","pe_lodge_t1@1x.png"),decoded,"adding the lodge decodes only the lodge")
+        assertEquals(2,third.atlases.size)
+        listOf(first,second,third).forEach { it.close() }
+        assertEquals(f.acquired,f.released,"every lease is still released exactly once")
+    }
+    @Test fun `a resident texture keeps its picture decoded across refreshes and the last owner leaving frees it for a fresh decode`() {
+        val f=fixture("pe_workshop_t1"); var decodes=0; var disposed=0
+        val cache=ServicePixelCache { decodes++; serviceTestPixels { disposed++ } }
+        // The renderer's commit: the resident texture retains the bundle's pixels, then the bundle releases its own reference.
+        val first=prepare(f,decode=cache::decode); val texture=first.atlases.values.single().pixels.retain(); first.releasePixels(); first.close()
+        repeat(3) { prepare(f,decode=cache::decode).use { refresh -> assertSame(texture,refresh.atlases.values.single().pixels) } }
+        assertEquals(1,decodes,"three poll refreshes over a resident texture decode nothing"); assertEquals(0,disposed)
+        texture.close(); assertEquals(1,disposed,"the cache holds no reference: unloading the texture frees its pixels")
+        prepare(f,decode=cache::decode).close()
+        assertEquals(2,decodes,"after eviction the next preparation decodes again"); assertEquals(2,disposed)
     }
 
     // ---- N-C5 RESIDENCY: the extracted reader seam and the unchanged ordinary path ----
